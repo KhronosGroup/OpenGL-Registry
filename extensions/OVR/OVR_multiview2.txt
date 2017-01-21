@@ -1,0 +1,70 @@
+Name
+
+    OVR_multiview2
+
+Name Strings
+
+    GL_OVR_multiview2
+
+Contact
+
+    Cass Everitt, Oculus (cass.everitt 'at' oculus.com)
+
+Contributors
+
+    John Carmack, Oculus
+    Jan Paul van Waveren, Oculus
+    Jan-Harald Fredriksen, ARM
+    Sam Holmes, Qualcomm
+
+Status
+
+    Incomplete.
+
+Version
+
+    Last Modified Date:  Mar 18, 2015
+    Author Revision: 0.4
+
+Number
+
+    OpenGL Extension #479
+    OpenGL ES Extension #242
+
+Dependencies
+
+    OpenGL 3.0 or OpenGL ES 3.0 is required.
+
+    Requires extension OVR_multiview to be implemented.
+
+Overview
+
+ 
+	This extension relaxes the restriction in OVR_multiview that only gl_Position
+	can depend on ViewID in the vertex shader.  With this change, view-dependent
+	outputs like reflection vectors and similar are allowed.
+
+New Tokens
+
+    None.
+
+New Procedures and Functions
+
+    None.
+
+Modifications to The OpenGL ES Shading Language Specification, Version 3.00.04
+
+	Including the following line in a shader can be used to control the language
+	features described in this extension:
+
+      #extension GL_OVR_multiview2
+
+Errors
+
+Issues
+
+Revision History
+
+      Rev.    Date    Author    Changes
+      ----  --------  --------  -----------------------------------------
+      0.1   03/18/15  cass      Initial draft

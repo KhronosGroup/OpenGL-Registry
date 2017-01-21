@@ -1,0 +1,73 @@
+Name
+
+    OES_texture_half_float_linear
+    OES_texture_float_linear
+
+Name Strings
+
+    GL_OES_texture_half_float_linear, GL_OES_texture_float_linear
+
+Contact
+
+
+Notice
+
+    Copyright (c) 2005-2014 The Khronos Group Inc. Copyright terms at
+        http://www.khronos.org/registry/speccopyright.html
+
+IP Status
+
+    Please refer to the ARB_texture_float extension.
+
+Status
+
+    Ratified by the Khronos BOP, July 22, 2005.
+
+Version
+
+    Revision 2, October 29, 2014
+
+Number
+
+    OpenGL ES Extension #35
+
+Dependencies
+
+    This extension is written against the OpenGL ES 2.0 Specification.
+
+    This extension is derived from the ARB_texture_float extension.
+
+    OES_texture_half_float and OES_texture_float are required.
+
+Overview
+
+    These extensions expand upon the OES_texture_half_float and
+    OES_texture_float extensions by allowing support for LINEAR
+    magnification filter and LINEAR, NEAREST_MIPMAP_LINEAR,
+    LINEAR_MIPMAP_NEAREST and LINEAR_MIPMAP_NEAREST minification
+    filters.
+
+    When implemented against OpenGL ES 3.0 or later versions, sized 32-bit
+    floating-point formats become texture-filterable. This should be noted
+    by, for example, checking the ``TF'' column of table 8.13 in the ES 3.1
+    Specification (``Correspondence of sized internal formats to base
+    internal formats ... and use cases ...'') for the R32F, RG32F, RGB32F,
+    and RGBA32F formats.
+
+Issues
+
+   None
+
+New Procedures and Functions
+
+   None
+
+New Tokens
+
+   None
+
+Revision History
+
+    07/06/2005  0.1   Original draft
+
+    10/29/2014  2     Add interactions with ES 3.0/3.1.

@@ -1,0 +1,95 @@
+Name
+
+    EXT_texture_sRGB_R8
+
+Name Strings
+
+    GL_EXT_texture_sRGB_R8
+
+Contributors
+
+    Sam Holmes
+    Maurice Ribble
+    Daniel Koch
+    Tobias Hector
+    Jan-Harald Fredriksen
+
+Contact
+
+    Maurice Ribble (mribble 'at' qti.qualcomm.com)
+
+Status
+
+    Complete.
+
+Version
+
+    Last Modified Date: January 28, 2015
+    Revision: #4.0
+
+Number
+
+    OpenGL ES Extension #221
+
+Dependencies
+
+    OpenGL ES 3.0 is required.
+
+    This extension is written against the OpenGL ES 3.1 specification.
+
+Overview
+
+    This extension introduces SR8_EXT as an acceptable internal format.
+    This allows efficient sRGB sampling for source images stored as a separate
+    texture per channel.
+
+New Procedures and Functions
+
+    None
+
+New Tokens
+
+    Accepted by the <internalformat> parameters of TexImage2D, TexImage3D, 
+    TexStorage2D and TexStorage3D:
+
+        SR8_EXT    0x8FBD
+
+Additions to Chapter 8 of the OpenGL ES 3.1 Specification (Textures and
+Samplers)
+
+    The following table entry is added to Table 8.2 (Valid combinations of
+    format, type and sized internalformat):
+
+        Format    Type             External Bytes per Pixel    Internal Format
+        ------    ----             ------------------------    ---------------
+        RED       UNSIGNED_BYTE    1                           SR8_EXT
+
+    The following table entry is added to Table 8.13 (Correspondence of sized
+    internal color formats to base internal formats):
+
+        Sized Internal Format    Base Internal Format    R    G    B    A    S    CR    TF    Req. rend.    Req. tex.
+        ---------------------    --------------------    -    -    -    -    -    --    --    ----------    ---------
+        SR8_EXT                  RED                     8                              X                      X
+
+    The following table entry is added to Table 8.24 (sRGB texture internal
+    formats):
+
+        Internal Format
+        ---------------
+        SR8_EXT
+
+
+Errors
+
+    None
+
+New State
+
+    None
+
+Revision History
+
+    #01    1/9/2015    Sam Holmes      Initial revision.
+    #02    1/21/2015   Maurice Ribble  Cleanup minor issues
+    #03    1/22/2015   Tobias Hector   Removed "GL_" prefix and somewhat confusing version language.
+    #04    1/28/2015   Sam Holmes      Remove redundant specification of errors and clean up internal format name.

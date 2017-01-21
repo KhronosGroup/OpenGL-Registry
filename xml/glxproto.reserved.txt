@@ -1,0 +1,280 @@
+This is the registry of GLX opcodes, error codes, and event codes. It is
+very rarely modified since there is almost no interest in supporting GLX
+with modern OpenGL features, and the work of extending the XML schema to
+express it is not worthwhile.
+
+When new GLX protocol is needed for extension specifications, allocate it
+here and reflect it in the extension specification document as well as, if
+appropriate, glx.xml.
+
+Reserved opcode ranges assigned to vendors, and in some cases, opcodes
+actually assigned within that range are tracked here. Not all opcodes used
+by vendors are known.
+
+GLX Opcodes (8 bits)
+====================
+     1-15   GLX 1.0
+    16      Vendor Private
+    17      Vendor Private with Reply
+    18-20   GLX 1.1
+    21-32   GLX 1.3
+    33      glXSetClientInfoARB (GLX_ARB_create_context)
+    34      glXCreateContextAttribsARB (GLX_ARB_create_context)
+
+GLX Vendor Private / Vendor Private with Reply opcodes (32-bits)
+                          (first 4 bytes past standard X header)
+================================================================
+
+     0     255  EXT (various - contact SGI)
+   256     271  HP (originally Compaq)
+      (272-511 unused)
+   512     575  E&S
+      (576-1023 unused)
+  1024    1269  EXT (various - contact SGI)
+      1024              GLX_EXT_import_context
+  1270    1275          NV_register_combiners
+  1276    1280          NV_fence
+  1281    1292          NVIDIA (use TBD; was intended for NV_vertex_program)
+  1293    1308          NV_vertex_program / ARB_vertex_program / ARB_fragment_program
+  1309                  NVIDIA (use TBD)
+  1310    1311          NV_fragment_program
+  1312                  NV_fence
+  1313    1318          GLX_NV_video_output
+  1319    1420          NVIDIA (use TBD)
+  1328    1329          EXT_timer_query
+  1330    1331          EXT_texture_from_pixmap
+  1332    1359          NVIDIA (use TBD)
+  1360                  GLX_NV_copy_image
+  1361    1386          NVIDIA (use TBD)
+  1387    1388          GLX_NV_copy_buffer
+  1389    1415          NVIDIA (use TBD)
+  1416                  GLX_EXT_swap_control
+  1417    1420          NVIDIA (use TBD)
+  1421                  OES_single_precision (Khronos OpenGL ES 1.0)
+  1422    1428          EXT_framebuffer_object
+      (1429-2047 unused)
+  2048    2064  SUN
+  3000    3999  IBM
+  4096    5151  SGI (4106-5151 unused)
+      4096              SGIS_detail_texture
+      4097              SGIS_sharpen_texture
+      4098    4100      SGI_color_table
+      4101              SGIS_texture_filter4
+      4102    4104      SGIX_instruments
+      4105              SGIX_flush_raster
+  5152    5184  Mesa (unknown use)
+  8192    8207  HP
+ 16384   16399  ADD
+ 65536   66575  SGI (various GLX extensions)
+      65536             GLX_SGI_swap_control
+      65537             GLX_SGI_make_current_read
+      65538  65539      GLX_SGIX_video_source
+      65540  65542      GLX_SGIX_fbconfig
+      65543  65546      GLX_SGIX_pbuffer
+      65547             GLX_SGIX_swap_group
+      65548  65549      GLX_SGIX_swap_barrier
+      65550  65553      GLX_SGIX_hyperpipe_group
+      65554             GLX_SGIX_query_board_num (internal, for shm)
+
+OpenGL Single Opcodes (16 Bits)
+===============================
+
+   167-up Reserved
+         0     146  OpenGL 1.0/1.1 core
+       147     159  OpenGL 1.2 core
+       160     160  ARB_texture_compression
+       161     166  ARB_occlusion_query
+       167     178  ARB_shader_objects
+       179     181  ARB_vertex_shader
+       182     183  EXT_gpu_shader4
+       184     185  NV_vertex_program4
+       186     194  ARB_vertex_buffer_object
+       195     202  OpenGL 2.0 core
+       203     204  EXT_texture_integer
+       205     205  ARB_map_buffer_range
+       206     209  ARB_vertex_array_object
+       210     212  EXT_draw_buffers2
+       213     214  OpenGL 3.0 core
+
+OpenGL Rendering Opcodes (16 Bits)
+==================================
+
+     0-1007 Reserved to ARB (231-1007 unused)
+         0     191  OpenGL 1.0 core (140 deprecated?)
+       192     194  OpenGL 1.1 core
+       195     196  OpenGL 1.2 core
+       197     213  ARB_multitexture
+       214     219  ARB_texture_compression
+       220     228  ARB_vertex_blend
+       229          ARB_multisample
+       230          ARB_window_pos
+       231     232  ARB_occlusion_query
+       233          ARB_draw_buffers
+       234          ARB_color_buffer_float
+       235     237  ARB_framebuffer_object
+       238     264  ARB_shader_object
+       265          ARB_vertex_shader
+       266     268  ARB_geometry_shader4
+       269     277  EXT_gpu_shader4
+       278     289  NV_vertex_program4
+       290     301  ARB_vertex_buffer_object
+       302     304  ARB_stencil_two_side
+       305     310  OpenGL 2.1 core
+       311     345  ARB_pixel_buffer_object
+       346     347  EXT_texture_integer
+       348     349  NV_conditional_render
+       350     351  ARB_vertex_array_object
+       352     354  EXT_draw_buffers2
+       355     363  OpenGL 3.0 core
+  1008-1023 Reserved to IBM (unknown usage)
+  1024-1039 Reserved to HP (originally Compaq) (unknown usage)
+  1040-2047 Unused
+  2048-3071 Reserved to SGI (2083-3071 unused)
+      2048    2049  SGIS_multisample
+      2050          SGIX_tag_sample_buffer
+      2051          SGIS_detail_texture
+      2052          SGIS_sharpen_texture
+      2053    2056  SGI_color_table
+      2057    2058  SGIS_texture4D
+      2059          SGIX_pixel_texture
+      2060    2063  SGIX_sprite
+      2064          SGIS_texture_filter4
+      2065    2066  EXT_point_parameters/SGIS_point_parameters
+      2067          SGIS_fog_function
+      2068          unused?
+      2069    2070  SGIX_instruments
+      2071          SGIX_reference_plane
+      2072          SGIX_framezoom
+      2073    2076  unused?
+      2077          SGIX_instruments
+      2078    2081  SGIX_list_priority
+      2082          SGIS_texture_color_mask
+  3072-4095 Reserved to ARB (unused)
+  4096-5151 Reserved to EXT (4460-5151 unused)
+      4096          EXT_blend_color/1.2
+      4097          EXT_blend_minmax/1.2
+      4098          EXT_polygon_offset
+      4099    4100  EXT_subtexture
+      4101    4109  EXT_convolution/1.2
+      4110    4113  EXT_histogram/1.2
+      4114          EXT_texture3D/1.2
+      4115          EXT_subtexture/1.2
+      4116          EXT_vertex_array
+      4117    4118  EXT_texture_object/1.1
+      4119    4123  EXT_copy_texture/1.1
+      4124    4125  EXT_fog_coord
+      4126    4133  EXT_secondary_color
+      4134          EXT_blend_func_separate
+      4135          EXT_vertex_weighting
+      4136    4142  NV_register_combiners
+      4143    4144  NV_fence (4144 retired, used to be for FinishFence)
+      4145    4179  NVIDIA (use TBD; was intended for NV_vertex_program)
+      4180    4214  NV_vertex_program
+      4215    4217  ARB_vertex_program
+      4218    4219  NV_fragment_program
+      4220          EXT_stencil_two_side
+      4221    4222  NV_point_sprite
+      4223          EXT_stencil_clear_tag
+      4225          EXT_polygon_offset_clamp
+      4228          EXT_blend_equation_separate
+      4229          EXT_depth_bounds_test
+      4230    4239  ARB_vertex_program
+      4240    4264  NV_half_float
+      4265    4280  NVIDIA (use TBD)
+      4281    4282  EXT_gpu_program_parameters
+      4283    4285  NV_depth_buffer_float
+      4286    4290  NVIDIA (use TBD)
+      4291          NV_copy_image
+      4292    4293  EXT_texture_integer
+      4294    4307  NVIDIA (use TBD)
+      4308    4312  OES_single_precision (Khronos OpenGL ES 1.0)
+      4313    4315  SUN (use TBD)
+      4316    4325  EXT_framebuffer_object
+      4326    4329  ARB_matrix_palette
+      4330          EXT_framebuffer_blit
+      4331          EXT_framebuffer_multisample
+      4332    4347  NVIDIA (use TBD, bug 6720)
+      4348          NV_texture_barrier
+      4349    4459  NVIDIA (use TBD, bug 6720)
+
+  8192-8207  Reserved to HP (unknown usage)
+ 16384-16415 Reserved to SUN (unknown usage)
+ 24576-24607 Reserved to ADD (unknown usage)
+
+
+GLX Enumerateds (32 Bits)
+=========================
+0x0-0xFF      Reserved to EXT (visual attribute names)
+       0x1    0x11  GLX 1.0 (attribute names)
+      0x12    0x1F  unused?
+      0x20          GLX_EXT_visual_rating (attribute names)
+      0x21          unused?
+      0x22    0x28  GLX_EXT_visual_info (attribute names)
+0x2070-0x209F Reserved to ARB (shared with WGL)
+    0x2090  0x2094  GLX_ARB_create_context
+    0x2095          GL_ARB_vertex_buffer_object
+0x20A0-0x219F Reserved to NVIDIA (shared with WGL)
+    (many NV and EXT extensions, see glxenum.spec)
+0x8000-0x800F Reserved to EXT (0x800E-0x800F unused)
+    0x8000  0x8009  GLX_EXT_visual_info
+    0x800A  0x800C  GLX_EXT_import_context
+    0x800D          GLX_EXT_visual_rating
+0x8010-0x803F Reserved to SGI (0x8029-0x803F unused)
+    0x8010  0x8015  GLX_SGIX_fbconfig
+    0x8016  0x8023  GLX_SGIX_pbuffer
+    0x8024          GLX_SGIX_dm_buffer
+    0x8025          GLX_SGIS_blended_overlay
+    0x8026  0x8027  GLX_SGIS_shared_multisample
+0x8040-0x804F Reserved to OpenGL ARB
+    0x8040  0x8041  GLX 1.3
+0x8050-0x805F Reserved to 3Dfx
+    0x8050  0x8051  GLX_3DFX_multisample
+0x8060-0x806F Reserved to OpenML SIG
+    0x8060  0x8063  GLX_OML_swap_method
+0x8070-0x816F Reserved to NVIDIA
+0x8170-0x817F Reserved to SUN
+0x8180-0x818F Reserved to Intel
+0x9126        GLX_ARB_create_context_profile (shared with WGL)
+
+100000-100011 Reserved to SGI (100002-100011 unused)
+    100000  100001  GLX_SGIS_multisample/GLX_ARB_multisample
+
+GLX Error Codes
+===============
+
+(Extension reservations for vendor extensions should start sufficiently
+high so they don't interfere with GLX core and GLX ARB extensions.)
+
+0   GLXBadContext                   OpenGL ARB (GLX core)
+1   GLXBadContextState              OpenGL ARB (GLX core)
+2   GLXBadDrawable                  OpenGL ARB (GLX core)
+3   GLXBadPixmap                    OpenGL ARB (GLX core)
+4   GLXBadContextTag                OpenGL ARB (GLX core)
+5   GLXBadCurrentWindow             OpenGL ARB (GLX core)
+6   GLXBadRenderRequest             OpenGL ARB (GLX core)
+7   GLXBadLargeRequest              OpenGL ARB (GLX core)
+8   GLXUnsupportedPrivateRequest    OpenGL ARB (GLX core)
+9   GLXBadFBConfig                  OpenGL ARB (GLX core)
+10  GLXBadPbuffer                   OpenGL ARB (GLX core)
+11  GLXBadCurrentDrawable           OpenGL ARB (GLX core)
+12  GLXBadWindow                    OpenGL ARB (GLX core)
+13  GLXBadProfileARB                OpenGL ARB (GLX_ARB_create_context)
+
+
+GLX Event Masks
+===============
+0x08000000      GLX 1.3 / SGIX_pbuffer
+0x04000000      Intel (INTEL_swap_event)
+
+GLX Event Codes
+===============
+
+(The X.org/Mesa GLX implementation derived from the SGI Sample
+Implementation has __GLX_NUMBER_EVENTS == 17, suggesting that vendor
+events should be allocated downwards from the first free value <= 16
+(14), and core GLX events allocated upwards).
+
+0               OpenGL ARB (GLX_PbufferClobber in GLX 1.3)
+15              Intel (GLX_BufferSwapINTEL)
+16              SGI (GLX_PbufferClobberSGIX)
+64              SGI
