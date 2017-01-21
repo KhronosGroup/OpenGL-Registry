@@ -169,9 +169,9 @@ include_once("../../assets/static_pages/khr_page_top.php");
     files are supplied here for developers and platform vendors. They define
     interfaces including enumerants, prototypes, and for platforms
     supporting dynamic runtime extension queries, such as Linux and
-    Microsoft Windows, function pointer typedefs. Please report problems
-    using the <a href="http://www.khronos.org/bugzilla/">public Khronos
-    Bugzilla</a>. </p>
+    Microsoft Windows, function pointer typedefs. Please report problems as
+    Issues in the <a href="index.php#repository">OpenGL-Registry</a> github
+    repository. </p>
 
 <p> In addition to the core API and extension headers, there is also an
     OpenGL ES version-specific platform header file intended to define
