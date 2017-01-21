@@ -111,19 +111,19 @@ include_once("../../assets/static_pages/khr_page_top.php");
      Documentation </h6>
 
 <ul>
-<li> OpenGL ES 2.0.25
-     <a href="specs/es/2.0/es_full_spec_2.0.25.pdf">
+<li> OpenGL ES 2.0
+     <a href="specs/es/2.0/es_full_spec_2.0.pdf">
      Full Specification </a>,
-     <a href="specs/es/2.0/es_full_spec_2.0.25.withchanges.pdf">
+     <a href="specs/es/2.0/es_full_spec_2.0.withchanges.pdf">
      Full Specification with changes marked</a>,
-     <a href="specs/es/2.0/es_cm_spec_2.0.25.pdf">
+     <a href="specs/es/2.0/es_cm_spec_2.0.pdf">
      Difference Specification </a> (November 2, 2010).
      A
      <a href="http://www.cutt.co.jp/book/978-4-87783-267-4.html">
      Japanese translation </a> of the specification is also available.
      </li>
-<li> OpenGL ES Shading Language 1.0.17
-     <a href="specs/es/2.0/GLSL_ES_Specification_1.0.17.pdf">
+<li> OpenGL ES Shading Language 1.00
+     <a href="specs/es/2.0/GLSL_ES_Specification_1.00.pdf">
      Specification </a> (May 12, 2009). </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man/">
      OpenGL ES 2.0 Online Manual Pages.</a> </li>
@@ -134,10 +134,10 @@ include_once("../../assets/static_pages/khr_page_top.php");
      Documentation </h6>
 
 <ul>
-<li> OpenGL ES 1.1.12
-     <a href="specs/es/1.1/es_full_spec_1.1.12.pdf"> Full Specification </a>
+<li> OpenGL ES 1.1
+     <a href="specs/es/1.1/es_full_spec_1.1.pdf"> Full Specification </a>
      and
-     <a href="specs/es/1.1/es_cm_spec_1.1.12.pdf"> Difference Specification </a>
+     <a href="specs/es/1.1/es_cm_spec_1.1.pdf"> Difference Specification </a>
      (April 24, 2008). </li>
 <li> <a href="specs/es/1.1/opengles_spec_1_1_extension_pack.pdf"> OpenGL ES
      1.1.03 Extension Pack </a> (July 19, 2005). </li>

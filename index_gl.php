@@ -175,7 +175,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <li> <b> OpenGL 3.1 </b>
 <li> <a href="specs/gl/glspec31.pdf"> (API Specification) </a> </li>
-<li> <a href="specs/gl/glspec31.undep.pdf">
+<li> <a href="specs/gl/glspec31undep.pdf">
         (with GL_ARB_compatibility extension) </a> </li>
 <li> <a href="specs/gl/GLSLangSpec.1.40.pdf"> OpenGL Shading Language
      1.40 Specification </a> </li>
@@ -205,7 +205,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <a href="specs/gl/glspec15.pdf"> OpenGL 1.5 API Specification </a>
 <li> <a href="specs/gl/glspec14.pdf"> OpenGL 1.4 API Specification </a>
 <li> <a href="specs/gl/glspec13.pdf"> OpenGL 1.3 API Specification </a>
-<li> <a href="specs/gl/glspec121_bookmarked.pdf"> OpenGL 1.2.1 API Specification </a>
+<li> <a href="specs/gl/glspec121.pdf"> OpenGL 1.2.1 API Specification </a>
 <li> <a href="specs/gl/glspec11.ps"> OpenGL 1.1 API Specification (PostScript format) </a>
 <li> <a href="specs/gl/glspec10.pdf"> OpenGL 1.0 API Specification </a>
 
