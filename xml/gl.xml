@@ -15514,7 +15514,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetNamedFramebufferParameterfvAMD</name></proto>
-            <param><ptype>GLenum</ptype> <name>framebuffer</name></param>
+            <param><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLuint</ptype> <name>numsamples</name></param>
             <param><ptype>GLuint</ptype> <name>pixelindex</name></param>
@@ -36620,7 +36620,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glBlendEquationSeparateIndexedAMD"/>
             </require>
         </extension>
-        <extension name="GL_AMD_framebuffer_sample_positions" supported="disabled">
+        <extension name="GL_AMD_framebuffer_sample_positions" supported="gl">
             <require>
                 <enum name="GL_SUBSAMPLE_DISTANCE_AMD"/>
                 <enum name="GL_PIXELS_PER_SAMPLE_PATTERN_X_AMD"/>
