@@ -38,8 +38,9 @@ To create a new extension specification, take these steps:
   from affected parties before declaring the extension complete.
 * Add the extension specification under extensions/*vendor*/*extension* .
 * Modify extensions/registry.py to include the extension, using the next
-  free GL and/or ES extension numbers (depending on which API the extension
-  is defined for).
+  free ARB, GL, and/or ES extension numbers (depending on which API the
+  extension is defined for). Execute the python script nextfree.py in the
+  extensions/ directory to find the next free numbers.
 * Add the extension interfaces and enumerant assignments to xml/gl.xml,
   glx.xml, and/or wgl.xml following existing examples. Verify that the
   relevant extension headers are generated with the correct interfaces.
