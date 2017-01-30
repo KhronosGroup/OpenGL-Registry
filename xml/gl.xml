@@ -33239,6 +33239,7 @@ typedef unsigned int GLhandleARB;
             <command name="glGenProgramPipelines"/>
             <command name="glIsProgramPipeline"/>
             <command name="glGetProgramPipelineiv"/>
+            <command name="glProgramParameteri"/>
             <command name="glProgramUniform1i"/>
             <command name="glProgramUniform1iv"/>
             <command name="glProgramUniform1f"/>
@@ -38718,6 +38719,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glGenProgramPipelines"/>
                 <command name="glIsProgramPipeline"/>
                 <command name="glGetProgramPipelineiv"/>
+                <command name="glProgramParameteri"/>
                 <command name="glProgramUniform1i"/>
                 <command name="glProgramUniform1iv"/>
                 <command name="glProgramUniform1f"/>
