@@ -478,7 +478,7 @@ buildList = [
         apicall           = 'GL_APICALL ',
         apientry          = 'GL_APIENTRY ',
         apientryp         = 'GL_APIENTRYP '),
-    # GLX 1.* API - GL/glx.h
+    # GLX 1.* API - GL/glx.h (experimental)
     CGeneratorOptions(
         filename          = '../api/GL/glx.h',
         apiname           = 'glx',
@@ -518,7 +518,7 @@ buildList = [
         apicall           = '',
         apientry          = '',
         apientryp         = ' *'),
-    # WGL API + extensions - GL/wgl.h (no function pointers, yet @@@)
+    # WGL API + extensions - GL/wgl.h (experimenta; no function pointers, yet @@@)
     CGeneratorOptions(
         filename          = '../api/GL/wgl.h',
         apiname           = 'wgl',
