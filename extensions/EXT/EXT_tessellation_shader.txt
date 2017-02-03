@@ -42,8 +42,8 @@ Status
 
 Version
 
-    Last Modified Date: May 31, 2016
-    Revision: 23
+    Last Modified Date: February 3, 2017
+    Revision: 24
 
 Number
 
@@ -2679,11 +2679,28 @@ Issues
     1+epsilon, and the positions of vertices produced by subdividing such
     edges may be numerically indistinguishable.
 
+    (17) Why does this extension not support GLSL built-in constants for the
+    following limits?
+
+        - gl_MaxTessControlAtomicCounters
+        - gl_MaxTessEvaluationAtomicCounters
+        - gl_MaxTessControlAtomicCounterBuffers
+        - gl_MaxTessEvaluationAtomicCounterBuffers
+        - gl_MaxTessControlImageUniforms
+        - gl_MaxTessEvaluationImageUniforms
+
+    RESOLVED: These were accidentally left out when drafting the extension,
+    and cannot be added now because shipping implementations don't support
+    them. This was fixed when these extensions were promoted into OpenGL ES
+    Shading Language 3.20.
 
 Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------- -------------------------------------------------
+     24   02/03/17  Jon Leech Add issue 17 noting missing GLSL built-in constants
+                              (public bug 1427).
+
      23   05/31/16  Jon Leech Note that primitive ID counters are reset to zero
                               after each instance drawn (Bug 14024).
 
