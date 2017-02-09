@@ -21,6 +21,13 @@ GENHEADERS = genheaders.py $(GENOPTS)
 
 # Generate all headers for GL / GLES / WGL / GLX
 # Different headers depend on different XML registry files
+# The $(GENHEADERS) script has targets for the additional headers
+#   $(API)/GL/gl.h
+#   $(API)/GL/glx.h
+#   $(API)/GL/wgl.h
+# but these are experimental and not supported by Khronos. OpenGL
+# drivers and SDKs provided by OS vendors and IHVs include their own
+# platform-specific versions of these headers, where appropriate.
 
 API	   = ../api
 GLHEADERS  = $(API)/GL/glext.h \
@@ -30,8 +37,8 @@ GLHEADERS  = $(API)/GL/glext.h \
 	     $(API)/GLES2/gl2.h \
 	     $(API)/GLES2/gl2ext.h \
 	     $(API)/GLES3/gl3.h
-GLXHEADERS = $(API)/GL/glx.h $(API)/GL/glxext.h
-WGLHEADERS = $(API)/GL/wgl.h $(API)/GL/wglext.h
+GLXHEADERS = $(API)/GL/glxext.h
+WGLHEADERS = $(API)/GL/wglext.h
 ALLHEADERS = $(GLHEADERS) $(GLXHEADERS) $(WGLHEADERS)
 
 # Generated files to clean up

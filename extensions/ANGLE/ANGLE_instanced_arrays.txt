@@ -24,8 +24,8 @@ Status
 
 Version
 
-    Last Modified Date: February 8, 2012
-    Author Revision: 3
+    Last Modified Date: February 3, 2017
+    Author Revision: 4
 
 Number
 
@@ -41,23 +41,23 @@ Overview
 
     A common use case in GL for some applications is to be able to
     draw the same object, or groups of similar objects that share
-    vertex data, primitive count and type, multiple times.  This 
-    extension provides a means of accelerating such use cases while 
-    restricting the number of API calls, and keeping the amount of 
+    vertex data, primitive count and type, multiple times.  This
+    extension provides a means of accelerating such use cases while
+    restricting the number of API calls, and keeping the amount of
     duplicate data to a minimum.
-    
+
     This extension introduces an array "divisor" for generic
     vertex array attributes, which when non-zero specifies that the
     attribute is "instanced."  An instanced attribute does not
     advance per-vertex as usual, but rather after every <divisor>
     conceptual draw calls.
-    
+
     (Attributes which aren't instanced are repeated in their entirety
     for every conceptual draw call.)
-    
+
     By specifying transform data in an instanced attribute or series
-    of instanced attributes, vertex shaders can, in concert with the 
-    instancing draw calls, draw multiple instances of an object with 
+    of instanced attributes, vertex shaders can, in concert with the
+    instancing draw calls, draw multiple instances of an object with
     one draw call.
 
 IP Status
@@ -66,7 +66,7 @@ IP Status
 
 New Tokens
 
-    Accepted by the <pname> parameters of GetVertexAttribfv and 
+    Accepted by the <pname> parameters of GetVertexAttribfv and
     GetVertexAttribiv:
 
         VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE               0x88FE
@@ -128,10 +128,10 @@ Additions to Chapter 2 of the OpenGL ES 2.0 Specification
     generic attribute state (see section 2.7).
 
     If an array corresponding to a generic attribute required by a vertex shader
-    is enabled, the corresponding current generic attribute value is unaffected 
+    is enabled, the corresponding current generic attribute value is unaffected
     by the execution of DrawArraysOneInstance.
 
-    Specifying <first> < 0 results in undefined behavior. Generating the error 
+    Specifying <first> < 0 results in undefined behavior. Generating the error
     INVALID_VALUE is recommended in this case.
 
     The command
@@ -139,7 +139,7 @@ Additions to Chapter 2 of the OpenGL ES 2.0 Specification
         void DrawArrays( enum mode, int first, sizei count );
 
     is equivalent to the command sequence
-    
+
         DrawArraysOneInstance(mode, first, count, 0);
 
     The command
@@ -152,8 +152,8 @@ Additions to Chapter 2 of the OpenGL ES 2.0 Specification
     <instance> advances for each iteration. Instanced attributes that
     have <divisor> N, (where N > 0, as specified by
     VertexAttribDivisorANGLE) advance once every N instances.
-    
-    It has the same effect as: 
+
+    It has the same effect as:
 
         if (mode, count, or primcount is invalid)
             generate appropriate error
@@ -175,7 +175,7 @@ Additions to Chapter 2 of the OpenGL ES 2.0 Specification
     (see section 2.9.2) at the offset defined by <indices> to the GL.
     The <i>-th element transferred by DrawElementsOneInstance will be taken
     from element <indices>[i] of each enabled non-instanced array.
-    <type> must be one of UNSIGNED_BYTE, UNSIGNED_SHORT, or UNSIGNED_INT, 
+    <type> must be one of UNSIGNED_BYTE, UNSIGNED_SHORT, or UNSIGNED_INT,
     indicating that the index values are of GL type ubyte, ushort, or uint
     respectively. <mode> specifies what kind of primitives are constructed,
     as defined in section 2.6.1.
@@ -187,9 +187,9 @@ Additions to Chapter 2 of the OpenGL ES 2.0 Specification
         floor( <instance> / <divisor> );
 
     If an array corresponding to a generic attribute required by a vertex
-    shader is not enabled, then the corresponding element is taken from the 
+    shader is not enabled, then the corresponding element is taken from the
     current generic attribute state (see section 2.7). Otherwise, if an array
-    is enabled, the corresponding current generic attribute value is 
+    is enabled, the corresponding current generic attribute value is
     unaffected by the execution of DrawElementsOneInstance.
 
     The command
@@ -197,7 +197,7 @@ Additions to Chapter 2 of the OpenGL ES 2.0 Specification
         void DrawElements( enum mode, sizei count, enum type,
              const void *indices);
 
-    behaves identically to DrawElementsOneInstance with the <instance> 
+    behaves identically to DrawElementsOneInstance with the <instance>
     parameter set to zero; the effect of calling
 
         DrawElements(mode, count, type, indices);
@@ -227,16 +227,16 @@ Additions to Chapter 2 of the OpenGL ES 2.0 Specification
             }
         }
 
-    If the number of supported generic vertex attributes (the value of 
+    If the number of supported generic vertex attributes (the value of
     MAX_VERTEX_ATTRIBS) is <n>, then the client state required to implement
     vertex arrays consists of <n> boolean values, <n> memory pointers, <n>
     integer stride values, <n> symbolic constants representing array types,
-    <n> integers representing values per element, <n> boolean values 
+    <n> integers representing values per element, <n> boolean values
     indicating normalization, and <n> integers representing vertex attribute
-    divisors. 
+    divisors.
 
     In the initial state, the boolean values are each false, the memory
-    pointers are each NULL, the strides are each zero, the array types are 
+    pointers are each NULL, the strides are each zero, the array types are
     each FLOAT, the integers representing values per element are each four,
     and the divisors are each zero."
 
@@ -256,7 +256,7 @@ Additions to Chapter 5 of the OpenGL ES 2.0 Specification (Special Functions)
 Additions to Chapter 6 of the OpenGL ES 2.0 Specification (State and State
 Requests)
 
-    In section 6.1.8, add VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE to the list of 
+    In section 6.1.8, add VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE to the list of
     pnames accepted by GetVertexAttribfv and GetVertexAttribiv.
 
 Additions to the AGL/EGL/GLX/WGL Specifications
@@ -266,7 +266,7 @@ Additions to the AGL/EGL/GLX/WGL Specifications
 Dependencies on OES_element_index_uint
 
     If OES_element_index_uint is not supported, removed all references
-    to UNSIGNED_INT indices and the associated GL data type uint in 
+    to UNSIGNED_INT indices and the associated GL data type uint in
     the description of DrawElementsOneInstance.
 
 Errors
@@ -280,24 +280,24 @@ Errors
     INVALID_VALUE is generated by DrawArraysInstancedANGLE if <first>,
     <count>, or <primcount> is less than zero.
 
-    INVALID_ENUM is generated by DrawArraysInstancedANGLE or 
+    INVALID_ENUM is generated by DrawArraysInstancedANGLE or
     DrawElementsInstancedANGLE if <mode> is not one of the modes described in
     section 2.6.1.
 
     INVALID_VALUE is generated by DrawElementsInstancedANGLE if <count> or
     <primcount> is less than zero.
 
-    INVALID_OPERATION is generated by DrawArraysInstancedANGLE or 
+    INVALID_OPERATION is generated by DrawArraysInstancedANGLE or
     DrawElementsInstancedANGLE if there is not at least one enabled
     vertex attribute array that has a <divisor> of zero and is bound to an
     active generic attribute value in the program used for the draw command.
 
 New State
 
-    Changes to table 6.7, p. 268 (Vertex Array Data)
+    Changes to table 6.2, p. 136 (Vertex Array Data)
 
                                                                Initial
-    Get Value                          Type   Get Command      Value    Description       Sec.  
+    Get Value                          Type   Get Command      Value    Description       Sec.
     ---------                          -----  -----------      -------  -----------       ----
     VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE  8*xZ+  GetVertexAttrib  0        Instance Divisor  2.8
 
@@ -305,22 +305,22 @@ Issues
 
     1) Should vertex attribute zero be instance-able?
 
-       Resolved: Yes. 
+       Resolved: Yes.
        Discussion: In Direct3D 9 stream 0 must be specified as indexed data
        and it cannot be instanced. In ANGLE we can work around this by
        remapping any other stream that does have indexed data (ie a zero
        attribute divisor) to stream 0 in D3D9. This works because the HLSL
-       vertex shader matches attributes against the stream by using the 
+       vertex shader matches attributes against the stream by using the
        shader semantic index.
 
     2) Can all vertex attributes be instanced simultaneously?
 
        Resolved: No
-       Discussion: In rare cases it is possible for no attribute to have a 
+       Discussion: In rare cases it is possible for no attribute to have a
        divisor of 0, meaning that all attributes are instanced and none of
        them are regularly indexed. This in turn means each instance can only
        have a single position element, and so it only actually renders
-       something when rendering point primitives. This is not a very 
+       something when rendering point primitives. This is not a very
        meaningful way of using instancing (which is likely why D3D restricts
        stream 0 to be indexed regularly for position data in the first place).
        We could implement it by drawing these points one at a time (essentially
@@ -332,7 +332,7 @@ Issues
        call should return INVALID_OPERATION.
 
     3) Direct3D 9 only supports instancing for DrawIndexedPrimitive which
-       corresponds to DrawElementsInstanced.  Should we support 
+       corresponds to DrawElementsInstanced.  Should we support
        DrawArraysInstanced?
 
        Resolved: Yes
@@ -351,6 +351,9 @@ Issues
 
 Revision History
 
+    #4 February 3, 2017 Jon Leech
+       - Correct reference to ES 2.0 state table from 6.7 to 6.2 (public bug
+         1390)
     #3 February 8, 2012 dgkoch
        - clarify Issue 3 and the error condition for no indexed attributes
     #2 January 24, 2012 dgkoch
