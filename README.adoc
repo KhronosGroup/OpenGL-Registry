@@ -1,5 +1,6 @@
 = OpenGL-Registry
 
+
 == OpenGL, OpenGL ES, and OpenGL ES-SC API and Extension Registry
 
 This site contains the API and Extension registries for the OpenGL family
@@ -8,8 +9,8 @@ specifications of Khronos- and vendor-approved extensions; header files
 corresponding to the specifications; the XML API Registry definining each
 API; and related tools and scripts.
 
-It does not *currently* contain the OpenGL and OpenGL ES Reference Pages. We
-may setup a separate repository for these or merge them in here - TBD.
+It does not contain the OpenGL and OpenGL ES Reference Pages, which are in
+the KhronosGroup/OpenGL-Refpages repository.
 
 If you want to add an extension specification to the Registry, correct an
 existing specification, request allocation of enumerants and other
@@ -22,6 +23,18 @@ reserved values in the registry are not official until your pull request is
 
 Feel free to post issues on the repository if it's unclear how to do
 something you need to with extensions, or if you find problems.
+
+
+== Please Don't File API And GLSL Bugs Here!
+
+However, this repository isn't the right place to report problems with the
+OpenGL API and OpenGL Shading Language Specifications. Please continue to
+use Khronos Bugzilla, until we create more relevant Github repos for issue
+management.
+
+Reporting problems with the registry *itself*, including errors in the
+extensions or the XML files, is appropriate here.
+
 
 === Defining New Extensions
 
@@ -60,6 +73,7 @@ be updated or removed over time:
 * link:doc/GLSLExtensionRules.txt[OpenGL Shading Language Extension Conventions (updated 2006/12/18)]
 * link:doc/fog_coord.txt[Extension Specification Example]
 
+
 === Repository Contents
 
 * ABI - OpenGL ABI for Linux
@@ -78,9 +92,10 @@ be updated or removed over time:
 ** specs/sc - OpenGL SC Specifications
 * xml - XML API Registry and related tools
 
+
 === There Sure Is A Lot Of Stuff In Here!
 
-Yes, there sure is. The specs/ directory contains about 125 MB of PDFs
+Yes, there sure is. The specs/ directory contains over 125 MB of PDFs,
 including the latest specs for each version of OpenGL and OpenGL ES. While
 this may be somewhat distressing to people who just want to add a single
 extension, due to the repository download time, the *primary* purpose of
