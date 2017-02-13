@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date:   June 13, 2014
-    Author Revision:      4
+    Last Modified Date:   February 13, 2017
+    Author Revision:      5
 
 Number
 
@@ -1508,8 +1508,9 @@ Issues
       - Sampler and image handles passed to texture built-in functions must be
         dynamically uniform (NV_bindless_texture assumed NV_gpu_shader5 which
         removed this restriction). In order to increase the utility of this
-        extension, the DrawID shader input in a multi-draw
-        (ARB_multi_draw_indirect2) should be defined to be dynamically uniform.
+        extension, the DrawIDARB shader input in a multi-draw
+        (ARB_shader_draw_parameters) should be defined to be dynamically
+        uniform.
 
       - New layout qualifiers are added to inform the compiler of whether
         default-block sampler and image uniforms may be used with bindless
@@ -1543,3 +1544,6 @@ Revision History
      4    06/13/14  dkoch     Fix a variety of typos and missing words.
                               Add missing error condition for BufferData and
                               buffer textures.
+     5    02/13/17  pbrown    Update issue (19) to correct discussion of the
+                              DrawIDARB built-in and the name of the
+                              extension that added it.
