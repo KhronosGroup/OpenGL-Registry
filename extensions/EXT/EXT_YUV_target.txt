@@ -536,8 +536,8 @@ Revision History
         - Add yuvCscStandardExt itu_* to the list of keywords
         - Add yuvCscStandardExt as a basic type and clarify that this type
           can only be used in assignments or as a function argument.
-        - Add rgb_2_yuv and yuv_2_rgb as built-in functions 
-          (Bug 8114).
+        - Add rgb_2_yuv and yuv_2_rgb as built-in functions
+          (Bug 15704).
 
     #15 (April 23, 2015, Jon Leech)
         - Fix typo EGLImageTargetTexImage2DOES -> EGLImageTargetTexture2DOES
