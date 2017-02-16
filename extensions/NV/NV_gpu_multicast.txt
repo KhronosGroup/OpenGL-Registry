@@ -25,8 +25,8 @@ Status
 
 Version
 
-    Last Modified Date:         July 21, 2016
-    Revision:                   4
+    Last Modified Date:         October 7, 2016
+    Revision:                   5
 
 Number
 
@@ -96,7 +96,7 @@ New Procedures and Functions
         uint srcGpu, bitfield dstGpuMask,
         uint srcName, enum srcTarget, 
         int srcLevel,
-        int srcX, int srxY, int srcZ,
+        int srcX, int srcY, int srcZ,
         uint dstName, enum dstTarget,
         int dstLevel,
         int dstX, int dstY, int dstZ,
@@ -288,7 +288,7 @@ Additions to the OpenGL 4.5 Specification (Compatibility Profile)
         uint srcGpu, bitfield dstGpuMask,
         uint srcName, enum srcTarget, 
         int srcLevel,
-        int srcX, int srxY, int srcZ,
+        int srcX, int srcY, int srcZ,
         uint dstName, enum dstTarget,
         int dstLevel,
         int dstX, int dstY, int dstZ,
@@ -774,5 +774,6 @@ Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------  -----------------------------------------------
+     5    10/07/16  jschnarr  trivial typo fix
      4    07/21/16  mjk       registered
      3    06/15/16  jschnarr  R370 release
