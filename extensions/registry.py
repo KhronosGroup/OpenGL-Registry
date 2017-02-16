@@ -2861,6 +2861,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_EGL_stream_consumer_external.txt',
     },
+	'GL_NV_alpha_to_coverage_dither_control' : {
+        'number' : 500,
+        'flags' : { 'public' },
+        'url' : 'extensions/NV/NV_alpha_to_coverage_dither_control.txt',
+    },
     'GL_NV_bgr' : {
         'esnumber' : 135,
         'flags' : { 'public' },
