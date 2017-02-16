@@ -563,9 +563,9 @@
 </li>
 <li value=328><a href="extensions/EXT/EXT_packed_float.txt">GL_EXT_packed_float</a>
 
-    <br> <a href="extensions/EXT/EXT_packed_float.txt">WGL_EXT_pixel_format_packed_float</a>
-
     <br> <a href="extensions/EXT/EXT_packed_float.txt">GLX_EXT_fbconfig_packed_float</a>
+
+    <br> <a href="extensions/EXT/EXT_packed_float.txt">WGL_EXT_pixel_format_packed_float</a>
 </li>
 <li value=329><a href="extensions/EXT/EXT_texture_array.txt">GL_EXT_texture_array</a>
 </li>
@@ -667,9 +667,9 @@
 </li>
 <li value=374><a href="extensions/NV/NV_video_capture.txt">GL_NV_video_capture</a>
 
-    <br> <a href="extensions/NV/NV_video_capture.txt">WGL_NV_video_capture</a>
-
     <br> <a href="extensions/NV/NV_video_capture.txt">GLX_NV_video_capture</a>
+
+    <br> <a href="extensions/NV/NV_video_capture.txt">WGL_NV_video_capture</a>
 </li>
 <li value=375><a href="extensions/EXT/EXT_swap_control.txt">GL_EXT_swap_control</a>
 </li>
@@ -928,5 +928,7 @@
 <li value=498><a href="extensions/EXT/WGL_EXT_colorspace.txt">WGL_EXT_colorspace</a>
 </li>
 <li value=499><a href="extensions/SGIX/SGIX_pixel_texture.txt">GL_SGIX_pixel_texture</a>
+</li>
+<li value=500><a href="extensions/NV/NV_alpha_to_coverage_dither_control.txt">GL_NV_alpha_to_coverage_dither_control</a>
 </li>
 </ol>

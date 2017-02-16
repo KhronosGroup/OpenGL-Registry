@@ -399,9 +399,9 @@
 </li>
 <li value=191><a href="extensions/KHR/KHR_context_flush_control.txt">GL_KHR_context_flush_control</a>
 
-    <br> <a href="extensions/KHR/KHR_context_flush_control.txt">WGL_ARB_context_flush_control</a>
-
     <br> <a href="extensions/KHR/KHR_context_flush_control.txt">GLX_ARB_context_flush_control</a>
+
+    <br> <a href="extensions/KHR/KHR_context_flush_control.txt">WGL_ARB_context_flush_control</a>
 </li>
 <li value=192><a href="extensions/DMP/DMP_program_binary.txt">GL_DMP_program_binary</a>
 </li>

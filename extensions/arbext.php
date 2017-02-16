@@ -9,9 +9,9 @@
 </li>
 <li value=5><a href="extensions/ARB/ARB_multisample.txt">GL_ARB_multisample</a>
 
-    <br> <a href="extensions/ARB/ARB_multisample.txt">WGL_ARB_multisample</a>
-
     <br> <a href="extensions/ARB/ARB_multisample.txt">GLX_ARB_multisample</a>
+
+    <br> <a href="extensions/ARB/ARB_multisample.txt">WGL_ARB_multisample</a>
 </li>
 <li value=6><a href="extensions/ARB/ARB_texture_env_add.txt">GL_ARB_texture_env_add</a>
 </li>
@@ -101,9 +101,9 @@
 </li>
 <li value=46><a href="extensions/ARB/ARB_framebuffer_sRGB.txt">GL_ARB_framebuffer_sRGB</a>
 
-    <br> <a href="extensions/ARB/ARB_framebuffer_sRGB.txt">WGL_ARB_framebuffer_sRGB</a>
-
     <br> <a href="extensions/ARB/ARB_framebuffer_sRGB.txt">GLX_ARB_framebuffer_sRGB</a>
+
+    <br> <a href="extensions/ARB/ARB_framebuffer_sRGB.txt">WGL_ARB_framebuffer_sRGB</a>
 </li>
 <li value=47><a href="extensions/ARB/ARB_geometry_shader4.txt">GL_ARB_geometry_shader4</a>
 </li>
@@ -357,9 +357,9 @@
 </li>
 <li value=168><a href="extensions/KHR/KHR_context_flush_control.txt">GL_KHR_context_flush_control</a>
 
-    <br> <a href="extensions/KHR/KHR_context_flush_control.txt">WGL_ARB_context_flush_control</a>
-
     <br> <a href="extensions/KHR/KHR_context_flush_control.txt">GLX_ARB_context_flush_control</a>
+
+    <br> <a href="extensions/KHR/KHR_context_flush_control.txt">WGL_ARB_context_flush_control</a>
 </li>
 <li value=169><a href="extensions/KHR/KHR_robust_buffer_access_behavior.txt">GL_KHR_robust_buffer_access_behavior</a>
 </li>

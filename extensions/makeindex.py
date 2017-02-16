@@ -81,7 +81,7 @@ if __name__ == '__main__':
             print('<li value=', index, '>', makeLink(name, url), sep='')
 
             if ('alias' in ext):
-                for alias in ext['alias']:
+                for alias in sorted(ext['alias']):
                     print('\n    <br> ', makeLink(alias, url), sep='')
 
             print('</li>')
