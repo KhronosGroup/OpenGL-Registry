@@ -40708,7 +40708,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glDepthBoundsEXT"/>
             </require>
         </extension>
-        <extension name="GL_EXT_direct_state_access" supported="gl" comment="DSA extension doesn't identify which interfaces are core profile and keeps getting expanded. This is in sync with revision 34, 2010/09/07">
+        <extension name="GL_EXT_direct_state_access" supported="gl|glcore" comment="DSA extension doesn't identify which interfaces are core profile and keeps getting expanded. This is in sync with revision 34, 2010/09/07">
             <require>
                 <enum name="GL_PROGRAM_MATRIX_EXT"/>
                 <enum name="GL_TRANSPOSE_PROGRAM_MATRIX_EXT"/>
