@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20170209
+#define GL_GLEXT_VERSION 20170221
 
 /* Generated C header for:
  * API: gl
@@ -9063,6 +9063,18 @@ GLAPI void APIENTRY glEndConditionalRenderNVX (void);
 #define GL_GPU_MEMORY_INFO_EVICTION_COUNT_NVX 0x904A
 #define GL_GPU_MEMORY_INFO_EVICTED_MEMORY_NVX 0x904B
 #endif /* GL_NVX_gpu_memory_info */
+
+#ifndef GL_NV_alpha_to_coverage_dither_control
+#define GL_NV_alpha_to_coverage_dither_control 1
+#define GL_ALPHA_TO_COVERAGE_DITHER_DEFAULT_NV 0x934D
+#define GL_ALPHA_TO_COVERAGE_DITHER_ENABLE_NV 0x934E
+#define GL_ALPHA_TO_COVERAGE_DITHER_DISABLE_NV 0x934F
+#define GL_ALPHA_TO_COVERAGE_DITHER_MODE_NV 0x92BF
+typedef void (APIENTRYP PFNGLALPHATOCOVERAGEDITHERCONTROLNVPROC) (GLenum mode);
+#ifdef GL_GLEXT_PROTOTYPES
+GLAPI void APIENTRY glAlphaToCoverageDitherControlNV (GLenum mode);
+#endif
+#endif /* GL_NV_alpha_to_coverage_dither_control */
 
 #ifndef GL_NV_bindless_multi_draw_indirect
 #define GL_NV_bindless_multi_draw_indirect 1
