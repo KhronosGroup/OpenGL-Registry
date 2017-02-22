@@ -118,13 +118,13 @@ Overview
       // Redeclare gl_PerVertex to pass through "gl_Position".
       layout(passthrough) in gl_PerVertex {
         vec4 gl_Position;
-      };
+      } gl_in[];
 
       // Declare "Inputs" with "passthrough" to automatically copy members.
       layout(passthrough) in Inputs {
         vec2 texcoord;
         vec4 baseColor;
-      };
+      } v_in[];
 
       // No output block declaration required.
 
@@ -559,7 +559,7 @@ Issues
 
         layout(passthrough) in Block {  // pass through the contents of <Block>
           ...
-        };
+        } v_in[];
 
       We decided not to do this in part because the inheritance semantics for
       other layout qualifiers might cause the casual programmer to expect that
@@ -569,7 +569,7 @@ Issues
         layout(passthrough) in;
         in Block {
           ...
-        };
+        } v_in[];
 
       We could have resolved this by using a second identifier (e.g.,
       "passthrough_shader") in the layout qualifier, but there don't seem to
@@ -596,7 +596,7 @@ Issues
         layout(passthrough) in;
         layout(passthrough) in gl_PerVertex {
           vec4 gl_Position;
-        };
+        } gl_in[];
         out vec4 batman;
 
         void main()
@@ -765,7 +765,7 @@ Issues
           layout(passthrough) vec4 a;  // assigned location 0
                               vec4 b;  // assigned location 1
           layout(passthrough) vec4 c;  // assigned location 2
-        };
+        } v_in[];
 
       the corresponding output block is treated as though it were declared as:
 
@@ -785,7 +785,36 @@ Issues
       in a "normal" output block, except that the non-passthrough inputs would
       be dropped.
 
+    (18) Do built-in or user-defined inputs qualified with "passthrough" need
+         to be "arrayed"?
+
+      RESOLVED:  Yes.  Normal geometry shader inputs must be declared in
+      "arrayed" form, where each vertex has its own set of inputs.  Blocks
+      must be declared as an array of instances:
+
+        in Block {
+          vec4 a;
+        } v_in[];
+
+      and non-block inputs must be declared as arrays:
+
+        in vec4 a[];  // <a> is indexed by input vertex number
+
+      It is illegal to declare non-arrayed geometry shader inputs, since it
+      wouldn't be clear which vertex to use when accessing such inputs.
+
+      Passthrough geometry shaders don't change this requirement.
+      Additionally, the requirement still applies even if no code in the
+      passthrough geometry shader reads from the input.  Note that in older
+      versions of this specification, some examples declared passthrough
+      inputs that were missing the per-vertex array declaration.
+
 Revision History
+
+    Revision 4, 2017/02/15 (pbrown)
+      - Fix syntax issues in various sample code, including the introduction.
+        Passthrough inputs need to be declared as "arrayed" (with a separate
+        block instance for each vertex).  Added issue (18) to clarify further.
 
     Revision 3, 2015/04/06 (mjk)
       - Fix typos
