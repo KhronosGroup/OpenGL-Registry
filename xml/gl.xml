@@ -2284,11 +2284,17 @@ typedef unsigned int GLhandleARB;
         <enum value="0x40000000" name="GL_MULTISAMPLE_BUFFER_BIT6_QCOM"/>
         <enum value="0x80000000" name="GL_MULTISAMPLE_BUFFER_BIT7_QCOM"/>
     </enums>
+    
+    <enums namespace="GL" group="FoveationConfigBitQCOM" type="bitmask">
+        <enum value="0x00000001" name="GL_FOVEATION_ENABLE_BIT_QCOM"/>
+        <enum value="0x00000002" name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM"/>
+    </enums>
 
     <enums namespace="GL" group="FfdMaskSGIX" type="bitmask">
         <enum value="0x00000001" name="GL_TEXTURE_DEFORMATION_BIT_SGIX"/>
         <enum value="0x00000002" name="GL_GEOMETRY_DEFORMATION_BIT_SGIX"/>
     </enums>
+   
 
     <!-- Non-bitmask enums with their own namespace. Generally small numbers
          used for indexed access. -->
@@ -13669,6 +13675,24 @@ typedef unsigned int GLhandleARB;
             <param group="Framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
             <param group="DrawBufferMode" len="n">const <ptype>GLenum</ptype> *<name>bufs</name></param>
+        </command>
+        <command>
+            <proto>void <name>glFramebufferFoveationConfigQCOM</name></proto>
+            <param group="Framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
+            <param><ptype>GLuint</ptype> <name>numLayers</name></param>
+            <param><ptype>GLuint</ptype> <name>focalPointsPerLayer</name></param>
+            <param><ptype>GLuint</ptype> <name>requestedFeatures</name></param>
+            <param len="1"><ptype>GLuint</ptype> *<name>providedFeatures</name></param>   
+        </command>
+        <command>
+            <proto>void <name>glFramebufferFoveationParametersQCOM</name></proto>
+            <param group="Framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
+            <param><ptype>GLuint</ptype> <name>layer</name></param>
+            <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>focalX</name></param>
+            <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>focalY</name></param>
+            <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>gainX</name></param>
+            <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>gainY</name></param>
+            <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>foveaArea</name></param>
         </command>
         <command>
             <proto>void <name>glFramebufferParameteri</name></proto>
@@ -40708,7 +40732,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glDepthBoundsEXT"/>
             </require>
         </extension>
-        <extension name="GL_EXT_direct_state_access" supported="gl|glcore" comment="DSA extension doesn't identify which interfaces are core profile and keeps getting expanded. This is in sync with revision 34, 2010/09/07">
+        <extension name="GL_EXT_direct_state_access" supported="gl" comment="DSA extension doesn't identify which interfaces are core profile and keeps getting expanded. This is in sync with revision 34, 2010/09/07">
             <require>
                 <enum name="GL_PROGRAM_MATRIX_EXT"/>
                 <enum name="GL_TRANSPOSE_PROGRAM_MATRIX_EXT"/>
@@ -47119,6 +47143,14 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_ALPHA_TO_COVERAGE_DITHER_DISABLE_NV"/>
                 <enum name="GL_ALPHA_TO_COVERAGE_DITHER_MODE_NV"/>
                 <command name="glAlphaToCoverageDitherControlNV"/>
+            </require>
+        </extension>
+        <extension name="GL_QCOM_framebuffer_foveated" supported="gles2">
+            <require>
+                <enum name="GL_FOVEATION_ENABLE_BIT_QCOM"/>
+                <enum name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM"/>
+                <command name="glFramebufferFoveationConfigQCOM"/>
+                <command name="glFramebufferFoveationParametersQCOM"/>
             </require>
         </extension>
     </extensions>
