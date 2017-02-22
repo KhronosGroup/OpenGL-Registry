@@ -2284,7 +2284,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x40000000" name="GL_MULTISAMPLE_BUFFER_BIT6_QCOM"/>
         <enum value="0x80000000" name="GL_MULTISAMPLE_BUFFER_BIT7_QCOM"/>
     </enums>
-    
+
     <enums namespace="GL" group="FoveationConfigBitQCOM" type="bitmask">
         <enum value="0x00000001" name="GL_FOVEATION_ENABLE_BIT_QCOM"/>
         <enum value="0x00000002" name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM"/>
@@ -2294,7 +2294,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x00000001" name="GL_TEXTURE_DEFORMATION_BIT_SGIX"/>
         <enum value="0x00000002" name="GL_GEOMETRY_DEFORMATION_BIT_SGIX"/>
     </enums>
-   
+
 
     <!-- Non-bitmask enums with their own namespace. Generally small numbers
          used for indexed access. -->
@@ -13682,7 +13682,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>numLayers</name></param>
             <param><ptype>GLuint</ptype> <name>focalPointsPerLayer</name></param>
             <param><ptype>GLuint</ptype> <name>requestedFeatures</name></param>
-            <param len="1"><ptype>GLuint</ptype> *<name>providedFeatures</name></param>   
+            <param len="1"><ptype>GLuint</ptype> *<name>providedFeatures</name></param>
         </command>
         <command>
             <proto>void <name>glFramebufferFoveationParametersQCOM</name></proto>
@@ -40732,7 +40732,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glDepthBoundsEXT"/>
             </require>
         </extension>
-        <extension name="GL_EXT_direct_state_access" supported="gl" comment="DSA extension doesn't identify which interfaces are core profile and keeps getting expanded. This is in sync with revision 34, 2010/09/07">
+        <extension name="GL_EXT_direct_state_access" supported="gl|glcore" comment="DSA extension doesn't identify which interfaces are core profile and keeps getting expanded. This is in sync with revision 34, 2010/09/07">
             <require>
                 <enum name="GL_PROGRAM_MATRIX_EXT"/>
                 <enum name="GL_TRANSPOSE_PROGRAM_MATRIX_EXT"/>
