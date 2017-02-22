@@ -4116,6 +4116,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_writeonly_rendering.txt',
     },
+    'GL_QCOM_framebuffer_foveated' : {
+        'esnumber' : 273,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_framebuffer_foveated.txt',
+    },
     'GL_REND_screen_coordinates' : {
         'number' : 155,
         'flags' : { 'public' },
