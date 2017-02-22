@@ -561,4 +561,8 @@
 </li>
 <li value=272><a href="extensions/EXT/EXT_draw_transform_feedback.txt">GL_EXT_draw_transform_feedback</a>
 </li>
+<li value=273><a href="extensions/QCOM/QCOM_framebuffer_foveated.txt">GL_QCOM_framebuffer_foveated</a>
+</li>
+<li value=274><a href="extensions/NV/NV_draw_vulkan_image.txt">GL_NV_draw_vulkan_image</a>
+</li>
 </ol>

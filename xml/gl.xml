@@ -142,6 +142,7 @@ typedef unsigned int GLhandleARB;
         <type>typedef void (<apientry/> *<name>GLDEBUGPROCAMD</name>)(GLuint id,GLenum category,GLenum severity,GLsizei length,const GLchar *message,void *userParam);</type>
         <type>typedef unsigned short <name>GLhalfNV</name>;</type>
         <type requires="GLintptr">typedef GLintptr <name>GLvdpauSurfaceNV</name>;</type>
+        <type>typedef void (<apientry/> *<name>VULKANPROCNV</name>)(void);</type>
     </types>
 
     <!-- SECTION: GL parameter class type definitions. -->
@@ -30145,6 +30146,36 @@ typedef unsigned int GLhandleARB;
             <param group="VertexShaderWriteMaskEXT"><ptype>GLenum</ptype> <name>outZ</name></param>
             <param group="VertexShaderWriteMaskEXT"><ptype>GLenum</ptype> <name>outW</name></param>
         </command>
+        <command>
+            <proto>void <name>glDrawVkImageNV</name></proto>
+            <param><ptype>GLuint64</ptype> <name>vkImage</name></param>
+            <param><ptype>GLuint</ptype> <name>sampler</name></param>
+            <param><ptype>GLfloat</ptype> <name>x0</name></param>
+            <param><ptype>GLfloat</ptype> <name>y0</name></param>
+            <param><ptype>GLfloat</ptype> <name>x1</name></param>
+            <param><ptype>GLfloat</ptype> <name>y1</name></param>
+            <param><ptype>GLfloat</ptype> <name>z</name></param>
+            <param><ptype>GLfloat</ptype> <name>s0</name></param>
+            <param><ptype>GLfloat</ptype> <name>t0</name></param>
+            <param><ptype>GLfloat</ptype> <name>s1</name></param>
+            <param><ptype>GLfloat</ptype> <name>t1</name></param>
+        </command>
+        <command>
+            <proto>VULKANPROCNV <name>glGetVkProcAddrNV</name></proto>
+            <param len="COMPSIZE(name)">const <ptype>GLchar</ptype> *<name>name</name></param>
+        </command>
+        <command>
+            <proto>void <name>glWaitVkSemaphoreNV</name></proto>
+            <param><ptype>GLuint64</ptype> <name>vkSemaphore</name></param>
+        </command>
+        <command>
+            <proto>void <name>glSignalVkSemaphoreNV</name></proto>
+            <param><ptype>GLuint64</ptype> <name>vkSemaphore</name></param>
+        </command>
+        <command>
+            <proto>void <name>glSignalVkFenceNV</name></proto>
+            <param><ptype>GLuint64</ptype> <name>vkFence</name></param>
+        </command>
 
     </commands>
 
@@ -47151,6 +47182,15 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM"/>
                 <command name="glFramebufferFoveationConfigQCOM"/>
                 <command name="glFramebufferFoveationParametersQCOM"/>
+            </require>
+        </extension>
+        <extension name="GL_NV_draw_vulkan_image" supported="gl|glcore|gles2">
+            <require>
+                <command name="glDrawVkImageNV"/>
+                <command name="glGetVkProcAddrNV"/>
+                <command name="glWaitVkSemaphoreNV"/>
+                <command name="glSignalVkSemaphoreNV"/>
+                <command name="glSignalVkFenceNV"/>
             </require>
         </extension>
     </extensions>
