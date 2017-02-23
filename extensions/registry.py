@@ -3017,6 +3017,13 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_draw_texture.txt',
     },
+    'GL_NV_draw_vulkan_image' : {
+        'number' : 501,
+        'esnumber' : 274,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_draw_vulkan_image.txt',
+    },
     'GL_NV_evaluators' : {
         'number' : 225,
         'flags' : { 'public' },
