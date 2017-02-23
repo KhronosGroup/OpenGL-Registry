@@ -931,4 +931,6 @@
 </li>
 <li value=500><a href="extensions/NV/NV_alpha_to_coverage_dither_control.txt">GL_NV_alpha_to_coverage_dither_control</a>
 </li>
+<li value=501><a href="extensions/NV/NV_draw_vulkan_image.txt">GL_NV_draw_vulkan_image</a>
+</li>
 </ol>
