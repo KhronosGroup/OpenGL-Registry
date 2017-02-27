@@ -142,7 +142,7 @@ typedef unsigned int GLhandleARB;
         <type>typedef void (<apientry/> *<name>GLDEBUGPROCAMD</name>)(GLuint id,GLenum category,GLenum severity,GLsizei length,const GLchar *message,void *userParam);</type>
         <type>typedef unsigned short <name>GLhalfNV</name>;</type>
         <type requires="GLintptr">typedef GLintptr <name>GLvdpauSurfaceNV</name>;</type>
-        <type>typedef void (<apientry/> *<name>VULKANPROCNV</name>)(void);</type>
+        <type>typedef void (<apientry/> *<name>GLVULKANPROCNV</name>)(void);</type>
     </types>
 
     <!-- SECTION: GL parameter class type definitions. -->
@@ -30161,7 +30161,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLfloat</ptype> <name>t1</name></param>
         </command>
         <command>
-            <proto>VULKANPROCNV <name>glGetVkProcAddrNV</name></proto>
+            <proto><ptype>GLVULKANPROCNV</ptype> <name>glGetVkProcAddrNV</name></proto>
             <param len="COMPSIZE(name)">const <ptype>GLchar</ptype> *<name>name</name></param>
         </command>
         <command>
