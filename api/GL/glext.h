@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20170222
+#define GL_GLEXT_VERSION 20170227
 
 /* Generated C header for:
  * API: gl
@@ -9371,14 +9371,15 @@ GLAPI void APIENTRY glDrawTextureNV (GLuint texture, GLuint sampler, GLfloat x0,
 
 #ifndef GL_NV_draw_vulkan_image
 #define GL_NV_draw_vulkan_image 1
+typedef void (APIENTRY  *GLVULKANPROCNV)(void);
 typedef void (APIENTRYP PFNGLDRAWVKIMAGENVPROC) (GLuint64 vkImage, GLuint sampler, GLfloat x0, GLfloat y0, GLfloat x1, GLfloat y1, GLfloat z, GLfloat s0, GLfloat t0, GLfloat s1, GLfloat t1);
-typedef VULKANPROCNV (APIENTRYP PFNGLGETVKPROCADDRNVPROC) (const GLchar *name);
+typedef GLVULKANPROCNV (APIENTRYP PFNGLGETVKPROCADDRNVPROC) (const GLchar *name);
 typedef void (APIENTRYP PFNGLWAITVKSEMAPHORENVPROC) (GLuint64 vkSemaphore);
 typedef void (APIENTRYP PFNGLSIGNALVKSEMAPHORENVPROC) (GLuint64 vkSemaphore);
 typedef void (APIENTRYP PFNGLSIGNALVKFENCENVPROC) (GLuint64 vkFence);
 #ifdef GL_GLEXT_PROTOTYPES
 GLAPI void APIENTRY glDrawVkImageNV (GLuint64 vkImage, GLuint sampler, GLfloat x0, GLfloat y0, GLfloat x1, GLfloat y1, GLfloat z, GLfloat s0, GLfloat t0, GLfloat s1, GLfloat t1);
-GLAPI VULKANPROCNV APIENTRY glGetVkProcAddrNV (const GLchar *name);
+GLAPI GLVULKANPROCNV APIENTRY glGetVkProcAddrNV (const GLchar *name);
 GLAPI void APIENTRY glWaitVkSemaphoreNV (GLuint64 vkSemaphore);
 GLAPI void APIENTRY glSignalVkSemaphoreNV (GLuint64 vkSemaphore);
 GLAPI void APIENTRY glSignalVkFenceNV (GLuint64 vkFence);
