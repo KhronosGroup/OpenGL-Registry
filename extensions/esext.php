@@ -565,4 +565,6 @@
 </li>
 <li value=274><a href="extensions/NV/NV_draw_vulkan_image.txt">GL_NV_draw_vulkan_image</a>
 </li>
+<li value=275><a href="extensions/EXT/EXT_multisampled_render_to_texture2.txt">GL_EXT_multisampled_render_to_texture2</a>
+</li>
 </ol>

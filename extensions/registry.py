@@ -1882,6 +1882,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_multisampled_render_to_texture.txt',
     },
+    'GL_EXT_multisampled_render_to_texture2' : {
+        'esnumber' : 275,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_multisampled_render_to_texture2.txt',
+    },
     'GL_EXT_multiview_draw_buffers' : {
         'esnumber' : 125,
         'flags' : { 'public' },
