@@ -31,21 +31,21 @@ Version
 
 Number
 
-    274
+    OpenGL ES Extension #275
 
 Dependencies
 
     This requires support of EXT_multisample_render_to_texture or an equivalent
     extension.
-    
-    This interacts with OVR_multiview_multisampled_render_to_texture. 
+
+    This interacts with OVR_multiview_multisampled_render_to_texture.
 
 Overview
 
     The <attachment> parameters for FramebufferTexture2DMultisampleEXT is no
-    longer required to be COLOR_ATTACHMENT0.  The attachment parameter now 
+    longer required to be COLOR_ATTACHMENT0.  The attachment parameter now
     matches what is allowed in FramebufferTexture2D.  This means values like
-    GL_COLOR_ATTACHMENTi, GL_DEPTH_ATTACHMENT, GL_STENCIL_ATTACHMENT, or 
+    GL_COLOR_ATTACHMENTi, GL_DEPTH_ATTACHMENT, GL_STENCIL_ATTACHMENT, or
     GL_DEPTH_STENCIL_ATTACHMENT may be used.
     After the application has rendered into the mutisampled buffer, the application
     should be careful to not trigger an implicit flush by performing a client side
@@ -76,7 +76,7 @@ Additions to Section 4.4.3 of the OpenGL ES 2.0 Specification
     In the description of FramebufferTexture2DMultisampleEXT, after the sentence
     "After such a resolve, the contents of the multisample buffer become undefined.",
     add the following sentence:
-    
+
         "If texture is a depth or stencil texture, the contents of the multisample
         buffer is discarded rather than resolved - equivalent to the application
         calling InvalidateFramebuffer for this attachment."
@@ -88,7 +88,7 @@ Errors
     is called with an <attachment> that is not COLOR_ATTACHMENT0.
 
 Issues
-    
+
     1. How should downsampling depth/stencil surfaces be handled?
 
     Proposed: Ideally, when using this extension, depth/stencil attachments should
