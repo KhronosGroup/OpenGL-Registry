@@ -2231,6 +2231,12 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/EXT/EXT_texture_buffer_object.txt',
     },
+    'GL_EXT_texture_compression_astc_decode_mode' : {
+        'esnumber' : 276,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_texture_compression_astc_decode_mode.txt',
+        'alias' : { 'GL_EXT_texture_compression_astc_decode_mode_rgb9e5' },
+    },
     'GL_EXT_texture_compression_dxt1' : {
         'number' : 309,
         'esnumber' : 49,

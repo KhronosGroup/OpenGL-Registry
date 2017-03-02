@@ -567,4 +567,8 @@
 </li>
 <li value=275><a href="extensions/EXT/EXT_multisampled_render_to_texture2.txt">GL_EXT_multisampled_render_to_texture2</a>
 </li>
+<li value=276><a href="extensions/EXT/EXT_texture_compression_astc_decode_mode.txt">GL_EXT_texture_compression_astc_decode_mode</a>
+
+    <br> <a href="EXT/EXT_texture_compression_astc_decode_mode.txt">GL_EXT_texture_compression_astc_decode_mode_rgb9e5</a>
+</li>
 </ol>
