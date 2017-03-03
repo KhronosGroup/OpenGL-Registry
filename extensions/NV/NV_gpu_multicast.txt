@@ -30,7 +30,7 @@ Version
 
 Number
 
-    494
+    OpenGL Extension #494
 
 Dependencies
 

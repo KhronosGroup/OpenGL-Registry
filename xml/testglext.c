@@ -1,4 +1,4 @@
-/*% /lib/cpp % > testglext.i ; cc -c % ; rm testglext.[oi]
+/*% /lib/cpp -I../api testglext.c > testglext.i ; cc -c % ; rm testglext.[oi]
 */
 #define GL_GLEXT_LEGACY
 #include <GL/gl.h>
