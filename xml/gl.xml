@@ -13702,6 +13702,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glFramebufferFoveationParametersQCOM</name></proto>
             <param group="Framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param><ptype>GLuint</ptype> <name>layer</name></param>
+            <param><ptype>GLuint</ptype> <name>focalPoint</name></param>
             <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>focalX</name></param>
             <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>focalY</name></param>
             <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>gainX</name></param>
