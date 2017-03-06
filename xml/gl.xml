@@ -8555,7 +8555,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9631" name="GL_MAX_VIEWS_OVR"/>
         <enum value="0x9632" name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR"/>
         <enum value="0x9633" name="GL_FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR"/>
-            <unused start="0x9633" end="0x963F" vendor="Oculus"/>
+            <unused start="0x9634" end="0x963F" vendor="Oculus"/>
     </enums>
 
     <enums namespace="GL" start="0x9640" end="0x964F" vendor="Mediatek" comment="Khronos bug 14294">
