@@ -27,13 +27,21 @@ something you need to with extensions, or if you find problems.
 
 == Please Don't File API And GLSL Bugs Here!
 
-However, this repository isn't the right place to report problems with the
-OpenGL API and OpenGL Shading Language Specifications. Please continue to
-use Khronos Bugzilla, until we create more relevant Github repos for issue
-management.
+The OpenGL-Registry repository isn't the right place to report problems with
+the OpenGL and OpenGL ES API and Shading Language Specifications.
 
-Reporting problems with the registry *itself*, including errors in the
-extensions or the XML files, is appropriate here.
+For API (both core and extension) issues, please use the issue tracker in
+the https://github.com/KhronosGroup/OpenGL-API repository.
+
+For Shading Language (both core and extension) issues, please use the issue
+tracker in the https://github.com/KhronosGroup/OpenGL-GLSL repository.
+
+Please tag your issues with +[OpenGL]+ or +[OpenGL ES]+ in the title, if
+they are specific to that API and/or Shading Language.
+
+Reporting problems with the registry *itself*, including missing or badly
+formed extension documents, headers, or XML files, should be done using the
+OpenGL-Registry issue tracker.
 
 
 === Defining New Extensions
