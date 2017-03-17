@@ -1,16 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+$static_title = 'OpenGL&reg; Application Binary Interface for Linux';
+$static_breadcrumb = array(
+    '/registry/' => 'Registry',
+    '/registry/OpenGL' => 'OpenGL',
+    'NOLINK' => 'ABI'
+);
+include_once("../../../assets/static_pages/khr_page_top.php");
+?>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<meta name="description" content="OpenGL Application Binary Interface for Linux"/>
-<title>OpenGL&reg; Application Binary Interface for Linux</title>
-<?php include("../../inc/registry_head.txt"); ?>
-</head>
-
-<body>
-<?php include("../../inc/registry_body_start.txt"); ?>
 
 <h1 style="text-align:center">
     OpenGL&reg; Application Binary Interface for Linux <br/>
@@ -688,6 +685,6 @@
 <li> 9/7/1999 - Initial version. </li>
 </ul>
 
-<?php include("../../inc/registry_footer.txt"); ?>
+<?php include_once("../../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
 </html>
