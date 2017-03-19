@@ -19,6 +19,7 @@ Contributors
     Pat Brown, NVIDIA
     Eric Werness, NVIDIA
     Mark Kilgard, NVIDIA
+    Jeff Bolz, NVIDIA
 
 Notice
 
@@ -32,7 +33,7 @@ Status
 
 Version
 
-    Last Modified Date: 08/25/2015
+    Last Modified Date: 03/18/2017
     Revision: 7
 
 Number
@@ -118,11 +119,11 @@ Additions to Chapter 7 of the OpenGL Shading Language Specification
 
         variable               equation for bit values
         --------------------   ------------------------------------
-        gl_SubGroupEqMaskARB   gl_SubGroupInvocationARB == bit index
-        gl_SubGroupGeMaskARB   gl_SubGroupInvocationARB >= bit index
-        gl_SubGroupGtMaskARB   gl_SubGroupInvocationARB >  bit index
-        gl_SubGroupLeMaskARB   gl_SubGroupInvocationARB <= bit index
-        gl_SubGroupLtMaskARB   gl_SubGroupInvocationARB <  bit index
+        gl_SubGroupEqMaskARB   bit index == gl_SubGroupInvocationARB
+        gl_SubGroupGeMaskARB   bit index >= gl_SubGroupInvocationARB
+        gl_SubGroupGtMaskARB   bit index >  gl_SubGroupInvocationARB
+        gl_SubGroupLeMaskARB   bit index <= gl_SubGroupInvocationARB
+        gl_SubGroupLtMaskARB   bit index <  gl_SubGroupInvocationARB
 
 Additions to Chapter 8 of the OpenGL Shading Language Specification
 (Built-in Functions)
@@ -169,10 +170,27 @@ Additions to Chapter 8 of the OpenGL Shading Language Specification
     The function readFirstInvocationARB() returns the <value> from the first
     active invocation to all active invocations in the sub-group.
 
+Issues
+
+    1) How are the values of gl_SubGroup??MaskARB defined?
+
+    RESOLVED.  Earlier versions of this specification defined a bitmask
+    such as "LtMask" ("less than mask") as having bits set if
+    "bit index <  gl_SubGroupInvocationARB".  However, this was reversed
+    from the definition in GL_NV_shader_thread_group that these built-ins
+    were derived from, and also mismatched a recent Vulkan/SPIR-V extension.
+
+    Fortunately, all known implementations of this extension had implemented
+    "wrong" behavior (matching the sense of the original built-ins in
+    GL_NV_shader_thread_group), so the best thing to do is change the
+    definition in the spec.
+
 Revision History
 
     Rev  Date        Author    Changes
     ---  ----------  --------  ---------------------------------------------
+      8  03/18/2017  jbolz     Reversed the sense of the comparison in the
+                               definition of gl_SubGroup??MaskARB.
       7  08/25/2015  nhenning  Add ARB suffix on documentation for
                                readInvocation and readFirstInvocation
                                functions.
