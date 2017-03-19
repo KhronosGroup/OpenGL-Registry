@@ -176,7 +176,7 @@ Issues
 
     RESOLVED.  Earlier versions of this specification defined a bitmask
     such as "LtMask" ("less than mask") as having bits set if
-    "bit index <  gl_SubGroupInvocationARB".  However, this was reversed
+    "gl_SubGroupInvocationARB <  bit index".  However, this was reversed
     from the definition in GL_NV_shader_thread_group that these built-ins
     were derived from, and also mismatched a recent Vulkan/SPIR-V extension.
 
