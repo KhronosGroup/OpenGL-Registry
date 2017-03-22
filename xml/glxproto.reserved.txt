@@ -41,14 +41,22 @@ GLX Vendor Private / Vendor Private with Reply opcodes (32-bits)
   1310    1311          NV_fragment_program
   1312                  NV_fence
   1313    1318          GLX_NV_video_output
-  1319    1420          NVIDIA (use TBD)
+  1319    1320          NV_vertex_program
+  1321    1326          NVIDIA (use TBD)
+  1327                  NV_register_combiners2
   1328    1329          EXT_timer_query
-  1330    1331          EXT_texture_from_pixmap
-  1332    1359          NVIDIA (use TBD)
+  1330    1331          GLX_EXT_texture_from_pixmap
+  1332    1339          NV_present_video
+  1340                  NVIDIA (use TBD)
+  1341                  GLX_NV_delay_before_swap
+  1342    1359          NVIDIA (use TBD)
   1360                  GLX_NV_copy_image
-  1361    1386          NVIDIA (use TBD)
+  1361    1364          NVIDIA (use TBD)
+  1365    1368          NV_gpu_program4
+  1369    1386          NVIDIA (use TBD)
   1387    1388          GLX_NV_copy_buffer
-  1389    1415          NVIDIA (use TBD)
+  1389    1399          NVIDIA (use TBD)
+  1400    1415          NV_video_capture
   1416                  GLX_EXT_swap_control
   1417    1420          NVIDIA (use TBD)
   1421                  OES_single_precision (Khronos OpenGL ES 1.0)
