@@ -20,6 +20,7 @@ GLX Opcodes (8 bits)
     21-32   GLX 1.3
     33      glXSetClientInfoARB (GLX_ARB_create_context)
     34      glXCreateContextAttribsARB (GLX_ARB_create_context)
+    35      glXSetClientInfo2ARB (GLX_ARB_create_context)
 
 GLX Vendor Private / Vendor Private with Reply opcodes (32-bits)
                           (first 4 bytes past standard X header)
