@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20170305 */
+/* Generated on date 20170325 */
 
 /* Generated C header for:
  * API: gles2
@@ -49,10 +49,6 @@ extern "C" {
  * Additional extensions included: _nomatch_^
  * Extensions removed: _nomatch_^
  */
-
-#ifndef GL_ARB_sparse_texture2
-#define GL_ARB_sparse_texture2 1
-#endif /* GL_ARB_sparse_texture2 */
 
 #ifndef GL_KHR_blend_equation_advanced
 #define GL_KHR_blend_equation_advanced 1
@@ -1762,6 +1758,10 @@ typedef void (GL_APIENTRYP PFNGLTEXPAGECOMMITMENTEXTPROC) (GLenum target, GLint 
 GL_APICALL void GL_APIENTRY glTexPageCommitmentEXT (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLboolean commit);
 #endif
 #endif /* GL_EXT_sparse_texture */
+
+#ifndef GL_EXT_sparse_texture2
+#define GL_EXT_sparse_texture2 1
+#endif /* GL_EXT_sparse_texture2 */
 
 #ifndef GL_EXT_tessellation_point_size
 #define GL_EXT_tessellation_point_size 1
