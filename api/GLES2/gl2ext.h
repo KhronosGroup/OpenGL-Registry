@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20170325 */
+/* Generated on date 20170331 */
 
 /* Generated C header for:
  * API: gles2
@@ -2160,6 +2160,10 @@ GL_APICALL void GL_APIENTRY glGetPerfQueryIdByNameINTEL (GLchar *queryName, GLui
 GL_APICALL void GL_APIENTRY glGetPerfQueryInfoINTEL (GLuint queryId, GLuint queryNameLength, GLchar *queryName, GLuint *dataSize, GLuint *noCounters, GLuint *noInstances, GLuint *capsMask);
 #endif
 #endif /* GL_INTEL_performance_query */
+
+#ifndef GL_MESA_shader_integer_functions
+#define GL_MESA_shader_integer_functions 1
+#endif /* GL_MESA_shader_integer_functions */
 
 #ifndef GL_NVX_blend_equation_advanced_multi_draw_buffers
 #define GL_NVX_blend_equation_advanced_multi_draw_buffers 1
