@@ -85,7 +85,7 @@ GLX Vendor Private / Vendor Private with Reply opcodes (32-bits)
       65550  65553      GLX_SGIX_hyperpipe_group
       65554             GLX_SGIX_query_board_num (internal, for shm)
 
-OpenGL Single Opcodes (16 Bits)
+OpenGL Single Opcodes (8 Bits)
 ===============================
 
    167-up Reserved
