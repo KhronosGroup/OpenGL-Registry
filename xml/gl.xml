@@ -429,9 +429,9 @@ typedef unsigned int GLhandleARB;
         </group>
 
         <group name="DrawElementsType">
-          <enum name="GL_UNSIGNED_BYTE"/>
-          <enum name="GL_UNSIGNED_SHORT"/>
-          <enum name="GL_UNSIGNED_INT"/>
+            <enum name="GL_UNSIGNED_BYTE"/>
+            <enum name="GL_UNSIGNED_SHORT"/>
+            <enum name="GL_UNSIGNED_INT"/>
         </group>
 
         <group name="EnableCap">
@@ -1839,9 +1839,9 @@ typedef unsigned int GLhandleARB;
         </group>
 
         <group name="StencilFaceDirection">
-            <enum name="GL_FRONT"/>
-            <enum name="GL_BACK"/>
-            <enum name="GL_FRONT_AND_BACK"/>
+             <enum name="GL_FRONT"/>
+             <enum name="GL_BACK"/>
+             <enum name="GL_FRONT_AND_BACK"/>
         </group>
 
         <group name="StencilFunction">
@@ -1869,6 +1869,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_RENDERER"/>
             <enum name="GL_VENDOR"/>
             <enum name="GL_VERSION"/>
+            <enum name="GL_SHADING_LANGUAGE_VERSION"/>
         </group>
 
         <group name="TexCoordPointerType">
