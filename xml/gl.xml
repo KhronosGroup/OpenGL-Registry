@@ -19190,14 +19190,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawArraysIndirect</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param len="COMPSIZE(drawcount,stride)">const void *<name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
         </command>
         <command>
             <proto>void <name>glMultiDrawArraysIndirectAMD</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param>const void *<name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>primcount</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
@@ -19205,7 +19205,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawArraysIndirectBindlessCountNV</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param>const void *<name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>drawCount</name></param>
             <param><ptype>GLsizei</ptype> <name>maxDrawCount</name></param>
@@ -19214,7 +19214,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawArraysIndirectBindlessNV</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param>const void *<name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>drawCount</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
@@ -19222,7 +19222,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawArraysIndirectCountARB</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param><ptype>GLintptr</ptype> <name>indirect</name></param>
             <param><ptype>GLintptr</ptype> <name>drawcount</name></param>
             <param><ptype>GLsizei</ptype> <name>maxdrawcount</name></param>
@@ -19230,7 +19230,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawArraysIndirectEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param len="COMPSIZE(drawcount,stride)">const void *<name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
@@ -19253,7 +19253,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsBaseVertex</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param len="COMPSIZE(drawcount)">const <ptype>GLsizei</ptype> *<name>count</name></param>
             <param group="DrawElementsType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(drawcount)">const void *const*<name>indices</name></param>
@@ -19262,7 +19262,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsBaseVertexEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param len="COMPSIZE(drawcount)">const <ptype>GLsizei</ptype> *<name>count</name></param>
             <param group="DrawElementsType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(drawcount)">const void *const*<name>indices</name></param>
@@ -19272,7 +19272,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsBaseVertexOES</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param len="COMPSIZE(drawcount)">const <ptype>GLsizei</ptype> *<name>count</name></param>
             <param group="DrawElementsType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(drawcount)">const void *const*<name>indices</name></param>
@@ -19291,7 +19291,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsIndirect</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(drawcount,stride)">const void *<name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
@@ -19299,7 +19299,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsIndirectAMD</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param><ptype>GLenum</ptype> <name>type</name></param>
             <param>const void *<name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>primcount</name></param>
@@ -19308,7 +19308,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsIndirectBindlessCountNV</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param><ptype>GLenum</ptype> <name>type</name></param>
             <param>const void *<name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>drawCount</name></param>
@@ -19318,7 +19318,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsIndirectBindlessNV</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param><ptype>GLenum</ptype> <name>type</name></param>
             <param>const void *<name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>drawCount</name></param>
@@ -19327,7 +19327,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsIndirectCountARB</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLintptr</ptype> <name>indirect</name></param>
             <param><ptype>GLintptr</ptype> <name>drawcount</name></param>
@@ -19336,7 +19336,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsIndirectEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(drawcount,stride)">const void *<name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
