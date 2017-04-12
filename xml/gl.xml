@@ -43687,7 +43687,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glResizeBuffersMESA"/>
             </require>
         </extension>
-        <extension name="GL_MESA_shader_integer_functions" supported="gl" comment="May be supported on gles2; see OpenGL-Registry #4"/>
+        <extension name="GL_MESA_shader_integer_functions" supported="gl|gles2"/>
         <extension name="GL_MESA_window_pos" supported="gl">
             <require>
                 <command name="glWindowPos2dMESA"/>
