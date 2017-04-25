@@ -4139,6 +4139,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_framebuffer_foveated.txt',
     },
+    'GL_QCOM_shader_framebuffer_fetch_noncoherent' : {
+        'esnumber' : 277,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_shader_framebuffer_fetch_noncoherent.txt',
+    },
     'GL_REND_screen_coordinates' : {
         'number' : 155,
         'flags' : { 'public' },
