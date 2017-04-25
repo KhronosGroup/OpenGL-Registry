@@ -11587,7 +11587,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glColorTableParameterfv</name></proto>
             <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="2054"/>
         </command>
@@ -11602,7 +11602,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glColorTableParameteriv</name></proto>
             <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="2055"/>
         </command>
@@ -12139,7 +12139,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glConvolutionParameterf</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>params</name></param>
             <glx type="render" opcode="4103"/>
         </command>
@@ -12154,7 +12154,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glConvolutionParameterfv</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="4104"/>
         </command>
@@ -12169,7 +12169,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glConvolutionParameteri</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>params</name></param>
             <glx type="render" opcode="4105"/>
         </command>
@@ -12184,7 +12184,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glConvolutionParameteriv</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="4106"/>
         </command>
@@ -15685,7 +15685,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetConvolutionParameterfv</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="GetConvolutionParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="single" opcode="151"/>
         </command>
@@ -15699,7 +15699,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetConvolutionParameteriv</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="GetConvolutionParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="single" opcode="152"/>
         </command>
@@ -17434,7 +17434,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetSeparableFilter</name></proto>
-            <param group="SeparableTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="SeparableTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(target,format,type)">void *<name>row</name></param>
@@ -18387,7 +18387,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetnHistogram</name></proto>
-            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -18396,7 +18396,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetnHistogramARB</name></proto>
-            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -18447,7 +18447,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetnMinmax</name></proto>
-            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -18456,7 +18456,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetnMinmaxARB</name></proto>
-            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -25262,7 +25262,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSeparableFilter2D</name></proto>
-            <param group="SeparableTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="SeparableTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
