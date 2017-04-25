@@ -15088,6 +15088,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto><ptype>GLenum</ptype> <name>glGetGraphicsResetStatusEXT</name></proto>
+            <alias name="glGetGraphicsResetStatus"/>
         </command>
         <command>
             <proto><ptype>GLenum</ptype> <name>glGetGraphicsResetStatusKHR</name></proto>
@@ -17674,6 +17675,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="bufSize"><ptype>GLfloat</ptype> *<name>params</name></param>
+            <alias name="glGetnUniformfv"/>
         </command>
         <command>
             <proto>void <name>glGetnUniformfvKHR</name></proto>
@@ -17710,6 +17712,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="bufSize"><ptype>GLint</ptype> *<name>params</name></param>
+            <alias name="glGetnUniformiv"/>
         </command>
         <command>
             <proto>void <name>glGetnUniformivKHR</name></proto>
