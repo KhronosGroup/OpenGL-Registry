@@ -9944,7 +9944,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBindBufferOffsetNV</name></proto>
-            <para group="BufferTargetARB"m><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="BufferTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="BufferOffset"><ptype>GLintptr</ptype> <name>offset</name></param>
@@ -10361,7 +10361,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glBlendEquationIndexedAMD</name></proto>
             <param><ptype>GLuint</ptype> <name>buf</name></param>
-            <para group="BlendEquationModeEXT"m><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="BlendEquationModeEXT"><ptype>GLenum</ptype> <name>mode</name></param>
             <alias name="glBlendEquationi"/>
         </command>
         <command>
@@ -20284,7 +20284,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiDrawElementsIndirectEXT</name></proto>
             <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
-            <para group="DrawElementsType"m><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="DrawElementsType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(drawcount,stride)">const void *<name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
