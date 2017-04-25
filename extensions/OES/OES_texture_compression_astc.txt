@@ -191,8 +191,7 @@ Additions to Chapter 3 of the OpenGL ES 3.0 Specification (Rasterization)
      algorithm supports both two- and three-dimensional images. If
      internalformat is a 2D ASTC format, CompressedTexImage3D will accept an
      array of compressed data consisting of multiple rows of compressed
-     blocks laid out as described in Section 3.8.3. The width and height of
-     each sub-image must be a multiple of the ASTC block size. If
+     blocks laid out as described in Section 3.8.3. If
      internalformat is a 3D ASTC format, CompressedTexImage2D will generate
      an INVALID_OPERATION error.  If internalformat is a 3D ASTC format,
      and only the ASTC LDR or HDR Profile is supported, then

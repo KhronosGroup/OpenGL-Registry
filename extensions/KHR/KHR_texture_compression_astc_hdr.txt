@@ -164,9 +164,7 @@ Additions to Chapter 8 of the OpenGL ES 3.1 Specification (Textures and Samplers
     two-dimensional images. However, if the "3D Tex." column of table 8.19
     is checked, CompressedTexImage3D will accept a three-dimensional image
     specified as an array of compressed data consisting of multiple rows of
-    compressed blocks laid out as described in section 8.5. The width and
-    height of each sub-image must be a multiple of the block size for the
-    format, shown in the same table."
+    compressed blocks laid out as described in section 8.5."
 
     Modify the second and third errors in the Errors section for
     CompressedTexImage[2d]D on p. 169, and add a new error:
