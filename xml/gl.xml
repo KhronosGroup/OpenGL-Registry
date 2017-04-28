@@ -10458,18 +10458,18 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparate</name></proto>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
+            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>sfactorRGB</name></param>
+            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dfactorRGB</name></param>
+            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>sfactorAlpha</name></param>
+            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dfactorAlpha</name></param>
             <glx type="render" opcode="4134"/>
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparateEXT</name></proto>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
+            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>sfactorRGB</name></param>
+            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dfactorRGB</name></param>
+            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>sfactorAlpha</name></param>
+            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dfactorAlpha</name></param>
             <alias name="glBlendFuncSeparate"/>
             <glx type="render" opcode="4134"/>
         </command>
@@ -26727,7 +26727,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorageSparseAMD</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -27190,7 +27190,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorageSparseAMD</name></proto>
             <param><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
