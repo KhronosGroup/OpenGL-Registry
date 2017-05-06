@@ -3115,6 +3115,139 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_SAMPLE_BUFFERS"/>
             <enum name="GL_STEREO"/>
         </group>
+        
+        <group name="PathStringFormat">
+            <enum name="GL_PATH_FORMAT_SVG_NV" />
+            <enum name="GL_PATH_FORMAT_PS_NV" />
+        </group>
+        
+        <group name="PathFontTarget">
+            <enum name="GL_STANDARD_FONT_NAME_NV" />
+            <enum name="GL_SYSTEM_FONT_NAME_NV" />
+            <enum name="GL_FILE_NAME_NV" />
+        </group>
+        
+        <group name="PathHandleMissingGlyphs">
+            <enum name="GL_SKIP_MISSING_GLYPH_NV" />
+            <enum name="GL_USE_MISSING_GLYPH_NV" />
+        </group>
+        
+        <group name="PathParameter">
+            <enum name="GL_PATH_STROKE_WIDTH_NV" />
+            <enum name="GL_PATH_INITIAL_END_CAP_NV" />
+            <enum name="GL_PATH_TERMINAL_END_CAP_NV" />
+            <enum name="GL_PATH_JOIN_STYLE_NV" />
+            <enum name="GL_PATH_MITER_LIMIT_NV" />
+            <enum name="GL_PATH_INITIAL_DASH_CAP_NV" />
+            <enum name="GL_PATH_TERMINAL_DASH_CAP_NV" />
+            <enum name="GL_PATH_DASH_OFFSET_NV" />
+            <enum name="GL_PATH_CLIENT_LENGTH_NV" />
+            <enum name="GL_PATH_DASH_OFFSET_RESET_NV" />
+            <enum name="GL_PATH_FILL_MODE_NV" />
+            <enum name="GL_PATH_FILL_MASK_NV" />
+            <enum name="GL_PATH_FILL_COVER_MODE_NV" />
+            <enum name="GL_PATH_STROKE_COVER_MODE_NV" />
+            <enum name="GL_PATH_STROKE_MASK_NV" />
+            <enum name="GL_PATH_STROKE_BOUND_NV" />
+            <enum name="GL_PATH_END_CAPS_NV" />
+            <enum name="GL_PATH_DASH_CAPS_NV" />
+            <enum name="GL_PATH_COMMAND_COUNT_NV" />
+            <enum name="GL_PATH_COORD_COUNT_NV" />
+            <enum name="GL_PATH_DASH_ARRAY_COUNT_NV" />
+            <enum name="GL_PATH_COMPUTED_LENGTH_NV" />
+            <enum name="GL_PATH_OBJECT_BOUNDING_BOX_NV" />
+            <enum name="GL_PATH_FILL_BOUNDING_BOX_NV" />
+            <enum name="GL_PATH_STROKE_BOUNDING_BOX_NV" />
+        </group>
+        
+        <group name="PathFillMode">
+            <enum name="GL_INVERT" />
+            <enum name="GL_COUNT_UP_NV" />
+            <enum name="GL_COUNT_DOWN_NV" />
+            <enum name="GL_PATH_FILL_MODE_NV" />
+        </group>
+        
+        <group name="PathColor">
+            <enum name="GL_PRIMARY_COLOR" />
+            <enum name="GL_PRIMARY_COLOR_NV" />
+            <enum name="GL_SECONDARY_COLOR_NV" />
+        </group>
+        
+        <group name="PathGenMode">
+            <enum name="GL_NONE" />
+            <enum name="GL_EYE_LINEAR" />
+            <enum name="GL_OBJECT_LINEAR" />
+            <enum name="GL_PATH_OBJECT_BOUNDING_BOX_NV" />
+            <enum name="GL_CONSTANT" />
+        </group>
+        
+        <group name="PathCoverMode">
+            <enum name="GL_CONVEX_HULL_NV" />
+            <enum name="GL_BOUNDING_BOX_NV" />
+            <enum name="GL_PATH_FILL_COVER_MODE_NV" />
+        </group>
+        
+        <group name="PathTransformType">
+            <enum name="GL_NONE" />
+            <enum name="GL_TRANSLATE_X_NV" />
+            <enum name="GL_TRANSLATE_Y_NV" />
+            <enum name="GL_TRANSLATE_2D_NV" />
+            <enum name="GL_TRANSLATE_3D_NV" />
+            <enum name="GL_AFFINE_2D_NV" />
+            <enum name="GL_AFFINE_3D_NV" />
+            <enum name="GL_TRANSPOSE_AFFINE_2D_NV" />
+            <enum name="GL_TRANSPOSE_AFFINE_3D_NV" />
+        </group>
+        
+        <group name="PathElementType">
+            <enum name="GL_UTF8_NV" />
+            <enum name="GL_UTF16_NV" />
+        </group>
+        
+        <group name="PathCoverMode">
+            <enum name="GL_CONVEX_HULL_NV" />
+            <enum name="GL_BOUNDING_BOX_NV" />
+            <enum name="GL_BOUNDING_BOX_OF_BOUNDING_BOXES_NV" />
+            <enum name="GL_PATH_FILL_COVER_MODE_NV" />
+        </group>
+        
+        <group name="PathFontStyle">
+            <enum name="GL_NONE" />
+            <enum name="GL_BOLD_BIT_NV" />
+            <enum name="GL_ITALIC_BIT_NV" />
+        </group>
+        
+        <group name="PathMetricMask">
+            <enum name="GL_GLYPH_WIDTH_BIT_NV" />
+            <enum name="GL_GLYPH_HEIGHT_BIT_NV" />
+            <enum name="GL_GLYPH_HORIZONTAL_BEARING_X_BIT_NV" />
+            <enum name="GL_GLYPH_HORIZONTAL_BEARING_Y_BIT_NV" />
+            <enum name="GL_GLYPH_HORIZONTAL_BEARING_ADVANCE_BIT_NV" />
+            <enum name="GL_GLYPH_VERTICAL_BEARING_X_BIT_NV" />
+            <enum name="GL_GLYPH_VERTICAL_BEARING_Y_BIT_NV" />
+            <enum name="GL_GLYPH_VERTICAL_BEARING_ADVANCE_BIT_NV" />
+            <enum name="GL_GLYPH_HAS_KERNING_BIT_NV" />
+            <enum name="GL_FONT_X_MIN_BOUNDS_BIT_NV" />
+            <enum name="GL_FONT_Y_MIN_BOUNDS_BIT_NV" />
+            <enum name="GL_FONT_X_MAX_BOUNDS_BIT_NV" />
+            <enum name="GL_FONT_Y_MAX_BOUNDS_BIT_NV" />
+            <enum name="GL_FONT_UNITS_PER_EM_BIT_NV" />
+            <enum name="GL_FONT_ASCENDER_BIT_NV" />
+            <enum name="GL_FONT_DESCENDER_BIT_NV" />
+            <enum name="GL_FONT_HEIGHT_BIT_NV" />
+            <enum name="GL_FONT_MAX_ADVANCE_WIDTH_BIT_NV" />
+            <enum name="GL_FONT_MAX_ADVANCE_HEIGHT_BIT_NV" />
+            <enum name="GL_FONT_UNDERLINE_POSITION_BIT_NV" />
+            <enum name="GL_FONT_UNDERLINE_THICKNESS_BIT_NV" />
+            <enum name="GL_FONT_HAS_KERNING_BIT_NV" />
+            <enum name="GL_FONT_NUM_GLYPH_INDICES_BIT_NV" />
+        </group>
+        
+        <group name="PathListMode">
+            <enum name="GL_ACCUM_ADJACENT_PAIRS_NV" />
+            <enum name="GL_ADJACENT_PAIRS_NV" />
+            <enum name="GL_FIRST_TO_REST_NV" />
+        </group>
     </groups>
 
     <!-- SECTION: GL enumerant (token) definitions. -->
