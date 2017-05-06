@@ -209,37 +209,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_FUNC_SUBTRACT"/>
         </group>
 
-        <group name="BlendingFactorDest">
-            <enum name="GL_CONSTANT_ALPHA_EXT"/>
-            <enum name="GL_CONSTANT_COLOR_EXT"/>
-            <enum name="GL_DST_ALPHA"/>
-            <enum name="GL_ONE"/>
-            <enum name="GL_ONE_MINUS_CONSTANT_ALPHA_EXT"/>
-            <enum name="GL_ONE_MINUS_CONSTANT_COLOR_EXT"/>
-            <enum name="GL_ONE_MINUS_DST_ALPHA"/>
-            <enum name="GL_ONE_MINUS_SRC_ALPHA"/>
-            <enum name="GL_ONE_MINUS_SRC_COLOR"/>
-            <enum name="GL_SRC_ALPHA"/>
-            <enum name="GL_SRC_COLOR"/>
-            <enum name="GL_ZERO"/>
-        </group>
-
-        <group name="BlendingFactorSrc">
-            <enum name="GL_CONSTANT_ALPHA_EXT"/>
-            <enum name="GL_CONSTANT_COLOR_EXT"/>
-            <enum name="GL_DST_ALPHA"/>
-            <enum name="GL_DST_COLOR"/>
-            <enum name="GL_ONE"/>
-            <enum name="GL_ONE_MINUS_CONSTANT_ALPHA_EXT"/>
-            <enum name="GL_ONE_MINUS_CONSTANT_COLOR_EXT"/>
-            <enum name="GL_ONE_MINUS_DST_ALPHA"/>
-            <enum name="GL_ONE_MINUS_DST_COLOR"/>
-            <enum name="GL_ONE_MINUS_SRC_ALPHA"/>
-            <enum name="GL_SRC_ALPHA"/>
-            <enum name="GL_SRC_ALPHA_SATURATE"/>
-            <enum name="GL_ZERO"/>
-        </group>
-
         <group name="Boolean">
             <enum name="GL_FALSE"/>
             <enum name="GL_TRUE"/>
@@ -1140,6 +1109,8 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_TEXTURE_COORD_ARRAY_POINTER_EXT"/>
             <enum name="GL_VERTEX_ARRAY_POINTER"/>
             <enum name="GL_VERTEX_ARRAY_POINTER_EXT"/>
+            <enum name="GL_DEBUG_CALLBACK_FUNCTION"/>
+            <enum name="GL_DEBUG_CALLBACK_USER_PARAM"/>
         </group>
 
         <group name="GetTextureParameter">
@@ -1550,15 +1521,13 @@ typedef unsigned int GLhandleARB;
         </group>
 
         <group name="InternalFormat" comment="Was PixelInternalFormat">
+            <!-- Compatibility -->
             <enum name="GL_ALPHA12"/>
             <enum name="GL_ALPHA16"/>
             <enum name="GL_ALPHA16_ICC_SGIX"/>
             <enum name="GL_ALPHA4"/>
             <enum name="GL_ALPHA8"/>
             <enum name="GL_ALPHA_ICC_SGIX"/>
-            <enum name="GL_DEPTH_COMPONENT16_SGIX"/>
-            <enum name="GL_DEPTH_COMPONENT24_SGIX"/>
-            <enum name="GL_DEPTH_COMPONENT32_SGIX"/>
             <enum name="GL_DUAL_ALPHA12_SGIS"/>
             <enum name="GL_DUAL_ALPHA16_SGIS"/>
             <enum name="GL_DUAL_ALPHA4_SGIS"/>
@@ -1600,27 +1569,166 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_QUAD_INTENSITY8_SGIS"/>
             <enum name="GL_QUAD_LUMINANCE4_SGIS"/>
             <enum name="GL_QUAD_LUMINANCE8_SGIS"/>
-            <enum name="GL_R3_G3_B2"/>
             <enum name="GL_R5_G6_B5_A8_ICC_SGIX"/>
             <enum name="GL_R5_G6_B5_ICC_SGIX"/>
-            <enum name="GL_RGB10"/>
-            <enum name="GL_RGB10_A2"/>
-            <enum name="GL_RGB12"/>
-            <enum name="GL_RGB16"/>
-            <enum name="GL_RGB2_EXT"/>
-            <enum name="GL_RGB4"/>
-            <enum name="GL_RGB5"/>
-            <enum name="GL_RGB5_A1"/>
-            <enum name="GL_RGB8"/>
-            <enum name="GL_RGBA12"/>
-            <enum name="GL_RGBA16"/>
-            <enum name="GL_RGBA2"/>
-            <enum name="GL_RGBA4"/>
-            <enum name="GL_RGBA8"/>
             <enum name="GL_RGBA_ICC_SGIX"/>
             <enum name="GL_RGB_ICC_SGIX"/>
+            <!-- Base internal format: GL_RED -->
+            <enum name="GL_RED"/>
+            <enum name="GL_RED_EXT"/>
+            <enum name="GL_R8"/>
+            <enum name="GL_R8_EXT"/>
+            <enum name="GL_R8_SNORM"/>
+            <enum name="GL_R16"/>
+            <enum name="GL_R16_EXT"/>
+            <enum name="GL_R16_SNORM"/>
+            <enum name="GL_R16_SNORM_EXT"/>
+            <enum name="GL_R32"/>
+            <enum name="GL_R32_EXT"/>
+            <enum name="GL_R16F"/>
+            <enum name="GL_R16F_EXT"/>
+            <enum name="GL_R32F"/>
+            <enum name="GL_R32F_EXT"/>
+            <enum name="GL_R8I"/>
+            <enum name="GL_R16I"/>
+            <enum name="GL_R32I"/>
+            <enum name="GL_R8UI"/>
+            <enum name="GL_R16UI"/>
+            <enum name="GL_R32UI"/>
+            <!-- Base internal format: GL_RG -->
+            <enum name="GL_RG"/>
+            <enum name="GL_RG8"/>
+            <enum name="GL_RG8_EXT"/>
+            <enum name="GL_RG8_SNORM"/>
+            <enum name="GL_RG16"/>
+            <enum name="GL_RG16_EXT"/>
+            <enum name="GL_RG16_SNORM"/>
+            <enum name="GL_RG16_SNORM_EXT"/>
+            <enum name="GL_RG16F"/>
+            <enum name="GL_RG16F_EXT"/>
+            <enum name="GL_RG32F"/>
+            <enum name="GL_RG32F_EXT"/>
+            <enum name="GL_RG8I"/>
+            <enum name="GL_RG16I"/>
+            <enum name="GL_RG32I"/>
+            <enum name="GL_RG8UI"/>
+            <enum name="GL_RG16UI"/>
+            <enum name="GL_RG32UI"/>
+            <!-- Base internal format: GL_RGB -->
+            <enum name="GL_RGB"/>
+            <enum name="GL_RGB2"/>
+            <enum name="GL_RGB2_EXT"/>
+            <enum name="GL_RGB4"/>
+            <enum name="GL_RGB4_EXT"/>
+            <enum name="GL_RGB5"/>
+            <enum name="GL_RGB5_EXT"/>
+            <enum name="GL_RGB8"/>
+            <enum name="GL_RGB8_EXT"/>
+            <enum name="GL_RGB8_OES"/>
+            <enum name="GL_RGB8_SNORM"/>
+            <enum name="GL_RGB10"/>
+            <enum name="GL_RGB10_EXT"/>
+            <enum name="GL_RGB12"/>
+            <enum name="GL_RGB12_EXT"/>
+            <enum name="GL_RGB16"/>
+            <enum name="GL_RGB16_EXT"/>
+            <enum name="GL_RGB16F"/>
+            <enum name="GL_RGB16F_ARB"/>
+            <enum name="GL_RGB16F_EXT"/>
+            <enum name="GL_RGB16_SNORM"/>
+            <enum name="GL_RGB16_SNORM_EXT"/>
+            <enum name="GL_RGB8I"/>
+            <enum name="GL_RGB16I"/>
+            <enum name="GL_RGB32I"/>
+            <enum name="GL_RGB8UI"/>
+            <enum name="GL_RGB16UI"/>
+            <enum name="GL_RGB32UI"/>
+            <enum name="GL_SRGB"/>
+            <enum name="GL_SRGB_EXT"/>
+            <enum name="GL_SRGB_ALPHA"/>
+            <enum name="GL_SRGB_ALPHA_EXT"/>
+            <enum name="GL_SRGB8"/>
+            <enum name="GL_SRGB8_EXT"/>
+            <enum name="GL_SRGB8_NV"/>
+            <enum name="GL_SRGB8_ALPHA8"/>
+            <enum name="GL_SRGB8_ALPHA8_EXT"/>
+            <enum name="GL_R3_G3_B2"/>
+            <enum name="GL_R11F_G11F_B10F"/>
+            <enum name="GL_R11F_G11F_B10F_APPLE"/>
+            <enum name="GL_R11F_G11F_B10F_EXT"/>
+            <enum name="GL_RGB9_E5"/>
+            <enum name="GL_RGB9_E5_APPLE"/>
+            <enum name="GL_RGB9_E5_EXT"/>
+            <!-- Base internal format: GL_RGBA -->
+            <enum name="GL_RGBA"/>
+            <enum name="GL_RGBA4"/>
+            <enum name="GL_RGBA4_EXT"/>
+            <enum name="GL_RGBA4_OES"/>
+            <enum name="GL_RGB5_A1"/>
+            <enum name="GL_RGB5_A1_EXT"/>
+            <enum name="GL_RGB5_A1_OES"/>
+            <enum name="GL_RGBA8"/>
+            <enum name="GL_RGBA8_EXT"/>
+            <enum name="GL_RGBA8_OES"/>
+            <enum name="GL_RGBA8_SNORM"/>
+            <enum name="GL_RGB10_A2"/>
+            <enum name="GL_RGB10_A2_EXT"/>
+            <enum name="GL_RGBA12"/>
+            <enum name="GL_RGBA12_EXT"/>
+            <enum name="GL_RGBA16"/>
+            <enum name="GL_RGBA16_EXT"/>
+            <enum name="GL_RGBA16F"/>
+            <enum name="GL_RGBA16F_ARB"/>
+            <enum name="GL_RGBA16F_EXT"/>
+            <enum name="GL_RGBA32F"/>
+            <enum name="GL_RGBA32F_ARB"/>
+            <enum name="GL_RGBA32F_EXT"/>
+            <enum name="GL_RGBA8I"/>
+            <enum name="GL_RGBA16I"/>
+            <enum name="GL_RGBA32I"/>
+            <enum name="GL_RGBA8UI"/>
+            <enum name="GL_RGBA16UI"/>
+            <enum name="GL_RGBA32UI"/>
+            <enum name="GL_RGB10_A2UI"/>
+            <!-- Base internal format: GL_DEPTH_COMPONENT -->
+            <enum name="GL_DEPTH_COMPONENT"/>
+            <enum name="GL_DEPTH_COMPONENT16"/>
+            <enum name="GL_DEPTH_COMPONENT16_ARB"/>
+            <enum name="GL_DEPTH_COMPONENT16_OES"/>
+            <enum name="GL_DEPTH_COMPONENT16_SGIX"/>
+            <enum name="GL_DEPTH_COMPONENT24_ARB"/>
+            <enum name="GL_DEPTH_COMPONENT24_OES"/>
+            <enum name="GL_DEPTH_COMPONENT24_SGIX"/>
+            <enum name="GL_DEPTH_COMPONENT32_ARB"/>
+            <enum name="GL_DEPTH_COMPONENT32_OES"/>
+            <enum name="GL_DEPTH_COMPONENT32_SGIX"/>
+            <enum name="GL_DEPTH_COMPONENT32F"/>
+            <enum name="GL_DEPTH_COMPONENT32F_NV"/>
+            <enum name="GL_DEPTH_COMPONENT32F_NV"/>
+            <!-- Base internal format: GL_DEPTH_STENCIL -->
+            <enum name="GL_DEPTH_STENCIL"/>
+            <enum name="GL_DEPTH_STENCIL_EXT"/>
+            <enum name="GL_DEPTH_STENCIL_MESA"/>
+            <enum name="GL_DEPTH_STENCIL_NV"/>
+            <enum name="GL_DEPTH_STENCIL_OES"/>
+            <enum name="GL_DEPTH24_STENCIL8"/>
+            <enum name="GL_DEPTH24_STENCIL8_EXT"/>
+            <enum name="GL_DEPTH24_STENCIL8_OES"/>
+            <enum name="GL_DEPTH32F_STENCIL8"/>
+            <enum name="GL_DEPTH32F_STENCIL8_NV"/>
+            <!-- Compressed base internal formats -->
+            <enum name="GL_COMPRESSED_RED"/>
+            <enum name="GL_COMPRESSED_RG"/>
+            <enum name="GL_COMPRESSED_RGB"/>
+            <enum name="GL_COMPRESSED_RGBA"/>
+            <enum name="GL_COMPRESSED_SRGB"/>
+            <enum name="GL_COMPRESSED_SRGB_ALPHA"/>
             <enum name="GL_COMPRESSED_RED_RGTC1"/>
+            <enum name="GL_COMPRESSED_RED_RGTC1_EXT"/>
             <enum name="GL_COMPRESSED_SIGNED_RED_RGTC1"/>
+            <enum name="GL_COMPRESSED_SIGNED_RED_RGTC1_EXT"/>
+            <enum name="GL_COMPRESSED_R11_EAC"/>
+            <enum name="GL_COMPRESSED_SIGNED_R11_EAC"/>
             <enum name="GL_COMPRESSED_RG_RGTC2"/>
             <enum name="GL_COMPRESSED_SIGNED_RG_RGTC2"/>
             <enum name="GL_COMPRESSED_RGBA_BPTC_UNORM"/>
@@ -1633,8 +1741,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2"/>
             <enum name="GL_COMPRESSED_RGBA8_ETC2_EAC"/>
             <enum name="GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC"/>
-            <enum name="GL_COMPRESSED_R11_EAC"/>
-            <enum name="GL_COMPRESSED_SIGNED_R11_EAC"/>
             <enum name="GL_COMPRESSED_RG11_EAC"/>
             <enum name="GL_COMPRESSED_SIGNED_RG11_EAC"/>
         </group>
@@ -2260,7 +2366,7 @@ typedef unsigned int GLhandleARB;
         <group name="FramebufferTarget">
             <enum name="GL_FRAMEBUFFER" />
             <enum name="GL_DRAW_FRAMEBUFFER" />
-            <enum name="GL_READ_FRAMEBUFFER " />
+            <enum name="GL_READ_FRAMEBUFFER" />
         </group>
 
         <group name="TextureUnit">
@@ -2423,7 +2529,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_PROGRAM_SEPARABLE"/>
         </group>
 
-        <group name="ColorScaleFactor">
+        <group name="BlendingFactor">
             <enum name="GL_ZERO"/>
             <enum name="GL_ONE"/>
             <enum name="GL_SRC_COLOR"/>
@@ -2726,6 +2832,13 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_SHADER_SOURCE_LENGTH"/>
         </group>
 
+        <group name="QueryObjectParameterName">
+            <enum name="GL_QUERY_RESULT_AVAILABLE"/>
+            <enum name="GL_QUERY_RESULT"/>
+            <enum name="GL_QUERY_RESULT_NO_WAIT"/>
+            <enum name="GL_QUERY_TARGET"/>
+        </group>
+
         <group name="QueryParameterName">
             <enum name="GL_CURRENT_QUERY"/>
             <enum name="GL_QUERY_COUNTER_BITS"/>
@@ -2967,6 +3080,16 @@ typedef unsigned int GLhandleARB;
         </group>
 
         <group name="VertexAttribPointerType">
+            <enum name="GL_BYTE"/>
+            <enum name="GL_UNSIGNED_BYTE"/>
+            <enum name="GL_SHORT"/>
+            <enum name="GL_UNSIGNED_SHORT"/>
+            <enum name="GL_INT"/>
+            <enum name="GL_UNSIGNED_INT"/>
+            <enum name="GL_FLOAT"/>
+            <enum name="GL_DOUBLE"/>
+            <enum name="GL_HALF_FLOAT"/>
+            <enum name="GL_FIXED"/>
             <enum name="GL_INT_2_10_10_10_REV"/>
             <enum name="GL_UNSIGNED_INT_2_10_10_10_REV"/>
             <enum name="GL_UNSIGNED_INT_10F_11F_11F_REV"/>
@@ -10445,8 +10568,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBlendFunc</name></proto>
-            <param group="BlendingFactorSrc"><ptype>GLenum</ptype> <name>sfactor</name></param>
-            <param group="BlendingFactorDest"><ptype>GLenum</ptype> <name>dfactor</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>sfactor</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dfactor</name></param>
             <glx type="render" opcode="160"/>
         </command>
         <command>
@@ -10458,106 +10581,106 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparate</name></proto>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>sfactorRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dfactorRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>sfactorAlpha</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dfactorAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>sfactorRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dfactorRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>sfactorAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dfactorAlpha</name></param>
             <glx type="render" opcode="4134"/>
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparateEXT</name></proto>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>sfactorRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dfactorRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>sfactorAlpha</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dfactorAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>sfactorRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dfactorRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>sfactorAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dfactorAlpha</name></param>
             <alias name="glBlendFuncSeparate"/>
             <glx type="render" opcode="4134"/>
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparateINGR</name></proto>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
             <alias name="glBlendFuncSeparate"/>
             <glx type="render" opcode="4134"/>
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparateIndexedAMD</name></proto>
             <param><ptype>GLuint</ptype> <name>buf</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
             <alias name="glBlendFuncSeparatei"/>
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparateOES</name></proto>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparatei</name></proto>
             <param><ptype>GLuint</ptype> <name>buf</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparateiARB</name></proto>
             <param><ptype>GLuint</ptype> <name>buf</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
             <alias name="glBlendFuncSeparatei"/>
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparateiEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>buf</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
             <alias name="glBlendFuncSeparatei"/>
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparateiOES</name></proto>
             <param><ptype>GLuint</ptype> <name>buf</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
             <alias name="glBlendFuncSeparatei"/>
         </command>
         <command>
             <proto>void <name>glBlendFunci</name></proto>
             <param><ptype>GLuint</ptype> <name>buf</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>src</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dst</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>src</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dst</name></param>
         </command>
         <command>
             <proto>void <name>glBlendFunciARB</name></proto>
             <param><ptype>GLuint</ptype> <name>buf</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>src</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dst</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>src</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dst</name></param>
             <alias name="glBlendFunci"/>
         </command>
         <command>
             <proto>void <name>glBlendFunciEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>buf</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>src</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dst</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>src</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dst</name></param>
             <alias name="glBlendFunci"/>
         </command>
         <command>
             <proto>void <name>glBlendFunciOES</name></proto>
             <param><ptype>GLuint</ptype> <name>buf</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>src</name></param>
-            <param group="ColorScaleFactor"><ptype>GLenum</ptype> <name>dst</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>src</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dst</name></param>
             <alias name="glBlendFunci"/>
         </command>
         <command>
@@ -15346,7 +15469,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLsizei</ptype> <name>uniformCount</name></param>
             <param len="uniformCount">const <ptype>GLuint</ptype> *<name>uniformIndices</name></param>
-            <param group="UniformBlockPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="UniformPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(uniformCount,pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
@@ -17238,28 +17361,28 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetQueryBufferObjecti64v</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
         </command>
         <command>
             <proto>void <name>glGetQueryBufferObjectiv</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
         </command>
         <command>
             <proto>void <name>glGetQueryBufferObjectui64v</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
         </command>
         <command>
             <proto>void <name>glGetQueryBufferObjectuiv</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
         </command>
         <command>
@@ -17272,13 +17395,13 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetQueryObjecti64v</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint64</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetQueryObjecti64vEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint64</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="1328"/>
             <alias name="glGetQueryObjecti64v"/>
@@ -17286,34 +17409,34 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetQueryObjectiv</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="single" opcode="165"/>
         </command>
         <command>
             <proto>void <name>glGetQueryObjectivARB</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glGetQueryObjectiv"/>
         </command>
         <command>
             <proto>void <name>glGetQueryObjectivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glGetQueryObjectiv"/>
         </command>
         <command>
             <proto>void <name>glGetQueryObjectui64v</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLuint64</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetQueryObjectui64vEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLuint64</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="1329"/>
             <alias name="glGetQueryObjectui64v"/>
@@ -17321,21 +17444,21 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetQueryObjectuiv</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLuint</ptype> *<name>params</name></param>
             <glx type="single" opcode="166"/>
         </command>
         <command>
             <proto>void <name>glGetQueryObjectuivARB</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLuint</ptype> *<name>params</name></param>
             <alias name="glGetQueryObjectuiv"/>
         </command>
         <command>
             <proto>void <name>glGetQueryObjectuivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLuint</ptype> *<name>params</name></param>
         </command>
         <command>
@@ -21076,7 +21199,7 @@ typedef unsigned int GLhandleARB;
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="TextureComponentCount"><ptype>GLint</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -21088,7 +21211,7 @@ typedef unsigned int GLhandleARB;
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="TextureComponentCount"><ptype>GLint</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
@@ -21101,7 +21224,7 @@ typedef unsigned int GLhandleARB;
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="TextureComponentCount"><ptype>GLint</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -26397,7 +26520,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexImage1D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="TextureComponentCount"><ptype>GLint</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -26410,7 +26533,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexImage2D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="TextureComponentCount"><ptype>GLint</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
@@ -26443,7 +26566,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexImage3D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="TextureComponentCount"><ptype>GLint</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -26900,7 +27023,7 @@ typedef unsigned int GLhandleARB;
             <param group="Texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="TextureComponentCount"><ptype>GLint</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -26912,7 +27035,7 @@ typedef unsigned int GLhandleARB;
             <param group="Texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="TextureComponentCount"><ptype>GLint</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
@@ -26946,7 +27069,7 @@ typedef unsigned int GLhandleARB;
             <param group="Texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param group="TextureComponentCount"><ptype>GLint</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29986,7 +30109,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribIPointer</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLint</ptype> <name>size</name></param>
-            <param group="VertexAttribEnum"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
         </command>
@@ -29994,7 +30117,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribIPointerEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLint</ptype> <name>size</name></param>
-            <param group="VertexAttribEnum"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
             <alias name="glVertexAttribIPointer"/>
