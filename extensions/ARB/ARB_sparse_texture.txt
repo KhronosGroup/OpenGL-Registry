@@ -45,7 +45,8 @@ Dependencies
     This extension is written against the OpenGL 4.3 (Core) Specification,
     February 14, 2013.
 
-    The definition of this extension depends on GL_EXT_direct_state_access.
+    The definition of this extension depends on GL_EXT_direct_state_access
+    and GL_ARB_direct_state_access.
 
 Overview
 
@@ -89,7 +90,8 @@ New Procedures and Functions
                                       boolean commit);
 
         [[ Note: TexturePageCommitmentEXT is supported if and only if 
-           the EXT_direct_state_access extension is supported. ]]
+           the EXT_direct_state_access or the ARB_direct_state_access extension
+           is supported. ]]
 
 New Tokens
 
@@ -482,7 +484,8 @@ Samplers)
       TEXTURE_IMMUTABLE_FORMAT or TEXTURE_SPARSE_ARB for the texture bound to
       <target> is FALSE.
 
-    [[ The following is only added if EXT_direct_state_access is supported. ]]
+    [[ The following is only added if EXT_direct_state_access or
+       ARB_direct_state_access is supported. ]]
 
     The command
 
@@ -555,10 +558,11 @@ Dependencies on OpenGL 4.3 and ARB_texture_view
     If the GL version is less than 4.3 or if ARB_texture_view is not supported,
     then remove all references to texture views.
 
-Dependencies on GL_EXT_direct_state_access
+Dependencies on GL_EXT_direct_state_access and GL_ARB_direct_state_access
 
-    If the GL_EXT_direct_state_access extension is not supported, remove all
-    references to TexturePageCommitmentEXT.
+    If neither the GL_EXT_direct_state_access nor the
+    GL_ARB_direct_state_access extensions is supported, remove all references
+    to TexturePageCommitmentEXT.
 
 Issues
 
@@ -671,10 +675,25 @@ Issues
        Also, if the view hits the tail, then modifications of tail residency
        via the view affect the whole tail of the parent texture.
 
+    10) Why is there no TexturePageCommitmentARB?
+
+       There was originally no documented interaction between this extension
+       and ARB_direct_state_access. Since implementations that support both
+       extensions were shipped without TexturePageCommitmentARB, it is not
+       feasible to add this entry point after the fact. On the other hand,
+       implementations that support both extensions but *not*
+       EXT_direct_state_access should also be able to provide a DSA entry
+       point. Since every known implementation that supports this extension and
+       ARB_direct_state_access does have the TexturePageCommitmentEXT entry
+       point, making this fact retroactively part of the spec is an unusual
+       but pragmatic resolution.
+
 Revision History
 
     Rev.    Date      Author    Changes
     ----  --------    --------  -----------------------------------------
+    12    05/11/2017  nhaehnle  Add interaction with ARB_direct_state_access
+                                (bug 13684)
     11    08/16/2013  pbrown    Remove the <target> parameter from the DSA
                                 function TexturePageCommitmentEXT() and also
                                 add more explicit error language.  The
