@@ -1708,6 +1708,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_draw_transform_feedback.txt',
     },
+    'GL_EXT_EGL_image_array' : {
+        'esnumber' : 278,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_EGL_image_array.txt',
+    },
     'GL_EXT_float_blend' : {
         'esnumber' : 224,
         'flags' : { 'public' },
