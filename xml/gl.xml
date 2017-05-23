@@ -1743,6 +1743,14 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC"/>
             <enum name="GL_COMPRESSED_RG11_EAC"/>
             <enum name="GL_COMPRESSED_SIGNED_RG11_EAC"/>
+            <enum name="GL_COMPRESSED_RGB_S3TC_DXT1_EXT"/>
+            <enum name="GL_COMPRESSED_SRGB_S3TC_DXT1_EXT"/>
+            <enum name="GL_COMPRESSED_RGBA_S3TC_DXT1_EXT"/>
+            <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT"/>
+            <enum name="GL_COMPRESSED_RGBA_S3TC_DXT3_EXT"/>
+            <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT"/>
+            <enum name="GL_COMPRESSED_RGBA_S3TC_DXT5_EXT"/>
+            <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT"/>
         </group>
 
         <group name="PixelMap">
@@ -3160,13 +3168,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_PATH_STROKE_BOUNDING_BOX_NV" />
         </group>
         
-        <group name="PathFillMode">
-            <enum name="GL_INVERT" />
-            <enum name="GL_COUNT_UP_NV" />
-            <enum name="GL_COUNT_DOWN_NV" />
-            <enum name="GL_PATH_FILL_MODE_NV" />
-        </group>
-        
         <group name="PathColor">
             <enum name="GL_PRIMARY_COLOR" />
             <enum name="GL_PRIMARY_COLOR_NV" />
@@ -3179,12 +3180,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_OBJECT_LINEAR" />
             <enum name="GL_PATH_OBJECT_BOUNDING_BOX_NV" />
             <enum name="GL_CONSTANT" />
-        </group>
-        
-        <group name="PathCoverMode">
-            <enum name="GL_CONVEX_HULL_NV" />
-            <enum name="GL_BOUNDING_BOX_NV" />
-            <enum name="GL_PATH_FILL_COVER_MODE_NV" />
         </group>
         
         <group name="PathTransformType">
@@ -10731,10 +10726,10 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBlendFuncSeparateINGR</name></proto>
-            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcRGB</name></param>
-            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstRGB</name></param>
-            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>srcAlpha</name></param>
-            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dstAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>sfactorRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dfactorRGB</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>sfactorAlpha</name></param>
+            <param group="BlendingFactor"><ptype>GLenum</ptype> <name>dfactorAlpha</name></param>
             <alias name="glBlendFuncSeparate"/>
             <glx type="render" opcode="4134"/>
         </command>
