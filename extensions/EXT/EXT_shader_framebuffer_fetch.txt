@@ -126,6 +126,14 @@ Issues
     inout qualifier is not allowed for re-declaring existing fragment outputs 
     such as gl_FragDepth.
 
+    6. How does this extension interact with sRGB rendering?
+
+    RESOLVED: If the current GL state would cause the corresponding destination
+    color to be converted from sRGB to linear at input to blending,
+    gl_LastFragData or fragment outputs with the inout storage qualifier will
+    contain framebuffer values converted from sRGB to linear upon entry to the
+    fragment shader.
+
 New Procedures and Functions
 
     None

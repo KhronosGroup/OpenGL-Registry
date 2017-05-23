@@ -190,6 +190,12 @@ registry = {
         'supporters' : { 'AMD' },
         'url' : 'extensions/AMD/AMD_stencil_operation_extended.txt',
     },
+    'GL_AMD_texture_gather_bias_lod' : {
+        'number' : 502,
+        'flags' : { 'public' },
+        'supporters' : { 'AMD' },
+        'url' : 'extensions/AMD/AMD_texture_gather_bias_lod.txt',
+    },
     'GL_AMD_texture_texture4' : {
         'number' : 362,
         'flags' : { 'public' },
@@ -1707,6 +1713,11 @@ registry = {
         'esnumber' : 272,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_draw_transform_feedback.txt',
+    },
+    'GL_EXT_EGL_image_array' : {
+        'esnumber' : 278,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_EGL_image_array.txt',
     },
     'GL_EXT_float_blend' : {
         'esnumber' : 224,

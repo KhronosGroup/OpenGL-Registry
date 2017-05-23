@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20170425 */
+/* Generated on date 20170518 */
 
 /* Generated C header for:
  * API: gles2
@@ -1050,6 +1050,10 @@ GL_APICALL void GL_APIENTRY glGetSyncivAPPLE (GLsync sync, GLenum pname, GLsizei
 #define GL_DMP_shader_binary 1
 #define GL_SHADER_BINARY_DMP              0x9250
 #endif /* GL_DMP_shader_binary */
+
+#ifndef GL_EXT_EGL_image_array
+#define GL_EXT_EGL_image_array 1
+#endif /* GL_EXT_EGL_image_array */
 
 #ifndef GL_EXT_YUV_target
 #define GL_EXT_YUV_target 1
