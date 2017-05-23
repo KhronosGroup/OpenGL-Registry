@@ -573,4 +573,6 @@
 </li>
 <li value=277><a href="extensions/QCOM/QCOM_shader_framebuffer_fetch_noncoherent.txt">GL_QCOM_shader_framebuffer_fetch_noncoherent</a>
 </li>
+<li value=278><a href="extensions/EXT/EXT_EGL_image_array.txt">GL_EXT_EGL_image_array</a>
+</li>
 </ol>
