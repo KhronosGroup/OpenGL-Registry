@@ -190,6 +190,12 @@ registry = {
         'supporters' : { 'AMD' },
         'url' : 'extensions/AMD/AMD_stencil_operation_extended.txt',
     },
+    'GL_AMD_texture_gather_bias_lod' : {
+        'number' : 502,
+        'flags' : { 'public' },
+        'supporters' : { 'AMD' },
+        'url' : 'extensions/AMD/AMD_texture_gather_bias_lod.txt',
+    },
     'GL_AMD_texture_texture4' : {
         'number' : 362,
         'flags' : { 'public' },

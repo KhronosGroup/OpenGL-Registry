@@ -933,4 +933,6 @@
 </li>
 <li value=501><a href="extensions/NV/NV_draw_vulkan_image.txt">GL_NV_draw_vulkan_image</a>
 </li>
+<li value=502><a href="extensions/AMD/AMD_texture_gather_bias_lod.txt">GL_AMD_texture_gather_bias_lod</a>
+</li>
 </ol>
