@@ -569,6 +569,8 @@
 </li>
 <li value=276><a href="extensions/EXT/EXT_texture_compression_astc_decode_mode.txt">GL_EXT_texture_compression_astc_decode_mode</a>
 
-    <br> <a href="EXT/EXT_texture_compression_astc_decode_mode.txt">GL_EXT_texture_compression_astc_decode_mode_rgb9e5</a>
+    <br> <a href="extensions/EXT/EXT_texture_compression_astc_decode_mode.txt">GL_EXT_texture_compression_astc_decode_mode_rgb9e5</a>
+</li>
+<li value=277><a href="extensions/QCOM/QCOM_shader_framebuffer_fetch_noncoherent.txt">GL_QCOM_shader_framebuffer_fetch_noncoherent</a>
 </li>
 </ol>
