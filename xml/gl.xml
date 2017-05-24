@@ -3243,6 +3243,29 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_ADJACENT_PAIRS_NV" />
             <enum name="GL_FIRST_TO_REST_NV" />
         </group>
+        
+        <group name="ProgramPropertyARB">
+            <enum name="GL_DELETE_STATUS" />
+            <enum name="GL_LINK_STATUS" />
+            <enum name="GL_VALIDATE_STATUS" />
+            <enum name="GL_INFO_LOG_LENGTH" />
+            <enum name="GL_ATTACHED_SHADERS" />
+            <enum name="GL_ACTIVE_ATOMIC_COUNTER_BUFFERS" />
+            <enum name="GL_ACTIVE_ATTRIBUTES" />
+            <enum name="GL_ACTIVE_ATTRIBUTE_MAX_LENGTH" />
+            <enum name="GL_ACTIVE_UNIFORMS" />
+            <enum name="GL_ACTIVE_UNIFORM_BLOCKS" />
+            <enum name="GL_ACTIVE_UNIFORM_BLOCK_MAX_NAME_LENGTH" />
+            <enum name="GL_ACTIVE_UNIFORM_MAX_LENGTH" />
+            <enum name="GL_COMPUTE_WORK_GROUP_SIZE" />
+            <enum name="GL_PROGRAM_BINARY_LENGTH" />
+            <enum name="GL_TRANSFORM_FEEDBACK_BUFFER_MODE" />
+            <enum name="GL_TRANSFORM_FEEDBACK_VARYINGS" />
+            <enum name="GL_TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH" />
+            <enum name="GL_GEOMETRY_VERTICES_OUT" />
+            <enum name="GL_GEOMETRY_INPUT_TYPE" />
+            <enum name="GL_GEOMETRY_OUTPUT_TYPE" />
+        </group>
     </groups>
 
     <!-- SECTION: GL enumerant (token) definitions. -->
@@ -16873,7 +16896,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetNamedProgramivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ProgramProperty"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ProgramPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
