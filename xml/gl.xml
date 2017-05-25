@@ -11232,7 +11232,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glClearPixelLocalStorageuiEXT</name></proto>
             <param><ptype>GLsizei</ptype> <name>offset</name></param>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param>const <ptype>GLuint</ptype> *<name>values</name></param>
+            <param len="n">const <ptype>GLuint</ptype> *<name>values</name></param>
         </command>
         <command>
             <proto>void <name>glClearStencil</name></proto>
@@ -13002,7 +13002,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCoverageModulationTableNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param>const <ptype>GLfloat</ptype> *<name>v</name></param>
+            <param len="n">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glCoverageOperationNV</name></proto>
@@ -13289,7 +13289,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glDeleteCommandListsNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param>const <ptype>GLuint</ptype> *<name>lists</name></param>
+            <param len="n">const <ptype>GLuint</ptype> *<name>lists</name></param>
         </command>
         <command>
             <proto>void <name>glDeleteFencesAPPLE</name></proto>
@@ -13440,7 +13440,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glDeleteStatesNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param>const <ptype>GLuint</ptype> *<name>states</name></param>
+            <param len="n">const <ptype>GLuint</ptype> *<name>states</name></param>
         </command>
         <command>
             <proto>void <name>glDeleteSync</name></proto>
@@ -13819,7 +13819,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glDrawBuffersEXT</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param>const <ptype>GLenum</ptype> *<name>bufs</name></param>
+            <param len="n">const <ptype>GLenum</ptype> *<name>bufs</name></param>
             <alias name="glDrawBuffers"/>
         </command>
         <command>
