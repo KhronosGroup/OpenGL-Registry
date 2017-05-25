@@ -13011,17 +13011,17 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCreateBuffers</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param><ptype>GLuint</ptype> *<name>buffers</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>buffers</name></param>
         </command>
         <command>
             <proto>void <name>glCreateCommandListsNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param><ptype>GLuint</ptype> *<name>lists</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>lists</name></param>
         </command>
         <command>
             <proto>void <name>glCreateFramebuffers</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param><ptype>GLuint</ptype> *<name>framebuffers</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>framebuffers</name></param>
         </command>
         <command>
             <proto>void <name>glCreatePerfQueryINTEL</name></proto>
@@ -13038,23 +13038,23 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCreateProgramPipelines</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param><ptype>GLuint</ptype> *<name>pipelines</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>pipelines</name></param>
         </command>
         <command>
             <proto>void <name>glCreateQueries</name></proto>
             <param group="QueryTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param><ptype>GLuint</ptype> *<name>ids</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>ids</name></param>
         </command>
         <command>
             <proto>void <name>glCreateRenderbuffers</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param><ptype>GLuint</ptype> *<name>renderbuffers</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>renderbuffers</name></param>
         </command>
         <command>
             <proto>void <name>glCreateSamplers</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param><ptype>GLuint</ptype> *<name>samplers</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>samplers</name></param>
         </command>
         <command>
             <proto><ptype>GLuint</ptype> <name>glCreateShader</name></proto>
@@ -13085,7 +13085,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCreateStatesNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param><ptype>GLuint</ptype> *<name>states</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>states</name></param>
         </command>
         <command>
             <proto group="sync"><ptype>GLsync</ptype> <name>glCreateSyncFromCLeventARB</name></proto>
@@ -13097,17 +13097,17 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCreateTextures</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param><ptype>GLuint</ptype> *<name>textures</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>textures</name></param>
         </command>
         <command>
             <proto>void <name>glCreateTransformFeedbacks</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param><ptype>GLuint</ptype> *<name>ids</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>ids</name></param>
         </command>
         <command>
             <proto>void <name>glCreateVertexArrays</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param><ptype>GLuint</ptype> *<name>arrays</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>arrays</name></param>
         </command>
         <command>
             <proto>void <name>glCullFace</name></proto>
