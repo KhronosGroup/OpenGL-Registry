@@ -407,4 +407,8 @@
 </li>
 <li value=190><a href="extensions/ARB/ARB_gl_spirv.txt">GL_ARB_gl_spirv</a>
 </li>
+<li value=191><a href="extensions/ARB/ARB_create_context_no_error.txt">WGL_ARB_create_context_no_error</a>
+</li>
+<li value=191><a href="extensions/ARB/ARB_create_context_no_error.txt">GLX_ARB_create_context_no_error</a>
+</li>
 </ol>

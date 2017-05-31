@@ -39,7 +39,7 @@ extern "C" {
 #include <windows.h>
 #endif
 
-#define WGL_WGLEXT_VERSION 20170221
+#define WGL_WGLEXT_VERSION 20170531
 
 /* Generated C header for:
  * API: wgl
@@ -89,6 +89,11 @@ typedef HGLRC (WINAPI * PFNWGLCREATECONTEXTATTRIBSARBPROC) (HDC hDC, HGLRC hShar
 HGLRC WINAPI wglCreateContextAttribsARB (HDC hDC, HGLRC hShareContext, const int *attribList);
 #endif
 #endif /* WGL_ARB_create_context */
+
+#ifndef WGL_ARB_create_context_no_error
+#define WGL_ARB_create_context_no_error 1
+#define WGL_CONTEXT_OPENGL_NO_ERROR_ARB   0x31B3
+#endif /* WGL_ARB_create_context_no_error */
 
 #ifndef WGL_ARB_create_context_profile
 #define WGL_ARB_create_context_profile 1
