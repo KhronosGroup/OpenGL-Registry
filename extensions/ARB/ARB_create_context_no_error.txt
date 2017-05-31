@@ -23,7 +23,8 @@ Notice
 
 Status
 
-    Draft
+    Complete. Approved by the OpenGL working group on March 31, 2017.
+    Approved by the Khronos Board of Promoters on May 26, 2017.
 
 Version
 
