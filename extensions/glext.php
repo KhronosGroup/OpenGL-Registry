@@ -935,4 +935,18 @@
 </li>
 <li value=502><a href="extensions/AMD/AMD_texture_gather_bias_lod.txt">GL_AMD_texture_gather_bias_lod</a>
 </li>
+<li value=503><a href="extensions/EXT/EXT_external_objects.txt">GL_EXT_memory_object</a>
+
+    <br> <a href="extensions/EXT/EXT_external_objects.txt">GL_EXT_semaphore</a>
+</li>
+<li value=504><a href="extensions/EXT/EXT_external_objects_fd.txt">GL_EXT_memory_object_fd</a>
+
+    <br> <a href="extensions/EXT/EXT_external_objects_fd.txt">GL_EXT_semaphore_fd</a>
+</li>
+<li value=505><a href="extensions/EXT/EXT_external_objects_win32.txt">GL_EXT_memory_object_win32</a>
+
+    <br> <a href="extensions/EXT/EXT_external_objects_win32.txt">GL_EXT_semaphore_win32</a>
+</li>
+<li value=506><a href="extensions/EXT/EXT_win32_keyed_mutex.txt">GL_EXT_win32_keyed_mutex</a>
+</li>
 </ol>
