@@ -542,6 +542,13 @@ registry = {
         'url' : 'extensions/ARB/GLX_ARB_create_context.txt',
         'comments' : 'Alias to GLX_ARB_create_context_profile not needed - see arbnumber 75.',
     },
+    'GLX_ARB_create_context_no_error' : {
+        'arbnumber' : 191,
+        'flags' : { 'public' },
+        'url' : 'extensions/ARB/ARB_create_context_no_error.txt',
+        'comments' : 'Shares extension spec with WGL_ARB_create_context_no_error.',
+        'alias' : { 'WGL_ARB_create_context_no_error' },
+    },
     'GLX_ARB_create_context_profile' : {
         'arbnumber' : 75,
         'flags' : { 'public' },
@@ -2883,7 +2890,7 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_EGL_stream_consumer_external.txt',
     },
-	'GL_NV_alpha_to_coverage_dither_control' : {
+        'GL_NV_alpha_to_coverage_dither_control' : {
         'number' : 500,
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_alpha_to_coverage_dither_control.txt',

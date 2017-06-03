@@ -456,6 +456,10 @@ Registry at
         <enum value="0x308A" name="WGL_COLORSPACE_LINEAR_EXT"/>
     </enums>
 
+    <enums namespace="WGL" start="0x31B3" end="0x31B3" vendor="ARB" comment="Shared with GLX.">
+        <enum value="0x31B3" name="WGL_CONTEXT_OPENGL_NO_ERROR_ARB"/>
+    </enums>
+    
     <enums namespace="GL" start="0x8250" end="0x826F" vendor="ARB" comment="Values shared with GL. Do not allocate additional values in this range.">
         <enum value="0x8252"        name="WGL_LOSE_CONTEXT_ON_RESET_ARB"/>
         <enum value="0x8256"        name="WGL_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB"/>
@@ -1443,6 +1447,11 @@ Registry at
                 <enum name="WGL_CONTEXT_FLAGS_ARB"/>
                 <enum name="ERROR_INVALID_VERSION_ARB"/>
                 <command name="wglCreateContextAttribsARB"/>
+            </require>
+        </extension>
+        <extension name="WGL_ARB_create_context_no_error" supported="wgl">
+            <require>
+                <enum name="WGL_CONTEXT_OPENGL_NO_ERROR_ARB"/>
             </require>
         </extension>
         <extension name="WGL_ARB_create_context_profile" supported="wgl">

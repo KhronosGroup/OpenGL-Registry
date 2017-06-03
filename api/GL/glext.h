@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20170518
+#define GL_GLEXT_VERSION 20170531
 
 /* Generated C header for:
  * API: gl
@@ -5680,6 +5680,10 @@ typedef void (APIENTRYP PFNGLSTENCILOPVALUEAMDPROC) (GLenum face, GLuint value);
 GLAPI void APIENTRY glStencilOpValueAMD (GLenum face, GLuint value);
 #endif
 #endif /* GL_AMD_stencil_operation_extended */
+
+#ifndef GL_AMD_texture_gather_bias_lod
+#define GL_AMD_texture_gather_bias_lod 1
+#endif /* GL_AMD_texture_gather_bias_lod */
 
 #ifndef GL_AMD_texture_texture4
 #define GL_AMD_texture_texture4 1
