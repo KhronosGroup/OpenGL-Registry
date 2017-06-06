@@ -1726,6 +1726,27 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_EGL_image_array.txt',
     },
+    'GL_EXT_memory_object' : {
+        'number' : 503,
+        'esnumber' : 280,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_external_objects.txt',
+        'alias' : { 'GL_EXT_semaphore' },
+    },
+    'GL_EXT_memory_object_fd' : {
+        'number' : 504,
+        'esnumber' : 281,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_external_objects_fd.txt',
+        'alias' : { 'GL_EXT_semaphore_fd' },
+    },
+    'GL_EXT_memory_object_win32' : {
+        'number' : 505,
+        'esnumber' : 282,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_external_objects_win32.txt',
+        'alias' : { 'GL_EXT_semaphore_win32' },
+    },
     'GL_EXT_float_blend' : {
         'esnumber' : 224,
         'flags' : { 'public' },
@@ -2506,6 +2527,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'HP', 'IBM', 'SGI' },
         'url' : 'extensions/EXT/GLX_EXT_visual_rating.txt',
+    },
+    'GL_EXT_win32_keyed_mutex' : {
+        'number' : 506,
+        'esnumber' : 283,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_win32_keyed_mutex.txt',
     },
     'GL_EXT_window_rectangles' : {
         'number' : 490,
