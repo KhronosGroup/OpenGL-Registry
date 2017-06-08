@@ -79,6 +79,12 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/AMD/AMD_gpu_shader_half_float.txt',
     },
+    'GL_AMD_gpu_shader_int16' : {
+        'number' : 507,
+        'flags' : { 'public' },
+        'supporters' : { 'AMD' },
+        'url' : 'extensions/AMD/AMD_gpu_shader_int16.txt',
+    },
     'GL_AMD_gpu_shader_int64' : {
         'number' : 451,
         'flags' : { 'public' },

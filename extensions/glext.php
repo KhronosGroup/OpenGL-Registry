@@ -949,4 +949,6 @@
 </li>
 <li value=506><a href="extensions/EXT/EXT_win32_keyed_mutex.txt">GL_EXT_win32_keyed_mutex</a>
 </li>
+<li value=507><a href="extensions/AMD/AMD_gpu_shader_int16.txt">GL_AMD_gpu_shader_int16</a>
+</li>
 </ol>
