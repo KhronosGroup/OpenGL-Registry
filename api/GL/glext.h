@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20170606
+#define GL_GLEXT_VERSION 20170608
 
 /* Generated C header for:
  * API: gl
@@ -5420,6 +5420,10 @@ GLAPI void APIENTRY glGetNamedFramebufferParameterfvAMD (GLuint framebuffer, GLe
 #define GL_FLOAT16_MAT4x2_AMD             0x91CC
 #define GL_FLOAT16_MAT4x3_AMD             0x91CD
 #endif /* GL_AMD_gpu_shader_half_float */
+
+#ifndef GL_AMD_gpu_shader_int16
+#define GL_AMD_gpu_shader_int16 1
+#endif /* GL_AMD_gpu_shader_int16 */
 
 #ifndef GL_AMD_gpu_shader_int64
 #define GL_AMD_gpu_shader_int64 1
