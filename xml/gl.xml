@@ -37278,6 +37278,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_FLOAT16_MAT4x3_AMD"/>
             </require>
         </extension>
+        <extension name="GL_AMD_gpu_shader_int16" supported="gl"/>
         <extension name="GL_AMD_gpu_shader_int64" supported="gl">
             <require>
                 <enum name="GL_INT64_NV"/>
