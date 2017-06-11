@@ -62,9 +62,15 @@ To create a new extension specification, take these steps:
   free ARB, GL, and/or ES extension numbers (depending on which API the
   extension is defined for). Execute the python script nextfree.py in the
   extensions/ directory to find the next free numbers.
+* Once registry.py is updated, 'make' in extensions/ to update the PHP
+  include files which are used to show an index of extensions on the
+  registry website. This requires GNU make and Python 3.
+* Add the extension number(s) to the extension specification in the 'Number'
+  block.
 * Add the extension interfaces and enumerant assignments to xml/gl.xml,
   glx.xml, and/or wgl.xml following existing examples. Verify that the
-  relevant extension headers are generated with the correct interfaces.
+  relevant extension headers are generated with the correct interfaces by
+  running 'make' in xml/. This requires the lxml Python module.
 * Once the pull request adding the extension specification and modifying
   registry.py is accepted, your extension is registered.
 

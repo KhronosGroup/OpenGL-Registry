@@ -462,6 +462,10 @@ typedef unsigned __int64 uint64_t;
             <unused start="0x21A9" end="0x21AF"/>
     </enums>
 
+    <enums namespace="GLX" start="0x31B3" end="0x31B3" vendor="ARB" comment="Shared with WGL.">
+        <enum value="0x31B3" name="GLX_CONTEXT_OPENGL_NO_ERROR_ARB"/>
+    </enums>
+    
     <enums namespace="GLX" start="0x8000" end="0x804F" vendor="ARB">
         <enum value="0x8000"        name="GLX_NONE"                                 comment="Attribute value"/>
         <enum value="0x8001"        name="GLX_SLOW_CONFIG"                          comment="CONFIG_CAVEAT attribute value"/>
@@ -1660,6 +1664,11 @@ typedef unsigned __int64 uint64_t;
                 <enum name="GLX_CONTEXT_MINOR_VERSION_ARB"/>
                 <enum name="GLX_CONTEXT_FLAGS_ARB"/>
                 <command name="glXCreateContextAttribsARB"/>
+            </require>
+        </extension>
+        <extension name="GLX_ARB_create_context_no_error" supported="glx">
+            <require>
+                <enum name="GLX_CONTEXT_OPENGL_NO_ERROR_ARB"/>
             </require>
         </extension>
         <extension name="GLX_ARB_create_context_profile" supported="glx">
