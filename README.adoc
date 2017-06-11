@@ -89,6 +89,10 @@ be updated or removed over time:
 ** api/ES - Headers for OpenGL ES
 ** api/GL - Headers for OpenGL
 ** api/SC - Headers for OpenGL SC
+** Note that the OpenGL ES and OpenGL SC headers all depend on the shared
+   https://www.khronos.org/registry/EGL/api/KHR/khrplatform.h[khrplatform.h]
+   This file is maintained in the http://www.khronos.org/registry/EGL/[EGL
+   Registry].
 * docs - Miscellaneous documentation on creating extensions, mostly out of date.
 * extensions - Extension specifications for all APIs
 ** extensions/registry.py - combined extension registry for all APIs
