@@ -951,4 +951,6 @@
 </li>
 <li value=507><a href="extensions/AMD/AMD_gpu_shader_int16.txt">GL_AMD_gpu_shader_int16</a>
 </li>
+<li value=508><a href="extensions/EXT/EXT_external_buffer.txt">GL_EXT_external_buffer</a>
+</li>
 </ol>
