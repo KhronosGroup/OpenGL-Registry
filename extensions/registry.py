@@ -1727,6 +1727,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_draw_transform_feedback.txt',
     },
+    'GL_EXT_external_buffer' : {
+        'number' : 508,
+        'esnumber' : 284,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_external_buffer.txt',
+    },
     'GL_EXT_EGL_image_array' : {
         'esnumber' : 278,
         'flags' : { 'public' },
