@@ -953,4 +953,6 @@
 </li>
 <li value=508><a href="extensions/EXT/EXT_external_buffer.txt">GL_EXT_external_buffer</a>
 </li>
+<li value=509><a href="extensions/NV/NV_texture_rectangle_compressed.txt">GL_NV_texture_rectangle_compressed</a>
+</li>
 </ol>
