@@ -606,7 +606,7 @@ and Multiple Contexts) and Chapter 6 (Buffer Objects)
                                         const int *params);
 
     <memoryObject> is the name of the memory object on which the parameter
-    <pname> will be set to the value(s) in <pname>.  The possible values for
+    <pname> will be set to the value(s) in <params>.  The possible values for
     <pname> are specified in table 6.2.
 
         Table 6.2: Memory Object Parameters.
