@@ -26,8 +26,8 @@ Status
 
 Version
 
-    Last Modified Date: June 2, 2017
-    Revision: 11
+    Last Modified Date: June 28, 2017
+    Revision: 12
 
 Number
 
@@ -294,9 +294,9 @@ New Tokens
     GL_EXT_semaphore strings are reported:
 
     Accepted by the <pname> parameter of GetBooleanv, GetDoublev, GetFloatv,
-    GetIntegerv, GetInteger64v, GetUnsignedBytev, and the <target> parameter
-    of GetBooleani_v, GetIntegeri_v,GetFloati_v, GetDoublei_v,
-    GetInteger64i_v, and GetUnsignedBytei_v:
+    GetIntegerv, GetInteger64v, GetUnsignedBytevEXT, and the <target>
+    parameter of GetBooleani_v, GetIntegeri_v,GetFloati_v, GetDoublei_v,
+    GetInteger64i_v, and GetUnsignedBytei_vEXT:
 
         NUM_DEVICE_UUIDS_EXT                       0x9596
         DEVICE_UUID_EXT                            0x9597
@@ -422,11 +422,11 @@ Additions to Chapter 4 of the OpenGL 4.5 Specification (Event Model)
         from the same device or set of devices used by the current context,
         and from compatible driver versions.  To determine which devices are
         used by the current context, first call GetIntegerv with <pname> set
-        to NUM_DEVICE_UUIDS_EXT, then call GetUnsignedBytei_v with <target>
+        to NUM_DEVICE_UUIDS_EXT, then call GetUnsignedBytei_vEXT with <target>
         set to DEVICE_UUID_EXT, <index> set to a value in the range [0,
         <number of device UUIDs>), and <data> set to point to an array of
         UUID_SIZE_EXT unsigned bytes.  To determine the driver ID of the
-        current context, call GetUnsignedBytev with <pname> set to
+        current context, call GetUnsignedBytevEXT with <pname> set to
         DRIVER_UUID_EXT and <data> set to point to an array of UUID_SIZE_EXT
         unsigned bytes.
 
@@ -606,7 +606,7 @@ and Multiple Contexts) and Chapter 6 (Buffer Objects)
                                         const int *params);
 
     <memoryObject> is the name of the memory object on which the parameter
-    <pname> will be set to the value(s) in <pname>.  The possible values for
+    <pname> will be set to the value(s) in <params>.  The possible values for
     <pname> are specified in table 6.2.
 
         Table 6.2: Memory Object Parameters.
@@ -787,8 +787,8 @@ Queries)
     Add the following to the end of the first list of functions in section
     22.1, Simple Queries:
 
-        void GetUnsignedBytev(enum pname,
-                              ubyte *data);
+        void GetUnsignedBytevEXT(enum pname,
+                                 ubyte *data);
 
     Replace the sentence following that list with:
 
@@ -798,9 +798,9 @@ Queries)
     Add the following to the end of the list of indexed simple state query
     commands:
 
-        void GetUnsignedBytei_v(enum target,
-                                uint index,
-                                ubyte *data);
+        void GetUnsignedBytei_vEXT(enum target,
+                                   uint index,
+                                   ubyte *data);
 
 
 
@@ -1108,6 +1108,10 @@ Issues
         object.
 
 Revision History
+
+    Revision 12, 2017-06-08 (Andres Rodriguez)
+        - Fixed parameter name in MemoryObjectParameterivEXT's description.
+        - Fixed missing EXT suffix in some mentions of GetUnsignedByte*
 
     Revision 11, 2017-06-02 (James Jones)
         - Added extension numbers.
