@@ -34791,6 +34791,12 @@ typedef unsigned int GLhandleARB;
 
     <!-- SECTION: OpenGL ES 1.0/1.1 API interface definitions. -->
     <feature api="gles1" name="GL_VERSION_ES_CM_1_0" number="1.0">
+        <require comment="Not used by the API, for compatibility with old gl.h">
+            <type name="GLbyte"/>
+            <type name="GLclampf"/>
+            <type name="GLshort"/>
+            <type name="GLushort"/>
+        </require>
         <require>
             <!-- Additional API definition macros - ES 1.0/1.1, common/common-lite all in one header -->
             <enum name="GL_VERSION_ES_CL_1_0"/>
