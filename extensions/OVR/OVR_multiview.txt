@@ -25,6 +25,7 @@ Contributors
     Jonas Gustavsson, Sony Mobile
     Sam Holmes, Qualcomm
     Nigel Williams, Qualcomm
+    Tobias Hector, Imagination Technologies
 
 Status
 
@@ -32,8 +33,8 @@ Status
 
 Version
 
-    Last Modified Date:  July 1, 2016
-    Author Revision: 0.6
+    Last Modified Date:  July 25, 2017
+    Author Revision: 0.7
 
 Number
 
@@ -98,9 +99,18 @@ New Procedures and Functions
 
     void FramebufferTextureMultiviewOVR( enum target, enum attachment, uint texture, int level, int baseViewIndex, sizei numViews );
 
-Additions to Chapter X of the OpenGL 3.0 Specification
-
 Additions to Chapter 4 of the OpenGL ES 3.0 Specification
+
+    Add the following paragraph to the end of the description of
+    BlitFramebuffer in section 4.3.3:
+    
+    If the draw framebuffer has multiple views (see section 4.4.2.4,
+    FramebufferTextureMultiviewOVR), values taken from the read buffer are
+    only written to draw buffers in the first view of the draw framebuffer.
+    
+
+    Add the following to section 4.4.2.4, immediately before the subsection
+    "Effects of Attaching a Texture Image":
 
     The command
 
@@ -118,16 +128,18 @@ Additions to Chapter 4 of the OpenGL ES 3.0 Specification
     functionality in this section.  The effect of this hypothetical function is
     to set the value of the shader built-in input uint gl_ViewID_OVR.
 
-    When multi-view rendering is enabled, drawing commands have the same effect
-    as:
+    When multi-view rendering is enabled, Clear,
+    ClearBuffer, and drawing commands have the same effect as:
 
         for( int i = 0; i < numViews; i++ ) {
-            FramebufferTextureLayer( target, attachment, texture, level, baseViewIndex + i );
+            for ( enum attachment : all attachment values where multiple texture array elements have been targeted for rendering ) {
+                FramebufferTextureLayer( target, attachment, texture, level, baseViewIndex + i );
+            }
             View( i );
-            <drawing-command>
+            <command>
         }
 
-    The result is that every drawing command is broadcast into every active
+    The result is that every such command is broadcast into every active
     view. The shader uses gl_ViewID_OVR to compute view dependent outputs.
 
     The number of views, as specified by numViews, must be the same for all
@@ -301,6 +313,26 @@ Issues
     be read. This conforms to the expected behavior for read operations on FBOs
     with multiview texture attachments to be consistent with
     FramebufferTextureMultisampleMultiviewOVR.
+    
+    (15) How do clears apply to framebuffers with multiple views
+    (bugzilla 16173)?
+    
+    Resolved: Clears are applied to all views.
+    
+    (16) How should blit operations to draw framebuffers with multiple views
+    be handled (bugzilla 16174)?
+    
+    Resolved: The options are to broadcast the blit, only blit to a subset
+    of views, or throw an error. There's no particularly compelling use case
+    for either of the first options, so an error would have been desirable.
+    However, this was missed when the extension was initially drafted, and
+    implementations all ended up doing the same thing - blitting to just the
+    first view of the draw framebuffer.
+    
+    (17) How do clears apply to framebuffers with multiple views
+    (bugzilla 16173)?
+    
+    Resolved: Clears are applied to all views.
 
 Revision History
 
@@ -312,3 +344,4 @@ Revision History
       0.4   02/11/15  cass      Switch to view instead of layer, as these are distinct now
       0.5   04/15/15  cass      Clean up pass before publishing
       0.6   07/01/16  nigelw    Modify errors to conform to multisample multiview spec changes
+      0.7   07/25/17  tjh       Clarify Blit and Clear behaviours, and fixed framebuffer attachment binding psuedocode (bugzillas 16173, 16174, 16176)
