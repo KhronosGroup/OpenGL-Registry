@@ -44382,6 +44382,12 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_BLEND_ADVANCED_COHERENT_NV"/>
             </require>
         </extension>
+        <extension name="GL_NV_blend_minmax_factor" supported="gl|glcore|gles2">
+            <require>
+                <enum name="GL_FACTOR_MIN_AMD"/>
+                <enum name="GL_FACTOR_MAX_AMD"/>
+            </require>
+        </extension>
         <extension name="GL_NV_blend_square" supported="gl"/>
         <extension name="GL_NV_clip_space_w_scaling" supported="gl|glcore">
             <require>

@@ -2966,6 +2966,13 @@ registry = {
         'url' : 'extensions/NV/NV_blend_equation_advanced.txt',
         'alias' : { 'GL_NV_blend_equation_advanced_coherent' },
     },
+    'GL_NV_blend_minmax_factor' : {
+        'number' : 509,
+        'esnumber' : 285,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_blend_minmax_factor.txt',
+    },
     'GL_NV_blend_square' : {
         'number' : 194,
         'flags' : { 'public' },
