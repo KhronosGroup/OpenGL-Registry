@@ -10743,6 +10743,10 @@ GLAPI void APIENTRY glTextureImage3DMultisampleCoverageNV (GLuint texture, GLenu
 #define GL_MAX_RECTANGLE_TEXTURE_SIZE_NV  0x84F8
 #endif /* GL_NV_texture_rectangle */
 
+#ifndef GL_NV_texture_rectangle_compressed
+#define GL_NV_texture_rectangle_compressed 1
+#endif /* GL_NV_texture_rectangle_compressed */
+
 #ifndef GL_NV_texture_shader
 #define GL_NV_texture_shader 1
 #define GL_OFFSET_TEXTURE_RECTANGLE_NV    0x864C

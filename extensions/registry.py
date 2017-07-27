@@ -2967,7 +2967,7 @@ registry = {
         'alias' : { 'GL_NV_blend_equation_advanced_coherent' },
     },
     'GL_NV_blend_minmax_factor' : {
-        'number' : 509,
+        'number' : 510,
         'esnumber' : 285,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
@@ -3602,6 +3602,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_texture_rectangle.txt',
+    },
+    'GL_NV_texture_rectangle_compressed' : {
+        'number' : 509,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_texture_rectangle_compressed.txt',
     },
     'GL_NV_texture_shader' : {
         'number' : 230,

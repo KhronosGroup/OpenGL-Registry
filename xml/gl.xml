@@ -45652,6 +45652,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_MAX_RECTANGLE_TEXTURE_SIZE_NV"/>
             </require>
         </extension>
+        <extension name="GL_NV_texture_rectangle_compressed" supported="gl|glcore"/>
         <extension name="GL_NV_texture_shader" supported="gl">
             <require>
                 <enum name="GL_OFFSET_TEXTURE_RECTANGLE_NV"/>
