@@ -1,16 +1,8 @@
 <?php
 $static_title = 'Khronos Combined OpenGL Registry';
-$static_breadcrumb = array(
-    '/registry/' => 'Registry',
-    'NOLINK' => 'Combined OpenGL Registry'
-);
+
 include_once("../../assets/static_pages/khr_page_top.php");
 ?>
-
-<h1 class="pagetitle">Khronos Combined OpenGL&reg; Registry</h1>
-<div id="mainformat">
-
-<h1 style="text-align:center"> Khronos Combined OpenGL&reg; Registry </h1>
 
 <p> This site contains the API and Extension registries for the OpenGL
     family APIs - OpenGL, OpenGL ES, and OpenGL SC. It includes API
