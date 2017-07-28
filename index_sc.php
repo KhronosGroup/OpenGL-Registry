@@ -1,17 +1,8 @@
 <?php
 $static_title = 'Khronos OpenGL SC Registry';
-$static_breadcrumb = array(
-    '/registry/' => 'Registry',
-    'NOLINK' => 'OpenGL SC Registry'
-);
+
 include_once("../../assets/static_pages/khr_page_top.php");
 ?>
-
-<h1 class="pagetitle">Khronos OpenGL&reg; SC Registry</h1>
-<div id="mainformat">
-
-
-<h1 style="text-align:center"> Khronos OpenGL&reg; SC Registry </h1>
 
 <p> The OpenGL SC registry contains specifications of the core API;
     specifications of Khronos- and vendor-approved OpenGL SC extensions;
