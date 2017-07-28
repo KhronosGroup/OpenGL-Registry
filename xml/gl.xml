@@ -7444,12 +7444,16 @@ typedef unsigned int GLhandleARB;
             <unused start="0x8E8B" vendor="NV"/>
         <enum value="0x8E8C" name="GL_COMPRESSED_RGBA_BPTC_UNORM"/>
         <enum value="0x8E8C" name="GL_COMPRESSED_RGBA_BPTC_UNORM_ARB"/>
+        <enum value="0x8E8C" name="GL_COMPRESSED_RGBA_BPTC_UNORM_EXT"/>
         <enum value="0x8E8D" name="GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM"/>
         <enum value="0x8E8D" name="GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM_ARB"/>
+        <enum value="0x8E8D" name="GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT"/>
         <enum value="0x8E8E" name="GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT"/>
         <enum value="0x8E8E" name="GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT_ARB"/>
+        <enum value="0x8E8E" name="GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT_EXT"/>
         <enum value="0x8E8F" name="GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT"/>
         <enum value="0x8E8F" name="GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_ARB"/>
+        <enum value="0x8E8F" name="GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_EXT"/>
     </enums>
 
     <enums namespace="GL" start="0x8E90" end="0x8E9F" vendor="QNX" comment="For QNX_texture_tiling, QNX_complex_polygon, QNX_stippled_lines (Khronos bug 696)">
@@ -42979,6 +42983,14 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_TEXTURE_ASTC_DECODE_PRECISION_EXT"/>
             </require>
         </extension>
+        <extension name="GL_EXT_texture_compression_bptc" supported="gles2">
+            <require>
+                <enum name="GL_COMPRESSED_RGBA_BPTC_UNORM_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT"/>
+                <enum name="GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT_EXT"/>
+                <enum name="GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_EXT"/>
+            </require>
+        </extension>
         <extension name="GL_EXT_texture_compression_dxt1" supported="gles1|gles2">
             <require>
                 <enum name="GL_COMPRESSED_RGB_S3TC_DXT1_EXT"/>
@@ -42993,7 +43005,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_COMPRESSED_SIGNED_LUMINANCE_ALPHA_LATC2_EXT"/>
             </require>
         </extension>
-        <extension name="GL_EXT_texture_compression_rgtc" supported="gl">
+        <extension name="GL_EXT_texture_compression_rgtc" supported="gl|gles2">
             <require>
                 <enum name="GL_COMPRESSED_RED_RGTC1_EXT"/>
                 <enum name="GL_COMPRESSED_SIGNED_RED_RGTC1_EXT"/>

@@ -2288,6 +2288,12 @@ registry = {
         'url' : 'extensions/EXT/EXT_texture_compression_astc_decode_mode.txt',
         'alias' : { 'GL_EXT_texture_compression_astc_decode_mode_rgb9e5' },
     },
+    'GL_EXT_texture_compression_bptc' : {
+        'esnumber' : 287,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/EXT/EXT_texture_compression_bptc.txt',
+    },
     'GL_EXT_texture_compression_dxt1' : {
         'number' : 309,
         'esnumber' : 49,
@@ -2303,6 +2309,7 @@ registry = {
     },
     'GL_EXT_texture_compression_rgtc' : {
         'number' : 332,
+        'esnumber' : 286,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/EXT/EXT_texture_compression_rgtc.txt',
