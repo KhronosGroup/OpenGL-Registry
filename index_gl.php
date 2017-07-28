@@ -1,16 +1,8 @@
 <?php
 $static_title = 'Khronos OpenGL&reg; Registry';
-$static_breadcrumb = array(
-    '/registry/' => 'Registry',
-    'NOLINK' => 'OpenGL&reg; Registry'
-);
+
 include_once("../../assets/static_pages/khr_page_top.php");
 ?>
-
-<h1 class="pagetitle">Khronos OpenGL&reg; Registry</h1>
-<div id="mainformat">
-
-<h1 style="text-align:center"> OpenGL&reg; Registry</h1>
 
 <p> The OpenGL Registry contains specifications, header files, and
     related documentation for OpenGL and related APIs including GLU,
