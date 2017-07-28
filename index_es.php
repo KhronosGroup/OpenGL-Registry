@@ -1,16 +1,8 @@
 <?php
 $static_title = 'Khronos OpenGL ES Registry';
-$static_breadcrumb = array(
-    '/registry/' => 'Registry',
-    'NOLINK' => 'OpenGL ES Registry'
-);
+
 include_once("../../assets/static_pages/khr_page_top.php");
 ?>
-
-<h1 class="pagetitle">Khronos OpenGL&reg; ES Registry</h1>
-<div id="mainformat">
-
-<h1 style="text-align:center"> Khronos OpenGL&reg; ES Registry </h1>
 
 <p> The OpenGL ES registry contains specifications of the core API and
     shading language; specifications of Khronos- and vendor-approved
