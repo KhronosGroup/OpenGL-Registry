@@ -6091,16 +6091,20 @@ typedef unsigned int GLhandleARB;
         <enum value="0x88EB" name="GL_PIXEL_PACK_BUFFER"/>
         <enum value="0x88EB" name="GL_PIXEL_PACK_BUFFER_ARB"/>
         <enum value="0x88EB" name="GL_PIXEL_PACK_BUFFER_EXT"/>
+        <enum value="0x88EB" name="GL_PIXEL_PACK_BUFFER_NV"/>
         <enum value="0x88EC" name="GL_PIXEL_UNPACK_BUFFER"/>
         <enum value="0x88EC" name="GL_PIXEL_UNPACK_BUFFER_ARB"/>
         <enum value="0x88EC" name="GL_PIXEL_UNPACK_BUFFER_EXT"/>
+        <enum value="0x88EC" name="GL_PIXEL_UNPACK_BUFFER_NV"/>
         <enum value="0x88ED" name="GL_PIXEL_PACK_BUFFER_BINDING"/>
         <enum value="0x88ED" name="GL_PIXEL_PACK_BUFFER_BINDING_ARB"/>
         <enum value="0x88ED" name="GL_PIXEL_PACK_BUFFER_BINDING_EXT"/>
+        <enum value="0x88ED" name="GL_PIXEL_PACK_BUFFER_BINDING_NV"/>
         <enum value="0x88EE" name="GL_ETC1_SRGB8_NV"/>
         <enum value="0x88EF" name="GL_PIXEL_UNPACK_BUFFER_BINDING"/>
         <enum value="0x88EF" name="GL_PIXEL_UNPACK_BUFFER_BINDING_ARB"/>
         <enum value="0x88EF" name="GL_PIXEL_UNPACK_BUFFER_BINDING_EXT"/>
+        <enum value="0x88EF" name="GL_PIXEL_UNPACK_BUFFER_BINDING_NV"/>
         <enum value="0x88F0" name="GL_DEPTH24_STENCIL8"/>
         <enum value="0x88F0" name="GL_DEPTH24_STENCIL8_EXT"/>
         <enum value="0x88F0" name="GL_DEPTH24_STENCIL8_OES"/>
@@ -45355,6 +45359,14 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_READ_PIXEL_DATA_RANGE_POINTER_NV"/>
                 <command name="glPixelDataRangeNV"/>
                 <command name="glFlushPixelDataRangeNV"/>
+            </require>
+        </extension>
+        <extension name="GL_NV_pixel_buffer_object" supported="gles2">
+            <require>
+                <enum name="GL_PIXEL_PACK_BUFFER_NV"/>
+                <enum name="GL_PIXEL_UNPACK_BUFFER_NV"/>
+                <enum name="GL_PIXEL_PACK_BUFFER_BINDING_NV"/>
+                <enum name="GL_PIXEL_UNPACK_BUFFER_BINDING_NV"/>
             </require>
         </extension>
         <extension name="GL_NV_point_sprite" supported="gl">

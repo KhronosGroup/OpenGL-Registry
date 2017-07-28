@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20170726 */
+/* Generated on date 20170728 */
 
 /* Generated C header for:
  * API: gles2
@@ -3092,6 +3092,14 @@ GL_APICALL void GL_APIENTRY glGetProgramResourcefvNV (GLuint program, GLenum pro
 #define GL_NV_path_rendering_shared_edge 1
 #define GL_SHARED_EDGE_NV                 0xC0
 #endif /* GL_NV_path_rendering_shared_edge */
+
+#ifndef GL_NV_pixel_buffer_object
+#define GL_NV_pixel_buffer_object 1
+#define GL_PIXEL_PACK_BUFFER_NV           0x88EB
+#define GL_PIXEL_UNPACK_BUFFER_NV         0x88EC
+#define GL_PIXEL_PACK_BUFFER_BINDING_NV   0x88ED
+#define GL_PIXEL_UNPACK_BUFFER_BINDING_NV 0x88EF
+#endif /* GL_NV_pixel_buffer_object */
 
 #ifndef GL_NV_polygon_mode
 #define GL_NV_polygon_mode 1
