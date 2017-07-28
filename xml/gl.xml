@@ -16684,7 +16684,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLenum</ptype> <name>shadertype</name></param>
             <param><ptype>GLenum</ptype> <name>precisiontype</name></param>
             <param len="2"><ptype>GLint</ptype> *<name>range</name></param>
-            <param len="2"><ptype>GLint</ptype> *<name>precision</name></param>
+            <param len="1"><ptype>GLint</ptype> *<name>precision</name></param>
         </command>
         <command>
             <proto>void <name>glGetShaderSource</name></proto>
