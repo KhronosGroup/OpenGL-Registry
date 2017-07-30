@@ -593,4 +593,6 @@
 </li>
 <li value=285><a href="extensions/NV/NV_blend_minmax_factor.txt">GL_NV_blend_minmax_factor</a>
 </li>
+<li value=286><a href="extensions/EXT/EXT_texture_compression_s3tc_srgb.txt">GL_EXT_texture_compression_s3tc_srgb</a>
+</li>
 </ol>
