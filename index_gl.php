@@ -1,16 +1,8 @@
 <?php
 $static_title = 'Khronos OpenGL&reg; Registry';
-$static_breadcrumb = array(
-    '/registry/' => 'Registry',
-    'NOLINK' => 'OpenGL&reg; Registry'
-);
+
 include_once("../../assets/static_pages/khr_page_top.php");
 ?>
-
-<h1 class="pagetitle">Khronos OpenGL&reg; Registry</h1>
-<div id="mainformat">
-
-<h1 style="text-align:center"> OpenGL&reg; Registry</h1>
 
 <p> The OpenGL Registry contains specifications, header files, and
     related documentation for OpenGL and related APIs including GLU,
@@ -56,7 +48,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <ul>
 <li> <b> Current Specifications (OpenGL 4.5) </b>
-<li> OpenGL 4.5 API Specification (updated October 24, 2016)
+<li> OpenGL 4.5 API Specification (updated June 29, 2017)
     <ul>
     <li> <a href="specs/gl/glspec45.core.pdf"> Core Profile Specification
          </a> </li>
@@ -68,7 +60,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
          Compatibility Profile Specification with changes marked </a>
          </li>
     </ul> </li>
-<li> OpenGL Shading Language 4.50 Specification (updated April 14, 2016)
+<li> OpenGL Shading Language 4.50 Specification (updated May 9, 2017)
     <ul>
     <li> <a href="specs/gl/GLSLangSpec.4.50.pdf"> GLSL Specification </a>
          </li>

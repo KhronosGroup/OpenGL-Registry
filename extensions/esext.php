@@ -575,4 +575,22 @@
 </li>
 <li value=278><a href="extensions/EXT/EXT_EGL_image_array.txt">GL_EXT_EGL_image_array</a>
 </li>
+<li value=280><a href="extensions/EXT/EXT_external_objects.txt">GL_EXT_memory_object</a>
+
+    <br> <a href="extensions/EXT/EXT_external_objects.txt">GL_EXT_semaphore</a>
+</li>
+<li value=281><a href="extensions/EXT/EXT_external_objects_fd.txt">GL_EXT_memory_object_fd</a>
+
+    <br> <a href="extensions/EXT/EXT_external_objects_fd.txt">GL_EXT_semaphore_fd</a>
+</li>
+<li value=282><a href="extensions/EXT/EXT_external_objects_win32.txt">GL_EXT_memory_object_win32</a>
+
+    <br> <a href="extensions/EXT/EXT_external_objects_win32.txt">GL_EXT_semaphore_win32</a>
+</li>
+<li value=283><a href="extensions/EXT/EXT_win32_keyed_mutex.txt">GL_EXT_win32_keyed_mutex</a>
+</li>
+<li value=284><a href="extensions/EXT/EXT_external_buffer.txt">GL_EXT_external_buffer</a>
+</li>
+<li value=285><a href="extensions/NV/NV_blend_minmax_factor.txt">GL_NV_blend_minmax_factor</a>
+</li>
 </ol>

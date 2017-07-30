@@ -79,6 +79,12 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/AMD/AMD_gpu_shader_half_float.txt',
     },
+    'GL_AMD_gpu_shader_int16' : {
+        'number' : 507,
+        'flags' : { 'public' },
+        'supporters' : { 'AMD' },
+        'url' : 'extensions/AMD/AMD_gpu_shader_int16.txt',
+    },
     'GL_AMD_gpu_shader_int64' : {
         'number' : 451,
         'flags' : { 'public' },
@@ -541,6 +547,13 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/ARB/GLX_ARB_create_context.txt',
         'comments' : 'Alias to GLX_ARB_create_context_profile not needed - see arbnumber 75.',
+    },
+    'GLX_ARB_create_context_no_error' : {
+        'arbnumber' : 191,
+        'flags' : { 'public' },
+        'url' : 'extensions/ARB/ARB_create_context_no_error.txt',
+        'comments' : 'Shares extension spec with WGL_ARB_create_context_no_error.',
+        'alias' : { 'WGL_ARB_create_context_no_error' },
     },
     'GLX_ARB_create_context_profile' : {
         'arbnumber' : 75,
@@ -1714,10 +1727,37 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_draw_transform_feedback.txt',
     },
+    'GL_EXT_external_buffer' : {
+        'number' : 508,
+        'esnumber' : 284,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_external_buffer.txt',
+    },
     'GL_EXT_EGL_image_array' : {
         'esnumber' : 278,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_EGL_image_array.txt',
+    },
+    'GL_EXT_memory_object' : {
+        'number' : 503,
+        'esnumber' : 280,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_external_objects.txt',
+        'alias' : { 'GL_EXT_semaphore' },
+    },
+    'GL_EXT_memory_object_fd' : {
+        'number' : 504,
+        'esnumber' : 281,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_external_objects_fd.txt',
+        'alias' : { 'GL_EXT_semaphore_fd' },
+    },
+    'GL_EXT_memory_object_win32' : {
+        'number' : 505,
+        'esnumber' : 282,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_external_objects_win32.txt',
+        'alias' : { 'GL_EXT_semaphore_win32' },
     },
     'GL_EXT_float_blend' : {
         'esnumber' : 224,
@@ -2500,6 +2540,12 @@ registry = {
         'supporters' : { 'HP', 'IBM', 'SGI' },
         'url' : 'extensions/EXT/GLX_EXT_visual_rating.txt',
     },
+    'GL_EXT_win32_keyed_mutex' : {
+        'number' : 506,
+        'esnumber' : 283,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_win32_keyed_mutex.txt',
+    },
     'GL_EXT_window_rectangles' : {
         'number' : 490,
         'esnumber' : 263,
@@ -2883,7 +2929,7 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_EGL_stream_consumer_external.txt',
     },
-	'GL_NV_alpha_to_coverage_dither_control' : {
+        'GL_NV_alpha_to_coverage_dither_control' : {
         'number' : 500,
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_alpha_to_coverage_dither_control.txt',
@@ -2919,6 +2965,13 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_blend_equation_advanced.txt',
         'alias' : { 'GL_NV_blend_equation_advanced_coherent' },
+    },
+    'GL_NV_blend_minmax_factor' : {
+        'number' : 510,
+        'esnumber' : 285,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_blend_minmax_factor.txt',
     },
     'GL_NV_blend_square' : {
         'number' : 194,
@@ -3549,6 +3602,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_texture_rectangle.txt',
+    },
+    'GL_NV_texture_rectangle_compressed' : {
+        'number' : 509,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_texture_rectangle_compressed.txt',
     },
     'GL_NV_texture_shader' : {
         'number' : 230,

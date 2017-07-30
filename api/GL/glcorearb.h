@@ -4752,6 +4752,12 @@ GLAPI void APIENTRY glBlendBarrierNV (void);
 #define GL_BLEND_ADVANCED_COHERENT_NV     0x9285
 #endif /* GL_NV_blend_equation_advanced_coherent */
 
+#ifndef GL_NV_blend_minmax_factor
+#define GL_NV_blend_minmax_factor 1
+#define GL_FACTOR_MIN_AMD                 0x901C
+#define GL_FACTOR_MAX_AMD                 0x901D
+#endif /* GL_NV_blend_minmax_factor */
+
 #ifndef GL_NV_clip_space_w_scaling
 #define GL_NV_clip_space_w_scaling 1
 #define GL_VIEWPORT_POSITION_W_SCALE_NV   0x937C
@@ -5441,6 +5447,10 @@ typedef void (APIENTRYP PFNGLTEXTUREBARRIERNVPROC) (void);
 GLAPI void APIENTRY glTextureBarrierNV (void);
 #endif
 #endif /* GL_NV_texture_barrier */
+
+#ifndef GL_NV_texture_rectangle_compressed
+#define GL_NV_texture_rectangle_compressed 1
+#endif /* GL_NV_texture_rectangle_compressed */
 
 #ifndef GL_NV_uniform_buffer_unified_memory
 #define GL_NV_uniform_buffer_unified_memory 1

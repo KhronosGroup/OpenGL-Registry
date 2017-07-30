@@ -935,4 +935,26 @@
 </li>
 <li value=502><a href="extensions/AMD/AMD_texture_gather_bias_lod.txt">GL_AMD_texture_gather_bias_lod</a>
 </li>
+<li value=503><a href="extensions/EXT/EXT_external_objects.txt">GL_EXT_memory_object</a>
+
+    <br> <a href="extensions/EXT/EXT_external_objects.txt">GL_EXT_semaphore</a>
+</li>
+<li value=504><a href="extensions/EXT/EXT_external_objects_fd.txt">GL_EXT_memory_object_fd</a>
+
+    <br> <a href="extensions/EXT/EXT_external_objects_fd.txt">GL_EXT_semaphore_fd</a>
+</li>
+<li value=505><a href="extensions/EXT/EXT_external_objects_win32.txt">GL_EXT_memory_object_win32</a>
+
+    <br> <a href="extensions/EXT/EXT_external_objects_win32.txt">GL_EXT_semaphore_win32</a>
+</li>
+<li value=506><a href="extensions/EXT/EXT_win32_keyed_mutex.txt">GL_EXT_win32_keyed_mutex</a>
+</li>
+<li value=507><a href="extensions/AMD/AMD_gpu_shader_int16.txt">GL_AMD_gpu_shader_int16</a>
+</li>
+<li value=508><a href="extensions/EXT/EXT_external_buffer.txt">GL_EXT_external_buffer</a>
+</li>
+<li value=509><a href="extensions/NV/NV_texture_rectangle_compressed.txt">GL_NV_texture_rectangle_compressed</a>
+</li>
+<li value=510><a href="extensions/NV/NV_blend_minmax_factor.txt">GL_NV_blend_minmax_factor</a>
+</li>
 </ol>
