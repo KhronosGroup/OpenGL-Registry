@@ -36,8 +36,8 @@ Status
 
 Version
 
-    Last Modified Date:         September 29, 2016
-    Author Revision:            48
+    Last Modified Date:         July 23, 2017
+    Author Revision:            49
 
 Number
 
@@ -518,17 +518,18 @@ Additions to Chapter 4 of the OpenGL 4.4 (core) Specification (Event Model)
 
     CreateQueries returns <n> previously unused query object names in <ids>,
     each representing a new query object with the specified <target>.
-    <target> may be one of SAMPLES_PASSED, ANY_SAMPLES_PASSED,
-    ANY_SAMPLES_PASSED_CONSERVATIVE, TIME_ELAPSED, TIMESTAMP,
-    PRIMITIVES_GENERATED, and TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN.
+    <target> must be one of the query object targets described in section
+    4.2.
 
-    For all values of <target>, the resulting query object will report
-    QUERY_RESULT_AVALIABLE as TRUE and QUERY_RESULT as zero.
+    The initial state of the resulting query object is that the result is
+    marked available (the value of QUERY_RESULT_AVAILABLE) for the query
+    object is TRUE) and the result value (the value of QUERY_RESULT) is
+    zero.
 
     Errors
 
-    An INVALID_ENUM error is generated if <target> is not one of the targets
-    listed above.
+    An INVALID_ENUM error is generated if <target> is not one of the query
+    object targets described in section 4.2.
 
     An INVALID_VALUE error is generated if <n> is negative.
 
@@ -4145,6 +4146,12 @@ Revision History
 
     Rev.    Date        Author    Changes
     ----  -----------   --------- ---------------------------------------------
+    49    23 Jul 2017   Jon Leech Replace the long list of valid <target>
+                                  parameters for BeginQueryIndexed,
+                                  EndQueryIndexed, and GetQueryIndexediv
+                                  with a reference to the list of query
+                                  targets in section 4.2 (gitlab #18).
+
     48    29 Sep 2016   Jon Leech Add interaction with ARB_query_buffer_object
                                   (Bug 13490).
 

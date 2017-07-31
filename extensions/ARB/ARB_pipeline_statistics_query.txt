@@ -25,14 +25,14 @@ Notice
 
 Status
 
-    Complete. 
+    Complete.
     Approved by the ARB on June 26, 2014.
     Ratified by the Khronos Board of Promoters on August 7, 2014.
 
 Version
 
-    Date: October 30, 2014
-    Revision: 10
+    Date: 2017-07-23
+    Revision: 11
 
 Number
 
@@ -104,7 +104,7 @@ Additions to Chapter 4 of the OpenGL 4.4 (Core Profile) Specification (Event Mod
 
     Modify Section 4.2, Query Objects and Asynchronous Queries
 
-    (add to the end of the bulletted list of the first paragraph on p. 39)
+    (add to the end of the bullet list on the first paragraph on p. 39)
 
       * Submission queries with a target of VERTICES_SUBMITTED_ARB and
         PRIMITIVES_SUBMITTED_ARB return information on the number of vertices
@@ -140,6 +140,26 @@ Additions to Chapter 4 of the OpenGL 4.4 (Core Profile) Specification (Event Mod
         return information on the number of times the compute shader has been
         invoked (see section 19.2).
 
+    (replace the INVALID_ENUM error for the <target> parameter of
+    BeginQueryIndexed on p. 40):
+
+    An INVALID_ENUM error is generated if <target> is TIMESTAMP, or is not
+    one of the query object targets described in section 4.2.
+
+    (replace the INVALID_ENUM error for the <target> parameter of
+    EndQueryIndexed on p. 41):
+
+    An INVALID_ENUM error is generated if <target> is TIMESTAMP, or is not
+    one of the query object targets described in section 4.2.
+
+    (modify the INVALID_VALUE error for <index> on non-indexed <target>s on
+    p. 42):
+
+    An INVALID_OPERATION error is generated if <target> is a valid target
+    other than PRIMITIVES_GENERATED or
+    TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN, and <index> is not zero.
+
+
     Modify Section 4.2.1, Query Object Queries
 
     (add before the errors section for GetQueryIndexediv on p. 43)
@@ -151,6 +171,19 @@ Additions to Chapter 4 of the OpenGL 4.4 (Core Profile) Specification (Event Mod
       INVOCATIONS_ARB, GEOMETRY_SHADER_PRIMITIVES_EMITTED_ARB, CLIPPING_-
       INPUT_PRIMITIVES_ARB, CLIPPING_OUTPUT_PRIMITIVES_ARB), if the number
       of bits is non-zero, the minimum number of bits allowed is 32.
+
+    (replace the INVALID_ENUM error for the <target> parameter of
+    GetQueryIndexediv on p. 43):
+
+    An INVALID_ENUM error is generated if <target> is not one of the query
+    object targets described in section 4.2.
+
+    (modify the INVALID_VALUE error for <index> on non-indexed <target>s on
+    p. 43):
+
+    An INVALID_OPERATION error is generated if <target> is a valid target
+    other than PRIMITIVES_GENERATED or
+    TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN, and <index> is not zero.
 
 Additions to Chapter 10 of the OpenGL 4.4 (Core Profile) Specification (Vertex Specification and Drawing Commands)
 
@@ -708,6 +741,14 @@ Issues
       the first vertex twice for line loop primitives.
 
 Revision History
+
+    Revision 11, 2017/07/23 (Jon Leech)
+      - Replace the long list of valid <target> parameters for
+        BeginQueryIndexed, EndQueryIndexed, and GetQueryIndexediv with a
+        reference to the list of query targets in section 4.2 (gitlab #18).
+      - Add the new query targets to those for which the <index> parameter
+        of BeginQueryIndexed and GetQueryIndexediv must be zero (gitlab
+        #26).
 
     Revision 10, 2014/10/30 (Daniel Rakos)
       - Relaxed the behavior of VERTICES_SUBMITTED_ARB queries for primitives

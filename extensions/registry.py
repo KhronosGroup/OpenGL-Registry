@@ -855,6 +855,12 @@ registry = {
         'supporters' : { 'ARB' },
         'url' : 'extensions/ARB/ARB_point_sprite.txt',
     },
+    'GL_ARB_polygon_offset_clamp' : {
+        'arbnumber' : 193,
+        'flags' : { 'public' },
+        'supporters' : { 'ARB' },
+        'url' : 'extensions/ARB/ARB_polygon_offset_clamp.txt',
+    },
     'GL_ARB_post_depth_coverage' : {
         'arbnumber' : 180,
         'flags' : { 'public' },
@@ -1066,6 +1072,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/ARB/ARB_sparse_texture_clamp.txt',
     },
+    'GL_ARB_spirv_extensions' : {
+        'arbnumber' : 194,
+        'flags' : { 'public' },
+        'supporters' : { 'ARB' },
+        'url' : 'extensions/ARB/ARB_spirv_extensions.txt',
+    },
     'GL_ARB_stencil_texturing' : {
         'arbnumber' : 138,
         'flags' : { 'public' },
@@ -1159,6 +1171,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'ARB' },
         'url' : 'extensions/ARB/ARB_texture_env_dot3.txt',
+    },
+    'GL_ARB_texture_filter_anisotropic' : {
+        'arbnumber' : 195,
+        'flags' : { 'public' },
+        'supporters' : { 'ARB' },
+        'url' : 'extensions/ARB/ARB_texture_filter_anisotropic.txt',
     },
     'GL_ARB_texture_filter_minmax' : {
         'arbnumber' : 188,
@@ -2794,6 +2812,12 @@ registry = {
         'esnumber' : 243,
         'flags' : { 'public' },
         'url' : 'extensions/KHR/KHR_no_error.txt',
+    },
+    'GL_KHR_parallel_shader_compile' : {
+        'arbnumber' : 192,
+        'esnumber' : 288,
+        'flags' : { 'public' },
+        'url' : 'extensions/KHR/KHR_parallel_shader_compile.txt',
     },
     'GL_KHR_robust_buffer_access_behavior' : {
         'arbnumber' : 169,
