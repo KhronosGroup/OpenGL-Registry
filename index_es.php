@@ -66,6 +66,9 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="specs/es/3.2/GLSL_ES_Specification_3.20.withchanges.pdf"> with changes marked </a>. </li>
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man32/">
      OpenGL ES 3.2 Online Manual Pages.</a> </li>
+<li> <a href="https://www.khronos.org/developers/reference-cards">
+     OpenGL ES Quick Reference Card </a> (available for different API
+     versions). </li>
 </ul>
 
 <h2> <a name="specs31"></a> OpenGL ES 3.1 Specifications and

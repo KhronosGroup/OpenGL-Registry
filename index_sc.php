@@ -32,6 +32,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="http://www.khronos.org/registry/EGL/"> EGL Registry </a>.
 <li> The headers are generated from the <a href="index.php#repository">
      OpenGL-Registry </a> github repository.
+<li> <a href="https://www.khronos.org/developers/reference-cards">
+     OpenGL SC 2.0 Quick Reference Card. </a> </li>
 </ul>
 
 <h2> Older versions of OpenGL SC are also available </h2>

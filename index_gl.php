@@ -72,12 +72,13 @@ include_once("../../assets/static_pages/khr_page_top.php");
          with changes marked </a> </li>
     </ul> </li>
 <li> <a href="http://www.opengl.org/sdk/docs/man4/"> OpenGL 4.5 API and
-     Shading Language Reference Pages </a> (not yet updated)</li>
-<li> <a href="http://www.opengl.org/sdk/docs/reference_card/opengl45-reference-card.pdf">
-     OpenGL 4.5 Quick Reference Card </a> (not yet updated)</li>
+     Shading Language Reference Pages </a> (not yet updated) </li>
 
-<li> <b> OpenGL X Window System Binding (GLX 1.4) Specification </b>
-<li> <a href="specs/gl/glx1.4.pdf"> GLX 1.4 Specification </a>
+<li> <b> OpenGL X Window System Binding (GLX 1.4) Specification </b> </li>
+<li> <a href="specs/gl/glx1.4.pdf"> GLX 1.4 Specification </a> </li>
+
+<li> <a href="https://www.khronos.org/developers/reference-cards"> OpenGL
+     Quick Reference Card </a> (available for different API versions). </li>
 </ul>
 
 
@@ -124,16 +125,12 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <a href="specs/gl/glspec45.compatibility.pdf"> (API Compatibility Profile) </a> </li>
 <li> <a href="specs/gl/GLSLangSpec.4.50.pdf"> OpenGL Shading Language
      4.50 Specification </a> </li>
-<li> <a href="http://www.opengl.org/sdk/docs/reference_card/opengl45-quick-reference-card.pdf">
-     OpenGL 4.5 Quick Reference Card </a> </li>
 
 <li> <b> OpenGL 4.4 </b>
 <li> <a href="specs/gl/glspec44.core.pdf"> (API Core Profile) </a> </li>
 <li> <a href="specs/gl/glspec44.compatibility.pdf"> (API Compatibility Profile) </a> </li>
 <li> <a href="specs/gl/GLSLangSpec.4.40.pdf"> OpenGL Shading Language
      4.40 Specification </a> </li>
-<li> <a href="http://www.opengl.org/sdk/docs/reference_card/opengl44-quick-reference-card.pdf">
-     OpenGL 4.4 Quick Reference Card </a> </li>
 
 <li> <b> OpenGL 4.3 </b>
 <li> <a href="specs/gl/glspec43.core.pdf"> (API Core Profile) </a> </li>
