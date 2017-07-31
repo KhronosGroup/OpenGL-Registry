@@ -41,8 +41,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <hr>
 
-<h6> <a name="specs"></a> OpenGL ES Core API and Shading Language
-     Specifications and Reference Pages </h6>
+<h2> <a name="specs"></a> OpenGL ES Core API and Shading Language
+     Specifications and Reference Pages </h2>
 
 <p> The current version of OpenGL ES is OpenGL ES 3.2. Specifications for
     older versions 3.1, 3.0, 2.0, 1.1, and 1.0 are also available below. For
@@ -52,8 +52,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
     include their last update time in comments near the top of the file.
     </p>
 
-<h6> <a name="specs32"></a> OpenGL ES 3.2 Specifications and
-     Documentation </h6>
+<h2> <a name="specs32"></a> OpenGL ES 3.2 Specifications and
+     Documentation </h2>
 
 <ul>
 <li> OpenGL ES 3.2 Specification (November 3, 2016)
@@ -68,8 +68,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      OpenGL ES 3.2 Online Manual Pages.</a> </li>
 </ul>
 
-<h6> <a name="specs31"></a> OpenGL ES 3.1 Specifications and
-     Documentation </h6>
+<h2> <a name="specs31"></a> OpenGL ES 3.1 Specifications and
+     Documentation </h2>
 
 <ul>
 <li> OpenGL ES 3.1 Specification (November 3, 2016),
@@ -84,8 +84,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      OpenGL ES 3.1 Online Manual Pages.</a> </li>
 </ul>
 
-<h6> <a name="specs3"></a> OpenGL ES 3.0 Specifications and
-     Documentation </h6>
+<h2> <a name="specs3"></a> OpenGL ES 3.0 Specifications and
+     Documentation </h2>
 
 <ul>
 <li> OpenGL ES 3.0.5 Specification (November 3, 2016),
@@ -99,8 +99,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      OpenGL ES 3.0 Online Manual Pages.</a> </li>
 </ul>
 
-<h6> <a name="specs2"></a> OpenGL ES 2.0 Specifications and
-     Documentation </h6>
+<h2> <a name="specs2"></a> OpenGL ES 2.0 Specifications and
+     Documentation </h2>
 
 <ul>
 <li> OpenGL ES 2.0
@@ -122,8 +122,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </ul>
 
 
-<h6> <a name="specs11"></a> OpenGL ES 1.1 Specifications and
-     Documentation </h6>
+<h2> <a name="specs11"></a> OpenGL ES 1.1 Specifications and
+     Documentation </h2>
 
 <ul>
 <li> OpenGL ES 1.1
@@ -137,8 +137,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      OpenGL ES 1.1 Online Manual Pages.</a> </li>
 </ul>
 
-<h6> <a name="specs10"></a> OpenGL ES 1.0 Specification and
-     Documentation </h6>
+<h2> <a name="specs10"></a> OpenGL ES 1.0 Specification and
+     Documentation </h2>
 
 <ul>
 <li> <a href="specs/es/1.0/opengles_spec_1_0.pdf"> OpenGL ES 1.0.02
@@ -152,7 +152,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <hr>
 
-<h6> <a name="headers"></a> API and Extension Header Files </h6>
+<h2> <a name="headers"></a> API and Extension Header Files </h2>
 
 <p> Because extensions vary from platform to platform and driver to driver,
     OpenGL ES segregates headers for each API version into a header for the
@@ -260,8 +260,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <hr>
 
-<h6> <a name="otherextspecs"></a>
-     Extension Specifications by number</h6>
+<h2> <a name="otherextspecs"></a>
+     Extension Specifications by number</h2>
 
 <?php include("extensions/esext.php"); ?>
 
