@@ -19,7 +19,7 @@ Contact
 
 Status
 
-    Draft, being implemented by ANGLE
+    FINAL, implemented by ANGLE
 
 Version
 
@@ -27,7 +27,7 @@ Version
 
 Number
 
-    OpenGL ES Extension 286
+    OpenGL ES Extension #289
 
 Dependencies
 

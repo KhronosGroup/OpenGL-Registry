@@ -2340,7 +2340,7 @@ registry = {
         'url' : 'extensions/EXT/EXT_texture_compression_s3tc.txt',
     },
     'GL_EXT_texture_compression_s3tc_srgb' : {
-        'esnumber' : 286,
+        'esnumber' : 289,
         'flags' : { 'public' },
         'supporters' : { 'ANGLE' },
         'url' : 'extensions/EXT/EXT_texture_compression_s3tc_srgb.txt',
