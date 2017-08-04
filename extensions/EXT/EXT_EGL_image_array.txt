@@ -15,6 +15,7 @@ Contributors
     Sam Holmes
     Jesse Hall
     Tate Hornbeck
+    Daniel Koch
 
 Status
 
@@ -22,8 +23,8 @@ Status
 
 Version
 
-    Last Modified Date: March 28, 2017
-    Revision: 0.4
+    Last Modified Date: July 28, 2017
+    Revision: 0.5
 
 Number
 
@@ -46,8 +47,9 @@ Overview
     EGLImageTargetTexture2DOES entry point from OES_EGL_image. Render buffers
     are not extended to include array support.
 
-    EGLImage 2D arrays are created using eglCreateImageKHR as defined in the
-    EGL_EXT_gl_texture_2D_image_array extension.
+    EGLImage 2D arrays can be created using extended versions of eglCreateImageKHR.
+    For example, EGL_ANDROID_image_native_buffer can import image array native buffers
+    on devices where such native buffers can be created.
 
 New Procedures and Functions
 
@@ -83,3 +85,4 @@ Revision History
       0.2   03/09/2017  Sam       Update contact
       0.3   03/21/2017  Tate      Update errors
       0.4   03/28/2017  Jeff      Minor formatting updates.
+      0.5   07/28/2017  Jeff      Fix reference to external extension.

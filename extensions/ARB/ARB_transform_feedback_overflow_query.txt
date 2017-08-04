@@ -14,6 +14,7 @@ Contributors
 
     Brian Paul, VMware
     Daniel Rakos, AMD
+    Daniel Koch, NVIDIA
 
 Notice
 
@@ -22,14 +23,14 @@ Notice
 
 Status
 
-    Complete. 
+    Complete.
     Approved by the ARB on June 26, 2014.
     Ratified by the Khronos Board of Promoters on August 7, 2014.
 
 Version
 
-    Date: June 17, 2014
-    Revision: 4
+    Date: May 29, 2017
+    Revision: 5
 
 Number
 
@@ -112,7 +113,7 @@ Additions to Chapter 4 of the OpenGL 4.4 (Core Profile) Specification (Event Mod
 
     Modify Section 4.2.1, Query Object Queries
 
-    (add new paragraph after fourh paragraph on p. 43)
+    (add new paragraph after fourth paragraph on p. 43)
 
     For transform feedback overflow queries (TRANSFORM_FEEDBACK_OVERFLOW_ARB
     and TRANSFORM_FEEDBACK_STREAM_OVERFLOW_ARB) if the number of bits is
@@ -258,6 +259,9 @@ Issues
       tracking overflow condition for the first and only vertex stream.
 
 Revision History
+
+    Revision 5, 2017/05/29 (Daniel Koch)
+      - fix typo
 
     Revision 4, 2014/06/17 (Jon Leech)
       - Add missing error condition for BeginQueryIndexed / EndQueryIndexed

@@ -411,4 +411,12 @@
 
     <br> <a href="extensions/ARB/ARB_create_context_no_error.txt">WGL_ARB_create_context_no_error</a>
 </li>
+<li value=192><a href="extensions/KHR/KHR_parallel_shader_compile.txt">GL_KHR_parallel_shader_compile</a>
+</li>
+<li value=193><a href="extensions/ARB/ARB_polygon_offset_clamp.txt">GL_ARB_polygon_offset_clamp</a>
+</li>
+<li value=194><a href="extensions/ARB/ARB_spirv_extensions.txt">GL_ARB_spirv_extensions</a>
+</li>
+<li value=195><a href="extensions/ARB/ARB_texture_filter_anisotropic.txt">GL_ARB_texture_filter_anisotropic</a>
+</li>
 </ol>

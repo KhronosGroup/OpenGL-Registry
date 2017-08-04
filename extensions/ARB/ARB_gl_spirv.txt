@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date: 21-Jul-2016
-    Revision: 31
+    Last Modified Date: 29-May-2017
+    Revision: 34
 
 Number
 
@@ -266,14 +266,16 @@ Overview
 
         Non-fragment stage:
 
-            in/out gl_PerVertex {
+            in/out gl_PerVertex {  // some subset of these members will be used
                 gl_Position
                 gl_PointSize
                 gl_ClipDistance
                 gl_CullDistance
-            }                        (name of block is for debug only)
+            }                      // name of block is for debug only
 
       There is at most one input and one output block per stage in SPIR-V.
+      The subset and order of members will match between stages sharing an
+      interface.
 
     Mapping of precise:
 
@@ -347,6 +349,7 @@ Overview
     Addition of features to GLSL:
       + specialization constants, as per GL_KHR_vulkan_glsl
       + #define GL_SPIRV 100, when compiled for OpenGL and SPIR-V generation
+      + offset can organize members in a different order than declaration order
 
     Non-acceptance of SPIR-V features, relative to Vulkan:
       - VertexIndex and InstanceIndex built-in decorations cannot be used
@@ -367,7 +370,7 @@ Overview
       - subroutines
       - the already deprecated texturing functions (e.g., texture2D())
       - compatibility profile features
-      - DepthRangeParameters
+      - gl_DepthRangeParameters and gl_NumSamples
       - *shared* and *packed* block layouts
 
     Addition of features to The OpenGL Graphics System:
@@ -583,7 +586,7 @@ Modifications to Chapter 7 of the OpenGL 4.5 (Core Profile) Specification
     name length of one (for the null character) and return an empty string
     with a length of zero."
 
-  Add a new subjection "7.4.spv, SPIR-V Shader Interface Matching" after
+  Add a new subsection "7.4.spv, SPIR-V Shader Interface Matching" after
   section 7.4.1 "Shader Interface Matching":
 
     "7.4.spv, SPIR-V Shader Interface Matching
@@ -601,9 +604,9 @@ Modifications to Chapter 7 of the OpenGL 4.5 (Core Profile) Specification
     Shader built-in variables meeting the following requirements define the
     built-in interface block. They must:
       - be explicitly declared (there are no implicit built-ins),
-      - be decorated with a *BuiltIn* variable,
+      - be decorated with the *BuiltIn* decoration,
       - be declared in a block whose top-level members are the built-ins.
-      - They must not have any *Location* or *Component* decorations.
+      - not have any *Location* or *Component* decorations.
     Built-ins only participate in interface matching if they are declared in
     such a block. There must be no more than one built-in interface block
     per shader per interface.
@@ -715,7 +718,7 @@ Modifications to Chapter 7 of the OpenGL 4.5 (Core Profile) Specification
 
     Add to the list of state per shader object:
 
-    "A boolean holding the SPIR-V binary status, initial FALSE."
+    "A boolean holding the SPIR-V binary status, initially FALSE."
 
 Modifications to Chapter 11 of the OpenGL 4.5 (Core Profile) Specification
 (Programmable Vertex Processing)
@@ -981,6 +984,13 @@ Add Appendix A.spv "The OpenGL SPIR-V Execution Environment" to the OpenGL 4.5
         its /Sampled/ operand set to 1.
       - The /Depth/ operand of OpTypeImage is ignored.
 
+    *AtomicCounter* storage class:
+      - Unless otherwise specified, variables declared in the AtomicCounter
+        storage class must be unsigned 32-bit integers.
+      - When using the Atomic Instructions, the 'Memory Semantics' operand
+        must be *AtomicCounterMemory*, without inclusion of memory-ordering
+        bits (implying *Relaxed* semantics).
+
     Decorations:
       - The Flat, NoPerspective, Sample, and Centroid decorations must not
         be used on variables with Storage Class other than *Input* or on
@@ -988,7 +998,8 @@ Add Appendix A.spv "The OpenGL SPIR-V Execution Environment" to the OpenGL 4.5
       - The Patch decoration must not be used on variables in the interface
         of a vertex, geometry, or fragment shader stage's entry point.
       - OpTypeRuntimeArray must only be used for the last member of an
-        OpTypeStruct in the Uniform Storage Class.
+        OpTypeStruct in the Uniform Storage Class and is decorated as
+        BufferBlock.
       - If the *Xfb* Execution Mode is set, any output variable that is at
         least partially captured:
         * must be decorated with an *XfbBuffer*, declaring the capturing buffer
@@ -1057,7 +1068,7 @@ Add Appendix A.spv "The OpenGL SPIR-V Execution Environment" to the OpenGL 4.5
        Instruction                                           Precision
        -----------                                           ---------
        fma()             Inherited from OpFMul followed by OpFAdd.
-       exp(x), exp2(x)   (3+2*|x|)(3+2*|x|) ULP
+       exp(x), exp2(x)   (3+2*|x|) ULP
        log(), log2()     3 ULP outside the range [0.5, 2.0]
                          absolute error < 2^(-21) inside the range [0.5, 2.0]
        pow(x, y)         Inherited from exp2(y * log2(x))
@@ -1094,6 +1105,10 @@ Changes to The OpenGL Shading Language Specification, Version 4.50
 
   Changes to Chapter 3 of the OpenGL Shading Language 4.50 Specification
   (Basics)
+
+    After describing the compatibility profile rules, add:
+
+       "Compatibility-profile features are not available when generating SPIR-V."
 
     Add a new paragraph at the end of section "3.3 Preprocessor":  "When
     shaders are compiled for OpenGL SPIR-V, the following predefined macro is
@@ -1189,6 +1204,19 @@ Changes to The OpenGL Shading Language Specification, Version 4.50
       identifier X in layout(layout-qualifier-name = X) must evaluate to a
       front-end constant containing no specialization constants."
 
+    At the end of the paragraphs describing the *location* rules, add this
+    paragraph:
+
+      "When generating SPIR-V, all *in* and *out* qualified user-declared
+      (non built-in) variables and blocks (or all their members) must have a
+      shader-specified *location*. Otherwise, a compile-time error is
+      generated."
+
+    [Note that an earlier existing rule just above this says "If a block has
+    no block-level *location* layout qualifier, it is required that either all
+    or none of its members have a *location* layout qualifier, or a compile-
+    time error results."]
+
     Add a new subsection at the end of section 4.4:
 
       "4.4.x Specialization-Constant Qualifier
@@ -1258,14 +1286,40 @@ Changes to The OpenGL Shading Language Specification, Version 4.50
       not re-layout the block. In the absence of explicit offsets, the layout
       will be based on the default size of the array."
 
-    Remove all mention of the 'shared' and 'packed' layout qualifiers.
-
     Change section 4.4.5 Uniform and Shader Storage Block Layout Qualifiers
 
-      "The initial state of compilation is as if the following were declared:
+      Add
 
-        layout(std140, column_major) uniform;
-        layout(std430, column_major) buffer;
+        "The 'shared' and 'packed' layout qualifiers are not available when
+        generating SPIR-V."
+
+      Change
+
+        "The initial state of compilation is as if the following were declared:"
+
+      To
+
+        "The initial state of compilation when generating SPIR-V is as if the
+        following were declared:"
+
+          layout(std140, column_major) uniform;
+          layout(std430, column_major) buffer;
+
+        "The initial state of compilation when not generating SPIR-V is as if
+        the following were declared:..."
+
+      Change
+
+        "It is a compile-time error to specify an offset that is smaller than
+        the offset of the previous member in the block or that lies within the
+        previous member of the block."
+
+      To
+
+        "It is a compile-time error to have any offset, explicit or assigned,
+        that lies within another member of the block. When not generating
+        SPIR-V, it is a compile-time error to specify an offset that is smaller
+        than the offset of the previous member in the block."
 
   Changes to Chapter 5 of the OpenGL Shading Language 4.50 Specification
   (Operators and Expressions)
@@ -1300,8 +1354,22 @@ Changes to The OpenGL Shading Language Specification, Version 4.50
            * not ( ! )
            * logical operations ( && , || , ^^ )
            * comparison ( == , != )
+       - The ternary operator ( ? : )
 
-  Changes to the Chapter 9 of the OpenGL Shading Language 4.50 Specification
+  Changes to Chapter 6 of the OpenGL Shading Language 4.50 Specification
+
+    Add at the beginning of section 6.1.2 Subroutines:
+
+      "Subroutine functionality is not available when generating SPIR-V."
+
+  Changes to Chapter 7 of the OpenGL Shading Language 4.50 Specification
+  (Built-In Variables)
+
+    Add to the beginning of section 7.4 Built-In Uniform State:
+
+      "Built-in uniform state is not available when generating SPIR-V."
+
+  Changes to Chapter 9 of the OpenGL Shading Language 4.50 Specification
   (Shading Language Grammar for Core Profile)
 
     Arrays can no longer require the size to be a compile-time folded constant
@@ -1939,6 +2007,14 @@ Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    34    29-May-2017    dkoch          Fix typos. RuntimeArrays are only
+                                        supported on SSBOs.
+    33    26-May-2017    JohnK          Require in/out explicit locations
+    32    25-Apr-2017    JohnK          Bring up-to-date:
+                                          Out-of-order block offsets
+                                          gl_NumSamples not supported
+                                          atomic counter restrictions
+                                          bug fixes
     31    21-Jul-2016    dkoch          Clarify string length on queries
     30    13-Jul-2016    JohnK          SPIR-V Offset can also apply to an
                                         atomic_uint offset.

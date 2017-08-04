@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20170726 */
+/* Generated on date 20170730 */
 
 /* Generated C header for:
  * API: gles2
@@ -2010,11 +2010,27 @@ GL_APICALL void GL_APIENTRY glTexBufferRangeEXT (GLenum target, GLenum internalf
 #define GL_TEXTURE_ASTC_DECODE_PRECISION_EXT 0x8F69
 #endif /* GL_EXT_texture_compression_astc_decode_mode */
 
+#ifndef GL_EXT_texture_compression_bptc
+#define GL_EXT_texture_compression_bptc 1
+#define GL_COMPRESSED_RGBA_BPTC_UNORM_EXT 0x8E8C
+#define GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT 0x8E8D
+#define GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT_EXT 0x8E8E
+#define GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_EXT 0x8E8F
+#endif /* GL_EXT_texture_compression_bptc */
+
 #ifndef GL_EXT_texture_compression_dxt1
 #define GL_EXT_texture_compression_dxt1 1
 #define GL_COMPRESSED_RGB_S3TC_DXT1_EXT   0x83F0
 #define GL_COMPRESSED_RGBA_S3TC_DXT1_EXT  0x83F1
 #endif /* GL_EXT_texture_compression_dxt1 */
+
+#ifndef GL_EXT_texture_compression_rgtc
+#define GL_EXT_texture_compression_rgtc 1
+#define GL_COMPRESSED_RED_RGTC1_EXT       0x8DBB
+#define GL_COMPRESSED_SIGNED_RED_RGTC1_EXT 0x8DBC
+#define GL_COMPRESSED_RED_GREEN_RGTC2_EXT 0x8DBD
+#define GL_COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT 0x8DBE
+#endif /* GL_EXT_texture_compression_rgtc */
 
 #ifndef GL_EXT_texture_compression_s3tc
 #define GL_EXT_texture_compression_s3tc 1
@@ -3092,6 +3108,14 @@ GL_APICALL void GL_APIENTRY glGetProgramResourcefvNV (GLuint program, GLenum pro
 #define GL_NV_path_rendering_shared_edge 1
 #define GL_SHARED_EDGE_NV                 0xC0
 #endif /* GL_NV_path_rendering_shared_edge */
+
+#ifndef GL_NV_pixel_buffer_object
+#define GL_NV_pixel_buffer_object 1
+#define GL_PIXEL_PACK_BUFFER_NV           0x88EB
+#define GL_PIXEL_UNPACK_BUFFER_NV         0x88EC
+#define GL_PIXEL_PACK_BUFFER_BINDING_NV   0x88ED
+#define GL_PIXEL_UNPACK_BUFFER_BINDING_NV 0x88EF
+#endif /* GL_NV_pixel_buffer_object */
 
 #ifndef GL_NV_polygon_mode
 #define GL_NV_polygon_mode 1
