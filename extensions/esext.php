@@ -599,4 +599,6 @@
 </li>
 <li value=288><a href="extensions/KHR/KHR_parallel_shader_compile.txt">GL_KHR_parallel_shader_compile</a>
 </li>
+<li value=289><a href="extensions/EXT/EXT_texture_compression_s3tc_srgb.txt">GL_EXT_texture_compression_s3tc_srgb</a>
+</li>
 </ol>

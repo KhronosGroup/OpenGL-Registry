@@ -2339,6 +2339,12 @@ registry = {
         'supporters' : { 'INTEL', 'NVIDIA' },
         'url' : 'extensions/EXT/EXT_texture_compression_s3tc.txt',
     },
+    'GL_EXT_texture_compression_s3tc_srgb' : {
+        'esnumber' : 289,
+        'flags' : { 'public' },
+        'supporters' : { 'ANGLE' },
+        'url' : 'extensions/EXT/EXT_texture_compression_s3tc_srgb.txt',
+    },
     'GL_EXT_texture_cube_map' : {
         'flags' : { 'incomplete' },
         'url' : 'extensions/EXT/EXT_texture_cube_map.txt',
