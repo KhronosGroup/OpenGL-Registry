@@ -8187,8 +8187,10 @@ typedef unsigned int GLhandleARB;
             <unused start="0x91AB" end="0x91AD" vendor="AMD"/>
         <enum value="0x91AE" name="GL_PIXELS_PER_SAMPLE_PATTERN_X_AMD"/>
         <enum value="0x91AF" name="GL_PIXELS_PER_SAMPLE_PATTERN_Y_AMD"/>
-        <enum value="0x91B0" name="GL_MAX_SHADER_COMPILER_THREADS_ARB"/>
-        <enum value="0x91B1" name="GL_COMPLETION_STATUS_ARB"/>
+        <enum value="0x91B0" name="GL_MAX_SHADER_COMPILER_THREADS_KHR"/>
+        <enum value="0x91B0" name="GL_MAX_SHADER_COMPILER_THREADS_ARB" alias="GL_MAX_SHADER_COMPILER_THREADS_KHR"/>
+        <enum value="0x91B1" name="GL_COMPLETION_STATUS_KHR"/>
+        <enum value="0x91B1" name="GL_COMPLETION_STATUS_ARB" alias="GL_COMPLETION_STATUS_KHR"/>
             <unused start="0x91B2" end="0x91B8" vendor="AMD"/>
         <enum value="0x91B9" name="GL_COMPUTE_SHADER"/>
             <unused start="0x91BA" vendor="AMD"/>
@@ -19341,8 +19343,13 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLfloat</ptype> <name>z</name></param>
         </command>
         <command>
+            <proto>void <name>glMaxShaderCompilerThreadsKHR</name></proto>
+            <param><ptype>GLuint</ptype> <name>count</name></param>
+        </command>
+        <command>
             <proto>void <name>glMaxShaderCompilerThreadsARB</name></proto>
             <param><ptype>GLuint</ptype> <name>count</name></param>
+            <alias name="glMaxShaderCompilerThreadsKHR"/>
         </command>
         <command>
             <proto>void <name>glMemoryBarrier</name></proto>
@@ -44354,6 +44361,13 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_KHR_texture_compression_astc_sliced_3d" supported="gl|glcore|gles2"/>
+        <extension name="GL_KHR_parallel_shader_compile" supported="gl|glcore|gles2">
+            <require>
+                <enum name="GL_MAX_SHADER_COMPILER_THREADS_KHR"/>
+                <enum name="GL_COMPLETION_STATUS_KHR"/>
+                <command name="glMaxShaderCompilerThreadsKHR"/>
+            </require>
+        </extension>
         <extension name="GL_MESAX_texture_stack" supported="gl">
             <require>
                 <enum name="GL_TEXTURE_1D_STACK_MESAX"/>
