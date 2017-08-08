@@ -601,4 +601,6 @@
 </li>
 <li value=289><a href="extensions/EXT/EXT_texture_compression_s3tc_srgb.txt">GL_EXT_texture_compression_s3tc_srgb</a>
 </li>
+<li value=290><a href="extensions/EXT/EXT_clip_control.txt">GL_EXT_clip_control</a>
+</li>
 </ol>

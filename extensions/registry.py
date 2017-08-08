@@ -5170,6 +5170,12 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/EXT/WGL_EXT_swap_control_tear.txt',
     },
+    'GL_EXT_clip_control' : {
+        'esnumber' : 290,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/EXT/EXT_clip_control.txt',
+    },
     'WGL_I3D_digital_video_control' : {
         'number' : 250,
         'flags' : { 'public' },
