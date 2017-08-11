@@ -224,8 +224,8 @@ Overview
 
         General:
 
-            in gl_VertexIndex
-            in gl_InstanceIndex
+            in gl_VertexID
+            in gl_InstanceID
             in gl_InvocationID
             in gl_PatchVerticesIn      (PatchVertices)
             in gl_PrimitiveIDIn        (PrimitiveID)
