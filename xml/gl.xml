@@ -6804,11 +6804,12 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C93" name="GL_ATC_RGBA_EXPLICIT_ALPHA_AMD"/>
             <unused start="0x8C94" end="0x8C9F" vendor="QCOM"/>
     </enums>
-
     <enums namespace="GL" start="0x8CA0" end="0x8CAF" vendor="ARB">
         <enum value="0x8CA0" name="GL_POINT_SPRITE_COORD_ORIGIN"/>
         <enum value="0x8CA1" name="GL_LOWER_LEFT"/>
+        <enum value="0x8CA1" name="GL_LOWER_LEFT_EXT" alias="GL_LOWER_LEFT"/>
         <enum value="0x8CA2" name="GL_UPPER_LEFT"/>
+        <enum value="0x8CA2" name="GL_UPPER_LEFT_EXT" alias="GL_UPPER_LEFT"/>
         <enum value="0x8CA3" name="GL_STENCIL_BACK_REF"/>
         <enum value="0x8CA4" name="GL_STENCIL_BACK_VALUE_MASK"/>
         <enum value="0x8CA5" name="GL_STENCIL_BACK_WRITEMASK"/>
@@ -8525,9 +8526,13 @@ typedef unsigned int GLhandleARB;
         <enum value="0x935A" name="GL_VIEWPORT_SWIZZLE_Z_NV"/>
         <enum value="0x935B" name="GL_VIEWPORT_SWIZZLE_W_NV"/>
         <enum value="0x935C" name="GL_CLIP_ORIGIN"/>
+        <enum value="0x935C" name="GL_CLIP_ORIGIN_EXT" alias="GL_CLIP_ORIGIN"/>
         <enum value="0x935D" name="GL_CLIP_DEPTH_MODE"/>
+        <enum value="0x935D" name="GL_CLIP_DEPTH_MODE_EXT" alias="GL_CLIP_DEPTH_MODE"/>
         <enum value="0x935E" name="GL_NEGATIVE_ONE_TO_ONE"/>
+        <enum value="0x935E" name="GL_NEGATIVE_ONE_TO_ONE_EXT" alias="GL_NEGATIVE_ONE_TO_ONE"/>
         <enum value="0x935F" name="GL_ZERO_TO_ONE"/>
+        <enum value="0x935F" name="GL_ZERO_TO_ONE_EXT" alias="GL_ZERO_TO_ONE"/>
             <unused start="0x9360" end="0x9364" vendor="NV"/>
         <enum value="0x9365" name="GL_CLEAR_TEXTURE"/>
         <enum value="0x9366" name="GL_TEXTURE_REDUCTION_MODE_ARB"/>
@@ -10267,6 +10272,12 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glClipControl</name></proto>
             <param><ptype>GLenum</ptype> <name>origin</name></param>
             <param><ptype>GLenum</ptype> <name>depth</name></param>
+        </command>
+        <command>
+            <proto>void <name>glClipControlEXT</name></proto>
+            <param><ptype>GLenum</ptype> <name>origin</name></param>
+            <param><ptype>GLenum</ptype> <name>depth</name></param>
+            <alias name="glClipControlEXT"/>
         </command>
         <command>
             <proto>void <name>glClipPlane</name></proto>
@@ -41306,6 +41317,17 @@ typedef unsigned int GLhandleARB;
             <require>
                 <command name="glClearTexImageEXT"/>
                 <command name="glClearTexSubImageEXT"/>
+            </require>
+        </extension>
+        <extension name="GL_EXT_clip_control" supported="gles2">
+            <require comment="Port of GL_ARB_clip_control">
+                <command name="glClipControlEXT"/>
+                <enum name="GL_LOWER_LEFT_EXT"/>
+                <enum name="GL_UPPER_LEFT_EXT"/>
+                <enum name="GL_NEGATIVE_ONE_TO_ONE_EXT"/>
+                <enum name="GL_ZERO_TO_ONE_EXT"/>
+                <enum name="GL_CLIP_ORIGIN_EXT"/>
+                <enum name="GL_CLIP_DEPTH_MODE_EXT"/>
             </require>
         </extension>
         <extension name="GL_EXT_clip_cull_distance" supported="gles2">
