@@ -8694,7 +8694,15 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x9530" end="0x962F" vendor="NV" comment="Khronos bug 12977">
-            <unused start="0x9530" end="0x9547" vendor="NV"/>
+            <unused start="0x9530" end="0x9539" vendor="NV"/>
+        <enum value="0x9540" name="GL_QUERY_RESOURCE_TYPE_VIDMEM_ALLOC_NV"/>
+            <unused start="0x9541" vendor="NV"/>
+        <enum value="0x9542" name="GL_QUERY_RESOURCE_MEMTYPE_VIDMEM_NV"/>
+            <unused start="0x9543" vendor="NV"/>
+        <enum value="0x9544" name="GL_QUERY_RESOURCE_SYS_RESERVED_NV"/>
+        <enum value="0x9545" name="GL_QUERY_RESOURCE_TEXTURE_NV"/>
+        <enum value="0x9546" name="GL_QUERY_RESOURCE_RENDERBUFFER_NV"/>
+        <enum value="0x9547" name="GL_QUERY_RESOURCE_BUFFEROBJECT_NV"/>
         <enum value="0x9548" name="GL_PER_GPU_STORAGE_NV"/>
         <enum value="0x9549" name="GL_MULTICAST_PROGRAMMABLE_SAMPLE_LOCATION_NV"/>
             <unused start="0x954A" end="0x954C" vendor="NV"/>
@@ -12376,6 +12384,11 @@ typedef unsigned int GLhandleARB;
             <param len="n">const <ptype>GLuint</ptype> *<name>ids</name></param>
         </command>
         <command>
+            <proto>void <name>glDeleteQueryResourceTagNV</name></proto>
+            <param><ptype>GLsizei</ptype> <name>n</name></param>
+            <param len="n">const <ptype>GLint</ptype> *<name>tagIds</name></param>
+        </command>
+        <command>
             <proto>void <name>glDeleteRenderbuffers</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
             <param len="n">const <ptype>GLuint</ptype> *<name>renderbuffers</name></param>
@@ -14382,6 +14395,11 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGenQueriesEXT</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
             <param len="n"><ptype>GLuint</ptype> *<name>ids</name></param>
+        </command>
+        <command>
+            <proto>void <name>glGenQueryResourceTagNV</name></proto>
+            <param><ptype>GLsizei</ptype> <name>n</name></param>
+            <param len="n"><ptype>GLint</ptype> *<name>tagIds</name></param>
         </command>
         <command>
             <proto>void <name>glGenRenderbuffers</name></proto>
@@ -23455,6 +23473,18 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="OcclusionQueryEventMaskAMD"><ptype>GLuint</ptype> <name>param</name></param>
+        </command>
+        <command>
+            <proto>GLint <name>glQueryResourceNV</name></proto>
+            <param><ptype>GLenum</ptype> <name>queryType</name></param>
+            <param><ptype>GLint</ptype> <name>tagId</name></param>
+            <param><ptype>GLuint</ptype> <name>bufSize</name></param>
+            <param><ptype>GLint</ptype> *<name>buffer</name></param>
+        </command>
+        <command>
+            <proto>void <name>glQueryResourceTagNV</name></proto>
+            <param><ptype>GLint</ptype> <name>tagId</name></param>
+            <param>const <ptype>GLchar</ptype> *<name>tagString</name></param>
         </command>
         <command>
             <proto>void <name>glRasterPos2d</name></proto>
@@ -45602,6 +45632,24 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_PRIMITIVE_RESTART_INDEX_NV"/>
                 <command name="glPrimitiveRestartNV"/>
                 <command name="glPrimitiveRestartIndexNV"/>
+            </require>
+        </extension>
+        <extension name="GL_NV_query_resource" supported="gl">
+            <require>
+                <enum name="GL_QUERY_RESOURCE_TYPE_VIDMEM_ALLOC_NV"/>
+                <enum name="GL_QUERY_RESOURCE_MEMTYPE_VIDMEM_NV"/>
+                <enum name="GL_QUERY_RESOURCE_SYS_RESERVED_NV"/>
+                <enum name="GL_QUERY_RESOURCE_TEXTURE_NV"/>
+                <enum name="GL_QUERY_RESOURCE_RENDERBUFFER_NV"/>
+                <enum name="GL_QUERY_RESOURCE_BUFFEROBJECT_NV"/>
+                <command name="glQueryResourceNV"/>
+            </require>
+        </extension>
+        <extension name="GL_NV_query_resource_tag" supported="gl">
+            <require>
+                <command name="glGenQueryResourceTagNV"/>
+                <command name="glDeleteQueryResourceTagNV"/>
+                <command name="glQueryResourceTagNV"/>
             </require>
         </extension>
         <extension name="GL_NV_read_buffer" supported="gles2">

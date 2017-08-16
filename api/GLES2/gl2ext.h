@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20170808 */
+/* Generated on date 20170816 */
 
 /* Generated C header for:
  * API: gles2
@@ -1135,6 +1135,20 @@ GL_APICALL void GL_APIENTRY glClearTexImageEXT (GLuint texture, GLint level, GLe
 GL_APICALL void GL_APIENTRY glClearTexSubImageEXT (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *data);
 #endif
 #endif /* GL_EXT_clear_texture */
+
+#ifndef GL_EXT_clip_control
+#define GL_EXT_clip_control 1
+#define GL_LOWER_LEFT_EXT                 0x8CA1
+#define GL_UPPER_LEFT_EXT                 0x8CA2
+#define GL_NEGATIVE_ONE_TO_ONE_EXT        0x935E
+#define GL_ZERO_TO_ONE_EXT                0x935F
+#define GL_CLIP_ORIGIN_EXT                0x935C
+#define GL_CLIP_DEPTH_MODE_EXT            0x935D
+typedef void (GL_APIENTRYP PFNGLCLIPCONTROLEXTPROC) (GLenum origin, GLenum depth);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glClipControlEXT (GLenum origin, GLenum depth);
+#endif
+#endif /* GL_EXT_clip_control */
 
 #ifndef GL_EXT_clip_cull_distance
 #define GL_EXT_clip_cull_distance 1
