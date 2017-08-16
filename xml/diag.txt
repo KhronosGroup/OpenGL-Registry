@@ -1,0 +1,2862 @@
+DIAG: *******************************************
+DIAG:   Registry.apiGen file: ../api/GL/wglext.h api: wgl profile: None
+DIAG: *******************************************
+DIAG: *** NOT tagging feature api = wgl name = WGL_VERSION_1_0 number = 1.0 for emission (does not match emitversions pattern)
+DIAG: *** Including extension WGL_NV_multisample_coverage (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_I3D_image_buffer (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_I3D_swap_frame_usage (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_DX_interop2 (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_create_context_no_error (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_float_buffer (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_delay_before_swap (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_video_capture (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_pixel_format_float (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_create_context_profile (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_swap_group (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_gpu_affinity (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_pixel_format (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_extensions_string (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_render_texture_rectangle (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_create_context_es_profile (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_robustness_share_group_isolation (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_create_context_robustness (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_colorspace (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_depth_float (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_swap_control_tear (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_context_flush_control (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_pixel_format (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_multisample (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_I3D_genlock (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_vertex_array_range (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_3DL_stereo_control (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_pbuffer (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_display_color_table (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_video_output (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_robustness_application_isolation (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_3DFX_multisample (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_I3D_gamma (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_framebuffer_sRGB (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_copy_image (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_framebuffer_sRGB (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_present_video (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_create_context_es2_profile (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_render_texture (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_make_current_read (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_multisample (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_create_context (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_extensions_string (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_render_depth_texture (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ATI_pixel_format_float (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_swap_control (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_I3D_digital_video_control (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_pbuffer (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_NV_DX_interop (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_AMD_gpu_association (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_pixel_format_packed_float (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_EXT_make_current_read (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_I3D_swap_frame_lock (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_ARB_buffer_region (defaultExtensions matches the 'supported' attribute)
+DIAG: *** Including extension WGL_OML_sync_control (defaultExtensions matches the 'supported' attribute)
+DIAG: *** PASS 1: TAG FEATURES ********************************************
+DIAG: *** PASS 1: Tagging required and removed features for WGL_VERSION_1_0
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_FONT_LINES -> required = True
+DIAG: *** tagging enum: WGL_FONT_POLYGONS -> required = True
+DIAG: *** tagging enum: WGL_SWAP_MAIN_PLANE -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY1 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY2 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY3 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY4 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY5 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY6 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY7 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY8 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY9 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY10 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY11 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY12 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY13 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY14 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_OVERLAY15 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY1 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY2 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY3 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY4 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY5 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY6 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY7 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY8 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY9 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY10 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY11 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY12 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY13 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY14 -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDERLAY15 -> required = True
+DIAG: *** tagging command: ChoosePixelFormat -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type PIXELFORMATDESCRIPTOR
+DIAG: *** tagging type: PIXELFORMATDESCRIPTOR -> required = True
+DIAG: *** tagging command: DescribePixelFormat -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type PIXELFORMATDESCRIPTOR
+DIAG: *** tagging type: PIXELFORMATDESCRIPTOR -> required = True
+DIAG: *** tagging command: GetEnhMetaFilePixelFormat -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HENHMETAFILE
+DIAG: *** tagging type: HENHMETAFILE -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type PIXELFORMATDESCRIPTOR
+DIAG: *** tagging type: PIXELFORMATDESCRIPTOR -> required = True
+DIAG: *** tagging command: GetPixelFormat -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: SetPixelFormat -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type PIXELFORMATDESCRIPTOR
+DIAG: *** tagging type: PIXELFORMATDESCRIPTOR -> required = True
+DIAG: *** tagging command: SwapBuffers -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglCopyContext -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglCreateContext -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglCreateLayerContext -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglDeleteContext -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** tagging command: wglDescribeLayerPlane -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type LAYERPLANEDESCRIPTOR
+DIAG: *** tagging type: LAYERPLANEDESCRIPTOR -> required = True
+DIAG: *** tagging command: wglGetCurrentContext -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** tagging command: wglGetCurrentDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglGetLayerPaletteEntries -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type COLORREF
+DIAG: *** tagging type: COLORREF -> required = True
+DIAG: *** tagging command: wglGetProcAddress -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type PROC
+DIAG: *** tagging type: PROC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type LPCSTR
+DIAG: *** tagging type: LPCSTR -> required = True
+DIAG: *** tagging command: wglMakeCurrent -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** tagging command: wglRealizeLayerPalette -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** tagging command: wglSetLayerPaletteEntries -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type COLORREF
+DIAG: *** tagging type: COLORREF -> required = True
+DIAG: *** tagging command: wglShareLists -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** tagging command: wglSwapLayerBuffers -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglUseFontBitmaps -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** tagging command: wglUseFontBitmapsA -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** tagging command: wglUseFontBitmapsW -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** tagging command: wglUseFontOutlines -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type FLOAT
+DIAG: *** tagging type: FLOAT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type FLOAT
+DIAG: *** tagging type: FLOAT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type LPGLYPHMETRICSFLOAT
+DIAG: *** tagging type: LPGLYPHMETRICSFLOAT -> required = True
+DIAG: *** tagging command: wglUseFontOutlinesA -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type FLOAT
+DIAG: *** tagging type: FLOAT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type FLOAT
+DIAG: *** tagging type: FLOAT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type LPGLYPHMETRICSFLOAT
+DIAG: *** tagging type: LPGLYPHMETRICSFLOAT -> required = True
+DIAG: *** tagging command: wglUseFontOutlinesW -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type FLOAT
+DIAG: *** tagging type: FLOAT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type FLOAT
+DIAG: *** tagging type: FLOAT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type LPGLYPHMETRICSFLOAT
+DIAG: *** tagging type: LPGLYPHMETRICSFLOAT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_buffer_region
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_FRONT_COLOR_BUFFER_BIT_ARB -> required = True
+DIAG: *** tagging enum: WGL_BACK_COLOR_BUFFER_BIT_ARB -> required = True
+DIAG: *** tagging enum: WGL_DEPTH_BUFFER_BIT_ARB -> required = True
+DIAG: *** tagging enum: WGL_STENCIL_BUFFER_BIT_ARB -> required = True
+DIAG: *** tagging command: wglCreateBufferRegionARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglDeleteBufferRegionARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type VOID
+DIAG: *** tagging type: VOID -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** tagging command: wglSaveBufferRegionARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** tagging command: wglRestoreBufferRegionARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_context_flush_control
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_CONTEXT_RELEASE_BEHAVIOR_ARB -> required = True
+DIAG: *** tagging enum: WGL_CONTEXT_RELEASE_BEHAVIOR_NONE_ARB -> required = True
+DIAG: *** tagging enum: WGL_CONTEXT_RELEASE_BEHAVIOR_FLUSH_ARB -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_create_context
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_CONTEXT_DEBUG_BIT_ARB -> required = True
+DIAG: *** tagging enum: WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB -> required = True
+DIAG: *** tagging enum: WGL_CONTEXT_MAJOR_VERSION_ARB -> required = True
+DIAG: *** tagging enum: WGL_CONTEXT_MINOR_VERSION_ARB -> required = True
+DIAG: *** tagging enum: WGL_CONTEXT_LAYER_PLANE_ARB -> required = True
+DIAG: *** tagging enum: WGL_CONTEXT_FLAGS_ARB -> required = True
+DIAG: *** tagging enum: ERROR_INVALID_VERSION_ARB -> required = True
+DIAG: *** tagging command: wglCreateContextAttribsARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_create_context_no_error
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_CONTEXT_OPENGL_NO_ERROR_ARB -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_create_context_profile
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_CONTEXT_PROFILE_MASK_ARB -> required = True
+DIAG: *** tagging enum: WGL_CONTEXT_CORE_PROFILE_BIT_ARB -> required = True
+DIAG: *** tagging enum: WGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB -> required = True
+DIAG: *** tagging enum: ERROR_INVALID_PROFILE_ARB -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_create_context_robustness
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_CONTEXT_ROBUST_ACCESS_BIT_ARB -> required = True
+DIAG: *** tagging enum: WGL_LOSE_CONTEXT_ON_RESET_ARB -> required = True
+DIAG: *** tagging enum: WGL_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB -> required = True
+DIAG: *** tagging enum: WGL_NO_RESET_NOTIFICATION_ARB -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_extensions_string
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging command: wglGetExtensionsStringARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_framebuffer_sRGB
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_FRAMEBUFFER_SRGB_CAPABLE_ARB -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_make_current_read
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: ERROR_INVALID_PIXEL_TYPE_ARB -> required = True
+DIAG: *** tagging enum: ERROR_INCOMPATIBLE_DEVICE_CONTEXTS_ARB -> required = True
+DIAG: *** tagging command: wglMakeContextCurrentARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** tagging command: wglGetCurrentReadDCARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_multisample
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_SAMPLE_BUFFERS_ARB -> required = True
+DIAG: *** tagging enum: WGL_SAMPLES_ARB -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_pbuffer
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_DRAW_TO_PBUFFER_ARB -> required = True
+DIAG: *** tagging enum: WGL_MAX_PBUFFER_PIXELS_ARB -> required = True
+DIAG: *** tagging enum: WGL_MAX_PBUFFER_WIDTH_ARB -> required = True
+DIAG: *** tagging enum: WGL_MAX_PBUFFER_HEIGHT_ARB -> required = True
+DIAG: *** tagging enum: WGL_PBUFFER_LARGEST_ARB -> required = True
+DIAG: *** tagging enum: WGL_PBUFFER_WIDTH_ARB -> required = True
+DIAG: *** tagging enum: WGL_PBUFFER_HEIGHT_ARB -> required = True
+DIAG: *** tagging enum: WGL_PBUFFER_LOST_ARB -> required = True
+DIAG: *** tagging command: wglCreatePbufferARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFERARB
+DIAG: *** tagging type: HPBUFFERARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglGetPbufferDCARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFERARB
+DIAG: *** tagging type: HPBUFFERARB -> required = True
+DIAG: *** tagging command: wglReleasePbufferDCARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFERARB
+DIAG: *** tagging type: HPBUFFERARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglDestroyPbufferARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFERARB
+DIAG: *** tagging type: HPBUFFERARB -> required = True
+DIAG: *** tagging command: wglQueryPbufferARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFERARB
+DIAG: *** tagging type: HPBUFFERARB -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_pixel_format
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_NUMBER_PIXEL_FORMATS_ARB -> required = True
+DIAG: *** tagging enum: WGL_DRAW_TO_WINDOW_ARB -> required = True
+DIAG: *** tagging enum: WGL_DRAW_TO_BITMAP_ARB -> required = True
+DIAG: *** tagging enum: WGL_ACCELERATION_ARB -> required = True
+DIAG: *** tagging enum: WGL_NEED_PALETTE_ARB -> required = True
+DIAG: *** tagging enum: WGL_NEED_SYSTEM_PALETTE_ARB -> required = True
+DIAG: *** tagging enum: WGL_SWAP_LAYER_BUFFERS_ARB -> required = True
+DIAG: *** tagging enum: WGL_SWAP_METHOD_ARB -> required = True
+DIAG: *** tagging enum: WGL_NUMBER_OVERLAYS_ARB -> required = True
+DIAG: *** tagging enum: WGL_NUMBER_UNDERLAYS_ARB -> required = True
+DIAG: *** tagging enum: WGL_TRANSPARENT_ARB -> required = True
+DIAG: *** tagging enum: WGL_TRANSPARENT_RED_VALUE_ARB -> required = True
+DIAG: *** tagging enum: WGL_TRANSPARENT_GREEN_VALUE_ARB -> required = True
+DIAG: *** tagging enum: WGL_TRANSPARENT_BLUE_VALUE_ARB -> required = True
+DIAG: *** tagging enum: WGL_TRANSPARENT_ALPHA_VALUE_ARB -> required = True
+DIAG: *** tagging enum: WGL_TRANSPARENT_INDEX_VALUE_ARB -> required = True
+DIAG: *** tagging enum: WGL_SHARE_DEPTH_ARB -> required = True
+DIAG: *** tagging enum: WGL_SHARE_STENCIL_ARB -> required = True
+DIAG: *** tagging enum: WGL_SHARE_ACCUM_ARB -> required = True
+DIAG: *** tagging enum: WGL_SUPPORT_GDI_ARB -> required = True
+DIAG: *** tagging enum: WGL_SUPPORT_OPENGL_ARB -> required = True
+DIAG: *** tagging enum: WGL_DOUBLE_BUFFER_ARB -> required = True
+DIAG: *** tagging enum: WGL_STEREO_ARB -> required = True
+DIAG: *** tagging enum: WGL_PIXEL_TYPE_ARB -> required = True
+DIAG: *** tagging enum: WGL_COLOR_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_RED_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_RED_SHIFT_ARB -> required = True
+DIAG: *** tagging enum: WGL_GREEN_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_GREEN_SHIFT_ARB -> required = True
+DIAG: *** tagging enum: WGL_BLUE_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_BLUE_SHIFT_ARB -> required = True
+DIAG: *** tagging enum: WGL_ALPHA_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_ALPHA_SHIFT_ARB -> required = True
+DIAG: *** tagging enum: WGL_ACCUM_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_ACCUM_RED_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_ACCUM_GREEN_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_ACCUM_BLUE_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_ACCUM_ALPHA_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_DEPTH_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_STENCIL_BITS_ARB -> required = True
+DIAG: *** tagging enum: WGL_AUX_BUFFERS_ARB -> required = True
+DIAG: *** tagging enum: WGL_NO_ACCELERATION_ARB -> required = True
+DIAG: *** tagging enum: WGL_GENERIC_ACCELERATION_ARB -> required = True
+DIAG: *** tagging enum: WGL_FULL_ACCELERATION_ARB -> required = True
+DIAG: *** tagging enum: WGL_SWAP_EXCHANGE_ARB -> required = True
+DIAG: *** tagging enum: WGL_SWAP_COPY_ARB -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDEFINED_ARB -> required = True
+DIAG: *** tagging enum: WGL_TYPE_RGBA_ARB -> required = True
+DIAG: *** tagging enum: WGL_TYPE_COLORINDEX_ARB -> required = True
+DIAG: *** tagging command: wglGetPixelFormatAttribivARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglGetPixelFormatAttribfvARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type FLOAT
+DIAG: *** tagging type: FLOAT -> required = True
+DIAG: *** tagging command: wglChoosePixelFormatARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type FLOAT
+DIAG: *** tagging type: FLOAT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_pixel_format_float
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_TYPE_RGBA_FLOAT_ARB -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_render_texture
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_BIND_TO_TEXTURE_RGB_ARB -> required = True
+DIAG: *** tagging enum: WGL_BIND_TO_TEXTURE_RGBA_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_FORMAT_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_TARGET_ARB -> required = True
+DIAG: *** tagging enum: WGL_MIPMAP_TEXTURE_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_RGB_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_RGBA_ARB -> required = True
+DIAG: *** tagging enum: WGL_NO_TEXTURE_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_CUBE_MAP_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_1D_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_2D_ARB -> required = True
+DIAG: *** tagging enum: WGL_MIPMAP_LEVEL_ARB -> required = True
+DIAG: *** tagging enum: WGL_CUBE_MAP_FACE_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB -> required = True
+DIAG: *** tagging enum: WGL_FRONT_LEFT_ARB -> required = True
+DIAG: *** tagging enum: WGL_FRONT_RIGHT_ARB -> required = True
+DIAG: *** tagging enum: WGL_BACK_LEFT_ARB -> required = True
+DIAG: *** tagging enum: WGL_BACK_RIGHT_ARB -> required = True
+DIAG: *** tagging enum: WGL_AUX0_ARB -> required = True
+DIAG: *** tagging enum: WGL_AUX1_ARB -> required = True
+DIAG: *** tagging enum: WGL_AUX2_ARB -> required = True
+DIAG: *** tagging enum: WGL_AUX3_ARB -> required = True
+DIAG: *** tagging enum: WGL_AUX4_ARB -> required = True
+DIAG: *** tagging enum: WGL_AUX5_ARB -> required = True
+DIAG: *** tagging enum: WGL_AUX6_ARB -> required = True
+DIAG: *** tagging enum: WGL_AUX7_ARB -> required = True
+DIAG: *** tagging enum: WGL_AUX8_ARB -> required = True
+DIAG: *** tagging enum: WGL_AUX9_ARB -> required = True
+DIAG: *** tagging command: wglBindTexImageARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFERARB
+DIAG: *** tagging type: HPBUFFERARB -> required = True
+DIAG: *** tagging command: wglReleaseTexImageARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFERARB
+DIAG: *** tagging type: HPBUFFERARB -> required = True
+DIAG: *** tagging command: wglSetPbufferAttribARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFERARB
+DIAG: *** tagging type: HPBUFFERARB -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_robustness_application_isolation
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_CONTEXT_RESET_ISOLATION_BIT_ARB -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ARB_robustness_share_group_isolation
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_CONTEXT_RESET_ISOLATION_BIT_ARB -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_3DFX_multisample
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_SAMPLE_BUFFERS_3DFX -> required = True
+DIAG: *** tagging enum: WGL_SAMPLES_3DFX -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_3DL_stereo_control
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_STEREO_EMITTER_ENABLE_3DL -> required = True
+DIAG: *** tagging enum: WGL_STEREO_EMITTER_DISABLE_3DL -> required = True
+DIAG: *** tagging enum: WGL_STEREO_POLARITY_NORMAL_3DL -> required = True
+DIAG: *** tagging enum: WGL_STEREO_POLARITY_INVERT_3DL -> required = True
+DIAG: *** tagging command: wglSetStereoEmitterState3DL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_AMD_gpu_association
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_GPU_VENDOR_AMD -> required = True
+DIAG: *** tagging enum: WGL_GPU_RENDERER_STRING_AMD -> required = True
+DIAG: *** tagging enum: WGL_GPU_OPENGL_VERSION_STRING_AMD -> required = True
+DIAG: *** tagging enum: WGL_GPU_FASTEST_TARGET_GPUS_AMD -> required = True
+DIAG: *** tagging enum: WGL_GPU_RAM_AMD -> required = True
+DIAG: *** tagging enum: WGL_GPU_CLOCK_AMD -> required = True
+DIAG: *** tagging enum: WGL_GPU_NUM_PIPES_AMD -> required = True
+DIAG: *** tagging enum: WGL_GPU_NUM_SIMD_AMD -> required = True
+DIAG: *** tagging enum: WGL_GPU_NUM_RB_AMD -> required = True
+DIAG: *** tagging enum: WGL_GPU_NUM_SPI_AMD -> required = True
+DIAG: *** tagging command: wglGetGPUIDsAMD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglGetGPUInfoAMD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT
+DIAG: *** tagging type: INT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLenum
+DIAG: *** tagging type: GLenum -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglGetContextGPUIDAMD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** tagging command: wglCreateAssociatedContextAMD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglCreateAssociatedContextAttribsAMD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** tagging command: wglDeleteAssociatedContextAMD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** tagging command: wglMakeAssociatedContextCurrentAMD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** tagging command: wglGetCurrentAssociatedContextAMD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** tagging command: wglBlitContextFramebufferAMD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type VOID
+DIAG: *** tagging type: VOID -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLbitfield
+DIAG: *** tagging type: GLbitfield -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLenum
+DIAG: *** tagging type: GLenum -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_ATI_pixel_format_float
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_TYPE_RGBA_FLOAT_ATI -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_colorspace
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_COLORSPACE_EXT -> required = True
+DIAG: *** tagging enum: WGL_COLORSPACE_SRGB_EXT -> required = True
+DIAG: *** tagging enum: WGL_COLORSPACE_LINEAR_EXT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_create_context_es2_profile
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_CONTEXT_ES2_PROFILE_BIT_EXT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_create_context_es_profile
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_CONTEXT_ES_PROFILE_BIT_EXT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_depth_float
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_DEPTH_FLOAT_EXT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_display_color_table
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging command: wglCreateDisplayColorTableEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLboolean
+DIAG: *** tagging type: GLboolean -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLushort
+DIAG: *** tagging type: GLushort -> required = True
+DIAG: *** tagging command: wglLoadDisplayColorTableEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLboolean
+DIAG: *** tagging type: GLboolean -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLushort
+DIAG: *** tagging type: GLushort -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** tagging command: wglBindDisplayColorTableEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLboolean
+DIAG: *** tagging type: GLboolean -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLushort
+DIAG: *** tagging type: GLushort -> required = True
+DIAG: *** tagging command: wglDestroyDisplayColorTableEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type VOID
+DIAG: *** tagging type: VOID -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLushort
+DIAG: *** tagging type: GLushort -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_extensions_string
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging command: wglGetExtensionsStringEXT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_framebuffer_sRGB
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_FRAMEBUFFER_SRGB_CAPABLE_EXT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_make_current_read
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: ERROR_INVALID_PIXEL_TYPE_EXT -> required = True
+DIAG: *** tagging command: wglMakeContextCurrentEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** tagging command: wglGetCurrentReadDCEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_multisample
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_SAMPLE_BUFFERS_EXT -> required = True
+DIAG: *** tagging enum: WGL_SAMPLES_EXT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_pbuffer
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_DRAW_TO_PBUFFER_EXT -> required = True
+DIAG: *** tagging enum: WGL_MAX_PBUFFER_PIXELS_EXT -> required = True
+DIAG: *** tagging enum: WGL_MAX_PBUFFER_WIDTH_EXT -> required = True
+DIAG: *** tagging enum: WGL_MAX_PBUFFER_HEIGHT_EXT -> required = True
+DIAG: *** tagging enum: WGL_OPTIMAL_PBUFFER_WIDTH_EXT -> required = True
+DIAG: *** tagging enum: WGL_OPTIMAL_PBUFFER_HEIGHT_EXT -> required = True
+DIAG: *** tagging enum: WGL_PBUFFER_LARGEST_EXT -> required = True
+DIAG: *** tagging enum: WGL_PBUFFER_WIDTH_EXT -> required = True
+DIAG: *** tagging enum: WGL_PBUFFER_HEIGHT_EXT -> required = True
+DIAG: *** tagging command: wglCreatePbufferEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFEREXT
+DIAG: *** tagging type: HPBUFFEREXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglGetPbufferDCEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFEREXT
+DIAG: *** tagging type: HPBUFFEREXT -> required = True
+DIAG: *** tagging command: wglReleasePbufferDCEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFEREXT
+DIAG: *** tagging type: HPBUFFEREXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglDestroyPbufferEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFEREXT
+DIAG: *** tagging type: HPBUFFEREXT -> required = True
+DIAG: *** tagging command: wglQueryPbufferEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFEREXT
+DIAG: *** tagging type: HPBUFFEREXT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_pixel_format
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_NUMBER_PIXEL_FORMATS_EXT -> required = True
+DIAG: *** tagging enum: WGL_DRAW_TO_WINDOW_EXT -> required = True
+DIAG: *** tagging enum: WGL_DRAW_TO_BITMAP_EXT -> required = True
+DIAG: *** tagging enum: WGL_ACCELERATION_EXT -> required = True
+DIAG: *** tagging enum: WGL_NEED_PALETTE_EXT -> required = True
+DIAG: *** tagging enum: WGL_NEED_SYSTEM_PALETTE_EXT -> required = True
+DIAG: *** tagging enum: WGL_SWAP_LAYER_BUFFERS_EXT -> required = True
+DIAG: *** tagging enum: WGL_SWAP_METHOD_EXT -> required = True
+DIAG: *** tagging enum: WGL_NUMBER_OVERLAYS_EXT -> required = True
+DIAG: *** tagging enum: WGL_NUMBER_UNDERLAYS_EXT -> required = True
+DIAG: *** tagging enum: WGL_TRANSPARENT_EXT -> required = True
+DIAG: *** tagging enum: WGL_TRANSPARENT_VALUE_EXT -> required = True
+DIAG: *** tagging enum: WGL_SHARE_DEPTH_EXT -> required = True
+DIAG: *** tagging enum: WGL_SHARE_STENCIL_EXT -> required = True
+DIAG: *** tagging enum: WGL_SHARE_ACCUM_EXT -> required = True
+DIAG: *** tagging enum: WGL_SUPPORT_GDI_EXT -> required = True
+DIAG: *** tagging enum: WGL_SUPPORT_OPENGL_EXT -> required = True
+DIAG: *** tagging enum: WGL_DOUBLE_BUFFER_EXT -> required = True
+DIAG: *** tagging enum: WGL_STEREO_EXT -> required = True
+DIAG: *** tagging enum: WGL_PIXEL_TYPE_EXT -> required = True
+DIAG: *** tagging enum: WGL_COLOR_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_RED_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_RED_SHIFT_EXT -> required = True
+DIAG: *** tagging enum: WGL_GREEN_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_GREEN_SHIFT_EXT -> required = True
+DIAG: *** tagging enum: WGL_BLUE_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_BLUE_SHIFT_EXT -> required = True
+DIAG: *** tagging enum: WGL_ALPHA_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_ALPHA_SHIFT_EXT -> required = True
+DIAG: *** tagging enum: WGL_ACCUM_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_ACCUM_RED_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_ACCUM_GREEN_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_ACCUM_BLUE_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_ACCUM_ALPHA_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_DEPTH_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_STENCIL_BITS_EXT -> required = True
+DIAG: *** tagging enum: WGL_AUX_BUFFERS_EXT -> required = True
+DIAG: *** tagging enum: WGL_NO_ACCELERATION_EXT -> required = True
+DIAG: *** tagging enum: WGL_GENERIC_ACCELERATION_EXT -> required = True
+DIAG: *** tagging enum: WGL_FULL_ACCELERATION_EXT -> required = True
+DIAG: *** tagging enum: WGL_SWAP_EXCHANGE_EXT -> required = True
+DIAG: *** tagging enum: WGL_SWAP_COPY_EXT -> required = True
+DIAG: *** tagging enum: WGL_SWAP_UNDEFINED_EXT -> required = True
+DIAG: *** tagging enum: WGL_TYPE_RGBA_EXT -> required = True
+DIAG: *** tagging enum: WGL_TYPE_COLORINDEX_EXT -> required = True
+DIAG: *** tagging command: wglGetPixelFormatAttribivEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglGetPixelFormatAttribfvEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type FLOAT
+DIAG: *** tagging type: FLOAT -> required = True
+DIAG: *** tagging command: wglChoosePixelFormatEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type FLOAT
+DIAG: *** tagging type: FLOAT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_pixel_format_packed_float
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_TYPE_RGBA_UNSIGNED_FLOAT_EXT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_swap_control
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging command: wglSwapIntervalEXT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** tagging command: wglGetSwapIntervalEXT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_EXT_swap_control_tear
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** PASS 1: Tagging required and removed features for WGL_I3D_digital_video_control
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_DIGITAL_VIDEO_CURSOR_ALPHA_FRAMEBUFFER_I3D -> required = True
+DIAG: *** tagging enum: WGL_DIGITAL_VIDEO_CURSOR_ALPHA_VALUE_I3D -> required = True
+DIAG: *** tagging enum: WGL_DIGITAL_VIDEO_CURSOR_INCLUDED_I3D -> required = True
+DIAG: *** tagging enum: WGL_DIGITAL_VIDEO_GAMMA_CORRECTED_I3D -> required = True
+DIAG: *** tagging command: wglGetDigitalVideoParametersI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglSetDigitalVideoParametersI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_I3D_gamma
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_GAMMA_TABLE_SIZE_I3D -> required = True
+DIAG: *** tagging enum: WGL_GAMMA_EXCLUDE_DESKTOP_I3D -> required = True
+DIAG: *** tagging command: wglGetGammaTableParametersI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglSetGammaTableParametersI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglGetGammaTableI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type USHORT
+DIAG: *** tagging type: USHORT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type USHORT
+DIAG: *** tagging type: USHORT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type USHORT
+DIAG: *** tagging type: USHORT -> required = True
+DIAG: *** tagging command: wglSetGammaTableI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type USHORT
+DIAG: *** tagging type: USHORT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type USHORT
+DIAG: *** tagging type: USHORT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type USHORT
+DIAG: *** tagging type: USHORT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_I3D_genlock
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_GENLOCK_SOURCE_MULTIVIEW_I3D -> required = True
+DIAG: *** tagging enum: WGL_GENLOCK_SOURCE_EXTERNAL_SYNC_I3D -> required = True
+DIAG: *** tagging enum: WGL_GENLOCK_SOURCE_EXTERNAL_FIELD_I3D -> required = True
+DIAG: *** tagging enum: WGL_GENLOCK_SOURCE_EXTERNAL_TTL_I3D -> required = True
+DIAG: *** tagging enum: WGL_GENLOCK_SOURCE_DIGITAL_SYNC_I3D -> required = True
+DIAG: *** tagging enum: WGL_GENLOCK_SOURCE_DIGITAL_FIELD_I3D -> required = True
+DIAG: *** tagging enum: WGL_GENLOCK_SOURCE_EDGE_FALLING_I3D -> required = True
+DIAG: *** tagging enum: WGL_GENLOCK_SOURCE_EDGE_RISING_I3D -> required = True
+DIAG: *** tagging enum: WGL_GENLOCK_SOURCE_EDGE_BOTH_I3D -> required = True
+DIAG: *** tagging command: wglEnableGenlockI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglDisableGenlockI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** tagging command: wglIsEnabledGenlockI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** tagging command: wglGenlockSourceI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglGetGenlockSourceI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglGenlockSourceEdgeI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglGetGenlockSourceEdgeI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglGenlockSampleRateI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglGetGenlockSampleRateI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglGenlockSourceDelayI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglGetGenlockSourceDelayI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglQueryGenlockMaxSourceDelayI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_I3D_image_buffer
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_IMAGE_BUFFER_MIN_ACCESS_I3D -> required = True
+DIAG: *** tagging enum: WGL_IMAGE_BUFFER_LOCK_I3D -> required = True
+DIAG: *** tagging command: wglCreateImageBufferI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type LPVOID
+DIAG: *** tagging type: LPVOID -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglDestroyImageBufferI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type LPVOID
+DIAG: *** tagging type: LPVOID -> required = True
+DIAG: *** tagging command: wglAssociateImageBufferEventsI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type LPVOID
+DIAG: *** tagging type: LPVOID -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** tagging command: wglReleaseImageBufferEventsI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type LPVOID
+DIAG: *** tagging type: LPVOID -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_I3D_swap_frame_lock
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging command: wglEnableFrameLockI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** tagging command: wglDisableFrameLockI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** tagging command: wglIsEnabledFrameLockI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** tagging command: wglQueryFrameLockMasterI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_I3D_swap_frame_usage
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging command: wglGetFrameUsageI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** tagging command: wglBeginFrameTrackingI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** tagging command: wglEndFrameTrackingI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** tagging command: wglQueryFrameTrackingI3D -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type DWORD
+DIAG: *** tagging type: DWORD -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_DX_interop
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_ACCESS_READ_ONLY_NV -> required = True
+DIAG: *** tagging enum: WGL_ACCESS_READ_WRITE_NV -> required = True
+DIAG: *** tagging enum: WGL_ACCESS_WRITE_DISCARD_NV -> required = True
+DIAG: *** tagging command: wglDXSetResourceShareHandleNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** tagging command: wglDXOpenDeviceNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** tagging command: wglDXCloseDeviceNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** tagging command: wglDXRegisterObjectNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLenum
+DIAG: *** tagging type: GLenum -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLenum
+DIAG: *** tagging type: GLenum -> required = True
+DIAG: *** tagging command: wglDXUnregisterObjectNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** tagging command: wglDXObjectAccessNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLenum
+DIAG: *** tagging type: GLenum -> required = True
+DIAG: *** tagging command: wglDXLockObjectsNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** tagging command: wglDXUnlockObjectsNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HANDLE
+DIAG: *** tagging type: HANDLE -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_DX_interop2
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_copy_image
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging command: wglCopyImageSubDataNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLenum
+DIAG: *** tagging type: GLenum -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGLRC
+DIAG: *** tagging type: HGLRC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLenum
+DIAG: *** tagging type: GLenum -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLint
+DIAG: *** tagging type: GLint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLsizei
+DIAG: *** tagging type: GLsizei -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLsizei
+DIAG: *** tagging type: GLsizei -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLsizei
+DIAG: *** tagging type: GLsizei -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_delay_before_swap
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging command: wglDelayBeforeSwapNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLfloat
+DIAG: *** tagging type: GLfloat -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_float_buffer
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_FLOAT_COMPONENTS_NV -> required = True
+DIAG: *** tagging enum: WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_R_NV -> required = True
+DIAG: *** tagging enum: WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RG_NV -> required = True
+DIAG: *** tagging enum: WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGB_NV -> required = True
+DIAG: *** tagging enum: WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGBA_NV -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_FLOAT_R_NV -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_FLOAT_RG_NV -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_FLOAT_RGB_NV -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_FLOAT_RGBA_NV -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_gpu_affinity
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: ERROR_INCOMPATIBLE_AFFINITY_MASKS_NV -> required = True
+DIAG: *** tagging enum: ERROR_MISSING_AFFINITY_MASK_NV -> required = True
+DIAG: *** tagging command: wglEnumGpusNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGPUNV
+DIAG: *** tagging type: HGPUNV -> required = True
+DIAG: *** tagging command: wglEnumGpuDevicesNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGPUNV
+DIAG: *** tagging type: HGPUNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type PGPU_DEVICE
+DIAG: *** tagging type: PGPU_DEVICE -> required = True
+DIAG: *** Generating dependent type _GPU_DEVICE for type PGPU_DEVICE
+DIAG: *** tagging type: _GPU_DEVICE -> required = True
+DIAG: *** tagging command: wglCreateAffinityDCNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGPUNV
+DIAG: *** tagging type: HGPUNV -> required = True
+DIAG: *** tagging command: wglEnumGpusFromAffinityDCNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HGPUNV
+DIAG: *** tagging type: HGPUNV -> required = True
+DIAG: *** tagging command: wglDeleteDCNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_multisample_coverage
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_COVERAGE_SAMPLES_NV -> required = True
+DIAG: *** tagging enum: WGL_COLOR_SAMPLES_NV -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_present_video
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_NUM_VIDEO_SLOTS_NV -> required = True
+DIAG: *** tagging command: wglEnumerateVideoDevicesNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HVIDEOOUTPUTDEVICENV
+DIAG: *** tagging type: HVIDEOOUTPUTDEVICENV -> required = True
+DIAG: *** tagging command: wglBindVideoDeviceNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HVIDEOOUTPUTDEVICENV
+DIAG: *** tagging type: HVIDEOOUTPUTDEVICENV -> required = True
+DIAG: *** tagging command: wglQueryCurrentContextNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_render_depth_texture
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_BIND_TO_TEXTURE_DEPTH_NV -> required = True
+DIAG: *** tagging enum: WGL_BIND_TO_TEXTURE_RECTANGLE_DEPTH_NV -> required = True
+DIAG: *** tagging enum: WGL_DEPTH_TEXTURE_FORMAT_NV -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_DEPTH_COMPONENT_NV -> required = True
+DIAG: *** tagging enum: WGL_DEPTH_COMPONENT_NV -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_render_texture_rectangle
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_BIND_TO_TEXTURE_RECTANGLE_RGB_NV -> required = True
+DIAG: *** tagging enum: WGL_BIND_TO_TEXTURE_RECTANGLE_RGBA_NV -> required = True
+DIAG: *** tagging enum: WGL_TEXTURE_RECTANGLE_NV -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_swap_group
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging command: wglJoinSwapGroupNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** tagging command: wglBindSwapBarrierNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** tagging command: wglQuerySwapGroupNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** tagging command: wglQueryMaxSwapGroupsNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** tagging command: wglQueryFrameCountNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLuint
+DIAG: *** tagging type: GLuint -> required = True
+DIAG: *** tagging command: wglResetFrameCountNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_vertex_array_range
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging command: wglAllocateMemoryNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLsizei
+DIAG: *** tagging type: GLsizei -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLfloat
+DIAG: *** tagging type: GLfloat -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLfloat
+DIAG: *** tagging type: GLfloat -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type GLfloat
+DIAG: *** tagging type: GLfloat -> required = True
+DIAG: *** tagging command: wglFreeMemoryNV -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_video_capture
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_UNIQUE_ID_NV -> required = True
+DIAG: *** tagging enum: WGL_NUM_VIDEO_CAPTURE_SLOTS_NV -> required = True
+DIAG: *** tagging command: wglBindVideoCaptureDeviceNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HVIDEOINPUTDEVICENV
+DIAG: *** tagging type: HVIDEOINPUTDEVICENV -> required = True
+DIAG: *** tagging command: wglEnumerateVideoCaptureDevicesNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type UINT
+DIAG: *** tagging type: UINT -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HVIDEOINPUTDEVICENV
+DIAG: *** tagging type: HVIDEOINPUTDEVICENV -> required = True
+DIAG: *** tagging command: wglLockVideoCaptureDeviceNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HVIDEOINPUTDEVICENV
+DIAG: *** tagging type: HVIDEOINPUTDEVICENV -> required = True
+DIAG: *** tagging command: wglQueryVideoCaptureDeviceNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HVIDEOINPUTDEVICENV
+DIAG: *** tagging type: HVIDEOINPUTDEVICENV -> required = True
+DIAG: *** tagging command: wglReleaseVideoCaptureDeviceNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HVIDEOINPUTDEVICENV
+DIAG: *** tagging type: HVIDEOINPUTDEVICENV -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_NV_video_output
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging enum: WGL_BIND_TO_VIDEO_RGB_NV -> required = True
+DIAG: *** tagging enum: WGL_BIND_TO_VIDEO_RGBA_NV -> required = True
+DIAG: *** tagging enum: WGL_BIND_TO_VIDEO_RGB_AND_DEPTH_NV -> required = True
+DIAG: *** tagging enum: WGL_VIDEO_OUT_COLOR_NV -> required = True
+DIAG: *** tagging enum: WGL_VIDEO_OUT_ALPHA_NV -> required = True
+DIAG: *** tagging enum: WGL_VIDEO_OUT_DEPTH_NV -> required = True
+DIAG: *** tagging enum: WGL_VIDEO_OUT_COLOR_AND_ALPHA_NV -> required = True
+DIAG: *** tagging enum: WGL_VIDEO_OUT_COLOR_AND_DEPTH_NV -> required = True
+DIAG: *** tagging enum: WGL_VIDEO_OUT_FRAME -> required = True
+DIAG: *** tagging enum: WGL_VIDEO_OUT_FIELD_1 -> required = True
+DIAG: *** tagging enum: WGL_VIDEO_OUT_FIELD_2 -> required = True
+DIAG: *** tagging enum: WGL_VIDEO_OUT_STACKED_FIELDS_1_2 -> required = True
+DIAG: *** tagging enum: WGL_VIDEO_OUT_STACKED_FIELDS_2_1 -> required = True
+DIAG: *** tagging command: wglGetVideoDeviceNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPVIDEODEV
+DIAG: *** tagging type: HPVIDEODEV -> required = True
+DIAG: *** tagging command: wglReleaseVideoDeviceNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPVIDEODEV
+DIAG: *** tagging type: HPVIDEODEV -> required = True
+DIAG: *** tagging command: wglBindVideoImageNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPVIDEODEV
+DIAG: *** tagging type: HPVIDEODEV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFERARB
+DIAG: *** tagging type: HPBUFFERARB -> required = True
+DIAG: *** tagging command: wglReleaseVideoImageNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFERARB
+DIAG: *** tagging type: HPBUFFERARB -> required = True
+DIAG: *** tagging command: wglSendPbufferToVideoNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPBUFFERARB
+DIAG: *** tagging type: HPBUFFERARB -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** tagging command: wglGetVideoInfoNV -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HPVIDEODEV
+DIAG: *** tagging type: HPVIDEODEV -> required = True
+DIAG: *** PASS 1: Tagging required and removed features for WGL_OML_sync_control
+DIAG: *** markRequired (features = <too long to print>, required = True )
+DIAG: *** tagging command: wglGetSyncValuesOML -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** tagging command: wglGetMscRateOML -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT32
+DIAG: *** tagging type: INT32 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT32
+DIAG: *** tagging type: INT32 -> required = True
+DIAG: *** tagging command: wglSwapBuffersMscOML -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** tagging command: wglSwapLayerBuffersMscOML -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** tagging command: wglWaitForMscOML -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** tagging command: wglWaitForSbcOML -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type BOOL
+DIAG: *** tagging type: BOOL -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type HDC
+DIAG: *** tagging type: HDC -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** markRequired: command implicitly requires dependent type INT64
+DIAG: *** tagging type: INT64 -> required = True
+DIAG: *** PASS 2: GENERATE INTERFACES FOR FEATURES ************************
+DIAG: *** PASS 2: Generating interface for WGL_VERSION_1_0
+DIAG: *** PASS 2: NOT declaring feature WGL_VERSION_1_0 because it is not tagged for emission
+DIAG: *** Skipping enum WGL_FONT_LINES (not emitting this feature)
+DIAG: *** Skipping enum WGL_FONT_POLYGONS (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_MAIN_PLANE (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY1 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY2 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY3 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY4 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY5 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY6 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY7 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY8 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY9 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY10 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY11 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY12 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY13 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY14 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_OVERLAY15 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY1 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY2 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY3 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY4 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY5 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY6 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY7 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY8 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY9 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY10 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY11 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY12 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY13 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY14 (not emitting this feature)
+DIAG: *** Skipping enum WGL_SWAP_UNDERLAY15 (not emitting this feature)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (not emitting this feature)
+DIAG: *** Generating required parameter type PIXELFORMATDESCRIPTOR
+DIAG: *** Skipping type PIXELFORMATDESCRIPTOR (not emitting this feature)
+DIAG: *** Skipping command ChoosePixelFormat (not emitting this feature)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (not emitting this feature)
+DIAG: *** Generating required parameter type PIXELFORMATDESCRIPTOR
+DIAG: *** Skipping type PIXELFORMATDESCRIPTOR (already declared)
+DIAG: *** Skipping command DescribePixelFormat (not emitting this feature)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type HENHMETAFILE
+DIAG: *** Skipping type HENHMETAFILE (not emitting this feature)
+DIAG: *** Generating required parameter type PIXELFORMATDESCRIPTOR
+DIAG: *** Skipping type PIXELFORMATDESCRIPTOR (already declared)
+DIAG: *** Skipping command GetEnhMetaFilePixelFormat (not emitting this feature)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Skipping command GetPixelFormat (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (not emitting this feature)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type PIXELFORMATDESCRIPTOR
+DIAG: *** Skipping type PIXELFORMATDESCRIPTOR (already declared)
+DIAG: *** Skipping command SetPixelFormat (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Skipping command SwapBuffers (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (not emitting this feature)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Skipping command wglCopyContext (not emitting this feature)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Skipping command wglCreateContext (not emitting this feature)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Skipping command wglCreateLayerContext (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Skipping command wglDeleteContext (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type LAYERPLANEDESCRIPTOR
+DIAG: *** Skipping type LAYERPLANEDESCRIPTOR (not emitting this feature)
+DIAG: *** Skipping command wglDescribeLayerPlane (not emitting this feature)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Skipping command wglGetCurrentContext (not emitting this feature)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Skipping command wglGetCurrentDC (not emitting this feature)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type COLORREF
+DIAG: *** Skipping type COLORREF (not emitting this feature)
+DIAG: *** Skipping command wglGetLayerPaletteEntries (not emitting this feature)
+DIAG: *** Generating required parameter type PROC
+DIAG: *** Skipping type PROC (not emitting this feature)
+DIAG: *** Generating required parameter type LPCSTR
+DIAG: *** Skipping type LPCSTR (not emitting this feature)
+DIAG: *** Skipping command wglGetProcAddress (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Skipping command wglMakeCurrent (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Skipping command wglRealizeLayerPalette (not emitting this feature)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type COLORREF
+DIAG: *** Skipping type COLORREF (already declared)
+DIAG: *** Skipping command wglSetLayerPaletteEntries (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Skipping command wglShareLists (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Skipping command wglSwapLayerBuffers (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (not emitting this feature)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Skipping command wglUseFontBitmaps (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Skipping command wglUseFontBitmapsA (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Skipping command wglUseFontBitmapsW (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type FLOAT
+DIAG: *** Skipping type FLOAT (not emitting this feature)
+DIAG: *** Generating required parameter type FLOAT
+DIAG: *** Skipping type FLOAT (already declared)
+DIAG: *** Generating required parameter type LPGLYPHMETRICSFLOAT
+DIAG: *** Skipping type LPGLYPHMETRICSFLOAT (not emitting this feature)
+DIAG: *** Skipping command wglUseFontOutlines (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type FLOAT
+DIAG: *** Skipping type FLOAT (already declared)
+DIAG: *** Generating required parameter type FLOAT
+DIAG: *** Skipping type FLOAT (already declared)
+DIAG: *** Generating required parameter type LPGLYPHMETRICSFLOAT
+DIAG: *** Skipping type LPGLYPHMETRICSFLOAT (already declared)
+DIAG: *** Skipping command wglUseFontOutlinesA (not emitting this feature)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type FLOAT
+DIAG: *** Skipping type FLOAT (already declared)
+DIAG: *** Generating required parameter type FLOAT
+DIAG: *** Skipping type FLOAT (already declared)
+DIAG: *** Generating required parameter type LPGLYPHMETRICSFLOAT
+DIAG: *** Skipping type LPGLYPHMETRICSFLOAT (already declared)
+DIAG: *** Skipping command wglUseFontOutlinesW (not emitting this feature)
+DIAG: *** PASS 2: Generating interface for WGL_ARB_buffer_region
+DIAG: *** Emitting enum decl for WGL_FRONT_COLOR_BUFFER_BIT_ARB
+DIAG: *** Emitting enum decl for WGL_BACK_COLOR_BUFFER_BIT_ARB
+DIAG: *** Emitting enum decl for WGL_DEPTH_BUFFER_BIT_ARB
+DIAG: *** Emitting enum decl for WGL_STENCIL_BUFFER_BIT_ARB
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Emitting type decl for HANDLE
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglCreateBufferRegionARB
+DIAG: *** Generating required parameter type VOID
+DIAG: *** Emitting type decl for VOID
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Emitting command decl for wglDeleteBufferRegionARB
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Emitting command decl for wglSaveBufferRegionARB
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Emitting command decl for wglRestoreBufferRegionARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_context_flush_control
+DIAG: *** Emitting enum decl for WGL_CONTEXT_RELEASE_BEHAVIOR_ARB
+DIAG: *** Emitting enum decl for WGL_CONTEXT_RELEASE_BEHAVIOR_NONE_ARB
+DIAG: *** Emitting enum decl for WGL_CONTEXT_RELEASE_BEHAVIOR_FLUSH_ARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_create_context
+DIAG: *** Emitting enum decl for WGL_CONTEXT_DEBUG_BIT_ARB
+DIAG: *** Emitting enum decl for WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB
+DIAG: *** Emitting enum decl for WGL_CONTEXT_MAJOR_VERSION_ARB
+DIAG: *** Emitting enum decl for WGL_CONTEXT_MINOR_VERSION_ARB
+DIAG: *** Emitting enum decl for WGL_CONTEXT_LAYER_PLANE_ARB
+DIAG: *** Emitting enum decl for WGL_CONTEXT_FLAGS_ARB
+DIAG: *** Emitting enum decl for ERROR_INVALID_VERSION_ARB
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Emitting command decl for wglCreateContextAttribsARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_create_context_no_error
+DIAG: *** Emitting enum decl for WGL_CONTEXT_OPENGL_NO_ERROR_ARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_create_context_profile
+DIAG: *** Emitting enum decl for WGL_CONTEXT_PROFILE_MASK_ARB
+DIAG: *** Emitting enum decl for WGL_CONTEXT_CORE_PROFILE_BIT_ARB
+DIAG: *** Emitting enum decl for WGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB
+DIAG: *** Emitting enum decl for ERROR_INVALID_PROFILE_ARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_create_context_robustness
+DIAG: *** Emitting enum decl for WGL_CONTEXT_ROBUST_ACCESS_BIT_ARB
+DIAG: *** Emitting enum decl for WGL_LOSE_CONTEXT_ON_RESET_ARB
+DIAG: *** Emitting enum decl for WGL_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB
+DIAG: *** Emitting enum decl for WGL_NO_RESET_NOTIFICATION_ARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_extensions_string
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglGetExtensionsStringARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_framebuffer_sRGB
+DIAG: *** Emitting enum decl for WGL_FRAMEBUFFER_SRGB_CAPABLE_ARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_make_current_read
+DIAG: *** Emitting enum decl for ERROR_INVALID_PIXEL_TYPE_ARB
+DIAG: *** Emitting enum decl for ERROR_INCOMPATIBLE_DEVICE_CONTEXTS_ARB
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Emitting command decl for wglMakeContextCurrentARB
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglGetCurrentReadDCARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_multisample
+DIAG: *** Emitting enum decl for WGL_SAMPLE_BUFFERS_ARB
+DIAG: *** Emitting enum decl for WGL_SAMPLES_ARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_pbuffer
+DIAG: *** Emitting enum decl for WGL_DRAW_TO_PBUFFER_ARB
+DIAG: *** Emitting enum decl for WGL_MAX_PBUFFER_PIXELS_ARB
+DIAG: *** Emitting enum decl for WGL_MAX_PBUFFER_WIDTH_ARB
+DIAG: *** Emitting enum decl for WGL_MAX_PBUFFER_HEIGHT_ARB
+DIAG: *** Emitting enum decl for WGL_PBUFFER_LARGEST_ARB
+DIAG: *** Emitting enum decl for WGL_PBUFFER_WIDTH_ARB
+DIAG: *** Emitting enum decl for WGL_PBUFFER_HEIGHT_ARB
+DIAG: *** Emitting enum decl for WGL_PBUFFER_LOST_ARB
+DIAG: *** Generating required parameter type HPBUFFERARB
+DIAG: *** Emitting type decl for HPBUFFERARB
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglCreatePbufferARB
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HPBUFFERARB
+DIAG: *** Skipping type HPBUFFERARB (already declared)
+DIAG: *** Emitting command decl for wglGetPbufferDCARB
+DIAG: *** Generating required parameter type HPBUFFERARB
+DIAG: *** Skipping type HPBUFFERARB (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglReleasePbufferDCARB
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPBUFFERARB
+DIAG: *** Skipping type HPBUFFERARB (already declared)
+DIAG: *** Emitting command decl for wglDestroyPbufferARB
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPBUFFERARB
+DIAG: *** Skipping type HPBUFFERARB (already declared)
+DIAG: *** Emitting command decl for wglQueryPbufferARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_pixel_format
+DIAG: *** Emitting enum decl for WGL_NUMBER_PIXEL_FORMATS_ARB
+DIAG: *** Emitting enum decl for WGL_DRAW_TO_WINDOW_ARB
+DIAG: *** Emitting enum decl for WGL_DRAW_TO_BITMAP_ARB
+DIAG: *** Emitting enum decl for WGL_ACCELERATION_ARB
+DIAG: *** Emitting enum decl for WGL_NEED_PALETTE_ARB
+DIAG: *** Emitting enum decl for WGL_NEED_SYSTEM_PALETTE_ARB
+DIAG: *** Emitting enum decl for WGL_SWAP_LAYER_BUFFERS_ARB
+DIAG: *** Emitting enum decl for WGL_SWAP_METHOD_ARB
+DIAG: *** Emitting enum decl for WGL_NUMBER_OVERLAYS_ARB
+DIAG: *** Emitting enum decl for WGL_NUMBER_UNDERLAYS_ARB
+DIAG: *** Emitting enum decl for WGL_TRANSPARENT_ARB
+DIAG: *** Emitting enum decl for WGL_TRANSPARENT_RED_VALUE_ARB
+DIAG: *** Emitting enum decl for WGL_TRANSPARENT_GREEN_VALUE_ARB
+DIAG: *** Emitting enum decl for WGL_TRANSPARENT_BLUE_VALUE_ARB
+DIAG: *** Emitting enum decl for WGL_TRANSPARENT_ALPHA_VALUE_ARB
+DIAG: *** Emitting enum decl for WGL_TRANSPARENT_INDEX_VALUE_ARB
+DIAG: *** Emitting enum decl for WGL_SHARE_DEPTH_ARB
+DIAG: *** Emitting enum decl for WGL_SHARE_STENCIL_ARB
+DIAG: *** Emitting enum decl for WGL_SHARE_ACCUM_ARB
+DIAG: *** Emitting enum decl for WGL_SUPPORT_GDI_ARB
+DIAG: *** Emitting enum decl for WGL_SUPPORT_OPENGL_ARB
+DIAG: *** Emitting enum decl for WGL_DOUBLE_BUFFER_ARB
+DIAG: *** Emitting enum decl for WGL_STEREO_ARB
+DIAG: *** Emitting enum decl for WGL_PIXEL_TYPE_ARB
+DIAG: *** Emitting enum decl for WGL_COLOR_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_RED_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_RED_SHIFT_ARB
+DIAG: *** Emitting enum decl for WGL_GREEN_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_GREEN_SHIFT_ARB
+DIAG: *** Emitting enum decl for WGL_BLUE_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_BLUE_SHIFT_ARB
+DIAG: *** Emitting enum decl for WGL_ALPHA_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_ALPHA_SHIFT_ARB
+DIAG: *** Emitting enum decl for WGL_ACCUM_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_ACCUM_RED_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_ACCUM_GREEN_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_ACCUM_BLUE_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_ACCUM_ALPHA_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_DEPTH_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_STENCIL_BITS_ARB
+DIAG: *** Emitting enum decl for WGL_AUX_BUFFERS_ARB
+DIAG: *** Emitting enum decl for WGL_NO_ACCELERATION_ARB
+DIAG: *** Emitting enum decl for WGL_GENERIC_ACCELERATION_ARB
+DIAG: *** Emitting enum decl for WGL_FULL_ACCELERATION_ARB
+DIAG: *** Emitting enum decl for WGL_SWAP_EXCHANGE_ARB
+DIAG: *** Emitting enum decl for WGL_SWAP_COPY_ARB
+DIAG: *** Emitting enum decl for WGL_SWAP_UNDEFINED_ARB
+DIAG: *** Emitting enum decl for WGL_TYPE_RGBA_ARB
+DIAG: *** Emitting enum decl for WGL_TYPE_COLORINDEX_ARB
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGetPixelFormatAttribivARB
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type FLOAT
+DIAG: *** Skipping type FLOAT (already declared)
+DIAG: *** Emitting command decl for wglGetPixelFormatAttribfvARB
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type FLOAT
+DIAG: *** Skipping type FLOAT (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglChoosePixelFormatARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_pixel_format_float
+DIAG: *** Emitting enum decl for WGL_TYPE_RGBA_FLOAT_ARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_render_texture
+DIAG: *** Emitting enum decl for WGL_BIND_TO_TEXTURE_RGB_ARB
+DIAG: *** Emitting enum decl for WGL_BIND_TO_TEXTURE_RGBA_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_FORMAT_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_TARGET_ARB
+DIAG: *** Emitting enum decl for WGL_MIPMAP_TEXTURE_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_RGB_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_RGBA_ARB
+DIAG: *** Emitting enum decl for WGL_NO_TEXTURE_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_CUBE_MAP_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_1D_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_2D_ARB
+DIAG: *** Emitting enum decl for WGL_MIPMAP_LEVEL_ARB
+DIAG: *** Emitting enum decl for WGL_CUBE_MAP_FACE_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB
+DIAG: *** Emitting enum decl for WGL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB
+DIAG: *** Emitting enum decl for WGL_FRONT_LEFT_ARB
+DIAG: *** Emitting enum decl for WGL_FRONT_RIGHT_ARB
+DIAG: *** Emitting enum decl for WGL_BACK_LEFT_ARB
+DIAG: *** Emitting enum decl for WGL_BACK_RIGHT_ARB
+DIAG: *** Emitting enum decl for WGL_AUX0_ARB
+DIAG: *** Emitting enum decl for WGL_AUX1_ARB
+DIAG: *** Emitting enum decl for WGL_AUX2_ARB
+DIAG: *** Emitting enum decl for WGL_AUX3_ARB
+DIAG: *** Emitting enum decl for WGL_AUX4_ARB
+DIAG: *** Emitting enum decl for WGL_AUX5_ARB
+DIAG: *** Emitting enum decl for WGL_AUX6_ARB
+DIAG: *** Emitting enum decl for WGL_AUX7_ARB
+DIAG: *** Emitting enum decl for WGL_AUX8_ARB
+DIAG: *** Emitting enum decl for WGL_AUX9_ARB
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPBUFFERARB
+DIAG: *** Skipping type HPBUFFERARB (already declared)
+DIAG: *** Emitting command decl for wglBindTexImageARB
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPBUFFERARB
+DIAG: *** Skipping type HPBUFFERARB (already declared)
+DIAG: *** Emitting command decl for wglReleaseTexImageARB
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPBUFFERARB
+DIAG: *** Skipping type HPBUFFERARB (already declared)
+DIAG: *** Emitting command decl for wglSetPbufferAttribARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_robustness_application_isolation
+DIAG: *** Emitting enum decl for WGL_CONTEXT_RESET_ISOLATION_BIT_ARB
+DIAG: *** PASS 2: Generating interface for WGL_ARB_robustness_share_group_isolation
+DIAG: *** Skipping enum WGL_CONTEXT_RESET_ISOLATION_BIT_ARB (already declared)
+DIAG: *** PASS 2: Generating interface for WGL_3DFX_multisample
+DIAG: *** Emitting enum decl for WGL_SAMPLE_BUFFERS_3DFX
+DIAG: *** Emitting enum decl for WGL_SAMPLES_3DFX
+DIAG: *** PASS 2: Generating interface for WGL_3DL_stereo_control
+DIAG: *** Emitting enum decl for WGL_STEREO_EMITTER_ENABLE_3DL
+DIAG: *** Emitting enum decl for WGL_STEREO_EMITTER_DISABLE_3DL
+DIAG: *** Emitting enum decl for WGL_STEREO_POLARITY_NORMAL_3DL
+DIAG: *** Emitting enum decl for WGL_STEREO_POLARITY_INVERT_3DL
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglSetStereoEmitterState3DL
+DIAG: *** PASS 2: Generating interface for WGL_AMD_gpu_association
+DIAG: *** Emitting enum decl for WGL_GPU_VENDOR_AMD
+DIAG: *** Emitting enum decl for WGL_GPU_RENDERER_STRING_AMD
+DIAG: *** Emitting enum decl for WGL_GPU_OPENGL_VERSION_STRING_AMD
+DIAG: *** Emitting enum decl for WGL_GPU_FASTEST_TARGET_GPUS_AMD
+DIAG: *** Emitting enum decl for WGL_GPU_RAM_AMD
+DIAG: *** Emitting enum decl for WGL_GPU_CLOCK_AMD
+DIAG: *** Emitting enum decl for WGL_GPU_NUM_PIPES_AMD
+DIAG: *** Emitting enum decl for WGL_GPU_NUM_SIMD_AMD
+DIAG: *** Emitting enum decl for WGL_GPU_NUM_RB_AMD
+DIAG: *** Emitting enum decl for WGL_GPU_NUM_SPI_AMD
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGetGPUIDsAMD
+DIAG: *** Generating required parameter type INT
+DIAG: *** Emitting type decl for INT
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type GLenum
+DIAG: *** Emitting type decl for GLenum
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGetGPUInfoAMD
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Emitting command decl for wglGetContextGPUIDAMD
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglCreateAssociatedContextAMD
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Emitting command decl for wglCreateAssociatedContextAttribsAMD
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Emitting command decl for wglDeleteAssociatedContextAMD
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Emitting command decl for wglMakeAssociatedContextCurrentAMD
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Emitting command decl for wglGetCurrentAssociatedContextAMD
+DIAG: *** Generating required parameter type VOID
+DIAG: *** Skipping type VOID (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Emitting type decl for GLint
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLbitfield
+DIAG: *** Emitting type decl for GLbitfield
+DIAG: *** Generating required parameter type GLenum
+DIAG: *** Skipping type GLenum (already declared)
+DIAG: *** Emitting command decl for wglBlitContextFramebufferAMD
+DIAG: *** PASS 2: Generating interface for WGL_ATI_pixel_format_float
+DIAG: *** Emitting enum decl for WGL_TYPE_RGBA_FLOAT_ATI
+DIAG: *** PASS 2: Generating interface for WGL_EXT_colorspace
+DIAG: *** Emitting enum decl for WGL_COLORSPACE_EXT
+DIAG: *** Emitting enum decl for WGL_COLORSPACE_SRGB_EXT
+DIAG: *** Emitting enum decl for WGL_COLORSPACE_LINEAR_EXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_create_context_es2_profile
+DIAG: *** Emitting enum decl for WGL_CONTEXT_ES2_PROFILE_BIT_EXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_create_context_es_profile
+DIAG: *** Emitting enum decl for WGL_CONTEXT_ES_PROFILE_BIT_EXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_depth_float
+DIAG: *** Emitting enum decl for WGL_DEPTH_FLOAT_EXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_display_color_table
+DIAG: *** Generating required parameter type GLboolean
+DIAG: *** Emitting type decl for GLboolean
+DIAG: *** Generating required parameter type GLushort
+DIAG: *** Emitting type decl for GLushort
+DIAG: *** Emitting command decl for wglCreateDisplayColorTableEXT
+DIAG: *** Generating required parameter type GLboolean
+DIAG: *** Skipping type GLboolean (already declared)
+DIAG: *** Generating required parameter type GLushort
+DIAG: *** Skipping type GLushort (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Emitting type decl for GLuint
+DIAG: *** Emitting command decl for wglLoadDisplayColorTableEXT
+DIAG: *** Generating required parameter type GLboolean
+DIAG: *** Skipping type GLboolean (already declared)
+DIAG: *** Generating required parameter type GLushort
+DIAG: *** Skipping type GLushort (already declared)
+DIAG: *** Emitting command decl for wglBindDisplayColorTableEXT
+DIAG: *** Generating required parameter type VOID
+DIAG: *** Skipping type VOID (already declared)
+DIAG: *** Generating required parameter type GLushort
+DIAG: *** Skipping type GLushort (already declared)
+DIAG: *** Emitting command decl for wglDestroyDisplayColorTableEXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_extensions_string
+DIAG: *** Emitting command decl for wglGetExtensionsStringEXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_framebuffer_sRGB
+DIAG: *** Emitting enum decl for WGL_FRAMEBUFFER_SRGB_CAPABLE_EXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_make_current_read
+DIAG: *** Emitting enum decl for ERROR_INVALID_PIXEL_TYPE_EXT
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Emitting command decl for wglMakeContextCurrentEXT
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglGetCurrentReadDCEXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_multisample
+DIAG: *** Emitting enum decl for WGL_SAMPLE_BUFFERS_EXT
+DIAG: *** Emitting enum decl for WGL_SAMPLES_EXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_pbuffer
+DIAG: *** Emitting enum decl for WGL_DRAW_TO_PBUFFER_EXT
+DIAG: *** Emitting enum decl for WGL_MAX_PBUFFER_PIXELS_EXT
+DIAG: *** Emitting enum decl for WGL_MAX_PBUFFER_WIDTH_EXT
+DIAG: *** Emitting enum decl for WGL_MAX_PBUFFER_HEIGHT_EXT
+DIAG: *** Emitting enum decl for WGL_OPTIMAL_PBUFFER_WIDTH_EXT
+DIAG: *** Emitting enum decl for WGL_OPTIMAL_PBUFFER_HEIGHT_EXT
+DIAG: *** Emitting enum decl for WGL_PBUFFER_LARGEST_EXT
+DIAG: *** Emitting enum decl for WGL_PBUFFER_WIDTH_EXT
+DIAG: *** Emitting enum decl for WGL_PBUFFER_HEIGHT_EXT
+DIAG: *** Generating required parameter type HPBUFFEREXT
+DIAG: *** Emitting type decl for HPBUFFEREXT
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglCreatePbufferEXT
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HPBUFFEREXT
+DIAG: *** Skipping type HPBUFFEREXT (already declared)
+DIAG: *** Emitting command decl for wglGetPbufferDCEXT
+DIAG: *** Generating required parameter type HPBUFFEREXT
+DIAG: *** Skipping type HPBUFFEREXT (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglReleasePbufferDCEXT
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPBUFFEREXT
+DIAG: *** Skipping type HPBUFFEREXT (already declared)
+DIAG: *** Emitting command decl for wglDestroyPbufferEXT
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPBUFFEREXT
+DIAG: *** Skipping type HPBUFFEREXT (already declared)
+DIAG: *** Emitting command decl for wglQueryPbufferEXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_pixel_format
+DIAG: *** Emitting enum decl for WGL_NUMBER_PIXEL_FORMATS_EXT
+DIAG: *** Emitting enum decl for WGL_DRAW_TO_WINDOW_EXT
+DIAG: *** Emitting enum decl for WGL_DRAW_TO_BITMAP_EXT
+DIAG: *** Emitting enum decl for WGL_ACCELERATION_EXT
+DIAG: *** Emitting enum decl for WGL_NEED_PALETTE_EXT
+DIAG: *** Emitting enum decl for WGL_NEED_SYSTEM_PALETTE_EXT
+DIAG: *** Emitting enum decl for WGL_SWAP_LAYER_BUFFERS_EXT
+DIAG: *** Emitting enum decl for WGL_SWAP_METHOD_EXT
+DIAG: *** Emitting enum decl for WGL_NUMBER_OVERLAYS_EXT
+DIAG: *** Emitting enum decl for WGL_NUMBER_UNDERLAYS_EXT
+DIAG: *** Emitting enum decl for WGL_TRANSPARENT_EXT
+DIAG: *** Emitting enum decl for WGL_TRANSPARENT_VALUE_EXT
+DIAG: *** Emitting enum decl for WGL_SHARE_DEPTH_EXT
+DIAG: *** Emitting enum decl for WGL_SHARE_STENCIL_EXT
+DIAG: *** Emitting enum decl for WGL_SHARE_ACCUM_EXT
+DIAG: *** Emitting enum decl for WGL_SUPPORT_GDI_EXT
+DIAG: *** Emitting enum decl for WGL_SUPPORT_OPENGL_EXT
+DIAG: *** Emitting enum decl for WGL_DOUBLE_BUFFER_EXT
+DIAG: *** Emitting enum decl for WGL_STEREO_EXT
+DIAG: *** Emitting enum decl for WGL_PIXEL_TYPE_EXT
+DIAG: *** Emitting enum decl for WGL_COLOR_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_RED_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_RED_SHIFT_EXT
+DIAG: *** Emitting enum decl for WGL_GREEN_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_GREEN_SHIFT_EXT
+DIAG: *** Emitting enum decl for WGL_BLUE_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_BLUE_SHIFT_EXT
+DIAG: *** Emitting enum decl for WGL_ALPHA_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_ALPHA_SHIFT_EXT
+DIAG: *** Emitting enum decl for WGL_ACCUM_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_ACCUM_RED_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_ACCUM_GREEN_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_ACCUM_BLUE_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_ACCUM_ALPHA_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_DEPTH_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_STENCIL_BITS_EXT
+DIAG: *** Emitting enum decl for WGL_AUX_BUFFERS_EXT
+DIAG: *** Emitting enum decl for WGL_NO_ACCELERATION_EXT
+DIAG: *** Emitting enum decl for WGL_GENERIC_ACCELERATION_EXT
+DIAG: *** Emitting enum decl for WGL_FULL_ACCELERATION_EXT
+DIAG: *** Emitting enum decl for WGL_SWAP_EXCHANGE_EXT
+DIAG: *** Emitting enum decl for WGL_SWAP_COPY_EXT
+DIAG: *** Emitting enum decl for WGL_SWAP_UNDEFINED_EXT
+DIAG: *** Emitting enum decl for WGL_TYPE_RGBA_EXT
+DIAG: *** Emitting enum decl for WGL_TYPE_COLORINDEX_EXT
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGetPixelFormatAttribivEXT
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type FLOAT
+DIAG: *** Skipping type FLOAT (already declared)
+DIAG: *** Emitting command decl for wglGetPixelFormatAttribfvEXT
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type FLOAT
+DIAG: *** Skipping type FLOAT (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglChoosePixelFormatEXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_pixel_format_packed_float
+DIAG: *** Emitting enum decl for WGL_TYPE_RGBA_UNSIGNED_FLOAT_EXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_swap_control
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Emitting command decl for wglSwapIntervalEXT
+DIAG: *** Emitting command decl for wglGetSwapIntervalEXT
+DIAG: *** PASS 2: Generating interface for WGL_EXT_swap_control_tear
+DIAG: *** PASS 2: Generating interface for WGL_I3D_digital_video_control
+DIAG: *** Emitting enum decl for WGL_DIGITAL_VIDEO_CURSOR_ALPHA_FRAMEBUFFER_I3D
+DIAG: *** Emitting enum decl for WGL_DIGITAL_VIDEO_CURSOR_ALPHA_VALUE_I3D
+DIAG: *** Emitting enum decl for WGL_DIGITAL_VIDEO_CURSOR_INCLUDED_I3D
+DIAG: *** Emitting enum decl for WGL_DIGITAL_VIDEO_GAMMA_CORRECTED_I3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglGetDigitalVideoParametersI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglSetDigitalVideoParametersI3D
+DIAG: *** PASS 2: Generating interface for WGL_I3D_gamma
+DIAG: *** Emitting enum decl for WGL_GAMMA_TABLE_SIZE_I3D
+DIAG: *** Emitting enum decl for WGL_GAMMA_EXCLUDE_DESKTOP_I3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglGetGammaTableParametersI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglSetGammaTableParametersI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type USHORT
+DIAG: *** Emitting type decl for USHORT
+DIAG: *** Generating required parameter type USHORT
+DIAG: *** Skipping type USHORT (already declared)
+DIAG: *** Generating required parameter type USHORT
+DIAG: *** Skipping type USHORT (already declared)
+DIAG: *** Emitting command decl for wglGetGammaTableI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type USHORT
+DIAG: *** Skipping type USHORT (already declared)
+DIAG: *** Generating required parameter type USHORT
+DIAG: *** Skipping type USHORT (already declared)
+DIAG: *** Generating required parameter type USHORT
+DIAG: *** Skipping type USHORT (already declared)
+DIAG: *** Emitting command decl for wglSetGammaTableI3D
+DIAG: *** PASS 2: Generating interface for WGL_I3D_genlock
+DIAG: *** Emitting enum decl for WGL_GENLOCK_SOURCE_MULTIVIEW_I3D
+DIAG: *** Emitting enum decl for WGL_GENLOCK_SOURCE_EXTERNAL_SYNC_I3D
+DIAG: *** Emitting enum decl for WGL_GENLOCK_SOURCE_EXTERNAL_FIELD_I3D
+DIAG: *** Emitting enum decl for WGL_GENLOCK_SOURCE_EXTERNAL_TTL_I3D
+DIAG: *** Emitting enum decl for WGL_GENLOCK_SOURCE_DIGITAL_SYNC_I3D
+DIAG: *** Emitting enum decl for WGL_GENLOCK_SOURCE_DIGITAL_FIELD_I3D
+DIAG: *** Emitting enum decl for WGL_GENLOCK_SOURCE_EDGE_FALLING_I3D
+DIAG: *** Emitting enum decl for WGL_GENLOCK_SOURCE_EDGE_RISING_I3D
+DIAG: *** Emitting enum decl for WGL_GENLOCK_SOURCE_EDGE_BOTH_I3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglEnableGenlockI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglDisableGenlockI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Emitting command decl for wglIsEnabledGenlockI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGenlockSourceI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGetGenlockSourceI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGenlockSourceEdgeI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGetGenlockSourceEdgeI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGenlockSampleRateI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGetGenlockSampleRateI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGenlockSourceDelayI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglGetGenlockSourceDelayI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglQueryGenlockMaxSourceDelayI3D
+DIAG: *** PASS 2: Generating interface for WGL_I3D_image_buffer
+DIAG: *** Emitting enum decl for WGL_IMAGE_BUFFER_MIN_ACCESS_I3D
+DIAG: *** Emitting enum decl for WGL_IMAGE_BUFFER_LOCK_I3D
+DIAG: *** Generating required parameter type LPVOID
+DIAG: *** Emitting type decl for LPVOID
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglCreateImageBufferI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type LPVOID
+DIAG: *** Skipping type LPVOID (already declared)
+DIAG: *** Emitting command decl for wglDestroyImageBufferI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Generating required parameter type LPVOID
+DIAG: *** Skipping type LPVOID (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglAssociateImageBufferEventsI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type LPVOID
+DIAG: *** Skipping type LPVOID (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Emitting command decl for wglReleaseImageBufferEventsI3D
+DIAG: *** PASS 2: Generating interface for WGL_I3D_swap_frame_lock
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Emitting command decl for wglEnableFrameLockI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Emitting command decl for wglDisableFrameLockI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Emitting command decl for wglIsEnabledFrameLockI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Emitting command decl for wglQueryFrameLockMasterI3D
+DIAG: *** PASS 2: Generating interface for WGL_I3D_swap_frame_usage
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Emitting command decl for wglGetFrameUsageI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Emitting command decl for wglBeginFrameTrackingI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Emitting command decl for wglEndFrameTrackingI3D
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Generating required parameter type DWORD
+DIAG: *** Skipping type DWORD (already declared)
+DIAG: *** Emitting command decl for wglQueryFrameTrackingI3D
+DIAG: *** PASS 2: Generating interface for WGL_NV_DX_interop
+DIAG: *** Emitting enum decl for WGL_ACCESS_READ_ONLY_NV
+DIAG: *** Emitting enum decl for WGL_ACCESS_READ_WRITE_NV
+DIAG: *** Emitting enum decl for WGL_ACCESS_WRITE_DISCARD_NV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Emitting command decl for wglDXSetResourceShareHandleNV
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Emitting command decl for wglDXOpenDeviceNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Emitting command decl for wglDXCloseDeviceNV
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Skipping type GLuint (already declared)
+DIAG: *** Generating required parameter type GLenum
+DIAG: *** Skipping type GLenum (already declared)
+DIAG: *** Generating required parameter type GLenum
+DIAG: *** Skipping type GLenum (already declared)
+DIAG: *** Emitting command decl for wglDXRegisterObjectNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Emitting command decl for wglDXUnregisterObjectNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Generating required parameter type GLenum
+DIAG: *** Skipping type GLenum (already declared)
+DIAG: *** Emitting command decl for wglDXObjectAccessNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Emitting command decl for wglDXLockObjectsNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type HANDLE
+DIAG: *** Skipping type HANDLE (already declared)
+DIAG: *** Emitting command decl for wglDXUnlockObjectsNV
+DIAG: *** PASS 2: Generating interface for WGL_NV_DX_interop2
+DIAG: *** PASS 2: Generating interface for WGL_NV_copy_image
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Skipping type GLuint (already declared)
+DIAG: *** Generating required parameter type GLenum
+DIAG: *** Skipping type GLenum (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type HGLRC
+DIAG: *** Skipping type HGLRC (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Skipping type GLuint (already declared)
+DIAG: *** Generating required parameter type GLenum
+DIAG: *** Skipping type GLenum (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLint
+DIAG: *** Skipping type GLint (already declared)
+DIAG: *** Generating required parameter type GLsizei
+DIAG: *** Emitting type decl for GLsizei
+DIAG: *** Generating required parameter type GLsizei
+DIAG: *** Skipping type GLsizei (already declared)
+DIAG: *** Generating required parameter type GLsizei
+DIAG: *** Skipping type GLsizei (already declared)
+DIAG: *** Emitting command decl for wglCopyImageSubDataNV
+DIAG: *** PASS 2: Generating interface for WGL_NV_delay_before_swap
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type GLfloat
+DIAG: *** Emitting type decl for GLfloat
+DIAG: *** Emitting command decl for wglDelayBeforeSwapNV
+DIAG: *** PASS 2: Generating interface for WGL_NV_float_buffer
+DIAG: *** Emitting enum decl for WGL_FLOAT_COMPONENTS_NV
+DIAG: *** Emitting enum decl for WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_R_NV
+DIAG: *** Emitting enum decl for WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RG_NV
+DIAG: *** Emitting enum decl for WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGB_NV
+DIAG: *** Emitting enum decl for WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGBA_NV
+DIAG: *** Emitting enum decl for WGL_TEXTURE_FLOAT_R_NV
+DIAG: *** Emitting enum decl for WGL_TEXTURE_FLOAT_RG_NV
+DIAG: *** Emitting enum decl for WGL_TEXTURE_FLOAT_RGB_NV
+DIAG: *** Emitting enum decl for WGL_TEXTURE_FLOAT_RGBA_NV
+DIAG: *** PASS 2: Generating interface for WGL_NV_gpu_affinity
+DIAG: *** Emitting enum decl for ERROR_INCOMPATIBLE_AFFINITY_MASKS_NV
+DIAG: *** Emitting enum decl for ERROR_MISSING_AFFINITY_MASK_NV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type HGPUNV
+DIAG: *** Emitting type decl for HGPUNV
+DIAG: *** Emitting command decl for wglEnumGpusNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HGPUNV
+DIAG: *** Skipping type HGPUNV (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type PGPU_DEVICE
+DIAG: *** Generating required dependent type _GPU_DEVICE
+DIAG: *** Emitting type decl for _GPU_DEVICE
+DIAG: *** Emitting type decl for PGPU_DEVICE
+DIAG: *** Emitting command decl for wglEnumGpuDevicesNV
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HGPUNV
+DIAG: *** Skipping type HGPUNV (already declared)
+DIAG: *** Emitting command decl for wglCreateAffinityDCNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type HGPUNV
+DIAG: *** Skipping type HGPUNV (already declared)
+DIAG: *** Emitting command decl for wglEnumGpusFromAffinityDCNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglDeleteDCNV
+DIAG: *** PASS 2: Generating interface for WGL_NV_multisample_coverage
+DIAG: *** Emitting enum decl for WGL_COVERAGE_SAMPLES_NV
+DIAG: *** Emitting enum decl for WGL_COLOR_SAMPLES_NV
+DIAG: *** PASS 2: Generating interface for WGL_NV_present_video
+DIAG: *** Emitting enum decl for WGL_NUM_VIDEO_SLOTS_NV
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HVIDEOOUTPUTDEVICENV
+DIAG: *** Emitting type decl for HVIDEOOUTPUTDEVICENV
+DIAG: *** Emitting command decl for wglEnumerateVideoDevicesNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HVIDEOOUTPUTDEVICENV
+DIAG: *** Skipping type HVIDEOOUTPUTDEVICENV (already declared)
+DIAG: *** Emitting command decl for wglBindVideoDeviceNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Emitting command decl for wglQueryCurrentContextNV
+DIAG: *** PASS 2: Generating interface for WGL_NV_render_depth_texture
+DIAG: *** Emitting enum decl for WGL_BIND_TO_TEXTURE_DEPTH_NV
+DIAG: *** Emitting enum decl for WGL_BIND_TO_TEXTURE_RECTANGLE_DEPTH_NV
+DIAG: *** Emitting enum decl for WGL_DEPTH_TEXTURE_FORMAT_NV
+DIAG: *** Emitting enum decl for WGL_TEXTURE_DEPTH_COMPONENT_NV
+DIAG: *** Emitting enum decl for WGL_DEPTH_COMPONENT_NV
+DIAG: *** PASS 2: Generating interface for WGL_NV_render_texture_rectangle
+DIAG: *** Emitting enum decl for WGL_BIND_TO_TEXTURE_RECTANGLE_RGB_NV
+DIAG: *** Emitting enum decl for WGL_BIND_TO_TEXTURE_RECTANGLE_RGBA_NV
+DIAG: *** Emitting enum decl for WGL_TEXTURE_RECTANGLE_NV
+DIAG: *** PASS 2: Generating interface for WGL_NV_swap_group
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Skipping type GLuint (already declared)
+DIAG: *** Emitting command decl for wglJoinSwapGroupNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Skipping type GLuint (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Skipping type GLuint (already declared)
+DIAG: *** Emitting command decl for wglBindSwapBarrierNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Skipping type GLuint (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Skipping type GLuint (already declared)
+DIAG: *** Emitting command decl for wglQuerySwapGroupNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Skipping type GLuint (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Skipping type GLuint (already declared)
+DIAG: *** Emitting command decl for wglQueryMaxSwapGroupsNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type GLuint
+DIAG: *** Skipping type GLuint (already declared)
+DIAG: *** Emitting command decl for wglQueryFrameCountNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Emitting command decl for wglResetFrameCountNV
+DIAG: *** PASS 2: Generating interface for WGL_NV_vertex_array_range
+DIAG: *** Generating required parameter type GLsizei
+DIAG: *** Skipping type GLsizei (already declared)
+DIAG: *** Generating required parameter type GLfloat
+DIAG: *** Skipping type GLfloat (already declared)
+DIAG: *** Generating required parameter type GLfloat
+DIAG: *** Skipping type GLfloat (already declared)
+DIAG: *** Generating required parameter type GLfloat
+DIAG: *** Skipping type GLfloat (already declared)
+DIAG: *** Emitting command decl for wglAllocateMemoryNV
+DIAG: *** Emitting command decl for wglFreeMemoryNV
+DIAG: *** PASS 2: Generating interface for WGL_NV_video_capture
+DIAG: *** Emitting enum decl for WGL_UNIQUE_ID_NV
+DIAG: *** Emitting enum decl for WGL_NUM_VIDEO_CAPTURE_SLOTS_NV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type HVIDEOINPUTDEVICENV
+DIAG: *** Emitting type decl for HVIDEOINPUTDEVICENV
+DIAG: *** Emitting command decl for wglBindVideoCaptureDeviceNV
+DIAG: *** Generating required parameter type UINT
+DIAG: *** Skipping type UINT (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HVIDEOINPUTDEVICENV
+DIAG: *** Skipping type HVIDEOINPUTDEVICENV (already declared)
+DIAG: *** Emitting command decl for wglEnumerateVideoCaptureDevicesNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HVIDEOINPUTDEVICENV
+DIAG: *** Skipping type HVIDEOINPUTDEVICENV (already declared)
+DIAG: *** Emitting command decl for wglLockVideoCaptureDeviceNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HVIDEOINPUTDEVICENV
+DIAG: *** Skipping type HVIDEOINPUTDEVICENV (already declared)
+DIAG: *** Emitting command decl for wglQueryVideoCaptureDeviceNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HVIDEOINPUTDEVICENV
+DIAG: *** Skipping type HVIDEOINPUTDEVICENV (already declared)
+DIAG: *** Emitting command decl for wglReleaseVideoCaptureDeviceNV
+DIAG: *** PASS 2: Generating interface for WGL_NV_video_output
+DIAG: *** Emitting enum decl for WGL_BIND_TO_VIDEO_RGB_NV
+DIAG: *** Emitting enum decl for WGL_BIND_TO_VIDEO_RGBA_NV
+DIAG: *** Emitting enum decl for WGL_BIND_TO_VIDEO_RGB_AND_DEPTH_NV
+DIAG: *** Emitting enum decl for WGL_VIDEO_OUT_COLOR_NV
+DIAG: *** Emitting enum decl for WGL_VIDEO_OUT_ALPHA_NV
+DIAG: *** Emitting enum decl for WGL_VIDEO_OUT_DEPTH_NV
+DIAG: *** Emitting enum decl for WGL_VIDEO_OUT_COLOR_AND_ALPHA_NV
+DIAG: *** Emitting enum decl for WGL_VIDEO_OUT_COLOR_AND_DEPTH_NV
+DIAG: *** Emitting enum decl for WGL_VIDEO_OUT_FRAME
+DIAG: *** Emitting enum decl for WGL_VIDEO_OUT_FIELD_1
+DIAG: *** Emitting enum decl for WGL_VIDEO_OUT_FIELD_2
+DIAG: *** Emitting enum decl for WGL_VIDEO_OUT_STACKED_FIELDS_1_2
+DIAG: *** Emitting enum decl for WGL_VIDEO_OUT_STACKED_FIELDS_2_1
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type HPVIDEODEV
+DIAG: *** Emitting type decl for HPVIDEODEV
+DIAG: *** Emitting command decl for wglGetVideoDeviceNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPVIDEODEV
+DIAG: *** Skipping type HPVIDEODEV (already declared)
+DIAG: *** Emitting command decl for wglReleaseVideoDeviceNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPVIDEODEV
+DIAG: *** Skipping type HPVIDEODEV (already declared)
+DIAG: *** Generating required parameter type HPBUFFERARB
+DIAG: *** Skipping type HPBUFFERARB (already declared)
+DIAG: *** Emitting command decl for wglBindVideoImageNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPBUFFERARB
+DIAG: *** Skipping type HPBUFFERARB (already declared)
+DIAG: *** Emitting command decl for wglReleaseVideoImageNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPBUFFERARB
+DIAG: *** Skipping type HPBUFFERARB (already declared)
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Emitting command decl for wglSendPbufferToVideoNV
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HPVIDEODEV
+DIAG: *** Skipping type HPVIDEODEV (already declared)
+DIAG: *** Emitting command decl for wglGetVideoInfoNV
+DIAG: *** PASS 2: Generating interface for WGL_OML_sync_control
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Emitting type decl for INT64
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Emitting command decl for wglGetSyncValuesOML
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type INT32
+DIAG: *** Emitting type decl for INT32
+DIAG: *** Generating required parameter type INT32
+DIAG: *** Skipping type INT32 (already declared)
+DIAG: *** Emitting command decl for wglGetMscRateOML
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Emitting command decl for wglSwapBuffersMscOML
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Emitting command decl for wglSwapLayerBuffersMscOML
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Emitting command decl for wglWaitForMscOML
+DIAG: *** Generating required parameter type BOOL
+DIAG: *** Skipping type BOOL (already declared)
+DIAG: *** Generating required parameter type HDC
+DIAG: *** Skipping type HDC (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Generating required parameter type INT64
+DIAG: *** Skipping type INT64 (already declared)
+DIAG: *** Emitting command decl for wglWaitForSbcOML
