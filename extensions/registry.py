@@ -3428,6 +3428,18 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_primitive_restart.txt',
     },
+    'GL_NV_query_resource' : {
+        'number' : 511,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_query_resource.txt',
+    },
+    'GL_NV_query_resource_tag' : {
+        'number' : 512,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_query_resource.txt',
+    },
     'GL_NV_read_buffer' : {
         'esnumber' : 93,
         'flags' : { 'public' },
