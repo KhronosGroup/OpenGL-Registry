@@ -3438,7 +3438,7 @@ registry = {
         'number' : 512,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
-        'url' : 'extensions/NV/NV_query_resource.txt',
+        'url' : 'extensions/NV/NV_query_resource_tag.txt',
     },
     'GL_NV_read_buffer' : {
         'esnumber' : 93,
