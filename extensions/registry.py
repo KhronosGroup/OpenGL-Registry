@@ -167,6 +167,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/AMD/AMD_shader_explicit_vertex_parameter.txt',
     },
+    'GL_AMD_shader_image_load_store_lod' : {
+        'number' : 513,
+        'flags' : { 'public' },
+        'supporters' : { 'AMD' },
+        'url' : 'extensions/AMD/AMD_shader_image_load_store_lod.txt',
+    },
     'GL_AMD_shader_stencil_export' : {
         'number' : 382,
         'flags' : { 'public' },
