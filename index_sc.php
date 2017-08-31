@@ -12,7 +12,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
     related material including the enumerant registry (shared between
     OpenGL, OpenGL ES, and OpenGL SC).
 
-<h6> OpenGL SC Core API Specification, Headers, and Documentation </h6>
+<h2> OpenGL SC Core API Specification, Headers, and Documentation </h2>
 
 <p> The current version of OpenGL SC is OpenGL SC 2.0. </p>
 
@@ -32,9 +32,11 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="http://www.khronos.org/registry/EGL/"> EGL Registry </a>.
 <li> The headers are generated from the <a href="index.php#repository">
      OpenGL-Registry </a> github repository.
+<li> <a href="https://www.khronos.org/developers/reference-cards">
+     OpenGL SC 2.0 Quick Reference Card. </a> </li>
 </ul>
 
-<h6> Older versions of OpenGL SC are also available </h6>
+<h2> Older versions of OpenGL SC are also available </h2>
 
 <p> OpenGL SC 1.0.1 </p>
 
@@ -60,8 +62,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      (June 6, 2005). </li>
 </ul>
 
-<h6> <a name="specfiles"></a> XML API Registry of Reserved Enumerants
-     and Functions</h6>
+<h2> <a name="specfiles"></a> XML API Registry of Reserved Enumerants
+     and Functions</h2>
 
 <p> The API Registry is a set of XML documents defining the APIs and
     enumerants used in OpenGL, OpenGL ES, OpenGL SC, EGL, and related APIs,

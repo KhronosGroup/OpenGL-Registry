@@ -42,42 +42,47 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <hr>
 
-<h6> <a name="apispecs"></a>
+<h2> <a name="apispecs"></a>
      Current OpenGL API, OpenGL Shading Language and GLX Specifications and
-     Reference Pages </h6>
+     Reference Pages </h2>
 
 <ul>
-<li> <b> Current Specifications (OpenGL 4.5) </b>
-<li> OpenGL 4.5 API Specification (updated June 29, 2017)
+<li> <b> Current Specifications (OpenGL 4.6) </b>
+<li> OpenGL 4.6 API Specification (updated July 30, 2017)
     <ul>
-    <li> <a href="specs/gl/glspec45.core.pdf"> Core Profile Specification
+    <li> <a href="specs/gl/glspec46.core.pdf"> Core Profile Specification
          </a> </li>
-    <li> <a href="specs/gl/glspec45.core.withchanges.pdf"> Core Profile
+        <!--
+    <li> <a href="specs/gl/glspec46.core.withchanges.pdf"> Core Profile
          Specification with changes marked </a> </li>
-    <li> <a href="specs/gl/glspec45.compatibility.pdf"> Compatibility Profile
+        -->
+    <li> <a href="specs/gl/glspec46.compatibility.pdf"> Compatibility Profile
          Specification </a> </li>
-    <li> <a href="specs/gl/glspec45.compatibility.withchanges.pdf">
+        <!--
+    <li> <a href="specs/gl/glspec46.compatibility.withchanges.pdf">
          Compatibility Profile Specification with changes marked </a>
          </li>
+        -->
     </ul> </li>
-<li> OpenGL Shading Language 4.50 Specification (updated May 9, 2017)
+<li> OpenGL Shading Language 4.60 Specification (updated July 23, 2017)
     <ul>
-    <li> <a href="specs/gl/GLSLangSpec.4.50.pdf"> GLSL Specification </a>
+    <li> <a href="specs/gl/GLSLangSpec.4.60.pdf"> GLSL Specification </a>
          </li>
-    <li> <a href="specs/gl/GLSLangSpec.4.50.diff.pdf"> GLSL Specification
+    <li> <a href="specs/gl/GLSLangSpec.4.60.diff.pdf"> GLSL Specification
          with changes marked </a> </li>
     </ul> </li>
 <li> <a href="http://www.opengl.org/sdk/docs/man4/"> OpenGL 4.5 API and
-     Shading Language Reference Pages </a> </li>
-<li> <a href="http://www.opengl.org/sdk/docs/reference_card/opengl45-reference-card.pdf">
-     OpenGL 4.5 Quick Reference Card </a> </li>
+     Shading Language Reference Pages </a> (not yet updated) </li>
 
-<li> <b> OpenGL X Window System Binding (GLX 1.4) Specification </b>
-<li> <a href="specs/gl/glx1.4.pdf"> GLX 1.4 Specification </a>
+<li> <b> OpenGL X Window System Binding (GLX 1.4) Specification </b> </li>
+<li> <a href="specs/gl/glx1.4.pdf"> GLX 1.4 Specification </a> </li>
+
+<li> <a href="https://www.khronos.org/developers/reference-cards"> OpenGL
+     Quick Reference Card </a> (available for different API versions). </li>
 </ul>
 
 
-<h6> <a name="headers"></a> API and Extension Header Files </h6>
+<h2> <a name="headers"></a> API and Extension Header Files </h2>
 
 <p> Because extensions vary from platform to platform and driver to
     driver, OpenGL developers can't expect interfaces for all extensions
@@ -108,19 +113,24 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <!-- Older Material -->
 
-<h6> <a name="oldspecs"></a>
+<h2> <a name="oldspecs"></a>
      Older OpenGL and GLX Specifications and Reference Pages
-     </h6>
+     </h2>
 
 <ul>
+
+    <!-- Does not link to diff/withchanges specs, yet -->
+<li> <b> OpenGL 4.5 </b>
+<li> <a href="specs/gl/glspec45.core.pdf"> (API Core Profile) </a> </li>
+<li> <a href="specs/gl/glspec45.compatibility.pdf"> (API Compatibility Profile) </a> </li>
+<li> <a href="specs/gl/GLSLangSpec.4.50.pdf"> OpenGL Shading Language
+     4.50 Specification </a> </li>
 
 <li> <b> OpenGL 4.4 </b>
 <li> <a href="specs/gl/glspec44.core.pdf"> (API Core Profile) </a> </li>
 <li> <a href="specs/gl/glspec44.compatibility.pdf"> (API Compatibility Profile) </a> </li>
 <li> <a href="specs/gl/GLSLangSpec.4.40.pdf"> OpenGL Shading Language
      4.40 Specification </a> </li>
-<li> <a href="http://www.opengl.org/sdk/docs/reference_card/opengl44-quick-reference-card.pdf">
-     OpenGL 4.4 Quick Reference Card </a> </li>
 
 <li> <b> OpenGL 4.3 </b>
 <li> <a href="specs/gl/glspec43.core.pdf"> (API Core Profile) </a> </li>
@@ -215,20 +225,20 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 </ul>
 
-<h6> <a name="abi"></a>
-    OpenGL Application Binary Interface for Linux </h6>
+<h2> <a name="abi"></a>
+    OpenGL Application Binary Interface for Linux </h2>
 
 <p> The <a href="ABI/">OpenGL Application Binary Interface for Linux</a> is
     also available. Note that the ABI is extremely old and of little use
     today. </p>
 
-<h6> <a name="arbextspecs"></a>
-     ARB Extensions by number</h6>
+<h2> <a name="arbextspecs"></a>
+     ARB Extensions by number</h2>
 
 <?php include("extensions/arbext.php"); ?>
 
-<h6> <a name="otherextspecs"></a>
-     Vendor and EXT Extensions by number</h6>
+<h2> <a name="otherextspecs"></a>
+     Vendor and EXT Extensions by number</h2>
 
 <?php include("extensions/glext.php"); ?>
 

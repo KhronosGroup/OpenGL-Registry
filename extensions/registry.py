@@ -167,6 +167,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/AMD/AMD_shader_explicit_vertex_parameter.txt',
     },
+    'GL_AMD_shader_image_load_store_lod' : {
+        'number' : 513,
+        'flags' : { 'public' },
+        'supporters' : { 'AMD' },
+        'url' : 'extensions/AMD/AMD_shader_image_load_store_lod.txt',
+    },
     'GL_AMD_shader_stencil_export' : {
         'number' : 382,
         'flags' : { 'public' },
@@ -855,6 +861,12 @@ registry = {
         'supporters' : { 'ARB' },
         'url' : 'extensions/ARB/ARB_point_sprite.txt',
     },
+    'GL_ARB_polygon_offset_clamp' : {
+        'arbnumber' : 193,
+        'flags' : { 'public' },
+        'supporters' : { 'ARB' },
+        'url' : 'extensions/ARB/ARB_polygon_offset_clamp.txt',
+    },
     'GL_ARB_post_depth_coverage' : {
         'arbnumber' : 180,
         'flags' : { 'public' },
@@ -1066,6 +1078,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/ARB/ARB_sparse_texture_clamp.txt',
     },
+    'GL_ARB_spirv_extensions' : {
+        'arbnumber' : 194,
+        'flags' : { 'public' },
+        'supporters' : { 'ARB' },
+        'url' : 'extensions/ARB/ARB_spirv_extensions.txt',
+    },
     'GL_ARB_stencil_texturing' : {
         'arbnumber' : 138,
         'flags' : { 'public' },
@@ -1159,6 +1177,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'ARB' },
         'url' : 'extensions/ARB/ARB_texture_env_dot3.txt',
+    },
+    'GL_ARB_texture_filter_anisotropic' : {
+        'arbnumber' : 195,
+        'flags' : { 'public' },
+        'supporters' : { 'ARB' },
+        'url' : 'extensions/ARB/ARB_texture_filter_anisotropic.txt',
     },
     'GL_ARB_texture_filter_minmax' : {
         'arbnumber' : 188,
@@ -2288,6 +2312,12 @@ registry = {
         'url' : 'extensions/EXT/EXT_texture_compression_astc_decode_mode.txt',
         'alias' : { 'GL_EXT_texture_compression_astc_decode_mode_rgb9e5' },
     },
+    'GL_EXT_texture_compression_bptc' : {
+        'esnumber' : 287,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/EXT/EXT_texture_compression_bptc.txt',
+    },
     'GL_EXT_texture_compression_dxt1' : {
         'number' : 309,
         'esnumber' : 49,
@@ -2303,6 +2333,7 @@ registry = {
     },
     'GL_EXT_texture_compression_rgtc' : {
         'number' : 332,
+        'esnumber' : 286,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/EXT/EXT_texture_compression_rgtc.txt',
@@ -2313,6 +2344,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'INTEL', 'NVIDIA' },
         'url' : 'extensions/EXT/EXT_texture_compression_s3tc.txt',
+    },
+    'GL_EXT_texture_compression_s3tc_srgb' : {
+        'esnumber' : 289,
+        'flags' : { 'public' },
+        'supporters' : { 'ANGLE' },
+        'url' : 'extensions/EXT/EXT_texture_compression_s3tc_srgb.txt',
     },
     'GL_EXT_texture_cube_map' : {
         'flags' : { 'incomplete' },
@@ -2787,6 +2824,12 @@ registry = {
         'esnumber' : 243,
         'flags' : { 'public' },
         'url' : 'extensions/KHR/KHR_no_error.txt',
+    },
+    'GL_KHR_parallel_shader_compile' : {
+        'arbnumber' : 192,
+        'esnumber' : 288,
+        'flags' : { 'public' },
+        'url' : 'extensions/KHR/KHR_parallel_shader_compile.txt',
     },
     'GL_KHR_robust_buffer_access_behavior' : {
         'arbnumber' : 169,
@@ -3390,6 +3433,18 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_primitive_restart.txt',
+    },
+    'GL_NV_query_resource' : {
+        'number' : 511,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_query_resource.txt',
+    },
+    'GL_NV_query_resource_tag' : {
+        'number' : 512,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_query_resource_tag.txt',
     },
     'GL_NV_read_buffer' : {
         'esnumber' : 93,
@@ -5132,6 +5187,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/EXT/WGL_EXT_swap_control_tear.txt',
+    },
+    'GL_EXT_clip_control' : {
+        'esnumber' : 290,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/EXT/EXT_clip_control.txt',
     },
     'WGL_I3D_digital_video_control' : {
         'number' : 250,

@@ -15,6 +15,7 @@ Contributors
     Piers Daniell, NVIDIA
     Daniel Rakos, AMD
     Christophe Riccio, OpenGL Garden (!)
+    Daniel Koch, NVIDIA
 
 Notice
 
@@ -28,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date: 5 June 2013
-    Revision: 3
+    Last Modified Date: 29 May 2017
+    Revision: 4
 
 Number
 
@@ -103,12 +104,6 @@ Specification and Drawing Commands"
         The index of the draw (<i> in the above pseudo-code) may be read by
     a vertex shader as <gl_DrawIDARB>, as described in Section 11.1.3.9.
 
-    Add the following after the pseudo-code describing
-    MultiDrawElementsInstancedBaseInstance on p.312:
-
-        The index of the draw (<i> in the above pseudo-code) may be read by
-    a vertex shader as <gl_DrawIDARB>, as described in Section 11.1.3.9.
-
     Add the following after the pseudo-code describing MultiDrawElements on
     p.313:
 
@@ -133,7 +128,7 @@ Vertex Processing"
     In Section 11.1.1, "Vertex Attributes", in the description of
     GetActiveAttrib, state that gl_DrawIDARB is enumerated:
 
-        For GetActiveAttribute, all active vertex shader input variables are
+        For GetActiveAttrib, all active vertex shader input variables are
     enumerated, including the special built-in inputs gl_VertexID,
     gl_BaseVertexARB, gl_InstanceID, gl_BaseInstanceARB, and gl_DrawIDARB.
 
@@ -296,4 +291,7 @@ Revision History
                                 variables. gl_DrawIDARB is unmodified.
                                 Issues 1, 2, 5 and 6 become non-issues as
                                 a result.
+     4    05/29/2017  dgkoch    remove edit reference to non-existant
+                                MultiDrawElementsInstancedBaseInstance function.
+                                Fix typos.
 

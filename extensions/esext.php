@@ -593,4 +593,14 @@
 </li>
 <li value=285><a href="extensions/NV/NV_blend_minmax_factor.txt">GL_NV_blend_minmax_factor</a>
 </li>
+<li value=286><a href="extensions/EXT/EXT_texture_compression_rgtc.txt">GL_EXT_texture_compression_rgtc</a>
+</li>
+<li value=287><a href="extensions/EXT/EXT_texture_compression_bptc.txt">GL_EXT_texture_compression_bptc</a>
+</li>
+<li value=288><a href="extensions/KHR/KHR_parallel_shader_compile.txt">GL_KHR_parallel_shader_compile</a>
+</li>
+<li value=289><a href="extensions/EXT/EXT_texture_compression_s3tc_srgb.txt">GL_EXT_texture_compression_s3tc_srgb</a>
+</li>
+<li value=290><a href="extensions/EXT/EXT_clip_control.txt">GL_EXT_clip_control</a>
+</li>
 </ol>

@@ -19,8 +19,8 @@ API: </p>
 <li> <a href="index_sc.php">OpenGL SC Registry Index</a> </li>
 </ul>
 
-<h6> <a name="repository"></a>
-     OpenGL-Registry Repository </h6>
+<h2> <a name="repository"></a>
+     OpenGL-Registry Repository </h2>
 
 <p> The web registry is backed by a <a
     href="https://github.com/KhronosGroup/OpenGL-Registry"> github

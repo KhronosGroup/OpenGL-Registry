@@ -957,4 +957,10 @@
 </li>
 <li value=510><a href="extensions/NV/NV_blend_minmax_factor.txt">GL_NV_blend_minmax_factor</a>
 </li>
+<li value=511><a href="extensions/NV/NV_query_resource.txt">GL_NV_query_resource</a>
+</li>
+<li value=512><a href="extensions/NV/NV_query_resource_tag.txt">GL_NV_query_resource_tag</a>
+</li>
+<li value=513><a href="extensions/AMD/AMD_shader_image_load_store_lod.txt">GL_AMD_shader_image_load_store_lod</a>
+</li>
 </ol>
