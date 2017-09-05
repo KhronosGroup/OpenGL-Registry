@@ -17,7 +17,7 @@
 
 # python3 is required. Sorry, python2 dudes.
 
-PYTHON = python3
+PYTHON = python
 SCRIPTS = registry.py makeindex.py
 
 all: arbext.php esext.php glext.php
