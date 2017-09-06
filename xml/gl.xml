@@ -26313,6 +26313,7 @@ typedef unsigned int GLhandleARB;
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <alias name="glTexBuffer"/>
+            <glx type="render" opcode="367"/>
         </command>
         <command>
             <proto>void <name>glTexBufferEXT</name></proto>

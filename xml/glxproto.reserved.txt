@@ -138,6 +138,7 @@ OpenGL Rendering Opcodes (16 Bits)
        355     363  OpenGL 3.0 core
        364     365  NV_primitive_restart
        366          ARB_uniform_buffer_object
+       367          ARB_texture_buffer_object
   1008-1023 Reserved to IBM (unknown usage)
   1024-1039 Reserved to HP (originally Compaq) (unknown usage)
   1040-2047 Unused
