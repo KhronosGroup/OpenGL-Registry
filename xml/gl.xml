@@ -12635,6 +12635,7 @@ typedef unsigned int GLhandleARB;
             <param group="BufferOffset"><ptype>GLintptr</ptype> <name>readOffset</name></param>
             <param group="BufferOffset"><ptype>GLintptr</ptype> <name>writeOffset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
+            <glx type="single" opcode="221"/>
         </command>
         <command>
             <proto>void <name>glCopyBufferSubDataNV</name></proto>

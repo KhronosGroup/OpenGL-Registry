@@ -105,6 +105,7 @@ OpenGL Single Opcodes (8 Bits)
        210     212  EXT_draw_buffers2
        213     214  OpenGL 3.0 core
        215     220  ARB_uniform_buffer_object
+       221          ARB_copy_buffer
 
 OpenGL Rendering Opcodes (16 Bits)
 ==================================
