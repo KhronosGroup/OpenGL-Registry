@@ -104,6 +104,7 @@ OpenGL Single Opcodes (8 Bits)
        206     209  ARB_vertex_array_object
        210     212  EXT_draw_buffers2
        213     214  OpenGL 3.0 core
+       215     220  ARB_uniform_buffer_object
 
 OpenGL Rendering Opcodes (16 Bits)
 ==================================
@@ -136,6 +137,7 @@ OpenGL Rendering Opcodes (16 Bits)
        352     354  EXT_draw_buffers2
        355     363  OpenGL 3.0 core
        364     365  NV_primitive_restart
+       366          ARB_uniform_buffer_object
   1008-1023 Reserved to IBM (unknown usage)
   1024-1039 Reserved to HP (originally Compaq) (unknown usage)
   1040-2047 Unused

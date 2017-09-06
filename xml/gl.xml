@@ -15777,6 +15777,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
             <param len="bufSize"><ptype>GLchar</ptype> *<name>uniformBlockName</name></param>
+            <glx type="single" opcode="220"/>
         </command>
         <command>
             <proto>void <name>glGetActiveUniformBlockiv</name></proto>
@@ -15784,6 +15785,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>uniformBlockIndex</name></param>
             <param group="UniformBlockPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(program,uniformBlockIndex,pname)"><ptype>GLint</ptype> *<name>params</name></param>
+            <glx type="single" opcode="219"/>
         </command>
         <command>
             <proto>void <name>glGetActiveUniformName</name></proto>
@@ -15792,6 +15794,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
             <param len="bufSize"><ptype>GLchar</ptype> *<name>uniformName</name></param>
+            <glx type="single" opcode="217"/>
         </command>
         <command>
             <proto>void <name>glGetActiveUniformsiv</name></proto>
@@ -15800,6 +15803,7 @@ typedef unsigned int GLhandleARB;
             <param len="uniformCount">const <ptype>GLuint</ptype> *<name>uniformIndices</name></param>
             <param group="UniformPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(uniformCount,pname)"><ptype>GLint</ptype> *<name>params</name></param>
+            <glx type="single" opcode="216"/>
         </command>
         <command>
             <proto>void <name>glGetActiveVaryingNV</name></proto>
@@ -18405,6 +18409,7 @@ typedef unsigned int GLhandleARB;
             <proto><ptype>GLuint</ptype> <name>glGetUniformBlockIndex</name></proto>
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param len="COMPSIZE()">const <ptype>GLchar</ptype> *<name>uniformBlockName</name></param>
+            <glx type="single" opcode="218"/>
         </command>
         <command>
             <proto><ptype>GLint</ptype> <name>glGetUniformBufferSizeEXT</name></proto>
@@ -18417,6 +18422,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>uniformCount</name></param>
             <param len="COMPSIZE(uniformCount)">const <ptype>GLchar</ptype> *const*<name>uniformNames</name></param>
             <param len="COMPSIZE(uniformCount)"><ptype>GLuint</ptype> *<name>uniformIndices</name></param>
+            <glx type="single" opcode="215"/>
         </command>
         <command>
             <proto><ptype>GLint</ptype> <name>glGetUniformLocation</name></proto>
@@ -28694,6 +28700,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLuint</ptype> <name>uniformBlockIndex</name></param>
             <param><ptype>GLuint</ptype> <name>uniformBlockBinding</name></param>
+            <glx type="render" opcode="366"/>
         </command>
         <command>
             <proto>void <name>glUniformBufferEXT</name></proto>
