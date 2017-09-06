@@ -545,3 +545,151 @@ OpenGL 2.1
 
         4           20+4*count*4*3  rendering command length
         4           310             rendering command opcode
+
+OpenGL 3.0
+----------
+
+    The following rendering commands are sent to the sever as part of a
+    glXRender request:
+
+        BindBufferRange
+
+            2           32              rendering command length
+            2           355             rendering command opcode
+            8           INT64           offset
+            8           INT64           size
+            4           ENUM            target
+            4           CARD32          index
+            4           CARD32          buffer
+
+        BindBufferBase
+
+            2           16              rendering command length
+            2           356             rendering command opcode
+            4           ENUM            target
+            4           CARD32          index
+            4           CARD32          buffer
+
+        BeginTransformFeedback
+
+            2           8               rendering command length
+            2           357             rendering command opcode
+            4           ENUM            primitiveMode
+
+        EndTransformFeedback
+
+            2           4               rendering command length
+            2           358             rendering command opcode
+
+        ClearBufferfi
+
+            2           20              rendering command length
+            2           360             rendering command opcode
+            4           ENUM            buffer
+            4           CARD32          drawbuffer
+            4           FLOAT32         depth
+            4           CARD32          stencil
+
+        ClearBufferfv
+
+            2           12+(4*n)        rendering command length
+            2           361             rendering command opcode
+            4           ENUM            buffer
+                        0x1800   n=4    GL_COLOR
+                        0x1801   n=1    GL_STENCIL
+                        0x1802   n=1    GL_DEPTH
+                        else     n=0
+            4           CARD32          drawbuffer
+            4*n         LISTofFLOAT32   value
+
+        ClearBufferiv
+
+            2           12+(4*n)        rendering command length
+            2           362             rendering command opcode
+            4           ENUM            buffer
+                        0x1800   n=4    GL_COLOR
+                        0x1801   n=1    GL_STENCIL
+                        0x1802   n=1    GL_DEPTH
+                        else     n=0
+            4           CARD32          drawbuffer
+            4*n         LISTofINT32     value
+
+        ClearBufferuiv
+
+            2           12+(4*n)        rendering command length
+            2           363             rendering command opcode
+            4           ENUM            buffer
+                        0x1800   n=4    GL_COLOR
+                        0x1801   n=1    GL_STENCIL
+                        0x1802   n=1    GL_DEPTH
+                        else     n=0
+            4           CARD32          drawbuffer
+            4*n         LISTofCARD32    value
+
+    The following rendering commands can be sent in a glXRender
+    or glXRenderLarge request.
+
+        TransformFeedbackVaryings
+
+            2      16+(n*4)+s+p    rendering command length
+            2      359             rendering command opcode
+            4      CARD32          program
+            4      INT32           count
+            4      ENUM            buffermode
+            n*4    LISTofINT32     lengths[n], n = count
+            s      LISTofCHAR      varyings, s = sum of all entries in the lengths
+                                   array
+            p                      unused, p = pad(s)
+
+    If the command is encoded in a glXRenderLarge request, the command
+    opcode and command length fields are expanded to 4 bytes each.
+
+            4      20+(n*4)+s+p    rendering command length
+            4      359             rendering command opcode
+
+    lengths[i] is calculated as strlen(varyings[i]) + 1. The NUL terminator
+    is included when sending the varyings.
+
+    The following single commands are sent to the server as part of a
+    glXSingle request:
+
+        GetTransformFeedbackVarying
+
+            1      CARD8           opcode(X assigned)
+            1      213             GLX opcode
+            2      5               request length
+            4      GLX_CONTEXT_TAG context tag
+            4      CARD32          program
+            4      CARD32          index
+            4      CARD32          bufsize
+            =>
+            1      1               reply
+            1                      unused
+            2      CARD16          sequence number
+            4      m               reply length, m = (n == 0 ? 0 : (n + p) / 4)
+            4                      unused
+            4      n-1             length
+            4      INT32           size
+            4      INT32           type
+            8                      unused
+            n      LISTofCHAR      name, n = strlen(name)+1
+            p                      unused, p = pad(m)
+
+        GetStringi
+
+            1           CARD8           opcode (X assigned)
+            1           214             GLX opcode
+            2           4               request length
+            4           GLX_CONTEXT_TAG context tag
+            4           ENUM            name
+            4           CARD32          index
+          =>
+            1           1               reply
+            1           1               unused
+            2           CARD16          sequence number
+            4           m               reply length, m = (n + p) / 4
+            4                           unused
+            4           CARD32          n
+            16                          unused
+            n           STRING8         string
+            p                           unused, p=pad(n)
