@@ -23148,9 +23148,11 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glPrimitiveRestartIndexNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
+            <glx type="render" opcode="365"/>
         </command>
         <command>
             <proto>void <name>glPrimitiveRestartNV</name></proto>
+            <glx type="render" opcode="364"/>
         </command>
         <command>
             <proto>void <name>glPrioritizeTextures</name></proto>
