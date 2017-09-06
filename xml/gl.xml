@@ -11873,6 +11873,7 @@ typedef unsigned int GLhandleARB;
             <param group="Boolean"><ptype>GLboolean</ptype> <name>b</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>a</name></param>
             <alias name="glColorMaski"/>
+            <glx type="render" opcode="352"/>
         </command>
         <command>
             <proto>void <name>glColorMaski</name></proto>
@@ -13791,6 +13792,7 @@ typedef unsigned int GLhandleARB;
             <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glDisablei"/>
+            <glx type="render" opcode="354"/>
         </command>
         <command>
             <proto>void <name>glDisableVariantClientStateEXT</name></proto>
@@ -14452,6 +14454,7 @@ typedef unsigned int GLhandleARB;
             <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glEnablei"/>
+            <glx type="render" opcode="353"/>
         </command>
         <command>
             <proto>void <name>glEnableVariantClientStateEXT</name></proto>
@@ -15842,6 +15845,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param group="Boolean" len="COMPSIZE(target)"><ptype>GLboolean</ptype> *<name>data</name></param>
             <alias name="glGetBooleani_v"/>
+            <glx type="single" opcode="210"/>
         </command>
         <command>
             <proto>void <name>glGetBooleani_v</name></proto>
@@ -16560,6 +16564,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLint</ptype> *<name>data</name></param>
             <alias name="glGetIntegeri_v"/>
+            <glx type="single" opcode="211"/>
         </command>
         <command>
             <proto>void <name>glGetIntegeri_v</name></proto>
@@ -19477,6 +19482,7 @@ typedef unsigned int GLhandleARB;
             <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glIsEnabledi"/>
+            <glx type="single" opcode="212"/>
         </command>
         <command>
             <proto group="Boolean"><ptype>GLboolean</ptype> <name>glIsEnabledi</name></proto>
