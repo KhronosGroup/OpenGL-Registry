@@ -23,7 +23,7 @@ Notice
 
 Status
 
-    Draft on September 7, 2017.
+    Completed on September 7, 2017.
 
 Version
 
