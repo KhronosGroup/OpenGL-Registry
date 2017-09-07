@@ -25,8 +25,8 @@ Status
 
 Version
 
-    Last Modified Date: September 4, 2017
-    Revision 1
+    Last Modified Date: September 7, 2017
+    Revision 2
 
 Number
 
@@ -34,7 +34,7 @@ Number
 
 Dependencies
 
-    OpenGL ES 3.0 is required.
+    OpenGL ES 2.0 is required.
 
     This extension is written against the OpenGL ES 3.2 Specification.
 
@@ -103,6 +103,17 @@ Errors
     TEXTURE_WRAP_T, or TEXTURE_WRAP_R parameter is set to REPEAT,
     MIRRORED_REPEAT, or MIRROR_CLAMP_TO_EDGE.
 
+Dependencies on EXT_texture3D or equivalent
+
+    If EXT_texture3D or equivalent functionality is not implemented,
+    then the references to clamping of 3D textures in this file are
+    invalid, and references to TEXTURE_WRAP_R should be ignored.
+
+Dependencies on OpenGL ES 3.0 or equivalent
+
+    If OpenGL ES 3.0 or equivalent is not supported, then ignore all
+    references to sampler objects and SamplerParameter* functions.
+
 New State
 
     Only the type information changes for these parameters:
@@ -138,7 +149,10 @@ Issues
 
 Revision History
 
-    Revision 1, September 5, 2017 (criccio)
+    Revision 2 - September 7, 2017 (criccio)
+    - Require OpenGL ES 2.0 instead of OpenGL ES 3.0
+
+    Revision 1 - September 5, 2017 (criccio)
     - Initial EXT version based on ARB_texture_mirror_clamp_to_edge
 
 
