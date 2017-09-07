@@ -138,14 +138,7 @@ New Implementation Dependent State
 
 Issues
 
-    1. Should we include MIRROR_CLAMP for compatibility profiles?
-    What about MIRROR_CLAMP_TO_BORDER? (And more importantly can all
-    vendors support it?)
-
-    RESOLVED. No. Some vendors stated that they can't support
-    MIRROR_CLAMP_TO_BORDER and MIRROR_CLAMP (although it's not clear if
-    they'd ever ship a compatibility profile with this extension), but
-    regardless we'll leave them out of this extension.
+    None
 
 Revision History
 
