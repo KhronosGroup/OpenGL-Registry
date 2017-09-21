@@ -1773,6 +1773,8 @@ typedef unsigned __int64 uint64_t;
                 <enum name="GLX_VENDOR_NAMES_EXT"/>
             </require>
         </extension>
+        <extension name="GLX_EXT_no_config_context" supported="glx">
+        </extension>
         <extension name="GLX_EXT_stereo_tree" supported="glx">
             <require>
                 <type name="GLXStereoNotifyEventEXT"/>
