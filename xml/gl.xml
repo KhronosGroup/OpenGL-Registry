@@ -7741,6 +7741,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8BB5" name="GL_VERTEX_PROGRAM_CALLBACK_MESA"/>
         <enum value="0x8BB6" name="GL_VERTEX_PROGRAM_CALLBACK_FUNC_MESA"/>
         <enum value="0x8BB7" name="GL_VERTEX_PROGRAM_CALLBACK_DATA_MESA"/>
+        <enum value="0x8BB8" name="GL_TILE_RASTER_ORDER_FIXED_MESA"/>
+        <enum value="0x8BB9" name="GL_TILE_RASTER_ORDER_INCREASING_X_MESA"/>
+        <enum value="0x8BBA" name="GL_TILE_RASTER_ORDER_INCREASING_Y_MESA"/>
     </enums>
 
     <enums namespace="GL" start="0x8BC0" end="0x8BFF" vendor="QCOM" comment="Reassigned from AMD to QCOM">
@@ -45627,6 +45630,13 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_MESA_shader_integer_functions" supported="gl|gles2"/>
+        <extension name="GL_MESA_tile_raster_order" supported="gl">
+            <require>
+                <enum name="GL_TILE_RASTER_ORDER_FIXED_MESA"/>
+                <enum name="GL_TILE_RASTER_ORDER_INCREASING_X_MESA"/>
+                <enum name="GL_TILE_RASTER_ORDER_INCREASING_Y_MESA"/>
+            </require>
+        </extension>
         <extension name="GL_MESA_window_pos" supported="gl">
             <require>
                 <command name="glWindowPos2dMESA"/>

@@ -2926,6 +2926,13 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/GLX_MESA_swap_control.txt',
     },
+    'GL_MESA_tile_raster_order' : {
+        'number' : 515,
+        'esnumber' : 292,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_tile_raster_order.txt',
+    },
     'GL_MESA_window_pos' : {
         'number' : 197,
         'flags' : { 'public' },
