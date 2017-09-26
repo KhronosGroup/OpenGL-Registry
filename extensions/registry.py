@@ -2915,6 +2915,12 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/MESA_shader_integer_functions.txt',
     },
+    'GLX_MESA_swap_control' : {
+        'number' : 514,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/GLX_MESA_swap_control.txt',
+    },
     'GL_MESA_window_pos' : {
         'number' : 197,
         'flags' : { 'public' },
