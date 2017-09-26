@@ -465,7 +465,7 @@ typedef unsigned __int64 uint64_t;
     <enums namespace="GLX" start="0x31B3" end="0x31B3" vendor="ARB" comment="Shared with WGL.">
         <enum value="0x31B3" name="GLX_CONTEXT_OPENGL_NO_ERROR_ARB"/>
     </enums>
-    
+
     <enums namespace="GLX" start="0x8000" end="0x804F" vendor="ARB">
         <enum value="0x8000"        name="GLX_NONE"                                 comment="Attribute value"/>
         <enum value="0x8001"        name="GLX_SLOW_CONFIG"                          comment="CONFIG_CAVEAT attribute value"/>
@@ -1072,6 +1072,9 @@ typedef unsigned __int64 uint64_t;
             <param>unsigned long *<name>mask</name></param>
         </command>
         <command>
+            <proto>int <name>glXGetSwapIntervalMESA</name></proto>
+        </command>
+        <command>
             <proto><ptype>Bool</ptype> <name>glXGetSyncValuesOML</name></proto>
             <param><ptype>Display</ptype> *<name>dpy</name></param>
             <param><ptype>GLXDrawable</ptype> <name>drawable</name></param>
@@ -1406,6 +1409,10 @@ typedef unsigned __int64 uint64_t;
             <param><ptype>int64_t</ptype> <name>target_msc</name></param>
             <param><ptype>int64_t</ptype> <name>divisor</name></param>
             <param><ptype>int64_t</ptype> <name>remainder</name></param>
+        </command>
+        <command>
+            <proto>void <name>glXSwapIntervalMESA</name></proto>
+            <param>unsigned int <name>interval</name></param>
         </command>
         <command>
             <proto>void <name>glXSwapIntervalEXT</name></proto>
@@ -2168,6 +2175,12 @@ typedef unsigned __int64 uint64_t;
         <extension name="GLX_SUN_get_transparent_index" supported="glx">
             <require>
                 <command name="glXGetTransparentIndexSUN"/>
+            </require>
+        </extension>
+        <extension name="GLX_MESA_swap_control" supported="glx">
+            <require>
+                <command name="glXGetSwapIntervalMESA"/>
+                <command name="glXSwapIntervalMESA"/>
             </require>
         </extension>
     </extensions>
