@@ -26,8 +26,8 @@ Status
 
 Version
 
-    Last Modified Date: June 28, 2017
-    Revision: 12
+    Last Modified Date: September 26, 2017
+    Revision: 13
 
 Number
 
@@ -312,13 +312,15 @@ New Tokens
     Accepted by the <dstLayouts> parameter of SignalSemaphoreEXT and the
     <srcLayouts> parameter of WaitSemaphoreEXT:
 
-        LAYOUT_GENERAL_EXT                         0x958D
-        LAYOUT_COLOR_ATTACHMENT_EXT                0x958E
-        LAYOUT_DEPTH_STENCIL_ATTACHMENT_EXT        0x958F
-        LAYOUT_DEPTH_STENCIL_READ_ONLY_EXT         0x9590
-        LAYOUT_SHADER_READ_ONLY_EXT                0x9591
-        LAYOUT_TRANSFER_SRC_EXT                    0x9592
-        LAYOUT_TRANSFER_DST_EXT                    0x9593
+        LAYOUT_GENERAL_EXT                            0x958D
+        LAYOUT_COLOR_ATTACHMENT_EXT                   0x958E
+        LAYOUT_DEPTH_STENCIL_ATTACHMENT_EXT           0x958F
+        LAYOUT_DEPTH_STENCIL_READ_ONLY_EXT            0x9590
+        LAYOUT_SHADER_READ_ONLY_EXT                   0x9591
+        LAYOUT_TRANSFER_SRC_EXT                       0x9592
+        LAYOUT_TRANSFER_DST_EXT                       0x9593
+        LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_EXT 0x9530
+        LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_EXT 0x9531
 
 Additions to Chapter 2 of the OpenGL 4.5 Specification (OpenGL
 Fundamentals)
@@ -504,17 +506,19 @@ Additions to Chapter 4 of the OpenGL 4.5 Specification (Event Model)
 
         Table 4.4: Texture layouts and corresponding Vulkan Image Layouts
 
-        | Texture Layout                         | Equivalent Vulkan Image Layout                  |
-        +----------------------------------------+-------------------------------------------------+
-        | GL_NONE                                | VK_IMAGE_LAYOUT_UNDEFINED                       |
-        | GL_LAYOUT_GENERAL_EXT                  | VK_IMAGE_LAYOUT_GENERAL                         |
-        | GL_LAYOUT_COLOR_ATTACHMENT_EXT         | VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL        |
-        | GL_LAYOUT_DEPTH_STENCIL_ATTACHMENT_EXT | VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT        |
-        | GL_LAYOUT_DEPTH_STENCIL_READ_ONLY_EXT  | VK_IMAGE_LAYOUT_DEPTH_STENCIL_READ_ONLY_OPTIMAL |
-        | GL_LAYOUT_SHADER_READ_ONLY_EXT         | VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL        |
-        | GL_LAYOUT_TRANSFER_SRC_EXT             | VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL            |
-        | GL_LAYOUT_TRANSFER_DST_EXT             | VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL            |
-        +------------------------------------------------------------------------------------------+
+        | Texture Layout                                   | Equivalent Vulkan Image Layout                                 |
+        +--------------------------------------------------+----------------------------------------------------------------+
+        | GL_NONE                                          | VK_IMAGE_LAYOUT_UNDEFINED                                      |
+        | GL_LAYOUT_GENERAL_EXT                            | VK_IMAGE_LAYOUT_GENERAL                                        |
+        | GL_LAYOUT_COLOR_ATTACHMENT_EXT                   | VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL                       |
+        | GL_LAYOUT_DEPTH_STENCIL_ATTACHMENT_EXT           | VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT                       |
+        | GL_LAYOUT_DEPTH_STENCIL_READ_ONLY_EXT            | VK_IMAGE_LAYOUT_DEPTH_STENCIL_READ_ONLY_OPTIMAL                |
+        | GL_LAYOUT_SHADER_READ_ONLY_EXT                   | VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL                       |
+        | GL_LAYOUT_TRANSFER_SRC_EXT                       | VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL                           |
+        | GL_LAYOUT_TRANSFER_DST_EXT                       | VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL                           |
+        | GL_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_EXT | VK_IMAGE_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_OPTIMAL_KHR |
+        | GL_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_EXT | VK_IMAGE_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_OPTIMAL_KHR |
+        +-------------------------------------------------------------------------------------------------------------------+
 
         4.2.4 Signaling Semaphores
 
@@ -1107,7 +1111,21 @@ Issues
         must match the PROTECTED_MEMORY_OBJECT_EXT parameter of the memory
         object.
 
+    23) How do applications detect when the new texture layouts
+        corresponding to the image layouts in VK_KHR_maintenance2 are
+        supported in OpenGL?
+
+        RESOLVED: OpenGL contexts that report the GL_EXT_semaphore extension
+        string and have a DRIVER_UUID_EXT and DEVICE_UUID_EXT corresponding
+        to a Vulkan driver that supports VK_KHR_maintenance2 must support
+        the new OpenGL texture layouts.
+
 Revision History
+
+    Revision 13, 2017-09-26 (James Jones)
+        - Added new image layouts corresponding to those from
+          VK_KHR_maintenance2.
+        - Added issue 23 and resolution.
 
     Revision 12, 2017-06-08 (Andres Rodriguez)
         - Fixed parameter name in MemoryObjectParameterivEXT's description.

@@ -3296,6 +3296,8 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_LAYOUT_SHADER_READ_ONLY_EXT"/>
             <enum name="GL_LAYOUT_TRANSFER_SRC_EXT"/>
             <enum name="GL_LAYOUT_TRANSFER_DST_EXT"/>
+            <enum name="GL_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_EXT"/>
+            <enum name="GL_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_EXT"/>
         </group>
 
         <group name="PathTransformType">
@@ -9958,7 +9960,9 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x9530" end="0x962F" vendor="NV" comment="Khronos bug 12977">
-            <unused start="0x9530" end="0x9539" vendor="NV"/>
+        <enum value="0x9530" name="GL_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_EXT"/>
+        <enum value="0x9531" name="GL_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_EXT"/>
+            <unused start="0x9532" end="0x953F" vendor="NV"/>
         <enum value="0x9540" name="GL_QUERY_RESOURCE_TYPE_VIDMEM_ALLOC_NV"/>
             <unused start="0x9541" vendor="NV"/>
         <enum value="0x9542" name="GL_QUERY_RESOURCE_MEMTYPE_VIDMEM_NV"/>
@@ -44010,6 +44014,8 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_LAYOUT_SHADER_READ_ONLY_EXT"/>
                 <enum name="GL_LAYOUT_TRANSFER_SRC_EXT"/>
                 <enum name="GL_LAYOUT_TRANSFER_DST_EXT"/>
+                <enum name="GL_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_EXT"/>
+                <enum name="GL_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_EXT"/>
                 <command name="glGetUnsignedBytevEXT"/>
                 <command name="glGetUnsignedBytei_vEXT"/>
                 <command name="glGenSemaphoresEXT"/>
