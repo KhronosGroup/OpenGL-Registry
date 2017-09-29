@@ -2427,6 +2427,11 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/EXT/EXT_texture_mirror_clamp.txt',
     },
+    'GL_EXT_texture_mirror_clamp_to_edge' : {
+        'esnumber' : 291,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_texture_mirror_clamp_to_edge.txt',
+    },
     'GL_EXT_texture_norm16' : {
         'esnumber' : 207,
         'flags' : { 'public' },

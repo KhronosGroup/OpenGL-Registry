@@ -603,4 +603,6 @@
 </li>
 <li value=290><a href="extensions/EXT/EXT_clip_control.txt">GL_EXT_clip_control</a>
 </li>
+<li value=291><a href="extensions/EXT/EXT_texture_mirror_clamp_to_edge.txt">GL_EXT_texture_mirror_clamp_to_edge</a>
+</li>
 </ol>
