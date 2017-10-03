@@ -1915,6 +1915,12 @@ typedef unsigned __int64 uint64_t;
                 <command name="glXSet3DfxModeMESA"/>
             </require>
         </extension>
+        <extension name="GLX_MESA_swap_control" supported="glx">
+            <require>
+                <command name="glXGetSwapIntervalMESA"/>
+                <command name="glXSwapIntervalMESA"/>
+            </require>
+        </extension>
         <extension name="GLX_NV_copy_buffer" supported="glx">
             <require>
                 <command name="glXCopyBufferSubDataNV"/>
@@ -2175,12 +2181,6 @@ typedef unsigned __int64 uint64_t;
         <extension name="GLX_SUN_get_transparent_index" supported="glx">
             <require>
                 <command name="glXGetTransparentIndexSUN"/>
-            </require>
-        </extension>
-        <extension name="GLX_MESA_swap_control" supported="glx">
-            <require>
-                <command name="glXGetSwapIntervalMESA"/>
-                <command name="glXSwapIntervalMESA"/>
             </require>
         </extension>
     </extensions>
