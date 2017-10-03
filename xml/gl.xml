@@ -2739,7 +2739,7 @@ typedef unsigned int GLhandleARB;
 
         <group name="DebugSource">
             <enum name="GL_DEBUG_SOURCE_API"/>
-            <enum name="GL_DEBUG_SOURCE_WINDOW_SYSTEM_"/>
+            <enum name="GL_DEBUG_SOURCE_WINDOW_SYSTEM"/>
             <enum name="GL_DEBUG_SOURCE_SHADER_COMPILER"/>
             <enum name="GL_DEBUG_SOURCE_THIRD_PARTY"/>
             <enum name="GL_DEBUG_SOURCE_APPLICATION"/>
