@@ -1611,10 +1611,10 @@ typedef unsigned int GLhandleARB;
             <!-- Compatibility -->
             <enum name="GL_ALPHA12"/>
             <enum name="GL_ALPHA16"/>
-            <enum name="GL_ALPHA16_ICC_SGIX"/>
+            <!-- <enum name="GL_ALPHA16_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
             <enum name="GL_ALPHA4"/>
             <enum name="GL_ALPHA8"/>
-            <enum name="GL_ALPHA_ICC_SGIX"/>
+            <!-- <enum name="GL_ALPHA_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
             <enum name="GL_DUAL_ALPHA12_SGIS"/>
             <enum name="GL_DUAL_ALPHA16_SGIS"/>
             <enum name="GL_DUAL_ALPHA4_SGIS"/>
@@ -1632,34 +1632,34 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_INTENSITY"/>
             <enum name="GL_INTENSITY12"/>
             <enum name="GL_INTENSITY16"/>
-            <enum name="GL_INTENSITY16_ICC_SGIX"/>
+            <!-- <enum name="GL_INTENSITY16_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
             <enum name="GL_INTENSITY4"/>
             <enum name="GL_INTENSITY8"/>
-            <enum name="GL_INTENSITY_ICC_SGIX"/>
+            <!-- <enum name="GL_INTENSITY_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
             <enum name="GL_LUMINANCE12"/>
             <enum name="GL_LUMINANCE12_ALPHA12"/>
             <enum name="GL_LUMINANCE12_ALPHA4"/>
             <enum name="GL_LUMINANCE16"/>
             <enum name="GL_LUMINANCE16_ALPHA16"/>
-            <enum name="GL_LUMINANCE16_ALPHA8_ICC_SGIX"/>
-            <enum name="GL_LUMINANCE16_ICC_SGIX"/>
+            <!-- <enum name="GL_LUMINANCE16_ALPHA8_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
+            <!-- <enum name="GL_LUMINANCE16_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
             <enum name="GL_LUMINANCE4"/>
             <enum name="GL_LUMINANCE4_ALPHA4"/>
             <enum name="GL_LUMINANCE6_ALPHA2"/>
             <enum name="GL_LUMINANCE8"/>
             <enum name="GL_LUMINANCE8_ALPHA8"/>
-            <enum name="GL_LUMINANCE_ALPHA_ICC_SGIX"/>
-            <enum name="GL_LUMINANCE_ICC_SGIX"/>
+            <!-- <enum name="GL_LUMINANCE_ALPHA_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
+            <!-- <enum name="GL_LUMINANCE_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
             <enum name="GL_QUAD_ALPHA4_SGIS"/>
             <enum name="GL_QUAD_ALPHA8_SGIS"/>
             <enum name="GL_QUAD_INTENSITY4_SGIS"/>
             <enum name="GL_QUAD_INTENSITY8_SGIS"/>
             <enum name="GL_QUAD_LUMINANCE4_SGIS"/>
             <enum name="GL_QUAD_LUMINANCE8_SGIS"/>
-            <enum name="GL_R5_G6_B5_A8_ICC_SGIX"/>
-            <enum name="GL_R5_G6_B5_ICC_SGIX"/>
-            <enum name="GL_RGBA_ICC_SGIX"/>
-            <enum name="GL_RGB_ICC_SGIX"/>
+            <!-- <enum name="GL_R5_G6_B5_A8_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
+            <!-- <enum name="GL_R5_G6_B5_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
+            <!-- <enum name="GL_RGBA_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
+            <!-- <enum name="GL_RGB_ICC_SGIX" comment="Incomplete extension SGIX_icc_texture"/> -->
             <!-- Base internal format: GL_RED -->
             <enum name="GL_RED"/>
             <enum name="GL_RED_EXT"/>
@@ -3260,7 +3260,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_PATH_FILL_COVER_MODE_NV" />
             <enum name="GL_PATH_STROKE_COVER_MODE_NV" />
             <enum name="GL_PATH_STROKE_MASK_NV" />
-            <enum name="GL_PATH_STROKE_BOUND_NV" />
+            <!-- <enum name="GL_PATH_STROKE_BOUND_NV" comment="Removed from extension"/> -->
             <enum name="GL_PATH_END_CAPS_NV" />
             <enum name="GL_PATH_DASH_CAPS_NV" />
             <enum name="GL_PATH_COMMAND_COUNT_NV" />
