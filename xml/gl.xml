@@ -215,6 +215,41 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_TRUE"/>
         </group>
 
+        <group name="BufferBitQCOM">
+            <enum name="GL_MULTISAMPLE_BUFFER_BIT7_QCOM"/>
+            <enum name="GL_MULTISAMPLE_BUFFER_BIT6_QCOM"/>
+            <enum name="GL_MULTISAMPLE_BUFFER_BIT5_QCOM"/>
+            <enum name="GL_MULTISAMPLE_BUFFER_BIT4_QCOM"/>
+            <enum name="GL_MULTISAMPLE_BUFFER_BIT3_QCOM"/>
+            <enum name="GL_MULTISAMPLE_BUFFER_BIT2_QCOM"/>
+            <enum name="GL_MULTISAMPLE_BUFFER_BIT1_QCOM"/>
+            <enum name="GL_MULTISAMPLE_BUFFER_BIT0_QCOM"/>
+            <enum name="GL_STENCIL_BUFFER_BIT7_QCOM"/>
+            <enum name="GL_STENCIL_BUFFER_BIT6_QCOM"/>
+            <enum name="GL_STENCIL_BUFFER_BIT5_QCOM"/>
+            <enum name="GL_STENCIL_BUFFER_BIT4_QCOM"/>
+            <enum name="GL_STENCIL_BUFFER_BIT3_QCOM"/>
+            <enum name="GL_STENCIL_BUFFER_BIT2_QCOM"/>
+            <enum name="GL_STENCIL_BUFFER_BIT1_QCOM"/>
+            <enum name="GL_STENCIL_BUFFER_BIT0_QCOM"/>
+            <enum name="GL_DEPTH_BUFFER_BIT7_QCOM"/>
+            <enum name="GL_DEPTH_BUFFER_BIT6_QCOM"/>
+            <enum name="GL_DEPTH_BUFFER_BIT5_QCOM"/>
+            <enum name="GL_DEPTH_BUFFER_BIT4_QCOM"/>
+            <enum name="GL_DEPTH_BUFFER_BIT3_QCOM"/>
+            <enum name="GL_DEPTH_BUFFER_BIT2_QCOM"/>
+            <enum name="GL_DEPTH_BUFFER_BIT1_QCOM"/>
+            <enum name="GL_DEPTH_BUFFER_BIT0_QCOM"/>
+            <enum name="GL_COLOR_BUFFER_BIT7_QCOM"/>
+            <enum name="GL_COLOR_BUFFER_BIT6_QCOM"/>
+            <enum name="GL_COLOR_BUFFER_BIT5_QCOM"/>
+            <enum name="GL_COLOR_BUFFER_BIT4_QCOM"/>
+            <enum name="GL_COLOR_BUFFER_BIT3_QCOM"/>
+            <enum name="GL_COLOR_BUFFER_BIT2_QCOM"/>
+            <enum name="GL_COLOR_BUFFER_BIT1_QCOM"/>
+            <enum name="GL_COLOR_BUFFER_BIT0_QCOM"/>
+        </group>
+
         <group name="BufferTargetARB">
           <enum name="GL_ARRAY_BUFFER"/>
           <enum name="GL_ATOMIC_COUNTER_BUFFER" />
@@ -252,6 +287,7 @@ typedef unsigned int GLhandleARB;
 
         <group name="BufferAccessMask">
             <enum name="GL_MAP_COHERENT_BIT"/>
+            <enum name="GL_MAP_COHERENT_BIT_EXT"/>
             <enum name="GL_MAP_FLUSH_EXPLICIT_BIT"/>
             <enum name="GL_MAP_FLUSH_EXPLICIT_BIT_EXT"/>
             <enum name="GL_MAP_INVALIDATE_BUFFER_BIT"/>
@@ -259,6 +295,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_MAP_INVALIDATE_RANGE_BIT"/>
             <enum name="GL_MAP_INVALIDATE_RANGE_BIT_EXT"/>
             <enum name="GL_MAP_PERSISTENT_BIT"/>
+            <enum name="GL_MAP_PERSISTENT_BIT_EXT"/>
             <enum name="GL_MAP_READ_BIT"/>
             <enum name="GL_MAP_READ_BIT_EXT"/>
             <enum name="GL_MAP_UNSYNCHRONIZED_BIT"/>
@@ -351,8 +388,11 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_CONTEXT_FLAG_DEBUG_BIT"/>
             <enum name="GL_CONTEXT_FLAG_DEBUG_BIT_KHR"/>
             <enum name="GL_CONTEXT_FLAG_FORWARD_COMPATIBLE_BIT"/>
+            <enum name="GL_CONTEXT_FLAG_ROBUST_ACCESS_BIT"/>
             <enum name="GL_CONTEXT_FLAG_ROBUST_ACCESS_BIT_ARB"/>
             <enum name="GL_CONTEXT_FLAG_PROTECTED_CONTENT_BIT_EXT"/>
+            <enum name="GL_CONTEXT_FLAG_NO_ERROR_BIT"/>
+            <enum name="GL_CONTEXT_FLAG_NO_ERROR_BIT_KHR"/>
         </group>
 
         <group name="ContextProfileMask">
@@ -1397,8 +1437,11 @@ typedef unsigned int GLhandleARB;
 
         <group name="MapBufferUsageMask">
             <enum name="GL_CLIENT_STORAGE_BIT"/>
+            <enum name="GL_CLIENT_STORAGE_BIT_EXT"/>
             <enum name="GL_DYNAMIC_STORAGE_BIT"/>
+            <enum name="GL_DYNAMIC_STORAGE_BIT_EXT"/>
             <enum name="GL_MAP_COHERENT_BIT"/>
+            <enum name="GL_MAP_COHERENT_BIT_EXT"/>
             <enum name="GL_MAP_FLUSH_EXPLICIT_BIT"/>
             <enum name="GL_MAP_FLUSH_EXPLICIT_BIT_EXT"/>
             <enum name="GL_MAP_INVALIDATE_BUFFER_BIT"/>
@@ -1406,12 +1449,16 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_MAP_INVALIDATE_RANGE_BIT"/>
             <enum name="GL_MAP_INVALIDATE_RANGE_BIT_EXT"/>
             <enum name="GL_MAP_PERSISTENT_BIT"/>
+            <enum name="GL_MAP_PERSISTENT_BIT_EXT"/>
             <enum name="GL_MAP_READ_BIT"/>
             <enum name="GL_MAP_READ_BIT_EXT"/>
             <enum name="GL_MAP_UNSYNCHRONIZED_BIT"/>
             <enum name="GL_MAP_UNSYNCHRONIZED_BIT_EXT"/>
             <enum name="GL_MAP_WRITE_BIT"/>
             <enum name="GL_MAP_WRITE_BIT_EXT"/>
+            <enum name="GL_SPARSE_STORAGE_BIT_ARB"/>
+            <enum name="GL_LGPU_SEPARATE_STORAGE_BIT_NVX"/>
+            <enum name="GL_PER_GPU_STORAGE_BIT_NV"/>
         </group>
 
         <group name="MapTarget">
@@ -1474,6 +1521,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_BUFFER_UPDATE_BARRIER_BIT"/>
             <enum name="GL_BUFFER_UPDATE_BARRIER_BIT_EXT"/>
             <enum name="GL_CLIENT_MAPPED_BUFFER_BARRIER_BIT"/>
+            <enum name="GL_CLIENT_MAPPED_BUFFER_BARRIER_BIT_EXT"/>
             <enum name="GL_COMMAND_BARRIER_BIT"/>
             <enum name="GL_COMMAND_BARRIER_BIT_EXT"/>
             <enum name="GL_ELEMENT_ARRAY_BARRIER_BIT"/>
@@ -2093,6 +2141,11 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_SHADING_LANGUAGE_VERSION"/>
         </group>
 
+        <group name="SyncObjectMask">
+            <enum name="GL_SYNC_FLUSH_COMMANDS_BIT"/>
+            <enum name="GL_SYNC_FLUSH_COMMANDS_BIT_APPLE"/>
+        </group>
+
         <group name="TexCoordPointerType">
             <enum name="GL_DOUBLE"/>
             <enum name="GL_FLOAT"/>
@@ -2256,6 +2309,10 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_TEXTURE_WIDTH"/>
         </group>
 
+        <group name="TextureStorageMaskAMD">
+            <enum name="GL_TEXTURE_STORAGE_SPARSE_BIT_AMD"/>
+        </group>
+
         <group name="TextureTarget">
             <enum name="GL_DETAIL_TEXTURE_2D_SGIS"/>
             <enum name="GL_PROXY_TEXTURE_1D"/>
@@ -2321,10 +2378,13 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_FRAGMENT_SHADER_BIT_EXT"/>
             <enum name="GL_GEOMETRY_SHADER_BIT"/>
             <enum name="GL_GEOMETRY_SHADER_BIT_EXT"/>
+            <enum name="GL_GEOMETRY_SHADER_BIT_OES"/>
             <enum name="GL_TESS_CONTROL_SHADER_BIT"/>
             <enum name="GL_TESS_CONTROL_SHADER_BIT_EXT"/>
+            <enum name="GL_TESS_CONTROL_SHADER_BIT_OES"/>
             <enum name="GL_TESS_EVALUATION_SHADER_BIT"/>
             <enum name="GL_TESS_EVALUATION_SHADER_BIT_EXT"/>
+            <enum name="GL_TESS_EVALUATION_SHADER_BIT_OES"/>
             <enum name="GL_COMPUTE_SHADER_BIT"/>
             <enum name="GL_ALL_SHADER_BITS"/>
             <enum name="GL_ALL_SHADER_BITS_EXT"/>
@@ -3355,6 +3415,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0xFFFFFFFF" name="GL_ALL_ATTRIB_BITS" comment="Guaranteed to mark all attribute groups at once"/>
     </enums>
 
+    <enums namespace="GL" group="BufferAccessMask" type="bitmask" comment="GL_MAP_{COHERENT,FLUSH_EXPLICIT,INVALIDATE_BUFFER,INVALIDATE_RANGE,PERSISTENT,READ,UNSYNCHRONIZED,WRITE}_{BIT,BIT_EXT} also lie in this namespace">
+      <!-- Also used: 0x000000ff for bits reused from MapBufferUsageMask below -->
+    </enums>
+
     <enums namespace="GL" group="ClearBufferMask" type="bitmask" comment="GL_{DEPTH,ACCUM,STENCIL,COLOR}_BUFFER_BIT also lie in this namespace">
         <enum value="0x00008000" name="GL_COVERAGE_BUFFER_BIT_NV" comment="Collides with AttribMask bit GL_HINT_BIT. OK since this token is for OpenGL ES 2, which doesn't have attribute groups."/>
             <!-- Also used: 0x00004700 for bits reused from AttribMask above -->
@@ -3442,7 +3506,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0xFFFFFFFF" name="GL_ALL_BARRIER_BITS_EXT"/>
     </enums>
 
-    <enums namespace="OcclusionQueryEventMaskAMD">
+    <enums namespace="GL" group="OcclusionQueryEventMaskAMD" type="bitmask">
         <enum value="0x00000001" name="GL_QUERY_DEPTH_PASS_EVENT_BIT_AMD"/>
         <enum value="0x00000002" name="GL_QUERY_DEPTH_FAIL_EVENT_BIT_AMD"/>
         <enum value="0x00000004" name="GL_QUERY_STENCIL_FAIL_EVENT_BIT_AMD"/>
@@ -3511,6 +3575,38 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0010" name="GL_TRACE_PIXELS_BIT_MESA"/>
         <enum value="0x0020" name="GL_TRACE_ERRORS_BIT_MESA"/>
         <enum value="0xFFFF" name="GL_TRACE_ALL_BITS_MESA"/>
+    </enums>
+
+    <enums namespace="GL" group="PathFontStyle" type="bitmask">
+        <enum value="0x00000000" name="GL_NONE"/>
+        <enum value="0x00000001" name="GL_BOLD_BIT_NV"/>
+        <enum value="0x00000002" name="GL_ITALIC_BIT_NV"/>
+    </enums>
+
+    <enums namespace="GL" group="PathMetricMask" type="bitmask">
+        <enum value="0x00000001" name="GL_GLYPH_WIDTH_BIT_NV"/>
+        <enum value="0x00000002" name="GL_GLYPH_HEIGHT_BIT_NV"/>
+        <enum value="0x00000004" name="GL_GLYPH_HORIZONTAL_BEARING_X_BIT_NV"/>
+        <enum value="0x00000008" name="GL_GLYPH_HORIZONTAL_BEARING_Y_BIT_NV"/>
+        <enum value="0x00000010" name="GL_GLYPH_HORIZONTAL_BEARING_ADVANCE_BIT_NV"/>
+        <enum value="0x00000020" name="GL_GLYPH_VERTICAL_BEARING_X_BIT_NV"/>
+        <enum value="0x00000040" name="GL_GLYPH_VERTICAL_BEARING_Y_BIT_NV"/>
+        <enum value="0x00000080" name="GL_GLYPH_VERTICAL_BEARING_ADVANCE_BIT_NV"/>
+        <enum value="0x00000100" name="GL_GLYPH_HAS_KERNING_BIT_NV"/>
+        <enum value="0x00010000" name="GL_FONT_X_MIN_BOUNDS_BIT_NV"/>
+        <enum value="0x00020000" name="GL_FONT_Y_MIN_BOUNDS_BIT_NV"/>
+        <enum value="0x00040000" name="GL_FONT_X_MAX_BOUNDS_BIT_NV"/>
+        <enum value="0x00080000" name="GL_FONT_Y_MAX_BOUNDS_BIT_NV"/>
+        <enum value="0x00100000" name="GL_FONT_UNITS_PER_EM_BIT_NV"/>
+        <enum value="0x00200000" name="GL_FONT_ASCENDER_BIT_NV"/>
+        <enum value="0x00400000" name="GL_FONT_DESCENDER_BIT_NV"/>
+        <enum value="0x00800000" name="GL_FONT_HEIGHT_BIT_NV"/>
+        <enum value="0x01000000" name="GL_FONT_MAX_ADVANCE_WIDTH_BIT_NV"/>
+        <enum value="0x02000000" name="GL_FONT_MAX_ADVANCE_HEIGHT_BIT_NV"/>
+        <enum value="0x04000000" name="GL_FONT_UNDERLINE_POSITION_BIT_NV"/>
+        <enum value="0x08000000" name="GL_FONT_UNDERLINE_THICKNESS_BIT_NV"/>
+        <enum value="0x10000000" name="GL_FONT_HAS_KERNING_BIT_NV"/>
+        <enum value="0x20000000" name="GL_FONT_NUM_GLYPH_INDICES_BIT_NV"/>
     </enums>
 
     <enums namespace="GL" group="PathRenderingMaskNV" type="bitmask">
@@ -24661,7 +24757,7 @@ typedef unsigned int GLhandleARB;
             <param group="QueryTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
-            <param group="OcclusionQueryEventMaskAMD"><ptype>GLuint</ptype> <name>param</name></param>
+            <param group="OcclusionQueryEventMaskAMD"><ptype>GLbitfield</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>GLint <name>glQueryResourceNV</name></proto>
