@@ -21,8 +21,8 @@ Status
 
 Version
 
-    Date: July 26, 2011
-    Revision: 9
+    Date: September 26, 2017
+    Revision: 10
 
 Number
 
@@ -236,6 +236,14 @@ Dependencies on OES_texture_half_float
     If OES_texture_half_float is not supported, then all references to
     RGBA16F_EXT, RGB16F_EXT, RG16F_EXT, R16F_EXT, HALF_FLOAT_OES and 
     half should be ignored.
+    
+    If OES_texture_half_float is supported, textures created with:
+    
+        <internalformat> = RGBA
+        <format> = RGBA
+        <type> = HALF_FLOAT_OES
+        
+    are renderable.
 
 Dependencies on EXT_texture_rg
 
@@ -354,3 +362,4 @@ Revision History
       7   06/15/11  benj      Update interactions.
       8   07/22/11  benj      Rename from APPLE to EXT.
       9   07/26/11  benj      Move content that belongs in OES_texture_float.
+     10   09/26/17  tobias    Clarified creation of a renderable texture when OES_texture_half_float is supported
