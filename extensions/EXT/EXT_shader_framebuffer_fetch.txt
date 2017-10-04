@@ -16,8 +16,8 @@ Status
 
 Version
 
-    Last Modified Date: September 8, 2016
-    Author Revision: 5
+    Last Modified Date: October 4, 2017
+    Author Revision: 6
 
 Number
 
@@ -177,7 +177,43 @@ Changes to the OpenGL ES 2.0.24 Specification, Chapter 4
 
     Replace first element of Figure 4.1, page 90 ("Fragment + Associated Data"):
     
-    "Fragment (or sample) + Associated Data"
+        "Fragment (or sample) + Associated Data"
+
+    Add a new section 4.1.lastfragcolor (Fragment Data Input) - immediately before section 4.1.4 (Stencil Test):
+
+        Prior to fragment shading, if GL_EXT_shader_framebuffer_fetch is enabled,
+        gl_LastFragData[] is populated with the value last written to the
+        framebuffer at the same (x,y,sample) position.
+        
+        If the framebuffer attachment corresponding to a given element of
+        gl_LastFragData[] has a fixed-point format, each color component undergoes a
+        conversion to floating-point first. This conversion must leave the values 0
+        and 1 invariant.
+
+        
+        [[If GL_EXT_sRGB or OpenGL ES 3.0 is supported]]
+
+        If the value of FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING{_EXT} for the
+        framebuffer attachment corresponding to a given element of gl_LastFragData[]
+        is SRGB (see section 6.1.13),
+
+        [[If GL_EXT_sRGB_write_control is supported]]
+
+
+        and FRAMEBUFFER_SRGB_EXT is enabled,
+
+
+        [[End GL_EXT_sRGB_write_control]]
+
+
+        the R, G, and B destination color values
+        (after conversion from fixedpoint to floating-point) are considered to be
+        encoded for the sRGB color space and hence must be linearized first.
+        Each R, G, and B component is converted in the same fashion described for
+        sRGB texture components in section 3.8.16.
+
+        [[End GL_EXT_sRGB or OpenGL ES 3.0]]
+
 
 New Implementation Dependent State
 
@@ -267,9 +303,14 @@ Interactions with OES_standard_derivatives
     Results from shaders which use the built-in derivative functions dFdx,
     dFdy, and fwidth on variables calculated using the current framebuffer 
     color are undefined.
+    
+Interactions with OpenGL ES 3.0
+
+    Replace references to gl_LastFragData[] with "inout variables".
 
 Revision History
 
+    Version 6, 2017/10/04 - Clarified how gl_LastFragData is populated.
     Version 5, 2016/09/08 - Added preprocessor defines.
     Version 4, 2013/05/28 - Added ES3 interaction as requested in Bug 10236
     Version 3, 2012/09/24 - Remove obsolete issue 3 about derivatives
