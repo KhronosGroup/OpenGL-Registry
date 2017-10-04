@@ -24757,7 +24757,7 @@ typedef unsigned int GLhandleARB;
             <param group="QueryTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
-            <param group="OcclusionQueryEventMaskAMD"><ptype>GLbitfield</ptype> <name>param</name></param>
+            <param group="OcclusionQueryEventMaskAMD"><ptype>GLuint</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>GLint <name>glQueryResourceNV</name></proto>
