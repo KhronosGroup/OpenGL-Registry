@@ -2735,6 +2735,8 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_TESS_EVALUATION_SHADER"/>
             <enum name="GL_GEOMETRY_SHADER"/>
             <enum name="GL_FRAGMENT_SHADER"/>
+            <enum name="GL_FRAGMENT_SHADER_ARB"/>
+            <enum name="GL_VERTEX_SHADER_ARB"/>
         </group>
 
         <group name="DebugSource">
@@ -7699,6 +7701,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8B31" name="GL_VERTEX_SHADER"/>
         <enum value="0x8B31" name="GL_VERTEX_SHADER_ARB"/>
             <unused start="0x8B32" end="0x8B3F" comment="For shader types"/>
+        <enum value="0x8DD9" name="GL_GEOMETRY_SHADER"/>
+        <enum value="0x8E87" name="GL_TESS_EVALUATION_SHADER"/>
+        <enum value="0x8E88" name="GL_TESS_CONTROL_SHADER"/>
+        <enum value="0x91B9" name="GL_COMPUTE_SHADER"/>
     </enums>
 
     <enums namespace="GL" start="0x8B40" end="0x8B47" group="ContainerType" vendor="ARB">
