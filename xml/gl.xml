@@ -3578,21 +3578,21 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" group="PathFontStyle" type="bitmask">
-        <enum value="0x00000000" name="GL_NONE"/>
-        <enum value="0x00000001" name="GL_BOLD_BIT_NV"/>
-        <enum value="0x00000002" name="GL_ITALIC_BIT_NV"/>
+        <enum value="0" name="GL_NONE"/>
+        <enum value="0x01" name="GL_BOLD_BIT_NV"/>
+        <enum value="0x02" name="GL_ITALIC_BIT_NV"/>
     </enums>
 
     <enums namespace="GL" group="PathMetricMask" type="bitmask">
-        <enum value="0x00000001" name="GL_GLYPH_WIDTH_BIT_NV"/>
-        <enum value="0x00000002" name="GL_GLYPH_HEIGHT_BIT_NV"/>
-        <enum value="0x00000004" name="GL_GLYPH_HORIZONTAL_BEARING_X_BIT_NV"/>
-        <enum value="0x00000008" name="GL_GLYPH_HORIZONTAL_BEARING_Y_BIT_NV"/>
-        <enum value="0x00000010" name="GL_GLYPH_HORIZONTAL_BEARING_ADVANCE_BIT_NV"/>
-        <enum value="0x00000020" name="GL_GLYPH_VERTICAL_BEARING_X_BIT_NV"/>
-        <enum value="0x00000040" name="GL_GLYPH_VERTICAL_BEARING_Y_BIT_NV"/>
-        <enum value="0x00000080" name="GL_GLYPH_VERTICAL_BEARING_ADVANCE_BIT_NV"/>
-        <enum value="0x00000100" name="GL_GLYPH_HAS_KERNING_BIT_NV"/>
+        <enum value="0x01" name="GL_GLYPH_WIDTH_BIT_NV"/>
+        <enum value="0x02" name="GL_GLYPH_HEIGHT_BIT_NV"/>
+        <enum value="0x04" name="GL_GLYPH_HORIZONTAL_BEARING_X_BIT_NV"/>
+        <enum value="0x08" name="GL_GLYPH_HORIZONTAL_BEARING_Y_BIT_NV"/>
+        <enum value="0x10" name="GL_GLYPH_HORIZONTAL_BEARING_ADVANCE_BIT_NV"/>
+        <enum value="0x20" name="GL_GLYPH_VERTICAL_BEARING_X_BIT_NV"/>
+        <enum value="0x40" name="GL_GLYPH_VERTICAL_BEARING_Y_BIT_NV"/>
+        <enum value="0x80" name="GL_GLYPH_VERTICAL_BEARING_ADVANCE_BIT_NV"/>
+        <enum value="0x100" name="GL_GLYPH_HAS_KERNING_BIT_NV"/>
         <enum value="0x00010000" name="GL_FONT_X_MIN_BOUNDS_BIT_NV"/>
         <enum value="0x00020000" name="GL_FONT_Y_MIN_BOUNDS_BIT_NV"/>
         <enum value="0x00040000" name="GL_FONT_X_MAX_BOUNDS_BIT_NV"/>
