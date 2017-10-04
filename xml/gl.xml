@@ -1670,8 +1670,8 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_R16_EXT"/>
             <enum name="GL_R16_SNORM"/>
             <enum name="GL_R16_SNORM_EXT"/>
-            <enum name="GL_R32"/>
-            <enum name="GL_R32_EXT"/>
+            <!-- <enum name="GL_R32" comment="cut & paste error?"/> -->
+            <!-- <enum name="GL_R32_EXT" comment="cut & paste error?"/> -->
             <enum name="GL_R16F"/>
             <enum name="GL_R16F_EXT"/>
             <enum name="GL_R32F"/>
@@ -1703,7 +1703,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_RG32UI"/>
             <!-- Base internal format: GL_RGB -->
             <enum name="GL_RGB"/>
-            <enum name="GL_RGB2"/>
+            <!-- <enum name="GL_RGB2" comment="Never actually added to core"/> -->
             <enum name="GL_RGB2_EXT"/>
             <enum name="GL_RGB4"/>
             <enum name="GL_RGB4_EXT"/>
