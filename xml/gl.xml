@@ -3579,38 +3579,6 @@ typedef unsigned int GLhandleARB;
         <enum value="0xFFFF" name="GL_TRACE_ALL_BITS_MESA"/>
     </enums>
 
-    <enums namespace="GL" group="PathFontStyle" type="bitmask">
-        <enum value="0" name="GL_NONE"/>
-        <enum value="0x01" name="GL_BOLD_BIT_NV"/>
-        <enum value="0x02" name="GL_ITALIC_BIT_NV"/>
-    </enums>
-
-    <enums namespace="GL" group="PathMetricMask" type="bitmask">
-        <enum value="0x01" name="GL_GLYPH_WIDTH_BIT_NV"/>
-        <enum value="0x02" name="GL_GLYPH_HEIGHT_BIT_NV"/>
-        <enum value="0x04" name="GL_GLYPH_HORIZONTAL_BEARING_X_BIT_NV"/>
-        <enum value="0x08" name="GL_GLYPH_HORIZONTAL_BEARING_Y_BIT_NV"/>
-        <enum value="0x10" name="GL_GLYPH_HORIZONTAL_BEARING_ADVANCE_BIT_NV"/>
-        <enum value="0x20" name="GL_GLYPH_VERTICAL_BEARING_X_BIT_NV"/>
-        <enum value="0x40" name="GL_GLYPH_VERTICAL_BEARING_Y_BIT_NV"/>
-        <enum value="0x80" name="GL_GLYPH_VERTICAL_BEARING_ADVANCE_BIT_NV"/>
-        <enum value="0x100" name="GL_GLYPH_HAS_KERNING_BIT_NV"/>
-        <enum value="0x00010000" name="GL_FONT_X_MIN_BOUNDS_BIT_NV"/>
-        <enum value="0x00020000" name="GL_FONT_Y_MIN_BOUNDS_BIT_NV"/>
-        <enum value="0x00040000" name="GL_FONT_X_MAX_BOUNDS_BIT_NV"/>
-        <enum value="0x00080000" name="GL_FONT_Y_MAX_BOUNDS_BIT_NV"/>
-        <enum value="0x00100000" name="GL_FONT_UNITS_PER_EM_BIT_NV"/>
-        <enum value="0x00200000" name="GL_FONT_ASCENDER_BIT_NV"/>
-        <enum value="0x00400000" name="GL_FONT_DESCENDER_BIT_NV"/>
-        <enum value="0x00800000" name="GL_FONT_HEIGHT_BIT_NV"/>
-        <enum value="0x01000000" name="GL_FONT_MAX_ADVANCE_WIDTH_BIT_NV"/>
-        <enum value="0x02000000" name="GL_FONT_MAX_ADVANCE_HEIGHT_BIT_NV"/>
-        <enum value="0x04000000" name="GL_FONT_UNDERLINE_POSITION_BIT_NV"/>
-        <enum value="0x08000000" name="GL_FONT_UNDERLINE_THICKNESS_BIT_NV"/>
-        <enum value="0x10000000" name="GL_FONT_HAS_KERNING_BIT_NV"/>
-        <enum value="0x20000000" name="GL_FONT_NUM_GLYPH_INDICES_BIT_NV"/>
-    </enums>
-
     <enums namespace="GL" group="PathRenderingMaskNV" type="bitmask">
         <enum value="0x01" name="GL_BOLD_BIT_NV"/>
         <enum value="0x02" name="GL_ITALIC_BIT_NV"/>
@@ -7701,10 +7669,6 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8B31" name="GL_VERTEX_SHADER"/>
         <enum value="0x8B31" name="GL_VERTEX_SHADER_ARB"/>
             <unused start="0x8B32" end="0x8B3F" comment="For shader types"/>
-        <enum value="0x8DD9" name="GL_GEOMETRY_SHADER"/>
-        <enum value="0x8E87" name="GL_TESS_EVALUATION_SHADER"/>
-        <enum value="0x8E88" name="GL_TESS_CONTROL_SHADER"/>
-        <enum value="0x91B9" name="GL_COMPUTE_SHADER"/>
     </enums>
 
     <enums namespace="GL" start="0x8B40" end="0x8B47" group="ContainerType" vendor="ARB">
