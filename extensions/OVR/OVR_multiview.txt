@@ -26,15 +26,16 @@ Contributors
     Sam Holmes, Qualcomm
     Nigel Williams, Qualcomm
     Tobias Hector, Imagination Technologies
+    Daniel Koch, NVIDIA Corporation
 
 Status
 
-    Incomplete.
+    Complete.
 
 Version
 
-    Last Modified Date:  July 25, 2017
-    Author Revision: 0.7
+    Last Modified Date: October 10, 2017
+    Revision: 1
 
 Number
 
@@ -45,8 +46,27 @@ Dependencies
 
     OpenGL 3.0 or OpenGL ES 3.0 is required.
 
-Overview
+    This extensions is written against the OpenGL ES 3.2 (November 3, 2016)
+    specification and the OpenGL 4.6 (Core Profile) (July 30, 2017)
 
+    This extension interacts with OpenGL 3.3, ARB_timer_query, and
+    EXT_disjoint_timer_query.
+
+    This extension interacts with OpenGL 4.5, ARB_direct_state_access and
+    EXT_direct_state_access.
+
+    This extension interacts with OpenGL ES 3.2, OpenGL 4.0,
+    EXT_tessllation_shader, and ARB_tessellation_shader.
+
+    This extension interacts with OpenGL ES 3.2, OpenGL 3.2,
+    EXT_geometry_shader, and ARB_geometry_shader4.
+
+    This extension interacts with OpenGL 4.3, ARB_multi_draw_indirect, and
+    EXT_multi_draw_indirect.
+
+    This extension interacts with OpenGL 3.0.
+
+Overview
 
     The method of stereo rendering supported in OpenGL is currently achieved by
     rendering to the two eye buffers sequentially.  This typically incurs double
@@ -57,7 +77,7 @@ Overview
     rendering by adding a means to render to multiple elements of a 2D texture
     array simultaneously.  In multiview rendering, draw calls are instanced into
     each corresponding element of the texture array.  The vertex program uses a
-    new ViewID variable to compute per-view values, typically the vertex
+    new gl_ViewID_OVR variable to compute per-view values, typically the vertex
     position and view-dependent variables like reflection.
 
     The formulation of this extension is high level in order to allow
@@ -97,39 +117,107 @@ New Tokens
 
 New Procedures and Functions
 
-    void FramebufferTextureMultiviewOVR( enum target, enum attachment, uint texture, int level, int baseViewIndex, sizei numViews );
+    void FramebufferTextureMultiviewOVR( enum target, enum attachment,
+                                         uint texture, int level,
+                                         int baseViewIndex, sizei numViews );
 
-Additions to Chapter 4 of the OpenGL ES 3.0 Specification
+    [[ If OpenGL 4.5 or ARB_direct_state_access is supported ]]
 
-    Add the following paragraph to the end of the description of
-    BlitFramebuffer in section 4.3.3:
-    
-    If the draw framebuffer has multiple views (see section 4.4.2.4,
-    FramebufferTextureMultiviewOVR), values taken from the read buffer are
-    only written to draw buffers in the first view of the draw framebuffer.
-    
+    void NamedFramebufferTextureMultiviewOVR( uint framebuffer, enum attachment,
+                                              uint texture, int level,
+                                              int baseViewIndex, sizei numViews );
 
-    Add the following to section 4.4.2.4, immediately before the subsection
-    "Effects of Attaching a Texture Image":
 
-    The command
+Modifications to Chapter 4 of the OpenGL 4.6 Specification (Event Model)
 
-        FramebufferTextureMultiviewOVR( enum target, enum attachment, uint texture, int level, int baseViewIndex, sizei numViews );
+    Modify section 4.3 (Time Queries) adding the following to the list
+    of errors:
 
-    operates similarly to FramebufferTextureLayer, except that baseViewIndex and
-    numViews selects a range of texture array elements that will be targeted
-    when rendering.
+    "Queries where BeginQuery or EndQuery is called with a target of
+    TIME_ELAPSED, or a if QueryCounter is called with a target of TIMESTAMP
+    return undefined values if the draw framebuffer is multiview at any
+    point during their execution."
+
+Modifications to Chapter 9 of the OpenGL ES 3.2 Specification (Framebuffers
+and Framebuffer Objects)
+
+    Add a new subsection to section 9.2.2 (Attaching Images to Framebuffer
+    Objects):
+
+    "9.2.2.2 (Multiview Images)
+
+    Finally, multiple layers of two-dimensional array textures can be
+    attached to an attachment point. Such attachments represent multiple
+    views, and the corresponding attachment point is considered to be
+    _multiview_.
+
+    In this mode there are several restrictions:
+
+        - in vertex shader gl_Position is the only output that can depend on
+          gl_ViewID_OVR (see Section 7.1 of the OpenGL ES Shading Language
+          specification)
+        - no transform feedback (section 11.1.3.11))
+        - no tessellation control or evaluation shaders (section 11.1.3.11)
+        - no geometry shader (section 11.1.3.11)
+        - no timer queries (section 4.3)
+        - occlusion query results must be between max per-view and the sum
+          of the per-view queries, inclusive (section 15.1.4)."
+
+    Add the following to list of <pname> parameters which can be queried
+    via GetFramebufferAttachmentParameteriv when the value of
+    FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE is TEXTURE in section 9.2.3
+    (Framebuffer Object Queries):
+
+    "If <pname> is FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR and the value
+    of FRAMEBUFFER_ATTACHMENT_OBJECT_NAME is a two-dimensional array texture,
+    then <params> will contain the number of views that were specified for the
+    attachment point via FramebufferTextureMultiviewOVR. Otherwise, <params>
+    will contain zero.
+
+    "If <pname> is FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR and the
+    value of FRAMEBUFFER_ATTACHMENT_OBJECT_NAME is a two-dimensional array
+    texture, then <params> will contain the base view index that was specified
+    for the attachment point via FramebufferTextureMultiviewOVR. Otherwise,
+    <params> will contain zero."
+
+    Add the following to the end of section 9.2.8 (Attaching Textures to a
+    Framebuffer), immediately before the subsection "Effects of Attaching a
+    Texture Image":
+
+    "Multiple layers of a two-dimensional array texture can be
+    attached as one of the logical buffers of a framebuffer object with the
+    commands
+
+        void FramebufferTextureMultiviewOVR( enum target, enum attachment,
+                                             uint texture, int level,
+                                             int baseViewIndex, sizei numViews );
+
+      [[ If OpenGL 4.5 or ARB_direct_state_access is supported ]]
+
+        void NamedFramebufferTextureMultiviewOVR( uint framebuffer, enum attachment,
+                                                  uint texture, int level,
+                                                  int baseViewIndex, sizei numViews );
+
+    These commands operate similarly to the FramebufferTextureLayer and
+    NamedFramebufferTexture commands, except that <baseViewIndex>
+    and <numViews> select a range of texture array elements that will be
+    targeted when rendering. Such an attachment is considered _multiview_
+    (section 9.2.2.2) and rendering commands issued when such a framebuffer
+    object is bound are termed "multiview rendering". The maximum number
+    of views which can be bound simultaneously is determined by the value
+    of MAX_VIEWS_OVR, which can be queried with the GetIntegerv command.
 
     The command
 
         View( uint id );
 
-    does not exist in the GL, but is used here to describe the multi-view
-    functionality in this section.  The effect of this hypothetical function is
-    to set the value of the shader built-in input uint gl_ViewID_OVR.
+    does not exist in the GL, but is used here to describe the multiview
+    functionality in this section.  The effect of this hypothetical function
+    is to set the value of the shader built-in input gl_ViewID_OVR.
 
-    When multi-view rendering is enabled, Clear,
-    ClearBuffer, and drawing commands have the same effect as:
+    When multiview rendering is enabled, the Clear (section 15.2.3),
+    ClearBuffer* (section 15.2.3.1), Draw* (section 10.5), and Dispatch*
+    (section 17) commands have the same effect as:
 
         for( int i = 0; i < numViews; i++ ) {
             for ( enum attachment : all attachment values where multiple texture array elements have been targeted for rendering ) {
@@ -142,34 +230,108 @@ Additions to Chapter 4 of the OpenGL ES 3.0 Specification
     The result is that every such command is broadcast into every active
     view. The shader uses gl_ViewID_OVR to compute view dependent outputs.
 
-    The number of views, as specified by numViews, must be the same for all
+    The number of views, as specified by <numViews>, must be the same for all
     framebuffer attachments points where the value of FRAMEBUFFER_ATTACHMENT_-
-    OBJECT_TYPE is not NONE or the framebuffer is incomplete. The following is
-    added to the conditions for Whole Framebuffer Completeness:
+    OBJECT_TYPE is not NONE or the framebuffer is incomplete (section 9.4.2).
 
-    The number of views is the same for all populated attachments.
+    If <texture> is non-zero and the command does not result in an error, the
+    framebuffer attachment state corresponding to <attachment> is updated as
+    in the FramebufferTextureLayer command, except that the values of
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER and
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR are is set to
+    <baseViewIndex>, and the value of
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR is set to <numViews>.
 
-    { FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR }
+    Errors
+
+    In addition to the corresponding errors for FramebufferTextureLayer when
+    called with the same parameters (other than <layer>):
+
+    An INVALID_VALUE error is generated if:
+    - <numViews> is less than 1 or if <numViews> is greater than MAX_VIEWS_OVR.
+    - <texture> is a two-dimensional array texture and <baseViewIndex> +
+      <numViews> is larger than the value of MAX_ARRAY_TEXTURE_LAYERS minus
+      one.
+    - texture is non-zero and <baseViewIndex> is negative."
+
+    An INVALID_OPERATION error is generated if texture is non-zero and is not
+    the name of a two-dimensional array texture."
+
+    Add the following to the list of conditions required for framebuffer
+    attachment completeness in section 9.4.1 (Framebuffer Attachment
+    Completeness):
+
+    "If <image> is a two-dimensional array and the attachment
+    is multiview, all the selected layers, [<baseViewIndex>,
+    <baseViewIndex> + <numViews>), are less than the layer count of the
+    texture."
+
+    Add the following to the list of conditions required for framebuffer
+    completeness in section 9.4.2 (Whole Framebuffer Completeness):
+
+    "The number of views is the same for all populated attachments.
+
+    { FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR }"
+
+Modifications to Chapter 11 of the OpenGL ES 3.2 Specification (Programmable
+Vertex Processing
+
+    Modify section 11.1.3.11 (Validation) adding the following conditions
+    to the list of reasons that may result in an INVALID_OPERATION error
+    being generated by any command that transfers vertices to the the GL:
+
+    * Any attachment of the draw framebuffer is multiview (section 9.2.8)
+      and any of the following conditions are true:
+
+      - There is an active program for tessellation control, tessellation
+      evaluation, or geometry stages, or
+
+      - Transform feedback is active."
+
+Modifications to Chapter 15 of the OpenGL ES 3.2 Specification (Writing
+Fragments and Samples to the Framebuffer) [OpenGL 4.6 Chapter 17]
+
+    Modify section 15.1.4 [OpenGL 4.6 section 17.3.5] (Occlusion Queries)
+    adding the following to the end of the second paragraph (describing
+    the SAMPLES_PASSED query):
+
+    "During multiview rendering (section 9.2.8), the samples-passed count
+    requirement is relaxed and the samples counted must be between the
+    maximum number of samples counted from any view, and the sum of samples
+    counted for all views."
+
+    Add the following to the end of the fourth paragraph (describing
+    ANY_SAMPLES_PASSED and ANY_SAMPLES_PASSED_CONSERVATIVE):
+
+    "During multiview rendering (section 9.2.8), the samples-boolean state
+    is set to TRUE if the samples-boolean state from any view is set to
+    TRUE."
+
+Modifications to Chapter 16 of the OpenGL ES 3.2 Specification (Reading and
+Copying Pixels)
+
+    Add the following paragraph to the end of the description of
+    BlitFramebuffer in section 16.2.1 (Blitting Pixel Rectangles):
+
+    "If the draw framebuffer has multiple views (see section 9.2.8,
+    FramebufferTextureMultiviewOVR), values taken from the read buffer are
+    only written to draw buffers in the first view of the draw framebuffer."
 
 
-    In this mode there are several restrictions:
+New Implementation Dependent State
 
-        - in vertex shader gl_Position is the only output that can depend on
-          ViewID
-        - no transform feedback
-        - no tessellation control or evaluation shaders
-        - no geometry shader
-        - no timer query
-        - occlusion query results must be between max and sum of per-view
-          queries, inclusive
+    (Additions to Table 21.40 "Implementation Dependent Values")
 
+    Get Value      Type  Get Command  Minimum Value  Description              Sec.
+    ---------      ----  -----------  -------------  -----------              ----
+    MAX_VIEWS_OVR   Z+   GetIntegerv  2              Maximum number of views  9.2.8
 
 Modifications to The OpenGL ES Shading Language Specification, Version 3.00.04
 
     Including the following line in a shader can be used to control the
     language features described in this extension:
 
-      #extension GL_OVR_multiview
+      #extension GL_OVR_multiview : <behavior>
 
     In section 4.3.8.1 "Input Layout Qualifiers":
 
@@ -178,13 +340,52 @@ Modifications to The OpenGL ES Shading Language Specification, Version 3.00.04
     Vertex shaders also allow the following layout qualifier on "in" only
     (not with variable declarations)
 
+    [[ If implemented in OpenGL ES]]
+
           layout-qualifier-id
                 num_views = integer-constant
+
+    [[ If implemented in OpenGL ]]
+
+          layout-qualifier-id
+                num_views = integer-constant-expression
 
     to indicate that the shader will only be used with the given number of
     views, as described in section 4.4 ("Framebuffer Objects") of the OpenGL ES
     Specification.  If this qualifier is not declared, the behavior is as if it
     had been set to 1.
+
+    If this layout qualifier is declared more than once in the same shader,
+    all those declarations must set num_views to the same value; otherwise a
+    compile-time error results. If multiple compute shaders attached to a
+    single program object declare num_views, the declarations must be
+    identical; otherwise a link-time error results. It is a compile-time
+    error to declare num_views to be less than or equal to zero, or greater
+    than MAX_VIEWS_OVR.
+
+    Additions to Section 7.1 "Built-in Language Variables"
+
+    Add the following to the list of built-in variables that are intrinsically
+    declared in the vertex, tessellation control, tessellation evaluation,
+    geometry, fragment, and compute shading languages:
+
+       in mediump uint gl_ViewID_OVR;
+
+    The gl_ViewID_OVR built-in variable holds the integer index of the view
+    number to which the current shader invocation belongs, as defined in
+    in section 4.4.2.4 (FramebufferTextureMultiviewOVR) in the OpenGL
+    Graphics Systems Specification.
+
+    [[ If OVR_multiview2 is not supported ]]
+
+    It is a compile- or link-time error if any output variable other
+    than gl_Position is statically dependent on gl_ViewID_OVR. If an
+    output variable other than gl_Position is dynamically dependent on
+    gl_ViewID_OVR, the values are undefined.
+
+    NOTE: Implementations that also support OVR_multiview2 may not
+    generate an error if these conditions are violated, even if the
+    OVR_multiview2 extension is not enabled.
 
 Errors
 
@@ -193,13 +394,46 @@ Errors
     CopyTexSubImage*, if the number of views in the current read framebuffer
     is greater than 1.
 
-    INVALID_VALUE is generated by FramebufferTextureMultiviewOVR if numViews is
-    less than 1, if numViews is more than MAX_VIEWS_OVR or if (baseViewIndex +
-    numViews) exceeds GL_MAX_ARRAY_TEXTURE_LAYERS.
-
     INVALID_OPERATION is generated if a rendering command is issued and the the
     number of views in the current draw framebuffer is not equal to the number
     of views declared in the currently bound program.
+
+Interactions with OpenGL 3.3, ARB_timer_query, and EXT_disjoint_timer_query
+
+    If none of OpenGL 3.3, ARB_timer_query, or EXT_disjoint_timer_query
+    are supported, ignore references to TIMESTAMP and TIME_ELAPSED queries.
+
+Interactions with OpenGL 4.5, ARB_direct_state_access, and
+EXT_direct_state_access
+
+    If none of OpenGL 4.5, ARB_direct_state_access and EXT_direct_state_access
+    are supported, the command NamedFramebufferTextureMultiviewOVR does not
+    exist.
+
+Interactions with OpenGL ES 3.2, OpenGL 4.0, EXT_tessllation_shader, and
+ARB_tessellation_shader.
+
+    If none of OpenGL ES 3.2, OpenGL 4.0, EXT_tessellation_shader, or
+    ARB_tessellation shader are supported, ignore all references to
+    tessellation shaders.
+
+Interactions with OpenGL ES 3.2, OpenGL 3.2, EXT_geometry_shader, and
+ARB_geometry_shader4.
+
+    If none of OpenGL ES 3.2, OpenGL 3.2, EXT_geometry_shader, or
+    ARB_geometry_shader4 are supported, ignore all references to geometry
+    shaders.
+
+Interactions with OpenGL 4.3, ARB_multi_draw_indirect, and
+EXT_multi_draw_indirect.
+
+    If none of OpenGL 4.3, ARB_multi_draw_indirect, or EXT_multi_draw_indirect
+    are supported, ignore all references to multi-draw-indirect.
+
+Interactions with with OpenGL 3.0
+
+    If OpenGL 3.0 (or later) is not supported, ignore all references to the
+    SAMPLES_PASSED occlusion query target.
 
 Issues
 
@@ -241,10 +475,10 @@ Issues
     samples returned from any view, but returning the sum may also be fine.
     Simply reporting the result from view 0 is not sufficient.
 
-    (6) Is ViewID visible at every pipeline stage?
+    (6) Is gl_ViewID_OVR visible at every pipeline stage?
 
     Resolved: To make integration simple for app developers, the intent is for
-    ViewID to be visible as a built-in at each programmable pipeline stage.
+    gl_ViewID_OVR to be visible as a built-in at each programmable pipeline stage.
 
     (7) Are view-dependent parameters exposed explicitly?
 
@@ -263,10 +497,10 @@ Issues
     Adding that support would be complex, and thus not in the spirit of an
     extension that can be implemented broadly with low risk.
 
-    (9) Should there be a per-view UBO instead of exposing ViewID in the shader?
+    (9) Should there be a per-view UBO instead of exposing gl_ViewID_OVR in the shader?
 
-    Resolved: No. Exposing the ViewID variable is the smallest change.  It does
-    imply dynamic branching, predication, or indexing based on the view id,
+    Resolved: No. Exposing the gl_ViewID_OVR variable is the smallest change. It
+    does imply dynamic branching, predication, or indexing based on the view id,
     however, implementations could compile separate versions of the shader with
     view id translated to literals if that would improve performance.  Extra API
     and machinery would be required to sequence one or more UBOs to different
@@ -288,7 +522,7 @@ Issues
     for the declared number of views, for example by loop-unrolling. It could
     also serves as a notification that the shader outputs must be 'broadcast' to
     a set of views - even in cases where the shader does not reference from
-    ViewID.
+    gl_ViewID_OVR.
 
     (13) What should happen if the number of views declared in the shader does
     not match num_views?
@@ -334,6 +568,130 @@ Issues
     
     Resolved: Clears are applied to all views.
 
+    (18) What happens if the num_views layout qualifier has an invalid value
+    like zero or something above MAX_VIEWS_OVR?  What happens if num_views
+    is specified multiple times in the same shader, or in multiple vertex
+    shaders (this is only possible in OpenGL)?
+
+    RESOLVED: This is treated similarly to how layout local_size_{x,y,z} is
+    handled in compute shaders:
+    - num_views <= 0 or > MAX_VIEWS_OVR is a compile error
+    - if declared multiple times in the same shader the values
+      must be the same or a compile-time error results.
+    - if declared in multiple shaders attached to the same program object
+      a link-time error results.
+
+    (19) Is the shader built-in variable really called gl_ViewID_OVR? The
+    shading language convention does not normally include an underscore before
+    the vendor suffix.
+
+    RESOLVED: Yes it really is. It doesn't quite follow the standard extension
+    conventions, but there were a number of implementations that already
+    supported it before this was realized. We'll just leave it this way for
+    compatibility.
+
+    (20) Is there a gl_MaxViewsOVR shading language built-in constant?
+
+    RESOLVED: No. Initial implementations didn't provide this. If this ever
+    is made KHR or core functionality, this could be added.
+
+    (21) What is the minimum values permitted for MAX_VIEWS_OVR?
+
+    RESOLVED: 2. But at least 6 is recommended for consistency with Vulkan.
+    Six views is desireable as it can be used to render all faces of a cube map
+    in a single pass. Added state table entries for this in revision 0.8.
+
+    (22) What are the rules to check if anything other than gl_Position
+    depends on gl_ViewID_OVR and what happens if the rules aren't met?
+
+    RESOLVED: It is a compile- or link-time error if it can be determined
+    that an output variable other than gl_Position is statically dependent on
+    gl_ViewID_OVR. However, if an output variable other than gl_Position
+    is dynamically dependent on gl_ViewID_OVR, the results are undefined.
+
+    NOTE: This restriction is relaxed if OVR_multiview2 is supported,
+    and some implementations may not implement these checks even if
+    OVR_multiview2 is not enabled. It is recommended and preferred that
+    all implemenations support OVR_multiview2 and that applications
+    enable the extension when present.
+
+    For non-VTG stages (eg compute and fragment) which don't have a
+    gl_Position output variable this means that no outputs can depend
+    on the gl_VIewID_OVR. It is still possible that shader side effects
+    (such as image or buffer stores) could be view-dependent.
+
+    (23) What is the behaviour if transform feedback, tessellation or
+    geometry shaders, or timer queries are used?
+
+    RESOLVED: INVALID_OPERATION is generated for any draw operation
+    with when the draw framebuffer is multiview if there is an active
+    tessellation control, tessellation evaluation, or geometery shader,
+    or if transform feedback is active.
+
+    For timer queries there is no good time to do a multiview error check,
+    (because a multiview framebuffer could be bound before or after the
+    timer query has started) and thus the results of the TIME_ELAPSED
+    and TIMESTAMP queries have undefined values if a multiview framebuffer
+    was bound at any time during their execution.
+
+    (24) Do instanced drawing commands (DrawArraysInstanced*, and
+    DrawElementsInstanced*) work with this extension?
+
+    RESOLVED: Yes. No specific edits are required because "It Just Works"(TM)
+
+    (25) Do indirect drawing commands (DrawArraysIndirect, DrawElementsIndirect),
+    work with this extension?
+
+    RESOLVED: Yes. No specific edits are required because "It Just Works"(TM)
+
+    (26) Do multi draw indirect commands (MultiDrawArraysIndirect,
+    MultiDrawElementsIndirect) work with this extension?
+
+    RESOLVED: Yes. No specific edits are required because "It Just Works"(TM)
+
+    (27) What happens if the <baseViewIndex> + <numViews> is out of range?
+    For example, if it's greater than the number of layers in the attached
+    texture or greater than MAX_ARRAY_TEXTURE_LAYERS?
+
+    RESOLVED: In cases there the resulting value could never be a valid
+    <layer> argument to FramebufferTextureLayer, the INVALID_VALUE value
+    is generated. This follows from the fact that
+    FramebufferTextureMultiviewOVR is defined in terms of
+    FramebufferTextureLayer. For cases which are dependant on the properties
+    of a specific texture (referencing more layers than exist), this is a
+    to be a framebuffer attachment completeness check as this can change if
+    the texture is redefined after the FramebufferTextureMultiviewOVR call.
+
+    (28) What is the value of FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER after
+    FramebufferTextureMultiviewOVR is called?
+
+    RESOLVED: It is set it to the value of <baseViewIndex>.
+    A FRAMEBUFFER_ATTACHMENT_MULTIVIEW_OVR framebuffer property would be
+    useful here..
+
+    (29) Should there be a FRAMEBUFFER_ATTACHMENT_MULTIVIEW_OVR property to
+    indicate multiview framebuffers, similar to the
+    FRAMEBUFFER_ATTACHMENT_LAYERED property?
+
+    RESOLVED: No. Ideally there would to allow distinguising between
+    layered framebuffers and multiview framebuffers, and to know which of
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER,
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR, and
+    FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR are valid.
+    Unfortunately existing implementations don't have this, so it will
+    just have to be implied. This is something that could be improved in
+    a promoted version of this extension.
+
+    (30) What types of textures can be used for multiview rendering?
+    Two-dimensional array textures at a minimum, what about three-
+    dimensional, cube map, cube map array or two-dimensional
+    multisample textures which are also accepted by FramebufferTextureLayer
+    (which is what this extension is defined in terms of).
+
+    RESOLVED. The initial extension is limited to two-dimensional array
+    textures. A future extension could extend it further if there is demand.
+
+
 Revision History
 
       Rev.    Date    Author    Changes
@@ -344,4 +702,17 @@ Revision History
       0.4   02/11/15  cass      Switch to view instead of layer, as these are distinct now
       0.5   04/15/15  cass      Clean up pass before publishing
       0.6   07/01/16  nigelw    Modify errors to conform to multisample multiview spec changes
-      0.7   07/25/17  tjh       Clarify Blit and Clear behaviours, and fixed framebuffer attachment binding psuedocode (bugzillas 16173, 16174, 16176)
+      0.7   07/25/17  tjh       Clarify Blit and Clear behaviours, and fixed framebuffer attachment
+                                binding psuedocode (bugzillas 16173, 16174, 16176)
+      1     10/10/17  dgkoch    Completed extension.
+                                - Rebased on ES 3.2 (and OpenGL 4.6 where necessary) and added
+                                  extension interactions
+                                - Added DSA command for GL: NamedFramebufferTextureMultiviewOVR
+                                - properly documented gl_ViewID_OVR and behaviour
+                                - documented error behavior for num_views
+                                - added error behavior for tess, geom, xfb, and timer queries
+                                - documented new FRAMEBUFFER_ATTACHMENT*OVR variables
+                                - clarify that only 2D-array textures are supported
+                                - better document new framebuffer completeness conditions
+                                - document MAX_VIEWS_OVR and specify minimum value (2)
+                                - added issues 18-30
