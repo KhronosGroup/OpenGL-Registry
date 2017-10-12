@@ -1411,7 +1411,7 @@ typedef unsigned __int64 uint64_t;
             <param><ptype>int64_t</ptype> <name>remainder</name></param>
         </command>
         <command>
-            <proto>void <name>glXSwapIntervalMESA</name></proto>
+            <proto>int <name>glXSwapIntervalMESA</name></proto>
             <param>unsigned int <name>interval</name></param>
         </command>
         <command>
