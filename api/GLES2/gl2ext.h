@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20171010 */
+/* Generated on date 20171012 */
 
 /* Generated C header for:
  * API: gles2
@@ -3450,6 +3450,19 @@ typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERFETCHBARRIERQCOMPROC) (void);
 GL_APICALL void GL_APIENTRY glFramebufferFetchBarrierQCOM (void);
 #endif
 #endif /* GL_QCOM_shader_framebuffer_fetch_noncoherent */
+
+#ifndef GL_QCOM_texture_foveated
+#define GL_QCOM_texture_foveated 1
+#define GL_TEXTURE_FOVEATED_FEATURE_BITS_QCOM 0x8BFB
+#define GL_TEXTURE_FOVEATED_MIN_PIXEL_DENSITY_QCOM 0x8BFC
+#define GL_TEXTURE_FOVEATED_FEATURE_QUERY_QCOM 0x8BFD
+#define GL_TEXTURE_FOVEATED_NUM_FOCAL_POINTS_QUERY_QCOM 0x8BFE
+#define GL_FRAMEBUFFER_INCOMPLETE_FOVEATION_QCOM 0x8BFF
+typedef void (GL_APIENTRYP PFNGLTEXTUREFOVEATIONPARAMETERSQCOMPROC) (GLuint texture, GLuint layer, GLuint focalPoint, GLfloat focalX, GLfloat focalY, GLfloat gainX, GLfloat gainY, GLfloat foveaArea);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glTextureFoveationParametersQCOM (GLuint texture, GLuint layer, GLuint focalPoint, GLfloat focalX, GLfloat focalY, GLfloat gainX, GLfloat gainY, GLfloat foveaArea);
+#endif
+#endif /* GL_QCOM_texture_foveated */
 
 #ifndef GL_QCOM_tiled_rendering
 #define GL_QCOM_tiled_rendering 1

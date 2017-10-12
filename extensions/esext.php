@@ -607,4 +607,6 @@
 </li>
 <li value=292><a href="extensions/MESA/MESA_tile_raster_order.txt">GL_MESA_tile_raster_order</a>
 </li>
+<li value=293><a href="extensions/QCOM/QCOM_texture_foveated.txt">GL_QCOM_texture_foveated</a>
+</li>
 </ol>

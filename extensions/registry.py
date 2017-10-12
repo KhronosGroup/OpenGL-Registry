@@ -4282,6 +4282,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_framebuffer_foveated.txt',
     },
+    'GL_QCOM_texture_foveated' : {
+        'esnumber' : 293,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_texture_foveated.txt',
+    },
     'GL_QCOM_shader_framebuffer_fetch_noncoherent' : {
         'esnumber' : 277,
         'flags' : { 'public' },
