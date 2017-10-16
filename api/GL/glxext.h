@@ -506,10 +506,10 @@ Bool glXSet3DfxModeMESA (int mode);
 #ifndef GLX_MESA_swap_control
 #define GLX_MESA_swap_control 1
 typedef int ( *PFNGLXGETSWAPINTERVALMESAPROC) (void);
-typedef void ( *PFNGLXSWAPINTERVALMESAPROC) (unsigned int interval);
+typedef int ( *PFNGLXSWAPINTERVALMESAPROC) (unsigned int interval);
 #ifdef GLX_GLXEXT_PROTOTYPES
 int glXGetSwapIntervalMESA (void);
-void glXSwapIntervalMESA (unsigned int interval);
+int glXSwapIntervalMESA (unsigned int interval);
 #endif
 #endif /* GLX_MESA_swap_control */
 
