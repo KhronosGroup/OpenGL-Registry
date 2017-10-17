@@ -37,8 +37,9 @@ Dependencies
     Shading Language 1.0.17 and OpenGL ES Shading Language 3.00.3
     specifications.
     
-    OpenGL 2.0, OpenGL 3.0, OpenGL 4.0, OpenGL ES 2.0, OpenGL ES 3.0 and OpenGL
-    ES 3.2 affect the definition of this extension.
+    OpenGL 2.0, OpenGL 3.0, OpenGL 4.0, OpenGL 4.5, OpenGL ES 2.0, OpenGL ES
+    3.0, OpenGL ES 3.1 and OpenGL ES 3.2 affect the definition of this
+    extension.
 
     ARB_sample_shading and OES_sample_shading interact with this extension.
 
@@ -150,6 +151,37 @@ Issues
     gl_LastFragData or fragment outputs with the inout storage qualifier will
     contain framebuffer values converted from sRGB to linear upon entry to the
     fragment shader.
+
+    7. How does this extension interact with derivative built-in functions?
+
+    RESOLVED: There is no direct interaction in principle, but because the
+    result of framebuffer fetch is undefined for helper invocations, derivative
+    functions may give non-deterministic results when the argument is dependent
+    on values read from the framebuffer.
+
+    To overcome this limitation the application may be able to calculate the
+    derivative of gl_HelperInvocation in order to determine whether any of the
+    invocations involved in the calculation are helper invocations, which
+    would invalidate the result of the same derivative applied to any
+    expression dependent on values read from the framebuffer.  In particular,
+    if either dFdx(float(gl_HelperInvocation)) or
+    dFdy(float(gl_HelperInvocation)) is zero, the corresponding derivative of
+    a value read from the framebuffer should be well-defined.
+
+    8. Should we require the behavior of framebuffer fetch to be well-defined
+       for helper invocations in order to support calculating derivatives of
+       color outputs without restrictions?
+
+    RESOLVED: Not in this extension.  It would be compelling from the
+    perspective of the API, and likely more consistent with the current
+    behavior of texture sampling and image loads for helper invocations, but
+    hardware support may be limited.  With the non-coherent variant of this
+    extension there is the additional difficulty that derivatives could still
+    give non-deterministic results, because there is no way for the application
+    to determine whether there will be overlap between helper invocations and
+    previous rendering done in the same pass, since the set of helper
+    invocations executed during rendering is fully defined by the
+    implementation.
 
 New Procedures and Functions
 
@@ -332,7 +364,20 @@ Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 7
     Redeclarations must not otherwise alter the declared type or array size of
     gl_LastFragData."
 
+Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 8
+
+    Add after paragraph 2 of section 8.7, Texture Lookup Functions,
+    page 57 ("Functions containing the bias parameter [...]"):
+
+    "Results are undefined if the coordinates passed to any of the built-in
+    functions below that compute an implicit LOD value are calculated based on
+    the result of reading from gl_LastFragData, and the texture bound to the
+    specified sampler is mip-mapped."
+
 Changes to the OpenGL Shading Language 1.10 Specification, Chapter 8
+
+    [[ The following applies in addition to the changes given above for the
+       same chapter of the OpenGL ES Shading Language 1.0.17 Specification. ]]
 
     Append at the end of section 8.8, Fragment Processing Functions,
     page 59:
@@ -367,6 +412,51 @@ Changes to the OpenGL ES Shading Language 3.00.3 Specification, Chapter 4
 
     #define GL_EXT_shader_framebuffer_fetch        1"
 
+Changes to the OpenGL ES Shading Language 3.00.3 Specification, Chapter 7
+
+    [[ The following shall be omitted if the changes given below for the same
+       chapter of the OpenGL ES Shading Language 3.10.4 Specification apply. ]]
+
+    Append at the end of section 7.2, Fragment Shader Special Variables, page
+    82:
+
+    "A helper invocation is a fragment shader invocation that is created solely
+    for the purposes of evaluating derivatives for the built-in functions
+    texture() (section 8.9 “Texture Functions”), dFdx(), dFdy(), and fwidth()
+    for other non-helper fragment shader invocations.
+
+    Fragment shader helper invocations execute the same shader code as
+    non-helper invocations, but will not have side effects that modify the
+    framebuffer or other shader-accessible memory.  In particular fragments
+    corresponding to helper invocations are discarded when shader execution is
+    complete, without updating the framebuffer.  The values returned when
+    reading from the framebuffer via inout fragment outputs are undefined for
+    helper invocations.
+
+    Helper invocations may be generated for pixels not covered by a primitive
+    being rendered. While fragment shader inputs qualified with "centroid" are
+    normally required to be sampled in the intersection of the pixel and the
+    primitive, the requirement is ignored for such pixels since there is no
+    intersection between the pixel and primitive.
+
+    Helper invocations may also be generated for fragments that are covered by
+    a primitive being rendered when the fragment is killed by early fragment
+    tests or where the implementation is able to determine that executing the
+    fragment shader would have no effect other than assisting in computing
+    derivatives for other fragment shader invocations.  The set of helper
+    invocations generated when processing any set of primitives is
+    implementation-dependent."
+
+Changes to the OpenGL ES Shading Language 3.10.4 Specification, Chapter 7
+
+    Modify the first bullet point of paragraph 11 of section 7.1.2, Fragment
+    Shader Special Variables, page 96:
+
+    "* Fragments corresponding to helper invocations are discarded when shader
+       execution is complete, without updating the framebuffer.  The values
+       returned when reading from the framebuffer via inout fragment outputs
+       are undefined for helper invocations."
+
 Interactions with OpenGL 2.0
 
     If OpenGL 2.0 is supported, all changes given above for the OpenGL ES
@@ -388,6 +478,12 @@ Interactions with OpenGL 4.0 and later
     The interaction described below with ARB_sample_shading applies in
     addition to any interactions enumerated for OpenGL 3.0 and above.
 
+Interactions with OpenGL 4.5 and later
+
+    The changes given above for the OpenGL Shading Language 3.10.4
+    Specification shall be applied in addition to any interactions enumerated
+    for OpenGL 4.0 and above.
+
 Interactions with OpenGL ES 2.0
 
     If OpenGL ES 2.0 is supported, apply all changes given above for the OpenGL
@@ -402,10 +498,16 @@ Interactions with OpenGL ES 3.0 and later
     qualifiers shall be omitted if they are not supported by the Shading
     Language.
 
+Interactions with OpenGL ES 3.1 and later
+
+    The changes given above for the OpenGL Shading Language 3.10.4
+    Specification shall be applied in addition to any interactions enumerated
+    for OpenGL ES 3.0 and above.
+
 Interactions with OpenGL ES 3.2 and later
 
     The interaction described below with OES_sample_shading applies in
-    addition to any interactions enumerated for OpenGL ES 3.0 and above.
+    addition to any interactions enumerated for OpenGL ES 3.1 and above.
 
 Interactions with OES_standard_derivatives
 
@@ -431,6 +533,13 @@ Revision History
                           - Explicitly require per-sample evaluation of the
                             fragment shader when an inout output is read in
                             OpenGL ES 3.0 and above.
+                          - Specify undefined behavior of helper invocations
+                            in OpenGL ES 3.0 and above.  Add discussion
+                            related to derivative computations in the issues
+                            section.
+                          - Specify undefined behavior of texture lookup
+                            functions that compute implicit derivatives in
+                            OpenGL (ES) 2.0.
     Version 6, 2017/10/04 - Clarified how gl_LastFragData is populated.
     Version 5, 2016/09/08 - Added preprocessor defines.
     Version 4, 2013/05/28 - Added ES3 interaction as requested in Bug 10236
