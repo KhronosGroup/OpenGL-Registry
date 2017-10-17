@@ -7853,7 +7853,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8BE7" name="GL_SAMPLER_EXTERNAL_2D_Y2Y_EXT"/>
             <unused start="0x8BE8" end="0x8BEF" vendor="QCOM"/>
         <enum value="0x8BFA" name="GL_TEXTURE_PROTECTED_EXT"/>
-            <unused start="0x8BFB" end="0x8BFF" vendor="QCOM"/>
+        <enum value="0x8BFB" name="GL_TEXTURE_FOVEATED_FEATURE_BITS_QCOM"/>
+        <enum value="0x8BFC" name="GL_TEXTURE_FOVEATED_MIN_PIXEL_DENSITY_QCOM"/>
+        <enum value="0x8BFD" name="GL_TEXTURE_FOVEATED_FEATURE_QUERY_QCOM"/>
+        <enum value="0x8BFE" name="GL_TEXTURE_FOVEATED_NUM_FOCAL_POINTS_QUERY_QCOM"/>
+        <enum value="0x8BFF" name="GL_FRAMEBUFFER_INCOMPLETE_FOVEATION_QCOM"/>
     </enums>
 
     <enums namespace="GL" start="0x8C00" end="0x8C0F" vendor="IMG">
@@ -27624,6 +27628,17 @@ typedef unsigned int GLhandleARB;
             <param group="Boolean"><ptype>GLboolean</ptype> <name>blue</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>alpha</name></param>
             <glx type="render" opcode="2082"/>
+        </command>
+        <command>
+            <proto>void <name>glTextureFoveationParametersQCOM</name></proto>
+            <param group="Texture"><ptype>GLuint</ptype> <name>texture</name></param>
+            <param><ptype>GLuint</ptype> <name>layer</name></param>
+            <param><ptype>GLuint</ptype> <name>focalPoint</name></param>
+            <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>focalX</name></param>
+            <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>focalY</name></param>
+            <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>gainX</name></param>
+            <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>gainY</name></param>
+            <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>foveaArea</name></param>
         </command>
         <command>
             <proto>void <name>glTextureImage1DEXT</name></proto>
@@ -48732,6 +48747,18 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM"/>
                 <command name="glFramebufferFoveationConfigQCOM"/>
                 <command name="glFramebufferFoveationParametersQCOM"/>
+            </require>
+        </extension>
+        <extension name="GL_QCOM_texture_foveated" supported="gles2">
+            <require>
+                <enum name="GL_FOVEATION_ENABLE_BIT_QCOM"/>
+                <enum name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM"/>
+                <enum name="GL_TEXTURE_FOVEATED_FEATURE_BITS_QCOM"/>
+                <enum name="GL_TEXTURE_FOVEATED_MIN_PIXEL_DENSITY_QCOM"/>
+                <enum name="GL_TEXTURE_FOVEATED_FEATURE_QUERY_QCOM"/>
+                <enum name="GL_TEXTURE_FOVEATED_NUM_FOCAL_POINTS_QUERY_QCOM"/>
+                <enum name="GL_FRAMEBUFFER_INCOMPLETE_FOVEATION_QCOM"/>
+                <command name="glTextureFoveationParametersQCOM"/>
             </require>
         </extension>
         <extension name="GL_QCOM_perfmon_global_mode" supported="gles1|gles2">
