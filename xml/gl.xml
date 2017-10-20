@@ -46851,6 +46851,25 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_PATH_MAX_PROJECTION_STACK_DEPTH_NV"/>
                 <enum name="GL_PATH_TRANSPOSE_PROJECTION_MATRIX_NV"/>
                 <enum name="GL_FRAGMENT_INPUT_NV"/>
+                <command name="glMatrixFrustumEXT"/>
+                <command name="glMatrixLoadIdentityEXT"/>
+                <command name="glMatrixLoadTransposefEXT"/>
+                <command name="glMatrixLoadTransposedEXT"/>
+                <command name="glMatrixLoadfEXT"/>
+                <command name="glMatrixLoaddEXT"/>
+                <command name="glMatrixMultTransposefEXT"/>
+                <command name="glMatrixMultTransposedEXT"/>
+                <command name="glMatrixMultfEXT"/>
+                <command name="glMatrixMultdEXT"/>
+                <command name="glMatrixOrthoEXT"/>
+                <command name="glMatrixPopEXT"/>
+                <command name="glMatrixPushEXT"/>
+                <command name="glMatrixRotatefEXT"/>
+                <command name="glMatrixRotatedEXT"/>
+                <command name="glMatrixScalefEXT"/>
+                <command name="glMatrixScaledEXT"/>
+                <command name="glMatrixTranslatefEXT"/>
+                <command name="glMatrixTranslatedEXT"/>
             </require>
         </extension>
         <extension name="GL_NV_path_rendering_shared_edge" supported="gl|glcore|gles2">
