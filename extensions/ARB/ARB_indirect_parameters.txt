@@ -26,8 +26,8 @@ Status
 
 Version
 
-    Last Modified Date: 20 June 2013
-    Revision: 3
+    Last Modified Date: 23 October 2017
+    Revision: 4
 
 Number
 
@@ -103,6 +103,20 @@ Additions to Chapter 6 of the OpenGL 4.3 (Core Profile) Specification
     Target name            Purpose               Described in section(s)
     --------------------    ---------------       ------------------------
     PARAMETER_BUFFER_ARB   draw parameters       10.5
+
+Additions to Chapter 7 of the OpenGL 4.3 (Core Profile) Specification
+(Programs and Shader)
+
+    Modifications to Section 7.12.2 "Shader Memory Access Synchronization"
+
+    Replace the bullet point describing COMMAND_BARRIER_BIT with
+
+        - COMMAND_BARRIER_BIT:  Command data sourced from buffer objects by
+          Draw*Indirect, MultiDraw*IndirectCount, and DispatchComputeIndirect
+          commands after the barrier will reflect data written by shaders
+          prior to the barrier.  The buffer objects affected by this bit
+          are derived from the DRAW_INDIRECT_BUFFER, DISPATCH_INDIRECT_BUFFER,
+          and PARAMETER_BUFFER_ARB bindings.
 
 Additions to Chapter 10 of the OpenGL 4.3 (Core Profile) Specification
 (Drawing Commands Using Vertex Arrays)
@@ -193,3 +207,4 @@ Revision History
                                 Add issue (1)
      3    06/20/2013  pdaniell  Modify the <indirect> parameter type to
                                 const void *.
+     4    10/23/2017  nhaehnle  Add COMMAND_BARRIER_BIT language.
