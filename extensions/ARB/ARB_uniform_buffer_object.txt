@@ -42,8 +42,8 @@ Status
 
 Version
 
-    Last Modified Date:     2013/08/19
-    Author revision:        67
+    Last Modified Date:     2015/06/23
+    Author revision:        68
 
 Number
 
@@ -1084,7 +1084,167 @@ Additions to Chapter 6 - State and State Requests
 
     ... return the value or values of the uniform at location <location>
     of the default uniform block for program object <program>...
-    
+
+GLX Protocol
+
+    GLX protocol for BindBufferRange, BindBufferBase and GetIntegeri_v
+    was added through NV_transform_feedback and EXT_draw_buffers2
+    protocol specs.
+
+    The following rendering commands are sent to the server as part of
+    a glXRender request:
+
+    UniformBlockBinding
+
+        2      16              rendering command length
+        2      366             rendering command opcode
+        4      CARD32          program
+        4      CARD32          uniformBlockIndex
+        4      CARD32          uniformBlockBinding
+
+    The following non-rendering commands are added:
+
+    GetUniformIndices
+
+        1      CARD8           opcode(X assigned)
+        1      215             GLX opcode
+        2      4+n+(s+p)/4     request length
+        4      GLX_CONTEXT_TAG context tag
+        4      CARD32          program
+        4      CARD32          uniformCount
+        n      LISTofINT32     lengths[n], n = uniformCount, lengths[i] = strlen(uniformNames[i]) + 1, 0 <= i < n.
+        s      LISTofCHAR      uniformNames, s = length[0]+...+length[n-1].
+                               array
+        p                      unused, p = pad(s)
+    =>
+        1      1               reply
+        1                      unused
+        2      CARD16          sequence number
+        4      n               reply length
+        4                      unused
+        4      CARD32          n (number of uniform Indices)
+
+        if (n == 1) this follows:
+
+        4      CARD32          uniformIndices
+        12                     unused
+
+        otherwise this follows:
+
+        16                     unused
+        4*n    LISTofCARD32    uniformIndices
+
+    GetActiveUniformsiv
+
+        1      CARD8           opcode(X assigned)
+        1      216             GLX opcode
+        2      5+n             request length
+        4      GLX_CONTEXT_TAG context tag
+        4      CARD32          program
+        4      INT32           uniformCount(n)
+        4      ENUM            pname
+        n      LISTofCARD32    uniformIndices
+
+    =>
+        1      1               reply
+        1                      unused
+        2      CARD16          sequence number
+        4      n               reply length
+        4                      unused
+
+        if (n == 1) this follows:
+
+        4      INT32           params
+        12                     unused
+
+        otherwise this follows:
+
+        16                     unused
+        4*n    LISTofINT32     params
+
+     GetActiveUniformName
+
+        1      CARD8           opcode(X assigned)
+        1      217             GLX opcode
+        2      5               request length
+        4      GLX_CONTEXT_TAG context tag
+        4      CARD32          program
+        4      CARD32          uniformIndex
+        4      INT32           bufsize
+    =>
+        1      1               reply
+        1                      unused
+        2      CARD16          sequence number
+        4      m               reply length, m = (n+p)/4
+        4                      unused
+        4      INT32           n
+        16                     unused
+        n      LISTofCHAR      uniformName, n = strlen(uniformName)+1
+        p                      unused, p=pad(n)
+
+     GetUniformBlockIndex
+
+        1      CARD8           opcode(X assigned)
+        1      218             GLX opcode
+        2      3+(n+p)/4       request length
+        4      GLX_CONTEXT_TAG context tag
+        4      CARD32          program
+        n      LISTofCHAR      uniformBlockName, n = strlen(uniformBlockName)+1
+        p                      unused, p=pad(n)
+    =>
+        1      1               reply
+        1                      unused
+        2      CARD16          sequence number
+        4      0               reply length
+        4      CARD32          return value
+        20                     unused
+
+    GetActiveUniformBlockiv
+
+        1      CARD8           opcode(X assigned)
+        1      219             GLX opcode
+        2      5               request length
+        4      GLX_CONTEXT_TAG context tag
+        4      CARD32          program
+        4      CARD32          uniformBlockIndex
+        4      ENUM            pname
+    =>
+        1      1               reply
+        1                      unused
+        2      CARD16          sequence number
+        4      n               reply length
+        4                      unused
+
+        if (n == 1) this follows:
+
+        4      INT32           params
+        12                     unused
+
+        otherwise this follows:
+
+        16                     unused
+        4*n    LISTofINT32     params
+
+    GetActiveUniformBlockName
+
+        1      CARD8           opcode(X assigned)
+        1      220             GLX opcode
+        2      5               request length
+        4      GLX_CONTEXT_TAG context tag
+        4      CARD32          program
+        4      CARD32          uniformBlockIndex
+        4      INT32           bufsize
+    =>
+        1      1               reply
+        1                      unused
+        2      CARD16          sequence number
+        4      m               reply length, m = (n+p)/4
+        4                      unused
+        4      INT32           n
+        16                     unused
+        n      LISTofCHAR      uniformBlockName, n = strlen(uniformBlockName)+1
+        p                      unused, p=pad(n)
+
 OpenGL Shading Language Spec v1.20.8 Updates
 
     Including the following line in a shader can be used to control the
@@ -3376,6 +3536,9 @@ Issues
 
 
 Revision History
+
+    (v68, 2015-06-23, srahman)
+        - Add GLX protocol specification.
 
     (v67, 2013-08-17, jon)
         - Add extra 'const' qualifier for GetUniformIndices <uniformNames>

@@ -104,6 +104,8 @@ OpenGL Single Opcodes (8 Bits)
        206     209  ARB_vertex_array_object
        210     212  EXT_draw_buffers2
        213     214  OpenGL 3.0 core
+       215     220  ARB_uniform_buffer_object
+       221          ARB_copy_buffer
 
 OpenGL Rendering Opcodes (16 Bits)
 ==================================
@@ -135,6 +137,9 @@ OpenGL Rendering Opcodes (16 Bits)
        350     351  ARB_vertex_array_object
        352     354  EXT_draw_buffers2
        355     363  OpenGL 3.0 core
+       364     365  NV_primitive_restart
+       366          ARB_uniform_buffer_object
+       367          ARB_texture_buffer_object
   1008-1023 Reserved to IBM (unknown usage)
   1024-1039 Reserved to HP (originally Compaq) (unknown usage)
   1040-2047 Unused
@@ -287,3 +292,409 @@ events should be allocated downwards from the first free value <= 16
 15              Intel (GLX_BufferSwapINTEL)
 16              SGI (GLX_PbufferClobberSGIX)
 64              SGI
+
+GLX protocol encoding for GL >= 2.0
+===================================
+
+(This section - this whole file really - should eventually be incorporated
+in a proper update of the GLX protocol specification.)
+
+OpenGL 2.0
+----------
+
+    DeleteShader
+
+        1           CARD8           opcode (X assigned)
+        1           195             GLX opcode
+        2           3               request length
+        4           GLX_CONTEXT_TAG context tag
+        4           CARD32          shader
+
+    IsShader
+
+        1           CARD8           opcode (X assigned)
+        1           196             GLX opcode
+        2           3               request length
+        4           GLX_CONTEXT_TAG context tag
+        4           CARD32          shader
+      =>
+        1           1               reply
+        1                           unused
+        2           CARD16          sequence number
+        4           0               reply length
+        4           BOOL32          return value
+        20                          unused
+
+    IsProgram
+
+        1           CARD8           opcode (X assigned)
+        1           197             GLX opcode
+        2           3               request length
+        4           GLX_CONTEXT_TAG context tag
+        4           CARD32          program
+      =>
+        1           1               reply
+        1                           unused
+        2           CARD16          sequence number
+        4           0               reply length
+        4           BOOL32          return value
+        20                          unused
+
+    GetShaderiv
+
+        1           CARD8           opcode (X assigned)
+        1           198             GLX opcode
+        2           4               request length
+        4           GLX_CONTEXT_TAG context tag
+        4           CARD32          program
+        4           CARD32          pname
+      =>
+        1           1               reply
+        1                           unused
+        2           CARD16          sequence number
+        4           m               reply length, m = (n == 1 ? 0 : n)
+        4                           unused
+        4           CARD32          n
+
+        if (n == 1) this follows:
+
+        4           CARD32          params
+        12                          unused
+
+        otherwise this follows:
+
+        16                          unused
+        n*4         LISTOFCARD32    params
+
+        Note that n may be 0, indicating that a GL error occurred.
+
+    GetProgramiv
+
+        1           CARD8           opcode (X assigned)
+        1           199             GLX opcode
+        2           4               request length
+        4           GLX_CONTEXT_TAG context tag
+        4           CARD32          program
+        4           CARD32          pname
+      =>
+        1           1               reply
+        1                           unused
+        2           CARD16          sequence number
+        4           m               reply length, m = (n == 1 ? 0 : n)
+        4                           unused
+        4           CARD32          n
+
+        if (n == 1) this follows:
+
+        4           CARD32          params
+        12                          unused
+
+        otherwise this follows:
+
+        16                          unused
+        n*4         LISTofCARD32    params
+
+        Note that n may be 0, indicating that a GL error occurred.
+
+    GetShaderInfoLog
+
+        1           CARD8           opcode (X assigned)
+        1           200             GLX opcode
+        2           4               request length
+        4           GLX_CONTEXT_TAG context tag
+        4           CARD32          shader
+        4           CARD32          bufSize
+      =>
+        1           1               reply
+        1                           unused
+        2           CARD16          sequence number
+        4           m               reply length, m = (n + p) / 4
+        4                           unused
+        4           CARD32          n, n = length + 1
+        16                          unused
+        n           LISTofBYTE      infoLog
+        p                           unused, p=pad(n)
+
+        Note that n may be 0, indicating that a GL error occurred.
+
+    GetProgramInfoLog
+
+        1           CARD8           opcode (X assigned)
+        1           201             GLX opcode
+        2           4               request length
+        4           GLX_CONTEXT_TAG context tag
+        4           CARD32          program
+        4           CARD32          bufSize
+      =>
+        1           1               reply
+        1                           unused
+        2           CARD16          sequence number
+        4           m               reply length, m = (n + p) / 4
+        4                           unused
+        4           CARD32          n, n = length + 1
+        16                          unused
+        n           LISTofBYTE      infoLog
+        p                           unused, p=pad(n)
+
+        Note that n may be 0, indicating that a GL error occurred.
+
+    DeleteProgram
+
+        1           CARD8           opcode (X assigned)
+        1           202             GLX opcode
+        2           3               request length
+        4           GLX_CONTEXT_TAG context tag
+        4           CARD32          program
+
+OpenGL 2.1
+----------
+
+    UniformMatrix2x3fv
+
+        2           16+4*count*2*3  rendering command length
+        2           305             rendering command opcode
+        4           CARD32          location
+        4           CARD32          count
+        1           BOOL            transpose
+        3                           unused
+        4*count*2*3 LISTofFLOAT32   value
+
+    If the command is encoded in a glXRenderLarge request, the
+    command opcode and command length fields above are expanded to
+    4 bytes each:
+
+        4           20+4*count*2*2  rendering command length
+        4           305             rendering command opcode
+
+    UniformMatrix3x2fv
+
+        2           16+4*count*3*2  rendering command length
+        2           306             rendering command opcode
+        4           CARD32          location
+        4           CARD32          count
+        1           BOOL            transpose
+        3                           unused
+        4*count*3*2 LISTofFLOAT32   value
+
+    If the command is encoded in a glXRenderLarge request, the
+    command opcode and command length fields above are expanded to
+    4 bytes each:
+
+        4           20+4*count*3*2  rendering command length
+        4           306             rendering command opcode
+
+    UniformMatrix2x4fv
+
+        2           16+4*count*2*4  rendering command length
+        2           307             rendering command opcode
+        4           CARD32          location
+        4           CARD32          count
+        1           BOOL            transpose
+        3                           unused
+        4*count*2*4 LISTofFLOAT32   value
+
+    If the command is encoded in a glXRenderLarge request, the
+    command opcode and command length fields above are expanded to
+    4 bytes each:
+
+        4           20+4*count*2*4  rendering command length
+        4           307             rendering command opcode
+
+    UniformMatrix4x2fv
+
+        2           16+4*count*4*2  rendering command length
+        2           308             rendering command opcode
+        4           CARD32          location
+        4           CARD32          count
+        1           BOOL            transpose
+        3                           unused
+        4*count*4*2 LISTofFLOAT32   value
+
+    If the command is encoded in a glXRenderLarge request, the
+    command opcode and command length fields above are expanded to
+    4 bytes each:
+
+        4           20+4*count*4*2  rendering command length
+        4           308             rendering command opcode
+
+    UniformMatrix3x4fv
+
+        2           16+4*count*3*4  rendering command length
+        2           309             rendering command opcode
+        4           CARD32          location
+        4           CARD32          count
+        1           BOOL            transpose
+        3                           unused
+        4*count*3*4 LISTofFLOAT32   value
+
+    If the command is encoded in a glXRenderLarge request, the
+    command opcode and command length fields above are expanded to
+    4 bytes each:
+
+        4           20+4*count*3*4  rendering command length
+        4           309             rendering command opcode
+
+    UniformMatrix4x3fv
+
+        2           16+4*count*4*3  rendering command length
+        2           310             rendering command opcode
+        4           CARD32          location
+        4           CARD32          count
+        1           BOOL            transpose
+        3                           unused
+        4*count*4*3 LISTofFLOAT32   value
+
+    If the command is encoded in a glXRenderLarge request, the
+    command opcode and command length fields above are expanded to
+    4 bytes each:
+
+        4           20+4*count*4*3  rendering command length
+        4           310             rendering command opcode
+
+OpenGL 3.0
+----------
+
+    The following rendering commands are sent to the sever as part of a
+    glXRender request:
+
+        BindBufferRange
+
+            2           32              rendering command length
+            2           355             rendering command opcode
+            8           INT64           offset
+            8           INT64           size
+            4           ENUM            target
+            4           CARD32          index
+            4           CARD32          buffer
+
+        BindBufferBase
+
+            2           16              rendering command length
+            2           356             rendering command opcode
+            4           ENUM            target
+            4           CARD32          index
+            4           CARD32          buffer
+
+        BeginTransformFeedback
+
+            2           8               rendering command length
+            2           357             rendering command opcode
+            4           ENUM            primitiveMode
+
+        EndTransformFeedback
+
+            2           4               rendering command length
+            2           358             rendering command opcode
+
+        ClearBufferfi
+
+            2           20              rendering command length
+            2           360             rendering command opcode
+            4           ENUM            buffer
+            4           CARD32          drawbuffer
+            4           FLOAT32         depth
+            4           CARD32          stencil
+
+        ClearBufferfv
+
+            2           12+(4*n)        rendering command length
+            2           361             rendering command opcode
+            4           ENUM            buffer
+                        0x1800   n=4    GL_COLOR
+                        0x1801   n=1    GL_STENCIL
+                        0x1802   n=1    GL_DEPTH
+                        else     n=0
+            4           CARD32          drawbuffer
+            4*n         LISTofFLOAT32   value
+
+        ClearBufferiv
+
+            2           12+(4*n)        rendering command length
+            2           362             rendering command opcode
+            4           ENUM            buffer
+                        0x1800   n=4    GL_COLOR
+                        0x1801   n=1    GL_STENCIL
+                        0x1802   n=1    GL_DEPTH
+                        else     n=0
+            4           CARD32          drawbuffer
+            4*n         LISTofINT32     value
+
+        ClearBufferuiv
+
+            2           12+(4*n)        rendering command length
+            2           363             rendering command opcode
+            4           ENUM            buffer
+                        0x1800   n=4    GL_COLOR
+                        0x1801   n=1    GL_STENCIL
+                        0x1802   n=1    GL_DEPTH
+                        else     n=0
+            4           CARD32          drawbuffer
+            4*n         LISTofCARD32    value
+
+    The following rendering commands can be sent in a glXRender
+    or glXRenderLarge request.
+
+        TransformFeedbackVaryings
+
+            2      16+(n*4)+s+p    rendering command length
+            2      359             rendering command opcode
+            4      CARD32          program
+            4      INT32           count
+            4      ENUM            buffermode
+            n*4    LISTofINT32     lengths[n], n = count
+            s      LISTofCHAR      varyings, s = sum of all entries in the lengths
+                                   array
+            p                      unused, p = pad(s)
+
+    If the command is encoded in a glXRenderLarge request, the command
+    opcode and command length fields are expanded to 4 bytes each.
+
+            4      20+(n*4)+s+p    rendering command length
+            4      359             rendering command opcode
+
+    lengths[i] is calculated as strlen(varyings[i]) + 1. The NUL terminator
+    is included when sending the varyings.
+
+    The following single commands are sent to the server as part of a
+    glXSingle request:
+
+        GetTransformFeedbackVarying
+
+            1      CARD8           opcode(X assigned)
+            1      213             GLX opcode
+            2      5               request length
+            4      GLX_CONTEXT_TAG context tag
+            4      CARD32          program
+            4      CARD32          index
+            4      CARD32          bufsize
+            =>
+            1      1               reply
+            1                      unused
+            2      CARD16          sequence number
+            4      m               reply length, m = (n == 0 ? 0 : (n + p) / 4)
+            4                      unused
+            4      n-1             length
+            4      INT32           size
+            4      INT32           type
+            8                      unused
+            n      LISTofCHAR      name, n = strlen(name)+1
+            p                      unused, p = pad(m)
+
+        GetStringi
+
+            1           CARD8           opcode (X assigned)
+            1           214             GLX opcode
+            2           4               request length
+            4           GLX_CONTEXT_TAG context tag
+            4           ENUM            name
+            4           CARD32          index
+          =>
+            1           1               reply
+            1           1               unused
+            2           CARD16          sequence number
+            4           m               reply length, m = (n + p) / 4
+            4                           unused
+            4           CARD32          n
+            16                          unused
+            n           STRING8         string
+            p                           unused, p=pad(n)

@@ -245,14 +245,17 @@ State Requests)
 
 GLX Protocol
 
-    One new GL command is added.
-
-    The following rendering command is sent to the server as part of a
-    glXRender request:
+    The following rendering commands are sent to the server as part of
+    glXRender requests:
 
         PrimitiveRestartNV
-            2           4               rendering command length
-            2           ????            rendering command opcode
+            2       4               rendering command length
+            2       364             rendering command opcode
+
+        PrimitiveRestartIndexNV
+            2       8               rendering command length
+            2       365             rendering command opcode
+            4       CARD32          index
 
 Errors
 

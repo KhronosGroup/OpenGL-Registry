@@ -28,8 +28,8 @@ Status
 
 Version
 
-    Last Modified Date: June 3, 2009
-    Author Revision: 6
+    Last Modified Date: September 6, 2017
+    Author Revision: 7
 
 Number
 
@@ -119,6 +119,23 @@ Additions to Chapter 5 of the OpenGL 3.0 Specification (Special Functions)
 Additions to the AGL/EGL/GLX/WGL Specifications
 
     None
+
+GLX Protocol
+
+    The following single command is sent to the server as
+    a glxsingle request:
+
+    CopyBufferSubData
+
+        1       CARD8           opcode
+        1       221             GLX opcode
+        2       10              request length
+        4       GLX_CONTEXT_TAG context tag
+        8       CARD64          readoffset
+        8       CARD64          writeoffset
+        8       CARD64          size
+        4       ENUM            readtarget
+        4       ENUM            writetarget
 
 Errors
 
@@ -223,3 +240,5 @@ Revision History
     Revision 6, 2009/06/03
      - Add buffer target list and fix capitalization differences on
        parameter names per feedback from Jonathan Knispel
+    Revision 7, 2017/09/06
+     - Add GLX protocol.

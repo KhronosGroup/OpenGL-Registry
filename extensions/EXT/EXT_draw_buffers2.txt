@@ -18,8 +18,8 @@ Status
 
 Version
 
-    Last Modified Date:         7/9/2008
-    NVIDIA Revision:            10
+    Last Modified Date:         10/02/2010
+    NVIDIA Revision:            11
 
 Number
 
@@ -190,7 +190,103 @@ Additions to the AGL/GLX/WGL Specifications
 
 GLX Protocol
 
-    UNDER DEVELOPMENT
+    The following rendering commands are sent to the server as part of
+    a glXRender request:
+
+    ColorMaskIndexedEXT
+
+        2      12              rendering command length
+        2      352             rendering command opcode
+        4      CARD32          buf
+        1      BOOL            r
+        1      BOOL            g
+        1      BOOL            b
+        1      BOOL            a
+
+    EnableIndexedEXT
+
+        2      12              rendering length
+        2      353             rendering command opcode
+        4      ENUM            target
+        4      CARD32          index
+
+    DisableIndexedEXT
+
+        2      12    	       rendering length
+        2      354             rendering command opcode
+        4      ENUM            target
+        4      CARD32          index
+
+    The following new non-rendering commands are added:
+
+    GetBooleanIndexedvEXT
+
+        1      CARD8           opcode(X assigned)
+        1      210             GLX opcode
+        2      4               request length
+        4      GLX_CONTEXT_TAG context tag
+        4      ENUM            value
+        4      CARD32          index
+    =>
+        1                      reply
+        1                      unused
+        2      CARD16          sequence number
+        4      m               reply length, m = (n == 1 ? 0 :(n+p)/4)
+        4                      unused
+        4      CARD32          n (number of parameter components)
+
+        if (n == 1) this follows:
+
+        1      BOOL            data
+        15                     unused
+
+        otherwise this follows:
+
+        16                     unused
+        n*1    LISTofBOOL      data
+        p                      unused, p = pad(n)
+
+    GetIntegerIndexedvEXT
+
+        1      CARD8           opcode(X assigned)
+        1      211             GLX opcode
+        2      4               request length
+        4      GLX_CONTEXT_TAG context tag
+        4      ENUM            value
+        4      CARD32          index
+    =>
+        1                      reply
+        1                      unused
+        2      CARD16          sequence number
+        4      m               reply length, m = (n == 1 ? 0 : n)
+        4                      unused
+        4      CARD32          n (number of parameter components)
+
+        if (n == 1) this follows:
+
+        4      CARD32          data
+        12                     unused
+
+        otherwise this follows:
+
+        16                     unused
+        4*n    LISTofCARD32    data
+
+   IsEnabledIndexedEXT
+
+        1      CARD8           opcode(X assigned)
+        1      212             GLX opcode
+        2      4               request length
+        4      GLX_CONTEXT_TAG context tag
+        4      ENUM            target
+        4      CARD32          index
+   =>
+        1                      reply
+        1                      unused
+        2      CARD16          sequence number
+        4      0               reply length
+        4      BOOL32          return value
+        20                     unused
 
 Errors
 
@@ -315,6 +411,8 @@ Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------  -----------------------------------------
+    11    10/02/10  srahman   Added GLX protocol.
+
     10    07/11/08  joburgess Added a clarification of ColorMaskIndexedEXT / DrawBuffersARB interaction.
     
      9    02/09/07  pbrown    Updated status section (now released).
