@@ -10356,7 +10356,6 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glBeginTransformFeedback</name></proto>
             <param group="PrimitiveType"><ptype>GLenum</ptype> <name>primitiveMode</name></param>
-            <param><ptype>GLenum</ptype> <name>primitiveMode</name></param>
             <glx type="render" opcode="357"/>
         </command>
         <command>
