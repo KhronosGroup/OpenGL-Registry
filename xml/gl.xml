@@ -5578,7 +5578,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x82FB" name="GL_CONTEXT_RELEASE_BEHAVIOR_KHR"/>
         <enum value="0x82FC" name="GL_CONTEXT_RELEASE_BEHAVIOR_FLUSH"/>
         <enum value="0x82FC" name="GL_CONTEXT_RELEASE_BEHAVIOR_FLUSH_KHR"/>
-            <unused start="0x82FD" end="0x830F" vendor="ARB"/>
+        <enum value="0x82FD" name="GL_ROBUST_GPU_TIMEOUT_MS_KHR" comment="Reserved for future"/>
+            <unused start="0x82FE" end="0x830F" vendor="ARB"/>
     </enums>
 
     <enums namespace="GL" start="0x8310" end="0x832F" vendor="SGI">
