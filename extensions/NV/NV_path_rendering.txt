@@ -9434,6 +9434,15 @@ Issues
         RESOLVED:  Same as the Core Profile in complete OpenGL.  See Issue
         133 and the "Dependencies on Core Profile and OpenGL ES" section.
 
+   174. OpenGL ES normally does not use or require double-precision
+        floating-point. Does the OpenGL ES version of this extension support
+        the double-precision entry points MatrixLoaddEXT, etc.)?
+
+        RESOLVED: Yes. This is an conscious choice, and only
+        double-precision support for CPU-side operations is required. See
+        https://github.com/KhronosGroup/OpenGL-Registry/pull/119#issuecomment-341121022
+        for background.
+
 Revision History
 
     Rev.    Date    Author     Changes
@@ -9488,3 +9497,4 @@ Revision History
       33  08/19/14 mjk        Add missing 1.3 additions to revisions section
       34  08/27/14 mjk        Remove bogus polygon offset issue 127; my mistake
       35  09/09/14 mjk        Intro: fix translate mode, add StencilThenCover
+      36  11/01/17 Jon Leech  Add issue 174 on double-precision ES support
