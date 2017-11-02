@@ -3106,7 +3106,7 @@ registry = {
     'GL_NV_coverage_sample' : {
         'esnumber' : 72,
         'flags' : { 'public' },
-        'url' : '../EGL-Registry/extensions/NV/EGL_NV_coverage_sample.txt',
+        'url' : '../EGL/extensions/NV/EGL_NV_coverage_sample.txt',
     },
     'GL_NV_deep_texture3D' : {
         'number' : 424,
@@ -3134,7 +3134,7 @@ registry = {
     'GL_NV_depth_nonlinear' : {
         'esnumber' : 73,
         'flags' : { 'public' },
-        'url' : '../EGL-Registry/extensions/NV/EGL_NV_depth_nonlinear.txt',
+        'url' : '../EGL/extensions/NV/EGL_NV_depth_nonlinear.txt',
     },
     'GL_NV_draw_buffers' : {
         'esnumber' : 91,
@@ -3831,7 +3831,7 @@ registry = {
     'GL_OES_EGL_sync' : {
         'esnumber' : 75,
         'flags' : { 'public' },
-        'url' : '../EGL-Registry/extensions/KHR/EGL_KHR_fence_sync.txt',
+        'url' : '../EGL/extensions/KHR/EGL_KHR_fence_sync.txt',
     },
     'GL_OES_blend_equation_separate' : {
         'esnumber' : 1,

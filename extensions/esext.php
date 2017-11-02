@@ -145,13 +145,13 @@
 </li>
 <li value=71><a href="extensions/OES/OES_vertex_array_object.txt">GL_OES_vertex_array_object</a>
 </li>
-<li value=72><a href="../EGL-Registry/extensions/NV/EGL_NV_coverage_sample.txt">GL_NV_coverage_sample</a>
+<li value=72><a href="../EGL/extensions/NV/EGL_NV_coverage_sample.txt">GL_NV_coverage_sample</a>
 </li>
-<li value=73><a href="../EGL-Registry/extensions/NV/EGL_NV_depth_nonlinear.txt">GL_NV_depth_nonlinear</a>
+<li value=73><a href="../EGL/extensions/NV/EGL_NV_depth_nonlinear.txt">GL_NV_depth_nonlinear</a>
 </li>
 <li value=74><a href="extensions/IMG/IMG_multisampled_render_to_texture.txt">GL_IMG_multisampled_render_to_texture</a>
 </li>
-<li value=75><a href="../EGL-Registry/extensions/KHR/EGL_KHR_fence_sync.txt">GL_OES_EGL_sync</a>
+<li value=75><a href="../EGL/extensions/KHR/EGL_KHR_fence_sync.txt">GL_OES_EGL_sync</a>
 </li>
 <li value=76><a href="extensions/APPLE/APPLE_rgb_422.txt">GL_APPLE_rgb_422</a>
 </li>
