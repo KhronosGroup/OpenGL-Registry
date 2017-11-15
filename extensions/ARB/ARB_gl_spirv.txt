@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date: 29-May-2017
-    Revision: 34
+    Last Modified Date: 25-Oct-2017
+    Revision: 35
 
 Number
 
@@ -369,6 +369,7 @@ Overview
     Removal of features from GLSL, as removed by GL_KHR_vulkan_glsl:
       - subroutines
       - the already deprecated texturing functions (e.g., texture2D())
+      - the already deprecated noise functions (e.g., noise1())
       - compatibility profile features
       - gl_DepthRangeParameters and gl_NumSamples
       - *shared* and *packed* block layouts
@@ -1369,6 +1370,10 @@ Changes to The OpenGL Shading Language Specification, Version 4.50
 
       "Built-in uniform state is not available when generating SPIR-V."
 
+  Section 8.14 "Noise Functions"
+
+    Add: "Noise functions are not present when generating SPIR-V."
+
   Changes to Chapter 9 of the OpenGL Shading Language 4.50 Specification
   (Shading Language Grammar for Core Profile)
 
@@ -2007,6 +2012,8 @@ Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    35    25-Oct-2017    JohnK          remove the already deprecated noise
+                                        functions
     34    29-May-2017    dkoch          Fix typos. RuntimeArrays are only
                                         supported on SSBOs.
     33    26-May-2017    JohnK          Require in/out explicit locations
