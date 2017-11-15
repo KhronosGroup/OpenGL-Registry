@@ -2891,6 +2891,13 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/GLX_MESA_pixmap_colormap.txt',
     },
+    'GLX_MESA_program_binary_formats' : {
+        'number' : 516,
+        'esnumber' : 294,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_program_binary_formats.txt',
+    },
     'GLX_MESA_query_renderer' : {
         'number' : 446,
         'flags' : { 'public' },
