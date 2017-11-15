@@ -42839,7 +42839,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_TRANSFORM_FEEDBACK"/>
             </require>
         </extension>
-        <extension name="GL_EXT_debug_marker" supported="gl|glcore|gles2">
+        <extension name="GL_EXT_debug_marker" supported="gl|glcore|gles1|gles2">
             <require>
                 <command name="glInsertEventMarkerEXT"/>
                 <command name="glPushGroupMarkerEXT"/>
@@ -45519,7 +45519,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_NONE"/>
             </require>
         </extension>
-        <extension name="GL_KHR_debug" supported="gl|glcore|gles2">
+        <extension name="GL_KHR_debug" supported="gl|glcore|gles1|gles2">
             <require api="gl" comment="KHR extensions *mandate* suffixes for ES, unlike for GL">
                 <enum name="GL_DEBUG_OUTPUT_SYNCHRONOUS"/>
                 <enum name="GL_DEBUG_NEXT_LOGGED_MESSAGE_LENGTH"/>
@@ -48369,7 +48369,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_DECR_WRAP_OES"/>
             </require>
         </extension>
-        <extension name="GL_OES_surfaceless_context" supported="gles2">
+        <extension name="GL_OES_surfaceless_context" supported="gles1|gles2">
             <require>
                 <enum name="GL_FRAMEBUFFER_UNDEFINED_OES"/>
             </require>
@@ -48586,7 +48586,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_MIRRORED_REPEAT_OES"/>
             </require>
         </extension>
-        <extension name="GL_OES_texture_npot" supported="gles2"/>
+        <extension name="GL_OES_texture_npot" supported="gles1|gles2"/>
         <extension name="GL_OES_texture_stencil8" supported="gles2">
             <require>
                 <enum name="GL_STENCIL_INDEX_OES"/>
