@@ -3474,6 +3474,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0400" name="GL_SPARSE_STORAGE_BIT_ARB"/>
         <enum value="0x0800" name="GL_LGPU_SEPARATE_STORAGE_BIT_NVX"/>
         <enum value="0x0800" name="GL_PER_GPU_STORAGE_BIT_NV"/>
+            <unused start="0x1000" end="0x1000" comment="Reserved for NVIDIA"/>
+        <enum value="0x2000" name="GL_EXTERNAL_STORAGE_BIT_NVX"/>
     </enums>
 
     <enums namespace="GL" group="MemoryBarrierMask" type="bitmask">
@@ -45811,6 +45813,11 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_NVX_blend_equation_advanced_multi_draw_buffers" supported="gl|gles2"/>
+        <extension name="GL_NVX_cross_process_interop" supported="disabled">
+            <require comment="unpublished experimental extension">
+                <enum name="GL_EXTERNAL_STORAGE_BIT_NVX"/>
+            </require>
+        </extension>
         <extension name="GL_NVX_conditional_render" supported="gl">
             <require>
                 <command name="glBeginConditionalRenderNVX"/>
