@@ -37,8 +37,10 @@ Dependencies
     Shading Language 1.0.17 and OpenGL ES Shading Language 3.00.3
     specifications.
     
-    OpenGL 2.0, OpenGL 3.0, OpenGL ES 2.0 and OpenGL ES 3.0 affect the
-    definition of this extension.
+    OpenGL 2.0, OpenGL 3.0, OpenGL 4.0, OpenGL ES 2.0, OpenGL ES 3.0 and OpenGL
+    ES 3.2 affect the definition of this extension.
+
+    ARB_sample_shading and OES_sample_shading interact with this extension.
 
 Overview
 
@@ -62,15 +64,16 @@ Issues
     1. How is framebuffer data treated during multisample rendering?
     
     RESOLVED: Reading the value of gl_LastFragData produces a different
-    result for each sample. This implies that all or part of the shader be run
-    once for each sample. Input values to the shader from existing variables
-    in GLSL ES remain identical across samples.
+    result for each sample. This implies that all or part of the shader be
+    run once for each sample, but has no additional implications on fragment
+    shader input variables which may still be interpolated per pixel by the
+    implementation.
     
     2. How does the use of gl_LastFragData interact with fragment discard?
     
     RESOLVED: Hardware may not necessarily support discarding on sample
-    granularity. Therefore, three options were considered for this
-    functionality:
+    granularity depending on API version and extension support. Therefore,
+    three options were considered for this functionality:
     
         A) Allow discard based on variables calculated using the framebuffer
            color when multisample rasterization is disabled, but disallow
@@ -82,11 +85,18 @@ Issues
         C) Allow undefined results for fragment shaders that discard on a
            per-sample basis on hardware that doesn't support it.
     
-    This extension has chosen option C. Restricting orthogonality of fragment
-    shaders between single-sample and multisample rendering is undesirable, as
-    is restricting usage of the framebuffer color, which can generally only be
+    This extension has chosen option C where support for per-sample discard
+    is not provided by the GL.  Restricting orthogonality of fragment shaders
+    between single-sample and multisample rendering is undesirable, as is
+    restricting usage of the framebuffer color, which can generally only be
     done with detailed flow-control analysis.
-    
+
+    If an overlapping specification guarantees well-defined results for
+    shaders that execute discard with sample granularity (e.g.
+    ARB_sample_shading), this extension won't reverse that guarantee, instead
+    the boolean query FRAGMENT_SHADER_DISCARDS_SAMPLES_EXT defined by this
+    extension will return TRUE for consistency with current specifications.
+
     3. What is the precision of gl_LastFragData in practice?
     
     RESOLVED: Three options were considered for this functionality:
@@ -174,6 +184,9 @@ Changes to the OpenGL ES 2.0.24 Specification, Chapter 3
     shader will be invoked separately for each covered sample and a separate 
     value for the previous framebuffer color will be provided for each sample."
     
+    [[ The following applies unless specified otherwise in the interactions
+       sections. ]]
+
     Add a new subsection to section 3.8.2, page 87 ("Shader Execution"):
     
     "Discard
@@ -247,6 +260,10 @@ Changes to the OpenGL ES 3.0.4 Specification, Chapter 3
     output has a fixed-point format, each color component undergoes a
     conversion to floating-point first.  This conversion must leave the values
     0 and 1 invariant.
+
+    Reading from a user-defined fragment output declared inout causes the
+    shader to be evaluated per-sample, since the framebuffer potentially
+    contains different color values for each sample.
 
     If the value of FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING{_EXT} for the
     framebuffer attachment corresponding to a given inout fragment output is
@@ -366,6 +383,11 @@ Interactions with OpenGL 3.0 and later
     shall be ignored.  References to auxiliary storage qualifiers shall be
     omitted if they are not supported by the Shading Language.
 
+Interactions with OpenGL 4.0 and later
+
+    The interaction described below with ARB_sample_shading applies in
+    addition to any interactions enumerated for OpenGL 3.0 and above.
+
 Interactions with OpenGL ES 2.0
 
     If OpenGL ES 2.0 is supported, apply all changes given above for the OpenGL
@@ -380,15 +402,35 @@ Interactions with OpenGL ES 3.0 and later
     qualifiers shall be omitted if they are not supported by the Shading
     Language.
 
+Interactions with OpenGL ES 3.2 and later
+
+    The interaction described below with OES_sample_shading applies in
+    addition to any interactions enumerated for OpenGL ES 3.0 and above.
+
 Interactions with OES_standard_derivatives
 
     Results from shaders which use the built-in derivative functions dFdx,
     dFdy, and fwidth on variables calculated using the current framebuffer 
     color are undefined.
 
+Interactions with ARB_sample_shading and OES_sample_shading
+
+    The FRAGMENT_SHADER_DISCARDS_SAMPLES_EXT query defined above is guaranteed
+    to return TRUE if any of these extensions is supported, since they
+    already provide well-defined behavior for discard jumps with sample
+    granularity.
+
 Revision History
 
     Version 7, 2017/11/13 - Specify interactions with desktop OpenGL APIs.
+                          - Specify interaction with ARB/OES_sample_shading
+                            and unextended GL versions that provide the same
+                            functionality.  Clarify resolution of
+                            multisampling-related issues to avoid
+                            contradicting recent versions of the spec.
+                          - Explicitly require per-sample evaluation of the
+                            fragment shader when an inout output is read in
+                            OpenGL ES 3.0 and above.
     Version 6, 2017/10/04 - Clarified how gl_LastFragData is populated.
     Version 5, 2016/09/08 - Added preprocessor defines.
     Version 4, 2013/05/28 - Added ES3 interaction as requested in Bug 10236
