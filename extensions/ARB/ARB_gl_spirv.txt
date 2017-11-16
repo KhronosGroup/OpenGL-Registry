@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date: 25-Oct-2017
-    Revision: 35
+    Last Modified Date: 15-Nov-2017
+    Revision: 36
 
 Number
 
@@ -535,8 +535,13 @@ Modifications to Chapter 7 of the OpenGL 4.5 (Core Profile) Specification
         for <shader> is not TRUE, or if the shader has already been
         specialized.
 
-        INVALID_VALUE is generated if <pEntryPoint> does not name a valid
-        entry point for <shader>.
+        INVALID_VALUE is generated if <pEntryPoint> does not match the
+        <Name> of any OpEntryPoint declaration in the SPIR-V module
+        associated with <shader>.
+
+        INVALID_OPERATION is generated if the <Execution Mode> of the
+        OpEntryPoint indicated by <pEntryPoint> does not match the type
+        of <shader>.
 
         INVALID_VALUE is generated if any element of <pConstantIndex>
         refers to a specialization constant that does not exist in the
@@ -2012,6 +2017,9 @@ Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    36    15-Nov-2017    dkoch          clarify error for glSpecializeShader
+                                        and add new error if shader types
+                                        mismatch (OpenGL-API/issues/16)
     35    25-Oct-2017    JohnK          remove the already deprecated noise
                                         functions
     34    29-May-2017    dkoch          Fix typos. RuntimeArrays are only

@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20171101
+#define GL_GLEXT_VERSION 20171115
 
 /* Generated C header for:
  * API: gl
