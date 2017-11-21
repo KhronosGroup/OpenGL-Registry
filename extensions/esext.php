@@ -609,6 +609,8 @@
 </li>
 <li value=293><a href="extensions/QCOM/QCOM_texture_foveated.txt">GL_QCOM_texture_foveated</a>
 </li>
-<li value=294><a href="extensions/MESA/MESA_program_binary_formats.txt">GL_MESA_program_binary_formats</a>
+<li value=294><a href="extensions/MESA/MESA_program_binary_formats.txt">GLX_MESA_program_binary_formats</a>
+</li>
+<li value=295><a href="extensions/KHR/KHR_EGL_image_storage.txt">GL_KHR_EGL_image_storage</a>
 </li>
 </ol>
