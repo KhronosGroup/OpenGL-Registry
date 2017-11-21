@@ -34,8 +34,8 @@ Status
 
 Version
 
-    Last Modified Date: October 10, 2017
-    Revision: 1
+    Last Modified Date: November 15, 2017
+    Revision: 2
 
 Number
 
@@ -56,7 +56,7 @@ Dependencies
     EXT_direct_state_access.
 
     This extension interacts with OpenGL ES 3.2, OpenGL 4.0,
-    EXT_tessllation_shader, and ARB_tessellation_shader.
+    EXT_tessellation_shader, and ARB_tessellation_shader.
 
     This extension interacts with OpenGL ES 3.2, OpenGL 3.2,
     EXT_geometry_shader, and ARB_geometry_shader4.
@@ -357,7 +357,7 @@ Modifications to The OpenGL ES Shading Language Specification, Version 3.00.04
 
     If this layout qualifier is declared more than once in the same shader,
     all those declarations must set num_views to the same value; otherwise a
-    compile-time error results. If multiple compute shaders attached to a
+    compile-time error results. If multiple vertex shaders attached to a
     single program object declare num_views, the declarations must be
     identical; otherwise a link-time error results. It is a compile-time
     error to declare num_views to be less than or equal to zero, or greater
@@ -410,7 +410,7 @@ EXT_direct_state_access
     are supported, the command NamedFramebufferTextureMultiviewOVR does not
     exist.
 
-Interactions with OpenGL ES 3.2, OpenGL 4.0, EXT_tessllation_shader, and
+Interactions with OpenGL ES 3.2, OpenGL 4.0, EXT_tessellation_shader, and
 ARB_tessellation_shader.
 
     If none of OpenGL ES 3.2, OpenGL 4.0, EXT_tessellation_shader, or
@@ -716,3 +716,5 @@ Revision History
                                 - better document new framebuffer completeness conditions
                                 - document MAX_VIEWS_OVR and specify minimum value (2)
                                 - added issues 18-30
+      2     11/15/17  dgkoch    Fix tessellation typos. Fix incorrect reference to compute shaders
+                                instead of vertex shaders.
