@@ -34,7 +34,7 @@ extern "C" {
 **   https://github.com/KhronosGroup/OpenGL-Registry
 */
 
-#define GLX_GLXEXT_VERSION 20171115
+#define GLX_GLXEXT_VERSION 20171125
 
 /* Generated C header for:
  * API: glx
