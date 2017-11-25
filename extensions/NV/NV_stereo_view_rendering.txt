@@ -14,6 +14,7 @@ Contributors
 
     Mark Kilgard, NVIDIA Corporation
     Pat Brown, NVIDIA Corporation
+    Jason Schmidt, NVIDIA Corporation
 
 Status
 
@@ -21,17 +22,20 @@ Status
 
 Version
 
-    Last Modified Date:         May 09, 2016
-    NVIDIA Revision:            1
+    Last Modified Date:         November 25, 2017
+    NVIDIA Revision:            3
 
 Number
 
     OpenGL Extension #489
+    OpenGL ES Extension #296
 
 Dependencies
 
     This extension is written against OpenGL 4.5 Specification
     (Compatibility Profile).
+
+    This extension interacts with the OpenGL ES 3.1 Specification.
 
     The extension requires NV_viewport_array2.
 
@@ -80,6 +84,11 @@ Additions to Chapter 11 of the OpenGL 4.5 (Compatibility Profile) Specification
     gl_SecondaryViewportMaskNV[] hold the homogeneous vertex position and the
     viewport mask for the secondary view, as described in Section 11.5
     (Stereo Offsetted Rendering).
+
+    [Section 11.2 of the OpenGL 4.5 specification corresponds to
+     Section 11.1ts of the OpenGL ES 3.1 specification, and
+     Section 11.3 of the OpenGL 4.5 specification corresponds to
+     Section 11.1gs of the OpenGL ES 3.1 specification]
 
     In Section 11.2.1.2.2 (Tessellation Control Shader Inputs), modify the
     line describing members of gl_in[] to include gl_SecondaryPositionNV
@@ -154,7 +163,16 @@ Additions to Chapter 11 of the OpenGL 4.5 (Compatibility Profile) Specification
 Additions to Chapter 13 of the OpenGL 4.5 (Compatibility Profile)
 Specification (Fixed-Function Vertex Post-Processing)
 
-    Modify Section 13.6.1 (Controlling the Viewport) to include
+    Modify Section 13.2 (Transform Feedback), p. 453 [section 12.1 in OpenGL ES]
+
+    Modify the first paragraph:
+
+    ...The vertices are fed back after vertex color clamping, but before
+    viewport mask expansion, stereo view expansion, flat-shading, and
+    clipping. ...
+
+    Modify Section 13.6.1 (Controlling the Viewport)
+    [section 12.5.1 in OpenGL ES] to include
     gl_SecondaryViewportMaskNV[] wherever gl_ViewportMask[] is mentioned.
 
 
@@ -399,5 +417,9 @@ Issues
 
 Revision History
 
+    Revision 3 2017/11/25 (pbrown)
+      - Add to the OpenGL ES Extension Registry
+    Revision 2 2017/02/21 (jaschmidt)
+      - Formally add OpenGL ES interactions
     Revision 1
       - Internal revisions.

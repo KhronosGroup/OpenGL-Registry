@@ -611,4 +611,8 @@
 </li>
 <li value=294><a href="extensions/MESA/MESA_program_binary_formats.txt">GL_MESA_program_binary_formats</a>
 </li>
+<li value=295><a href="extensions/NV/NV_clip_space_w_scaling.txt">GL_NV_clip_space_w_scaling</a>
+</li>
+<li value=296><a href="extensions/NV/NV_stereo_view_rendering.txt">GL_NV_stereo_view_rendering</a>
+</li>
 </ol>

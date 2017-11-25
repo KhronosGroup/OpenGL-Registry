@@ -2891,7 +2891,7 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/GLX_MESA_pixmap_colormap.txt',
     },
-    'GLX_MESA_program_binary_formats' : {
+    'GL_MESA_program_binary_formats' : {
         'number' : 516,
         'esnumber' : 294,
         'flags' : { 'public' },
@@ -3049,6 +3049,7 @@ registry = {
     },
     'GL_NV_clip_space_w_scaling' : {
         'number' : 486,
+        'esnumber' : 295,
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_clip_space_w_scaling.txt',
     },
@@ -3589,6 +3590,7 @@ registry = {
     },
     'GL_NV_stereo_view_rendering' : {
         'number' : 489,
+        'esnumber' : 296,
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_stereo_view_rendering.txt',
     },

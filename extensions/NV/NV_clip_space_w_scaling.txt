@@ -16,6 +16,7 @@ Contributors
     Ingo Esser, NVIDIA Corporation
     Pat Brown, NVIDIA Corporation
     Mark Kilgard, NVIDIA Corporation
+    Jason Schmidt, NVIDIA Corporation
 
 Status
 
@@ -23,17 +24,25 @@ Status
 
 Version
 
-    Last Modified Date:         June 1, 2016
-    NVIDIA Revision:            2
+    Last Modified Date:         November 25, 2017
+    NVIDIA Revision:            3
 
 Number
 
     OpenGL Extension #486
+    OpenGL ES Extension #295
 
 Dependencies
 
     This extension is written against OpenGL 4.5 Specification
     (Compatibility Profile).
+
+    This extension interacts with the OpenGL ES 3.1 Specification.
+
+    This extension requires NV_viewport_array2.
+
+    If implemented in OpenGL ES, one of NV_viewport_array or OES_viewport_array
+    is required.
 
 Overview
 
@@ -86,13 +95,12 @@ New Tokens
 Additions to Chapter 13 of the OpenGL 4.5 (Compatibility Profile)
 Specification (Fixed-Function Vertex Post-Processing)
 
-    Modify Section 13.2 (Transform Feedback), p. 453
+    Modify Section 13.2 (Transform Feedback), p. 453 [section 12.1 in OpenGL ES]
 
     Modify the first paragraph:
 
     ...The vertices are fed back after vertex color clamping, but before
-    stereo view expansion,  viewport mask expansion, viewport swizzle,
-    w coordinate warping, flat-shading, and clipping. ...
+    viewport mask expansion, w coordinate warping, flat-shading, and clipping...
 
     Add a new Section 13.X (Viewport W Coordinate Scaling)
 
@@ -164,6 +172,14 @@ Errors
 
     None.
 
+Interactions with OpenGL ES 3.1
+
+    If implemented in OpenGL ES, remove all references to GetDoublei_v.
+    If NV_viewport_array is supported, replace all references to MAX_VIEWPORTS
+    and GetFloati_v with MAX_VIEWPORTS_NV and GetFloati_vNV respectively.
+    If OES_viewport_array is supported, replace all references to MAX_VIEWPORTS
+    and GetFloati_v with MAX_VIEWPORTS_OES and GetFloati_vOES respectively.
+
 Issues
 
     (1) Does this extension provide any functionality to convert the w-scaled
@@ -228,3 +244,8 @@ Revision History
       - Internal revisions.
     Revision 2
       - Add _NV suffixes to _COEFF tokens
+    Revision 3
+      - Add ES interactions.
+      - Add requirement for NV_viewport_array2
+    Revision 4, 2017/11/25 (pbrown)
+      - Add to the OpenGL ES Extension Registry
