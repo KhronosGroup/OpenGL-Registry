@@ -240,7 +240,7 @@ Vertex Post-Processing)
     each vertex <i> has a single specified clip distance <di> (or a number
     of similarly specified clip distances, if multiple half-spaces are
     enabled). Next, suppose that the same series of primitives are drawn
-    again with each such clip distance replaced by −<di> (and the GL is
+    again with each such clip distance replaced by -<di> (and the GL is
     otherwise in the same state). In this case, primitives must not be
     missing any pixels, nor may any pixels be drawn twice in regions where
     those primitives are cut by the clip planes.

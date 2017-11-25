@@ -17,6 +17,7 @@ Contributors
     Chris Dalton, NVIDIA
     Arthur Huillet, NVIDIA
     Ilia Mirkin
+    Kai Ninomiya, Google
     Marek Olsak, AMD
     Brian Paul, VMware Inc.
     Brian Salomon, Google
@@ -30,8 +31,8 @@ Status
 
 Version
 
-    Last Modified Date:  2016/06/27
-    Public Revision:     2
+    Last Modified Date:  2017/11/03
+    Public Revision:     3
 
 Number
 
@@ -420,7 +421,7 @@ New State
     -------------------------  -------  -------------  -------------  ------------------------  ------  ---------
     NUM_WINDOW_RECTANGLE_EXT   Z+       GetIntegerv    0              Active window rectangles  17.3.X  scissor
                                                                       count
-    WINDOW_RECTANGLE_EXT       8*x4xZ+  GetIntegeri_v  8*x(0,0,0,0)   Window rectangle box      17.3.X  scissor
+    WINDOW_RECTANGLE_EXT       4*x4xZ+  GetIntegeri_v  4*x(0,0,0,0)   Window rectangle box      17.3.X  scissor
     WINDOW_RECTANGLE_MODE_EXT  Z2       GetIntegerv    EXCLUSIVE_EXT  Window rectangle mode     17.3.X  scissor
 
 New Implementation Dependent State
@@ -763,9 +764,16 @@ Issues
         While NVIDIA GPUs can support 8 window rectangles, feedback from
         AMD is they could support the extension if the limit was 4.
 
+    29) Is there a Vulkan version of this functionality?
+    
+        RESOLVED:  Yes, VK_EXT_discard_rectangles.  See:
+
+        https://www.khronos.org/registry/vulkan/specs/1.0-extensions/html/vkspec.html#VK_EXT_discard_rectangles
+        
 Revision History
 
     Rev.    Date    Author     Changes
     ----  -------- ---------  ------------------------------------------------
     1     06/09/16 mjk        Public release
     2     06/27/16 mjk        Change limit to 4 based on AMD feedback
+    3     11/03/17 mjk        Fix state table for limit of 4, add issue 29
