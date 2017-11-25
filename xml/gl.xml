@@ -6766,7 +6766,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x875C" name="GL_PROXY_TEXTURE_2D_STACK_MESAX"/>
         <enum value="0x875D" name="GL_TEXTURE_1D_STACK_BINDING_MESAX"/>
         <enum value="0x875E" name="GL_TEXTURE_2D_STACK_BINDING_MESAX"/>
-	<enum value="0x875F" name="GL_PROGRAM_BINARY_FORMAT_MESA"/>
+        <enum value="0x875F" name="GL_PROGRAM_BINARY_FORMAT_MESA"/>
     </enums>
 
     <enums namespace="GL" start="0x8760" end="0x883F" vendor="AMD">
@@ -17451,7 +17451,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>queryHandle</name></param>
             <param><ptype>GLuint</ptype> <name>flags</name></param>
             <param><ptype>GLsizei</ptype> <name>dataSize</name></param>
-            <param><ptype>void</ptype> *<name>data</name></param>
+            <param>void *<name>data</name></param>
             <param><ptype>GLuint</ptype> *<name>bytesWritten</name></param>
         </command>
         <command>
@@ -21873,7 +21873,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
-            <param>const <ptype>void</ptype> *<name>data</name></param>
+            <param>const void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glMulticastCopyBufferSubDataNV</name></proto>
