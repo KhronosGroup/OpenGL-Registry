@@ -1,0 +1,191 @@
+Name
+
+    KHR_EGL_image_storage
+
+Name Strings
+
+    GL_KHR_EGL_image_storage
+
+Contact
+
+    Craig Donner (cdonner 'at' google.com)
+
+Contributors
+
+    Krzysztof Kosinski, Google
+    Craig Donner, Google
+    Jesse Hall, Google
+
+Status
+
+    Draft
+
+Version
+
+    November 20, 2017 (version 3)
+
+Number
+
+    ARB Extension #196
+    OpenGL ES Extension #295
+
+Dependencies
+
+    Requires OpenGL 4.2, OpenGL ES 3.0, or ARB_texture_storage.
+
+    Requires EGL 1.4 and either the EGL_KHR_image or EGL_KHR_image_base
+    extensions.
+
+    The EGL_KHR_gl_texture_2D_image, EGL_KHR_gl_texture_cubemap_image,
+    EGL_KHR_gl_texture_3D_image, EGL_KHR_gl_renderbuffer_image,
+    EGL_KHR_vg_parent_image, and EGL_ANDROID_get_native_client_buffer
+    extensions provide additional functionality layered on EGL_KHR_image_base
+    and related to this extension.
+
+    EXT_direct_state_access, ARB_direct_state_access, and OpenGL 4.5 affect
+    the definition of this extension.
+
+    This extension interacts with GL_OES_EGL_image, GL_OES_EGL_image_external
+    and GL_EXT_EGL_image_array.
+
+    This extension is written based on the wording of the OpenGL ES 3.0
+    Specification.
+
+Overview
+
+    The OpenGL ES extension OES_EGL_image provides a mechanism for creating
+    GL textures sharing storage with EGLImage objects (in other words, creating
+    GL texture EGLImage targets).  The extension was written against the
+    OpenGL ES 2.0 specification, which does not have the concept of immutable
+    textures.  As a result, it specifies that respecification of a texture by
+    calling TexImage* on a texture that is an EGLImage target causes it to be
+    implicitly orphaned.  In most cases, this is not the desired behavior, but
+    rather a result of an application error.
+
+    This extension provides a mechanism for creating texture objects that are
+    both EGLImage targets and immutable.  Since immutable textures cannot be
+    respecified, they also cannot accidentally be orphaned, and attempts to do
+    so generate errors instead of resulting in well-defined, but often
+    undesirable and surprising behavior.  It provides a strong guarantee that
+    texture data that is intended to be shared will remain shared.
+
+    The language of the OES_EGL_image extension is also slightly ambiguous on
+    whether calls to glGenerateMipmap always cause respecification, or cause it
+    only when the call would create additional or differently-sized mipmap
+    levels in the texture.  To avoid any ambiguity, this extension explicitly
+    allows calls to glGenerateMipmap on textures that are immutable EGLImage
+    targets.
+
+    EGL extension specifications are located in the EGL Registry at
+
+        http://www.khronos.org/registry/egl/
+
+Glossary
+
+    Please see the EGL_KHR_image specification for a list of terms
+    used by this specification.
+
+New Types
+
+    /*
+     * GLeglImageOES is an opaque handle to an EGLImage
+     */
+    typedef void* GLeglImageOES;
+
+New Procedures and Functions
+
+    void EGLImageTargetTexStorageKHR(enum target, eglImageOES image)
+
+    <If EXT_direct_state_access or an equivalent mechanism is supported:>
+
+    void EGLImageTargetTextureStorageKHR(uint texture, eglImageOES image)
+
+New Tokens
+
+     None.
+
+Additions to Chapter 3 of the OpenGL 3.0 Specification (Rasterization)
+
+    - (3.8.4, p. 138)  Insert the following text before the paragraph starting
+    with "After a successful call to any TexStorage* command":
+
+    The command
+
+        void EGLImageTargetTexStorageKHR(enum target, eglImageOES image);
+
+    specifies all levels and properties of a texture (including dimensionality,
+    width, height, format, mipmap levels of detail, and image data) by taking
+    them from the specified eglImageOES <image>.
+
+    <target> must be one of GL_TEXTURE_2D, GL_TEXTURE_2D_ARRAY, GL_TEXTURE_3D,
+    GL_TEXTURE_CUBE_MAP, GL_TEXTURE_CUBE_MAP_ARRAY, GL_TEXTURE_EXTERNAL_OES.
+    On OpenGL implementations (non-ES), <target> can also be GL_TEXTURE_1D or
+    GL_TEXTURE_1D_ARRAY.  <target> must match the type of image data stored in
+    <image>.  For instance, if the <image> was created from a GL texture,
+    <target> must match the texture target of the source texture. <image> must
+    be the handle of a valid EGLImage resource, cast into the type eglImageOES.
+    Assuming no errors are generated in EGLImageTargetTexStorageKHR, the newly
+    specified texture object will be an EGLImage target of the specified
+    eglImageOES.
+
+    If <target> is not one of the allowed values, the error INVALID_ENUM is
+    generated.  Note that if an implementation does not support any method of
+    creating EGLImage objects compatible with the specified texture target, but
+    it is one of the allowed values, the error INVALID_OPERATION must be
+    generated instead.
+
+    If <image> does not refer to a valid eglImageOES object, the error
+    INVALID_VALUE is generated.
+
+    If the GL is unable to specify a texture object using the supplied
+    eglImageOES <image> (if, for example, <image> refers to a multisampled
+    eglImageOES, or <target> is GL_TEXTURE_2D but <image> contains a cube map),
+    the error INVALID_OPERATION is generated.
+
+    <If EXT_direct_state_access or an equivalent mechanism is supported:>
+
+    The command
+
+        void EGLImageTargetTextureStorageKHR(uint texture, eglImageOES image);
+
+    is equivalent to EGLImageTargetTexStorageKHR, but the target texture object
+    is directly specified using the <texture> parameter instead of being taken
+    from the active texture unit.
+
+    - (3.8.4, p. 138)  Replace "After a successful call to any TexStorage*
+    command" with "After a successful call to any TexStorage* or
+    EGLImageTarget*StorageKHR command"
+
+    - (3.8.4, p. 138)  Add the following to the list following the sentence
+    "Using any of the following commands with the same texture will result in
+    an INVALID_OPERATION error being generated, even if it does not affect the
+    dimensions or format:"
+
+    EGLImageTarget*StorageKHR
+
+Issues
+
+    1.  Should this extension provide support for renderbuffers?
+
+        RESOLVED:  This seems of limited use, and renderbuffer support specified
+        by OES_EGL_image already uses the immutable storage model, so that would
+        be redundant.
+
+    2.  Should OES_EGL_image be a prerequisite?
+
+        RESOLVED:  Supporting both OES_EGL_image and this extension requires
+        more complexity than supporting only this extension and we did not want
+        to rule out such implementations.  Therefore, this extension does not
+        require OES_EGL_image.
+
+Revision History
+
+
+    #3 (November 20, 2017) - Added direct state access entry point and corrected
+        references to the OpenGL ES 3.0 specification.
+
+    #2 (November 13, 2017) - Specified the allowed texture targets.  Clarified
+        requirements.  Clarified interactions with mipmaps.
+
+    #1 (November 1, 2017) - Initial version.
+

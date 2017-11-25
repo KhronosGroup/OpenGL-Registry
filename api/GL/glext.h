@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20171115
+#define GL_GLEXT_VERSION 20171120
 
 /* Generated C header for:
  * API: gl
@@ -4948,6 +4948,17 @@ GLAPI void APIENTRY glWindowPos3sARB (GLshort x, GLshort y, GLshort z);
 GLAPI void APIENTRY glWindowPos3svARB (const GLshort *v);
 #endif
 #endif /* GL_ARB_window_pos */
+
+#ifndef GL_KHR_EGL_image_storage
+#define GL_KHR_EGL_image_storage 1
+typedef void *GLeglImageOES;
+typedef void (APIENTRYP PFNGLEGLIMAGETARGETTEXSTORAGEKHRPROC) (GLenum target, GLeglImageOES image);
+typedef void (APIENTRYP PFNGLEGLIMAGETARGETTEXTURESTORAGEKHRPROC) (GLuint texture, GLeglImageOES image);
+#ifdef GL_GLEXT_PROTOTYPES
+GLAPI void APIENTRY glEGLImageTargetTexStorageKHR (GLenum target, GLeglImageOES image);
+GLAPI void APIENTRY glEGLImageTargetTextureStorageKHR (GLuint texture, GLeglImageOES image);
+#endif
+#endif /* GL_KHR_EGL_image_storage */
 
 #ifndef GL_KHR_blend_equation_advanced
 #define GL_KHR_blend_equation_advanced 1

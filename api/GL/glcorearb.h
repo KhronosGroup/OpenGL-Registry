@@ -3858,6 +3858,17 @@ GLAPI void APIENTRY glTexBufferARB (GLenum target, GLenum internalformat, GLuint
 #define GL_ARB_viewport_array 1
 #endif /* GL_ARB_viewport_array */
 
+#ifndef GL_KHR_EGL_image_storage
+#define GL_KHR_EGL_image_storage 1
+typedef void *GLeglImageOES;
+typedef void (APIENTRYP PFNGLEGLIMAGETARGETTEXSTORAGEKHRPROC) (GLenum target, GLeglImageOES image);
+typedef void (APIENTRYP PFNGLEGLIMAGETARGETTEXTURESTORAGEKHRPROC) (GLuint texture, GLeglImageOES image);
+#ifdef GL_GLEXT_PROTOTYPES
+GLAPI void APIENTRY glEGLImageTargetTexStorageKHR (GLenum target, GLeglImageOES image);
+GLAPI void APIENTRY glEGLImageTargetTextureStorageKHR (GLuint texture, GLeglImageOES image);
+#endif
+#endif /* GL_KHR_EGL_image_storage */
+
 #ifndef GL_KHR_blend_equation_advanced
 #define GL_KHR_blend_equation_advanced 1
 #define GL_MULTIPLY_KHR                   0x9294

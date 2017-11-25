@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20171115 */
+/* Generated on date 20171120 */
 
 /* Generated C header for:
  * API: gles2
@@ -49,6 +49,17 @@ extern "C" {
  * Additional extensions included: _nomatch_^
  * Extensions removed: _nomatch_^
  */
+
+#ifndef GL_KHR_EGL_image_storage
+#define GL_KHR_EGL_image_storage 1
+typedef void *GLeglImageOES;
+typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETTEXSTORAGEKHRPROC) (GLenum target, GLeglImageOES image);
+typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETTEXTURESTORAGEKHRPROC) (GLuint texture, GLeglImageOES image);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glEGLImageTargetTexStorageKHR (GLenum target, GLeglImageOES image);
+GL_APICALL void GL_APIENTRY glEGLImageTargetTextureStorageKHR (GLuint texture, GLeglImageOES image);
+#endif
+#endif /* GL_KHR_EGL_image_storage */
 
 #ifndef GL_KHR_blend_equation_advanced
 #define GL_KHR_blend_equation_advanced 1
@@ -239,7 +250,6 @@ GL_APICALL void GL_APIENTRY glGetnUniformuivKHR (GLuint program, GLint location,
 
 #ifndef GL_OES_EGL_image
 #define GL_OES_EGL_image 1
-typedef void *GLeglImageOES;
 typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETTEXTURE2DOESPROC) (GLenum target, GLeglImageOES image);
 typedef void (GL_APIENTRYP PFNGLEGLIMAGETARGETRENDERBUFFERSTORAGEOESPROC) (GLenum target, GLeglImageOES image);
 #ifdef GL_GLEXT_PROTOTYPES

@@ -2824,6 +2824,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/KHR/KHR_debug.txt',
     },
+    'GL_KHR_EGL_image_storage' : {
+        'arbnumber' : 196,
+        'esnumber' : 295,
+        'flags' : { 'public' },
+        'url' : 'extensions/KHR/KHR_EGL_image_storage.txt',
+    },
     'GL_KHR_no_error' : {
         'arbnumber' : 175,
         'esnumber' : 243,
