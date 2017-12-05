@@ -1773,6 +1773,8 @@ typedef unsigned __int64 uint64_t;
                 <enum name="GLX_VENDOR_NAMES_EXT"/>
             </require>
         </extension>
+        <extension name="GLX_EXT_no_config_context" supported="glx">
+        </extension>
         <extension name="GLX_EXT_stereo_tree" supported="glx">
             <require>
                 <type name="GLXStereoNotifyEventEXT"/>
@@ -1913,6 +1915,12 @@ typedef unsigned __int64 uint64_t;
                 <enum name="GLX_3DFX_WINDOW_MODE_MESA"/>
                 <enum name="GLX_3DFX_FULLSCREEN_MODE_MESA"/>
                 <command name="glXSet3DfxModeMESA"/>
+            </require>
+        </extension>
+        <extension name="GLX_MESA_swap_control" supported="glx">
+            <require>
+                <command name="glXGetSwapIntervalMESA"/>
+                <command name="glXSwapIntervalMESA"/>
             </require>
         </extension>
         <extension name="GLX_NV_copy_buffer" supported="glx">
@@ -2175,12 +2183,6 @@ typedef unsigned __int64 uint64_t;
         <extension name="GLX_SUN_get_transparent_index" supported="glx">
             <require>
                 <command name="glXGetTransparentIndexSUN"/>
-            </require>
-        </extension>
-        <extension name="GLX_MESA_swap_control" supported="glx">
-            <require>
-                <command name="glXGetSwapIntervalMESA"/>
-                <command name="glXSwapIntervalMESA"/>
             </require>
         </extension>
     </extensions>

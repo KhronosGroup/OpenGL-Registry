@@ -325,6 +325,10 @@ void glXFreeContextEXT (Display *dpy, GLXContext context);
 #define GLX_VENDOR_NAMES_EXT              0x20F6
 #endif /* GLX_EXT_libglvnd */
 
+#ifndef GLX_EXT_no_config_context
+#define GLX_EXT_no_config_context 1
+#endif /* GLX_EXT_no_config_context */
+
 #ifndef GLX_EXT_stereo_tree
 #define GLX_EXT_stereo_tree 1
 typedef struct {
