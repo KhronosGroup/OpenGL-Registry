@@ -224,27 +224,27 @@ Additions to Chapter 3 of the 2.1 Specification (Rasterization)
 
    "The conversion of sRGB color space components to linear color space is
     always applied if the TEXTURE_SRGB_DECODE_EXT parameter is DECODE_EXT.
-    Table X.1 describes whether the conversion is applied if the
+    Table X.1 describes whether the conversion is skipped if the
     TEXTURE_SRGB_DECODE_EXT parameter is SKIP_DECODE_EXT, depending on
     the function used for the access, whether the access occurs through a
     bindless sampler, and whether the texture is statically accessed
     elsewhere with a texelFetch function."
 
     Add a new table X.1, Whether the conversion of sRGB color space
-    components to linear color space is applied when the
+    components to linear color space is skipped when the
     TEXTURE_SRGB_DECODE_EXT parameter is SKIP_DECODE_EXT.
 
                                        texelFetch       other builtin
       --------------------------------------------------------------------
-      non-bindless sampler,            n/a              no
+      non-bindless sampler,            n/a              yes
       no accesses with
       texelFetch
 
-      non-bindless sampler,            yes              undefined
+      non-bindless sampler,            no               undefined
       statically accessed with
       texelFetch
 
-      bindless sampler                 undefined        no
+      bindless sampler                 undefined        yes
 
 Dependencies on ARB_bindless_texture
 
