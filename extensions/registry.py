@@ -3082,11 +3082,22 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_conservative_raster_dilate.txt',
     },
+    'GL_NV_conservative_raster_pre_snap' : {
+        'number' : 517,
+        'esnumber' : 297,
+        'flags' : { 'public' },
+        'url' : 'extensions/NV/NV_conservative_raster_pre_snap.txt',
+    },
     'GL_NV_conservative_raster_pre_snap_triangles' : {
         'number' : 487,
         'esnumber' : 262,
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_conservative_raster_pre_snap_triangles.txt',
+    },
+    'GL_NV_conservative_raster_underestimation' : {
+        'number' : 518,
+        'flags' : { 'public' },
+        'url' : 'extensions/NV/NV_conservative_raster_underestimation.txt',
     },
     'GLX_NV_copy_buffer' : {
         'number' : 457,

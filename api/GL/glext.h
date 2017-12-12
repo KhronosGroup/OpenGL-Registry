@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20171125
+#define GL_GLEXT_VERSION 20171212
 
 /* Generated C header for:
  * API: gl
@@ -9580,6 +9580,11 @@ GLAPI void APIENTRY glConservativeRasterParameterfNV (GLenum pname, GLfloat valu
 #endif
 #endif /* GL_NV_conservative_raster_dilate */
 
+#ifndef GL_NV_conservative_raster_pre_snap
+#define GL_NV_conservative_raster_pre_snap 1
+#define GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_NV 0x9550
+#endif /* GL_NV_conservative_raster_pre_snap */
+
 #ifndef GL_NV_conservative_raster_pre_snap_triangles
 #define GL_NV_conservative_raster_pre_snap_triangles 1
 #define GL_CONSERVATIVE_RASTER_MODE_NV    0x954D
@@ -9590,6 +9595,10 @@ typedef void (APIENTRYP PFNGLCONSERVATIVERASTERPARAMETERINVPROC) (GLenum pname, 
 GLAPI void APIENTRY glConservativeRasterParameteriNV (GLenum pname, GLint param);
 #endif
 #endif /* GL_NV_conservative_raster_pre_snap_triangles */
+
+#ifndef GL_NV_conservative_raster_underestimation
+#define GL_NV_conservative_raster_underestimation 1
+#endif /* GL_NV_conservative_raster_underestimation */
 
 #ifndef GL_NV_copy_depth_to_color
 #define GL_NV_copy_depth_to_color 1

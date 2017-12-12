@@ -615,4 +615,8 @@
 </li>
 <li value=296><a href="extensions/NV/NV_stereo_view_rendering.txt">GL_NV_stereo_view_rendering</a>
 </li>
+<li value=297><a href="extensions/NV/NV_conservative_raster_pre_snap.txt">GL_NV_conservative_raster_pre_snap</a>
+</li>
+<li value=298><a href="extensions/NV/NV_conservative_raster_underestimation.txt">GL_NV_conservative_raster_underestimation</a>
+</li>
 </ol>

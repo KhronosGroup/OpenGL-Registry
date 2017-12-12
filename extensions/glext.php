@@ -969,4 +969,8 @@
 </li>
 <li value=516><a href="extensions/MESA/MESA_program_binary_formats.txt">GL_MESA_program_binary_formats</a>
 </li>
+<li value=517><a href="extensions/NV/NV_conservative_raster_pre_snap.txt">GL_NV_conservative_raster_pre_snap</a>
+</li>
+<li value=518><a href="extensions/NV/NV_conservative_raster_underestimation.txt">GL_NV_conservative_raster_underestimation</a>
+</li>
 </ol>
