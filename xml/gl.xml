@@ -9979,7 +9979,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x954D" name="GL_CONSERVATIVE_RASTER_MODE_NV"/>
         <enum value="0x954E" name="GL_CONSERVATIVE_RASTER_MODE_POST_SNAP_NV"/>
         <enum value="0x954F" name="GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_TRIANGLES_NV"/>
-            <unused start="0x9550" vendor="NV"/>
+        <enum value="0x9550" name="GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_NV"/>
         <enum value="0x9551" name="GL_SHADER_BINARY_FORMAT_SPIR_V"/>
         <enum value="0x9551" name="GL_SHADER_BINARY_FORMAT_SPIR_V_ARB" alias="GL_SHADER_BINARY_FORMAT_SPIR_V"/>
         <enum value="0x9552" name="GL_SPIR_V_BINARY"/>
@@ -46030,6 +46030,11 @@ typedef unsigned int GLhandleARB;
                 <command name="glConservativeRasterParameterfNV"/>
             </require>
         </extension>
+        <extension name="GL_NV_conservative_raster_pre_snap" supported="gl|glcore|gles2">
+            <require>
+                <enum name="GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_NV"/>
+            </require>
+        </extension>
         <extension name="GL_NV_conservative_raster_pre_snap_triangles" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_CONSERVATIVE_RASTER_MODE_NV"/>
@@ -46039,6 +46044,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glConservativeRasterParameteriNV"/>
             </require>
         </extension>
+        <extension name="GL_NV_conservative_raster_underestimation" supported="gl|glcore"/>
         <extension name="GL_NV_copy_buffer" supported="gles2">
             <require>
                 <enum name="GL_COPY_READ_BUFFER_NV"/>
