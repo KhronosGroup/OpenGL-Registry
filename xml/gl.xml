@@ -11562,7 +11562,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glClipControlEXT</name></proto>
             <param><ptype>GLenum</ptype> <name>origin</name></param>
             <param><ptype>GLenum</ptype> <name>depth</name></param>
-            <alias name="glClipControlEXT"/>
+            <alias name="glClipControl"/>
         </command>
         <command>
             <proto>void <name>glClipPlane</name></proto>
