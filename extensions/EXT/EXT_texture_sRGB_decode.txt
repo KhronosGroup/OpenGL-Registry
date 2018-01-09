@@ -31,8 +31,8 @@ Status
 
 Version
 
-    Date: April 27, 2016
-    Revision: 0.90
+    Date: November 8, 2017
+    Revision: 0.91
 
 Number
 
@@ -50,6 +50,8 @@ Dependencies
     OpenGL ES 2.0 interacts with this extension.
 
     OpenGL ES 3.0 interacts with this extension.
+
+    ARB_bindless_texture interacts with this extension.
 
     ARB_sampler_objects interacts with this extension.
 
@@ -221,26 +223,33 @@ Additions to Chapter 3 of the 2.1 Specification (Rasterization)
     Add after the first paragraph of the section:
 
    "The conversion of sRGB color space components to linear color space is
-    always performed if the texel lookup function is one of the texelFetch
-    builtin functions.
+    always applied if the TEXTURE_SRGB_DECODE_EXT parameter is DECODE_EXT.
+    Table X.1 describes whether the conversion is skipped if the
+    TEXTURE_SRGB_DECODE_EXT parameter is SKIP_DECODE_EXT, depending on
+    the function used for the access, whether the access occurs through a
+    bindless sampler, and whether the texture is statically accessed
+    elsewhere with a texelFetch function."
 
-    Otherwise, if the texel lookup function is one of the texture builtin
-    functions or one of the texture gather functions, the conversion of sRGB
-    color space components to linear color space is controlled by the
-    TEXTURE_SRGB_DECODE_EXT parameter.
+    Add a new table X.1, Whether the conversion of sRGB color space
+    components to linear color space is skipped when the
+    TEXTURE_SRGB_DECODE_EXT parameter is SKIP_DECODE_EXT.
 
-    If the TEXTURE_SRGB_DECODE_EXT parameter is DECODE_EXT, the conversion
-    of sRGB color space components to linear color space is performed.
+                                       texelFetch       other builtin
+      --------------------------------------------------------------------
+      non-bindless sampler,            n/a              yes
+      no accesses with
+      texelFetch
 
-    If the TEXTURE_SRGB_DECODE_EXT parameter is SKIP_DECODE_EXT, the value
-    is returned without decoding. However, if the texture is also accessed
-    with a texelFetch function, then the result of texture builtin functions
-    and/or texture gather functions may be returned with decoding or without
-    decoding.
+      non-bindless sampler,            no               undefined
+      statically accessed with
+      texelFetch
 
-    The TEXTURE_SRGB_DECODE_EXT parameter state is ignored for any texture
-    with an internal format not explicitly listed above, as no decoding
-    needs to be done."
+      bindless sampler                 undefined        yes
+
+Dependencies on ARB_bindless_texture
+
+    If ARB_bindless_texture is NOT supported, delete all references to
+    bindless samplers.
 
 Dependencies on ARB_sampler_objects or OpenGL 3.3 or later
 
@@ -405,6 +414,10 @@ Issues
         With this extension, the driver can simply change the underlying
         hardware texture format associated with the texture to perform
         sRGB conversion on filtering or not.  This is very inexpensive.
+
+        However, note that the functionality of this extension can also
+        be obtained using the more modern approach provided by
+        ARB_texture_view (added to OpenGL 4.3) and OES_texture_view.
 
     6) Do any major games or game engines depend on the ability to
        change the sRGB-ness of textures?
@@ -637,10 +650,26 @@ Issues
         because the EXT_texture_sRGB_decode extension is meant to match
         the legacy functionality of Direct3D 9.
 
+   14) Why does Table X.1 show "Undefined", and why does it appear in
+       different columns depending on whether bindless samplers are used
+       or not?
+
+        RESOLVED: Conceptually, TEXTURE_SRGB_DECODE_EXT is part of the
+        sampler state and should therefore not apply to texelFetch. However,
+        not all hardware has the required bit in the sampler state.
+
+        With bindless samplers, texture handles are *always* statically
+        accessed by texelFetch (because an application could choose to do so
+        at any time), so applying the same rules as for non-bindless
+        samplers would make the functionality provided in this extension
+        useless.
+
 Revision History
 
         Rev.    Date    Author    Changes
         ----  --------  --------  -------------------------------------
+        0.91  11/08/17  nhaehnle  Add interaction with bindless textures
+                                  (API issue #51)
         0.90  04/27/16  Jon Leech Add interaction with texelFetch builtins
                                   (Bug 14934)
         0.89  08/14/13  dkoch     Add interactions with ASTC/ETC2/NV_sRGB_formats
