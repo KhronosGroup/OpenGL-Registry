@@ -582,7 +582,7 @@ Issues
 
         effectively reverses the near and far values in the depth
         buffer.  Also remember to reverse the depth function; so
-        glDepthFunc(GL_LESS) should become glDepthRange(GL_GREATER).
+        glDepthFunc(GL_LESS) should become glDepthFunc(GL_GREATER).
         However, this involves computing 1-Z which effectively truncates
         far values (for much the same reason adding +0.5 does).
 
