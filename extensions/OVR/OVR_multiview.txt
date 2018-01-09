@@ -34,8 +34,8 @@ Status
 
 Version
 
-    Last Modified Date: November 15, 2017
-    Revision: 2
+    Last Modified Date: December 13, 2017
+    Revision: 3
 
 Number
 
@@ -216,8 +216,8 @@ and Framebuffer Objects)
     is to set the value of the shader built-in input gl_ViewID_OVR.
 
     When multiview rendering is enabled, the Clear (section 15.2.3),
-    ClearBuffer* (section 15.2.3.1), Draw* (section 10.5), and Dispatch*
-    (section 17) commands have the same effect as:
+    ClearBuffer* (section 15.2.3.1), and Draw* (section 10.5)
+    commands have the same effect as:
 
         for( int i = 0; i < numViews; i++ ) {
             for ( enum attachment : all attachment values where multiple texture array elements have been targeted for rendering ) {
@@ -366,8 +366,7 @@ Modifications to The OpenGL ES Shading Language Specification, Version 3.00.04
     Additions to Section 7.1 "Built-in Language Variables"
 
     Add the following to the list of built-in variables that are intrinsically
-    declared in the vertex, tessellation control, tessellation evaluation,
-    geometry, fragment, and compute shading languages:
+    declared in the vertex and fragment shading languages:
 
        in mediump uint gl_ViewID_OVR;
 
@@ -615,10 +614,10 @@ Issues
     all implemenations support OVR_multiview2 and that applications
     enable the extension when present.
 
-    For non-VTG stages (eg compute and fragment) which don't have a
-    gl_Position output variable this means that no outputs can depend
-    on the gl_VIewID_OVR. It is still possible that shader side effects
-    (such as image or buffer stores) could be view-dependent.
+    For non-VTG stages (eg fragment) which don't have a gl_Position output
+    variable this means that no outputs can depend on the gl_VIewID_OVR.
+    It is still possible that shader side effects (such as image or buffer
+    stores, if supported) could be view-dependent.
 
     (23) What is the behaviour if transform feedback, tessellation or
     geometry shaders, or timer queries are used?
@@ -691,6 +690,24 @@ Issues
     RESOLVED. The initial extension is limited to two-dimensional array
     textures. A future extension could extend it further if there is demand.
 
+    (31) Is multiview supported for compute shaders? If so, how would it work?
+
+    RESOLVED. No. Multiview rendering is orthogonal to compute shaders since
+    Dispatch* commands do not operate on framebuffer attachments and therefore
+    it is meaningless to try to describe interactions with multiview
+    framebuffers. Prior to revision 3, this specification stated that
+    gl_ViewID_OVR was available in the compute shading language but not all
+    implementations did so, and for those that did, it is impossible for it
+    to ever have a value other than 0.
+
+    (32) If geometry and tessellation shaders are not supported with multiview
+    rendering why allow gl_ViewID_OVR to be accepted in tessellation and
+    geometry shaders?
+
+    RESOLVED. There is no benefit. This was removed in revision 3. Older
+    drivers may of course continue to allow such shaders to compile, but
+    it is not possible to use them.
+
 
 Revision History
 
@@ -718,3 +735,6 @@ Revision History
                                 - added issues 18-30
       2     11/15/17  dgkoch    Fix tessellation typos. Fix incorrect reference to compute shaders
                                 instead of vertex shaders.
+      3     12/13/17  dgkoch    Clarify that compute shaders are orthogonal to multiview
+                                framebuffers (Issue 31). Remove gl_ViewID_OVR from compute,
+                                tessellation, and geometry shaders.
