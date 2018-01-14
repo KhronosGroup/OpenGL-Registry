@@ -9804,7 +9804,9 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9360" end="0x9364" vendor="NV"/>
         <enum value="0x9365" name="GL_CLEAR_TEXTURE"/>
         <enum value="0x9366" name="GL_TEXTURE_REDUCTION_MODE_ARB"/>
+        <enum value="0x9366" name="GL_TEXTURE_REDUCTION_MODE_EXT" alias="GL_TEXTURE_REDUCTION_MODE_ARB"/>
         <enum value="0x9367" name="GL_WEIGHTED_AVERAGE_ARB"/>
+        <enum value="0x9367" name="GL_WEIGHTED_AVERAGE_EXT" alias="GL_WEIGHTED_AVERAGE_ARB"/>
         <enum value="0x9368" name="GL_FONT_GLYPHS_AVAILABLE_NV"/>
         <enum value="0x9369" name="GL_FONT_TARGET_UNAVAILABLE_NV"/>
         <enum value="0x936A" name="GL_FONT_UNAVAILABLE_NV"/>
@@ -44605,13 +44607,8 @@ typedef unsigned int GLhandleARB;
         </extension>
         <extension name="GL_EXT_texture_filter_minmax" supported="gl|glcore|gles2">
             <require>
-                <enum name="GL_RASTER_MULTISAMPLE_EXT"/>
-                <enum name="GL_RASTER_SAMPLES_EXT"/>
-                <enum name="GL_MAX_RASTER_SAMPLES_EXT"/>
-                <enum name="GL_RASTER_FIXED_SAMPLE_LOCATIONS_EXT"/>
-                <enum name="GL_MULTISAMPLE_RASTERIZATION_ALLOWED_EXT"/>
-                <enum name="GL_EFFECTIVE_RASTER_SAMPLES_EXT"/>
-                <command name="glRasterSamplesEXT"/>
+                <enum name="GL_TEXTURE_REDUCTION_MODE_EXT"/>
+                <enum name="GL_WEIGHTED_AVERAGE_EXT"/>
             </require>
         </extension>
         <extension name="GL_EXT_texture_format_BGRA8888" supported="gles1|gles2">
