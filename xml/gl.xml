@@ -2658,9 +2658,9 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_ONE_MINUS_CONSTANT_ALPHA"/>
             <enum name="GL_SRC_ALPHA_SATURATE"/>
             <enum name="GL_SRC1_COLOR"/>
-            <enum name="GL_ONE_MINUS_SRC_COLOR"/>
+            <enum name="GL_ONE_MINUS_SRC1_COLOR"/>
             <enum name="GL_SRC1_ALPHA"/>
-            <enum name="GL_ONE_MINUS_SRC_ALPHA"/>
+            <enum name="GL_ONE_MINUS_SRC1_ALPHA"/>
         </group>
 
         <group name="BindTransformFeedbackTarget">
