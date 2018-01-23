@@ -35954,7 +35954,6 @@ typedef unsigned int GLhandleARB;
         <require profile="core" comment="Restore functionality removed in GL 3.2 core to GL 4.3. Needed for debug interface.">
             <enum name="GL_STACK_UNDERFLOW"/>
             <enum name="GL_STACK_OVERFLOW"/>
-            <command name="glGetPointerv"/>
         </require>
         <!-- Deprecated in OpenGL 4.3 core;
              deprecate tag not defined/supported yet
