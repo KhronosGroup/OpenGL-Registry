@@ -973,4 +973,6 @@
 </li>
 <li value=518><a href="extensions/NV/NV_conservative_raster_underestimation.txt">GL_NV_conservative_raster_underestimation</a>
 </li>
+<li value=519><a href="extensions/AMD/AMD_gpu_shader_half_float_fetch.txt">GL_AMD_gpu_shader_half_float_fetch</a>
+</li>
 </ol>
