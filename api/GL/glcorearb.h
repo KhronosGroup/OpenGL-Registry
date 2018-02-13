@@ -4598,6 +4598,11 @@ GLAPI GLuint APIENTRY glCreateShaderProgramEXT (GLenum type, const GLchar *strin
 #endif
 #endif /* GL_EXT_separate_shader_objects */
 
+#ifndef GL_EXT_shader_framebuffer_fetch
+#define GL_EXT_shader_framebuffer_fetch 1
+#define GL_FRAGMENT_SHADER_DISCARDS_SAMPLES_EXT 0x8A52
+#endif /* GL_EXT_shader_framebuffer_fetch */
+
 #ifndef GL_EXT_shader_integer_mix
 #define GL_EXT_shader_integer_mix 1
 #endif /* GL_EXT_shader_integer_mix */

@@ -10,28 +10,35 @@ Contact
 
     Benj Lipchak, Apple (lipchak 'at' apple.com)
 
+Contributors
+
+    Francisco Jerez, Intel
+
 Status
 
     Complete
 
 Version
 
-    Last Modified Date: October 4, 2017
-    Author Revision: 6
+    Last Modified Date: November 13, 2017
+    Author Revision: 7
 
 Number
 
     OpenGL ES Extension #122
+    OpenGL Extension #520
 
 Dependencies
 
-    OpenGL ES 2.0 is required.
+    OpenGL 2.0 or OpenGL ES 2.0 is required.
     
-    This specification is written against the OpenGL ES 2.0.24 specification.
-    This extension is written against the OpenGL ES Shading Language 1.0.17
-    specification.
+    This specification is written against the OpenGL ES 2.0.24 and OpenGL ES
+    3.0.4 specifications.  This extension is written against the OpenGL ES
+    Shading Language 1.0.17 and OpenGL ES Shading Language 3.00.3
+    specifications.
     
-    OpenGL ES 3.0 affects the definition of this extension.
+    OpenGL 2.0, OpenGL 3.0, OpenGL ES 2.0 and OpenGL ES 3.0 affect the
+    definition of this extension.
 
 Overview
 
@@ -147,6 +154,12 @@ New Tokens
 
 New Builtin Variables
 
+    [[ The following applies to OpenGL Shading Language 1.1 and 1.2 only. ]]
+
+    vec4 gl_LastFragData[gl_MaxDrawBuffers];
+
+    [[ The following applies to OpenGL ES Shading Language 1.0 only. ]]
+
     mediump vec4 gl_LastFragData[gl_MaxDrawBuffers]
     
 Changes to the OpenGL ES 2.0.24 Specification, Chapter 3
@@ -190,12 +203,11 @@ Changes to the OpenGL ES 2.0.24 Specification, Chapter 4
         conversion to floating-point first. This conversion must leave the values 0
         and 1 invariant.
 
-        
-        [[If GL_EXT_sRGB or OpenGL ES 3.0 is supported]]
+        [[If GL_EXT_sRGB is supported]]
 
         If the value of FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING{_EXT} for the
         framebuffer attachment corresponding to a given element of gl_LastFragData[]
-        is SRGB (see section 6.1.13),
+        is SRGB,
 
         [[If GL_EXT_sRGB_write_control is supported]]
 
@@ -212,8 +224,7 @@ Changes to the OpenGL ES 2.0.24 Specification, Chapter 4
         Each R, G, and B component is converted in the same fashion described for
         sRGB texture components in section 3.8.16.
 
-        [[End GL_EXT_sRGB or OpenGL ES 3.0]]
-
+        [[End GL_EXT_sRGB]]
 
 New Implementation Dependent State
 
@@ -225,17 +236,45 @@ New Implementation Dependent State
                                                                             discarded 
                                                                             individually 
 
+Changes to the OpenGL ES 3.0.4 Specification, Chapter 3
+
+    Append new paragraphs at the end of the "Shader Outputs" subsection under
+    section 3.9.2, Shader Execution, page 171:
+
+    "Prior to fragment shading, fragment outputs declared inout are populated
+    with the value last written to the framebuffer at the same (x,y,sample)
+    position.  If the framebuffer attachment corresponding to an inout fragment
+    output has a fixed-point format, each color component undergoes a
+    conversion to floating-point first.  This conversion must leave the values
+    0 and 1 invariant.
+
+    If the value of FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING{_EXT} for the
+    framebuffer attachment corresponding to a given inout fragment output is
+    SRGB (see section 6.1.13),"
+
+    [[If GL_EXT_sRGB_write_control is supported]]
+
+    "and FRAMEBUFFER_SRGB_EXT is enabled,"
+
+    [[End GL_EXT_sRGB_write_control]]
+
+    "the R, G, and B destination color values (after conversion from
+    fixed-point to floating-point) are considered to be encoded for the sRGB
+    color space and hence must be linearized first.  Each R, G, and B component
+    is converted in the same fashion described for sRGB texture components in
+    section 3.8.16."
+
 Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 3
 
     Remove Paragraph 2 of section 3.8, page 17, Identifiers ("Identifiers
     starting with "gl_" are reserved [...]") and add:
 
-    "Identifiers starting with "gl_" are reserved for use by OpenGL ES, and
-    may not be declared in a shader as either a variable or a function.
-    However, as noted in the specification, certain predeclared "gl_" names
-    are allowed to be redeclared in a shader for the specific purpose of
-    changing their precision qualifier."
-    
+    "Identifiers starting with "gl_" are reserved for use by the Shading
+    Language, and may not be declared in a shader as either a variable or a
+    function.  However, as noted in the specification, certain predeclared
+    "gl_" names are allowed to be redeclared in a shader for the specific
+    purpose of changing their precision qualifier."
+
 Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 7
 
     Add after the last sentence of Paragraph 2 of Section 7.2, page 60,
@@ -253,11 +292,14 @@ Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 7
     
     Where <behavior> is as specified in section 3.3.
     
-    A new preprocessor #define is added to the OpenGL ES Shading Language:
+    A new preprocessor #define is added to the Shading Language:
 
-     #define GL_EXT_shader_framebuffer_fetch        1
+     #define GL_EXT_shader_framebuffer_fetch        1"
 
-    By default, gl_LastFragData is declared with the mediump precision
+    [[ The following shall be omitted where precision qualifiers are not
+       supported. ]]
+
+    "By default, gl_LastFragData is declared with the mediump precision
     qualifier. This can be changed by redeclaring the corresponding variables
     with the desired precision qualifier.
     
@@ -272,7 +314,16 @@ Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 7
     
     Redeclarations must not otherwise alter the declared type or array size of
     gl_LastFragData."
-    
+
+Changes to the OpenGL Shading Language 1.10 Specification, Chapter 8
+
+    Append at the end of section 8.8, Fragment Processing Functions,
+    page 59:
+
+    "The result of the built-in derivative functions dFdx, dFdy and
+    fwidth is undefined if the value passed as argument was calculated
+    based on the result of reading from gl_LastFragData."
+
 Changes to the OpenGL ES Shading Language 3.00.3 Specification, Chapter 4
 
     Modify Paragraph 2 of section 4.3.6:
@@ -282,8 +333,9 @@ Changes to the OpenGL ES Shading Language 3.00.3 Specification, Chapter 4
 
     Modify Paragraph 5 of section 4.3.6:
     "Fragment outputs output per-fragment data and are declared using the out
-    or inout storage qualifier. It is an error to use centroid out or centroid
-    inout in a fragment shader [...]" and append new paragraph:
+    or inout storage qualifier.  It is a compile-time error to use auxiliary
+    storage qualifiers or interpolation qualifiers on an output in a fragment
+    shader [...]" and append new paragraph:
 
     "Upon entry to the fragment shader, fragment outputs declared as inout will
     contain the value written by the most recent fragment at the same position.
@@ -292,24 +344,51 @@ Changes to the OpenGL ES Shading Language 3.00.3 Specification, Chapter 4
 
     #extension GL_EXT_shader_framebuffer_fetch : <behavior>
     
-    Where <behavior> is as specified in section 3.4."
+    Where <behavior> is as specified in section 3.4.
     
-    A new preprocessor #define is added to the OpenGL ES Shading Language:
+    A new preprocessor #define is added to the Shading Language:
 
-    #define GL_EXT_shader_framebuffer_fetch        1
+    #define GL_EXT_shader_framebuffer_fetch        1"
+
+Interactions with OpenGL 2.0
+
+    If OpenGL 2.0 is supported, all changes given above for the OpenGL ES
+    2.0.24 and OpenGL ES Shading Language 1.0.17 specifications shall be
+    applied, in addition to any changes given specifically for the OpenGL
+    Shading Language 1.10 Specification.  References to precision qualifiers
+    shall be omitted.
+
+Interactions with OpenGL 3.0 and later
+
+    If OpenGL 3.0 is supported, all changes given above for the OpenGL ES 3.0.4
+    and OpenGL ES Shading Language 3.00.3 specifications shall be applied.
+    Changes given for earlier OpenGL ES and OpenGL ES Shading Language versions
+    shall be ignored.  References to auxiliary storage qualifiers shall be
+    omitted if they are not supported by the Shading Language.
+
+Interactions with OpenGL ES 2.0
+
+    If OpenGL ES 2.0 is supported, apply all changes given above for the OpenGL
+    ES 2.0.24 and OpenGL ES Shading Language 1.0.17 specifications.
+
+Interactions with OpenGL ES 3.0 and later
+
+    If OpenGL ES 3.0 is supported, all changes given above for the OpenGL ES
+    3.0.4 and OpenGL ES Shading Language 3.00.3 specifications shall be
+    applied.  Changes given for earlier OpenGL ES and OpenGL ES Shading
+    Language versions shall be ignored.  References to auxiliary storage
+    qualifiers shall be omitted if they are not supported by the Shading
+    Language.
 
 Interactions with OES_standard_derivatives
 
     Results from shaders which use the built-in derivative functions dFdx,
     dFdy, and fwidth on variables calculated using the current framebuffer 
     color are undefined.
-    
-Interactions with OpenGL ES 3.0
-
-    Replace references to gl_LastFragData[] with "inout variables".
 
 Revision History
 
+    Version 7, 2017/11/13 - Specify interactions with desktop OpenGL APIs.
     Version 6, 2017/10/04 - Clarified how gl_LastFragData is populated.
     Version 5, 2016/09/08 - Added preprocessor defines.
     Version 4, 2013/05/28 - Added ES3 interaction as requested in Bug 10236

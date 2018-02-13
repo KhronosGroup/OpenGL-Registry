@@ -975,4 +975,6 @@
 </li>
 <li value=519><a href="extensions/AMD/AMD_gpu_shader_half_float_fetch.txt">GL_AMD_gpu_shader_half_float_fetch</a>
 </li>
+<li value=520><a href="extensions/EXT/EXT_shader_framebuffer_fetch.txt">GL_EXT_shader_framebuffer_fetch</a>
+</li>
 </ol>

@@ -2141,6 +2141,7 @@ registry = {
         'url' : 'extensions/EXT/EXT_separate_specular_color.txt',
     },
     'GL_EXT_shader_framebuffer_fetch' : {
+        'number' : 520,
         'esnumber' : 122,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_shader_framebuffer_fetch.txt',
