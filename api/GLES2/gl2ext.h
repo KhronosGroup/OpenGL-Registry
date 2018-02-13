@@ -1849,6 +1849,14 @@ GL_APICALL void GL_APIENTRY glProgramUniformMatrix4x3fvEXT (GLuint program, GLin
 #define GL_FRAGMENT_SHADER_DISCARDS_SAMPLES_EXT 0x8A52
 #endif /* GL_EXT_shader_framebuffer_fetch */
 
+#ifndef GL_EXT_shader_framebuffer_fetch_non_coherent
+#define GL_EXT_shader_framebuffer_fetch_non_coherent 1
+typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERFETCHBARRIEREXTPROC) (void);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glFramebufferFetchBarrierEXT (void);
+#endif
+#endif /* GL_EXT_shader_framebuffer_fetch_non_coherent */
+
 #ifndef GL_EXT_shader_group_vote
 #define GL_EXT_shader_group_vote 1
 #endif /* GL_EXT_shader_group_vote */

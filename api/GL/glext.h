@@ -8054,6 +8054,14 @@ GLAPI GLuint APIENTRY glCreateShaderProgramEXT (GLenum type, const GLchar *strin
 #define GL_FRAGMENT_SHADER_DISCARDS_SAMPLES_EXT 0x8A52
 #endif /* GL_EXT_shader_framebuffer_fetch */
 
+#ifndef GL_EXT_shader_framebuffer_fetch_non_coherent
+#define GL_EXT_shader_framebuffer_fetch_non_coherent 1
+typedef void (APIENTRYP PFNGLFRAMEBUFFERFETCHBARRIEREXTPROC) (void);
+#ifdef GL_GLEXT_PROTOTYPES
+GLAPI void APIENTRY glFramebufferFetchBarrierEXT (void);
+#endif
+#endif /* GL_EXT_shader_framebuffer_fetch_non_coherent */
+
 #ifndef GL_EXT_shader_image_load_formatted
 #define GL_EXT_shader_image_load_formatted 1
 #endif /* GL_EXT_shader_image_load_formatted */

@@ -5,6 +5,7 @@ Name
 Name Strings
 
     GL_EXT_shader_framebuffer_fetch
+    GL_EXT_shader_framebuffer_fetch_non_coherent
 
 Contact
 
@@ -59,6 +60,24 @@ Overview
     fixed-function blending. It can also be used to apply a function to the
     framebuffer color, by writing a shader which uses the existing framebuffer
     color as its only input.
+
+    This extension provides two alternative name strings:
+
+     - GL_EXT_shader_framebuffer_fetch guarantees full coherency between
+       framebuffer reads and writes.  If this extension string is exposed, the
+       result of reading from the framebuffer from a fragment shader invocation
+       is guaranteed to reflect values written by any previous overlapping
+       samples in API primitive order, unless requested otherwise in the shader
+       source using the noncoherent layout qualifier.
+
+     - GL_EXT_shader_framebuffer_fetch_non_coherent provides limited implicit
+       coherency guarantees.  Instead, the application is expected to call the
+       FramebufferFetchBarrierEXT command for previous framebuffer writes to
+       become visible to subsequent fragment shader invocations.  For this
+       extension to give well-defined results applications may have to split
+       rendering into multiple passes separated with FramebufferFetchBarrierEXT
+       calls.  The functionality provided by this extension is requested in the
+       shader source using the noncoherent layout qualifier.
 
 Issues
 
@@ -183,9 +202,32 @@ Issues
     invocations executed during rendering is fully defined by the
     implementation.
 
+    9. How should the implementation behave where framebuffer fetch coherency
+       cannot be enabled selectively for each fragment output due to hardware
+       or software limitations?
+
+    RESOLVED: Because the behavior specified for coherent framebuffer fetch
+    outputs is a strict subset of the behavior of non-coherent outputs, the
+    implementation is free to ignore any noncoherent layout qualifiers and
+    enable coherency globally when the fragment shader bound to the pipeline
+    has any color outputs requiring framebuffer fetch coherency.
+
+    10. Should the current coherent memory qualifier be reused to indicate
+        whether the application requires framebuffer fetch coherency for a given
+        fragment output?
+
+    RESOLVED: No, because that would imply breaking GLSL source-level
+    compatibility with earlier versions of the EXT_shader_framebuffer_fetch
+    extension.  That said, it may make sense to reconsider this syntactic
+    compromise if this extension is used as starting point for another
+    specification text (e.g. a derived ARB/KHR extension).
+
 New Procedures and Functions
 
-    None
+    [[ The following applies if EXT_shader_framebuffer_fetch_non_coherent is
+       supported. ]]
+
+    void FramebufferFetchBarrierEXT(void);
     
 New Tokens
 
@@ -216,8 +258,36 @@ Changes to the OpenGL ES 2.0.24 Specification, Chapter 3
     shader will be invoked separately for each covered sample and a separate 
     value for the previous framebuffer color will be provided for each sample."
     
-    [[ The following applies unless specified otherwise in the interactions
-       sections. ]]
+    [[ The following applies if EXT_shader_framebuffer_fetch_non_coherent is
+       supported. ]]
+
+    Append new paragraph at the end of section 3.8.2, page 197 ("Shader
+    Execution"):
+
+    "The command
+
+        void FramebufferFetchBarrierEXT(void);
+
+    specifies a boundary between passes when reading existing framebuffer data
+    from fragment shaders via the gl_LastFragData built-in variable.  Previous
+    framebuffer object writes regardless of the mechanism (including clears,
+    blits and primitive rendering) are guaranteed to be visible to subsequent
+    fragment shader invocations that read from the framebuffer once
+    FramebufferFetchBarrierEXT is executed."
+
+    [[ The following applies if both EXT_shader_framebuffer_fetch and
+       EXT_shader_framebuffer_fetch_non_coherent are supported. ]]
+
+    "Because the implementation guarantees coherency of framebuffer reads and
+    writes for color outputs not explicitly marked with the noncoherent layout
+    qualifier, calling the FramebufferFetchBarrierEXT command is not required
+    unless the application wishes to manage memory ordering of framebuffer
+    reads and writes explicitly, which may provide better performance on some
+    implementations in cases where rendering can be split into multiple passes
+    with non-self-overlapping geometry."
+
+    [[ The following applies to either variant of the extension unless
+       specified otherwise in the interactions sections. ]]
 
     Add a new subsection to section 3.8.2, page 87 ("Shader Execution"):
     
@@ -313,6 +383,31 @@ Changes to the OpenGL ES 3.0.4 Specification, Chapter 3
     is converted in the same fashion described for sRGB texture components in
     section 3.8.16."
 
+    [[ The following applies if EXT_shader_framebuffer_fetch_non_coherent is
+       supported. ]]
+
+    "The command
+
+        void FramebufferFetchBarrierEXT(void);
+
+    specifies a boundary between passes when reading existing framebuffer data
+    from fragment shaders via inout fragment outputs.  Previous framebuffer
+    object writes regardless of the mechanism (including clears, blits and
+    primitive rendering) are guaranteed to be visible to subsequent fragment
+    shader invocations that read from the framebuffer once
+    FramebufferFetchBarrierEXT is executed."
+
+    [[ The following applies if both EXT_shader_framebuffer_fetch and
+       EXT_shader_framebuffer_fetch_non_coherent are supported. ]]
+
+    "Because the implementation guarantees coherency of framebuffer reads and
+    writes for color outputs not explicitly marked with the noncoherent layout
+    qualifier, calling the FramebufferFetchBarrierEXT command is not required
+    unless the application wishes to manage memory ordering of framebuffer
+    reads and writes explicitly, which may provide better performance on some
+    implementations in cases where rendering can be split into multiple passes
+    with non-self-overlapping geometry."
+
 Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 3
 
     Remove Paragraph 2 of section 3.8, page 17, Identifiers ("Identifiers
@@ -322,7 +417,52 @@ Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 3
     Language, and may not be declared in a shader as either a variable or a
     function.  However, as noted in the specification, certain predeclared
     "gl_" names are allowed to be redeclared in a shader for the specific
-    purpose of changing their precision qualifier."
+    purpose of changing their precision or layout qualifier."
+
+Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 4
+
+    [[ The following applies if EXT_shader_framebuffer_fetch_non_coherent is
+       supported. ]]
+
+    Add a new Section 4.x (Layout Qualifiers) as follows:
+
+    "4.x Layout Qualifiers
+
+    Layout qualifiers can appear with an individual variable declaration:
+
+        <layout-qualifier> <declaration>;
+
+        <layout-qualifier>:
+            layout( <layout-qualifier-id-list> )
+
+        <layout-qualifier-id-list>:
+            comma separated list of <layout-qualifier-id>
+
+    Declarations of layouts can only be made at global scope, and only where
+    indicated in the following subsection; their details are specific to what
+    the declaration interface is, and are discussed individually.
+
+    The tokens in any <layout-qualifier-id-list> are identifiers, not
+    keywords. Generally they can be listed in any order. Order-dependent
+    meanings exist only if explicitly called out below. Similarly, these
+    identifiers are not case-sensitive, unless explicitly noted otherwise.
+
+    4.x.1 Output Layout Qualifiers
+
+    Fragment shaders may specify the following layout qualifier only for
+    redeclaring the built-in gl_LastFragData array.  The allowed layout
+    qualifier identifiers for gl_LastFragData are:
+
+      <layout-qualifier-id>:
+        noncoherent
+
+    Non-coherent framebuffer fetch outputs have relaxed memory ordering
+    requirements and may provide better performance on some implementations,
+    but they require FramebufferFetchBarrierEXT to be called explicitly for the
+    contents rendered to a color attachment to be visible to subsequent
+    fragment shader invocations.  Redeclarations are done as follows:
+
+      layout(noncoherent) mediump vec4 gl_LastFragData[gl_MaxDrawBuffers];"
 
 Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 7
 
@@ -332,21 +472,44 @@ Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 7
     
     "... To access the existing framebuffer values (e.g., to implement a
     complex blend operation inside the shader), fragment shaders should use
-    the read-only input array gl_LastFragData.  gl_LastFragData returns the
-    value written by the most recent fragment at the same position.
-    
-    Access to gl_LastFragData is optional, and must be enabled by 
-    
-    #extension GL_EXT_shader_framebuffer_fetch : <behavior>
-    
-    Where <behavior> is as specified in section 3.3.
-    
-    A new preprocessor #define is added to the Shading Language:
+    the read-only input array gl_LastFragData."
 
-     #define GL_EXT_shader_framebuffer_fetch        1"
+    [[ The following applies if EXT_shader_framebuffer_fetch is supported. ]]
 
-    [[ The following shall be omitted where precision qualifiers are not
+    "Unless it has been redeclared with the noncoherent layout qualifier,
+    gl_LastFragData contains the most recent value written to the attachments
+    bound to each color output at the current sample location.  Access to
+    gl_LastFragData is optional and can be enabled by
+
+     #extension GL_EXT_shader_framebuffer_fetch : <behavior>
+
+    Where <behavior> is as specified in section 3.4.  A new preprocessor
+    define is added to the Shading Language:
+
+     #define GL_EXT_shader_framebuffer_fetch                     1"
+
+    [[ The following applies if EXT_shader_framebuffer_fetch_non_coherent is
        supported. ]]
+
+    "If it has been redeclared with the noncoherent layout qualifier,
+    gl_LastFragData contains the most recent value written to the attachments
+    bound to each color output at the current sample location as long as
+    FramebufferFetchBarrierEXT has been executed between the last command that
+    updated the same location of the framebuffer attachment and the current
+    draw call.  Its value is undefined for any outputs whose contents at the
+    current sample location have been modified since the last
+    FramebufferFetchBarrierEXT call.  Access to gl_LastFragData and the ability
+    to use the layout(noncoherent) qualifier are optional and can be enabled by
+
+     #extension GL_EXT_shader_framebuffer_fetch_non_coherent : <behavior>
+
+    Where <behavior> is as specified in section 3.4.  A new preprocessor
+    define is added to the Shading Language:
+
+     #define GL_EXT_shader_framebuffer_fetch_non_coherent        1"
+
+    [[ The following applies to either variant of the extension but shall be
+       omitted where precision qualifiers are not supported. ]]
 
     "By default, gl_LastFragData is declared with the mediump precision
     qualifier. This can be changed by redeclaring the corresponding variables
@@ -363,6 +526,13 @@ Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 7
     
     Redeclarations must not otherwise alter the declared type or array size of
     gl_LastFragData."
+
+    [[ The following applies if EXT_shader_framebuffer_fetch_non_coherent is
+       supported. ]]
+
+    "Unless the GL_EXT_shader_framebuffer_fetch extension has been enabled in
+    addition, it's an error to use gl_LastFragData if it hasn't been
+    explicitly redeclared with layout(noncoherent)."
 
 Changes to the OpenGL ES Shading Language 1.0.17 Specification, Chapter 8
 
@@ -393,24 +563,70 @@ Changes to the OpenGL ES Shading Language 3.00.3 Specification, Chapter 4
     global scope for declaring a single variable name as both input and output
     [...]"
 
-    Modify Paragraph 5 of section 4.3.6:
+    Modify Paragraph 7 of section 4.3.6:
+
     "Fragment outputs output per-fragment data and are declared using the out
     or inout storage qualifier.  It is a compile-time error to use auxiliary
     storage qualifiers or interpolation qualifiers on an output in a fragment
-    shader [...]" and append new paragraph:
+    shader [...]" and append new paragraphs at the end of the same section:
 
-    "Upon entry to the fragment shader, fragment outputs declared as inout will
-    contain the value written by the most recent fragment at the same position.
-    This behavior, and the ability to use the inout qualifier at global scope 
-    in a fragment shader, is optional and must be enabled by
+    [[ The following applies if EXT_shader_framebuffer_fetch_non_coherent is
+       supported. ]]
 
-    #extension GL_EXT_shader_framebuffer_fetch : <behavior>
+    "Fragment outputs declared inout may specify the following layout
+    qualifier:
+
+      <layout-qualifier-id>:
+        noncoherent
+
+    Non-coherent framebuffer fetch outputs have relaxed memory ordering
+    requirements and may provide better performance on some implementations,
+    but they require FramebufferFetchBarrierEXT to be called explicitly for the
+    contents rendered to a color attachment to be visible to subsequent
+    fragment shader invocations."
+
+    [[ The following applies if EXT_shader_framebuffer_fetch is supported. ]]
+
+    "Upon entry to the fragment shader, fragment outputs declared inout not
+    qualified with the noncoherent layout qualifier will contain the most
+    recent value written to the same framebuffer attachment at the current
+    sample location.  This behavior and the ability to use the inout qualifier
+    at global scope in a fragment shader is optional and can be enabled by
+
+     #extension GL_EXT_shader_framebuffer_fetch : <behavior>
     
-    Where <behavior> is as specified in section 3.4.
-    
-    A new preprocessor #define is added to the Shading Language:
+    Where <behavior> is as specified in section 3.4.  A new preprocessor
+    define is added to the Shading Language:
 
-    #define GL_EXT_shader_framebuffer_fetch        1"
+     #define GL_EXT_shader_framebuffer_fetch                     1"
+
+    [[ The following applies if EXT_shader_framebuffer_fetch_non_coherent is
+       supported. ]]
+
+    "Upon entry to the fragment shader, fragment outputs declared inout
+    qualified with the noncoherent layout qualifier will contain the most
+    recent value written to the same framebuffer attachment at the current
+    sample location, as long as FramebufferFetchBarrierEXT has been executed
+    between the last command that updated the framebuffer location and the
+    current draw call.  The initial value is undefined for any fragment outputs
+    declared inout whose contents at the current sample location have been
+    modified since the last FramebufferFetchBarrierEXT call.  This behavior and
+    the ability to use the inout and layout(noncoherent) qualifiers at global
+    scope in a fragment shader are optional and can be enabled by
+
+     #extension GL_EXT_shader_framebuffer_fetch_non_coherent : <behavior>
+
+    Where <behavior> is as specified in section 3.4.  A new preprocessor
+    define is added to the Shading Language:
+
+     #define GL_EXT_shader_framebuffer_fetch_non_coherent        1"
+
+    [[ The following applies if EXT_shader_framebuffer_fetch_non_coherent is
+       supported. ]]
+
+    "It is an error to declare an inout fragment output not qualified with
+    layout(noncoherent) if the GL_EXT_shader_framebuffer_fetch extension hasn't
+    been enabled."
 
 Changes to the OpenGL ES Shading Language 3.00.3 Specification, Chapter 7
 
@@ -540,6 +756,11 @@ Revision History
                           - Specify undefined behavior of texture lookup
                             functions that compute implicit derivatives in
                             OpenGL (ES) 2.0.
+                          - Define EXT_shader_framebuffer_fetch_non_coherent
+                            variant of the extension.  Add
+                            FramebufferFetchBarrierEXT command.  Define
+                            noncoherent layout qualifier for finer-grained
+                            control of framebuffer fetch coherency.
     Version 6, 2017/10/04 - Clarified how gl_LastFragData is populated.
     Version 5, 2016/09/08 - Added preprocessor defines.
     Version 4, 2013/05/28 - Added ES3 interaction as requested in Bug 10236

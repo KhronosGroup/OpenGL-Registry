@@ -2145,6 +2145,7 @@ registry = {
         'esnumber' : 122,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_shader_framebuffer_fetch.txt',
+        'alias' : { 'GL_EXT_shader_framebuffer_fetch_non_coherent' },
     },
     'GL_EXT_shader_group_vote' : {
         'esnumber' : 254,
