@@ -617,4 +617,6 @@
 </li>
 <li value=297><a href="extensions/NV/NV_conservative_raster_pre_snap.txt">GL_NV_conservative_raster_pre_snap</a>
 </li>
+<li value=298><a href="extensions/EXT/EXT_EGL_image_external_wrap_modes.txt">GL_EXT_EGL_image_external_wrap_modes</a>
+</li>
 </ol>

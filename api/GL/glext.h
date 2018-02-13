@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20180114
+#define GL_GLEXT_VERSION 20180213
 
 /* Generated C header for:
  * API: gl
@@ -5703,6 +5703,10 @@ GLAPI void APIENTRY glSetMultisamplefvAMD (GLenum pname, GLuint index, const GLf
 #ifndef GL_AMD_shader_explicit_vertex_parameter
 #define GL_AMD_shader_explicit_vertex_parameter 1
 #endif /* GL_AMD_shader_explicit_vertex_parameter */
+
+#ifndef GL_AMD_shader_gpu_shader_half_float_fetch
+#define GL_AMD_shader_gpu_shader_half_float_fetch 1
+#endif /* GL_AMD_shader_gpu_shader_half_float_fetch */
 
 #ifndef GL_AMD_shader_image_load_store_lod
 #define GL_AMD_shader_image_load_store_lod 1
