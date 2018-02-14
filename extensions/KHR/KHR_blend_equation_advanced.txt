@@ -985,7 +985,7 @@ Revision History
 
       Fix ClipColor() equation where in the "if (maxcol > 1.0)" body the
       "(color-lum)*lum" term should have been "(color-lum)*(1-lum)". Also
-      add a new issue for the case where the inputs to SetLum() are outside
+      add new issue 11 for the case where the inputs to SetLum() are outside
       the range [0..1] and could cause a divide-by-zero in ClipColor().
 
     Revision 16, April 16, 2016 (from a September 30, 2014 edit that wasn't
