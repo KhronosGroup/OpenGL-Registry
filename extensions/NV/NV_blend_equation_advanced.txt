@@ -26,8 +26,8 @@ Status
 
 Version
 
-    Last Modified Date:         September 30, 2014
-    NVIDIA Revision:            9
+    Last Modified Date:         February 14, 2018
+    NVIDIA Revision:            10
 
 Number
 
@@ -484,8 +484,10 @@ Operations and the Frame Buffer)
     destination colors to the HSL (hue, saturation, luminosity) color space,
     generating a new HSL color by selecting H, S, and L components from the
     source or destination according to the blend equation, and then converting
-    the result back to RGB.  In the equations below, a blended RGB color is
-    produced according to the following pseudocode:
+    the result back to RGB.  The HSL blend equations are only well defined
+    when the values of the input color components are in the range [0..1].
+    In the equations below, a blended RGB color is produced according to the
+    following pseudocode:
 
       float minv3(vec3 c) {
         return min(min(c.r, c.g), c.b);
@@ -510,7 +512,7 @@ Operations and the Frame Buffer)
           color = lum + ((color-lum)*lum) / (lum-mincol);
         }
         if (maxcol > 1.0) {
-          color = lum + ((color-lum)*lum) / (maxcol-lum);
+          color = lum + ((color-lum)*(1-lum)) / (maxcol-lum);
         }
         return color;
       }
@@ -1674,10 +1676,30 @@ Issues
       include a special case for Cb==0 while others do not.  We have added a
       special case there as well.
 
+    (35) How should ClipColor() behave if the inputs cause a divide-by-zero,
+         which may happen when all color components are the same value and
+         outside the range [0..1]?
+         
+         For example, if the color parameter to ClipColor() has all color
+         components as equal and above 1.0 then maxcol==lum and the term:
+           color = lum + ((color-lum)*(1-lum)) / (maxcol-lum);
+         will be a divide-by-zero.
+
+      RESOLVED: The HSL blend equations are not well defined when used with
+      ill-conditioned inputs. The inputs must be in the range [0..1].
+      
 Revision History
     
     Rev.    Date    Author    Changes
-    ----  --------  --------  -----------------------------------------
+    ----  --------  --------  ----------------------------------------------
+    10    02/14/18  pdaniell  Fix ClipColor() equation where in the
+                              "if (maxcol > 1.0)" body the "(color-lum)*lum"
+                              term should have been "(color-lum)*(1-lum)".
+                              Also add a new issue for the case where the
+                              inputs to SetLum() are outside the range
+                              [0..1] and could cause a divide-by-zero in
+                              ClipColor().
+    
      9    09/30/14  pbrown    Fix incorrectly specified color clamping in
                               the HSL blend modes.
 
