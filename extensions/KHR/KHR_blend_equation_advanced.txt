@@ -961,17 +961,23 @@ Issues
       optimizations or include logic to check for zero alpha values for each
       input.
 
-    (35) How should ClipColor() behave if the inputs cause a divide-by-zero,
-         which may happen when all color components are the same value and
-         outside the range [0..1]?
+    (11) For "HSL" blend equations, the blend equation involves a clipping
+         step where colors may be "clipped" if the blend would produce
+         components are outside the range [0,1]. Are there inputs where this
+         blend could produce ill-defined or nonsensical results?
          
-         For example, if the color parameter to ClipColor() has all color
-         components as equal and above 1.0 then maxcol==lum and the term:
-           color = lum + ((color-lum)*(1-lum)) / (maxcol-lum);
-         will be a divide-by-zero.
+      RESOLVED: Yes, the results of HSL blend equations are undefined if the
+      input colors have components outside the range [0,1]. Even if the input
+      colors are in-range, the basic color adjustment done in these blends
+      could produce result components outside the range [0,1]. To compensate,
+      the ClipColor() function in the specification interpolates the result
+      color and a greyscale value that matches the luminance of the result.
+      The math for the clipping operation assumes the luminance of the result
+      color is in the range [0,1]. If that isn't the case, the clipping
+      operation could result in a divide by zero (when all result components
+      have the same out-of-bounds value) or perform an otherwise nonsensical
+      computation.
 
-      RESOLVED: The HSL blend equations are not well defined when used with
-      ill-conditioned inputs. The inputs must be in the range [0..1].
 
 Revision History
 
