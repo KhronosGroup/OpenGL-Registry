@@ -1768,6 +1768,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_EGL_image_array.txt',
     },
+    'GL_EXT_EGL_image_external_wrap_modes' : {
+        'esnumber' : 298,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_EGL_image_external_wrap_modes.txt',
+    },
     'GL_EXT_memory_object' : {
         'number' : 503,
         'esnumber' : 280,
