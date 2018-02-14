@@ -30,8 +30,8 @@ Status
 
 Version
 
-    Last Modified Date: September 7, 2016
-    Revision: 2
+    Last Modified Date: February 13, 2018
+    Revision: 3
 
 Number
 
@@ -244,6 +244,17 @@ Additions to the OpenGL ES Shading Language 3.10 Specification
 
       patch out highp vec4 gl_BoundingBoxOES[2];
 
+    Add the following paragraph to subsection 7.1ts1.2 "Tessellation Control
+    Output Variables" as added by OES_tessellation_shader, after the paragraph
+    describing gl_TessLevelOuter and gl_TessLevelInner:
+
+      The values written to gl_BoundingBoxOES specify the minimum and maximum
+      clip-space extents of a bounding box containing all primitives generated
+      from the patch by the primitive generator, geometry shader, and clipping.
+      Fragments may or may not be generated for portions of these primitives
+      that extend outside the window-coordinate projection of this bounding
+      box.
+
 
 Dependencies on the OpenGL ES 3.20 Shading Language Specification
 
@@ -379,6 +390,9 @@ Revision History
 
     Rev.    Date      Author    Changes
     ----  ----------  --------- -------------------------------------------------
+     3    02/13/2018  jessehall Added a description of gl_BoundingBoxOES to the
+                                shading language specification.
+
      2    09/07/2016  jessehall Added interaction with the OpenGL ES 3.20 Shading
                                 Language.
 
