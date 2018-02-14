@@ -1676,19 +1676,7 @@ Issues
       include a special case for Cb==0 while others do not.  We have added a
       special case there as well.
 
-    (35) How should ClipColor() behave if the inputs cause a divide-by-zero,
-         which may happen when all color components are the same value and
-         outside the range [0..1]?
-         
-         For example, if the color parameter to ClipColor() has all color
-         components as equal and above 1.0 then maxcol==lum and the term:
-           color = lum + ((color-lum)*(1-lum)) / (maxcol-lum);
-         will be a divide-by-zero.
-
-      RESOLVED: The HSL blend equations are not well defined when used with
-      ill-conditioned inputs. The inputs must be in the range [0..1].
-      
-    (36) For "HSL" blend equations, the blend equation involves a clipping
+    (35) For "HSL" blend equations, the blend equation involves a clipping
          step where colors may be "clipped" if the blend would produce
          components are outside the range [0,1]. Are there inputs where this
          blend could produce ill-defined or nonsensical results?
@@ -1713,7 +1701,7 @@ Revision History
     10    02/14/18  pdaniell  Fix ClipColor() equation where in the
                               "if (maxcol > 1.0)" body the "(color-lum)*lum"
                               term should have been "(color-lum)*(1-lum)".
-                              Also add new issue 36 for the case where the
+                              Also add new issue 35 for the case where the
                               inputs to SetLum() are outside the range
                               [0..1] and could cause a divide-by-zero in
                               ClipColor().
