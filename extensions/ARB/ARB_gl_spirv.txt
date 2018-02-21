@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date: 15-Nov-2017
-    Revision: 36
+    Last Modified Date: 20-Feb-2018
+    Revision: 37
 
 Number
 
@@ -620,7 +620,8 @@ Modifications to Chapter 7 of the OpenGL 4.5 (Core Profile) Specification
     User-defined interface variables must be decorated with a *Location*
     and can also be decorated with a *Component*. These correspond to the
     location and component discussed in section 7.4.1 "Shader Interface
-    Matching".
+    Matching". Uniform and shader storage block variables must also be
+    decorated with a *Binding*.
 
     A user-defined output variable is considered to match an input variable
     in the subsequent stage only if the two variables are declared with the
@@ -982,6 +983,17 @@ Add Appendix A.spv "The OpenGL SPIR-V Execution Environment" to the OpenGL 4.5
       - Device
       - Workgroup
       - Invocation
+
+    *Storage Class* must be limited to:
+      - *UniformConstant*
+      - *Input*
+      - *Uniform*
+      - *Output*
+      - *Workgroup*
+      - *Private*
+      - *Function*
+      - *AtomicCounter*
+      - *Image*
 
     Images:
       - OpTypeImage must declare a scalar 32-bit float or 32-bit integer
@@ -1954,7 +1966,7 @@ Issues
     RESOLVED. Because it is not possible to obtain the uniform block index
     or storage block index from an unnamed block, the binding value remains
     as specified in the shader by the layout qualifier or decoration.
-    If you are feeling lucky you could just guess and remap use index values
+    If you are feeling lucky you could just guess and remap used index values
     [0, #active blocks), but you won't really know what is going
     where, so just treat it as an immutable binding, similar to the atomic
     counter buffer binding point. Really.
@@ -2017,12 +2029,16 @@ Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
-    36    15-Nov-2017    dkoch          clarify error for glSpecializeShader
+    37    20-Feb-2018    dgkoch         Add whitelist for accepted storage
+                                        classes (SPIR-V/issues/166).
+                                        Require Binding for uniform and storage
+                                        buffer blocks (opengl/api/issues/55).
+    36    15-Nov-2017    dgkoch         clarify error for glSpecializeShader
                                         and add new error if shader types
                                         mismatch (OpenGL-API/issues/16)
     35    25-Oct-2017    JohnK          remove the already deprecated noise
                                         functions
-    34    29-May-2017    dkoch          Fix typos. RuntimeArrays are only
+    34    29-May-2017    dgkoch         Fix typos. RuntimeArrays are only
                                         supported on SSBOs.
     33    26-May-2017    JohnK          Require in/out explicit locations
     32    25-Apr-2017    JohnK          Bring up-to-date:
@@ -2030,13 +2046,13 @@ Revision History
                                           gl_NumSamples not supported
                                           atomic counter restrictions
                                           bug fixes
-    31    21-Jul-2016    dkoch          Clarify string length on queries
+    31    21-Jul-2016    dgkoch         Clarify string length on queries
     30    13-Jul-2016    JohnK          SPIR-V Offset can also apply to an
                                         atomic_uint offset.
-    29    04-Jul-2015    dkoch          Allow handles of the same shader types
+    29    04-Jul-2015    dgkoch         Allow handles of the same shader types
                                         for ShaderBinary when using SPIRV.
-    28    09-Jun-2016    dkoch          Move future extensions to Issue 27.
-    27    08-Jun-2016    dkoch          Assign enums, add a couple missing
+    28    09-Jun-2016    dgkoch         Move future extensions to Issue 27.
+    27    08-Jun-2016    dgkoch         Assign enums, add a couple missing
                                         errors. Editorial fixes.
                                         Specify required version and format
                                         of SPIRV. Add Issue 27.
@@ -2047,10 +2063,10 @@ Revision History
                                         and SPIR-V GLSLShared/GLSLPacked,
                                         bringing in KHR_vulkan_glsl rules for
                                         std140 and std430
-    23    01-Jun-2016    dkoch          Finish API edits. Cleanup editing
+    23    01-Jun-2016    dgkoch         Finish API edits. Cleanup editing
                                         pass on formatting and issue resolutions.
                                         Add issues 22-26 and resolve the rest.
-    22    26-May-2016    dkoch          Add ARB suffix to SpecializeShader
+    22    26-May-2016    dgkoch         Add ARB suffix to SpecializeShader
                                         Add SPIR_V_BINARY_ARB shader state
                                         (and some but not all related rules)
                                         Add a bunch of API edits alluding to
@@ -2059,19 +2075,19 @@ Revision History
                                         to be addressed.
                                         Add unresolved issues 16-21.
     21    25-May-2016    JohnK          Add interface matching rules
-    20    19-May-2016    dkoch          Remove language about 'default entry point'
+    20    19-May-2016    dgkoch         Remove language about 'default entry point'
                                         Recast features in terms of GL version.
-    19    19-May-2016    dkoch          Add min GLSL version required for
+    19    19-May-2016    dgkoch         Add min GLSL version required for
                                         built-in variable decorations and
                                         OpCapabilities. Fix various dates.
     18    13-May-2016    JohnK          Bring in the actual correct subset of
                                         GL_KHR_vulkan_glsl, rather than refer
                                         to it with differences
-    17    12-May-2016    dkoch          Verify capabilities for GLSL 4.50
+    17    12-May-2016    dgkoch         Verify capabilities for GLSL 4.50
                                         Add capabilities for non-core ARB
                                         extensions, and extensions that
                                         already have SPIR-V correspondence.
-    16    12-May-2016    dkoch          grammatical fixes, replace non-ascii
+    16    12-May-2016    dgkoch         grammatical fixes, replace non-ascii
                                         chars, formatting
     15    11-May-2016    JohnK          Clear up misc. TBDs throughout
     14    11-May-2016    JohnK          Flesh out GL_KHR_vulkan_glsl changes
