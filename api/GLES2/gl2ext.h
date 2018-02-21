@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20180213 */
+/* Generated on date 20180221 */
 
 /* Generated C header for:
  * API: gles2
@@ -2100,6 +2100,11 @@ GL_APICALL void GL_APIENTRY glTexBufferRangeEXT (GLenum target, GLenum internalf
 #ifndef GL_EXT_texture_format_BGRA8888
 #define GL_EXT_texture_format_BGRA8888 1
 #endif /* GL_EXT_texture_format_BGRA8888 */
+
+#ifndef GL_EXT_texture_format_sRGB_override
+#define GL_EXT_texture_format_sRGB_override 1
+#define GL_TEXTURE_FORMAT_SRGB_OVERRIDE_EXT 0x8FBF
+#endif /* GL_EXT_texture_format_sRGB_override */
 
 #ifndef GL_EXT_texture_mirror_clamp_to_edge
 #define GL_EXT_texture_mirror_clamp_to_edge 1
