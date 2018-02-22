@@ -252,6 +252,8 @@
 <li value=121><a href="extensions/EXT/EXT_map_buffer_range.txt">GL_EXT_map_buffer_range</a>
 </li>
 <li value=122><a href="extensions/EXT/EXT_shader_framebuffer_fetch.txt">GL_EXT_shader_framebuffer_fetch</a>
+
+    <br> <a href="extensions/EXT/EXT_shader_framebuffer_fetch.txt">GL_EXT_shader_framebuffer_fetch_non_coherent</a>
 </li>
 <li value=123><a href="extensions/APPLE/APPLE_copy_texture_levels.txt">GL_APPLE_copy_texture_levels</a>
 </li>
