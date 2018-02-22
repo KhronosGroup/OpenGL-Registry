@@ -621,4 +621,6 @@
 </li>
 <li value=298><a href="extensions/EXT/EXT_EGL_image_external_wrap_modes.txt">GL_EXT_EGL_image_external_wrap_modes</a>
 </li>
+<li value=299><a href="extensions/EXT/EXT_texture_format_sRGB_override.txt">GL_EXT_texture_format_sRGB_override</a>
+</li>
 </ol>

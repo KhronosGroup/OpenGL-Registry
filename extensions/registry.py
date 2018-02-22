@@ -2415,6 +2415,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_texture_format_BGRA8888.txt',
     },
+    'GL_EXT_texture_format_sRGB_override' : {
+        'esnumber' : 299,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_texture_format_sRGB_override.txt',
+    },
     'GLX_EXT_texture_from_pixmap' : {
         'number' : 344,
         'flags' : { 'public' },
