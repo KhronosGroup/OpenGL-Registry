@@ -22,8 +22,8 @@ Status
 
 Version
 
-    Last Modified Date: July 14, 2017
-    Revision: 8
+    Last Modified Date: February 20, 2018
+    Revision: 9
 
 Number
 
@@ -276,6 +276,8 @@ Modifications to Appendix A.spv of the OpenGL 4.5 (Core Profile) Specification
 
     [[Modifications if SPV_KHR_storage_buffer_storage_class is supported]]
 
+      - Add *StorageBuffer* to the list of Storage Classes that are accepted.
+
     (replace the following statement from ARB_gl_spirv)
 
       - OpTypeRuntimeArray must only be used for the last member of an
@@ -485,4 +487,6 @@ Revision History
      6    2017-04-25     dgkoch         Add SPV_KHR_post_depth_coverage.
      7    2017-05-09     dgkoch         fix typos.
      8    2017-07-14     dgkoch         Add SPV_KHR_storage_buffer_storage_class.
+     9    2018-02-20     dgkoch         Update storage class whitelist to include
+                                        storage buffers (SPIR-V/issues/166)
 
