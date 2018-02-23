@@ -1773,6 +1773,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_EGL_image_external_wrap_modes.txt',
     },
+    'GL_EXT_EGL_image_storage' : {
+        'number' : 522,
+        'esnumber' : 301,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_EGL_image_storage.txt',
+    },
     'GL_EXT_memory_object' : {
         'number' : 503,
         'esnumber' : 280,
