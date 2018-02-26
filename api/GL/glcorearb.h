@@ -4650,6 +4650,11 @@ GLAPI void APIENTRY glWindowRectanglesEXT (GLenum mode, GLsizei count, const GLi
 #endif
 #endif /* GL_EXT_window_rectangles */
 
+#ifndef GL_INTEL_blackhole_render
+#define GL_INTEL_blackhole_render 1
+#define GL_BLACKHOLE_RENDER_INTEL         0x83FC
+#endif /* GL_INTEL_blackhole_render */
+
 #ifndef GL_INTEL_conservative_rasterization
 #define GL_INTEL_conservative_rasterization 1
 #define GL_CONSERVATIVE_RASTERIZATION_INTEL 0x83FE

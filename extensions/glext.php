@@ -979,4 +979,6 @@
 
     <br> <a href="extensions/EXT/EXT_shader_framebuffer_fetch.txt">GL_EXT_shader_framebuffer_fetch_non_coherent</a>
 </li>
+<li value=521><a href="extensions/INTEL/INTEL_blackhole_render.txt">GL_INTEL_blackhole_render</a>
+</li>
 </ol>
