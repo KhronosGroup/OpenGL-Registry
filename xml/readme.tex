@@ -471,14 +471,14 @@ Following these elements, the remaining elements in a \tag{command}
 tag are optional and may be in any order:
 
 \begin{itemize}
-\item \tag{alias} has no attributes and contains a string which is the
+\item \tag{alias} has one attribute, \attr{name}, containing a string which is the
       name of another command this command is an alias of, used when
       promoting a function from extension to ARB or ARB to API status. A
       command alias describes the case where there are two function
       names which resolve to the {\bf same} client library code, so (for
       example) the case where a command is promoted but is also given
       different GLX protocol would {\bf not} be an alias in this sense.
-\item \tag{vecequiv} has no attributes and contains a string which is
+\item \tag{vecequiv} has one attribute, \attr{name}, containing a string which is
       the name of another command which is the {\em vector equivalent}
       of this command. For example, the vector equivalent of
       \code{glVertex3f} is \code{glVertex3fv}.
