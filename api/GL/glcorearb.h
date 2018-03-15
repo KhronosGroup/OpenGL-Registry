@@ -306,7 +306,7 @@ typedef void (APIENTRYP PFNGLGETTEXPARAMETERIVPROC) (GLenum target, GLenum pname
 typedef void (APIENTRYP PFNGLGETTEXLEVELPARAMETERFVPROC) (GLenum target, GLint level, GLenum pname, GLfloat *params);
 typedef void (APIENTRYP PFNGLGETTEXLEVELPARAMETERIVPROC) (GLenum target, GLint level, GLenum pname, GLint *params);
 typedef GLboolean (APIENTRYP PFNGLISENABLEDPROC) (GLenum cap);
-typedef void (APIENTRYP PFNGLDEPTHRANGEPROC) (GLdouble near, GLdouble far);
+typedef void (APIENTRYP PFNGLDEPTHRANGEPROC) (GLdouble n, GLdouble f);
 typedef void (APIENTRYP PFNGLVIEWPORTPROC) (GLint x, GLint y, GLsizei width, GLsizei height);
 #ifdef GL_GLEXT_PROTOTYPES
 GLAPI void APIENTRY glCullFace (GLenum mode);
@@ -355,7 +355,7 @@ GLAPI void APIENTRY glGetTexParameteriv (GLenum target, GLenum pname, GLint *par
 GLAPI void APIENTRY glGetTexLevelParameterfv (GLenum target, GLint level, GLenum pname, GLfloat *params);
 GLAPI void APIENTRY glGetTexLevelParameteriv (GLenum target, GLint level, GLenum pname, GLint *params);
 GLAPI GLboolean APIENTRY glIsEnabled (GLenum cap);
-GLAPI void APIENTRY glDepthRange (GLdouble near, GLdouble far);
+GLAPI void APIENTRY glDepthRange (GLdouble n, GLdouble f);
 GLAPI void APIENTRY glViewport (GLint x, GLint y, GLsizei width, GLsizei height);
 #endif
 #endif /* GL_VERSION_1_0 */
