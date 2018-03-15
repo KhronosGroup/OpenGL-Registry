@@ -1751,58 +1751,94 @@ Dependencies on AMD_texture_gather_bias_lod
     +--------------------------------------------------------------+------------------------------+
     | Syntax                                                       | Description                  |
     +--------------------------------------------------------------+------------------------------+
-    | f16vec4 textureGather(f16sampler2D sampler, f16vec2 P        | Returns the value            |
-    |                       [, int comp [, float16_t bias]])       |                              |
-    | f16vec4 textureGather(f16sampler2DArray sampler, f16vec3 P   | gvec4(                       |
+    | f16vec4 textureGather(f16sampler2D sampler, vec2 P           | Returns the value            |
+    |                       [, int comp [, float bias]])           |                              |
+    | f16vec4 textureGather(f16sampler2D sampler, f16vec2 P        | gvec4(                       |
     |                       [, int comp [, float16_t bias]])       |   Sample_i0_j1(              |
-    | f16vec4 textureGather(f16samplerCube sampler, f16vec3 P      |     P, base, bias).comp,     |
-    |                       [, int comp [, float16_t bias]])       |   Sample_i1_j1(              |
-    | f16vec4 textureGather(f16samplerCubeArray sampler, f16vec4 P |     P, base, bias).comp,     |
+    | f16vec4 textureGather(f16sampler2DArray sampler, vec3 P      |     P, base, bias).comp,     |
+    |                       [, int comp [, float bias]])           |   Sample_i1_j1(              |
+    | f16vec4 textureGather(f16sampler2DArray sampler, f16vec3 P   |     P, base, bias).comp,     |
     |                       [, int comp [, float16_t bias]])       |   Sample_i1_j0(              |
-    |                                                              |     P, base, bias).comp,     |
-    |                                                              |   Sample_i0_j0(              |
-    |                                                              |     P, base, bias).comp)     |
-    |                                                              | ...                          |
+    | f16vec4 textureGather(f16samplerCube sampler, vec3 P         |     P, base, bias).comp,     |
+    |                       [, int comp [, float bias]])           |   Sample_i0_j0(              |
+    | f16vec4 textureGather(f16samplerCube sampler, f16vec3 P      |     P, base, bias).comp,     |
+    |                       [, int comp [, float16_t bias]])       | ...                          |
+    | f16vec4 textureGather(f16samplerCubeArray sampler, vec4 P    |                              |
+    |                       [, int comp [, float bias]])           |                              |
+    | f16vec4 textureGather(f16samplerCubeArray sampler, f16vec4 P |                              |
+    |                       [, int comp [, float16_t bias]])       |                              |
     +--------------------------------------------------------------+------------------------------+
-    | f16vec4 textureGatherOffset(f16sampler2D sampler, f16vec2 P, | Perform a texture gather     |
+    | f16vec4 textureGatherOffset(f16sampler2D sampler, vec2 P,    | Perform a texture gather     |
     |                             ivec2 offset [, int comp         | operation as in              |
-    |                             [, float16_t bias]])             | textureGather() by <offset>  |
-    | f16vec4 textureGatherOffset(f16sampler2DArray sampler,       | as described in              |
-    |                             f16vec3 P, ivec2 offset          | textureOffset() except that  |
-    |                             [, int comp [, float16_t bias]]) | the <offset> can be variable |
-    |                                                              | (non constant) and ...       |
+    |                             [, float bias]])                 | textureGather() by <offset>  |
+    | f16vec4 textureGatherOffset(f16sampler2D sampler, f16vec2 P, | as described in              |
+    |                             ivec2 offset [, int comp         | textureOffset() except that  |
+    |                             [, float16_t bias]])             | the <offset> can be variable |
+    | f16vec4 textureGatherOffset(f16sampler2DArray sampler,       | (non constant) and ...       |
+    |                             vec3 P, ivec2 offset             |                              |
+    |                             [, int comp [, float bias]])     |                              |
+    | f16vec4 textureGatherOffset(f16sampler2DArray sampler,       |                              |
+    |                             f16vec3 P, ivec2 offset          |                              |
+    |                             [, int comp [, float16_t bias]]) |                              |
     +--------------------------------------------------------------+------------------------------+
-    | f16vec4 textureGatherOffsets(f16sampler2D sampler, f16vec2 P,| Operate identically to       |
+    | f16vec4 textureGatherOffsets(f16sampler2D sampler, vec2 P,   | Operate identically to       |
     |                              ivec2 offsets[4] [, int comp    | textureGatherOffset() except |
-    |                              [, float16_t bias]])            | that <offsets> is used to    |
-    | f16vec4 textureGatherOffsets(f16sampler2DArray sampler,      | determine the location of the|
-    |                              f16vec3 P, ivec2 offsets[4]     | four texels to sample. ...   |
+    |                              [, float bias]])                | that <offsets> is used to    |
+    | f16vec4 textureGatherOffsets(f16sampler2D sampler, f16vec2 P,| determine the location of the|
+    |                              ivec2 offsets[4] [, int comp    | four texels to sample. ...   |
+    |                              [, float16_t bias]])            |                              |
+    | f16vec4 textureGatherOffsets(f16sampler2DArray sampler,      |                              |
+    |                              vec3 P, ivec2 offsets[4]        |                              |
+    |                              [, int comp [, float bias]])    |                              |
+    | f16vec4 textureGatherOffsets(f16sampler2DArray sampler,      |                              |
+    |                              f16vec3 P, ivec2 offsets[4]     |                              |
     |                              [, int comp [, float16_t bias]])|                              |
     +--------------------------------------------------------------+------------------------------+
-    | f16vec4 textureGatherLodAMD(f16sampler2D sampler, f16vec2 P, | Perform a texture gather     |
-    |                             float16_t lod [, int comp])      | operation as in              |
-    | f16vec4 textureGatherLodAMD(f16sampler2DArray sampler,       | textureGather() with explicit|
-    |                             f16vec3 P, float16_t lod         | LOD, but the four-texel      |
-    |                             [, int comp])                    | sampling is modified as      |
-    | f16vec4 textureGatherLodAMD(f16samplerCube sampler,          | follow:                      |
+    | f16vec4 textureGatherLodAMD(f16sampler2D sampler, vec2 P,    | Perform a texture gather     |
+    |                             float lod [, int comp])          | operation as in              |
+    | f16vec4 textureGatherLodAMD(f16sampler2D sampler, f16vec2 P, | textureGather() with explicit|
+    |                             float16_t lod [, int comp])      | LOD, but the four-texel      |
+    | f16vec4 textureGatherLodAMD(f16sampler2DArray sampler,       | sampling is modified as      |
+    |                             vec3 P, float lod [, int comp])  | follow:                      |
+    | f16vec4 textureGatherLodAMD(f16sampler2DArray sampler,       |                              |
+    |                             f16vec3 P, float16_t lod         | gvec4(                       |
+    |                             [, int comp])                    |   Sample_i0_j1(P, lod).comp, |
+    | f16vec4 textureGatherLodAMD(f16samplerCube sampler,          |   Sample_i1_j1(P, lod).comp, |
+    |                             vec3 P, float lod [, int comp])  |   Sample_i1_j0(P, lod).comp, |
+    | f16vec4 textureGatherLodAMD(f16samplerCube sampler,          |   Sample_i0_j0(P, lod).comp) |
     |                             f16vec3 P, float16_t lod         |                              |
-    |                             [, int comp])                    | gvec4(                       |
-    | f16vec4 textureGatherLodAMD(f16samplerCubeArray sampler,     |   Sample_i0_j1(P, lod).comp, |
-    |                             f16vec4 P, float16_t lod         |   Sample_i1_j1(P, lod).comp, |
-    |                             [, int comp])                    |   Sample_i1_j0(P, lod).comp, |
-    |                                                              |   Sample_i0_j0(P, lod).comp) |
+    |                             [, int comp])                    |                              |
+    | f16vec4 textureGatherLodAMD(f16samplerCubeArray sampler,     |                              |
+    |                             vec4 P, float lod [, int comp])  |                              |
+    | f16vec4 textureGatherLodAMD(f16samplerCubeArray sampler,     |                              |
+    |                             f16vec4 P, float16_t lod         |                              |
+    |                             [, int comp])                    |                              |
     +--------------------------------------------------------------+------------------------------+
     | f16vec4 textureGatherLodOffsetAMD(f16sampler2D sampler,      | Perform a texture gather     |
-    |                                   f16vec2 P, float16_t lod,  | operation as in              |
+    |                                   vec2 P, float lod,         | operation as in              |
     |                                   ivec2 offset [, int comp]) | textureGatherOffset() but    |
-    | f16vec4 textureGatherLodOffsetAMD(f16sampler2DArray sampler, | with explicit LOD.           |
+    | f16vec4 textureGatherLodOffsetAMD(f16sampler2D sampler,      | with explicit LOD.           |
+    |                                   f16vec2 P, float16_t lod,  |                              |
+    |                                   ivec2 offset [, int comp]) |                              |
+    | f16vec4 textureGatherLodOffsetAMD(f16sampler2DArray sampler, |                              |
+    |                                   vec3 P, float lod,         |                              |
+    |                                   ivec2 offset [, int comp]) |                              |
+    | f16vec4 textureGatherLodOffsetAMD(f16sampler2DArray sampler, |                              |
     |                                   f16vec3 P, float16_t lod,  |                              |
     |                                   ivec2 offset [, int comp]) |                              |
     +--------------------------------------------------------------+------------------------------+
     | f16vec4 textureGatherLodOffsetsAMD(f16sampler2D sampler,     | Perform a texture gather     |
-    |                                    f16vec2 P, float16_t lod, | operation as in              |
+    |                                    vec2 P, float lod,        | operation as in              |
     |                                    ivec2 offsets[4]          | textureGatherOffsets() but   |
     |                                    [, int comp])             | with explicit LOD.           |
+    | f16vec4 textureGatherLodOffsetsAMD(f16sampler2D sampler,     |                              |
+    |                                    f16vec2 P, float16_t lod, |                              |
+    |                                    ivec2 offsets[4]          |                              |
+    |                                    [, int comp])             |                              |
+    | f16vec4 textureGatherLodOffsetsAMD(f16sampler2DArray sampler,|                              |
+    |                                    vec3 P, float lod,        |                              |
+    |                                    ivec2 offsets[4]          |                              |
+    |                                    [, int comp])             |                              |
     | f16vec4 textureGatherLodOffsetsAMD(f16sampler2DArray sampler,|                              |
     |                                    f16vec3 P, float16_t lod, |                              |
     |                                    ivec2 offsets[4]          |                              |
@@ -1816,54 +1852,144 @@ Dependencies on AMD_texture_gather_bias_lod
     +--------------------------------------------------------------+------------------------------+
     | Syntax                                                       | Description                  |
     +--------------------------------------------------------------+------------------------------+
-    | int sparseTextureGatherARB(f16sampler2D sampler, f16vec2 P,  | Do a texture gather operation|
+    | int sparseTextureGatherARB(f16sampler2D sampler, vec2 P,     | Do a texture gather operation|
     |                            out f16vec4 texel [, int comp     | as in textureGather(), but   |
-    |                            [, float16_t bias]])              | return texture access        |
-    | int sparseTextureGatherARB(f16sampler2DArray sampler,        | residency information from   |
-    |                            f16vec3 P, out f16vec4 texel      | the function and the filtered|
-    |                            [, int comp [, float16_t bias]])  | lookup result in the out     |
-    | int sparseTextureGatherARB(f16samplerCube sampler, f16vec3 P,| parameter <texel>.           |
+    |                            [, float bias]])                  | return texture access        |
+    | int sparseTextureGatherARB(f16sampler2D sampler, f16vec2 P,  | residency information from   |
+    |                            out f16vec4 texel [, int comp     | the function and the filtered|
+    |                            [, float16_t bias]])              | lookup result in the out     |
+    | int sparseTextureGatherARB(f16sampler2DArray sampler,        | parameter <texel>.           |
+    |                            vec3 P, out f16vec4 texel         |                              |
+    |                            [, int comp [, float bias]])      |                              |
+    | int sparseTextureGatherARB(f16sampler2DArray sampler,        |                              |
+    |                            f16vec3 P, out f16vec4 texel      |                              |
+    |                            [, int comp [, float16_t bias]])  |                              |
+    | int sparseTextureGatherARB(f16samplerCube sampler, vec3 P,   |                              |
+    |                            out f16vec4 texel [, int comp     |                              |
+    |                            [, float bias]])                  |                              |
+    | int sparseTextureGatherARB(f16samplerCube sampler, f16vec3 P,|                              |
     |                            out f16vec4 texel [, int comp     |                              |
     |                            [, float16_t bias]])              |                              |
     | int sparseTextureGatherARB(f16samplerCubeArray sampler,      |                              |
-    |                             16vec4 P, out f16vec4 texel      |                              |
+    |                            vec4 P, out f16vec4 texel         |                              |
+    |                            [, int comp [, float bias]])      |                              |
+    | int sparseTextureGatherARB(f16samplerCubeArray sampler,      |                              |
+    |                            f16vec4 P, out f16vec4 texel      |                              |
     |                            [, int comp [, float16_t bias]])  |                              |
     +--------------------------------------------------------------+------------------------------+
     | int sparseTextureGatherOffsetARB(f16sampler2D sampler,       | Do a texture gather operation|
-    |                                  f16vec2 P, ivec2 offset,    | as in textureGatherOffset(), |
+    |                                  vec2 P, ivec2 offset,       | as in textureGatherOffset(), |
     |                                  out f16vec4 texel           | but return texture access    |
-    |                                  [, int comp                 | residency information from   |
-    |                                  [, float16_t bias]])        | the function and the filtered|
-    | int sparseTextureGatherOffsetARB(f16sampler2DArray sampler,  | lookup result in the out     |
-    |                                  f16vec3 P, ivec2 offset,    | parameter <texel>.           |
+    |                                  [, int comp [, float bias]])| residency information from   |
+    | int sparseTextureGatherOffsetARB(f16sampler2D sampler,       | the function and the filtered|
+    |                                  f16vec2 P, ivec2 offset,    | lookup result in the out     |
+    |                                  out f16vec4 texel           | parameter <texel>.           |
+    |                                  [, int comp                 |                              |
+    |                                  [, float16_t bias]])        |                              |
+    | int sparseTextureGatherOffsetARB(f16sampler2DArray sampler,  |                              |
+    |                                  vec3 P, ivec2 offset,       |                              |
+    |                                  out f16vec4 texel           |                              |
+    |                                  [, int comp [, float bias]])|                              |
+    | int sparseTextureGatherOffsetARB(f16sampler2DArray sampler,  |                              |
+    |                                  f16vec3 P, ivec2 offset,    |                              |
     |                                  out f16vec4 texel           |                              |
     |                                  [, int comp                 |                              |
     |                                  [, float16_t bias]])        |                              |
     +--------------------------------------------------------------+------------------------------+
+    | int sparseTextureGatherOffsetsARB(f16sampler2D sampler,      | Do a texture gather operation|
+    |                                   vec2 P, ivec2 offsets[4],  | as in textureGatherOffsets(),|
+    |                                   out f16vec4 texel          | but return texture access    |
+    |                                   [, int comp                | residency information from   |
+    |                                   [, float bias]])           | the function and the filtered|
+    | int sparseTextureGatherOffsetsARB(f16sampler2D sampler,      | lookup result in the out     |
+    |                                   f16vec2 P,                 | parameter <texel>.           |
+    |                                   ivec2 offsets[4],          |                              |
+    |                                   out f16vec4 texel          |                              |
+    |                                   [, int comp                |                              |
+    |                                   [, float16_t bias]])       |                              |
+    | int sparseTextureGatherOffsetsARB(f16sampler2DArray sampler, |                              |
+    |                                   vec3 P, ivec2 offsets[4],  |                              |
+    |                                   out f16vec4 texel          |                              |
+    |                                   [, int comp                |                              |
+    |                                   [, float bias]])           |                              |
+    | int sparseTextureGatherOffsetsARB(f16sampler2DArray sampler, |                              |
+    |                                   f16vec3 P,                 |                              |
+    |                                   ivec2 offsets[4],          |                              |
+    |                                   out f16vec4 texel          |                              |
+    |                                   [, int comp                |                              |
+    |                                   [, float16_t bias]])       |                              |
+    +--------------------------------------------------------------+------------------------------+
     | int sparseTextureGatherLodAMD(f16sampler2D sampler,          | Do a texture gather operation|
-    |                               f16vec2 P, float16_t lod,      | as in textureGather() with,  |
+    |                               vec2 P, float lod,             | as in textureGather() with,  |
     |                               out f16vec4 texel [, int comp])| explicit LOD, but return     |
-    | int sparseTextureGatherLodAMD(f16sampler2DArray sampler,     | texture access residency     |
-    |                               f16vec3 P, float16_t lod,      | information from the function|
+    | int sparseTextureGatherLodAMD(f16sampler2D sampler,          | texture access residency     |
+    |                               f16vec2 P, float16_t lod,      | information from the function|
     |                               out f16vec4 texel [, int comp])| and the filtered lookup      |
-    | int sparseTextureGatherLodAMD(f16samplerCube sampler,        | result in the out parameter  |
-    |                               f16vec3 P, float16_t lod,      | <texel>.                     |
+    | int sparseTextureGatherLodAMD(f16sampler2DArray sampler,     | result in the out parameter  |
+    |                               vec3 P, float lod,             | <texel>.                     |
+    |                               out f16vec4 texel [, int comp])|                              |
+    | int sparseTextureGatherLodAMD(f16sampler2DArray sampler,     |                              |
+    |                               f16vec3 P, float16_t lod,      |                              |
+    |                               out f16vec4 texel [, int comp])|                              |
+    | int sparseTextureGatherLodAMD(f16samplerCube sampler,        |                              |
+    |                               vec3 P, float lod,             |                              |
+    |                               out f16vec4 texel [, int comp])|                              |
+    | int sparseTextureGatherLodAMD(f16samplerCube sampler,        |                              |
+    |                               f16vec3 P, float16_t lod,      |                              |
+    |                               out f16vec4 texel [, int comp])|                              |
+    | int sparseTextureGatherLodAMD(f16samplerCubeArray sampler,   |                              |
+    |                               vec4 P, float lod,             |                              |
     |                               out f16vec4 texel [, int comp])|                              |
     | int sparseTextureGatherLodAMD(f16samplerCubeArray sampler,   |                              |
     |                               f16vec4 P, float16_t lod,      |                              |
     |                               out f16vec4 texel [, int comp])|                              |
     +--------------------------------------------------------------+------------------------------+
     | int sparseTextureGatherLodOffsetAMD(f16sampler2D sampler,    | Do a texture gather operation|
-    |                                     f16vec2 P, float16_t lod,| as in textureGatherOffset()  |
+    |                                     vec2 P, float lod,       | as in textureGatherOffset()  |
     |                                     ivec2 offset,            | with explicit LOD, but return|
     |                                     out f16vec4 texel        | texture access residency     |
     |                                     [, int comp])            | information from the function|
-    | int sparseTextureGatherLodOffsetAMD(f16sampler2DArray        | and the filtered lookup      |
-    |                                     sampler, f16vec3 P,      | result in the out parameter  |
-    |                                     float16_t lod,           | <texel>.                     |
+    | int sparseTextureGatherLodOffsetAMD(f16sampler2D sampler,    | and the filtered lookup      |
+    |                                     f16vec2 P, float16_t lod,| result in the out parameter  |
+    |                                     ivec2 offset,            | <texel>.                     |
+    |                                     out f16vec4 texel        |                              |
+    |                                     [, int comp])            |                              |
+    | int sparseTextureGatherLodOffsetAMD(f16sampler2DArray        |                              |
+    |                                     sampler, vec3 P,         |                              |
+    |                                     float lod,               |                              |
     |                                     ivec2 offset,            |                              |
     |                                     out f16vec4 texel        |                              |
     |                                     [, int comp])            |                              |
+    | int sparseTextureGatherLodOffsetAMD(f16sampler2DArray        |                              |
+    |                                     sampler, f16vec3 P,      |                              |
+    |                                     float16_t lod,           |                              |
+    |                                     ivec2 offset,            |                              |
+    |                                     out f16vec4 texel        |                              |
+    |                                     [, int comp])            |                              |
+    +--------------------------------------------------------------+------------------------------+
+    | int sparseTextureGatherLodOffsetsAMD(f16sampler2D sampler,   | Do a texture gather operation|
+    |                                      vec2 P, float lod,      | as in textureGatherOffsets() |
+    |                                      ivec2 offsets[4],       | with explicit LOD, but return|
+    |                                      out f16vec4 texel       | texture access residency     |
+    |                                      [, int comp])           | information from the function|
+    | int sparseTextureGatherLodOffsetsAMD(f16sampler2D sampler,   | and the filtered lookup      |
+    |                                      f16vec2 P,              | result in the out parameter  |
+    |                                      float16_t lod,          | <texel>.                     |
+    |                                      ivec2 offsets[4],       |                              |
+    |                                      out f16vec4 texel       |                              |
+    |                                      [, int comp])           |                              |
+    | int sparseTextureGatherLodOffsetsAMD(f16sampler2DArray       |                              |
+    |                                      sampler, vec3 P,        |                              |
+    |                                      float lod,              |                              |
+    |                                      ivec2 offsets[4],       |                              |
+    |                                      out f16vec4 texel       |                              |
+    |                                      [, int comp])           |                              |
+    | int sparseTextureGatherLodOffsetsAMD(f16sampler2DArray       |                              |
+    |                                      sampler, f16vec3 P,     |                              |
+    |                                      float16_t lod,          |                              |
+    |                                      ivec2 offsets[4],       |                              |
+    |                                      out f16vec4 texel       |                              |
+    |                                      [, int comp])           |                              |
     +--------------------------------------------------------------+------------------------------+
 
 Errors
@@ -1908,9 +2034,12 @@ Revision History
 
     Rev.  Date      Author    Changes
     ----  --------  --------  ---------------------------------------------------------------------
-     5    9/20/17   dwitczak  Fix incorrect definitions of some of the textureClampARB(), textureGradClampARB(),
-                              textureLod() and textureProjLodOffset() function prototypes.
-                              Remove duplicate function prototype definitions.
+     6    3/9/18    rexu      Add some missing function prototypes when this extension interacts
+                              with AMD_texture_gather_bias_lod.
+
+     5    9/20/17   dwitczak  Fix incorrect definitions of some of the textureClampARB(),
+                              textureGradClampARB(), textureLod() and textureProjLodOffset()
+                              function prototypes. Remove duplicate function prototype definitions.
 
      4    11/24/16  rexu      Clarify that when <compare> is present in shadow forms of
                               textureProj*(), the resulting <compare>, by divding its initial value
