@@ -13786,8 +13786,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDepthRange</name></proto>
-            <param><ptype>GLdouble</ptype> <name>near</name></param>
-            <param><ptype>GLdouble</ptype> <name>far</name></param>
+            <param><ptype>GLdouble</ptype> <name>n</name></param>
+            <param><ptype>GLdouble</ptype> <name>f</name></param>
             <glx type="render" opcode="174"/>
         </command>
         <command>
