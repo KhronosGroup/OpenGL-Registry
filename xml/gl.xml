@@ -17868,7 +17868,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetQueryObjectivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param><ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glGetQueryObjectiv"/>
         </command>
         <command>
@@ -17903,7 +17903,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetQueryObjectuivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <param group="QueryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param><ptype>GLuint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)"><ptype>GLuint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetQueryiv</name></proto>
@@ -17923,7 +17923,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetQueryivEXT</name></proto>
             <param group="QueryTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="QueryParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param><ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetRenderbufferParameteriv</name></proto>
@@ -19125,7 +19125,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>pixels</name></param>
+            <param len="bufSize">void *<name>pixels</name></param>
         </command>
         <command>
             <proto>void <name>glGetnTexImageARB</name></proto>
@@ -19141,7 +19141,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLdouble</ptype> *<name>params</name></param>
+            <param len="bufSize"><ptype>GLdouble</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetnUniformdvARB</name></proto>
@@ -19155,7 +19155,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="bufSize"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetnUniformfvARB</name></proto>
@@ -19177,7 +19177,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="bufSize"><ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glGetnUniformfv"/>
         </command>
         <command>
@@ -19185,14 +19185,14 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLint64</ptype> *<name>params</name></param>
+            <param len="bufSize"><ptype>GLint64</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetnUniformiv</name></proto>
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLint</ptype> *<name>params</name></param>
+            <param len="bufSize"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetnUniformivARB</name></proto>
@@ -19214,7 +19214,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLint</ptype> *<name>params</name></param>
+            <param len="bufSize"><ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glGetnUniformiv"/>
         </command>
         <command>
@@ -19222,14 +19222,14 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLuint64</ptype> *<name>params</name></param>
+            <param len="bufSize"><ptype>GLuint64</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetnUniformuiv</name></proto>
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLuint</ptype> *<name>params</name></param>
+            <param len="bufSize"><ptype>GLuint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetnUniformuivARB</name></proto>
@@ -19243,7 +19243,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLuint</ptype> *<name>params</name></param>
+            <param len="bufSize"><ptype>GLuint</ptype> *<name>params</name></param>
             <alias name="glGetnUniformuiv"/>
         </command>
         <command>
@@ -25005,7 +25005,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>data</name></param>
+            <param len="bufSize">void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glReadnPixelsARB</name></proto>
