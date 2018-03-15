@@ -2798,6 +2798,13 @@ registry = {
         'supporters' : { 'INTEL' },
         'url' : 'extensions/INTEL/INTEL_map_texture.txt',
     },
+    'GL_INTEL_blackhole_render' : {
+        'number' : 521,
+        'esnumber' : 300,
+        'flags' : { 'public' },
+        'supporters' : { 'INTEL' },
+        'url' : 'extensions/INTEL/INTEL_blackhole_render.txt',
+    },
     'GL_INTEL_parallel_arrays' : {
         'number' : 136,
         'flags' : { 'public' },

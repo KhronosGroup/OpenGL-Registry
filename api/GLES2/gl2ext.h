@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20180221 */
+/* Generated on date 20180302 */
 
 /* Generated C header for:
  * API: gles2
@@ -2320,6 +2320,11 @@ GL_APICALL void GL_APIENTRY glFramebufferTexture2DMultisampleIMG (GLenum target,
 #define GL_CUBIC_MIPMAP_NEAREST_IMG       0x913A
 #define GL_CUBIC_MIPMAP_LINEAR_IMG        0x913B
 #endif /* GL_IMG_texture_filter_cubic */
+
+#ifndef GL_INTEL_blackhole_render
+#define GL_INTEL_blackhole_render 1
+#define GL_BLACKHOLE_RENDER_INTEL         0x83FC
+#endif /* GL_INTEL_blackhole_render */
 
 #ifndef GL_INTEL_conservative_rasterization
 #define GL_INTEL_conservative_rasterization 1

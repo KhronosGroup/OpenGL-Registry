@@ -5779,7 +5779,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x83F9" name="GL_PERFQUERY_DONOT_FLUSH_INTEL"/>
         <enum value="0x83FA" name="GL_PERFQUERY_FLUSH_INTEL"/>
         <enum value="0x83FB" name="GL_PERFQUERY_WAIT_INTEL"/>
-            <unused start="0x83FC" end="0x83FD" vendor="INTEL"/>
+        <enum value="0x83FC" name="GL_BLACKHOLE_RENDER_INTEL"/>
+            <unused start="0x83FD" vendor="INTEL"/>
         <enum value="0x83FE" name="GL_CONSERVATIVE_RASTERIZATION_INTEL"/>
         <enum value="0x83FF" name="GL_TEXTURE_MEMORY_LAYOUT_INTEL"/>
     </enums>
@@ -45446,6 +45447,11 @@ typedef unsigned int GLhandleARB;
                 <command name="glSyncTextureINTEL"/>
                 <command name="glUnmapTexture2DINTEL"/>
                 <command name="glMapTexture2DINTEL"/>
+            </require>
+        </extension>
+        <extension name="GL_INTEL_blackhole_render" supported="gl|glcore|gles2">
+            <require>
+                <enum name="GL_BLACKHOLE_RENDER_INTEL"/>
             </require>
         </extension>
         <extension name="GL_INTEL_parallel_arrays" supported="gl">
