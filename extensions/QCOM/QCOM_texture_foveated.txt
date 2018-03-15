@@ -20,7 +20,7 @@ Contact
 
 Status
 
-    Draft
+    Complete
 
 Version
 
@@ -357,8 +357,6 @@ Issues
     same framebuffer. In this case the depth and/or stencil attachments should
     be discarded or invalidated after rendering, as the upscaled depth contents
     are unlikely to be useful and may cause undesired rendering artifacts when used.
-    An implementation may choose to discard the contents of the depth/stencil
-    buffers instead of resolving and upscaling them.
 
     6. Does foveation have any effect on BlitFramebuffer.
 
@@ -471,3 +469,5 @@ Revision History
      3    09/25/17   tateh     Add max scale factor texture parameter.
      4    10/3/17    tateh     Add Table 21.10 modifications and issue #9
      5    10/6/17    tateh     Changed max scale factor to min pixel density
+     6    01/8/17    tateh     Removed depth/stencil discard and invalidate
+                               language.
