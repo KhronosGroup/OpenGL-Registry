@@ -14489,9 +14489,21 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLeglImageOES</ptype> <name>image</name></param>
         </command>
         <command>
+            <proto>void <name>glEGLImageTargetTexStorageEXT</name></proto>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLeglImageOES</ptype> <name>image</name></param>
+            <param>const <ptype>GLint</ptype>* <name>attrib_list</name></param>
+        </command>
+        <command>
             <proto>void <name>glEGLImageTargetTexture2DOES</name></proto>
             <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLeglImageOES</ptype> <name>image</name></param>
+        </command>
+        <command>
+            <proto>void <name>glEGLImageTargetTextureStorageEXT</name></proto>
+            <param><ptype>GLuint</ptype> <name>texture</name></param>
+            <param><ptype>GLeglImageOES</ptype> <name>image</name></param>
+            <param>const <ptype>GLint</ptype>* <name>attrib_list</name></param>
         </command>
         <command>
             <proto>void <name>glEdgeFlag</name></proto>
@@ -42546,6 +42558,15 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_EXT_EGL_image_array" supported="gles2">
+        </extension>
+        <extension name="GL_EXT_EGL_image_storage" supported="gl|glcore|gles2">
+            <require>
+                <type name="GLeglImageOES"/>
+                <command name="glEGLImageTargetTexStorageEXT"/>
+            </require>
+            <require comment="Supported only if GL_EXT_direct_state_access, ARB_direct_state_access, or OpenGL 4.5 are supported">
+                <command name="glEGLImageTargetTextureStorageEXT"/>
+            </require>
         </extension>
         <extension name="GL_EXT_YUV_target" supported="gles2">
             <require>
