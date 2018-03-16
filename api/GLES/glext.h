@@ -1,5 +1,5 @@
-#ifndef __glext_h_
-#define __glext_h_ 1
+#ifndef __gles1_glext_h_
+#define __gles1_glext_h_ 1
 
 #ifdef __cplusplus
 extern "C" {
@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20180302 */
+/* Generated on date 20180316 */
 
 /* Generated C header for:
  * API: gles1

@@ -1,5 +1,5 @@
-#ifndef __glext_h_
-#define __glext_h_ 1
+#ifndef __gl_glext_h_
+#define __gl_glext_h_ 1
 
 #ifdef __cplusplus
 extern "C" {
@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20180302
+#define GL_GLEXT_VERSION 20180316
 
 /* Generated C header for:
  * API: gl

@@ -1,5 +1,5 @@
-#ifndef __wglext_h_
-#define __wglext_h_ 1
+#ifndef __wgl_wglext_h_
+#define __wgl_wglext_h_ 1
 
 #ifdef __cplusplus
 extern "C" {
@@ -39,7 +39,7 @@ extern "C" {
 #include <windows.h>
 #endif
 
-#define WGL_WGLEXT_VERSION 20180213
+#define WGL_WGLEXT_VERSION 20180316
 
 /* Generated C header for:
  * API: wgl

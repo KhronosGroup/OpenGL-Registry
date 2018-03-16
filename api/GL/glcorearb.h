@@ -1,5 +1,5 @@
-#ifndef __glcorearb_h_
-#define __glcorearb_h_ 1
+#ifndef __gl_glcorearb_h_
+#define __gl_glcorearb_h_ 1
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,5 +1,5 @@
-#ifndef __gl3_h_
-#define __gl3_h_ 1
+#ifndef __gles2_gl3_h_
+#define __gles2_gl3_h_ 1
 
 #ifdef __cplusplus
 extern "C" {
@@ -44,7 +44,7 @@ extern "C" {
 #define GL_GLES_PROTOTYPES 1
 #endif
 
-/* Generated on date 20180302 */
+/* Generated on date 20180316 */
 
 /* Generated C header for:
  * API: gles2

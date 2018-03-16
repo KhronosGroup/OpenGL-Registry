@@ -1,5 +1,5 @@
-#ifndef __glxext_h_
-#define __glxext_h_ 1
+#ifndef __glx_glxext_h_
+#define __glx_glxext_h_ 1
 
 #ifdef __cplusplus
 extern "C" {
@@ -34,7 +34,7 @@ extern "C" {
 **   https://github.com/KhronosGroup/OpenGL-Registry
 */
 
-#define GLX_GLXEXT_VERSION 20180213
+#define GLX_GLXEXT_VERSION 20180316
 
 /* Generated C header for:
  * API: glx

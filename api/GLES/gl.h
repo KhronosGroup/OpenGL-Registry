@@ -1,5 +1,5 @@
-#ifndef __gl_h_
-#define __gl_h_ 1
+#ifndef __gles1_gl_h_
+#define __gles1_gl_h_ 1
 
 #ifdef __cplusplus
 extern "C" {
@@ -36,7 +36,7 @@ extern "C" {
 
 #include <GLES/glplatform.h>
 
-/* Generated on date 20180302 */
+/* Generated on date 20180316 */
 
 /* Generated C header for:
  * API: gles1
