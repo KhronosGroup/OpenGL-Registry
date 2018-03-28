@@ -25,8 +25,8 @@ Status
 
 Version
 
-    Last Modified Date:         06/08/2017
-    Author Revision:            #1
+    Last Modified Date:         03/28/2018
+    Author Revision:            #2
 
 Number
 
@@ -574,6 +574,40 @@ Dependencies on KHR_vulkan_glsl:
     If the shader only enables AMD_gpu_shader_int16, but not KHR_vulkan_glsl,
     then any changes to the language of the latter specification should be discarded.
 
+Dependencies on AMD_shader_trinary_minmax
+
+    If the shader enables AMD_shader_trinary_minmax, this extension adds
+    additional common functions.
+
+    Modify Section 8.3, Common Functions
+
+    (add to the table of common functions on p. 144)
+
+    +-------------------------------------------+-----------------------------------------------+
+    | Syntax                                    | Description                                   |
+    +-------------------------------------------+-----------------------------------------------+
+    | genI16Type min3(genI16Type x,             | Returns the per-component minimum value of x, |
+    |                 genI16Type y,             | y, and z.                                     |
+    |                 genI16Type z)             |                                               |
+    | genU16Type min3(genU16Type x,             |                                               |
+    |                 genU16Type y,             |                                               |
+    |                 genU16Type z)             |                                               |
+    +-------------------------------------------+-----------------------------------------------+
+    | genI16Type max3(genI16Type x,             | Returns the per-component maximum value of x, |
+    |                 genI16Type y,             | y, and z.                                     |
+    |                 genI16Type z)             |                                               |
+    | genU16Type max3(genU16Type x,             |                                               |
+    |                 genU16Type y,             |                                               |
+    |                 genU16Type z)             |                                               |
+    +-------------------------------------------+-----------------------------------------------+
+    | genI16Type mid3(genI16Type x,             | Returns the per-component median value of x,  |
+    |                 genI16Type y,             | y, and z.                                     |
+    |                 genI16Type z)             |                                               |
+    | genU16Type mid3(genU16Type x,             |                                               |
+    |                 genU16Type y,             |                                               |
+    |                 genU16Type z)             |                                               |
+    +-------------------------------------------+-----------------------------------------------+
+
 Errors
 
     None.
@@ -659,4 +693,8 @@ Revision History
 
     Rev.    Date      Author    Changes
     ----  --------    --------  -----------------------------------------
+    2     03/28/2018  rexu      Add interactions with AMD_shader_trinary_minmax.
+                                New common functions are added to support
+                                16-bit integer type in these trinary operations.
+
     1     06/08/2017  dwitczak  First release.
