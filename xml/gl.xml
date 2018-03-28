@@ -95,8 +95,8 @@ typedef unsigned int GLhandleARB;
         <type>typedef unsigned short <name>GLhalfARB</name>;</type>
         <type>typedef unsigned short <name>GLhalf</name>;</type>
         <type comment="Must be 32 bits">typedef GLint <name>GLfixed</name>;</type>
-        <type requires="stddef">typedef ptrdiff_t <name>GLintptr</name>;</type>
-        <type requires="stddef">typedef ptrdiff_t <name>GLsizeiptr</name>;</type>
+        <type requires="khrplatform">typedef khronos_intptr_t <name>GLintptr</name>;</type>
+        <type requires="khrplatform">typedef khronos_ssize_t <name>GLsizeiptr</name>;</type>
         <type requires="inttypes">typedef int64_t <name>GLint64</name>;</type>
         <type requires="inttypes">typedef uint64_t <name>GLuint64</name>;</type>
         <type requires="stddef">typedef ptrdiff_t <name>GLintptrARB</name>;</type>
