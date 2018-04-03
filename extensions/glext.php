@@ -981,4 +981,6 @@
 </li>
 <li value=521><a href="extensions/INTEL/INTEL_blackhole_render.txt">GL_INTEL_blackhole_render</a>
 </li>
+<li value=522><a href="extensions/EXT/EXT_EGL_image_storage.txt">GL_EXT_EGL_image_storage</a>
+</li>
 </ol>
