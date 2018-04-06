@@ -39,8 +39,8 @@ Status
 
 Version
 
-    Last Modified Date:  2015/09/17
-    NVIDIA Revision:     18
+    Last Modified Date:  2018/04/06
+    NVIDIA Revision:     19
 
 Number
 
@@ -997,6 +997,13 @@ Issues
         coordinate systems.  If this technique is used on an implementation
         doing something like this, the two inversions cancel each other out.
 
+    35) Does this extension affect the primitive's winding order in tessellation
+        evaluation shader when origin is changed to GL_UPPER_LEFT?
+
+        RESOLVED:  No, the winding order is not affected. If a change in winding
+        order of the primitive is needed, it must be done from the tessellation
+        shader explicitly.
+
 Revision History
 
     Rev.    Date    Author     Changes
@@ -1021,3 +1028,4 @@ Revision History
                               modes; add detailed examples in issue 34.
     18    09/17/15 Jon Leech  Correct typo in issue 7 and add contributor
                               Brano Kemen from that issue.
+    19    04/06/18 Vikram     Add issue 35
