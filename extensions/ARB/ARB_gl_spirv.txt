@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date: 20-Feb-2018
-    Revision: 37
+    Last Modified Date: 10-Apr-2018
+    Revision: 38
 
 Number
 
@@ -998,8 +998,9 @@ Add Appendix A.spv "The OpenGL SPIR-V Execution Environment" to the OpenGL 4.5
     Images:
       - OpTypeImage must declare a scalar 32-bit float or 32-bit integer
         type for the /Sampled Type/.
-      - OpSampledImage must only consume an /Image/ operand whose type has
-        its /Sampled/ operand set to 1.
+      - OpSampledImage, OpImageQuerySizeLod, and OpImageQueryLevels must
+        only consume an /Image/ operand whose type has its /Sampled/
+        operand set to 1.
       - The /Depth/ operand of OpTypeImage is ignored.
 
     *AtomicCounter* storage class:
@@ -2029,6 +2030,9 @@ Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    38    10-Apr-2018    dgkoch         OpImageQuerySizeLod and OpImageQuerylevels
+                                        only work with Sampled images
+                                        (SPIR-V/issues/280).
     37    20-Feb-2018    dgkoch         Add whitelist for accepted storage
                                         classes (SPIR-V/issues/166).
                                         Require Binding for uniform and storage
