@@ -33,7 +33,7 @@ Status
 
 Version
 
-    June 8, 2016 (version 16)
+    April 6, 2018 (version 17)
 
 Number
 
@@ -532,6 +532,8 @@ Dependencies on OES_EGL_image_external
     It can coexist with the OES_EGL_image_external extension.
 
 Revision History
+    #17 (April 6, 2018, H1Gdev)
+        - Fix typo.
     #16 (June 8, 2016, Jeff Leger)
         - Add yuvCscStandardExt itu_* to the list of keywords
         - Add yuvCscStandardExt as a basic type and clarify that this type
@@ -549,7 +551,7 @@ Revision History
           have more corresponding compelling use cases.
         - Adding interaction wording with EXT_shader_framebuffer_fetch
         - Removed duplicated image load store issue.
-        - Further clarification about usgae of yuv layout qualifier
+        - Further clarification about usage of yuv layout qualifier
 
     #13 (January 23, 2015, Amit Bansal)
         - added texture built in functions from OES_EGL_image_external_essl3

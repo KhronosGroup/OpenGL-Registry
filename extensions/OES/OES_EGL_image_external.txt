@@ -33,7 +33,7 @@ Status
 
 Version
 
-    April 23, 2015 (version 24)
+    April 6, 2018 (version 25)
 
 Number
 
@@ -59,7 +59,7 @@ Dependencies
     and MAX_COMBINED_TEXTURE_IMAGE_UNITS.
 
     This extension borrows concepts and function names from the
-    GL_OES_EGL_image extension.  This extesion is compatible with, but does
+    GL_OES_EGL_image extension.  This extension is compatible with, but does
     not require, the GL_OES_EGL_image extension.
 
 Overview
@@ -651,10 +651,10 @@ Issues
         through issue 4 of OES_EGL_image, and it seems the concern here is
         what happens when the image is (potentially) modified from OpenGL ES.
         Since external images cannot be modified from OpenGL ES, I would guess
-        the same issues do not appply here.
+        the same issues do not apply here.
 
         Comment from Acorn:
-        Another potentential issue is that the memory for the EGLImage may
+        Another potential issue is that the memory for the EGLImage may
         have to be reallocated in order to be compatible with GLES (e.g. GLES
         may have more strict alignment or other requirements).  However, the
         implementation can fail (or do a copy) if this is the case.  If the
@@ -673,7 +673,7 @@ Issues
         after it has been generated.  A solution to this is to state that the
         texels become undefined if the external texture is bound while the
         underlying texels are modified.  This way any color conversion can be
-        done (e.g. to a secoond buffer) when the texture is bound.
+        done (e.g. to a second buffer) when the texture is bound.
 
         Options:
         A) require the texture be unbound while the EGLImage is being modified
@@ -751,10 +751,10 @@ Issues
 
         B) New queries AVAILABLE_COMBINED_TEXTURE_IMAGE_UNITS,
         AVAILABLE_VERTEX_TEXTURE_IMAGE_UNITS, and
-        AVAILABLE_TEXTURE_IMAGE_UNITS indicate curent state, while
+        AVAILABLE_TEXTURE_IMAGE_UNITS indicate current state, while
         MAX_COMBINED_TEXTURE_IMAGE_UNITS, MAX_VERTEX_TEXTURE_IMAGE_UNITS, and
         MAX_TEXTURE_IMAGE_UNITS remain constant and indicate the state when no
-        external texures are bound.
+        external textures are bound.
 
         C) Query for number of required texture image units per texture
         object.  Draw calls fail with INVALID_OPERATION if the current
@@ -853,7 +853,7 @@ Issues
         work with any external texture that the implementation supports, then
         the implementation must fail at link time.
 
-        B) Yes, the implememtation may fail in glDrawArrays or glDrawElements
+        B) Yes, the implementation may fail in glDrawArrays or glDrawElements
         if the number of uniforms required by the program exceeds those
         available.  This means that a call to glUniform1i() or glBindTexture()
         can cause a shader program that used to work to stop working.  (Note
@@ -891,6 +891,8 @@ Dependencies on GL_OES_EGL_image
 
 Revision History
 
+    #25 - (April 6, 2018) H1Gdev
+        Fix typo.
     #24 - (April 23, 2015) Jon Leech)
         - Fix typo EGLImageTargetTexImage2DOES -> EGLImageTargetTexture2DOES
           (Bug 8114). Improve description of supported queries for new
