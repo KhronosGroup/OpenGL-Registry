@@ -1863,7 +1863,7 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/EXT/EXT_geometry_shader4.txt',
     },
-    'GL_EXT_glx_stereo_tree' : {
+    'GLX_EXT_stereo_tree' : {
         'number' : 452,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/GLX_EXT_stereo_tree.txt',
