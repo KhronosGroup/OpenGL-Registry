@@ -184,13 +184,20 @@ Additions to Section 4.4.3 of the OpenGL ES 2.0 Specification
         buffer is associated with the attachment and gets deleted after the
         attachment is broken.
 
+        While the implicit multisample buffer is attached, color sample values
+        are automatically resolved to a single color in the texture level each
+        time a pixel is updated. This has the effect of making the antialiasing
+        appear to be automatic at the application level.
+
         When the texture level is used as a source or destination for any 
         operation, the attachment is flushed, or when the attachment is broken,
-        an implicit resolve of multisample data from the multisample buffer to
-        the texture level may be performed. After such a resolve, the contents
-        of the multisample buffer become undefined.
+        the GL implementation may discard the contents of the implicit multisample
+        buffer. If the contents are discarded, the subsequent operations on the
+        multisample buffer will behave as if all samples within a pixel have the
+        value most recently written to the color buffer for that pixel.
 
-        The operations which may cause a resolve include:
+        The operations which may cause the contents of the implicit multisample
+        buffer to be discarded include:
             - Drawing with the texture bound to an active texture unit
             - ReadPixels or CopyTex[Sub]Image* while the texture is 
               attached to the framebuffer
@@ -203,8 +210,6 @@ Additions to Section 4.4.3 of the OpenGL ES 2.0 Specification
             - BindFramebuffer while the texture is attached to the currently
               bound framebuffer.
 
-        Whether each of the above cause a resolve or not is implementation-
-        dependent.
 	
 Additions to section 4.4.5 of the OpenGL ES 2.0 Specification
 (Framebuffer Completeness)
@@ -486,7 +491,47 @@ Issues
     FRAMEBUFFER are used for the <target> parameter to
     FramebufferTexture2DMultisampleEXT.
 
+    7. What is the language about automatic resolves about?
+
+    RESOLVED.
+
+    The GL specification is written as if the multisample buffer is a separate
+    buffer from the color buffer. This is not quite how modern GPUs work, but
+    was true for some historic systems. This extension builds on the existing
+    specification wording and uses the existing terminology.
+
+    In the Multisampling section, the GL specification says that:
+
+    "The color sample values are resolved to a single, displayable color. For
+     window system-provided framebuffers, this occurs each time a pixel is
+     updated, so the antialiasing appears to be automatic at the application
+     level."
+
+    In practice, most GPUs will only resolve the color sample values once
+    (e.g. at the end of a frame), but from the application's point of view that
+    does not make any observable difference.
+
+    This extension inherits this behavor. The application does not (and cannot)
+    do anything to resolve the multisamples - this is always done automatically.
+
+    Further, this extension does not change any of the semantics around how
+    resources are synchronized. E.g. an attachment will always see the most
+    recent change made to the attached texture, whether that was done by
+    rendering into an attachment or by a texture update operation.
+
+    This implies that the multisample buffer and the color buffer are always
+    "in sync". The only behavior that is implementation-defined in this
+    extension is when the implicit multisample buffer is discarded. After the
+    operations that may (or may not) cause such a discard, an application can
+    observe either 1 or n distinct values in the multisample buffer depending
+    on whether the discard happened or not. As described in Issue 2, there's
+    no way for the application to query whether the discard happened.
+
+
 Revision History
+
+    Revision 8, 2018/04/11
+     - Clarified wording around implicit resolves, and added Issue 7.
 
     Revision 7, 2016/06/28
      - Clarified that it is an error to call FramebufferTexture2DMultisampleEXT
