@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date: 10-Apr-2018
-    Revision: 38
+    Last Modified Date: 25-Apr-2018
+    Revision: 39
 
 Number
 
@@ -312,17 +312,60 @@ Overview
 
       max_vertices   ->  OutputVertices
 
-    Mapping of other instructions
+    Mapping of barriers
 
-      %     -> OpUMod/OpSMod
-      mod() -> OpFMod
-      NA    -> OpSRem/OpFRem
+      barrier() (compute) -> OpControlBarrier(/*Execution*/Workgroup,
+                                              /*Memory*/Workgroup,
+                                              /*Semantics*/AcquireRelease |
+                                                           WorkgroupMemory)
+
+      barrier() (tess control) -> OpControlBarrier(/*Execution*/Workgroup,
+                                                   /*Memory*/Invocation,
+                                                   /*Semantics*/None)
+
+      memoryBarrier() -> OpMemoryBarrier(/*Memory*/Device,
+                                         /*Semantics*/AcquireRelease |
+                                                      UniformMemory |
+                                                      WorkgroupMemory |
+                                                      ImageMemory)
+
+      memoryBarrierBuffer() -> OpMemoryBarrier(/*Memory*/Device,
+                                               /*Semantics*/AcquireRelease |
+                                                            UniformMemory)
+
+      memoryBarrierShared() -> OpMemoryBarrier(/*Memory*/Device,
+                                               /*Semantics*/AcquireRelease |
+                                                            WorkgroupMemory)
+
+      memoryBarrierImage() -> OpMemoryBarrier(/*Memory*/Device,
+                                              /*Semantics*/AcquireRelease |
+                                                           ImageMemory)
+
+      groupMemoryBarrier() -> OpMemoryBarrier(/*Memory*/Workgroup,
+                                              /*Semantics*/AcquireRelease |
+                                                           UniformMemory |
+                                                           WorkgroupMemory |
+                                                           ImageMemory)
+
+    Mapping of atomics
+
+      all atomic builtin functions -> Semantics = None(Relaxed)
 
       atomicExchange()      -> OpAtomicExchange
       imageAtomicExchange() -> OpAtomicExchange
       atomicCompSwap()      -> OpAtomicCompareExchange
       imageAtomicCompSwap() -> OpAtomicCompareExchange
       NA                    -> OpAtomicCompareExchangeWeak
+
+      atomicCounterIncrement -> OpAtomicIIncrement
+      atomicCounterDecrement -> OpAtomicIDecrement
+      atomicCounter          -> OpAtomicLoad
+
+    Mapping of other instructions
+
+      %     -> OpUMod/OpSMod
+      mod() -> OpFMod
+      NA    -> OpSRem/OpFRem
 
       pack/unpack (conversion)    -> pack/unpack in GLSL extended instructions
       pack/unpack (no conversion) -> OpBitcast
@@ -2030,6 +2073,7 @@ Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    39    25-Apr-2018    JohnK          add mappings of barriers and atomics
     38    10-Apr-2018    dgkoch         OpImageQuerySizeLod and OpImageQuerylevels
                                         only work with Sampled images
                                         (SPIR-V/issues/280).
