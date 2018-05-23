@@ -429,6 +429,10 @@ Overview
         differently for SPIR-V used in Vulkan and OpenGL
       . gl_FragColor can be written to, but it won't broadcast, for versions of
         OpenGL that support gl_FragColor
+      . Vulkan does not allow multi-dimensional arrays of resources like
+        UBOs and SSBOs in its SPIR-V environment spec. SPIR-V supports
+        it and OpenGL already allows this for GLSL shaders. SPIR-V
+        for OpenGL also allows it.
 
     Additions to the SPIR-V specification:
       + *Offset* can also apply to an object, for transform feedback.
