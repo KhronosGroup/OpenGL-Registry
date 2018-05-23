@@ -27,6 +27,7 @@ Contributors
     Nigel Williams, Qualcomm
     Tobias Hector, Imagination Technologies
     Daniel Koch, NVIDIA Corporation
+    James Helferty, NVIDIA Corporation
 
 Status
 
@@ -34,8 +35,8 @@ Status
 
 Version
 
-    Last Modified Date: December 13, 2017
-    Revision: 3
+    Last Modified Date: May 2, 2018
+    Revision: 4
 
 Number
 
@@ -56,15 +57,17 @@ Dependencies
     EXT_direct_state_access.
 
     This extension interacts with OpenGL ES 3.2, OpenGL 4.0,
-    EXT_tessellation_shader, and ARB_tessellation_shader.
+    EXT_tessellation_shader, OES_tessellation_shader, and
+    ARB_tessellation_shader.
 
     This extension interacts with OpenGL ES 3.2, OpenGL 3.2,
-    EXT_geometry_shader, and ARB_geometry_shader4.
+    EXT_geometry_shader, OES_geometry_shader and ARB_geometry_shader4
 
     This extension interacts with OpenGL 4.3, ARB_multi_draw_indirect, and
     EXT_multi_draw_indirect.
 
-    This extension interacts with OpenGL 3.0.
+    This extension interacts with OpenGL 3.0, the OpenGL 3.0 Compatibility
+    Profile, and ARB_fragment_layer_viewport.
 
 Overview
 
@@ -162,6 +165,11 @@ and Framebuffer Objects)
         - no timer queries (section 4.3)
         - occlusion query results must be between max per-view and the sum
           of the per-view queries, inclusive (section 15.1.4)."
+        - in fragment shader the contents of gl_Layer are undefined
+
+    [[ If implemented in OpenGL ]]
+        - the number of views rendered to by Begin/End is an undefined subset
+          of the views present in the framebuffer
 
     Add the following to list of <pname> parameters which can be queried
     via GetFramebufferAttachmentParameteriv when the value of
@@ -286,7 +294,7 @@ Vertex Processing
       - There is an active program for tessellation control, tessellation
       evaluation, or geometry stages, or
 
-      - Transform feedback is active."
+      - Transform feedback is active and not paused."
 
 Modifications to Chapter 15 of the OpenGL ES 3.2 Specification (Writing
 Fragments and Samples to the Framebuffer) [OpenGL 4.6 Chapter 17]
@@ -409,19 +417,19 @@ EXT_direct_state_access
     are supported, the command NamedFramebufferTextureMultiviewOVR does not
     exist.
 
-Interactions with OpenGL ES 3.2, OpenGL 4.0, EXT_tessellation_shader, and
-ARB_tessellation_shader.
+Interactions with OpenGL ES 3.2, OpenGL 4.0, EXT_tessellation_shader,
+OES_tessellation_shader and ARB_tessellation_shader.
 
-    If none of OpenGL ES 3.2, OpenGL 4.0, EXT_tessellation_shader, or
-    ARB_tessellation shader are supported, ignore all references to
-    tessellation shaders.
+    If none of OpenGL ES 3.2, OpenGL 4.0, EXT_tessellation_shader,
+    OES_tessellation_shader or ARB_tessellation shader are supported, ignore
+    all references to tessellation shaders.
 
-Interactions with OpenGL ES 3.2, OpenGL 3.2, EXT_geometry_shader, and
-ARB_geometry_shader4.
+Interactions with OpenGL ES 3.2, OpenGL 3.2, EXT_geometry_shader,
+OES_geometry_shader, and ARB_geometry_shader4.
 
-    If none of OpenGL ES 3.2, OpenGL 3.2, EXT_geometry_shader, or
-    ARB_geometry_shader4 are supported, ignore all references to geometry
-    shaders.
+    If none of OpenGL ES 3.2, OpenGL 3.2, EXT_geometry_shader,
+    OES_geometry_shader, or ARB_geometry_shader4 are supported, ignore all
+    references to geometry shaders.
 
 Interactions with OpenGL 4.3, ARB_multi_draw_indirect, and
 EXT_multi_draw_indirect.
@@ -429,10 +437,23 @@ EXT_multi_draw_indirect.
     If none of OpenGL 4.3, ARB_multi_draw_indirect, or EXT_multi_draw_indirect
     are supported, ignore all references to multi-draw-indirect.
 
-Interactions with with OpenGL 3.0
+Interactions with OpenGL 3.0
 
     If OpenGL 3.0 (or later) is not supported, ignore all references to the
     SAMPLES_PASSED occlusion query target.
+
+Interactions with OpenGL ES 3.2, OpenGL 4.3, EXT_geometry_shader,
+OES_geometry_shader, and ARB_fragment_layer_viewport
+
+    If none of OpenGL ES 3.2, OpenGL 4.3, EXT_geometry_shader,
+    OES_geometry_shader, or ARB_fragment_layer_viewport is supported, ignore
+    all references to gl_Layer.
+
+Interactions with OpenGL 3.0 Compatibility Profile
+
+    If OpenGL 3.0 Compatibility Profile (or later) is not supported, ignore all
+    references to Begin/End.
+
 
 Issues
 
@@ -708,6 +729,21 @@ Issues
     drivers may of course continue to allow such shaders to compile, but
     it is not possible to use them.
 
+    (33) How does the gl_Layer builtin input in the fragment shader interact
+    with multiview?
+
+    RESOLVED: Whenever a multiview framebuffer is bound, the contents of
+    gl_Layer in the fragment shader are undefined. This is consistent with
+    issue (1), which disallows geometry shader with multiview framebuffers.
+
+    (34) How does this extension interact with the OpenGL Compatibility
+    Profile?
+
+    RESOLVED: When a multiview framebuffer is bound, Begin/End may render to a
+    subset of the views in the framebuffer. (Specifically which views is
+    undefined, and may be any subset of the views attached to the framebuffer,
+    including the null set.)
+
 
 Revision History
 
@@ -738,3 +774,8 @@ Revision History
       3     12/13/17  dgkoch    Clarify that compute shaders are orthogonal to multiview
                                 framebuffers (Issue 31). Remove gl_ViewID_OVR from compute,
                                 tessellation, and geometry shaders.
+      4     05/02/18  jhelferty Clarify interop rules for gl_Layer in fragment shader (33), and
+                                interop with compatibility profile's Begin/End (34). Add mention
+                                of OES_geometry_shader and OES_tessellation_shader to interop.
+                                Clarify what happens when transform feedback is paused.
+
