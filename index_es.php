@@ -170,8 +170,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
     OpenGL ES version-specific platform header file intended to define
     calling conventions and data types specific to a platform. </p>
 
-<p> Finally, almost all of the headers described below depend on a
-    platform header file common to multiple Khronos APIs called
+<p> Almost all of the headers described below depend on a platform header
+    file common to multiple Khronos APIs called
     <tt>&lt;KHR/khrplatform.h&gt;</tt>. </p>
 
 <p> Vendors may include modified versions of any or all of these headers

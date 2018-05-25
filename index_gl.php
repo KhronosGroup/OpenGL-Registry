@@ -82,6 +82,11 @@ include_once("../../assets/static_pages/khr_page_top.php");
     <tt>wgl.h</tt> header files supplied with the OS / graphics drivers.
     Additional header files are provided here, including: </p>
 
+<p> Almost all of the headers described below depend on a platform header
+    file common to multiple Khronos APIs called
+    <tt>&lt;KHR/khrplatform.h&gt;</tt>. </p>
+
+
 <ul>
 <li> <tt><a href="api/GL/glext.h">&lt;GL/glext.h&gt;</a></tt> - OpenGL
      1.2 and above compatibility profile and extension interfaces. </li>
@@ -100,6 +105,21 @@ include_once("../../assets/static_pages/khr_page_top.php");
     Linux and Microsoft Windows, function pointer typedefs. Please report
     problems as Issues in the <a
     href="index.php#repository">OpenGL-Registry</a> repository. </p>
+
+<p> <a name="headerskhr"></a> <b> Khronos Shared Platform Header
+    (<tt>&lt;KHR/khrplatform.h&gt;</tt>) </b> </p>
+
+<ul>
+<li> The OpenGL headers all depend on the shared
+     <a href="https://www.khronos.org/registry/EGL/api/KHR/khrplatform.h">
+     <tt>&lt;KHR/khrplatform.h&gt;</tt></a> header from the <a
+     href="http://www.khronos.org/registry/EGL/"> EGL Registry </a>.
+     This is a new dependency, introduced in
+     <a href="https://github.com/KhronosGroup/OpenGL-Registry/pull/183">
+     OpenGL-Registry pull request 183</a> for increased compatibility
+     between OpenGL and OpenGL ES headers. </li>
+</ul>
+
 
 <hr>
 
