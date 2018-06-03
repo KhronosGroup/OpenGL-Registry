@@ -119,8 +119,6 @@ typedef unsigned int GLhandleARB;
         <type api="gles1" requires="khrplatform">typedef khronos_int32_t <name>GLfixed</name>;</type>
         <type api="gles1" requires="khrplatform">typedef khronos_int64_t <name>GLint64</name>;</type>
         <type api="gles1" requires="khrplatform">typedef khronos_uint64_t <name>GLuint64</name>;</type>
-        <type api="gles1" requires="khrplatform">typedef khronos_intptr_t <name>GLintptr</name>;</type>
-        <type api="gles1" requires="khrplatform">typedef khronos_ssize_t <name>GLsizeiptr</name>;</type>
             <!-- GLES 1/2 types (tagged for GLES 2 - attribute syntax is limited) -->
         <type api="gles2" requires="khrplatform">typedef khronos_int8_t <name>GLbyte</name>;</type>
         <type api="gles2" requires="khrplatform">typedef khronos_uint8_t <name>GLubyte</name>;</type>
@@ -131,14 +129,10 @@ typedef unsigned int GLhandleARB;
         <type api="gles2" requires="khrplatform">typedef khronos_uint64_t <name>GLuint64</name>;</type>
         <type api="gles2" requires="khrplatform">typedef khronos_int64_t <name>GLint64EXT</name>;</type>
         <type api="gles2" requires="khrplatform">typedef khronos_uint64_t <name>GLuint64EXT</name>;</type>
-        <type api="gles2" requires="khrplatform">typedef khronos_intptr_t <name>GLintptr</name>;</type>
-        <type api="gles2" requires="khrplatform">typedef khronos_ssize_t <name>GLsizeiptr</name>;</type>
             <!-- GLES 2 types (none currently) -->
             <!-- GLSC 2 types -->
         <type api="glsc2" requires="khrplatform">typedef khronos_uint8_t <name>GLubyte</name>;</type>
         <type api="glsc2" requires="khrplatform">typedef khronos_float_t <name>GLfloat</name>;</type>
-        <type api="glsc2" requires="khrplatform">typedef khronos_intptr_t <name>GLintptr</name>;</type>
-        <type api="glsc2" requires="khrplatform">typedef khronos_ssize_t <name>GLsizeiptr</name>;</type>
             <!-- Vendor extension types -->
         <type>typedef void (<apientry/> *<name>GLDEBUGPROCAMD</name>)(GLuint id,GLenum category,GLenum severity,GLsizei length,const GLchar *message,void *userParam);</type>
         <type>typedef unsigned short <name>GLhalfNV</name>;</type>
