@@ -1,4 +1,4 @@
-/*% cc -I. -I.. -I../../../../../registry/trunk/egl/api/ -c % ; rm testext.o
+/*% cc -I. -I../api -I../../../../../registry/trunk/egl/api/ -c % ; rm testext.o
  *
  * Test to make sure gl3.h builds properly.
  * Will also use SVN internal versions of gl3platform.h
