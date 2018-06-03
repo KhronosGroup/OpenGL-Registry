@@ -71,16 +71,16 @@ typedef unsigned __int64 uint64_t;
         <type>typedef unsigned char <name>GLboolean</name>;</type>
         <type>typedef unsigned int <name>GLbitfield</name>;</type>
         <type comment="Not an actual GL type, though used in headers in the past">typedef void <name>GLvoid</name>;</type>
-        <type>typedef signed char <name>GLbyte</name>;</type>
-        <type>typedef short <name>GLshort</name>;</type>
+        <type requires="khrplatform">typedef khronos_int8_t <name>GLbyte</name>;</type>
+        <type requires="khrplatform">typedef khronos_uint8_t <name>GLubyte</name>;</type>
+        <type requires="khrplatform">typedef khronos_int16_t <name>GLshort</name>;</type>
+        <type requires="khrplatform">typedef khronos_uint16_t <name>GLushort</name>;</type>
         <type>typedef int <name>GLint</name>;</type>
-        <type>typedef int <name>GLclampx</name>;</type>
-        <type>typedef unsigned char <name>GLubyte</name>;</type>
-        <type>typedef unsigned short <name>GLushort</name>;</type>
         <type>typedef unsigned int <name>GLuint</name>;</type>
+        <type requires="khrplatform">typedef khronos_int32_t <name>GLclampx</name>;</type>
         <type>typedef int <name>GLsizei</name>;</type>
-        <type>typedef float <name>GLfloat</name>;</type>
-        <type>typedef float <name>GLclampf</name>;</type>
+        <type requires="khrplatform">typedef khronos_float_t <name>GLfloat</name>;</type>
+        <type requires="khrplatform">typedef khronos_float_t <name>GLclampf</name>;</type>
         <type>typedef double <name>GLdouble</name>;</type>
         <type>typedef double <name>GLclampd</name>;</type>
         <type>typedef void *<name>GLeglClientBufferEXT</name>;</type>
@@ -92,47 +92,24 @@ typedef void *GLhandleARB;
 #else
 typedef unsigned int GLhandleARB;
 #endif</type>
-        <type>typedef unsigned short <name>GLhalfARB</name>;</type>
-        <type>typedef unsigned short <name>GLhalf</name>;</type>
-        <type comment="Must be 32 bits">typedef GLint <name>GLfixed</name>;</type>
+        <type requires="khrplatform">typedef khronos_uint16_t <name>GLhalf</name>;</type>
+        <type requires="khrplatform">typedef khronos_uint16_t <name>GLhalfARB</name>;</type>
+        <type requires="khrplatform">typedef khronos_int32_t <name>GLfixed</name>;</type>
         <type requires="khrplatform">typedef khronos_intptr_t <name>GLintptr</name>;</type>
+        <type requires="khrplatform">typedef khronos_intptr_t <name>GLintptrARB</name>;</type>
         <type requires="khrplatform">typedef khronos_ssize_t <name>GLsizeiptr</name>;</type>
-        <type requires="inttypes">typedef int64_t <name>GLint64</name>;</type>
-        <type requires="inttypes">typedef uint64_t <name>GLuint64</name>;</type>
-        <type requires="stddef">typedef ptrdiff_t <name>GLintptrARB</name>;</type>
-        <type requires="stddef">typedef ptrdiff_t <name>GLsizeiptrARB</name>;</type>
-        <type requires="inttypes">typedef int64_t <name>GLint64EXT</name>;</type>
-        <type requires="inttypes">typedef uint64_t <name>GLuint64EXT</name>;</type>
+        <type requires="khrplatform">typedef khronos_ssize_t <name>GLsizeiptrARB</name>;</type>
+        <type requires="khrplatform">typedef khronos_int64_t <name>GLint64</name>;</type>
+        <type requires="khrplatform">typedef khronos_int64_t <name>GLint64EXT</name>;</type>
+        <type requires="khrplatform">typedef khronos_uint64_t <name>GLuint64</name>;</type>
+        <type requires="khrplatform">typedef khronos_uint64_t <name>GLuint64EXT</name>;</type>
         <type>typedef struct __GLsync *<name>GLsync</name>;</type>
         <type comment="compatible with OpenCL cl_context"><name>struct _cl_context</name>;</type>
         <type comment="compatible with OpenCL cl_event"><name>struct _cl_event</name>;</type>
         <type>typedef void (<apientry/> *<name>GLDEBUGPROC</name>)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,const void *userParam);</type>
         <type>typedef void (<apientry/> *<name>GLDEBUGPROCARB</name>)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,const void *userParam);</type>
         <type>typedef void (<apientry/> *<name>GLDEBUGPROCKHR</name>)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,const void *userParam);</type>
-            <!-- GLES 1 types -->
-        <type api="gles1" requires="khrplatform">typedef khronos_int32_t <name>GLclampx</name>;</type>
-            <!-- GLES 1/2 types (tagged for GLES 1) -->
-        <type api="gles1" requires="khrplatform">typedef khronos_int8_t <name>GLbyte</name>;</type>
-        <type api="gles1" requires="khrplatform">typedef khronos_uint8_t <name>GLubyte</name>;</type>
-        <type api="gles1" requires="khrplatform">typedef khronos_float_t <name>GLfloat</name>;</type>
-        <type api="gles1" requires="khrplatform">typedef khronos_float_t <name>GLclampf</name>;</type>
-        <type api="gles1" requires="khrplatform">typedef khronos_int32_t <name>GLfixed</name>;</type>
-        <type api="gles1" requires="khrplatform">typedef khronos_int64_t <name>GLint64</name>;</type>
-        <type api="gles1" requires="khrplatform">typedef khronos_uint64_t <name>GLuint64</name>;</type>
-            <!-- GLES 1/2 types (tagged for GLES 2 - attribute syntax is limited) -->
-        <type api="gles2" requires="khrplatform">typedef khronos_int8_t <name>GLbyte</name>;</type>
-        <type api="gles2" requires="khrplatform">typedef khronos_uint8_t <name>GLubyte</name>;</type>
-        <type api="gles2" requires="khrplatform">typedef khronos_float_t <name>GLfloat</name>;</type>
-        <type api="gles2" requires="khrplatform">typedef khronos_float_t <name>GLclampf</name>;</type>
-        <type api="gles2" requires="khrplatform">typedef khronos_int32_t <name>GLfixed</name>;</type>
-        <type api="gles2" requires="khrplatform">typedef khronos_int64_t <name>GLint64</name>;</type>
-        <type api="gles2" requires="khrplatform">typedef khronos_uint64_t <name>GLuint64</name>;</type>
-        <type api="gles2" requires="khrplatform">typedef khronos_int64_t <name>GLint64EXT</name>;</type>
-        <type api="gles2" requires="khrplatform">typedef khronos_uint64_t <name>GLuint64EXT</name>;</type>
-            <!-- GLES 2 types (none currently) -->
-            <!-- GLSC 2 types -->
-        <type api="glsc2" requires="khrplatform">typedef khronos_uint8_t <name>GLubyte</name>;</type>
-        <type api="glsc2" requires="khrplatform">typedef khronos_float_t <name>GLfloat</name>;</type>
+
             <!-- Vendor extension types -->
         <type>typedef void (<apientry/> *<name>GLDEBUGPROCAMD</name>)(GLuint id,GLenum category,GLenum severity,GLsizei length,const GLchar *message,void *userParam);</type>
         <type>typedef unsigned short <name>GLhalfNV</name>;</type>
