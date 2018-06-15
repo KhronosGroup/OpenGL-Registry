@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date: 25-Apr-2018
-    Revision: 39
+    Last Modified Date: 29-May-2018
+    Revision: 40
 
 Number
 
@@ -358,7 +358,7 @@ Overview
       NA                    -> OpAtomicCompareExchangeWeak
 
       atomicCounterIncrement -> OpAtomicIIncrement
-      atomicCounterDecrement -> OpAtomicIDecrement
+      atomicCounterDecrement -> OpAtomicIDecrement (with post decrement)
       atomicCounter          -> OpAtomicLoad
 
     Mapping of other instructions
@@ -2077,6 +2077,8 @@ Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    40    29-May-2018    dgkoch         note post decrement for atomicCounterDecrement
+                                        mapping
     39    25-Apr-2018    JohnK          add mappings of barriers and atomics
     38    10-Apr-2018    dgkoch         OpImageQuerySizeLod and OpImageQuerylevels
                                         only work with Sampled images
