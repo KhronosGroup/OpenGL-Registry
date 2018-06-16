@@ -39,7 +39,7 @@ extern "C" {
 #include <windows.h>
 #endif
 
-#define WGL_WGLEXT_VERSION 20180525
+#define WGL_WGLEXT_VERSION 20180615
 
 /* Generated C header for:
  * API: wgl
@@ -346,7 +346,7 @@ VOID WINAPI wglBlitContextFramebufferAMD (HGLRC dstCtx, GLint srcX0, GLint srcY0
 
 #ifndef WGL_EXT_colorspace
 #define WGL_EXT_colorspace 1
-#define WGL_COLORSPACE_EXT                0x309D
+#define WGL_COLORSPACE_EXT                0x3087
 #define WGL_COLORSPACE_SRGB_EXT           0x3089
 #define WGL_COLORSPACE_LINEAR_EXT         0x308A
 #endif /* WGL_EXT_colorspace */
