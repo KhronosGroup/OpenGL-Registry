@@ -16572,6 +16572,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto group="GraphicsResetStatus"><ptype>GLenum</ptype> <name>glGetGraphicsResetStatusEXT</name></proto>
+            <alias name="glGetGraphicsResetStatus"/>
         </command>
         <command>
             <proto group="GraphicsResetStatus"><ptype>GLenum</ptype> <name>glGetGraphicsResetStatusKHR</name></proto>
