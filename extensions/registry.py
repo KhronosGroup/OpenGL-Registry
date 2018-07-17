@@ -2910,6 +2910,12 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/GLX_MESA_copy_sub_buffer.txt',
     },
+    'GL_MESA_framebuffer_flip_y' : {
+        'esnumber' : 302,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_framebuffer_flip_y.txt',
+    },
     'GL_MESA_pack_invert' : {
         'number' : 300,
         'flags' : { 'public' },
