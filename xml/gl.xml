@@ -976,6 +976,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_MAX_CLIP_DISTANCES"/>
             <enum name="GL_MAX_CLIP_PLANES"/>
             <enum name="GL_MAX_COLOR_MATRIX_STACK_DEPTH_SGI"/>
+            <enum name="GL_MAX_COMBINED_TEXTURE_IMAGE_UNITS"/>
             <enum name="GL_MAX_EVAL_ORDER"/>
             <enum name="GL_MAX_FOG_FUNC_POINTS_SGIS"/>
             <enum name="GL_MAX_FRAGMENT_LIGHTS_SGIX"/>
