@@ -26,8 +26,8 @@ Status
 
 Version
 
-    Last Modified Date: September 26, 2017
-    Revision: 13
+    Last Modified Date: July 18, 2018
+    Revision: 14
 
 Number
 
@@ -663,7 +663,7 @@ Additions to Chapter 6 of the OpenGL 4.5 Specification (Buffer Objects)
 
         "For BufferStorage and BufferStorageMemEXT, the buffer object is
         that bound to <target>, which must be one of the values listed
-        in table 6.1.  For NamedBufferStroage and
+        in table 6.1.  For NamedBufferStorage and
         NamedBufferStorageMemEXT, <buffer> is the name of the buffer
         object.  For all the above commands, <size> is the size of the
         data store in basic machine units.  For BufferStorageMemEXT and
@@ -1121,6 +1121,9 @@ Issues
         the new OpenGL texture layouts.
 
 Revision History
+
+    Revision 14, 2018-07-18 (James Jones)
+        - Fixed a typo: Replace NamedBufferStroage with NamedBufferStorage
 
     Revision 13, 2017-09-26 (James Jones)
         - Added new image layouts corresponding to those from
