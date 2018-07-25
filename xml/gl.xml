@@ -33915,6 +33915,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_RENDERBUFFER_STENCIL_SIZE"/>
             <enum name="GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE"/>
             <enum name="GL_MAX_SAMPLES"/>
+            <enum name="GL_INDEX"/>
             <command name="glIsRenderbuffer"/>
             <command name="glBindRenderbuffer"/>
             <command name="glDeleteRenderbuffers"/>
@@ -33936,8 +33937,7 @@ typedef unsigned int GLhandleARB;
             <command name="glRenderbufferStorageMultisample"/>
             <command name="glFramebufferTextureLayer"/>
         </require>
-        <require profile="compatibility" comment="Reuse ARB_framebuffer_object compatibility profile">
-            <enum name="GL_INDEX"/>
+        <require comment="Reuse ARB_texture_float">
             <enum name="GL_TEXTURE_LUMINANCE_TYPE"/>
             <enum name="GL_TEXTURE_INTENSITY_TYPE"/>
         </require>
@@ -34985,6 +34985,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_CLAMP_VERTEX_COLOR"/>
             <enum name="GL_CLAMP_FRAGMENT_COLOR"/>
             <enum name="GL_ALPHA_INTEGER"/>
+            <enum name="GL_INDEX"/>
             <enum name="GL_TEXTURE_LUMINANCE_TYPE"/>
             <enum name="GL_TEXTURE_INTENSITY_TYPE"/>
         </remove>
