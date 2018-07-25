@@ -28,6 +28,7 @@ Contributors
     Tobias Hector, Imagination Technologies
     Daniel Koch, NVIDIA Corporation
     James Helferty, NVIDIA Corporation
+    Olli Etuaho, NVIDIA Corporation
 
 Status
 
@@ -35,8 +36,8 @@ Status
 
 Version
 
-    Last Modified Date: May 2, 2018
-    Revision: 4
+    Last Modified Date: July 25, 2018
+    Revision: 5
 
 Number
 
