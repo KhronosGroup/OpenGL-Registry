@@ -258,8 +258,7 @@ and Framebuffer Objects)
     An INVALID_VALUE error is generated if:
     - <numViews> is less than 1 or if <numViews> is greater than MAX_VIEWS_OVR.
     - <texture> is a two-dimensional array texture and <baseViewIndex> +
-      <numViews> is larger than the value of MAX_ARRAY_TEXTURE_LAYERS minus
-      one.
+      <numViews> is larger than the value of MAX_ARRAY_TEXTURE_LAYERS.
     - texture is non-zero and <baseViewIndex> is negative."
 
     An INVALID_OPERATION error is generated if texture is non-zero and is not
@@ -778,4 +777,5 @@ Revision History
                                 interop with compatibility profile's Begin/End (34). Add mention
                                 of OES_geometry_shader and OES_tessellation_shader to interop.
                                 Clarify what happens when transform feedback is paused.
+      5     07/25/18  oetuaho   Fix off-by-one issue in baseViewIndex + numViews check.
 
