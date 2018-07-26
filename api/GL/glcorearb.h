@@ -3958,6 +3958,22 @@ GLAPI void APIENTRY glMaxShaderCompilerThreadsKHR (GLuint count);
 #define GL_KHR_texture_compression_astc_sliced_3d 1
 #endif /* GL_KHR_texture_compression_astc_sliced_3d */
 
+#ifndef GL_AMD_framebuffer_multisample_advanced
+#define GL_AMD_framebuffer_multisample_advanced 1
+#define GL_RENDERBUFFER_STORAGE_SAMPLES_AMD 0x91B2
+#define GL_MAX_COLOR_FRAMEBUFFER_SAMPLES_AMD 0x91B3
+#define GL_MAX_COLOR_FRAMEBUFFER_STORAGE_SAMPLES_AMD 0x91B4
+#define GL_MAX_DEPTH_STENCIL_FRAMEBUFFER_SAMPLES_AMD 0x91B5
+#define GL_NUM_SUPPORTED_MULTISAMPLE_MODES_AMD 0x91B6
+#define GL_SUPPORTED_MULTISAMPLE_MODES_AMD 0x91B7
+typedef void (APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEADVANCEDAMDPROC) (GLenum target, GLsizei samples, GLsizei storageSamples, GLenum internalformat, GLsizei width, GLsizei height);
+typedef void (APIENTRYP PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEADVANCEDAMDPROC) (GLuint renderbuffer, GLsizei samples, GLsizei storageSamples, GLenum internalformat, GLsizei width, GLsizei height);
+#ifdef GL_GLEXT_PROTOTYPES
+GLAPI void APIENTRY glRenderbufferStorageMultisampleAdvancedAMD (GLenum target, GLsizei samples, GLsizei storageSamples, GLenum internalformat, GLsizei width, GLsizei height);
+GLAPI void APIENTRY glNamedRenderbufferStorageMultisampleAdvancedAMD (GLuint renderbuffer, GLsizei samples, GLsizei storageSamples, GLenum internalformat, GLsizei width, GLsizei height);
+#endif
+#endif /* GL_AMD_framebuffer_multisample_advanced */
+
 #ifndef GL_AMD_performance_monitor
 #define GL_AMD_performance_monitor 1
 #define GL_COUNTER_TYPE_AMD               0x8BC0

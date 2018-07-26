@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20180717
+#define GL_GLEXT_VERSION 20180725
 
 /* Generated C header for:
  * API: gl
@@ -5440,6 +5440,22 @@ GLAPI void APIENTRY glBlendEquationIndexedAMD (GLuint buf, GLenum mode);
 GLAPI void APIENTRY glBlendEquationSeparateIndexedAMD (GLuint buf, GLenum modeRGB, GLenum modeAlpha);
 #endif
 #endif /* GL_AMD_draw_buffers_blend */
+
+#ifndef GL_AMD_framebuffer_multisample_advanced
+#define GL_AMD_framebuffer_multisample_advanced 1
+#define GL_RENDERBUFFER_STORAGE_SAMPLES_AMD 0x91B2
+#define GL_MAX_COLOR_FRAMEBUFFER_SAMPLES_AMD 0x91B3
+#define GL_MAX_COLOR_FRAMEBUFFER_STORAGE_SAMPLES_AMD 0x91B4
+#define GL_MAX_DEPTH_STENCIL_FRAMEBUFFER_SAMPLES_AMD 0x91B5
+#define GL_NUM_SUPPORTED_MULTISAMPLE_MODES_AMD 0x91B6
+#define GL_SUPPORTED_MULTISAMPLE_MODES_AMD 0x91B7
+typedef void (APIENTRYP PFNGLRENDERBUFFERSTORAGEMULTISAMPLEADVANCEDAMDPROC) (GLenum target, GLsizei samples, GLsizei storageSamples, GLenum internalformat, GLsizei width, GLsizei height);
+typedef void (APIENTRYP PFNGLNAMEDRENDERBUFFERSTORAGEMULTISAMPLEADVANCEDAMDPROC) (GLuint renderbuffer, GLsizei samples, GLsizei storageSamples, GLenum internalformat, GLsizei width, GLsizei height);
+#ifdef GL_GLEXT_PROTOTYPES
+GLAPI void APIENTRY glRenderbufferStorageMultisampleAdvancedAMD (GLenum target, GLsizei samples, GLsizei storageSamples, GLenum internalformat, GLsizei width, GLsizei height);
+GLAPI void APIENTRY glNamedRenderbufferStorageMultisampleAdvancedAMD (GLuint renderbuffer, GLsizei samples, GLsizei storageSamples, GLenum internalformat, GLsizei width, GLsizei height);
+#endif
+#endif /* GL_AMD_framebuffer_multisample_advanced */
 
 #ifndef GL_AMD_framebuffer_sample_positions
 #define GL_AMD_framebuffer_sample_positions 1
