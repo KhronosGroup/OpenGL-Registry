@@ -629,4 +629,6 @@
 </li>
 <li value=302><a href="extensions/MESA/MESA_framebuffer_flip_y.txt">GL_MESA_framebuffer_flip_y</a>
 </li>
+<li value=303><a href="extensions/AMD/AMD_framebuffer_multisample_advanced.txt">GL_AMD_framebuffer_multisample_advanced</a>
+</li>
 </ol>

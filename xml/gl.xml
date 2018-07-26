@@ -9464,7 +9464,13 @@ typedef unsigned int GLhandleARB;
         <enum value="0x91B0" name="GL_MAX_SHADER_COMPILER_THREADS_ARB" alias="GL_MAX_SHADER_COMPILER_THREADS_KHR"/>
         <enum value="0x91B1" name="GL_COMPLETION_STATUS_KHR"/>
         <enum value="0x91B1" name="GL_COMPLETION_STATUS_ARB" alias="GL_COMPLETION_STATUS_KHR"/>
-            <unused start="0x91B2" end="0x91B8" vendor="AMD"/>
+        <enum value="0x91B2" name="GL_RENDERBUFFER_STORAGE_SAMPLES_AMD"/>
+        <enum value="0x91B3" name="GL_MAX_COLOR_FRAMEBUFFER_SAMPLES_AMD"/>
+        <enum value="0x91B4" name="GL_MAX_COLOR_FRAMEBUFFER_STORAGE_SAMPLES_AMD"/>
+        <enum value="0x91B5" name="GL_MAX_DEPTH_STENCIL_FRAMEBUFFER_SAMPLES_AMD"/>
+        <enum value="0x91B6" name="GL_NUM_SUPPORTED_MULTISAMPLE_MODES_AMD"/>
+        <enum value="0x91B7" name="GL_SUPPORTED_MULTISAMPLE_MODES_AMD"/>
+            <unused start="0x91B8" end="0x91B8" vendor="AMD"/>
         <enum value="0x91B9" name="GL_COMPUTE_SHADER"/>
             <unused start="0x91BA" vendor="AMD"/>
         <enum value="0x91BB" name="GL_MAX_COMPUTE_UNIFORM_BLOCKS"/>
@@ -22306,6 +22312,15 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>height</name></param>
         </command>
         <command>
+            <proto>void <name>glNamedRenderbufferStorageMultisampleAdvancedAMD</name></proto>
+            <param group="Renderbuffer"><ptype>GLuint</ptype> <name>renderbuffer</name></param>
+            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param><ptype>GLsizei</ptype> <name>storageSamples</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param><ptype>GLsizei</ptype> <name>width</name></param>
+            <param><ptype>GLsizei</ptype> <name>height</name></param>
+        </command>
+        <command>
             <proto>void <name>glNamedRenderbufferStorageMultisampleCoverageEXT</name></proto>
             <param group="Renderbuffer"><ptype>GLuint</ptype> <name>renderbuffer</name></param>
             <param><ptype>GLsizei</ptype> <name>coverageSamples</name></param>
@@ -25191,6 +25206,15 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glRenderbufferStorageMultisampleAPPLE</name></proto>
             <param group="RenderbufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param><ptype>GLsizei</ptype> <name>width</name></param>
+            <param><ptype>GLsizei</ptype> <name>height</name></param>
+        </command>
+        <command>
+            <proto>void <name>glRenderbufferStorageMultisampleAdvancedAMD</name></proto>
+            <param group="RenderbufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param><ptype>GLsizei</ptype> <name>storageSamples</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -38756,6 +38780,18 @@ typedef unsigned int GLhandleARB;
                 <command name="glBlendFuncSeparateIndexedAMD"/>
                 <command name="glBlendEquationIndexedAMD"/>
                 <command name="glBlendEquationSeparateIndexedAMD"/>
+            </require>
+        </extension>
+        <extension name="GL_AMD_framebuffer_multisample_advanced" supported="gl|glcore|gles2">
+            <require>
+                <enum name="GL_RENDERBUFFER_STORAGE_SAMPLES_AMD"/>
+                <enum name="GL_MAX_COLOR_FRAMEBUFFER_SAMPLES_AMD"/>
+                <enum name="GL_MAX_COLOR_FRAMEBUFFER_STORAGE_SAMPLES_AMD"/>
+                <enum name="GL_MAX_DEPTH_STENCIL_FRAMEBUFFER_SAMPLES_AMD"/>
+                <enum name="GL_NUM_SUPPORTED_MULTISAMPLE_MODES_AMD"/>
+                <enum name="GL_SUPPORTED_MULTISAMPLE_MODES_AMD"/>
+                <command name="glRenderbufferStorageMultisampleAdvancedAMD"/>
+                <command name="glNamedRenderbufferStorageMultisampleAdvancedAMD"/>
             </require>
         </extension>
         <extension name="GL_AMD_framebuffer_sample_positions" supported="gl">

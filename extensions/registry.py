@@ -57,6 +57,12 @@ registry = {
         'supporters' : { 'NVIDIA', 'TransGaming' },
         'url' : 'extensions/AMD/AMD_draw_buffers_blend.txt',
     },
+    'GL_AMD_framebuffer_multisample_advanced' : {
+        'number' : 523,
+        'esnumber' : 303,
+        'flags' : { 'public' },
+        'url' : 'extensions/AMD/AMD_framebuffer_multisample_advanced.txt',
+    },
     'GL_AMD_framebuffer_sample_positions' : {
         'number' : 454,
         'flags' : { 'public' },
