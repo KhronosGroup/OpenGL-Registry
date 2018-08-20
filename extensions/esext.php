@@ -631,4 +631,6 @@
 </li>
 <li value=303><a href="extensions/AMD/AMD_framebuffer_multisample_advanced.txt">GL_AMD_framebuffer_multisample_advanced</a>
 </li>
+<li value=304><a href="extensions/QCOM/QCOM_shader_framebuffer_fetch_rate.txt">GL_QCOM_shader_framebuffer_fetch_rate</a>
+</li>
 </ol>

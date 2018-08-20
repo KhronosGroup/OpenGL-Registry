@@ -48932,6 +48932,8 @@ typedef unsigned int GLhandleARB;
                 <command name="glFramebufferFetchBarrierQCOM"/>
             </require>
         </extension>
+        <extension name="GL_QCOM_shader_framebuffer_fetch_rate" supported="gles2">
+        </extension>
         <extension name="GL_QCOM_tiled_rendering" supported="gles1|gles2">
             <require>
                 <enum name="GL_COLOR_BUFFER_BIT0_QCOM"/>
