@@ -621,4 +621,6 @@
 </li>
 <li value=299><a href="extensions/EXT/EXT_texture_format_sRGB_override.txt">GL_EXT_texture_format_sRGB_override</a>
 </li>
+<li value=300><a href="extensions/QCOM/QCOM_shader_framebuffer_fetch_rate.txt">GL_QCOM_shader_framebuffer_fetch_rate</a>
+</li>
 </ol>

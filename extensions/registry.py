@@ -4297,10 +4297,30 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_extended_get2.txt',
     },
+    'GL_QCOM_framebuffer_foveated' : {
+        'esnumber' : 273,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_framebuffer_foveated.txt',
+    },
     'GL_QCOM_performance_monitor_global_mode' : {
         'esnumber' : 56,
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_performance_monitor_global_mode.txt',
+    },
+    'GL_QCOM_shader_framebuffer_fetch_noncoherent' : {
+        'esnumber' : 277,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_shader_framebuffer_fetch_noncoherent.txt',
+    },
+    'GL_QCOM_shader_framebuffer_fetch_rate' : {
+        'esnumber' : 300,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_shader_framebuffer_fetch_rate.txt',
+    },
+    'GL_QCOM_texture_foveated' : {
+        'esnumber' : 293,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_texture_foveated.txt',
     },
     'GL_QCOM_tiled_rendering' : {
         'esnumber' : 70,
@@ -4312,21 +4332,6 @@ registry = {
         'esnumber' : 61,
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_writeonly_rendering.txt',
-    },
-    'GL_QCOM_framebuffer_foveated' : {
-        'esnumber' : 273,
-        'flags' : { 'public' },
-        'url' : 'extensions/QCOM/QCOM_framebuffer_foveated.txt',
-    },
-    'GL_QCOM_texture_foveated' : {
-        'esnumber' : 293,
-        'flags' : { 'public' },
-        'url' : 'extensions/QCOM/QCOM_texture_foveated.txt',
-    },
-    'GL_QCOM_shader_framebuffer_fetch_noncoherent' : {
-        'esnumber' : 277,
-        'flags' : { 'public' },
-        'url' : 'extensions/QCOM/QCOM_shader_framebuffer_fetch_noncoherent.txt',
     },
     'GL_REND_screen_coordinates' : {
         'number' : 155,

@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20180221 */
+/* Generated on date 20180820 */
 
 /* Generated C header for:
  * API: gles2
@@ -3523,6 +3523,10 @@ typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERFETCHBARRIERQCOMPROC) (void);
 GL_APICALL void GL_APIENTRY glFramebufferFetchBarrierQCOM (void);
 #endif
 #endif /* GL_QCOM_shader_framebuffer_fetch_noncoherent */
+
+#ifndef GL_QCOM_shader_framebuffer_fetch_rate
+#define GL_QCOM_shader_framebuffer_fetch_rate 1
+#endif /* GL_QCOM_shader_framebuffer_fetch_rate */
 
 #ifndef GL_QCOM_texture_foveated
 #define GL_QCOM_texture_foveated 1
