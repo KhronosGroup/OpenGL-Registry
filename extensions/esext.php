@@ -631,6 +631,6 @@
 </li>
 <li value=303><a href="extensions/AMD/AMD_framebuffer_multisample_advanced.txt">GL_AMD_framebuffer_multisample_advanced</a>
 </li>
-<li value=304><a href="extensions/NV/NV_memory_attachment.txt">GL_NV_memory_attachment</a>
+<li value=305><a href="extensions/NV/NV_memory_attachment.txt">GL_NV_memory_attachment</a>
 </li>
 </ol>

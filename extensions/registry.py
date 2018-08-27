@@ -3412,7 +3412,7 @@ registry = {
     },
     'GL_NV_memory_attachment' : {
         'number' : 524,
-        'esnumber' : 304,
+        'esnumber' : 305,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_memory_attachment.txt',
