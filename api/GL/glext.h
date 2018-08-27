@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20180827
+#define GL_GLEXT_VERSION 20180725
 
 /* Generated C header for:
  * API: gl
@@ -10176,34 +10176,6 @@ GLAPI void APIENTRY glGetInternalformatSampleivNV (GLenum target, GLenum interna
 #define GL_MAX_SHININESS_NV               0x8504
 #define GL_MAX_SPOT_EXPONENT_NV           0x8505
 #endif /* GL_NV_light_max_exponent */
-
-#ifndef GL_NV_memory_attachment
-#define GL_NV_memory_attachment 1
-#define GL_ATTACHED_MEMORY_OBJECT_NV      0x95A4
-#define GL_ATTACHED_MEMORY_OFFSET_NV      0x95A5
-#define GL_MEMORY_ATTACHABLE_ALIGNMENT_NV 0x95A6
-#define GL_MEMORY_ATTACHABLE_SIZE_NV      0x95A7
-#define GL_MEMORY_ATTACHABLE_NV           0x95A8
-#define GL_DETACHED_MEMORY_INCARNATION_NV 0x95A9
-#define GL_DETACHED_TEXTURES_NV           0x95AA
-#define GL_DETACHED_BUFFERS_NV            0x95AB
-#define GL_MAX_DETACHED_TEXTURES_NV       0x95AC
-#define GL_MAX_DETACHED_BUFFERS_NV        0x95AD
-typedef void (APIENTRYP PFNGLGETMEMORYOBJECTDETACHEDRESOURCESUIVNVPROC) (GLuint memory, GLenum pname, GLint first, GLsizei count, GLuint *params);
-typedef void (APIENTRYP PFNGLRESETMEMORYOBJECTPARAMETERNVPROC) (GLuint memory, GLenum pname);
-typedef void (APIENTRYP PFNGLTEXATTACHMEMORYNVPROC) (GLenum target, GLuint memory, GLuint64 offset);
-typedef void (APIENTRYP PFNGLBUFFERATTACHMEMORYNVPROC) (GLenum target, GLuint memory, GLuint64 offset);
-typedef void (APIENTRYP PFNGLTEXTUREATTACHMEMORYNVPROC) (GLuint texture, GLuint memory, GLuint64 offset);
-typedef void (APIENTRYP PFNGLNAMEDBUFFERATTACHMEMORYNVPROC) (GLuint buffer, GLuint memory, GLuint64 offset);
-#ifdef GL_GLEXT_PROTOTYPES
-GLAPI void APIENTRY glGetMemoryObjectDetachedResourcesuivNV (GLuint memory, GLenum pname, GLint first, GLsizei count, GLuint *params);
-GLAPI void APIENTRY glResetMemoryObjectParameterNV (GLuint memory, GLenum pname);
-GLAPI void APIENTRY glTexAttachMemoryNV (GLenum target, GLuint memory, GLuint64 offset);
-GLAPI void APIENTRY glBufferAttachMemoryNV (GLenum target, GLuint memory, GLuint64 offset);
-GLAPI void APIENTRY glTextureAttachMemoryNV (GLuint texture, GLuint memory, GLuint64 offset);
-GLAPI void APIENTRY glNamedBufferAttachMemoryNV (GLuint buffer, GLuint memory, GLuint64 offset);
-#endif
-#endif /* GL_NV_memory_attachment */
 
 #ifndef GL_NV_multisample_coverage
 #define GL_NV_multisample_coverage 1

@@ -28,7 +28,7 @@ Version
 Number
 
     524
-    OpenGL ES Extension #304
+    OpenGL ES Extension #305
 
 Dependencies
 
