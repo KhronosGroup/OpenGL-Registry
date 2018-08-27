@@ -451,7 +451,7 @@ Registry at
     </enums>
 
     <enums namespace="EGL" start="0x3080" end="0x30AF" vendor="KHR" comment="Values shared with EGL. Do not allocate additional values in this range.">
-        <enum value="0x3087" name="WGL_COLORSPACE_EXT"/>
+        <enum value="0x309D" name="WGL_COLORSPACE_EXT"/>
         <enum value="0x3089" name="WGL_COLORSPACE_SRGB_EXT"/>
         <enum value="0x308A" name="WGL_COLORSPACE_LINEAR_EXT"/>
     </enums>
