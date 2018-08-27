@@ -3410,6 +3410,13 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_light_max_exponent.txt',
     },
+    'GL_NV_memory_attachment' : {
+        'number' : 524,
+        'esnumber' : 304,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_memory_attachment.txt',
+    },
     'GL_NV_multisample_coverage' : {
         'number' : 393,
         'flags' : { 'public' },

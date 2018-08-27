@@ -10029,7 +10029,18 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9599" name="GL_DEVICE_LUID_EXT"/>
         <enum value="0x959A" name="GL_DEVICE_NODE_MASK_EXT"/>
         <enum value="0x959B" name="GL_PROTECTED_MEMORY_OBJECT_EXT"/>
-            <unused start="0x959C" end="0x962F" vendor="NV"/>
+            <unused start="0x959C" end="0x95A3" vendor="NV"/>
+        <enum value="0x95A4" name="GL_ATTACHED_MEMORY_OBJECT_NV"/>
+        <enum value="0x95A5" name="GL_ATTACHED_MEMORY_OFFSET_NV"/>
+        <enum value="0x95A6" name="GL_MEMORY_ATTACHABLE_ALIGNMENT_NV"/>
+        <enum value="0x95A7" name="GL_MEMORY_ATTACHABLE_SIZE_NV"/>
+        <enum value="0x95A8" name="GL_MEMORY_ATTACHABLE_NV"/>
+        <enum value="0x95A9" name="GL_DETACHED_MEMORY_INCARNATION_NV"/>
+        <enum value="0x95AA" name="GL_DETACHED_TEXTURES_NV"/>
+        <enum value="0x95AB" name="GL_DETACHED_BUFFERS_NV"/>
+        <enum value="0x95AC" name="GL_MAX_DETACHED_TEXTURES_NV"/>
+        <enum value="0x95AD" name="GL_MAX_DETACHED_BUFFERS_NV"/>
+            <unused start="0x95AE" end="0x962F" vendor="NV"/>
     </enums>
 
     <enums namespace="GL" start="0x9630" end="0x963F" vendor="Oculus" comment="Email from Cass Everitt">
@@ -11147,6 +11158,12 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLuint64EXT</ptype> <name>address</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>length</name></param>
+        </command>
+        <command>
+            <proto>void <name>glBufferAttachMemoryNV</name></proto>
+            <param group="BufferTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLuint</ptype> <name>memory</name></param>
+            <param><ptype>GLuint64</ptype> <name>offset</name></param>
         </command>
         <command>
             <proto>void <name>glBufferData</name></proto>
@@ -16938,6 +16955,14 @@ typedef unsigned int GLhandleARB;
             <param len="COMPSIZE(pname)"><ptype>GLfixed</ptype> *<name>params</name></param>
         </command>
         <command>
+            <proto>void <name>glGetMemoryObjectDetachedResourcesuivNV</name></proto>
+            <param><ptype>GLuint</ptype> <name>memory</name></param>
+            <param><ptype>GLenum</ptype> <name>pname</name></param>
+            <param><ptype>GLint</ptype> <name>first</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
+            <param><ptype>GLuint</ptype> *<name>params</name></param>
+        </command>
+        <command>
             <proto>void <name>glGetMemoryObjectParameterivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>memoryObject</name></param>
             <param group="MemoryObjectParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
@@ -21979,6 +22004,12 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLbitfield</ptype> <name>waitGpuMask</name></param>
         </command>
         <command>
+            <proto>void <name>glNamedBufferAttachMemoryNV</name></proto>
+            <param><ptype>GLuint</ptype> <name>buffer</name></param>
+            <param><ptype>GLuint</ptype> <name>memory</name></param>
+            <param><ptype>GLuint64</ptype> <name>offset</name></param>
+        </command>
+        <command>
             <proto>void <name>glNamedBufferData</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
@@ -25450,6 +25481,11 @@ typedef unsigned int GLhandleARB;
             <glx type="render" opcode="4112"/>
         </command>
         <command>
+            <proto>void <name>glResetMemoryObjectParameterNV</name></proto>
+            <param><ptype>GLuint</ptype> <name>memory</name></param>
+            <param><ptype>GLenum</ptype> <name>pname</name></param>
+        </command>
+        <command>
             <proto>void <name>glResetMinmax</name></proto>
             <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
             <glx type="render" opcode="4113"/>
@@ -26447,6 +26483,12 @@ typedef unsigned int GLhandleARB;
             <proto group="Boolean"><ptype>GLboolean</ptype> <name>glTestObjectAPPLE</name></proto>
             <param group="ObjectTypeAPPLE"><ptype>GLenum</ptype> <name>object</name></param>
             <param><ptype>GLuint</ptype> <name>name</name></param>
+        </command>
+        <command>
+            <proto>void <name>glTexAttachMemoryNV</name></proto>
+            <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLuint</ptype> <name>memory</name></param>
+            <param><ptype>GLuint64</ptype> <name>offset</name></param>
         </command>
         <command>
             <proto>void <name>glTexBuffer</name></proto>
@@ -27666,6 +27708,12 @@ typedef unsigned int GLhandleARB;
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width,height,depth,size4d)">const void *<name>pixels</name></param>
             <glx type="render" opcode="2058"/>
+        </command>
+        <command>
+            <proto>void <name>glTextureAttachMemoryNV</name></proto>
+            <param><ptype>GLuint</ptype> <name>texture</name></param>
+            <param><ptype>GLuint</ptype> <name>memory</name></param>
+            <param><ptype>GLuint64</ptype> <name>offset</name></param>
         </command>
         <command>
             <proto>void <name>glTextureBarrier</name></proto>
@@ -46691,6 +46739,28 @@ typedef unsigned int GLhandleARB;
                 <command name="glMulticastGetQueryObjectuivNV"/>
                 <command name="glMulticastGetQueryObjecti64vNV"/>
                 <command name="glMulticastGetQueryObjectui64vNV"/>
+            </require>
+        </extension>
+        <extension name="GL_NV_memory_attachment" supported="gl|glcore|gles2">
+            <require>
+                <enum name="GL_ATTACHED_MEMORY_OBJECT_NV"/>
+                <enum name="GL_ATTACHED_MEMORY_OFFSET_NV"/>
+                <enum name="GL_MEMORY_ATTACHABLE_ALIGNMENT_NV"/>
+                <enum name="GL_MEMORY_ATTACHABLE_SIZE_NV"/>
+                <enum name="GL_MEMORY_ATTACHABLE_NV"/>
+                <enum name="GL_DETACHED_MEMORY_INCARNATION_NV"/>
+                <enum name="GL_DETACHED_TEXTURES_NV"/>
+                <enum name="GL_DETACHED_BUFFERS_NV"/>
+                <enum name="GL_MAX_DETACHED_TEXTURES_NV"/>
+                <enum name="GL_MAX_DETACHED_BUFFERS_NV"/>
+                <command name="glGetMemoryObjectDetachedResourcesuivNV"/>
+                <command name="glResetMemoryObjectParameterNV"/>
+                <command name="glTexAttachMemoryNV"/>
+                <command name="glBufferAttachMemoryNV"/>
+            </require>
+            <require comment="Supported only if GL_EXT_direct_state_access is supported">
+                <command name="glTextureAttachMemoryNV"/>
+                <command name="glNamedBufferAttachMemoryNV"/>
             </require>
         </extension>
         <extension name="GL_NV_multisample_coverage" supported="gl">
