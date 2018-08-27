@@ -103,8 +103,10 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <p> These headers define interfaces including enumerants; prototypes; and,
     for platforms supporting dynamic runtime extension queries, such as
     Linux and Microsoft Windows, function pointer typedefs. Please report
-    problems as Issues in the <a
-    href="index.php#repository">OpenGL-Registry</a> repository. </p>
+    problems as <a
+    href="https://github.com/KhronosGroup/OpenGL-Registry/issues/">Issues</a>
+    in the <a href="index.php#repository">OpenGL-Registry</a> repository.
+    </p>
 
 <p> <a name="headerskhr"></a> <b> Khronos Shared Platform Header
     (<tt>&lt;KHR/khrplatform.h&gt;</tt>) </b> </p>
