@@ -2918,6 +2918,34 @@ GL_APICALL void GL_APIENTRY glGetInternalformatSampleivNV (GLenum target, GLenum
 #endif
 #endif /* GL_NV_internalformat_sample_query */
 
+#ifndef GL_NV_memory_attachment
+#define GL_NV_memory_attachment 1
+#define GL_ATTACHED_MEMORY_OBJECT_NV      0x95A4
+#define GL_ATTACHED_MEMORY_OFFSET_NV      0x95A5
+#define GL_MEMORY_ATTACHABLE_ALIGNMENT_NV 0x95A6
+#define GL_MEMORY_ATTACHABLE_SIZE_NV      0x95A7
+#define GL_MEMORY_ATTACHABLE_NV           0x95A8
+#define GL_DETACHED_MEMORY_INCARNATION_NV 0x95A9
+#define GL_DETACHED_TEXTURES_NV           0x95AA
+#define GL_DETACHED_BUFFERS_NV            0x95AB
+#define GL_MAX_DETACHED_TEXTURES_NV       0x95AC
+#define GL_MAX_DETACHED_BUFFERS_NV        0x95AD
+typedef void (GL_APIENTRYP PFNGLGETMEMORYOBJECTDETACHEDRESOURCESUIVNVPROC) (GLuint memory, GLenum pname, GLint first, GLsizei count, GLuint *params);
+typedef void (GL_APIENTRYP PFNGLRESETMEMORYOBJECTPARAMETERNVPROC) (GLuint memory, GLenum pname);
+typedef void (GL_APIENTRYP PFNGLTEXATTACHMEMORYNVPROC) (GLenum target, GLuint memory, GLuint64 offset);
+typedef void (GL_APIENTRYP PFNGLBUFFERATTACHMEMORYNVPROC) (GLenum target, GLuint memory, GLuint64 offset);
+typedef void (GL_APIENTRYP PFNGLTEXTUREATTACHMEMORYNVPROC) (GLuint texture, GLuint memory, GLuint64 offset);
+typedef void (GL_APIENTRYP PFNGLNAMEDBUFFERATTACHMEMORYNVPROC) (GLuint buffer, GLuint memory, GLuint64 offset);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glGetMemoryObjectDetachedResourcesuivNV (GLuint memory, GLenum pname, GLint first, GLsizei count, GLuint *params);
+GL_APICALL void GL_APIENTRY glResetMemoryObjectParameterNV (GLuint memory, GLenum pname);
+GL_APICALL void GL_APIENTRY glTexAttachMemoryNV (GLenum target, GLuint memory, GLuint64 offset);
+GL_APICALL void GL_APIENTRY glBufferAttachMemoryNV (GLenum target, GLuint memory, GLuint64 offset);
+GL_APICALL void GL_APIENTRY glTextureAttachMemoryNV (GLuint texture, GLuint memory, GLuint64 offset);
+GL_APICALL void GL_APIENTRY glNamedBufferAttachMemoryNV (GLuint buffer, GLuint memory, GLuint64 offset);
+#endif
+#endif /* GL_NV_memory_attachment */
+
 #ifndef GL_NV_non_square_matrices
 #define GL_NV_non_square_matrices 1
 #define GL_FLOAT_MAT2x3_NV                0x8B65
