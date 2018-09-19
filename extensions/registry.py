@@ -3107,6 +3107,12 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_compute_program5.txt',
     },
+    'GL_NV_compute_shader_derivatives' : {
+        'number' : 525,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_compute_shader_derivatives.txt',
+    },
     'GL_NV_conditional_render' : {
         'number' : 346,
         'esnumber' : 198,
@@ -3300,6 +3306,12 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_fragment_program_option.txt',
     },
+    'GL_NV_fragment_shader_barycentric' : {
+        'number' : 526,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_fragment_shader_barycentric.txt',
+    },
     'GL_NV_fragment_shader_interlock' : {
         'number' : 468,
         'esnumber' : 230,
@@ -3416,6 +3428,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_memory_attachment.txt',
+    },
+    'GL_NV_mesh_shader' : {
+        'number' : 527,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_mesh_shader.txt',
     },
     'GL_NV_multisample_coverage' : {
         'number' : 393,
@@ -3555,6 +3573,12 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_register_combiners2.txt',
     },
+    'GL_NV_representative_fragment_test' : {
+        'number' : 528,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_representative_fragment_test.txt',
+    },
     'GL_NV_robustness_video_memory_purge' : {
         'number' : 484,
         'flags' : { 'public' },
@@ -3576,6 +3600,12 @@ registry = {
         'esnumber' : 236,
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_sample_mask_override_coverage.txt',
+    },
+    'GL_NV_scissor_exclusive' : {
+        'number' : 529,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_scissor_exclusive.txt',
     },
     'GL_NV_shader_atomic_counters' : {
         'number' : 423,
@@ -3629,6 +3659,12 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_shader_storage_buffer_object.txt',
     },
+    'GL_NV_shader_texture_footprint' : {
+        'number' : 530,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_shader_texture_footprint.txt',
+    },
     'GL_NV_shader_thread_group' : {
         'number' : 447,
         'flags' : { 'public' },
@@ -3638,6 +3674,12 @@ registry = {
         'number' : 448,
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_shader_thread_shuffle.txt',
+    },
+    'GL_NV_shading_rate_image' : {
+        'number' : 531,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_shading_rate_image.txt',
     },
     'GL_NV_shadow_samplers_array' : {
         'esnumber' : 146,
