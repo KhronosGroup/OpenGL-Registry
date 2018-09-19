@@ -3839,6 +3839,7 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" group="FoveationConfigBitQCOM" type="bitmask">
         <enum value="0x00000001" name="GL_FOVEATION_ENABLE_BIT_QCOM"/>
         <enum value="0x00000002" name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM"/>
+        <enum value="0x00000004" name="GL_FOVEATION_SUBSAMPLED_LAYOUT_METHOD_BIT_QCOM"/>
     </enums>
 
     <enums namespace="GL" group="FfdMaskSGIX" type="bitmask">
@@ -9082,7 +9083,8 @@ typedef unsigned int GLhandleARB;
 
     <enums namespace="GL" start="0x8FA0" end="0x8FBF" vendor="QCOM" comment="For Maurice Ribble, bug 4512">
         <enum value="0x8FA0" name="GL_PERFMON_GLOBAL_MODE_QCOM"/>
-            <unused start="0x8FA1" end="0x8FAF" vendor="QCOM"/>
+        <enum value="0x8FA1" name="GL_MAX_SHADER_SUBSAMPLED_IMAGE_UNITS_QCOM"/>
+            <unused start="0x8FA2" end="0x8FAF" vendor="QCOM"/>
         <enum value="0x8FB0" name="GL_BINNING_CONTROL_HINT_QCOM"/>
         <enum value="0x8FB1" name="GL_CPU_OPTIMIZED_QCOM"/>
         <enum value="0x8FB2" name="GL_GPU_OPTIMIZED_QCOM"/>
@@ -49394,6 +49396,12 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_TEXTURE_FOVEATED_NUM_FOCAL_POINTS_QUERY_QCOM"/>
                 <enum name="GL_FRAMEBUFFER_INCOMPLETE_FOVEATION_QCOM"/>
                 <command name="glTextureFoveationParametersQCOM"/>
+            </require>
+        </extension>
+        <extension name="GL_QCOM_texture_foveated_subsampled_layout" supported="gles2">
+            <require>
+                <enum name="GL_FOVEATION_SUBSAMPLED_LAYOUT_METHOD_BIT_QCOM"/>
+                <enum name="GL_MAX_SHADER_SUBSAMPLED_IMAGE_UNITS_QCOM"/>
             </require>
         </extension>
         <extension name="GL_QCOM_perfmon_global_mode" supported="gles1|gles2">
