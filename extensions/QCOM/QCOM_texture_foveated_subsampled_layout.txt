@@ -28,7 +28,7 @@ Version
 
 Number
 
-     OpenGL ES Extension #305
+     OpenGL ES Extension #306
 
 Dependencies
 

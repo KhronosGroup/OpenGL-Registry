@@ -635,4 +635,6 @@
 </li>
 <li value=305><a href="extensions/NV/NV_memory_attachment.txt">GL_NV_memory_attachment</a>
 </li>
+<li value=306><a href="extensions/QCOM/QCOM_texture_foveated_subsampled_layout.txt">GL_QCOM_texture_foveated_subsampled_layout</a>
+</li>
 </ol>
