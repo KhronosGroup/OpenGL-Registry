@@ -987,4 +987,18 @@
 </li>
 <li value=524><a href="extensions/NV/NV_memory_attachment.txt">GL_NV_memory_attachment</a>
 </li>
+<li value=525><a href="extensions/NV/NV_compute_shader_derivatives.txt">GL_NV_compute_shader_derivatives</a>
+</li>
+<li value=526><a href="extensions/NV/NV_fragment_shader_barycentric.txt">GL_NV_fragment_shader_barycentric</a>
+</li>
+<li value=527><a href="extensions/NV/NV_mesh_shader.txt">GL_NV_mesh_shader</a>
+</li>
+<li value=528><a href="extensions/NV/NV_representative_fragment_test.txt">GL_NV_representative_fragment_test</a>
+</li>
+<li value=529><a href="extensions/NV/NV_scissor_exclusive.txt">GL_NV_scissor_exclusive</a>
+</li>
+<li value=530><a href="extensions/NV/NV_shader_texture_footprint.txt">GL_NV_shader_texture_footprint</a>
+</li>
+<li value=531><a href="extensions/NV/NV_shading_rate_image.txt">GL_NV_shading_rate_image</a>
+</li>
 </ol>

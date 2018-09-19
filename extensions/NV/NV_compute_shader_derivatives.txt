@@ -1,0 +1,92 @@
+Name
+
+    NV_compute_shader_derivatives
+
+Name Strings
+
+    GL_NV_compute_shader_derivatives
+
+Contact
+
+    Pat Brown, NVIDIA (pbrown 'at' nvidia.com)
+
+Contributors
+
+    Ashwin Lele, NVIDIA
+    Jeff Bolz, NVIDIA
+
+Status
+
+    Shipping
+
+Version
+
+    Last Modified:      September 15, 2018
+    Revision:           1
+
+Number
+
+    OpenGL Extension #525
+
+Dependencies
+
+    This extension is written against the OpenGL 4.6 Specification
+    (Compatibility Profile), dated October 24, 2016.
+
+    OpenGL 4.5 is required.
+
+    This extension requires support for the OpenGL Shading Language (GLSL)
+    extension "NV_compute_shader_derivatives", which can be found at the
+    Khronos Group Github site here:
+
+        https://github.com/KhronosGroup/GLSL
+
+Overview
+
+    This extension adds OpenGL API support for the OpenGL Shading Language
+    (GLSL) extension "NV_compute_shader_derivatives".
+
+    That extension, when enabled, allows applications to use derivatives in
+    compute shaders.  It adds compute shader support for explicit derivative
+    built-in functions like dFdx(), automatic derivative computation in
+    texture lookup functions like texture(), use of the optional LOD bias
+    parameter to adjust the computed level of detail values in texture lookup
+    functions, and the texture level of detail query function
+    textureQueryLod().
+
+New Procedures and Functions
+
+    None
+
+New Tokens
+
+    None
+
+Modifications to the OpenGL 4.6 Specification (Compatibility Profile)
+
+    None
+
+Additions to the AGL/GLX/WGL Specifications
+
+    None
+
+Errors
+
+    None
+
+New State
+
+    None
+
+New Implementation Dependent State
+
+    None
+
+Issues
+
+    None, but please refer to issues in the GLSL extension specification.
+
+Revision History
+
+    Revision 1 (pbrown)
+    - Internal revisions.
