@@ -46441,7 +46441,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_COMPUTE_PROGRAM_PARAMETER_BUFFER_NV"/>
             </require>
         </extension>
-        <extension name="GL_NV_compute_shader_derivatives" supported="gl" />
+        <extension name="GL_NV_compute_shader_derivatives" supported="gl|glcore"/>
         <extension name="GL_NV_conditional_render" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_QUERY_WAIT_NV"/>
@@ -46760,7 +46760,7 @@ typedef unsigned int GLhandleARB;
         </extension>
         <extension name="GL_NV_fragment_program4" supported="gl"/>
         <extension name="GL_NV_fragment_program_option" supported="gl"/>
-        <extension name="GL_NV_fragment_shader_barycentric" supported="gl" />
+        <extension name="GL_NV_fragment_shader_barycentric" supported="gl|glcore"/>
         <extension name="GL_NV_fragment_shader_interlock" supported="gl|glcore|gles2"/>
         <extension name="GL_NV_framebuffer_blit" supported="gles2">
             <require>
@@ -47067,7 +47067,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glNamedBufferAttachMemoryNV"/>
             </require>
         </extension>
-        <extension name="GL_NV_mesh_shader" supported="gl">
+        <extension name="GL_NV_mesh_shader" supported="gl|glcore">
             <require>
                 <enum name="GL_MESH_SHADER_NV"/>
                 <enum name="GL_TASK_SHADER_NV"/>
@@ -47620,7 +47620,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glGetCombinerStageParameterfvNV"/>
             </require>
         </extension>
-        <extension name="GL_NV_representative_fragment_test" supported="gl">
+        <extension name="GL_NV_representative_fragment_test" supported="gl|glcore">
             <require>
                 <enum name="GL_REPRESENTATIVE_FRAGMENT_TEST_NV"/>
             </require>
@@ -47660,7 +47660,7 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_NV_sample_mask_override_coverage" supported="gl|glcore|gles2"/>
-        <extension name="GL_NV_scissor_exclusive" supported="gl">
+        <extension name="GL_NV_scissor_exclusive" supported="gl|glcore">
             <require>
                 <enum name="GL_SCISSOR_TEST_EXCLUSIVE_NV"/>
                 <enum name="GL_SCISSOR_BOX_EXCLUSIVE_NV"/>
@@ -47703,7 +47703,7 @@ typedef unsigned int GLhandleARB;
         </extension>
         <extension name="GL_NV_shader_noperspective_interpolation" supported="gles2"/>
         <extension name="GL_NV_shader_storage_buffer_object" supported="gl"/>
-        <extension name="GL_NV_shader_texture_footprint" supported="gl"/>
+        <extension name="GL_NV_shader_texture_footprint" supported="gl|glcore"/>
         <extension name="GL_NV_shader_thread_group" supported="gl|glcore">
             <require>
                 <enum name="GL_WARP_SIZE_NV"/>
@@ -47712,7 +47712,7 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_NV_shader_thread_shuffle" supported="gl|glcore"/>
-        <extension name="GL_NV_shading_rate_image" supported="gl">
+        <extension name="GL_NV_shading_rate_image" supported="gl|glcore">
             <require>
                 <enum name="GL_SHADING_RATE_IMAGE_NV"/>
                 <enum name="GL_SHADING_RATE_NO_INVOCATIONS_NV"/>
