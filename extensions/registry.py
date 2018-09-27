@@ -1456,6 +1456,12 @@ registry = {
         'supporters' : { 'ATI' },
         'url' : 'extensions/ATI/ATI_pn_triangles.txt',
     },
+    'WGL_ATI_render_texture_rectangle' : {
+        'number' : 592,
+        'flags' : { 'public' },
+        'supporters' : { 'ATI' },
+        'url' : 'extensions/ATI/WGL_ATI_render_texture_rectangle.txt',
+    },
     'GL_ATI_separate_stencil' : {
         'number' : 289,
         'flags' : { 'public' },

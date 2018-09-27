@@ -427,6 +427,7 @@ Registry at
         <enum value="0x21A3"        name="WGL_GPU_RAM_AMD"/>
         <enum value="0x21A4"        name="WGL_GPU_CLOCK_AMD"/>
         <enum value="0x21A5"        name="WGL_GPU_NUM_PIPES_AMD"/>
+        <enum value="0x21A5"        name="WGL_TEXTURE_RECTANGLE_ATI" comment="Duplicates unrelated WGL_GPU_NUM_PIPES_AMD"/>
         <enum value="0x21A6"        name="WGL_GPU_NUM_SIMD_AMD"/>
         <enum value="0x21A7"        name="WGL_GPU_NUM_RB_AMD"/>
         <enum value="0x21A8"        name="WGL_GPU_NUM_SPI_AMD"/>
@@ -1625,6 +1626,11 @@ Registry at
         <extension name="WGL_ATI_pixel_format_float" supported="wgl">
             <require>
                 <enum name="WGL_TYPE_RGBA_FLOAT_ATI"/>
+            </require>
+        </extension>
+        <extension name="WGL_ATI_render_texture_rectangle" supported="wgl">
+            <require>
+                <enum name="WGL_TEXTURE_RECTANGLE_ATI"/>
             </require>
         </extension>
         <extension name="WGL_EXT_colorspace" supported="wgl">
