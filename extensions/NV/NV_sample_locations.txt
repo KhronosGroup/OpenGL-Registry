@@ -76,7 +76,7 @@ New Procedures and Functions
     void NamedFramebufferSampleLocationsfvNV(uint framebuffer, uint start,
                                              sizei count, const float *v);
 
-    void ResolveDepthValuesNV();
+    void ResolveDepthValuesNV(void);
 
 New Tokens
 
