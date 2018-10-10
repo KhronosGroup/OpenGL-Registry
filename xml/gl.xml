@@ -199,15 +199,16 @@ typedef unsigned int GLhandleARB;
         <group name="BlendEquationModeEXT">
             <enum name="GL_ALPHA_MAX_SGIX"/>
             <enum name="GL_ALPHA_MIN_SGIX"/>
-            <enum name="GL_FUNC_ADD_EXT"/>
-            <enum name="GL_FUNC_REVERSE_SUBTRACT_EXT"/>
-            <enum name="GL_FUNC_SUBTRACT_EXT"/>
-            <enum name="GL_LOGIC_OP"/>
-            <enum name="GL_MAX_EXT"/>
-            <enum name="GL_MIN_EXT"/>
             <enum name="GL_FUNC_ADD"/>
+            <enum name="GL_FUNC_ADD_EXT"/>
             <enum name="GL_FUNC_REVERSE_SUBTRACT"/>
+            <enum name="GL_FUNC_REVERSE_SUBTRACT_EXT"/>
             <enum name="GL_FUNC_SUBTRACT"/>
+            <enum name="GL_FUNC_SUBTRACT_EXT"/>
+            <enum name="GL_MAX"/>
+            <enum name="GL_MAX_EXT"/>
+            <enum name="GL_MIN"/>
+            <enum name="GL_MIN_EXT"/>
         </group>
 
         <group name="Boolean">
@@ -265,6 +266,7 @@ typedef unsigned int GLhandleARB;
           <enum name="GL_TEXTURE_BUFFER" />
           <enum name="GL_TRANSFORM_FEEDBACK_BUFFER" />
           <enum name="GL_UNIFORM_BUFFER" />
+          <enum name="GL_PARAMETER_BUFFER" />
         </group>
 
         <group name="BufferUsageARB">
@@ -1748,18 +1750,30 @@ typedef unsigned int GLhandleARB;
         <group name="PixelFormat">
             <enum name="GL_ABGR_EXT"/>
             <enum name="GL_ALPHA"/>
+            <enum name="GL_BGR"/>
+            <enum name="GL_BGR_INTEGER"/>
+            <enum name="GL_BGRA"/>
+            <enum name="GL_BGRA_INTEGER"/>
             <enum name="GL_BLUE"/>
+            <enum name="GL_BLUE_INTEGER"/>
             <enum name="GL_CMYKA_EXT"/>
             <enum name="GL_CMYK_EXT"/>
             <enum name="GL_COLOR_INDEX"/>
             <enum name="GL_DEPTH_COMPONENT"/>
+            <enum name="GL_DEPTH_STENCIL"/>
             <enum name="GL_GREEN"/>
+            <enum name="GL_GREEN_INTEGER"/>
             <enum name="GL_LUMINANCE"/>
             <enum name="GL_LUMINANCE_ALPHA"/>
             <enum name="GL_RED"/>
             <enum name="GL_RED_EXT"/>
+            <enum name="GL_RED_INTEGER"/>
+            <enum name="GL_RG"/>
+            <enum name="GL_RG_INTEGER"/>
             <enum name="GL_RGB"/>
+            <enum name="GL_RGB_INTEGER"/>
             <enum name="GL_RGBA"/>
+            <enum name="GL_RGBA_INTEGER"/>
             <enum name="GL_STENCIL_INDEX"/>
             <enum name="GL_UNSIGNED_INT"/>
             <enum name="GL_UNSIGNED_SHORT"/>
@@ -2286,7 +2300,9 @@ typedef unsigned int GLhandleARB;
 
         <group name="StencilOp">
             <enum name="GL_DECR"/>
+            <enum name="GL_DECR_WRAP"/>
             <enum name="GL_INCR"/>
+            <enum name="GL_INCR_WRAP"/>
             <enum name="GL_INVERT"/>
             <enum name="GL_KEEP"/>
             <enum name="GL_REPLACE"/>
@@ -2629,6 +2645,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_COLOR_ATTACHMENT30"/>
             <enum name="GL_COLOR_ATTACHMENT31"/>
             <enum name="GL_DEPTH_ATTACHMENT"/>
+            <enum name="GL_DEPTH_STENCIL_ATTACHMENT"/>
             <enum name="GL_DEPTH_ATTACHMENT_EXT"/>
             <enum name="GL_DEPTH_ATTACHMENT_OES"/>
         </group>
@@ -2733,6 +2750,10 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_PRIMITIVES_GENERATED"/>
             <enum name="GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN"/>
             <enum name="GL_TIME_ELAPSED"/>
+        </group>
+
+        <group name="QueryCounterTarget">
+            <enum name="GL_TIMESTAMP"/>
         </group>
 
         <group name="ConvolutionTarget">
@@ -2928,6 +2949,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_DEBUG_SEVERITY_LOW"/>
             <enum name="GL_DEBUG_SEVERITY_MEDIUM"/>
             <enum name="GL_DEBUG_SEVERITY_HIGH"/>
+            <enum name="GL_DEBUG_SEVERITY_NOTIFICATION"/>
             <enum name="GL_DONT_CARE"/>
         </group>
 
@@ -25088,12 +25110,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glQueryCounter</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="QueryCounterTarget"><ptype>GLenum</ptype> <name>target</name></param>
         </command>
         <command>
             <proto>void <name>glQueryCounterEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="QueryTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="QueryCounterTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <alias name="glQueryCounter"/>
         </command>
         <command>
