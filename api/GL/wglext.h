@@ -39,7 +39,7 @@ extern "C" {
 #include <windows.h>
 #endif
 
-#define WGL_WGLEXT_VERSION 20180927
+#define WGL_WGLEXT_VERSION 20181017
 
 /* Generated C header for:
  * API: wgl

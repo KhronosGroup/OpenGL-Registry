@@ -1001,4 +1001,8 @@
 </li>
 <li value=531><a href="extensions/NV/NV_shading_rate_image.txt">GL_NV_shading_rate_image</a>
 </li>
+<li value=592><a href="extensions/ATI/WGL_ATI_render_texture_rectangle.txt">WGL_ATI_render_texture_rectangle</a>
+</li>
+<li value=593><a href="extensions/NV/NV_vdpau_interop2.txt">GL_NV_vdpau_interop2</a>
+</li>
 </ol>

@@ -3841,6 +3841,12 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_vdpau_interop.txt',
     },
+    'GL_NV_vdpau_interop2' : {
+        'number' : 593,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_vdpau_interop2.txt',
+    },
     'GL_NV_vertex_array_range' : {
         'number' : 190,
         'flags' : { 'public' },
