@@ -29603,6 +29603,14 @@ typedef unsigned int GLhandleARB;
             <param len="numTextureNames">const <ptype>GLuint</ptype> *<name>textureNames</name></param>
         </command>
         <command>
+            <proto group="vdpauSurfaceNV"><ptype>GLvdpauSurfaceNV</ptype> <name>glVDPAURegisterVideoSurfaceWithPictureStructureNV</name></proto>
+            <param>const void *<name>vdpSurface</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLsizei</ptype> <name>numTextureNames</name></param>
+            <param len="numTextureNames">const <ptype>GLuint</ptype> *<name>textureNames</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>isFrameStructure</name></param>
+        </command>
+        <command>
             <proto>void <name>glVDPAUSurfaceAccessNV</name></proto>
             <param group="vdpauSurfaceNV"><ptype>GLvdpauSurfaceNV</ptype> <name>surface</name></param>
             <param><ptype>GLenum</ptype> <name>access</name></param>
@@ -48041,6 +48049,11 @@ typedef unsigned int GLhandleARB;
                 <command name="glVDPAUSurfaceAccessNV"/>
                 <command name="glVDPAUMapSurfacesNV"/>
                 <command name="glVDPAUUnmapSurfacesNV"/>
+            </require>
+        </extension>
+        <extension name="GL_NV_vdpau_interop2" supported="gl">
+            <require>
+                <command name="glVDPAURegisterVideoSurfaceWithPictureStructureNV"/>
             </require>
         </extension>
         <extension name="GL_NV_vertex_array_range" supported="gl">
