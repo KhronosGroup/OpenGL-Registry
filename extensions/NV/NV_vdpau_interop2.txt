@@ -25,7 +25,7 @@ Version
 
 Number
 
-    593
+    OpenGL Extension #593
 
 Dependencies
 
