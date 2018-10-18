@@ -4400,6 +4400,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_shader_framebuffer_fetch_noncoherent.txt',
     },
+    'GL_QCOM_YUV_texture_gather' : {
+        'esnumber' : 307,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_YUV_texture_gather.txt',
+    },
     'GL_QCOM_shader_framebuffer_fetch_rate' : {
         'esnumber' : 304,
         'flags' : { 'public' },
