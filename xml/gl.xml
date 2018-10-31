@@ -10047,7 +10047,36 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9381" name="GL_MULTISAMPLE_LINE_WIDTH_RANGE"/>
         <enum value="0x9382" name="GL_MULTISAMPLE_LINE_WIDTH_GRANULARITY_ARB"/>
         <enum value="0x9382" name="GL_MULTISAMPLE_LINE_WIDTH_GRANULARITY"/>
-            <unused start="0x9383" end="0x939F" vendor="ARB"/>
+        <enum value="0x9383" name="GL_VIEW_CLASS_EAC_R11"/>
+        <enum value="0x9384" name="GL_VIEW_CLASS_EAC_RG11"/>
+        <enum value="0x9385" name="GL_VIEW_CLASS_ETC2_RGB"/>
+        <enum value="0x9386" name="GL_VIEW_CLASS_ETC2_RGBA"/>
+        <enum value="0x9387" name="GL_VIEW_CLASS_ETC2_EAC_RGBA"/>
+        <enum value="0x9388" name="GL_VIEW_CLASS_ASTC_4x4_RGBA"/>
+        <enum value="0x9389" name="GL_VIEW_CLASS_ASTC_5x4_RGBA"/>
+        <enum value="0x938A" name="GL_VIEW_CLASS_ASTC_5x5_RGBA"/>
+        <enum value="0x938B" name="GL_VIEW_CLASS_ASTC_6x5_RGBA"/>
+        <enum value="0x938C" name="GL_VIEW_CLASS_ASTC_6x6_RGBA"/>
+        <enum value="0x938D" name="GL_VIEW_CLASS_ASTC_8x5_RGBA"/>
+        <enum value="0x938E" name="GL_VIEW_CLASS_ASTC_8x6_RGBA"/>
+        <enum value="0x938F" name="GL_VIEW_CLASS_ASTC_8x8_RGBA"/>
+        <enum value="0x9390" name="GL_VIEW_CLASS_ASTC_10x5_RGBA"/>
+        <enum value="0x9391" name="GL_VIEW_CLASS_ASTC_10x6_RGBA"/>
+        <enum value="0x9392" name="GL_VIEW_CLASS_ASTC_10x8_RGBA"/>
+        <enum value="0x9393" name="GL_VIEW_CLASS_ASTC_10x10_RGBA"/>
+        <enum value="0x9394" name="GL_VIEW_CLASS_ASTC_12x10_RGBA"/>
+        <enum value="0x9395" name="GL_VIEW_CLASS_ASTC_12x12_RGBA"/>
+            <unused start="0x9396" end="0x939F" vendor="ARB" comment="reserved for ASTC 3D interactions with ARB_ifq2"/>
+            <!-- <enum value="0x9396" name="GL_VIEW_CLASS_ASTC_3x3x3_RGBA"/> -->
+            <!-- <enum value="0x9397" name="GL_VIEW_CLASS_ASTC_4x3x3_RGBA"/> -->
+            <!-- <enum value="0x9398" name="GL_VIEW_CLASS_ASTC_4x4x3_RGBA"/> -->
+            <!-- <enum value="0x9399" name="GL_VIEW_CLASS_ASTC_4x4x4_RGBA"/> -->
+            <!-- <enum value="0x939A" name="GL_VIEW_CLASS_ASTC_5x4x4_RGBA"/> -->
+            <!-- <enum value="0x939B" name="GL_VIEW_CLASS_ASTC_5x5x4_RGBA"/> -->
+            <!-- <enum value="0x939C" name="GL_VIEW_CLASS_ASTC_5x5x5_RGBA"/> -->
+            <!-- <enum value="0x939D" name="GL_VIEW_CLASS_ASTC_6x5x5_RGBA"/> -->
+            <!-- <enum value="0x939E" name="GL_VIEW_CLASS_ASTC_6x6x5_RGBA"/> -->
+            <!-- <enum value="0x939F" name="GL_VIEW_CLASS_ASTC_6x6x6_RGBA"/> -->
     </enums>
 
     <enums namespace="GL" start="0x93A0" end="0x93AF" vendor="ANGLE" comment="Khronos bug 8100">
@@ -40879,6 +40908,25 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_VIEW_CLASS_RGTC2_RG"/>
                 <enum name="GL_VIEW_CLASS_BPTC_UNORM"/>
                 <enum name="GL_VIEW_CLASS_BPTC_FLOAT"/>
+                <enum name="GL_VIEW_CLASS_EAC_R11"/>
+                <enum name="GL_VIEW_CLASS_EAC_RG11"/>
+                <enum name="GL_VIEW_CLASS_ETC2_RGB"/>
+                <enum name="GL_VIEW_CLASS_ETC2_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ETC2_EAC_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_4x4_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_5x4_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_5x5_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_6x5_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_6x6_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_8x5_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_8x6_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_8x8_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_10x5_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_10x6_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_10x8_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_10x10_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_12x10_RGBA"/>
+                <enum name="GL_VIEW_CLASS_ASTC_12x12_RGBA"/>
                 <command name="glGetInternalformati64v"/>
             </require>
         </extension>
