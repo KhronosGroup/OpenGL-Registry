@@ -40908,11 +40908,15 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_VIEW_CLASS_RGTC2_RG"/>
                 <enum name="GL_VIEW_CLASS_BPTC_UNORM"/>
                 <enum name="GL_VIEW_CLASS_BPTC_FLOAT"/>
+            </require>
+            <require comment="Supported only if GL_ARB_ES3_compatibility is supported">
                 <enum name="GL_VIEW_CLASS_EAC_R11"/>
                 <enum name="GL_VIEW_CLASS_EAC_RG11"/>
                 <enum name="GL_VIEW_CLASS_ETC2_RGB"/>
                 <enum name="GL_VIEW_CLASS_ETC2_RGBA"/>
                 <enum name="GL_VIEW_CLASS_ETC2_EAC_RGBA"/>
+            </require>
+            <require comment="Supported only if GL_KHR_texture_compression_astc_ldr is supported">
                 <enum name="GL_VIEW_CLASS_ASTC_4x4_RGBA"/>
                 <enum name="GL_VIEW_CLASS_ASTC_5x4_RGBA"/>
                 <enum name="GL_VIEW_CLASS_ASTC_5x5_RGBA"/>

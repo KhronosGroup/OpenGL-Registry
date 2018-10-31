@@ -3374,6 +3374,25 @@ GLAPI void APIENTRY glVertexAttribDivisorARB (GLuint index, GLuint divisor);
 #ifndef GL_ARB_internalformat_query2
 #define GL_ARB_internalformat_query2 1
 #define GL_SRGB_DECODE_ARB                0x8299
+#define GL_VIEW_CLASS_EAC_R11             0x9383
+#define GL_VIEW_CLASS_EAC_RG11            0x9384
+#define GL_VIEW_CLASS_ETC2_RGB            0x9385
+#define GL_VIEW_CLASS_ETC2_RGBA           0x9386
+#define GL_VIEW_CLASS_ETC2_EAC_RGBA       0x9387
+#define GL_VIEW_CLASS_ASTC_4x4_RGBA       0x9388
+#define GL_VIEW_CLASS_ASTC_5x4_RGBA       0x9389
+#define GL_VIEW_CLASS_ASTC_5x5_RGBA       0x938A
+#define GL_VIEW_CLASS_ASTC_6x5_RGBA       0x938B
+#define GL_VIEW_CLASS_ASTC_6x6_RGBA       0x938C
+#define GL_VIEW_CLASS_ASTC_8x5_RGBA       0x938D
+#define GL_VIEW_CLASS_ASTC_8x6_RGBA       0x938E
+#define GL_VIEW_CLASS_ASTC_8x8_RGBA       0x938F
+#define GL_VIEW_CLASS_ASTC_10x5_RGBA      0x9390
+#define GL_VIEW_CLASS_ASTC_10x6_RGBA      0x9391
+#define GL_VIEW_CLASS_ASTC_10x8_RGBA      0x9392
+#define GL_VIEW_CLASS_ASTC_10x10_RGBA     0x9393
+#define GL_VIEW_CLASS_ASTC_12x10_RGBA     0x9394
+#define GL_VIEW_CLASS_ASTC_12x12_RGBA     0x9395
 #endif /* GL_ARB_internalformat_query2 */
 
 #ifndef GL_ARB_invalidate_subdata

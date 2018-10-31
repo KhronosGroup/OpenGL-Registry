@@ -637,4 +637,6 @@
 </li>
 <li value=306><a href="extensions/QCOM/QCOM_texture_foveated_subsampled_layout.txt">GL_QCOM_texture_foveated_subsampled_layout</a>
 </li>
+<li value=307><a href="extensions/QCOM/QCOM_YUV_texture_gather.txt">GL_QCOM_YUV_texture_gather</a>
+</li>
 </ol>
