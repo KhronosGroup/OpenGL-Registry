@@ -627,4 +627,16 @@
 </li>
 <li value=301><a href="extensions/EXT/EXT_EGL_image_storage.txt">GL_EXT_EGL_image_storage</a>
 </li>
+<li value=302><a href="extensions/MESA/MESA_framebuffer_flip_y.txt">GL_MESA_framebuffer_flip_y</a>
+</li>
+<li value=303><a href="extensions/AMD/AMD_framebuffer_multisample_advanced.txt">GL_AMD_framebuffer_multisample_advanced</a>
+</li>
+<li value=304><a href="extensions/QCOM/QCOM_shader_framebuffer_fetch_rate.txt">GL_QCOM_shader_framebuffer_fetch_rate</a>
+</li>
+<li value=305><a href="extensions/NV/NV_memory_attachment.txt">GL_NV_memory_attachment</a>
+</li>
+<li value=306><a href="extensions/QCOM/QCOM_texture_foveated_subsampled_layout.txt">GL_QCOM_texture_foveated_subsampled_layout</a>
+</li>
+<li value=307><a href="extensions/QCOM/QCOM_YUV_texture_gather.txt">GL_QCOM_YUV_texture_gather</a>
+</li>
 </ol>

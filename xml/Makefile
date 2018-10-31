@@ -38,7 +38,8 @@ GLHEADERS  = $(API)/GL/glext.h \
 	     $(API)/GLES2/gl2ext.h \
 	     $(API)/GLES3/gl3.h
 GLXHEADERS = $(API)/GL/glxext.h
-WGLHEADERS = $(API)/GL/wglext.h
+WGLHEADERS = $(API)/GL/wglext.h \
+	     $(API)/GL/wgl.h
 ALLHEADERS = $(GLHEADERS) $(GLXHEADERS) $(WGLHEADERS)
 
 # Generated files to clean up

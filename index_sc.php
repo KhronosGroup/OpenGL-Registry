@@ -62,22 +62,6 @@ include_once("../../assets/static_pages/khr_page_top.php");
      (June 6, 2005). </li>
 </ul>
 
-<h2> <a name="specfiles"></a> XML API Registry of Reserved Enumerants
-     and Functions</h2>
-
-<p> The API Registry is a set of XML documents defining the APIs and
-    enumerants used in OpenGL, OpenGL ES, OpenGL SC, EGL, and related APIs,
-    as well as enumerant ranges reserved to vendors but not used yet. There
-    are also scripts for loading the XML and processing it into header
-    files. All documents in the registry are available from the Khronos
-    Subversion server using <a
-    href="https://cvs.khronos.org/svn/repos/ogl/trunk/doc/registry/public/api/">
-    anonymous public access. </a> Start with the <a
-    href="https://cvs.khronos.org/svn/repos/ogl/trunk/doc/registry/public/api/readme.pdf">
-    README </a>. </p>
-
-<hr>
-
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
 </html>

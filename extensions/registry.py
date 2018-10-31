@@ -57,6 +57,12 @@ registry = {
         'supporters' : { 'NVIDIA', 'TransGaming' },
         'url' : 'extensions/AMD/AMD_draw_buffers_blend.txt',
     },
+    'GL_AMD_framebuffer_multisample_advanced' : {
+        'number' : 523,
+        'esnumber' : 303,
+        'flags' : { 'public' },
+        'url' : 'extensions/AMD/AMD_framebuffer_multisample_advanced.txt',
+    },
     'GL_AMD_framebuffer_sample_positions' : {
         'number' : 454,
         'flags' : { 'public' },
@@ -1449,6 +1455,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'ATI' },
         'url' : 'extensions/ATI/ATI_pn_triangles.txt',
+    },
+    'WGL_ATI_render_texture_rectangle' : {
+        'number' : 592,
+        'flags' : { 'public' },
+        'supporters' : { 'ATI' },
+        'url' : 'extensions/ATI/WGL_ATI_render_texture_rectangle.txt',
     },
     'GL_ATI_separate_stencil' : {
         'number' : 289,
@@ -2910,6 +2922,12 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/GLX_MESA_copy_sub_buffer.txt',
     },
+    'GL_MESA_framebuffer_flip_y' : {
+        'esnumber' : 302,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_framebuffer_flip_y.txt',
+    },
     'GL_MESA_pack_invert' : {
         'number' : 300,
         'flags' : { 'public' },
@@ -3094,6 +3112,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_compute_program5.txt',
+    },
+    'GL_NV_compute_shader_derivatives' : {
+        'number' : 525,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_compute_shader_derivatives.txt',
     },
     'GL_NV_conditional_render' : {
         'number' : 346,
@@ -3288,6 +3312,12 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_fragment_program_option.txt',
     },
+    'GL_NV_fragment_shader_barycentric' : {
+        'number' : 526,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_fragment_shader_barycentric.txt',
+    },
     'GL_NV_fragment_shader_interlock' : {
         'number' : 468,
         'esnumber' : 230,
@@ -3397,6 +3427,19 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_light_max_exponent.txt',
+    },
+    'GL_NV_memory_attachment' : {
+        'number' : 524,
+        'esnumber' : 305,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_memory_attachment.txt',
+    },
+    'GL_NV_mesh_shader' : {
+        'number' : 527,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_mesh_shader.txt',
     },
     'GL_NV_multisample_coverage' : {
         'number' : 393,
@@ -3536,6 +3579,12 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_register_combiners2.txt',
     },
+    'GL_NV_representative_fragment_test' : {
+        'number' : 528,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_representative_fragment_test.txt',
+    },
     'GL_NV_robustness_video_memory_purge' : {
         'number' : 484,
         'flags' : { 'public' },
@@ -3557,6 +3606,12 @@ registry = {
         'esnumber' : 236,
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_sample_mask_override_coverage.txt',
+    },
+    'GL_NV_scissor_exclusive' : {
+        'number' : 529,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_scissor_exclusive.txt',
     },
     'GL_NV_shader_atomic_counters' : {
         'number' : 423,
@@ -3610,6 +3665,12 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_shader_storage_buffer_object.txt',
     },
+    'GL_NV_shader_texture_footprint' : {
+        'number' : 530,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_shader_texture_footprint.txt',
+    },
     'GL_NV_shader_thread_group' : {
         'number' : 447,
         'flags' : { 'public' },
@@ -3619,6 +3680,12 @@ registry = {
         'number' : 448,
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_shader_thread_shuffle.txt',
+    },
+    'GL_NV_shading_rate_image' : {
+        'number' : 531,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_shading_rate_image.txt',
     },
     'GL_NV_shadow_samplers_array' : {
         'esnumber' : 146,
@@ -3773,6 +3840,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_vdpau_interop.txt',
+    },
+    'GL_NV_vdpau_interop2' : {
+        'number' : 593,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_vdpau_interop2.txt',
     },
     'GL_NV_vertex_array_range' : {
         'number' : 190,
@@ -4312,10 +4385,40 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_extended_get2.txt',
     },
+    'GL_QCOM_framebuffer_foveated' : {
+        'esnumber' : 273,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_framebuffer_foveated.txt',
+    },
     'GL_QCOM_performance_monitor_global_mode' : {
         'esnumber' : 56,
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_performance_monitor_global_mode.txt',
+    },
+    'GL_QCOM_shader_framebuffer_fetch_noncoherent' : {
+        'esnumber' : 277,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_shader_framebuffer_fetch_noncoherent.txt',
+    },
+    'GL_QCOM_YUV_texture_gather' : {
+        'esnumber' : 307,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_YUV_texture_gather.txt',
+    },
+    'GL_QCOM_shader_framebuffer_fetch_rate' : {
+        'esnumber' : 304,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_shader_framebuffer_fetch_rate.txt',
+    },
+    'GL_QCOM_texture_foveated' : {
+        'esnumber' : 293,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_texture_foveated.txt',
+    },
+    'GL_QCOM_texture_foveated_subsampled_layout' : {
+        'esnumber' : 306,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_texture_foveated_subsampled_layout.txt',
     },
     'GL_QCOM_tiled_rendering' : {
         'esnumber' : 70,
@@ -4327,21 +4430,6 @@ registry = {
         'esnumber' : 61,
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_writeonly_rendering.txt',
-    },
-    'GL_QCOM_framebuffer_foveated' : {
-        'esnumber' : 273,
-        'flags' : { 'public' },
-        'url' : 'extensions/QCOM/QCOM_framebuffer_foveated.txt',
-    },
-    'GL_QCOM_texture_foveated' : {
-        'esnumber' : 293,
-        'flags' : { 'public' },
-        'url' : 'extensions/QCOM/QCOM_texture_foveated.txt',
-    },
-    'GL_QCOM_shader_framebuffer_fetch_noncoherent' : {
-        'esnumber' : 277,
-        'flags' : { 'public' },
-        'url' : 'extensions/QCOM/QCOM_shader_framebuffer_fetch_noncoherent.txt',
     },
     'GL_REND_screen_coordinates' : {
         'number' : 155,

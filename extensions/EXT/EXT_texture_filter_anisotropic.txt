@@ -13,7 +13,7 @@ Notice
 
 Version
 
-    Last updated November 12, 2014
+    Last updated May 23, 2018
 
 Number
 
@@ -275,7 +275,20 @@ MAX_TEXTURE_MAX_ANISOTROPY_EXT   R    GetFloatv     2.0             Limit of    
                                                                     maximum degree
                                                                     of anisotropy
 
+Issues
+
+  1) Should TEXTURE_MAX_ANISOTROPY_EXT be accepted by SamplerParameter*?
+
+  Yes, for implementations supporting sampler objects. The per-texture sampling
+  state is overridden by the sampler object state, if present. The anisotropy
+  parameter should not be an exception, as this would reduce the usefulness of
+  sampler objects when anisotropic filtering is supported. This also matches
+  the interaction described in ARB_sampler_objects, and the same behavior is
+  still expected for API versions with core support for sampler objects.
+
 Revision History
+
+  2018-05-23 (Nicolas Capens) - clarify interaction with sampler objects.
 
   11/12/14 (Jon Leech) - Fix spelling of TEXTURE_MAX_ANISOTROPY 
   (public Bug 1263).

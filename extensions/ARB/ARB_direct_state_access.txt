@@ -36,8 +36,8 @@ Status
 
 Version
 
-    Last Modified Date:         July 23, 2017
-    Author Revision:            49
+    Last Modified Date:         June 14, 2018
+    Author Revision:            50
 
 Number
 
@@ -3051,7 +3051,7 @@ Usage Examples
         void streamChunks(const Chunks & chunks)
         {
             GLuint restore = 0;
-            glGetIntegerv(GL_ARRAY_BUFFER_BINDING, restaure)
+            glGetIntegerv(GL_ARRAY_BUFFER_BINDING, restore)
             glBindBuffer(GL_ARRAY_BUFFER, chunks.buffer());
 
             uint8* pointer = reinterpret_cast<uint8*>(glMapBufferRange(
@@ -3173,8 +3173,8 @@ Usage Examples
           GLuint vertexArrayName = 0;
           glCreateVertexArrays(1, &vertexArrayName);
 
-          glEnableVertexAttribArray(VertexArrayName, semantic::attr::POSITION);
-          glEnableVertexAttribArray(VertexArrayName, semantic::attr::TEXCOORD);
+          glEnableVertexArrayAttrib(VertexArrayName, semantic::attr::POSITION);
+          glEnableVertexArrayAttrib(VertexArrayName, semantic::attr::TEXCOORD);
 
           glVertexArrayAttribBinding(VertexArrayName, semantic::attr::POSITION, 0);
           glVertexArrayAttribFormat(VertexArrayName, semantic::attr::POSITION, 2, GL_FLOAT, GL_FALSE, 0);
@@ -3560,12 +3560,12 @@ Issues
         Is the logical equivalent to:
 
         // Bind to Edit
-        uint restaureBuffer;
-        GetIntegerv(ARRAY_BUFFER_BINDING, &restaureBuffer);
+        uint restoreBuffer;
+        GetIntegerv(ARRAY_BUFFER_BINDING, &restoreBuffer);
         uint buffer;
         GenBuffers(1, &buffer);
         BindBuffer(ARRAY_BUFFER, buffer);
-        BindBuffer(ARRAY_BUFFER, restaureBuffer);
+        BindBuffer(ARRAY_BUFFER, restoreBuffer);
 
         Typically with DSA objects are created with [Create] while [Gen+Bind]
         is used to create the objects with B2E. Unfortunately, [Gen+Bind]
@@ -4146,6 +4146,9 @@ Revision History
 
     Rev.    Date        Author    Changes
     ----  -----------   --------- ---------------------------------------------
+    50    14 Jun 2018   T. Karras Use English variable names and fix API usage
+                                  in examples.
+
     49    23 Jul 2017   Jon Leech Replace the long list of valid <target>
                                   parameters for BeginQueryIndexed,
                                   EndQueryIndexed, and GetQueryIndexediv
