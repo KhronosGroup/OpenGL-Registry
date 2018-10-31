@@ -49495,6 +49495,8 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_WRITEONLY_RENDERING_QCOM"/>
             </require>
         </extension>
+        <extension name="GL_QCOM_YUV_texture_gather" supported="gles2">
+        </extension>
         <extension name="GL_REND_screen_coordinates" supported="gl">
             <require>
                 <enum name="GL_SCREEN_COORDINATES_REND"/>
