@@ -36,8 +36,8 @@ Status
 
 Version
 
-    Last Modified Date: July 25, 2018
-    Revision: 5
+    Last Modified Date: October 19, 2018
+    Revision: 6
 
 Number
 
@@ -48,8 +48,11 @@ Dependencies
 
     OpenGL 3.0 or OpenGL ES 3.0 is required.
 
-    This extensions is written against the OpenGL ES 3.2 (November 3, 2016)
+    This extension is written against the OpenGL ES 3.2 (November 3, 2016)
     specification and the OpenGL 4.6 (Core Profile) (July 30, 2017)
+
+    This extension is written against the OpenGL ES Shading Language 3.00.04
+    specification.
 
     This extension interacts with OpenGL 3.3, ARB_timer_query, and
     EXT_disjoint_timer_query.
@@ -340,6 +343,13 @@ Modifications to The OpenGL ES Shading Language Specification, Version 3.00.04
     language features described in this extension:
 
       #extension GL_OVR_multiview : <behavior>
+
+    where <behavior> is as specified in section 3.5.
+
+    A new preprocessor #define is added to the OpenGL ES Shading Language:
+
+      #define GL_OVR_multiview 1
+
 
     In section 4.3.8.1 "Input Layout Qualifiers":
 
@@ -779,4 +789,5 @@ Revision History
                                 of OES_geometry_shader and OES_tessellation_shader to interop.
                                 Clarify what happens when transform feedback is paused.
       5     07/25/18  oetuaho   Fix off-by-one issue in baseViewIndex + numViews check.
+      6     10/19/18  dgkoch    Add standard boiler plate shader extension language.
 
