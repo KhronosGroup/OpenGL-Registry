@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20181017 */
+/* Generated on date 20181031 */
 
 /* Generated C header for:
  * API: gles2
@@ -3489,6 +3489,10 @@ typedef void (GL_APIENTRYP PFNGLFRAMEBUFFERTEXTUREMULTISAMPLEMULTIVIEWOVRPROC) (
 GL_APICALL void GL_APIENTRY glFramebufferTextureMultisampleMultiviewOVR (GLenum target, GLenum attachment, GLuint texture, GLint level, GLsizei samples, GLint baseViewIndex, GLsizei numViews);
 #endif
 #endif /* GL_OVR_multiview_multisampled_render_to_texture */
+
+#ifndef GL_QCOM_YUV_texture_gather
+#define GL_QCOM_YUV_texture_gather 1
+#endif /* GL_QCOM_YUV_texture_gather */
 
 #ifndef GL_QCOM_alpha_test
 #define GL_QCOM_alpha_test 1

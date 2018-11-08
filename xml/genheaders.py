@@ -257,6 +257,12 @@ glxextVersionStrings = [
     format('#define GLX_GLXEXT_VERSION %s' % time.strftime('%Y%m%d')),
     ''
 ]
+# This is a bad but functional workaround for a structural problem in the scripts
+# identified in https://github.com/KhronosGroup/OpenGL-Registry/pull/186#issuecomment-416196246
+glextKHRplatformStrings = [
+    '#include <KHR/khrplatform.h>',
+    ''
+]
 # EGL_EGLEXT_VERSION is defined only in eglext.h
 eglextVersionStrings = [
     format('#define EGL_EGLEXT_VERSION %s' % time.strftime('%Y%m%d')),
@@ -279,7 +285,7 @@ buildList = [
         defaultExtensions = 'gl',                   # Default extensions for GL
         addExtensions     = None,
         removeExtensions  = None,
-        prefixText        = prefixStrings + glExtPlatformStrings + glextVersionStrings,
+        prefixText        = prefixStrings + glExtPlatformStrings + glextVersionStrings + glextKHRplatformStrings,
         genFuncPointers   = True,
         protectFile       = protectFile,
         protectFeature    = protectFeature,

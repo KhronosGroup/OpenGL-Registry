@@ -36,7 +36,7 @@ extern "C" {
 
 #include <GLES/glplatform.h>
 
-/* Generated on date 20181017 */
+/* Generated on date 20181031 */
 
 /* Generated C header for:
  * API: gles1
@@ -53,8 +53,8 @@ extern "C" {
 #include <KHR/khrplatform.h>
 typedef khronos_int8_t GLbyte;
 typedef khronos_float_t GLclampf;
-typedef short GLshort;
-typedef unsigned short GLushort;
+typedef khronos_int16_t GLshort;
+typedef khronos_uint16_t GLushort;
 typedef void GLvoid;
 typedef unsigned int GLenum;
 typedef khronos_float_t GLfloat;
