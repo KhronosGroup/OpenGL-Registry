@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20181031 */
+/* Generated on date 20181109 */
 
 /* Generated C header for:
  * API: gles2
@@ -2541,6 +2541,10 @@ typedef void (GL_APIENTRYP PFNGLVIEWPORTPOSITIONWSCALENVPROC) (GLuint index, GLf
 GL_APICALL void GL_APIENTRY glViewportPositionWScaleNV (GLuint index, GLfloat xcoeff, GLfloat ycoeff);
 #endif
 #endif /* GL_NV_clip_space_w_scaling */
+
+#ifndef GL_NV_compute_shader_derivatives
+#define GL_NV_compute_shader_derivatives 1
+#endif /* GL_NV_compute_shader_derivatives */
 
 #ifndef GL_NV_conditional_render
 #define GL_NV_conditional_render 1
