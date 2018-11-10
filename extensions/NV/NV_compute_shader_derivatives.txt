@@ -14,6 +14,7 @@ Contributors
 
     Ashwin Lele, NVIDIA
     Jeff Bolz, NVIDIA
+    Michael Chock, NVIDIA
 
 Status
 
@@ -21,19 +22,20 @@ Status
 
 Version
 
-    Last Modified:      September 15, 2018
-    Revision:           1
+    Last Modified:      November 9, 2018
+    Revision:           2
 
 Number
 
     OpenGL Extension #525
+    OpenGL ES Extension #308
 
 Dependencies
 
     This extension is written against the OpenGL 4.6 Specification
     (Compatibility Profile), dated October 24, 2016.
 
-    OpenGL 4.5 is required.
+    OpenGL 4.5 or OpenGL ES 3.2 is required.
 
     This extension requires support for the OpenGL Shading Language (GLSL)
     extension "NV_compute_shader_derivatives", which can be found at the
@@ -43,8 +45,8 @@ Dependencies
 
 Overview
 
-    This extension adds OpenGL API support for the OpenGL Shading Language
-    (GLSL) extension "NV_compute_shader_derivatives".
+    This extension adds OpenGL and OpenGL ES API support for the OpenGL
+    Shading Language (GLSL) extension "NV_compute_shader_derivatives".
 
     That extension, when enabled, allows applications to use derivatives in
     compute shaders.  It adds compute shader support for explicit derivative
@@ -63,6 +65,10 @@ New Tokens
     None
 
 Modifications to the OpenGL 4.6 Specification (Compatibility Profile)
+
+    None
+
+Modifications to the OpenGL ES 3.2 Specification
 
     None
 
@@ -87,6 +93,9 @@ Issues
     None, but please refer to issues in the GLSL extension specification.
 
 Revision History
+
+    Revision 2 (mchock)
+    - Added OpenGL ES support.
 
     Revision 1 (pbrown)
     - Internal revisions.

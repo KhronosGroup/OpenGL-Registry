@@ -3115,6 +3115,7 @@ registry = {
     },
     'GL_NV_compute_shader_derivatives' : {
         'number' : 525,
+        'esnumber' : 308,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_compute_shader_derivatives.txt',

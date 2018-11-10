@@ -46456,7 +46456,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_COMPUTE_PROGRAM_PARAMETER_BUFFER_NV"/>
             </require>
         </extension>
-        <extension name="GL_NV_compute_shader_derivatives" supported="gl|glcore"/>
+        <extension name="GL_NV_compute_shader_derivatives" supported="gl|glcore|gles2"/>
         <extension name="GL_NV_conditional_render" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_QUERY_WAIT_NV"/>
