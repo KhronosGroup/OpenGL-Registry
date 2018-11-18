@@ -6,7 +6,7 @@
 This site contains the API and Extension registries for the OpenGL family
 APIs - OpenGL, OpenGL ES, and OpenGL SC. It includes API specifications;
 specifications of Khronos- and vendor-approved extensions; header files
-corresponding to the specifications; the XML API Registry definining each
+corresponding to the specifications; the XML API Registry defining each
 API; and related tools and scripts.
 
 It does not contain the OpenGL and OpenGL ES Reference Pages, which are in
@@ -16,13 +16,13 @@ If you want to add an extension specification to the Registry, correct an
 existing specification, request allocation of enumerants and other
 controlled resources in the OpenGL / GLX / WGL namespaces, or otherwise
 change the Registry, propose a pull request against the OpenGL-Registry
-repository adding the appropriate extension specifications, making changes
+repository and adding the appropriate extension specifications, making changes
 to the appropriate XML file, etc. Note that any changes you propose to
 reserved values in the registry are not official until your pull request is
 *accepted* into the master branch.
 
 Feel free to post issues on the repository if it's unclear how to do
-something you need to with extensions, or if you find problems.
+something you need to with extensions, or if you find any problems.
 
 
 == Please Don't File API And GLSL Bugs Here!
