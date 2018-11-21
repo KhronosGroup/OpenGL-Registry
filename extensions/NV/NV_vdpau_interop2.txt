@@ -17,7 +17,7 @@ Contact
 
 Status
 
-    XXX - Not complete yet!!!
+    Complete
 
 Version
 
@@ -203,4 +203,6 @@ Revision History
     1. 02 Oct 2018 - Manoj Bonda
         Initial version
 
+    2. 21 Nov 2018 - Manoj Bonda
+        Changed status to complete.
 
