@@ -639,4 +639,6 @@
 </li>
 <li value=307><a href="extensions/QCOM/QCOM_YUV_texture_gather.txt">GL_QCOM_YUV_texture_gather</a>
 </li>
+<li value=308><a href="extensions/NV/NV_compute_shader_derivatives.txt">GL_NV_compute_shader_derivatives</a>
+</li>
 </ol>

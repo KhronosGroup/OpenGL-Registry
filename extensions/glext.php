@@ -1005,4 +1005,6 @@
 </li>
 <li value=593><a href="extensions/NV/NV_vdpau_interop2.txt">GL_NV_vdpau_interop2</a>
 </li>
+<li value=594><a href="extensions/EXT/EXT_texture_sRGB_R8.txt">GL_EXT_texture_sRGB_R8</a>
+</li>
 </ol>
