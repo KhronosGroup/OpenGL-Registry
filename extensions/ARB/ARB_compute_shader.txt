@@ -29,7 +29,7 @@ Status
 
 Version
 
-    Last Modified Date: December 7, 2018
+    Last Modified Date: December 10, 2018
     Revision: 28
 
 Number
@@ -356,57 +356,57 @@ Additions to Chapter 5 of the OpenGL 4.2 (Core Profile) Specification
     COMPUTE_SHADER. They are attached to and used in program objects as
     described in section 2.11.3.
 
-        Compute workloads are formed from groups of work items called work
-    groups and processed by the executable code for a compute program. A work
-    group is a collection of shader invocations that execute the same code,
-    potentially in parallel. An invocation within a work group may share data
-    with other members of the same work group through shared variables and
+        Compute workloads are formed from groups of work items called
+    _workgroups_ and processed by the executable code for a compute program.
+    A workgroup is a collection of shader invocations that execute the same code,
+    potentially in parallel. An invocation within a workgroup may share data
+    with other members of the same workgroup through shared variables and
     issue memory and control barriers to synchronize with other members of the
-    same work group.  One or more work groups is launched by calling:
+    same workgroup.  One or more workgroups is launched by calling:
 
         void DispatchCompute(uint num_groups_x,
                              uint num_groups_y,
                              uint num_groups_z);
 
-        Each work group is processed by the active program object for the
+        Each workgroup is processed by the active program object for the
     compute shader stage.  The error INVALID_OPERATION will be generated if
     there is no active program object for the compute shader stage.  The
     active program for the compute shader stage will be determined in the same
     manner as the active program for other pipeline stages, as described in
-    section 2.11.3.  While the individual shader invocations within a work
-    group are executed as a unit, work groups are executed completely
+    section 2.11.3.  While the individual shader invocations within a
+    workgroup are executed as a unit, workgroups are executed completely
     independently and in unspecified order.
 
         <num_groups_x>, <num_groups_y> and <num_groups_z> specify the number of
-    work groups that will be dispatched in the X, Y and Z dimensions,
+    workgroups that will be dispatched in the X, Y and Z dimensions,
     respectively. The builtin vector variable gl_NumWorkGroups will be
     initialized with the contents of the <num_groups_x>, <num_groups_y> and
-    <num_groups_z> parameters. The maximum number of work groups that may be
+    <num_groups_z> parameters. The maximum number of workgroups that may be
     dispatched at one time may be determined by calling GetIntegeri_v with
     <pname> set to MAX_COMPUTE_WORK_GROUP_COUNT and <index> must be zero, one,
     or two, representing the X, Y, and Z dimensions, respectively. The
     values in the <num_groups_x>, <num_groups_y> and <num_groups_z> array must
-    be less than or equal to the maximum work group count for the corresponding
-    dimension, otherwise an INVALID_VALUE error is generated. If the work group
-    count in any dimension is zero, no work groups are dispatched.
+    be less than or equal to the maximum workgroup count for the corresponding
+    dimension, otherwise an INVALID_VALUE error is generated. If the workgroup
+    count in any dimension is zero, no workgroups are dispatched.
 
-        The work group size in each dimension are specified at compile time
+        The workgroup size in each dimension are specified at compile time
     using an input layout qualifier in one or more of the compute shaders
     attached to the program (see Section 4 of the OpenGL Shading Language
-    Specification). After the program has been linked, the work group size
+    Specification). After the program has been linked, the workgroup size
     of the program may be retrieved by calling GetProgramiv with <pname> set to
     COMPUTE_WORK_GROUP_SIZE. This will return an array of three integers
-    containing the work group size of the compute program as specified by
+    containing the workgroup size of the compute program as specified by
     its input layout qualifier(s). If <program> is the name of a program that
     has not been successfully linked, or is the name of a linked program object
     that contains no compute shaders, then an INVALID_OPERATION error is
     generated.
 
-        The maximum size of a work group may be determined by calling
+        The maximum size of a workgroup may be determined by calling
     GetIntegeri_v with <pname> set to MAX_COMPUTE_WORK_GROUP_SIZE
     and <index> set to 0, 1, or 2 to retrieve the maximum work size in the
     X, Y and Z dimension, respectively. Furthermore, the maximum number of
-    invocations in a single work group (i.e., the product of the three
+    invocations in a single workgroup (i.e., the product of the three
     dimensions) may be determined by calling GetIntegerv with <pname> set to
     MAX_COMPUTE_WORK_GROUP_INVOCATIONS.
 
@@ -479,11 +479,11 @@ Additions to Chapter 2 of the OpenGL Shading Language Specification, Version
     and its visible side effects are through actions on images, storage
     buffers, and atomic counters.
 
-    A compute shader operates on a group of work items called a work group.
-    A work group is a collection of shader invocations that execute the same
-    code, potentially in parallel. An invocation within a work group may share data with
-    other members of the same work group through shared variables and issue
-    memory and control barriers to synchronize with other members of the same work group."
+    A compute shader operates on a group of work items called a workgroup.
+    A workgroup is a collection of shader invocations that execute the same
+    code, potentially in parallel. An invocation within a workgroup may share data with
+    other members of the same workgroup through shared variables and issue
+    memory and control barriers to synchronize with other members of the same workgroup."
 
 Additions to Chapter 4 of the OpenGL Shading Language Specification, Version
 4.20 (Variables and Types)
@@ -503,7 +503,7 @@ Additions to Chapter 4 of the OpenGL Shading Language Specification, Version
     | Storage Qualifier | Meaning                                                   |
     +-------------------+-----------------------------------------------------------+
     | <shared>          | variable storage is shared across all work items in a     |
-    |                   | work group for compute shaders                      |
+    |                   | workgroup for compute shaders                             |
     +-------------------+-----------------------------------------------------------+
 
     Add the following paragraph to Section 4.3.4, "Input Variables"
@@ -526,16 +526,16 @@ Additions to Chapter 4 of the OpenGL Shading Language Specification, Version
     Add Section 4.3.7, "Shared", renumber subsequent sections
 
         The <shared> qualifier is used to declare variables that have storage
-    shared between all work items of a compute shader work
-    group. Variables declared as <shared> may only be used in compute shaders
+    shared between all work items of a compute shader workgroup.
+    Variables declared as <shared> may only be used in compute shaders
     (see Section 5.5, "Compute Shaders"). Shared variables are implicitly
     coherent. That is, writes to shared variables from one shader invocation
-    will eventually be seen by other invocations within the same work group.
+    will eventually be seen by other invocations within the same workgroup.
 
         Variables declared as <shared> may not have initializers and their
     contents are undefined at the beginning of shader execution. Any data
     written to <shared> variables will be visible to other shaders executing
-    the same shader within the same work group. Order of execution
+    the same shader within the same workgroup. Order of execution
     with regards to reads and writes to the same <shared> variables by different
     invocations of a shader is not defined. In order to achieve ordering with
     respect to reads and writes to <shared> variables, memory barriers must be
@@ -550,7 +550,7 @@ Additions to Chapter 4 of the OpenGL Shading Language Specification, Version
 
     There are no layout location qualifiers for compute shader inputs.
 
-    Layout qualifier identifiers for compute shader inputs are the work group
+    Layout qualifier identifiers for compute shader inputs are the workgroup
     size qualifiers:
 
         layout-qualifier-id
@@ -583,12 +583,12 @@ Additions to Chapter 4 of the OpenGL Shading Language Specification, Version
     maximum size supported by the implementation for that dimension, a
     compile-time error results. Also, if such a layout qualifier is declared more
     than once in the same shader, all those declarations must indicate the same
-    work group size; otherwise a compile-time error results. If multiple compute
-    shaders attached to a single program object declare the work group size,
+    workgroup size; otherwise a compile-time error results. If multiple compute
+    shaders attached to a single program object declare the workgroup size,
     the declarations must be identical; otherwise a link-time error results.
     Furthermore, if a program object contains any compute shaders, at
-    least one must contain an input layout qualifier specifying the work
-    group sizes of the program, or a link-time error will occur.
+    least one must contain an input layout qualifier specifying the
+    workgroup sizes of the program, or a link-time error will occur.
 
 Additions to Chapter 7 of the OpenGL Shading Language Specification, Version
 4.20 (Built-in Variables)
@@ -598,11 +598,11 @@ Additions to Chapter 7 of the OpenGL Shading Language Specification, Version
 
         In the compute language, the built-in variables are declared as follows:
 
-        // work group dimensions
+        // workgroup dimensions
         in    uvec3 gl_NumWorkGroups;
         const uvec3 gl_WorkGroupSize;
 
-        // work group and invocation IDs
+        // workgroup and invocation IDs
         in    uvec3 gl_WorkGroupID;
         in    uvec3 gl_LocalInvocationID;
 
@@ -614,37 +614,37 @@ Additions to Chapter 7 of the OpenGL Shading Language Specification, Version
 
         The built-in variable <gl_NumWorkGroups> is a compute-shader input
     variable containing the total number of global work items in each
-    dimension of the work group that will execute the compute shader.
+    dimension of the workgroup that will execute the compute shader.
     Its content is equal to the values specified in the <num_groups_x>,
     <num_groups_y>, and <num_groups_z> parameters passed to the
     DispatchCompute API entry point.
 
         The built-in constant <gl_WorkGroupSize> is a compute-shader constant
-    containing the work group size of the shader. The size of the work
-    group in the X, Y, and Z dimensions is stored in the x, y, and z components.
+    containing the workgroup size of the shader. The size of the workgroup
+    in the X, Y, and Z dimensions is stored in the x, y, and z components.
     The values stored in <gl_WorkGroupSize> match those specified in the
     required <local_size_x>, <local_size_y>, and <local_size_z> layout
     qualifiers for the current shader. This value is constant so that
     it can be used to size arrays of memory that can be shared within
-    the work group.
+    the workgroup.
 
         The built-in variable <gl_WorkGroupID> is a compute-shader input
-    variable containing the 3-dimensional index of the global work group
+    variable containing the 3-dimensional index of the global workgroup
     that the current invocation is executing in. The possible values range
     across the parameters passed into DispatchCompute, i.e., from (0, 0, 0) to
     (gl_NumWorkGroups.x - 1, gl_NumWorkGroups.y - 1, gl_NumWorkGroups.z - 1).
 
         The built-in variable <gl_LocalInvocationID> is a compute-shader input
-    variable containing the 3-dimensional index of the work group
-    within the global work group that the current invocation is executing in.
-    The possible values for this variable range across the work group
+    variable containing the 3-dimensional index of the workgroup
+    within the global workgroup that the current invocation is executing in.
+    The possible values for this variable range across the workgroup
     size, i.e. (0,0,0) to (gl_WorkGroupSize.x - 1, gl_WorkGroupSize.y - 1,
     gl_WorkGroupSize.z - 1).
 
         The built-in variable <gl_GlobalInvocationID> is a compute shader input
     variable containing the global index of the current work item.  This
     value uniquely identifies this invocation from all other invocations
-    across all work groups initiated by the current
+    across all workgroups initiated by the current
     DispatchCompute call.  This is computed as:
 
         gl_GlobalInvocationID =
@@ -653,8 +653,9 @@ Additions to Chapter 7 of the OpenGL Shading Language Specification, Version
         The built-in variable <gl_LocalInvocationIndex> is a compute shader
     input variable that contains the 1-dimensional representation of the
     gl_LocalInvocationID. This is useful for uniquely identifying a
-    unique region of shared memory within the work group for this
+    unique region of shared memory within the workgroup for this
     invocation to use. This is computed as:
+
         gl_LocalInvocationIndex =
             gl_LocalInvocationID.z * gl_WorkGroupSize.x * gl_WorkGroupSize.y +
             gl_LocalInvocationID.y * gl_WorkGroupSize.x +
@@ -686,7 +687,7 @@ Additions to Chapter 8 of the OpenGL Shading Language Specification, Version
         The shader invocation control function is only available in tessellation
     control shaders and compute shaders. It is used to control the relative
     execution order of multiple shader invocations used to process a patch
-    (in the case of tessellation control shaders) or a work group (in the
+    (in the case of tessellation control shaders) or a workgroup (in the
     case of compute shaders), which are otherwise executed with an undefined
     order.
 
@@ -695,7 +696,7 @@ Additions to Chapter 8 of the OpenGL Shading Language Specification, Version
     +----------------+--------------------------------------------------------------------------+
     | barrier        | For any given static instance of barrier() appearing in a tessellation   |
     |                | control shader or compute shader, all invocations for a single patch     |
-    |                | or work group, respectively, must enter it before any will continue      |
+    |                | or workgroup, respectively, must enter it before any will continue       |
     |                | beyond it.                                                               |
     +----------------+--------------------------------------------------------------------------+
 
@@ -749,7 +750,7 @@ Additions to Chapter 8 of the OpenGL Shading Language Specification, Version
     |                                   | Only available in compute shaders.                                                     |
     +-----------------------------------+----------------------------------------------------------------------------------------+
     | void groupMemoryBarrier()         | Control the ordering of all memory transactions issued within a single shader          |
-    |                                   | invocation, as viewed by other invocations in the same work group.                     |
+    |                                   | invocation, as viewed by other invocations in the same workgroup.                      |
     |                                   | Only available in compute shaders.                                                     |
     +-----------------------------------+----------------------------------------------------------------------------------------+
 
@@ -788,7 +789,7 @@ Additions to Chapter 8 of the OpenGL Shading Language Specification, Version
     stores, selected other shader invocations will never see the results of
     the second store before seeing those of the first.  When using the
     function groupMemoryBarrier(), this ordering guarantee applies only to
-    other shader invocations in the same compute shader work group; all other
+    other shader invocations in the same compute shader workgroup; all other
     memory barrier functions provide the guarantee to all other shader
     invocations.  No memory barrier is required to guarantee the order of
     memory stores as observed by the invocation performing the stores; an
@@ -910,7 +911,7 @@ New Implementation Dependent State
     +----------------------------------------------------+-----------+-------------------------+---------------+-----------------------------------------------------------------------+---------+
     | Get Value                                          | Type      | Get Command             | Initial Value | Description                                                           | Sec.    |
     +----------------------------------------------------+-----------+-------------------------+---------------+-----------------------------------------------------------------------+---------+
-    | COMPUTE_WORK_GROUP_SIZE                            | 3 x Z+    | GetProgramiv            | { 0, ... }    | Work group size of a linked compute program                           | 5.5     |
+    | COMPUTE_WORK_GROUP_SIZE                            | 3 x Z+    | GetProgramiv            | { 0, ... }    | Workgroup size of a linked compute program                            | 5.5     |
     | UNIFORM_BLOCK_REFERENCED_BY_COMPUTE_SHADER         | B         | GetActiveUniformBlockiv | FALSE         | True if uniform block is referenced by the compute stage              | 2.17.7  |
     | ATOMIC_COUNTER_BUFFER_REFERENCED_BY_COMPUTE_SHADER | B         | GetActiveAtomicCounter- | FALSE         | AACB has a counter used by compute shaders                            | 2.17.7  |
     |                                                    |           |   Bufferiv              | FALSE         |                                                                       |         |
@@ -930,10 +931,10 @@ New Implementation Dependent State
     +-----------------------------------------+-----------+---------------+---------------------+-----------------------------------------------------------------------+---------+
     | Get Value                               | Type      | Get Command   | Minimum Value       | Description                                                           | Sec.    |
     +-----------------------------------------+-----------+---------------+---------------------+-----------------------------------------------------------------------+---------+
-    | MAX_COMPUTE_WORK_GROUP_COUNT            | 3 x Z+    | GetIntegeri_v | 65535               | Maximum number of work groups that may be dispatched by a single      | 5.5     |
+    | MAX_COMPUTE_WORK_GROUP_COUNT            | 3 x Z+    | GetIntegeri_v | 65535               | Maximum number of workgroups that may be dispatched by a single       | 5.5     |
     |                                         |           |               |                     | dispatch command (per dimension)                                      |         |
-    | MAX_COMPUTE_WORK_GROUP_SIZE             | 3 x Z+    | GetIntegeri_v | 1024 (x, y), 64 (z) | Maximum local size of a compute work group (per dimension)            | 5.5     |
-    | MAX_COMPUTE_WORK_GROUP_INVOCATIONS      | Z+        | GetIntegerv   | 1024                | Maximum total compute shader invocations in a single work group       | 5.5     |
+    | MAX_COMPUTE_WORK_GROUP_SIZE             | 3 x Z+    | GetIntegeri_v | 1024 (x, y), 64 (z) | Maximum local size of a compute workgroup (per dimension)             | 5.5     |
+    | MAX_COMPUTE_WORK_GROUP_INVOCATIONS      | Z+        | GetIntegerv   | 1024                | Maximum total compute shader invocations in a single workgroup        | 5.5     |
     | MAX_COMPUTE_UNIFORM_BLOCKS              | Z+        | GetIntegerv   | 12                  | Maximum number of uniform blocks per compute program                  | 2.11.7  |
     | MAX_COMPUTE_TEXTURE_IMAGE_UNITS         | Z+        | GetIntegerv   | 16                  | Maximum number of texture image units accessible by a compute shader  | 2.11.12 |
     | MAX_COMPUTE_ATOMIC_COUNTER_BUFFERS      | Z+        | GetIntegerv   | 8                   | Number of atomic counter buffers accessed by a compute shader         | 2.11.17 |
@@ -959,7 +960,7 @@ Issues
        RESOLVED:  Support only in compute shaders.  While some hardware may be
        able to support shared variables in shader stages other than compute,
        it is difficult to clearly define what the semantics are as far as
-       sharing. For example, what is the equivalent for a work group for
+       sharing. For example, what is the equivalent for a workgroup for
        vertex shaders?
 
     2) Can we expose atomics on <shared> variables?
@@ -974,18 +975,18 @@ Issues
        want to use such variables in cases where atomic access (and the
        related overhead) is not required.
 
-    3) Should the local size and dimensions of the work group be specified at
+    3) Should the local size and dimensions of the workgroup be specified at
        compile time? What are the default local dimensions?
 
-       RESOLVED: Dimension is always 3 and a work group size declaration is
+       RESOLVED: Dimension is always 3 and a workgroup size declaration is
        compulsory at compile time. There is no default. The value used is
-       queriable.  To use a 1- or 2-dimensional work group, the extra
+       queriable.  To use a 1- or 2-dimensional workgroup, the extra
        dimension(s) can be set to 1.
 
     4) Do we need the local_work_size parameter in dispatch if the local size
        may be specified at compile time in the shader?
 
-       RESOLVED: The specification of the work group size is now mandatory in
+       RESOLVED: The specification of the workgroup size is now mandatory in
        the shader source at compile time and the local_work_size may no longer
        be specified at dispatch time.
 
@@ -1167,18 +1168,18 @@ Issues
 
         void groupMemoryBarrier();
 
-      that only order transactions as viewed by other threads in the same work
-      group, which might not require synchronization with other shader cores.
-      Since shared memory is only accessible to threads within a single work
-      group, memoryBarrierShared() also only requires synchronization with
-      other threads in the same work group.
+      that only order transactions as viewed by other threads in the same
+      workgroup, which might not require synchronization with other shader cores.
+      Since shared memory is only accessible to threads within a single
+      workgroup, memoryBarrierShared() also only requires synchronization with
+      other threads in the same workgroup.
 
 Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------- -----------------------------------------
-    28    12/07/18  Jon Leech Use 'work group' consistently throughout (Bug
-                              11723).
+    28    12/10/18  Jon Leech Use 'workgroup' consistently throughout (Bug
+                              11723, internal API issue 87).
     27    07/24/14  Jon Leech Change value of GLSL limit
                               gl_MaxComputeUniformComponents to 512 for
                               consistency with the API (Bug 12370).
