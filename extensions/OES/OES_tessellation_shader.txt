@@ -43,8 +43,8 @@ Status
 
 Version
 
-    Last Modified Date: May 31, 2016
-    Revision: 6
+    Last Modified Date: December 10, 2018
+    Revision: 7
 
 Number
 
@@ -2408,7 +2408,7 @@ Additions to the OpenGL ES Shading Language 3.10 Specification
     The shader invocation control function is only available in tessellation
     control and compute shaders. It is used to control the relative
     execution order of multiple shader invocations used to process a patch
-    (in the case of tessellation control shaders) or a local work group (in
+    (in the case of tessellation control shaders) or a workgroup (in
     the case of compute shaders), which are otherwise executed with an
     undefined order.
 
@@ -2685,7 +2685,10 @@ Issues
 Revision History
 
     Rev.    Date      Author     Changes
-    ----  ----------  --------  -------------------------------------------------
+    ----  ----------  --------- -------------------------------------------------
+     7    12/10/2018  Jon Leech Use 'workgroup' consistently throughout (Bug
+                                11723, internal API issue 87).
+
      6    05/31/2016  Jon Leech Note that primitive ID counters are reset to zero
                                 after each instance drawn (Bug 14024).
 

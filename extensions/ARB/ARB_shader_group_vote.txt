@@ -26,8 +26,8 @@ Status
 
 Version
 
-    Last Modified Date:         May 30, 2013
-    Revision:                   6
+    Last Modified Date:         December 10, 2018
+    Revision:                   7
 
 Number
 
@@ -55,12 +55,12 @@ Overview
     implementation-dependent, and this extension provides no guarantee over
     how individual shader invocations are assigned to such sets.  In
     particular, the set of shader invocations has no necessary relationship
-    with the compute shader local work group -- a pair of shader invocations
-    in a single compute shader work group may end up in different sets used by
+    with the compute shader workgroup -- a pair of shader invocations
+    in a single compute shader workgroup may end up in different sets used by
     these built-ins.
 
     Compute shaders operate on an explicitly specified group of threads (a
-    local work group), but many implementations of OpenGL 4.3 will even group
+    workgroup), but many implementations of OpenGL 4.3 will even group
     non-compute shader invocations and execute them in a SIMD fashion.  When
     executing code like
 
@@ -211,45 +211,45 @@ New Implementation Dependent State
 Issues
 
     (1) Should we provide built-ins exposing a fixed implementation-dependent
-        SIMD work group size and/or the "location" of a single invocation
-        within a fixed-size SIMD work group?
+        SIMD workgroup size and/or the "location" of a single invocation
+        within a fixed-size SIMD workgroup?
 
       RESOLVED:  Not in this extension.
 
     (2) Should we provide mechanisms for sharing arbitrary data values across
-        SIMD work groups?
+        SIMD workgroups?
 
       RESOLVED:  Not in this extension.
 
       For compute shaders, shared memory may already be used to share values
-      across invocations in a single local work group.
+      across invocations in a single workgroup.
 
     (3) Is this capability supported for all shader types or just compute
         shaders?
 
       RESOLVED:  All shader types.
 
-    (4) For compute shaders, is there any relationship between the local work
-        group and the SIMD invocation group across which conditions are
+    (4) For compute shaders, is there any relationship between the
+        workgroup and the SIMD invocation group across which conditions are
         evaluated?
 
       RESOLVED:  No.
 
-    (5) Is there any necessary relationship between SIMD work groups in this
-        extension and the local work groups for compute shaders?
+    (5) Is there any necessary relationship between SIMD workgroups in this
+        extension and the workgroups for compute shaders?
 
-      RESOLVED:  No.  It is expected that the SIMD work groups in this
-      extension are relatively small compared to a maximum-sized compute work
-      group.  On current NVIDIA GPUs, the SIMD work group size will be 32;
-      however, maximum work group size (MAX_COMPUTE_WORK_GROUP_INVOCATIONS)
+      RESOLVED:  No.  It is expected that the SIMD workgroups in this
+      extension are relatively small compared to a maximum-sized compute
+      workgroup.  On current NVIDIA GPUs, the SIMD workgroup size will be 32;
+      however, maximum workgroup size (MAX_COMPUTE_WORK_GROUP_INVOCATIONS)
       for OpenGL 4.3 compute shaders is 1024.
 
-      Perhaps there might be some small value in guaranteeing that a SIMD work
-      group doesn't span compute local work groups.  However, it's not clear
+      Perhaps there might be some small value in guaranteeing that a SIMD
+      workgroup doesn't span compute workgroups.  However, it's not clear
       that there is any specific value in doing so, and having such a
-      restriction could limit parallelism for very small compute work groups
-      (where one might be able to fit multiple work groups in a single SIMD
-      work group).
+      restriction could limit parallelism for very small compute workgroups
+      (where one might be able to fit multiple workgroups in a single SIMD
+      workgroup).
 
     (6) How do the built-in functions work when called in conditionally
         executed code?
@@ -384,6 +384,10 @@ Issues
       result and then returning the result of that collective choice.
 
 Revision History
+
+    Revision 7, December 10, 2018 (Jon Leech)
+      - Use 'workgroup' consistently throughout (Bug 11723, internal API
+        issue 87).
 
     Revision 6, May 30, 2013
       - Mark issue (13) as resolved.

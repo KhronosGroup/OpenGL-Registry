@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date: 29-May-2018
-    Revision: 40
+    Last Modified Date: December 10, 2018
+    Revision: 41
 
 Number
 
@@ -1319,7 +1319,7 @@ Changes to The OpenGL Shading Language Specification, Version 4.50
       "This leaves gl_WorkGroupSize.y as a non-specialization constant, with
       gl_WorkGroupSize being a partially specialized vector.  Its x and z
       components can be later specialized using the ids 18 and 19.  These ids
-      are declared independently from declaring the work-group size:
+      are declared independently from declaring the workgroup size:
 
         layout(local_size_x = 32, local_size_y = 32) in;   // size is (32,32,1)
         layout(local_size_x_id = 18) in;                   // constant_id for x
@@ -2077,6 +2077,9 @@ Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    41    10-Dec-2018    Jon Leech      Use 'workgroup' consistently
+                                        throughout (Bug 11723, internal API
+                                        issue 87).
     40    29-May-2018    dgkoch         note post decrement for atomicCounterDecrement
                                         mapping
     39    25-Apr-2018    JohnK          add mappings of barriers and atomics
