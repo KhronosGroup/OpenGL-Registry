@@ -476,7 +476,6 @@ GLXPixmap glXCreateGLXPixmapMESA (Display *dpy, XVisualInfo *visual, Pixmap pixm
 #define GLX_RENDERER_OPENGL_COMPATIBILITY_PROFILE_VERSION_MESA 0x818B
 #define GLX_RENDERER_OPENGL_ES_PROFILE_VERSION_MESA 0x818C
 #define GLX_RENDERER_OPENGL_ES2_PROFILE_VERSION_MESA 0x818D
-#define GLX_RENDERER_ID_MESA              0x818E
 typedef Bool ( *PFNGLXQUERYCURRENTRENDERERINTEGERMESAPROC) (int attribute, unsigned int *value);
 typedef const char *( *PFNGLXQUERYCURRENTRENDERERSTRINGMESAPROC) (int attribute);
 typedef Bool ( *PFNGLXQUERYRENDERERINTEGERMESAPROC) (Display *dpy, int screen, int renderer, int attribute, unsigned int *value);
