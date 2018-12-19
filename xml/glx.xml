@@ -583,8 +583,7 @@ typedef unsigned __int64 uint64_t;
         <enum value="0x818B"        name="GLX_RENDERER_OPENGL_COMPATIBILITY_PROFILE_VERSION_MESA"/>
         <enum value="0x818C"        name="GLX_RENDERER_OPENGL_ES_PROFILE_VERSION_MESA"/>
         <enum value="0x818D"        name="GLX_RENDERER_OPENGL_ES2_PROFILE_VERSION_MESA"/>
-        <enum value="0x818E"        name="GLX_RENDERER_ID_MESA"/>
-            <unused start="0x818F"/>
+            <unused start="0x818E" end="0x818F"/>
     </enums>
 
 <!-- Please remember that new enumerant allocations must be obtained by
@@ -1898,7 +1897,6 @@ typedef unsigned __int64 uint64_t;
                 <enum name="GLX_RENDERER_OPENGL_COMPATIBILITY_PROFILE_VERSION_MESA"/>
                 <enum name="GLX_RENDERER_OPENGL_ES_PROFILE_VERSION_MESA"/>
                 <enum name="GLX_RENDERER_OPENGL_ES2_PROFILE_VERSION_MESA"/>
-                <enum name="GLX_RENDERER_ID_MESA"/>
                 <command name="glXQueryCurrentRendererIntegerMESA"/>
                 <command name="glXQueryCurrentRendererStringMESA"/>
                 <command name="glXQueryRendererIntegerMESA"/>
