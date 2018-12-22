@@ -103,9 +103,9 @@ New Procedures and Functions
 
 New Tokens
 
-    Accepted by the <internalformat> parameter of CompressedTexImage2D,
-    CompressedTexSubImage2D, TexStorage2D, TextureStorage2D, TexStorage3D,
-    and TextureStorage3D:
+    Accepted by the <format> parameter of CompressedTexSubImage2D, and 
+    by the <internalformat> parameter of CompressedTexImage2D, TexStorage2D,
+    TextureStorage2D, TexStorage3D, and TextureStorage3D:
 
     COMPRESSED_RGBA_ASTC_4x4_KHR            0x93B0
     COMPRESSED_RGBA_ASTC_5x4_KHR            0x93B1
@@ -141,8 +141,9 @@ New Tokens
     accepted by TexStorage2DEXT, TextureStorage2DEXT, TexStorage3DEXT and
     TextureStorage3DEXT.
 
-    Accepted by the <internalformat> parameter of CompressedTexImage3D,
-    CompressedTexSubImage3D, TexStorage3D, and TextureStorage3D:
+    Accepted by the <format> parameter of CompressedTexSubImage3D, and 
+    by the <internalformat> parameter of CompressedTexImage3D, TexStorage3D,
+    and TextureStorage3D:
 
     COMPRESSED_RGBA_ASTC_3x3x3_OES          0x93C0
     COMPRESSED_RGBA_ASTC_4x3x3_OES          0x93C1
@@ -1791,7 +1792,7 @@ R   Weight Range  Trits  Quints  Bits       Weight Range  Trits  Quints  Bits
         w00 = 16 - fs - ft + w11;
         i = (p00*w00 + p01*w01 + p10*w10 + p11*w11 + 8) >> 4;
 
-    For 3D, simplex interpolation is used as it is cheaper than a naïve
+    For 3D, simplex interpolation is used as it is cheaper than a naÃ¯ve
     trilinear interpolation. First, we pick some parameters for the inter-
     polation based on comparisons of the fractional parts of the texel
     position:
