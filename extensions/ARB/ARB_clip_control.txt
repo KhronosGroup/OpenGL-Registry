@@ -523,7 +523,7 @@ Issues
         (0,0) origin at the lower left corner of the window, independent
         of the state of the clip control origin.
 
-        So, for example, an application wanting an Direct3D upper-left orign
+        So, for example, an application wanting a Direct3D upper-left orign
         specifying the scissor with upper-left (x,y) coordinates would call:
 
             glScissor(upper_left_x,

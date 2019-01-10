@@ -207,7 +207,7 @@ Additions to Chapter 2 of the 1.0 Specification (OpenGL Operation)
     <u1>=<v1>=<w1>=0 and <u2>=<v2>=<w2>=1, and the control point being
     (0, 0, 0), (0, 0, 1), (0, 1, 0), (0, 1, 1), (1, 0, 0), (1, 0, 1),
     (1, 1, 0), and (1, 1, 1).
-    Note,  that unlike Deform, it is not an for the mask to contain
+    Note,  that unlike Deform, it is not an error for the mask to contain
     bits other than than GEOMETRY_DEFORMATION_BIT_SGIX and
     TEXTURE_DEFORMATION_BIT_SGIX.
 

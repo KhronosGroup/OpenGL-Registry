@@ -361,7 +361,7 @@ Issues
     6. Does foveation have any effect on BlitFramebuffer.
 
     No, there is no option to foveate a BlitFramebuffer blit. You can BlitFramebuffer
-    from an fbo with a foveated color attachment.
+    from a fbo with a foveated color attachment.
 
     7. Rendering to a foveated texture multiple times per flush
 

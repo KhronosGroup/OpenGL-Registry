@@ -153,7 +153,7 @@ Additions to the OpenGL ES 3.1 Specification
     section, on p. 147:
 
     ... <target> must be one of TEXTURE_3D for a three-dimensional texture,
-    TEXTURE_2D_ARRAY for an two-dimensional array texture, or
+    TEXTURE_2D_ARRAY for a two-dimensional array texture, or
     TEXTURE_CUBE_MAP_ARRAY_EXT for a cube map array texture. ...
 
 

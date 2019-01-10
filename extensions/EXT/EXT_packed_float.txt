@@ -575,9 +575,9 @@ Issues
 
         RESOLVED:  You can only use the
         GL_UNSIGNED_INT_10F_11F_11F_REV_EXT format with GL_RGB.
-        Otherwise, the GL generates an GL_INVALID_OPERATION error.
+        Otherwise, the GL generates a GL_INVALID_OPERATION error.
         Just as the GL_UNSIGNED_BYTE_3_3_2 format just works with GL_RGB
-        (or else the GL generates an GL_INVALID_OPERATION error), so
+        (or else the GL generates a GL_INVALID_OPERATION error), so
         should GL_UNSIGNED_INT_10F_11F_11F_REV_EXT.
 
     14) Should blending be supported for a packed float framebuffer

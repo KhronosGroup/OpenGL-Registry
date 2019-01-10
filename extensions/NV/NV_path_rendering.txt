@@ -9438,7 +9438,7 @@ Issues
         floating-point. Does the OpenGL ES version of this extension support
         the double-precision entry points MatrixLoaddEXT, etc.)?
 
-        RESOLVED: Yes. This is an conscious choice, and only
+        RESOLVED: Yes. This is a conscious choice, and only
         double-precision support for CPU-side operations is required. See
         https://github.com/KhronosGroup/OpenGL-Registry/pull/119#issuecomment-341121022
         for background.

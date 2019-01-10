@@ -292,7 +292,7 @@ Additions to Chapter 3 of the GL Specification (Rasterization)
     At the end of the width, height, format, type and data section under
     TexSubImage there should be an additional sentence:
 
-      If the target texture has an color index internal format
+      If the target texture has a color index internal format
       then format may only be COLOR_INDEX.
 
     At the end of the first paragraph describing TexSubImage and

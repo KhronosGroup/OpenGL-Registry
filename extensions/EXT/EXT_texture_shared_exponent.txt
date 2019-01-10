@@ -810,11 +810,11 @@ Issues
 
         RESOLVED:  You can only use the GL_UNSIGNED_INT_5_9_9_9_REV_EXT
         format with GL_RGB.  Otherwise, the GL generates
-        an GL_INVALID_OPERATION error.  Conceptually,
+        a GL_INVALID_OPERATION error.  Conceptually,
         GL_UNSIGNED_INT_5_9_9_9_REV_EXT is a 3-component format
         that just happens to have 5 shared bits too.  Just as the
         GL_UNSIGNED_BYTE_3_3_2 format just works with GL_RGB (or else
-        the GL generates an GL_INVALID_OPERATION error), so should
+        the GL generates a GL_INVALID_OPERATION error), so should
         GL_UNSIGNED_INT_5_9_9_9_REV_EXT.
 
     17) What should GL_TEXTURE_SHARED_SIZE_EXT return when queried with

@@ -179,7 +179,7 @@ Issues
         original values are converted to data types with lower precision or a
         smaller data range.
 
-    What happens when rendering to an floating-point color buffer if fragment
+    What happens when rendering to a floating-point color buffer if fragment
     program mode is disabled?  Or when fragment program mode is enabled, but
     no program is loaded?
 
@@ -258,7 +258,7 @@ Issues
         antialiasing requires alpha blending, which does not work for
         floating-point color buffers.
 
-    What are the semantics for ReadPixels when using an floating-point color
+    What are the semantics for ReadPixels when using a floating-point color
     buffer?
 
         RESOLVED:  ReadPixels from a floating-point color buffer works like
@@ -266,7 +266,7 @@ Issues
         the range [0,1].  This ensures that we can save and restore
         floating-point color buffers using ReadPixels/DrawPixels.
 
-    What are the semantics for Bitmap when using an floating-point color
+    What are the semantics for Bitmap when using a floating-point color
     buffer?
 
         RESOLVED:  Bitmap generates fragments using the current raster
@@ -293,7 +293,7 @@ Issues
         fragment program is still required to load a floating-point color
         buffer using DrawPixels.
 
-    What are the semantics for Clear when using an floating-point color
+    What are the semantics for Clear when using a floating-point color
     buffer?
 
         RESOLVED:  Clears work as normal, except that values outside the range
@@ -360,7 +360,7 @@ Issues
         128-bit texels (and frame buffer pixels) optimally is substantially
         more complex.
 
-    What happens if you try to use an floating-point texture without a
+    What happens if you try to use a floating-point texture without a
     fragment program?
 
         RESOLVED:  No error is generated, but that texture is effectively
@@ -528,7 +528,7 @@ Additions to Chapter 3 of the OpenGL 1.3 Specification (Rasterization)
     internal format of FLOAT_R_NV, FLOAT_RG_NV, FLOAT_RGB_NV, and
     FLOAT_RGBA_NV are known as floating-point textures.  Floating-point
     textures are only supported for the TEXTURE_RECTANGLE_NV target.
-    Specifying an floating-point texture with any other target will produce an
+    Specifying a floating-point texture with any other target will produce an
     INVALID_OPERATION error.
 
     (modify last paragraph, p. 117) The internal component resolution is the
@@ -1085,7 +1085,7 @@ Dependencies on ARB_texture_float and ATI_texture_float
       internal format of FLOAT_R_NV, FLOAT_RG_NV, FLOAT_RGB_NV, and
       FLOAT_RGBA_NV are known as floating-point textures.  Floating-point
       textures are only supported for the TEXTURE_RECTANGLE_NV target.
-      Specifying an floating-point texture with any other target will produce
+      Specifying a floating-point texture with any other target will produce
       an INVALID_OPERATION error.
 
 Dependencies on EXT_framebuffer_object

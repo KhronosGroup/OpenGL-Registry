@@ -200,7 +200,7 @@ Additions to Chapter 3 of the OpenGL 2.0 Specification (Rasterization)
 
     is used to specify a three-dimensional texture image. target must be one
     of TEXTURE_3D for a three-dimensional texture or TEXTURE_2D_ARRAY_EXT for
-    an two-dimensional array texture.  Additionally, target may be either
+    a two-dimensional array texture.  Additionally, target may be either
     PROXY_TEXTURE_3D for a three-dimensional proxy texture, or
     PROXY_TEXTURE_2D_ARRAY_EXT for a two-dimensional proxy array texture. ...
 

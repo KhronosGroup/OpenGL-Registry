@@ -81,7 +81,7 @@ Issues
         GLX: Yes. GLU: No. Because the pointers returned are
         context-independent, the query was lifted from GL (in which all
         behavior is necessarily context-dependent) into GLX, where
-        context management occurs. Since GLU is an client library using
+        context management occurs. Since GLU is a client library using
         GL, GLU extensions are unlikely to need to be dynamically
         queryable. This capability could be added in a future extension.
 
