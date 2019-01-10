@@ -14,7 +14,7 @@ Contributors
 
     Pat Brown, NVIDIA (pbrown 'at' nvidia.com)
     Christophe Riccio, AMD
-        
+
 Notice
 
     Copyright (c) 2013 The Khronos Group Inc. Copyright terms at
@@ -27,8 +27,8 @@ Status
 
 Version
 
-    Last Modified Date: June 13, 2014
-    Revision: 27
+    Last Modified Date: January 10, 2019
+    Revision: 28
 
 Number
 
@@ -68,7 +68,7 @@ Overview
           const int start = 6;
           layout(location = start + 2) int vec4 v;
 
-    2) Specify explicit byte offsets within a uniform or shader storage block. 
+    2) Specify explicit byte offsets within a uniform or shader storage block.
        For example, if you want two vec4 variables "batman" and "robin" to
        appear at byte offsets 0 and 64 in your block, you can say:
 
@@ -85,7 +85,7 @@ Overview
             layout(align = 64) vec4 robin;
           };
 
-       This says the member 'robin' must start at the next address that is a 
+       This says the member 'robin' must start at the next address that is a
        multiple of 64.  It allows constructing the same layout in C and in GLSL
        without inventing explicit offsets.
 
@@ -102,7 +102,7 @@ Overview
 
     4) Specify component numbers to more fully utilize the vec4-slot interfaces
        between shader outputs and shader inputs.
-      
+
        For example, you could fit the following
 
           - an array of 32 vec3
@@ -116,7 +116,7 @@ Overview
           // consumes W component of first vector
           layout(location = 0, component = 3) in float robin;
 
-       Further, an array of vec3 and an array of float can be stored 
+       Further, an array of vec3 and an array of float can be stored
        interleaved, using the following.
 
           // consumes W component of 32 vectors
@@ -131,22 +131,22 @@ Overview
            layout(xfb_buffer = 0, xfb_offset = 24) out vec3 var2;
            layout(xfb_buffer = 1, xfb_offset = 0)  out vec4 var3;
 
-       The second line above says to write var2 out to byte offset 24 of 
-       transform/feedback buffer 0.  (When doing this, output are only 
+       The second line above says to write var2 out to byte offset 24 of
+       transform/feedback buffer 0.  (When doing this, output are only
        captured when xfb_offset is used.)
 
        To specify the total number of bytes per entry in a buffer:
 
            layout(xfb_buffer = 1, xfb_stride = 32) out;
-       
+
        This is necessary if, say, var3 above, which uses bytes 0-11,
        does not fully fill the buffer, which in this case takes 32 bytes.
 
-       Use of this feature effectively eliminates the need to use previously 
+       Use of this feature effectively eliminates the need to use previously
        existing API commands to describe the transform feedback layout.
 
     6) Allow locations on input and output blocks for SSO interface matching.
-       
+
        For example:
 
           layout(location = 4) in block {
@@ -250,7 +250,7 @@ Modifications to the OpenGL 4.3 (Compatibility Profile) Specification
       NAME_LENGTH               all but ATOMIC_COUNTER_BUFFER and
                                 TRANSFORM_FEEDBACK_BUFFER
 
-      OFFSET                    UNIFORM, BUFFER_VARIABLE, 
+      OFFSET                    UNIFORM, BUFFER_VARIABLE,
                                 TRANSFORM_FEEDBACK_VARYING
 
       BLOCK_INDEX,              UNIFORM, BUFFER_VARIABLE
@@ -259,7 +259,7 @@ Modifications to the OpenGL 4.3 (Compatibility Profile) Specification
       IS_ROW_MAJOR
 
       BUFFER_BINDING            UNIFORM_BLOCK, ATOMIC_COUNTER_BUFFER,
-      NUM_ACTIVE_VARIABLES,     SHADER_STORAGE_BLOCK, 
+      NUM_ACTIVE_VARIABLES,     SHADER_STORAGE_BLOCK,
       ACTIVE_VARIABLES          TRANSFORM_FEEDBACK_BUFFER
 
       BUFFER_DATA_SIZE          UNIFORM_BLOCK, ATOMIC_COUNTER_BUFFER,
@@ -338,7 +338,7 @@ Modifications to the OpenGL 4.3 (Compatibility Profile) Specification
     Modify Section 7.4.1, Shader Interface Matching, p. 105
 
     (modify the last bullet of "An output variable is considered to match",
-    adding the 
+    adding the
 
       - the two variables are declared with the same location and component
         layout qualifiers and match in type and qualification
@@ -378,7 +378,7 @@ Modifications to the OpenGL 4.3 (Compatibility Profile) Specification
       three-component vector    0 or unspecified        (x,y,z)
       three-component vector    1                       (y,z,w)
       four-component vector     0 or unspecified        (x,y,z,w)
-      
+
       Table X.1:  Generic attribute components accessed by attribute variables
 
     When an attribute variable declared using a matrix type is bound to a
@@ -571,15 +571,15 @@ Modifications to the OpenGL 4.3 (Compatibility Profile) Specification
     "geometry program")
 
     When using a geometry shader that writes vertices to multiple ...
-    
+
     (modify the third paragraph, p. 460)
 
     Any transform feedback binding point used for capturing vertices must have
     buffer objects bound when BeginTransformFeedback is called.  A binding
     point requires a bound buffer object if and only if its associated stride
     in the program object used for transform feedback primitive capture is
-    non-zero.
-
+    non-zero and the transform feedback buffer is associated with output
+    variables, blocks or block members in the program object.
 
     Modify Section 15.2.3, Shader Outputs (Fragment Shader Variables), p. 514
 
@@ -629,7 +629,7 @@ Modifications to the OpenGL 4.3 (Compatibility Profile) Specification
       * if two output variables with different component types (signed
         integer, unsigned integer, or floating-point) are bound to the same
         output number, even if selected components do not overlap; or
-      
+
 Additions to the OpenGL Shading Language
 
     Including the following line in a shader can be used to control the
@@ -656,30 +656,30 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
     Expand it to say:
 
         "More than one layout qualifier may appear in a single declaration.
-        Additionally, the same layout-qualifier-name can occur multiple times 
-        within a layout qualifier or across multiple layout qualifiers in the 
-        same declaration. When the same layout-qualifier-name occurs 
-        multiple times, in a single declaration, the last occurrence overrides 
-        the former occurrence(s).  Further, if such a layout-qualifier-name 
-        will effect subsequent declarations or other observable behavior, it 
-        is only the last occurrence that will have any effect, behaving as if 
-        the earlier occurrence(s) within the declaration are not present.  
-        This is also true for overriding layout-qualifier-names, where one 
-        overrides the other (e.g., row_major vs. column_major); only the last 
+        Additionally, the same layout-qualifier-name can occur multiple times
+        within a layout qualifier or across multiple layout qualifiers in the
+        same declaration. When the same layout-qualifier-name occurs
+        multiple times, in a single declaration, the last occurrence overrides
+        the former occurrence(s).  Further, if such a layout-qualifier-name
+        will effect subsequent declarations or other observable behavior, it
+        is only the last occurrence that will have any effect, behaving as if
+        the earlier occurrence(s) within the declaration are not present.
+        This is also true for overriding layout-qualifier-names, where one
+        overrides the other (e.g., row_major vs. column_major); only the last
         occurrence has any effect."
-    
+
     Section 4.4.1 "Input Layout Qualifiers"
 
     Change
 
-        "All shaders, except compute shaders, allow input layout location 
+        "All shaders, except compute shaders, allow input layout location
         qualifiers on input variable declarations."
 
     To
 
-        "All shaders, except compute shaders, allow *location* layout qualifiers 
-        on input variable declarations, input block declarations, and input 
-        block member declarations.  Of these, variables and block members 
+        "All shaders, except compute shaders, allow *location* layout qualifiers
+        on input variable declarations, input block declarations, and input
+        block member declarations.  Of these, variables and block members
         (but not blocks) additionally allow the *component* layout qualifier."
 
     Change
@@ -699,7 +699,7 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
                 location = integral-constant-expression
                 component = integral-constant-expression
 
-        "where integral-constant-expression is defined in Section 4.3.3 
+        "where integral-constant-expression is defined in Section 4.3.3
         Constant Expressions as /integral constant expression/"
 
         "For example,"
@@ -711,38 +711,38 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
 
     and change the first sentence describing them to
 
-        "will establish that the shader input normal is assigned to vector 
+        "will establish that the shader input normal is assigned to vector
         location number 3 and v is assigned location number 8."
 
     About 18 other occurrences of "integer-constant" all need to be changed per
-    above to "integral-constant-expression", throughout Sections 4.4.1.2 
+    above to "integral-constant-expression", throughout Sections 4.4.1.2
     through 4.4.6.2.
 
     Change
 
         "If the declared input is a structure, its members will be
-        assigned consecutive locations in the order of declaration, with the 
+        assigned consecutive locations in the order of declaration, with the
         first member assigned the location specified for the structure."
 
     To
 
         "If the declared input is a structure or block, its members will be
-        assigned consecutive locations in their order of declaration, with the 
-        first member assigned the location provided in the layout qualifier.  
-        For a structure.  It is a compile-time error to use a location 
-        qualifier on a member of a structure.  For a block, this process 
-        applies to the entire block, or until the first member is reached 
-        that has a location layout qualifier.  When a block member is declared 
+        assigned consecutive locations in their order of declaration, with the
+        first member assigned the location provided in the layout qualifier.
+        For a structure.  It is a compile-time error to use a location
+        qualifier on a member of a structure.  For a block, this process
+        applies to the entire block, or until the first member is reached
+        that has a location layout qualifier.  When a block member is declared
         with a location qualifier, its location comes from that qualifier:  The
         member's location qualifier overrides the block-level declaration.
         Subsequent members are again assigned consecutive locations, based
         on the newest location, until the next member declared with a *location*
-        layout qualifier.  The values used for locations do not have to be 
+        layout qualifier.  The values used for locations do not have to be
         declared in increasing order.
 
-        "It is a compile-time error to declare a block with some of its members 
-        having a location, but not all.  Thus, if a block has no 
-        block-level *location* layout qualifier, it is required that either all 
+        "It is a compile-time error to declare a block with some of its members
+        having a location, but not all.  Thus, if a block has no
+        block-level *location* layout qualifier, it is required that either all
         or none of its members have a *location* layout qualifier."
 
     Change the next paragraph so it reads
@@ -750,7 +750,7 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
         "The locations consumed by block and structure members are
         determined..."
 
-    Change the subsequent examples to 
+    Change the subsequent examples to
 
           layout(location = 3) in struct S {
               vec3 a;                       // gets location 3
@@ -772,44 +772,44 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
 
     Remove the paragraph
 
-        "Location layout qualifiers may be used on input variables declared as 
-        structures, but not on individual members. Location layout qualifiers 
-        may not be used on input blocks or input block members. Compile-time 
+        "Location layout qualifiers may be used on input variables declared as
+        structures, but not on individual members. Location layout qualifiers
+        may not be used on input blocks or input block members. Compile-time
         errors result if these rules are not followed."
 
     Replace the paragraph (parts of it show up again at the end of this section)
 
-        "A program will fail to link if any two non-vertex shader input 
+        "A program will fail to link if any two non-vertex shader input
         variables or block members are assigned to the same location...."
 
     with part of it's last sentence (keep this here):
 
         "A program will fail to link if explicit location assignments leave the
-        linker unable to find space for other variables without explicit 
+        linker unable to find space for other variables without explicit
         assignments."
 
     Add, after the specification for 'location', the following:
 
-        "The *component* qualifier allows the location to be more finely 
-        specified for scalars and vectors, down to the individual components 
+        "The *component* qualifier allows the location to be more finely
+        specified for scalars and vectors, down to the individual components
         within a location that are
         consumed.  It is a compile-time error to use *component* without
-        also specifying *location* (order does not matter).  The components 
+        also specifying *location* (order does not matter).  The components
         within a location are 0, 1, 2, and 3. A variable or block member
-        starting at component N will consume components N, N+1, N+2, ... up 
+        starting at component N will consume components N, N+1, N+2, ... up
         through its size.  For example:
 
             // a consumes components 2 and 3 of location 4
-            layout(location = 4, component = 2) vec2 a;  
+            layout(location = 4, component = 2) vec2 a;
 
             // b consumes component 1 of location 4
-            layout(location = 4, component = 1) float b; 
+            layout(location = 4, component = 1) float b;
 
             // ERROR: c overflows components 2 and 3
             layout(location = 3, component = 2) vec3 c;
-            
-        "If the variable is an array, each element of the array, in order, is 
-        assigned to consecutive locations, but all at the same specified 
+
+        "If the variable is an array, each element of the array, in order, is
+        assigned to consecutive locations, but all at the same specified
         component within each location.  For example:
 
             // component 3 in 6 locations are consumed
@@ -821,10 +821,10 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
         "This allows packing of two arrays into the same set of locations:
 
             // e consumes beginning (components 0, 1 and 2) of each of 6 slots
-            layout(location = 0, component = 0) vec3 e[6];  
+            layout(location = 0, component = 0) vec3 e[6];
 
-            // f consumes last component of the same 6 slots            
-            layout(location = 0, component = 3) float f[6];            
+            // f consumes last component of the same 6 slots
+            layout(location = 0, component = 3) float f[6];
 
         "If applying this to an array of arrays, all levels of arrayness are
         removed to get to the elements that are assigned per location to the
@@ -836,50 +836,50 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
         It is a link-time error to specify different components for the same
         variable within a program.
 
-        "/Location aliasing/ is causing two variables or block members to have 
-        the same location number.  /Component aliasing/ is assigning the same 
-        (or overlapping) component numbers for two location aliases.  (Recall 
-        if component is not used, component's are assigned starting with 0.)  
-        With one exception, location aliasing is allowed only if it does not 
-        cause component aliasing; it is a compile-time or link-time error to 
+        "/Location aliasing/ is causing two variables or block members to have
+        the same location number.  /Component aliasing/ is assigning the same
+        (or overlapping) component numbers for two location aliases.  (Recall
+        if component is not used, component's are assigned starting with 0.)
+        With one exception, location aliasing is allowed only if it does not
+        cause component aliasing; it is a compile-time or link-time error to
         cause component aliasing.  Further, when location aliasing, the aliases
-        sharing the location must have the same underlying numerical type 
-        (floating-point or integer) and the same auxiliary storage and 
-        interpolation qualification.  The one exception where component aliasing 
-        is permitted is for two input variables (not block members) to a vertex 
-        shader, which are allowed to have component aliasing.  This 
-        vertex-variable component aliasing is intended only to support vertex 
-        shaders where each execution path accesses at most one input per each 
+        sharing the location must have the same underlying numerical type
+        (floating-point or integer) and the same auxiliary storage and
+        interpolation qualification.  The one exception where component aliasing
+        is permitted is for two input variables (not block members) to a vertex
+        shader, which are allowed to have component aliasing.  This
+        vertex-variable component aliasing is intended only to support vertex
+        shaders where each execution path accesses at most one input per each
         aliased component.  Implementations are permitted, but not required, to
-        generate link-time errors if they detect that every path through the 
-        vertex shader executable accesses multiple inputs aliased to any single 
+        generate link-time errors if they detect that every path through the
+        vertex shader executable accesses multiple inputs aliased to any single
         component."
-        
+
     Section 4.4.2 "Output Qualifiers"
 
     Change
-    
-        "All shaders, except compute shaders, allow location output layout 
+
+        "All shaders, except compute shaders, allow location output layout
         qualfiers on output variable declarations."
 
     To
-        
-        "As with input layout qualifiers, all shaders except compute shaders 
-        allow *location* layout qualifiers on output variable declarations, 
-        output block declarations, and output block member declarations.  Of 
-        these, variables and block members (but not blocks) additionally 
+
+        "As with input layout qualifiers, all shaders except compute shaders
+        allow *location* layout qualifiers on output variable declarations,
+        output block declarations, and output block member declarations.  Of
+        these, variables and block members (but not blocks) additionally
         allow the *component* layout qualifier."
 
     And add the layout-qualifier-id:
-                
+
                 component = integer-constant-expression
 
     Following that, add this new paragraph:
 
         "The usage and rules for using the *component* qualifier, and applying
         *location* qualifier to blocks and structures, are as described in
-        section 4.4.1 "Input Layout Qualifiers".  Additionally, for fragment 
-        shader outputs, if two variables are placed within the same location, 
+        section 4.4.1 "Input Layout Qualifiers".  Additionally, for fragment
+        shader outputs, if two variables are placed within the same location,
         they must have the same underlying type (floating-point or integer).
         No component aliasing of output variables or members is allowed."
 
@@ -890,9 +890,9 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
     Add a new section 4.4.2.1 "Transform Feedback Layout Qualifiers"
 
         "The vertex, tessellation, and geometry stages allow shaders to control
-        transform feedback.  When doing this, shaders will dictate which 
+        transform feedback.  When doing this, shaders will dictate which
         transform feedback buffers are in use, which output variables will be
-        written to which buffers, and how each buffer is laid out.  To 
+        written to which buffers, and how each buffer is laid out.  To
         accomplish this, shaders allow the following layout qualifier identifiers
         on output declarations:
 
@@ -901,34 +901,34 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
                 xfb_offset = integral-constant-expression
                 xfb_stride = integral-constant-expression
 
-    "Any shader making any static use (after preprocessing) of any of these 
-    *xfb_* qualifiers will cause the shader to be in a transform feedback 
-    capturing mode and hence responsible for describing the transform feedback 
-    setup.  This mode will capture any output selected by 
+    "Any shader making any static use (after preprocessing) of any of these
+    *xfb_* qualifiers will cause the shader to be in a transform feedback
+    capturing mode and hence responsible for describing the transform feedback
+    setup.  This mode will capture any output selected by
     *xfb_offset*, directly or indirectly, to a transform feedback buffer.
 
-    "The *xfb_buffer* qualifier specifies which transform feedback buffer will 
-    capture those outputs selected with *xfb_offset*.  The *xfb_buffer* 
-    qualifier can be applied to the qualifier out, to output variables, to 
-    output blocks, and to output block members.  Shaders in the transform 
+    "The *xfb_buffer* qualifier specifies which transform feedback buffer will
+    capture those outputs selected with *xfb_offset*.  The *xfb_buffer*
+    qualifier can be applied to the qualifier out, to output variables, to
+    output blocks, and to output block members.  Shaders in the transform
     feedback capturing mode have an initial global default of
 
         layout(xfb_buffer = 0) out;
-  
+
     "This default can be changed by declaring a different buffer with xfb_buffer
     on the interface qualifier out.  This is the only way the global default can
-    be changed.  When a variable or output block is declared without an 
+    be changed.  When a variable or output block is declared without an
     xfb_buffer qualifier, it inherits the global default buffer.  When a variable
-    or output block is declared with an xfb_buffer qualifier, it has that 
-    declared buffer.  All members of a block inherit the block's buffer.  A 
+    or output block is declared with an xfb_buffer qualifier, it has that
+    declared buffer.  All members of a block inherit the block's buffer.  A
     member is allowed to declare an xfb_buffer, but it must match the buffer
     inherited from its block, or a compile-time error results.
 
-    "The *xfb_buffer* qualifier follows the same conventions, behavior, 
-    defaults, and inheritance rules as the qualifier stream, and the examples 
-    for stream apply here as well.  This includes a block's inheritance of the 
-    current global default buffer, a block member's inheritance of  the block's 
-    buffer, and the requirement that any *xfb_buffer* declared on a block 
+    "The *xfb_buffer* qualifier follows the same conventions, behavior,
+    defaults, and inheritance rules as the qualifier stream, and the examples
+    for stream apply here as well.  This includes a block's inheritance of the
+    current global default buffer, a block member's inheritance of  the block's
+    buffer, and the requirement that any *xfb_buffer* declared on a block
     member must match the buffer inherited from the block.
 
         layout(xfb_buffer=2, xfb_offset=0) out block {  // block's buffer is 2
@@ -947,74 +947,74 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
         layout(xfb_buffer=2) out vec4 h;   // does not change global default
         layout(xfb_offset=16) out vec4 j;  // j has buffer 1
 
-    "Note this means all members of a block that go to a transform feedback 
+    "Note this means all members of a block that go to a transform feedback
     buffer will go to the same buffer.
 
-    "It is a compile-time error to specify an *xfb_buffer* that is greater than 
+    "It is a compile-time error to specify an *xfb_buffer* that is greater than
     the implementation-dependent constant gl_MaxTransformFeedbackBuffers.
 
-    "The *xfb_offset* qualifier assigns a byte offset within a transform 
-    feedback buffer.  Only variables, block members, or blocks can be qualified 
-    with *xfb_offset*.  If a block is qualified with *xfb_offset*, all its 
-    members are assigned transform feedback buffer offsets.  If a block is 
+    "The *xfb_offset* qualifier assigns a byte offset within a transform
+    feedback buffer.  Only variables, block members, or blocks can be qualified
+    with *xfb_offset*.  If a block is qualified with *xfb_offset*, all its
+    members are assigned transform feedback buffer offsets.  If a block is
     not qualified with *xfb_offset*, any members of that block not qualified
-    with an *xfb_offset* will not be assigned transform feedback buffer 
-    offsets.  Only variables and block members that are assigned offsets will 
-    be captured (thus, a proper subset of a block can be captured).  Each time 
-    such a variable or block member is written in a shader, the written value 
-    is captured at the assigned offset.  If such a block member or variable is 
-    not written during a shader invocation, the buffer contents at the assigned 
-    offset will be undefined.  Even if there are no static writes to a variable 
-    or member that is assigned a transform feedback offset, the space is still 
+    with an *xfb_offset* will not be assigned transform feedback buffer
+    offsets.  Only variables and block members that are assigned offsets will
+    be captured (thus, a proper subset of a block can be captured).  Each time
+    such a variable or block member is written in a shader, the written value
+    is captured at the assigned offset.  If such a block member or variable is
+    not written during a shader invocation, the buffer contents at the assigned
+    offset will be undefined.  Even if there are no static writes to a variable
+    or member that is assigned a transform feedback offset, the space is still
     allocated in the buffer and still affects the stride.
 
-    "Variables and block members qualified with *xfb_offset* can be scalars, 
+    "Variables and block members qualified with *xfb_offset* can be scalars,
     vectors, matrices, structures, and (sized) arrays of these.  The offset must be
-    a multiple of the size of the first component of the first qualified variable 
-    or block member, or a compile-time error results.  Further, if applied to 
-    an aggregate containing a double, the offset must also be a multiple of 8, 
-    and the space taken in the buffer will be a multiple of 8.  The given 
-    offset applies to the first component of the first member of the qualified 
-    entity.  Then, within the qualified entity, subsequent components are each 
-    assigned, in order, to the next available offset aligned to a multiple of 
-    that component's size.  Aggregate types are flattened down to the component 
-    level to get this sequence of components.  It is a compile-time error to 
+    a multiple of the size of the first component of the first qualified variable
+    or block member, or a compile-time error results.  Further, if applied to
+    an aggregate containing a double, the offset must also be a multiple of 8,
+    and the space taken in the buffer will be a multiple of 8.  The given
+    offset applies to the first component of the first member of the qualified
+    entity.  Then, within the qualified entity, subsequent components are each
+    assigned, in order, to the next available offset aligned to a multiple of
+    that component's size.  Aggregate types are flattened down to the component
+    level to get this sequence of components.  It is a compile-time error to
     apply xfb_offset to the declaration of an unsized array.
 
-    "The *xfb_stride* qualifier specifies how many bytes are consumed by each 
-    captured vertex.  It applies to the transform feedback buffer for that 
-    declaration, whether it is inherited or explicitly declared. It can be 
-    applied to variables, 
-    blocks, block members, or just the qualifier out.  If the buffer is 
-    capturing any double-typed outputs, the stride must be a multiple of 8, 
-    otherwise it must be a multiple of 4, or a compile-time or link-time error 
-    results.  It is a compile-time or link-time error to have any *xfb_offset* 
-    that overflows *xfb_stride*, whether stated on declarations before or 
-    after the *xfb_stride*, or in different compilation units.  While 
-    *xfb_stride* can be declared multiple times for the same buffer, it is a 
-    compile-time or link-time error to have different values specified for the 
+    "The *xfb_stride* qualifier specifies how many bytes are consumed by each
+    captured vertex.  It applies to the transform feedback buffer for that
+    declaration, whether it is inherited or explicitly declared. It can be
+    applied to variables,
+    blocks, block members, or just the qualifier out.  If the buffer is
+    capturing any double-typed outputs, the stride must be a multiple of 8,
+    otherwise it must be a multiple of 4, or a compile-time or link-time error
+    results.  It is a compile-time or link-time error to have any *xfb_offset*
+    that overflows *xfb_stride*, whether stated on declarations before or
+    after the *xfb_stride*, or in different compilation units.  While
+    *xfb_stride* can be declared multiple times for the same buffer, it is a
+    compile-time or link-time error to have different values specified for the
     stride for the same buffer.
 
     "For example:
 
         // buffer 1 has 32-byte stride
-        layout (xfb_buffer = 1, xfb_stride = 32) out;  
+        layout (xfb_buffer = 1, xfb_stride = 32) out;
 
         // same as previous example; order within layout does not matter
-        layout (xfb_stride = 32, xfb_buffer = 1) out;  
-            
+        layout (xfb_stride = 32, xfb_buffer = 1) out;
+
         // everything in this block goes to buffer 0
         layout (xfb_buffer = 0, xfb_stride = 32) out block1 {
             layout (xfb_offset = 0)  vec4 a; // a goes to byte offset 0 of buffer 0
             layout (xfb_offset = 16) vec4 b; // b goes to offset 16 of buffer 0
         };
-        
+
         layout (xfb_buffer = 1, xfb_offset = 12) out block2 {
             vec4 v;  // v will be written to byte offsets 12 through 27 of buffer 1
             float u; // u will be written to offset 28
             layout(xfb_offset = 40) vec4 w;
             vec4 x;  // x will be written to offset 56, the next available offset
-        };            
+        };
 
         layout (xfb_buffer = 2, xfb_stride = 32) out block3 {
             layout (xfb_offset = 12) vec3 c;
@@ -1022,7 +1022,7 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
             layout (xfb_offset = 0)  vec3 g; // okay, increasing order not required
         };
 
-    "When no *xfb_stride* is specified for a buffer, the stride of a buffer will 
+    "When no *xfb_stride* is specified for a buffer, the stride of a buffer will
     be the smallest needed to hold the variable placed at the highest offset,
     including any required padding.  For example:
 
@@ -1032,15 +1032,15 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
             layout (xfb_offset = 16) vec4 f;
         };
 
-    "The resulting stride (implicit or explicit) must be less than or equal to 
-    the implementation-dependent constant 
+    "The resulting stride (implicit or explicit) must be less than or equal to
+    the implementation-dependent constant
     gl_MaxTransformFeedbackInterleavedComponents."
 
     Section 4.4.2.1 Tessellation Control Outputs
 
     Insert in front of the first sentence:
-        
-        "Other than for the transform feedback layout qualifiers, 
+
+        "Other than for the transform feedback layout qualifiers,
 
     Section 4.4.5 "Uniform and Shader Storage Blocks"
 
@@ -1059,62 +1059,62 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
 
     Modify the paragraph starting soon after as "Default layouts..." to read:
 
-    "Default layouts for shared, packed, std140, std430, row_major, and 
+    "Default layouts for shared, packed, std140, std430, row_major, and
     column_major are established at global scope for uniform blocks as"
-    
+
     At the end of the section, add descriptions of these:
 
-    "The *offset* qualifier can only be used on block members of blocks 
+    "The *offset* qualifier can only be used on block members of blocks
     declared with *std140* or *std430* layouts.
-    The *offset* qualifier forces the qualified member to start at or after the 
-    specified integral-constant-expression, which will be its byte offset 
-    from the beginning of the buffer.  It is a compile-time error to 
-    specify an *offset* that is smaller than the offset of the previous 
-    member in the block or that lies within the previous member of the 
-    block.  Two blocks linked together in the same program with the same 
-    block name must have the exact same set of members qualified with 
-    *offset* and their integral-constant-expression values must be the 
-    same, or a link-time error results.  The specified offset must be a 
-    multiple of the base alignment of the type of the block member it 
+    The *offset* qualifier forces the qualified member to start at or after the
+    specified integral-constant-expression, which will be its byte offset
+    from the beginning of the buffer.  It is a compile-time error to
+    specify an *offset* that is smaller than the offset of the previous
+    member in the block or that lies within the previous member of the
+    block.  Two blocks linked together in the same program with the same
+    block name must have the exact same set of members qualified with
+    *offset* and their integral-constant-expression values must be the
+    same, or a link-time error results.  The specified offset must be a
+    multiple of the base alignment of the type of the block member it
     qualifies, or a compile-time error results.
 
-    "The *align* qualifier can only be used on blocks or block members, and 
-    only for blocks declared with *std140* or *std430* layouts.  The *align* 
-    qualifier makes the start of each block member have a minimum byte 
-    alignment.  It does not affect the internal layout within each member, 
-    which will still follow the std140 or std430 rules.  The specified 
+    "The *align* qualifier can only be used on blocks or block members, and
+    only for blocks declared with *std140* or *std430* layouts.  The *align*
+    qualifier makes the start of each block member have a minimum byte
+    alignment.  It does not affect the internal layout within each member,
+    which will still follow the std140 or std430 rules.  The specified
     alignment must be a power of 2, or a compile-time error results.
-      
-    "The /actual alignment/ of a member will be the greater of the specified 
-    *align* alignment and the standard (e.g., *std140*) base alignment for the 
-    member's type.  The /actual offset/ of a member is computed as follows:  
-    If *offset* was declared, start with that offset, otherwise start with the 
-    next available offset.  If the resulting offset is not a multiple of the 
-    /actual alignment/, increase it to the first offset that is a multiple of 
-    the /actual alignment/.  This results in the /actual offset/ the member 
+
+    "The /actual alignment/ of a member will be the greater of the specified
+    *align* alignment and the standard (e.g., *std140*) base alignment for the
+    member's type.  The /actual offset/ of a member is computed as follows:
+    If *offset* was declared, start with that offset, otherwise start with the
+    next available offset.  If the resulting offset is not a multiple of the
+    /actual alignment/, increase it to the first offset that is a multiple of
+    the /actual alignment/.  This results in the /actual offset/ the member
     will have.
 
-    "When *align* is applied to an array, it effects only the start of the 
-    array, not the array's internal stride.  Both an *offset* and an *align* 
+    "When *align* is applied to an array, it effects only the start of the
+    array, not the array's internal stride.  Both an *offset* and an *align*
     qualifier can be specified on a declaration.
 
-    "The *align* qualifier, when used on a block, has the same effect as 
-    qualifying each member with the same *align* value as declared on the 
-    block, and gets the same compile-time results and errors as if this had 
-    been done.  As described in general earlier, an individual member can 
-    specify its own *align*, which overrides the block-level *align*, but 
+    "The *align* qualifier, when used on a block, has the same effect as
+    qualifying each member with the same *align* value as declared on the
+    block, and gets the same compile-time results and errors as if this had
+    been done.  As described in general earlier, an individual member can
+    specify its own *align*, which overrides the block-level *align*, but
     just for that member."
 
     Section 4.5.1 "4.5.1 Redeclaring Built-in Interpolation Variables in the Compatibility Profile"
 
     Modify the paragraph starting "Ideally, these are redeclared..." to read
 
-    "Ideally, these are redeclared as part of the redeclaration of an interface 
-    block, as described in section 7.1.1 `Compatibility Profile Built-In Language 
+    "Ideally, these are redeclared as part of the redeclaration of an interface
+    block, as described in section 7.1.1 `Compatibility Profile Built-In Language
     Variables'.  However, for the above purpose, they can be redeclared as
-    individual variables at global scope, outside an interface block.  Such 
-    redeclarations also allow adding the transform-feedback qualifiers 
-    xfb_buffer, xfb_stride, and xfb_offset to output variables.  (Using 
+    individual variables at global scope, outside an interface block.  Such
+    redeclarations also allow adding the transform-feedback qualifiers
+    xfb_buffer, xfb_stride, and xfb_offset to output variables.  (Using
     xfb_buffer on a variable does not change the global default buffer.)...
     <rest of paragraph>."
 
@@ -1122,14 +1122,14 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
 
     Near the end of this section, around 2nd to last paragraph, which is:
 
-    "This establishes the output interface the shader will use with the 
-    subsequent pipeline stage.  It must be a subset of the built-in 
+    "This establishes the output interface the shader will use with the
+    subsequent pipeline stage.  It must be a subset of the built-in
     members of gl_PerVertex."
 
     Add the following:
 
-    "Such a redeclaration can also add the invariant qualifier, interpolation 
-    qualifiers, and the layout qualifiers xfb_offset, xfb_buffer, and xfb_stride.  
+    "Such a redeclaration can also add the invariant qualifier, interpolation
+    qualifiers, and the layout qualifiers xfb_offset, xfb_buffer, and xfb_stride.
     It can also add an array size for unsized arrays. For example:
 
         out layout(xfb_buffer = 1, xfb_stride = 16) gl_PerVertex {
@@ -1137,7 +1137,7 @@ Additions to Chapter 4 "Variables and Types" of the OpenGL Shading Language
             layout(xfb_offset = 0) float gl_ClipDistance[4];
         };
 
-    "Other layout qualifiers, like location, cannot be added to such a 
+    "Other layout qualifiers, like location, cannot be added to such a
     redeclaration, unless specifically stated."
 
 Examples:
@@ -1168,7 +1168,7 @@ Additions to Chapter 9 "Shading Language Grammar for Core Profile" of the OpenGL
     Change
 
         IDENTIFIER EQUAL INTCONSTANT
-        
+
     to
         IDENTIFIER EQUAL constant_expression
 
@@ -1252,14 +1252,14 @@ Issues
        Would it need to be queried from the app as well?
 
        Aligning based on the size of previous member is what the system already
-       does.  Do we have a use case that needs custom packing following a 
+       does.  Do we have a use case that needs custom packing following a
        structure, which cannot be handled by an *align* layout identifier?
-       
+
        RESOLUTION: No.
 
     2) Do we need to allow layout locations to be placed on blocks?
 
-       Discussion:  Yes, for SSO matching by location.  But, do we still 
+       Discussion:  Yes, for SSO matching by location.  But, do we still
        need them on members?  A block could still be a well-defined block
        of memory, and if an interface is mixing/matching content of a block
        it seems they put the wrong things together in a block.
@@ -1268,7 +1268,7 @@ Issues
        as well.  Order doesn't matter.
 
     3) Do we need to support discovery of the current offset?  E.g.,
-       
+
            layout(offset = currentOffset + 3)
 
        RESOLUTION:  No.
@@ -1285,13 +1285,13 @@ Issues
     5) Instead of dynamic selection of outputs for transform/feedback, use
        locations.
 
-       RESOLUTION: Use syntax in the shader layout blocks, not an entry point 
+       RESOLUTION: Use syntax in the shader layout blocks, not an entry point
        in the API.  Either "layout(transformfeedback: var1, var2 var3) out;"
        or tag individual members.  Applies to both inside and outside blocks.
 
     6) Is it an error to specify an *offset* that is not naturally aligned?
 
-       RESOLUTION:  Yes, all offsets should be naturally aligned, but see 
+       RESOLUTION:  Yes, all offsets should be naturally aligned, but see
        issue 10: it is natural alignment of the type, not the component.
 
     7) Is there an error at some point if an xfb_buffer is not valid?  There
@@ -1305,7 +1305,7 @@ Issues
     8) What API changes are needed to support component locations?  There is
        currently no mention of stages in the specification language above,
        implying all stages' inputs and outputs can specify component
-       locations.  Probably, we either need to drop input components to 
+       locations.  Probably, we either need to drop input components to
        the vertex stage and output components from the fragment stage, or
        consider API changes needed to support them.
 
@@ -1318,12 +1318,12 @@ Issues
        RESOLUTION: The actual stride of the buffer is determined by the stride in
        the shader, overriding any API settings.  However, it is a link-time
        error to go over the limits of either
-       
+
             MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS
-       
+
        GLSL only needs to include the limits for interleaved components.
 
-    10) For uniform-like buffers only: might want offset of a vec3 to be vec4 
+    10) For uniform-like buffers only: might want offset of a vec3 to be vec4
         aligned, not just component-sized aligned.  Is there a portable rule?
         Or implementation-dependent rule?
 
@@ -1460,7 +1460,7 @@ Issues
         treat the code above (with overlapping components) as an error, it
         would be strange to treat non-overlapping component assignments as an
         error.
-        
+
     17) How will applications be able to query the layout of transform
         feedback varyings if they are specified in the shader?
 
@@ -1558,7 +1558,7 @@ Issues
           ARRAY_SIZE            0             0             0
           OFFSET                4             0             16
           TRANSFORM_FEEDBACK_   0             1             1
-            BUFFER_INDEX        
+            BUFFER_INDEX
 
     18) If you have a program where transform feedback layout qualifiers are
         specified both in the shader text and via TransformFeedbackVaryings,
@@ -1570,7 +1570,7 @@ Issues
         transform feedback state specified via TransformFeedbackVaryings() is
         ignored if the shader used for transform feedback specifies an
         "xfb_offset" layout qualifier on any of its variables.
-     
+
     19) Do we need #extension support for this feature?
 
         RESOLVED:  Yes.  There is no reason we couldn't support some of the
@@ -1619,8 +1619,8 @@ Issues
         Examples:
 
         A) What qualifiers can be used globally on "out", on block
-          declarations, and individual variables? 
-  
+          declarations, and individual variables?
+
         B) If a shader has an "xfb_stride" qualifier for a buffer, but doesn't
           declare "xfb_offset" for any variable associated with that buffer,
           what happens?
@@ -1655,37 +1655,37 @@ Issues
         will be treated as having undefined values.
 
     23) This is related to issues 16 and 20.  Its resolution was that we
-        would have an error if two fragment shader outputs with different 
+        would have an error if two fragment shader outputs with different
         component types were assigned to different components of the same
         location.  We wouldn't have an error for vertex shader inputs
         because of the aliasing allowed in the spec since 2.0.
 
         What should we do for "varyings", which don't interface with
         resources in the API (vertex shader inputs, fragment shader outputs).
-        Would implementations have a problem with the following pair of 
+        Would implementations have a problem with the following pair of
         vertex shader outputs/fragment shader inputs?
 
           // different types, different components, same vector
           layout(location=2,component=1) out float f;
           layout(location=2,component=2) out int g;
 
-        Further, for the "mixed component types in a vector", do we need 
-        language related to the automatic assignment of variables without a 
+        Further, for the "mixed component types in a vector", do we need
+        language related to the automatic assignment of variables without a
         location? For example, let's say we had fragment outputs like:
 
             layout(location=0,component=3) out int f;
             layout(location=0,component=0) out vec3 g;
 
-        we'd have an error due to the component type mismatch.  But what if we 
+        we'd have an error due to the component type mismatch.  But what if we
         had this?
 
             layout(location=0,component=3) out int f;
             out vec3 g;  // location assigned by compiler
 
-        Should the compiler would be required to avoid location 0 in this 
+        Should the compiler would be required to avoid location 0 in this
         case, even though it could "fit" into the first three components?
 
-        RESOLVED:  For fragment outputs, no mixing is allowed, while 
+        RESOLVED:  For fragment outputs, no mixing is allowed, while
         for varyings between stages, the compiler is free to assign locations
         as it sees fit.  If the underlying hardware is vector-based and
         requires all components of a vector to have identical
@@ -1750,7 +1750,7 @@ Revision History
     Revision 1, 19-Dec-2012 (JohnK)
       - Create overview.
     Revision 2, 21-Jan-2013 (JohnK)
-      - Pin down a specific proposal in the overview, and add first 
+      - Pin down a specific proposal in the overview, and add first
         5 issues.
     Revision 3, 23-Jan-2013 (JohnK)
       - Allow locations on input/output blocks/members
@@ -1764,7 +1764,7 @@ Revision History
       - Simplify overview
       - First draft specification language for features 1-5 (not 6).
     Revision 6, 28-Mar-2013 (JohnK)
-      - Change xfb streams and components to buffers and offsets 
+      - Change xfb streams and components to buffers and offsets
         (aligned and non aliasing)
       - Uniform buffer-like offsets must be naturally aligned.
       - Updated issues 6-9
@@ -1812,9 +1812,9 @@ Revision History
     Revision 12, 7-May-2013 (JohnK)
       - Resolve bug 10130, which means the following:
       - Resolve issue 10
-      - alignments from the align qualifier will be a multiple of the base 
+      - alignments from the align qualifier will be a multiple of the base
         alignment of the type
-      - offset qualifier ids must be a multiple of the base alignment of the 
+      - offset qualifier ids must be a multiple of the base alignment of the
         type
       - minor typo fixes
     Revision 13, 9-May-2013 (JohnK)
@@ -1856,7 +1856,7 @@ Revision History
     Revision 19, 18-May-2013 (pbrown)
       - Add dependencies for use of ARB_enhanced_layouts as an extension.
         Require OpenGL 3.1 / GLSL 1.40, since that's where layout qualifiers
-        were first added.  For various features involving layout qualifers, 
+        were first added.  For various features involving layout qualifers,
         require the extension or core version where those layout qualifiers
         were first supported.
       - Fix a typo involving MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS.
@@ -1866,14 +1866,14 @@ Revision History
     Revision 21, 21-May-2013 (pdaniell)
       - Assign enum token values
     Revision 22, 28-May-2013 (JohnK)
-      - Fix bugs 10249 and 10267: Expand on (stream's) rules of inheritance for 
-        xfb_buffer, allow xbf_offset to be on both a block its members, and 
+      - Fix bugs 10249 and 10267: Expand on (stream's) rules of inheritance for
+        xfb_buffer, allow xbf_offset to be on both a block its members, and
         xfb_stride can appear an anything.  Other clarifications.
       - Fix bug 10266: xfb_stride must be a multiple of 8 if capturing doubles,
         and offsets are aligned to multiples of the component's size.
-      - Fix bug 10247: Describe how actual offsets are computed based on offset 
+      - Fix bug 10247: Describe how actual offsets are computed based on offset
         and align.
-      - Fix bug 10248: Either a whole block has location layout qualification or 
+      - Fix bug 10248: Either a whole block has location layout qualification or
         none of it does.
       - Other minor editorial changes.
     Revision 23, 28-May-2013 (pbrown)
@@ -1889,22 +1889,25 @@ Revision History
       - Fixed a typo in the dependencies section for OpenGL 4.1 and
         ARB_separate_shader_objects.
     Revision 25, 31-May-2013 (JohnK)
-      - Bug 10248: Redo aliasing language regarding location and component 
+      - Bug 10248: Redo aliasing language regarding location and component
         aliasing.
-      - Bug 10318: More strongly state that align operates at the member 
+      - Bug 10318: More strongly state that align operates at the member
         level and not internally within members.
-      - Bug 10321: More strongly state that xfb_offset applied to aggregates 
-        (arrays, structures, nesting,...) operates by flattening the aggregate 
+      - Bug 10321: More strongly state that xfb_offset applied to aggregates
+        (arrays, structures, nesting,...) operates by flattening the aggregate
         down to a sequence of components.
     Revision 26, 3-July-2013 (JohnK)
       - Include mention of API changes in the overview, and fix the offset example.
       - Bug 10371: Be explicit that when the gl_PerVertex block is redeclared,
-        the declaration can add on invariant, xfb_offset, xfb_buffer, and 
+        the declaration can add on invariant, xfb_offset, xfb_buffer, and
         xfb_strideto its members, as well as array size for gl_ClipDistance.
-      - Bug 10327: Editorial: Expanded the introduction to the transform-feedback 
+      - Bug 10327: Editorial: Expanded the introduction to the transform-feedback
         section. Described inheritance for xfb_bufferwithout referring to stream.
       - A few minor editorial corrections.
     Revision 27, June 13, 2014 (Jon Leech)
       - Remove GetProgramResourceLocation* as commands accepting the
         TRANSFORM_FEEDBACK_BUFFER interface from the New Tokens section (Bug
         10588).
+    Revision 28, January 10, 2019 (Jon Leech)
+      - Clarify that a transform feedback buffer only needs to be bound if
+        the buffer is active (gitlab #38).
