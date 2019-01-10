@@ -15,11 +15,11 @@ Contributors
 
 Contact Point for Bug Reports
 
-    https://www.khronos.org/bugzilla/enter_bug.cgi?product=OpenGL
+    https://github.com/KhronosGroup/OpenGL-Registry/issues/
 
 Notice
 
-    Copyright (c) 2015-2016 The Khronos Group Inc. Copyright terms at
+    Copyright (c) 2015-2019 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
 
 Status
@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date: December 10, 2018
-    Revision: 41
+    Last Modified Date: January 9, 2019
+    Revision: 42
 
 Number
 
@@ -706,12 +706,51 @@ Modifications to Chapter 7 of the OpenGL 4.5 (Core Profile) Specification
     "7.6.2.spv SPIR-V Uniform Offsets and Strides
 
     The SPIR-V decorations *GLSLShared* or *GLSLPacked* must not be used. A
-    variable in the *Uniform* Storage Class decorated as a *Block* must be
-    explicitly laid out using the *Offset*, *ArrayStride*, and *MatrixStride*
-    decorations. If the variable is decorated as a *BufferBlock*, its offsets
-    and strides must not contradict std430 alignment and minimum offset
-    requirements.  Otherwise, its offsets and strides must not contradict
-    std140 alignment and minimum offset requirements."
+    variable in the *Uniform* Storage Class decorated as a *Block* or
+    *BufferBlock* must be explicitly laid out using the *Offset*, *ArrayStride*,
+    and *MatrixStride* decorations. These must follow the alignment rules listed
+    above, but not necessarily the packing rules. More specifically, explicit
+    SPIR-V offsets and strides must obey the following:
+
+    Define the /base alignment/ recursively as:
+
+      - A scalar of size N has a base alignment of N.
+
+      - A two-component vector, with components of size N, has a base alignment
+        of 2N.
+
+      - A three- or four-component vector, with components of size N, has a base
+        alignment of 4N.
+
+      - An array has a base alignment equal to the base alignment of its element
+        type, rounded up to a multiple of 16.
+
+      - A structure has a base alignment equal to the largest base alignment of
+        any of its members, rounded up to a multiple of 16.
+
+      - A row-major matrix of C columns has a base alignment equal to the base
+        alignment of a vector of C matrix components.
+
+      - A column-major matrix has a base alignment equal to the base alignment
+        of the matrix column type.
+
+    Given this definition, blocks must be laid out such that:
+
+      - The *Offset* decoration must be a multiple of its base alignment.
+
+      - Any *ArrayStride* or *MatrixStride* decoration must be an integer
+        multiple of the base alignment of the array or matrix.
+
+      - The *Offset* decoration of a member must not place it between the end of
+        a structure or an array and the next multiple of the base alignment of
+        that structure or array.
+
+      - The numeric order of *Offset* decorations need not follow member
+        declaration order.
+
+    With one exception: Variables in the *Uniform* storage class with a
+    decoration of *BufferBlock* do not need their base alignments rounded up
+    to a multiple of 16.
 
   Modifications to Section 7.13 "Shader, Program, and Program Pipeline Queries"
 
@@ -2077,6 +2116,9 @@ Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    42    9-Jan-2019     JohnK          Explicitly give rules for SPIR-V
+                                        uniform offsets (internal API issue
+                                        92)
     41    10-Dec-2018    Jon Leech      Use 'workgroup' consistently
                                         throughout (Bug 11723, internal API
                                         issue 87).
