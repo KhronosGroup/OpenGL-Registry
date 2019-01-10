@@ -2122,6 +2122,8 @@ Revision History
     41    10-Dec-2018    Jon Leech      Use 'workgroup' consistently
                                         throughout (Bug 11723, internal API
                                         issue 87).
+    40    29-May-2018    dgkoch         note post decrement for atomicCounterDecrement
+                                        mapping
     39    25-Apr-2018    JohnK          add mappings of barriers and atomics
     38    10-Apr-2018    dgkoch         OpImageQuerySizeLod and OpImageQuerylevels
                                         only work with Sampled images
