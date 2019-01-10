@@ -358,7 +358,7 @@ Overview
       NA                    -> OpAtomicCompareExchangeWeak
 
       atomicCounterIncrement -> OpAtomicIIncrement
-      atomicCounterDecrement -> OpAtomicIDecrement
+      atomicCounterDecrement -> OpAtomicIDecrement (with post decrement)
       atomicCounter          -> OpAtomicLoad
 
     Mapping of other instructions
