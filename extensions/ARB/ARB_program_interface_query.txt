@@ -26,8 +26,8 @@ Status
 
 Version
 
-    Last Modified Date: August 19, 2013
-    Revision:           20
+    Last Modified Date: January 10, 2019
+    Revision:           21
 
 Number
 
@@ -600,6 +600,13 @@ Additions to Chapter 2 of the OpenGL 4.2 (Compatibility Profile) Specification
     variable is written to <params>.  The integer returned is one of the
     values found in table 2.16.
 
+    For the property COMPATIBLE_SUBROUTINES, an array of integers is written
+    to <params>, with each integer specifying the index of an active
+    subroutine that can be assigned to the selected subroutine uniform. The
+    number of values written to <params> for an active subroutine is given
+    by the value of the property NUM_COMPATIBLE_SUBROUTINES for the
+    resource.
+
     For the property ARRAY_SIZE, a single integer identifying the number of
     active array elements of an active variable is written to <params>. The
     array size returned is in units of the type associated with the property
@@ -868,7 +875,7 @@ Additions to Chapter 2 of the OpenGL 4.2 (Compatibility Profile) Specification
     The command
 
       void GetUniformIndices(uint program, sizei uniformCount,
-                             const char * const *uniformNames, 
+                             const char * const *uniformNames,
                              uint *uniformIndices);
 
     is equivalent to
@@ -1876,6 +1883,9 @@ Issues
 
 Revision History
 
+    Revision 21, January 10, 2019 (Jon Leech)
+      - Add the property COMPATIBLE_SUBROUTINES to those queriable by
+        GetProgramResourceiv (github OpenGL-Registry issue #11)
     Revision 20, August 19, 2013 (Jon Leech)
       - Change ARRAY_SIZE query to return one for active variables not
         corresponding to an array of basic types, rather than zero, for
