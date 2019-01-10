@@ -1264,7 +1264,7 @@ Operations and the Framebuffer)
 
     In all three routines, if <texture> is zero, then <textarget>,
     <level>, and <zoffset> are ignored.  If <texture> is not zero, then
-    <texture> must either name an existing texture object with an target
+    <texture> must either name an existing texture object with a target
     of <textarget>, or <texture> must name an existing cube map texture
     and <textarget> must be one of: TEXTURE_CUBE_MAP_POSITIVE_X,
     TEXTURE_CUBE_MAP_POSITIVE_Y, TEXTURE_CUBE_MAP_POSITIVE_Z,
@@ -1792,9 +1792,9 @@ Requests)
 
             boolean IsFramebufferEXT( uint framebuffer );
 
-        returns TRUE if <framebuffer> is the name of an framebuffer
+        returns TRUE if <framebuffer> is the name of a framebuffer
         object.  If <framebuffer> is zero, or if <framebuffer> is a
-        non-zero value that is not the name of an framebuffer object,
+        non-zero value that is not the name of a framebuffer object,
         IsFramebufferEXT return FALSE.
 
     6.1.15 Renderbuffer Object Queries
