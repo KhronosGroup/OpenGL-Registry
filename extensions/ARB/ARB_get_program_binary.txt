@@ -43,8 +43,8 @@ Status
 
 Version
 
-    Last Modified Date: July 5, 2016
-    Revision: #9
+    Last Modified Date: January 11, 2019
+    Revision: #10
 
 Number
 
@@ -264,8 +264,9 @@ Errors
 
     An INVALID_OPERATION error is generated if GetProgramBinary is called
     when the program object, <program>, does not contain a valid program
-    binary as reflected by its LINK_STATUS state, or if <bufSize> is not big
-    enough to contain the entire program binary.
+    binary as reflected by its LINK_STATUS state; if <bufSize> is not big
+    enough to contain the entire program binary; or if the value of
+    NUM_PROGRAM_BINARY_FORMATS is zero.
 
 New State
 
@@ -522,6 +523,10 @@ Issues
     being saved such that when it is loaded again a recompile can be avoided.
 
 Revision History
+
+    10 01/11/2019 Add an error for ProgramBinary if there are no binary
+                  formats (Bug 16155).
+
     09 07/05/2016 Fix missing GL_ prefix in example code.
 
     08 10/08/2013 Change GLvoid -> void (Bug 10412).

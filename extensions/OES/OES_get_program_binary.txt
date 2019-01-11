@@ -33,9 +33,9 @@ Status
     Ratified by the Khronos BOP, May 29, 2008.
 
 Version
-    
-    Last Modified Date: October 8, 2013
-    Revision: #14
+
+    Last Modified Date: January 11, 2019
+    Revision: #15
 
 Number
 
@@ -71,7 +71,7 @@ Overview
     virtually useless, but the ProgramBinaryOES command may still be used by
     vendor extensions as a standard method for loading offline-compiled program
     binaries.
-    
+
 
 Issues
 
@@ -98,7 +98,7 @@ Issues
     of the current GL state in effect at the time it was retrieved with
     GetProgramBinaryOES, loaded with ProgramBinaryOES, installed as part of
     render state with UseProgram, or used for drawing with DrawArrays or
-    DrawElements.  
+    DrawElements.
 
     However, some implementations have internal state dependencies that affect
     both GLSL source shaders and program binaries, causing them to run out of
@@ -111,7 +111,7 @@ Issues
 
     RESOLVED: Any shader objects attached to the program object at the time
     GetProgramBinaryOES or ProgramBinaryOES is called are ignored.  (See also
-    Issue 4.)  
+    Issue 4.)
 
     The program binary retrieved by GetProgramBinaryOES is the one installed
     during the most recent call to LinkProgram or ProgramBinaryOES, i.e. the one
@@ -149,8 +149,8 @@ Issues
 
     RESOLVED: Even if a program binary is successfully retrieved with
     GetProgramBinaryOES and then in a future run the program binary is
-    resupplied with ProgramBinaryOES, and all of the parameters are correct, 
-    the program binary load may still fail.  
+    resupplied with ProgramBinaryOES, and all of the parameters are correct,
+    the program binary load may still fail.
 
     This can happen if there has been a change to the hardware or software on
     the system, such as a hardware upgrade or driver update.  In this case the
@@ -161,14 +161,14 @@ Issues
     Even if the cached program binary format is still valid, ProgramBinaryOES
     may still fail to load the cached binary.  This is the driver's way of
     signaling to the app that it needs to recompile and recache its program
-    binaries because there has been some important change to the online 
+    binaries because there has been some important change to the online
     compiler, such as a bug fix or a significant new optimization.
 
     7. Can BindAttribLocation be called after ProgramBinaryOES to remap an
        attribute location used by the program binary?
 
     RESOLVED: No.  BindAttribLocation only affects the result of a subsequent
-    call to LinkProgram.  LinkProgram operates on the attached shader objects 
+    call to LinkProgram.  LinkProgram operates on the attached shader objects
     and replaces any program binary loaded prior to LinkProgram.  So there is no
     mechanism to remap an attribute location after loading a program binary.
 
@@ -176,11 +176,11 @@ Issues
     retrieving the program binary.  By calling BindAttribLocation followed by
     LinkProgram, an application can remap the attribute location.  If this is
     followed by a call to GetProgramBinaryOES, the retrieved program binary will
-    include the desired attribute location assignment.  
+    include the desired attribute location assignment.
 
 New Procedures and Functions
 
-    void GetProgramBinaryOES(uint program, sizei bufSize, sizei *length, 
+    void GetProgramBinaryOES(uint program, sizei bufSize, sizei *length,
                              enum *binaryFormat, void *binary);
 
     void ProgramBinaryOES(uint program, enum binaryFormat,
@@ -221,7 +221,7 @@ Additions to Chapter 2 of the OpenGL ES 2.0 Specification (OpenGL Operation)
     written into <binary> is returned in <length> and its format is returned in
     <binaryFormat>.  If <length> is NULL, then no length is returned.
 
-    The number of bytes in the program binary can be queried by calling 
+    The number of bytes in the program binary can be queried by calling
     GetProgramiv with <pname> PROGRAM_BINARY_LENGTH_OES.  When a program
     object's LINK_STATUS is FALSE, its program binary length is zero, and a call
     to GetProgramBinaryOES will generate an INVALID_OPERATION error.
@@ -272,8 +272,9 @@ Errors
 
     INVALID_OPERATION error is generated if GetProgramBinaryOES is called when
     the program object, <program>, does not contain a valid program binary as
-    reflected by its LINK_STATUS state, or if <bufSize> is not big enough to
-    contain the entire program binary.
+    reflected by its LINK_STATUS state; if <bufSize> is not big enough to
+    contain the entire program binary; or if the value of
+    NUM_PROGRAM_BINARY_FORMATS is zero.
 
 New State
 
@@ -299,7 +300,7 @@ New State
 Sample Usage
 
     void retrieveProgramBinary(const GLchar* vsSource, const GLchar* fsSource,
-                               const char* myBinaryFileName, 
+                               const char* myBinaryFileName,
                                GLenum* binaryFormat)
     {
         GLuint  newFS, newVS;
@@ -360,7 +361,7 @@ Sample Usage
 
         //
         // Clean up
-        // 
+        //
         glDeleteShader(newVS);
         glDeleteShader(newFS);
         glDeleteProgram(newProgram);
@@ -405,6 +406,8 @@ Sample Usage
 
 Revision History
 
+    #15    01/11/2019    Jon Leech       Add an error for ProgramBinary if there
+                                         are no binary formats (Bug 16155).
     #14    10/08/2013    Jon Leech       Change GLvoid -> void (Bug 10412).
     #13    06/02/2008    Benj Lipchak    Fix typo: GLint -> int, update status.
     #12    05/07/2008    Benj Lipchak    Add Issue about BindAttribLocation.
