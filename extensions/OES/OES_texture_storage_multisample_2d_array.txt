@@ -26,8 +26,8 @@ Status
 
 Version
 
-    Last Modified Date: May 3, 2016
-    Revision: 6
+    Last Modified Date: January 11, 2019
+    Revision: 8
 
 Number
 
@@ -49,7 +49,7 @@ New Procedures and Functions
 
     void TexStorage3DMultisampleOES(enum target,
                                     sizei samples,
-                                    enum sizedinternalformat,
+                                    enum internalformat,
                                     sizei width,
                                     sizei height,
                                     sizei depth,
@@ -130,7 +130,7 @@ Samplers)
 
         void TexStorage2DMultisample ...
         void TexStorage3DMultisampleOES(enum target, sizei samples,
-                                   int sizedinternalformat,
+                                   enum internalformat,
                                    sizei width, sizei height, sizei depth,
                                    boolean fixedsamplelocations);
 
@@ -195,7 +195,7 @@ Samplers)
     indicating the current ... or two-dimensional multisample array texture
     object, respectively.
 
-    
+
     Modify Section 8.10.3 "Texture Level Parameter Queries" in the description
     of GetTexLevelParameter{if}v on p. 175:
 
@@ -234,7 +234,7 @@ Framebuffer Objects)
 
 Additions to Chapter 19 of the OpenGL ES 3.1 Specification (Context State
 Queries)
-    
+
     Modifications to Section 19.3, "Internal Format Queries"
 
     Add to table 19.1 "Possible targets that <internalformat> can be used
@@ -346,6 +346,10 @@ Revision History
 
     Rev.    Date     Author         Changes
     ----  ---------- ---------      --------------------------------------------
+    8     2019/01/11 Jon Leech      Change 'int sizedinternalformat' parameter
+                                    to 'enum internalformat', to follow
+                                    changes to the ES 3.2 specification
+                                    (KhronosGroup/OpenGL-API issue 30).
     7     2016/05/03 Tobias Hector  Fixed INVALID_OPERATION error message for
                                     TexStorage3DMultisample to match desktop and
                                     ES 3.2
