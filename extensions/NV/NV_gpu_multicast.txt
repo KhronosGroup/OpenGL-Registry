@@ -25,8 +25,8 @@ Status
 
 Version
 
-    Last Modified Date:         October 7, 2016
-    Revision:                   5
+    Last Modified Date:         January 3, 2019
+    Revision:                   6
 
 Number
 
@@ -157,13 +157,13 @@ Additions to the OpenGL 4.5 Specification (Compatibility Profile)
     instance of a resource, it is considered to have per-GPU storage.  When all GPUs share a
     single instance of a resource, this is considered GPU-shared storage.
     
-    The mechanism for linking GPUs is implementation specific, as is the process-global mechanism
-    for enabling multicast rendering support (if necessary).  The number of GPUs usable for
-    multicast rendering by a context can be queried by calling GetIntegerv with the symbolic
-    constant MULTICAST_GPUS_NV.  Individual GPUs are identified using zero-based indices in the
-    range [0, n-1], where n is the number of multicast GPUs.  GPUs are also be identified by
-    bitmasks of the form 2^i, where i is the GPU index.  A set of GPUs is specified by the union
-    of masks for each GPU in the set.
+    The mechanism for linking GPUs is implementation specific, as is the mechanism for enabling
+    multicast rendering support (if necessary).  The number of GPUs usable for multicast rendering
+    by a context can be queried by calling GetIntegerv with the symbolic constant
+    MULTICAST_GPUS_NV.  This number is constant for the lifetime of a context.  Individual GPUs
+    are identified using zero-based indices in the range [0, n-1], where n is the number of
+    multicast GPUs.  GPUs are also identified by bitmasks of the form 2^i, where i is the GPU
+    index.  A set of GPUs is specified by the union of masks for each GPU in the set.
 
     20.1 Controlling Individual GPUs 
 
@@ -616,7 +616,7 @@ New Implementation Dependent State
                                                      Minimum
     Get Value                     Type   Get Command  Value  Description               Sec.  Attribute
     ---------------------------- ------ ------------- -----  ----------------------    ----  ---------
-    MULTICAST_GPUS_NV              Z+    GetIntegerv    2    Number of linked GPUs     20.0     -
+    MULTICAST_GPUS_NV              Z+    GetIntegerv    1    Number of linked GPUs     20.0     -
                                                              usable for multicast
 
 Backwards Compatibility
@@ -705,10 +705,10 @@ Issues
 
   (4) What happens if the MulticastCopyBufferSubDataNV source and destination buffer is the same?
 
-    RESOLVED.  When the source and destination make involve the same GPU,
-    MulticastCopyBufferSubDataNV matches the behavior of CopyBufferSubData: overlapped copies are
-    not allowed and an INVALID_VALUE error results.  When the source and destination do not
-    involve the same GPU, overlapping copies are allowed and no error is generated.
+    RESOLVED.  When the source and destination involve the same GPU, MulticastCopyBufferSubDataNV
+    matches the behavior of CopyBufferSubData: overlapped copies are not allowed and an
+    INVALID_VALUE error results.  When the source and destination do not involve the same GPU,
+    overlapping copies are allowed and no error is generated.
 
   (5) How does this extension interact with CopyTexImage2D?
 
@@ -731,9 +731,11 @@ Issues
 
   (8) Should we expose the extension on single-GPU configurations?
 
-    RESOLVED. No. The extension provides no value unless MULTICAST_GPUS_NV > 1.  Limiting exposure
-    to these configurations guarantees that at least two GPUs will be available when the extension
-    is reported.
+    RESOLVED.  Yes, this is recommended.  It allows more code sharing between multi-GPU and
+    single-GPU code paths.  If there is only one GPU present MULTICAST_GPUS_NV will be 1.  It
+    may also be 1 if explicit GPU control is unavailable (e.g. if the active multi-GPU rendering
+    mode prevents it).  Note that in revisions 5 and prior of this extension the minimum for
+    MULTICAST_GPUS_NV was 2.
   
   (9) Should glGet*BufferParameter* return the PER_GPU_STORAGE_BIT_NV bit when
     BUFFER_STORAGE_FLAGS is queried?
@@ -774,6 +776,8 @@ Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------  -----------------------------------------------
+     6    01/03/19  jschnarr  reduce MULTICAST_GPUS_NV minimum to 1
+                              clarify that MULTICAST_GPUS_NV is constant for a context
      5    10/07/16  jschnarr  trivial typo fix
      4    07/21/16  mjk       registered
      3    06/15/16  jschnarr  R370 release
