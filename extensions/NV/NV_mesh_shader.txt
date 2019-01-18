@@ -22,8 +22,8 @@ Status
 
 Version
 
-    Last Modified Date:     September 17, 2018
-    NVIDIA Revision:        2
+    Last Modified Date:     January 14, 2019
+    NVIDIA Revision:        3
 
 Number
 
@@ -247,7 +247,7 @@ Modifications to the OpenGL 4.5 Specification (Compatibility Profile)
     A single program object cannot mix mesh and task shader stages
     with vertex, tessellation or geometry shader stages. Furthermore
     a task shader stage cannot be combined with a fragment shader stage
-    when the task shader stage is omitted. Other combinations as well
+    when the mesh shader stage is omitted. Other combinations as well
     as their subsets are possible.
 
     Modify Section 7.1, Shader Objects, p. 85
@@ -1074,6 +1074,10 @@ Issues
     Also, please refer to issues in the GLSL extension specification.
 
 Revision History
+
+    Revision 3, January 14, 2019 (pbrown)
+    - Fix a typo in language prohibiting use of a task shader without a mesh
+      shader.
 
     Revision 2, September 17, 2018 (pbrown)
     - Prepare specification for publication.
