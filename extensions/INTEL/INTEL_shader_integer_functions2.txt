@@ -19,8 +19,8 @@ Status
 
 Version
 
-    Last Modification Date: 09/19/2018
-    Revision: 2
+    Last Modification Date: 01/22/2019
+    Revision: 3
 
 Number
 
@@ -42,6 +42,8 @@ Dependencies
     This extension interacts with AMD_gpu_shader_int16.
 
     This extension interacts with OpenGL 4.6 and ARB_gl_spirv.
+
+    This extension interacts with EXT_shader_explicit_arithmetic_types.
 
 Overview
 
@@ -175,17 +177,19 @@ Interactions with OpenGL 4.6 and ARB_gl_spirv
     The IntegerFunctions2INTEL capability is available whenever the
     implementation supports INTEL_shader_integer_functions2.
 
-Interactions with ARB_gpu_shader_int64
+Interactions with ARB_gpu_shader_int64 and EXT_shader_explicit_arithmetic_types_int64
 
     If the shader enables only INTEL_shader_integer_functions but not
-    ARB_gpu_shader_int64, remove all function overloads that have either
-    genU64Type or genI64Type parameters.
+    ARB_gpu_shader_int64 or EXT_shader_explicit_arithmetic_types_int64,
+    remove all function overloads that have either genU64Type or genI64Type
+    parameters.
 
-Interactions with AMD_gpu_shader_int16
+Interactions with AMD_gpu_shader_int16 and EXT_shader_explicit_arithmetic_types_int16
 
     If the shader enables only INTEL_shader_integer_functions but not
-    AMD_gpu_shader_int16, remove all function overloads that have either
-    genU16Type or genI16Type parameters.
+    AMD_gpu_shader_int16 or EXT_shader_explicit_arithmetic_types_int16,
+    remove all function overloads that have either genU16Type or genI16Type
+    parameters.
 
 Issues
 
@@ -257,3 +261,4 @@ Revision History
     ---  -----------  --------  ---------------------------------------------
       1  04-Sep-2018  idr       Initial version.
       2  19-Sep-2018  idr       Add interactions with AMD_gpu_shader_int16.
+      3  22-Jan-2019  idr       Add interactions with EXT_shader_explicit_arithmetic_types.
