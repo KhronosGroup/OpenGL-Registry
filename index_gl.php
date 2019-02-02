@@ -48,7 +48,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <ul>
 <li> <b> Current Specifications (OpenGL 4.6) </b>
-<li> OpenGL 4.6 API Specification (updated May 14, 2018)
+<li> OpenGL 4.6 API Specification (February 2, 2019)
     <ul>
     <li> <a href="specs/gl/glspec46.core.pdf"> Core Profile Specification
          </a> </li>
@@ -60,7 +60,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
          Compatibility Profile Specification with changes marked </a>
          </li>
     </ul> </li>
-<li> OpenGL Shading Language 4.60 Specification (updated May 11, 2018)
+<li> OpenGL Shading Language 4.60 Specification (December 12, 2018)
      <a href="specs/gl/GLSLangSpec.4.60.pdf"> (PDF) </a> </li>
 
 <li> <a href="http://www.opengl.org/sdk/docs/man4/"> OpenGL 4.5 API and

@@ -56,11 +56,11 @@ include_once("../../assets/static_pages/khr_page_top.php");
      Documentation </h2>
 
 <ul>
-<li> OpenGL ES 3.2 Specification (May 14, 2018)
+<li> OpenGL ES 3.2 Specification (February 2, 2019)
      <a href="specs/es/3.2/es_spec_3.2.pdf"> without changes marked </a>
      and
      <a href="specs/es/3.2/es_spec_3.2.withchanges.pdf"> with changes marked </a>. </li>
-<li> OpenGL ES Shading Language 3.20 Specification (May 11, 2018)
+<li> OpenGL ES Shading Language 3.20 Specification (December 12, 2018)
      <a href="specs/es/3.2/GLSL_ES_Specification_3.20.pdf"> (PDF) </a>
 <li> <a href="http://www.khronos.org/opengles/sdk/docs/man32/">
      OpenGL ES 3.2 Online Manual Pages.</a> </li>
