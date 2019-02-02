@@ -61,6 +61,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
          </li>
     </ul> </li>
 <li> OpenGL Shading Language 4.60 Specification (December 12, 2018)
+     <a href="specs/gl/GLSLangSpec.4.60.html"> (HTML) </a> </li>
      <a href="specs/gl/GLSLangSpec.4.60.pdf"> (PDF) </a> </li>
 
 <li> <a href="http://www.opengl.org/sdk/docs/man4/"> OpenGL 4.5 API and
