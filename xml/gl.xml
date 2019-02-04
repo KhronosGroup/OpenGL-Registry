@@ -6613,6 +6613,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x864E" name="GL_DOT_PRODUCT_TEXTURE_RECTANGLE_NV"/>
         <enum value="0x864F" name="GL_DEPTH_CLAMP"/>
         <enum value="0x864F" name="GL_DEPTH_CLAMP_NV"/>
+        <enum value="0x864F" name="GL_DEPTH_CLAMP_EXT"/>
         <enum value="0x8650" name="GL_VERTEX_ATTRIB_ARRAY0_NV"/>
         <enum value="0x8651" name="GL_VERTEX_ATTRIB_ARRAY1_NV"/>
         <enum value="0x8652" name="GL_VERTEX_ATTRIB_ARRAY2_NV"/>
@@ -43290,6 +43291,11 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_DEPTH_BOUNDS_TEST_EXT"/>
                 <enum name="GL_DEPTH_BOUNDS_EXT"/>
                 <command name="glDepthBoundsEXT"/>
+            </require>
+        </extension>
+        <extension name="GL_EXT_depth_clamp" supported="gles2">
+            <require>
+                <enum name="GL_DEPTH_CLAMP_EXT"/>
             </require>
         </extension>
         <extension name="GL_EXT_direct_state_access" supported="gl|glcore" comment="DSA extension doesn't identify which interfaces are core profile and keeps getting expanded. This is in sync with revision 34, 2010/09/07">
