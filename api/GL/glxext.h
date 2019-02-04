@@ -500,9 +500,9 @@ Bool glXReleaseBuffersMESA (Display *dpy, GLXDrawable drawable);
 #define GLX_MESA_set_3dfx_mode 1
 #define GLX_3DFX_WINDOW_MODE_MESA         0x1
 #define GLX_3DFX_FULLSCREEN_MODE_MESA     0x2
-typedef Bool ( *PFNGLXSET3DFXMODEMESAPROC) (int mode);
+typedef GLboolean ( *PFNGLXSET3DFXMODEMESAPROC) (GLint mode);
 #ifdef GLX_GLXEXT_PROTOTYPES
-Bool glXSet3DfxModeMESA (int mode);
+GLboolean glXSet3DfxModeMESA (GLint mode);
 #endif
 #endif /* GLX_MESA_set_3dfx_mode */
 
@@ -835,13 +835,13 @@ int glXQueryHyperpipeAttribSGIX (Display *dpy, int timeSlice, int attrib, int si
 #define GLX_PBUFFER_SGIX                  0x8023
 typedef GLXPbufferSGIX ( *PFNGLXCREATEGLXPBUFFERSGIXPROC) (Display *dpy, GLXFBConfigSGIX config, unsigned int width, unsigned int height, int *attrib_list);
 typedef void ( *PFNGLXDESTROYGLXPBUFFERSGIXPROC) (Display *dpy, GLXPbufferSGIX pbuf);
-typedef int ( *PFNGLXQUERYGLXPBUFFERSGIXPROC) (Display *dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int *value);
+typedef void ( *PFNGLXQUERYGLXPBUFFERSGIXPROC) (Display *dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int *value);
 typedef void ( *PFNGLXSELECTEVENTSGIXPROC) (Display *dpy, GLXDrawable drawable, unsigned long mask);
 typedef void ( *PFNGLXGETSELECTEDEVENTSGIXPROC) (Display *dpy, GLXDrawable drawable, unsigned long *mask);
 #ifdef GLX_GLXEXT_PROTOTYPES
 GLXPbufferSGIX glXCreateGLXPbufferSGIX (Display *dpy, GLXFBConfigSGIX config, unsigned int width, unsigned int height, int *attrib_list);
 void glXDestroyGLXPbufferSGIX (Display *dpy, GLXPbufferSGIX pbuf);
-int glXQueryGLXPbufferSGIX (Display *dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int *value);
+void glXQueryGLXPbufferSGIX (Display *dpy, GLXPbufferSGIX pbuf, int attribute, unsigned int *value);
 void glXSelectEventSGIX (Display *dpy, GLXDrawable drawable, unsigned long mask);
 void glXGetSelectedEventSGIX (Display *dpy, GLXDrawable drawable, unsigned long *mask);
 #endif
@@ -939,9 +939,9 @@ int glXWaitVideoSyncSGI (int divisor, int remainder, unsigned int *count);
 
 #ifndef GLX_SUN_get_transparent_index
 #define GLX_SUN_get_transparent_index 1
-typedef Status ( *PFNGLXGETTRANSPARENTINDEXSUNPROC) (Display *dpy, Window overlay, Window underlay, long *pTransparentIndex);
+typedef Status ( *PFNGLXGETTRANSPARENTINDEXSUNPROC) (Display *dpy, Window overlay, Window underlay, unsigned long *pTransparentIndex);
 #ifdef GLX_GLXEXT_PROTOTYPES
-Status glXGetTransparentIndexSUN (Display *dpy, Window overlay, Window underlay, long *pTransparentIndex);
+Status glXGetTransparentIndexSUN (Display *dpy, Window overlay, Window underlay, unsigned long *pTransparentIndex);
 #endif
 #endif /* GLX_SUN_get_transparent_index */
 
