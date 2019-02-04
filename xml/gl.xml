@@ -408,6 +408,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_AUTO_NORMAL"/>
             <enum name="GL_BLEND"/>
             <enum name="GL_CALLIGRAPHIC_FRAGMENT_SGIX"/>
+            <enum name="GL_CLIP_DISTANCE"/>
             <enum name="GL_CLIP_PLANE0"/>
             <enum name="GL_CLIP_PLANE1"/>
             <enum name="GL_CLIP_PLANE2"/>
@@ -421,6 +422,9 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_CONVOLUTION_1D_EXT"/>
             <enum name="GL_CONVOLUTION_2D_EXT"/>
             <enum name="GL_CULL_FACE"/>
+            <enum name="GL_DEBUG_OUTPUT"/>
+            <enum name="GL_DEBUG_OUTPUT_SYNCHRONOUS"/>
+            <enum name="GL_DEPTH_CLAMP"/>
             <enum name="GL_DEPTH_TEST"/>
             <enum name="GL_DITHER"/>
             <enum name="GL_EDGE_FLAG_ARRAY"/>
@@ -436,6 +440,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_FRAGMENT_LIGHT6_SGIX"/>
             <enum name="GL_FRAGMENT_LIGHT7_SGIX"/>
             <enum name="GL_FRAGMENT_LIGHTING_SGIX"/>
+            <enum name="GL_FRAMEBUFFER_SRGB"/>
             <enum name="GL_FRAMEZOOM_SGIX"/>
             <enum name="GL_HISTOGRAM_EXT"/>
             <enum name="GL_INDEX_ARRAY"/>
@@ -472,6 +477,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_MAP2_VERTEX_3"/>
             <enum name="GL_MAP2_VERTEX_4"/>
             <enum name="GL_MINMAX_EXT"/>
+            <enum name="GL_MULTISAMPLE"/>
             <enum name="GL_MULTISAMPLE_SGIS"/>
             <enum name="GL_NORMALIZE"/>
             <enum name="GL_NORMAL_ARRAY"/>
@@ -485,11 +491,20 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_POLYGON_STIPPLE"/>
             <enum name="GL_POST_COLOR_MATRIX_COLOR_TABLE_SGI"/>
             <enum name="GL_POST_CONVOLUTION_COLOR_TABLE_SGI"/>
+            <enum name="GL_PRIMITIVE_RESTART"/>
+            <enum name="GL_PRIMITIVE_RESTART_FIXED_INDEX"/>
+            <enum name="GL_PROGRAM_POINT_SIZE"/>
+            <enum name="GL_RASTERIZER_DISCARD"/>
             <enum name="GL_REFERENCE_PLANE_SGIX"/>
             <enum name="GL_RESCALE_NORMAL_EXT"/>
+            <enum name="GL_SAMPLE_ALPHA_TO_COVERAGE"/>
             <enum name="GL_SAMPLE_ALPHA_TO_MASK_SGIS"/>
+            <enum name="GL_SAMPLE_ALPHA_TO_ONE"/>
             <enum name="GL_SAMPLE_ALPHA_TO_ONE_SGIS"/>
+            <enum name="GL_SAMPLE_COVERAGE"/>
+            <enum name="GL_SAMPLE_MASK"/>
             <enum name="GL_SAMPLE_MASK_SGIS"/>
+            <enum name="GL_SAMPLE_SHADING"/>
             <enum name="GL_SCISSOR_TEST"/>
             <enum name="GL_SEPARABLE_2D_EXT"/>
             <enum name="GL_SHARED_TEXTURE_PALETTE_EXT"/>
@@ -501,6 +516,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_TEXTURE_4D_SGIS"/>
             <enum name="GL_TEXTURE_COLOR_TABLE_SGI"/>
             <enum name="GL_TEXTURE_COORD_ARRAY"/>
+            <enum name="GL_TEXTURE_CUBE_MAP_SEAMLESS"/>
             <enum name="GL_TEXTURE_GEN_Q"/>
             <enum name="GL_TEXTURE_GEN_R"/>
             <enum name="GL_TEXTURE_GEN_S"/>
