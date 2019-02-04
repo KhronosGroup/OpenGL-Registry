@@ -1086,7 +1086,7 @@ typedef unsigned __int64 uint64_t;
             <param><ptype>Display</ptype> *<name>dpy</name></param>
             <param><ptype>Window</ptype> <name>overlay</name></param>
             <param><ptype>Window</ptype> <name>underlay</name></param>
-            <param>long *<name>pTransparentIndex</name></param>
+            <param>unsigned long *<name>pTransparentIndex</name></param>
         </command>
         <command>
             <proto>int <name>glXGetVideoDeviceNV</name></proto>
@@ -1252,7 +1252,7 @@ typedef unsigned __int64 uint64_t;
             <param><ptype>GLuint</ptype> *<name>count</name></param>
         </command>
         <command>
-            <proto>int <name>glXQueryGLXPbufferSGIX</name></proto>
+            <proto>void <name>glXQueryGLXPbufferSGIX</name></proto>
             <param><ptype>Display</ptype> *<name>dpy</name></param>
             <param><ptype>GLXPbufferSGIX</ptype> <name>pbuf</name></param>
             <param>int <name>attribute</name></param>
@@ -1393,8 +1393,8 @@ typedef unsigned __int64 uint64_t;
             <param><ptype>GLboolean</ptype> <name>bBlock</name></param>
         </command>
         <command>
-            <proto><ptype>Bool</ptype> <name>glXSet3DfxModeMESA</name></proto>
-            <param>int <name>mode</name></param>
+            <proto><ptype>GLboolean</ptype> <name>glXSet3DfxModeMESA</name></proto>
+            <param>GLint <name>mode</name></param>
         </command>
         <command>
             <proto>void <name>glXSwapBuffers</name></proto>
