@@ -10300,7 +10300,8 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" start="0x96A0" end="0x96AF" vendor="Qualcomm" comment="contact Maurice Ribble">
             <unused start="0x96A0" end="0x96A1" vendor="Qualcomm"/>
         <enum value="0x96A2" name="GL_FRAMEBUFFER_FETCH_NONCOHERENT_QCOM"/>
-            <unused start="0x96A3" end="0x96AF" vendor="Qualcomm"/>
+        <enum value="0x96A3" name="GL_VALIDATE_SHADER_BINARY_QCOM"/>
+            <unused start="0x96A4" end="0x96AF" vendor="Qualcomm"/>
     </enums>
 
 <!-- Enums reservable for future use. To reserve a new range, allocate one
