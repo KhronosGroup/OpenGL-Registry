@@ -641,4 +641,6 @@
 </li>
 <li value=308><a href="extensions/NV/NV_compute_shader_derivatives.txt">GL_NV_compute_shader_derivatives</a>
 </li>
+<li value=309><a href="extensions/EXT/EXT_depth_clamp.txt">GL_EXT_depth_clamp</a>
+</li>
 </ol>

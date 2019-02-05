@@ -1714,6 +1714,11 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/EXT/EXT_depth_bounds_test.txt',
     },
+    'GL_EXT_depth_clamp' : {
+        'esnumber' : 309,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_depth_clamp.txt',
+    },
     'GL_EXT_direct_state_access' : {
         'number' : 353,
         'flags' : { 'public' },
