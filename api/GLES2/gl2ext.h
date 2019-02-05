@@ -1246,6 +1246,11 @@ GL_APICALL void GL_APIENTRY glPopGroupMarkerEXT (void);
 #endif
 #endif /* GL_EXT_debug_marker */
 
+#ifndef GL_EXT_depth_clamp
+#define GL_EXT_depth_clamp 1
+#define GL_DEPTH_CLAMP_EXT                0x864F
+#endif /* GL_EXT_depth_clamp */
+
 #ifndef GL_EXT_discard_framebuffer
 #define GL_EXT_discard_framebuffer 1
 #define GL_COLOR_EXT                      0x1800
