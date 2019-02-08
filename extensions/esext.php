@@ -649,4 +649,6 @@
 </li>
 <li value=312><a href="extensions/NV/NV_mesh_shader.txt">GL_NV_mesh_shader</a>
 </li>
+<li value=313><a href="extensions/NV/NV_shader_texture_footprint.txt">GL_NV_shader_texture_footprint</a>
+</li>
 </ol>

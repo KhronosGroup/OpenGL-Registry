@@ -47736,7 +47736,7 @@ typedef unsigned int GLhandleARB;
         </extension>
         <extension name="GL_NV_shader_noperspective_interpolation" supported="gles2"/>
         <extension name="GL_NV_shader_storage_buffer_object" supported="gl"/>
-        <extension name="GL_NV_shader_texture_footprint" supported="gl|glcore"/>
+        <extension name="GL_NV_shader_texture_footprint" supported="gl|glcore|gles2"/>
         <extension name="GL_NV_shader_thread_group" supported="gl|glcore">
             <require>
                 <enum name="GL_WARP_SIZE_NV"/>

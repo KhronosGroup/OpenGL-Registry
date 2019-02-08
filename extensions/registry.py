@@ -3682,6 +3682,7 @@ registry = {
     },
     'GL_NV_shader_texture_footprint' : {
         'number' : 530,
+        'esnumber' : 313,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_shader_texture_footprint.txt',
