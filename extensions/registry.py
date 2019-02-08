@@ -3450,6 +3450,7 @@ registry = {
     },
     'GL_NV_mesh_shader' : {
         'number' : 527,
+        'esnumber' : 312,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_mesh_shader.txt',

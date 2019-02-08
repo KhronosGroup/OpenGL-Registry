@@ -47098,7 +47098,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glNamedBufferAttachMemoryNV"/>
             </require>
         </extension>
-        <extension name="GL_NV_mesh_shader" supported="gl|glcore">
+        <extension name="GL_NV_mesh_shader" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_MESH_SHADER_NV"/>
                 <enum name="GL_TASK_SHADER_NV"/>
@@ -47138,20 +47138,22 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_MESH_OUTPUT_TYPE_NV"/>
                 <enum name="GL_UNIFORM_BLOCK_REFERENCED_BY_MESH_SHADER_NV"/>
                 <enum name="GL_UNIFORM_BLOCK_REFERENCED_BY_TASK_SHADER_NV"/>
-                <enum name="GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_MESH_SHADER_NV"/>
-                <enum name="GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_TASK_SHADER_NV"/>
                 <enum name="GL_REFERENCED_BY_MESH_SHADER_NV"/>
                 <enum name="GL_REFERENCED_BY_TASK_SHADER_NV"/>
-                <enum name="GL_MESH_SUBROUTINE_NV"/>
-                <enum name="GL_TASK_SUBROUTINE_NV"/>
-                <enum name="GL_MESH_SUBROUTINE_UNIFORM_NV"/>
-                <enum name="GL_TASK_SUBROUTINE_UNIFORM_NV"/>
                 <enum name="GL_MESH_SHADER_BIT_NV"/>
                 <enum name="GL_TASK_SHADER_BIT_NV"/>
                 <command name="glDrawMeshTasksNV"/>
                 <command name="glDrawMeshTasksIndirectNV"/>
                 <command name="glMultiDrawMeshTasksIndirectNV"/>
                 <command name="glMultiDrawMeshTasksIndirectCountNV"/>
+            </require>
+            <require comment="Supported only in OpenGL">
+                <enum name="GL_MESH_SUBROUTINE_NV"/>
+                <enum name="GL_TASK_SUBROUTINE_NV"/>
+                <enum name="GL_MESH_SUBROUTINE_UNIFORM_NV"/>
+                <enum name="GL_TASK_SUBROUTINE_UNIFORM_NV"/>
+                <enum name="GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_MESH_SHADER_NV"/>
+                <enum name="GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_TASK_SHADER_NV"/>
             </require>
         </extension>
         <extension name="GL_NV_multisample_coverage" supported="gl">
