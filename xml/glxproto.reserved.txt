@@ -224,11 +224,32 @@ GLX Enumerateds (32 Bits)
       0x20          GLX_EXT_visual_rating (attribute names)
       0x21          unused?
       0x22    0x28  GLX_EXT_visual_info (attribute names)
+0x1F00-0x1F02 Reserved to ARB (shared with WGL)
+    0x1F00  0x1F02  GLX_AMD_gpu_association
 0x2070-0x209F Reserved to ARB (shared with WGL)
     0x2090  0x2094  GLX_ARB_create_context
     0x2095          GL_ARB_vertex_buffer_object
+    0x2097  0x2098  GLX_ARB_context_flush_control
 0x20A0-0x219F Reserved to NVIDIA (shared with WGL)
-    (many NV and EXT extensions, see glxenum.spec)
+    0x20B0          GLX_NV_float_buffer
+    0x20B1          GLX_EXT_fbconfig_packed_float
+    0x20B2          GLX_ARB_framebuffer_sRGB (nee EXT)
+    0x20B3          GLX_NV_multisample_coverage
+    0x20B9          GLX_ARB_fbconfig_float
+    0x20C3  0x20CC  GLX_NV_video_out
+    0x20CD  0x20CF  GLX_NV_video_capture
+    0x20D0  0x20EB  GLX_EXT_texture_from_pixmap
+    0x20F0          GLX_NV_present_video
+    0x20F1  0x20F2  GLX_EXT_swap_control
+    0x20F3          GLX_EXT_swap_control_tear
+    0x20F4          GLX_EXT_buffer_age
+    0x20F5          GLX_EXT_stereo_tree
+    0x20F6          GLX_EXT_libglvnd
+    0x20F7          GLX_NV_robustness_video_memory_purge
+0x21A0-0x21AF Reserved to AMD (shared with WGL)
+    0x21A2  0x21A8  GLX_AMD_gpu_association
+0x31B3 Reserved to ARB (shared with WGL)
+    0x31B3          GLX_ARB_create_context_no_error
 0x8000-0x800F Reserved to EXT (0x800E-0x800F unused)
     0x8000  0x8009  GLX_EXT_visual_info
     0x800A  0x800C  GLX_EXT_import_context
@@ -239,6 +260,8 @@ GLX Enumerateds (32 Bits)
     0x8024          GLX_SGIX_dm_buffer
     0x8025          GLX_SGIS_blended_overlay
     0x8026  0x8027  GLX_SGIS_shared_multisample
+    0x8028          GLX_SGIX_visual_select_group
+    0x8030          GLX_SGIX_hyperpipe
 0x8040-0x804F Reserved to OpenGL ARB
     0x8040  0x8041  GLX 1.3
 0x8050-0x805F Reserved to 3Dfx
@@ -247,7 +270,13 @@ GLX Enumerateds (32 Bits)
     0x8060  0x8063  GLX_OML_swap_method
 0x8070-0x816F Reserved to NVIDIA
 0x8170-0x817F Reserved to SUN
-0x8180-0x818F Reserved to Intel
+0x8180-0x818F Reserved to Intel (0x818F unused)
+    0x8180  0x8182  GLX_INTEL_swap_event
+    0x8183  0x818E  GLX_MESA_query_renderer
+0x8250-0x826F Reserved to ARB (Shared with GL and WGL)
+    0x8252          GLX_ARB_create_context_robustness
+    0x8256          GLX_ARB_create_context_robustness
+    0x8261          GLX_ARB_create_context_robustness
 0x9126        GLX_ARB_create_context_profile (shared with WGL)
 
 100000-100011 Reserved to SGI (100002-100011 unused)
