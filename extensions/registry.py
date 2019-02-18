@@ -2489,6 +2489,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_texture_perturb_normal.txt',
     },
+    'GL_EXT_texture_query_lod' : {
+        'esnumber' : 310,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_texture_query_lod',
+    },
+
     'GL_EXT_texture_rg' : {
         'esnumber' : 103,
         'flags' : { 'public' },
