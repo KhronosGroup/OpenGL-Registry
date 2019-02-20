@@ -1659,6 +1659,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_conservative_depth.txt',
     },
+    'GLX_EXT_context_priority' : {
+        'number' : 595,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/GLX_EXT_context_priority.txt',
+    },
     'GL_EXT_convolution' : {
         'number' : 12,
         'flags' : { 'public' },
