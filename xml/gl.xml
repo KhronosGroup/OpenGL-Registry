@@ -14501,7 +14501,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glDrawElementsInstancedBaseVertexBaseInstance</name></proto>
             <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
-            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="DrawElementsType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="count">const void *<name>indices</name></param>
             <param><ptype>GLsizei</ptype> <name>instancecount</name></param>
             <param><ptype>GLint</ptype> <name>basevertex</name></param>
@@ -14511,7 +14511,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glDrawElementsInstancedBaseVertexBaseInstanceEXT</name></proto>
             <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
-            <param group="PrimitiveType"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="DrawElementsType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="count">const void *<name>indices</name></param>
             <param><ptype>GLsizei</ptype> <name>instancecount</name></param>
             <param><ptype>GLint</ptype> <name>basevertex</name></param>
