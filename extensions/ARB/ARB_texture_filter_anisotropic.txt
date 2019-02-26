@@ -277,7 +277,7 @@ Issues
       and cube texture filtering?
 
       RESOLUTION:  NO. It was decided by the OpenGL working group to leave
-      anisotrpoic filtering for 3D or cube textures as undefined. Anisotrpic
+      anisotropic filtering for 3D or cube textures as undefined. Anisotropic
       filtering is only well-defined for 2D and 2D array textures. For
       defined results with 3D and cube textures isotropic filtering should
       be used by setting the anisotropy level to 1.0.
