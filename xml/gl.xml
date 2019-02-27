@@ -47690,7 +47690,7 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_NV_sample_mask_override_coverage" supported="gl|glcore|gles2"/>
-        <extension name="GL_NV_scissor_exclusive" supported="gl|glcore">
+        <extension name="GL_NV_scissor_exclusive" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_SCISSOR_TEST_EXCLUSIVE_NV"/>
                 <enum name="GL_SCISSOR_BOX_EXCLUSIVE_NV"/>

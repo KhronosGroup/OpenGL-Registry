@@ -3616,6 +3616,7 @@ registry = {
     },
     'GL_NV_scissor_exclusive' : {
         'number' : 529,
+        'esnumber' : 311,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_scissor_exclusive.txt',

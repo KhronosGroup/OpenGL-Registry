@@ -13,6 +13,7 @@ Contact
 Contributors
 
     Mark Kilgard, NVIDIA
+    Pyarelal Knowles, NVIDIA
 
 Status
 
@@ -20,19 +21,20 @@ Status
 
 Version
 
-    Last Modified:      September 15, 2018
-    Revision:           1
+    Last Modified:      February 6, 2019
+    Revision:           2
 
 Number
 
     OpenGL Extension #529
+    OpenGL ES Extension #311
 
 Dependencies
 
     This extension is written against the OpenGL 4.5 Specification
     (Compatibility Profile), dated October 24, 2016.
 
-    OpenGL 4.5 is required.
+    OpenGL 4.5 or OpenGL ES 3.2 is required.
 
     This extension is written against the OpenGL Shading Language
     Specification, version 4.50, dated April 14, 2016.
@@ -40,6 +42,9 @@ Dependencies
     This extension trivially interacts with EXT_draw_buffers2,
     EXT_transform_feedback, NV_transform_feedback, and
     EXT_direct_state_access.
+
+    If implemented in OpenGL ES, at least one of NV_viewport_array or
+    OES_viewport_array is required.
 
 Overview
 
@@ -169,6 +174,24 @@ Interactions with EXT_direct_state_access
     Ignore references to GetFloatIndexedvEXT and GetDoubleIndexedvEXT if
     EXT_direct_state_access is not supported.
 
+Interactions with NV_viewport_array or OES_viewport_array
+
+    If NV_viewport_array is supported, references to MAX_VIEWPORTS and
+    GetFloati_v apply to MAX_VIEWPORTS_NV and GetFloati_vNV respecively.
+
+    If OES_viewport_array is supported, references to MAX_VIEWPORTS and
+    GetFloati_v apply to MAX_VIEWPORTS_OES and GetFloati_vOES respectively.
+
+Interactions with OpenGL ES 3.2
+
+    If implemented in OpenGL ES, remove all references to GetDoublev,
+    GetDoublei_v, EnableIndexedEXT, DisableIndexedEXT, IsEnabledIndexedEXT,
+    GetBooleanIndexedvEXT, GetIntegerIndexedvEXT, GetFloatIndexedvEXT and
+    GetDoubleIndexedv.
+
+    If implemented in OpenGL ES, remove all references to MAX_VIEWPORTS and
+    GetFloati_v.
+
 Additions to the AGL/GLX/WGL Specifications
 
     None
@@ -229,6 +252,9 @@ Issues
       as with the conventional inclusive scissor, works on all drawable.
 
 Revision History
+
+    Revision 2 (pknowles)
+    - Add ES interactions.
 
     Revision 1 (pbrown)
     - Internal revisions.
