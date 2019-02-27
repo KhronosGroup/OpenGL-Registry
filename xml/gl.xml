@@ -220,23 +220,22 @@ typedef unsigned int GLhandleARB;
           <enum name="GL_READ_WRITE"/>
         </group>
 
-        <group name="BufferAccessMask">
+        <group name="BufferStorageMask">
+            <enum name="GL_CLIENT_STORAGE_BIT"/>
+            <enum name="GL_CLIENT_STORAGE_BIT_EXT"/>
+            <enum name="GL_DYNAMIC_STORAGE_BIT"/>
+            <enum name="GL_DYNAMIC_STORAGE_BIT_EXT"/>
             <enum name="GL_MAP_COHERENT_BIT"/>
             <enum name="GL_MAP_COHERENT_BIT_EXT"/>
-            <enum name="GL_MAP_FLUSH_EXPLICIT_BIT"/>
-            <enum name="GL_MAP_FLUSH_EXPLICIT_BIT_EXT"/>
-            <enum name="GL_MAP_INVALIDATE_BUFFER_BIT"/>
-            <enum name="GL_MAP_INVALIDATE_BUFFER_BIT_EXT"/>
-            <enum name="GL_MAP_INVALIDATE_RANGE_BIT"/>
-            <enum name="GL_MAP_INVALIDATE_RANGE_BIT_EXT"/>
             <enum name="GL_MAP_PERSISTENT_BIT"/>
             <enum name="GL_MAP_PERSISTENT_BIT_EXT"/>
             <enum name="GL_MAP_READ_BIT"/>
             <enum name="GL_MAP_READ_BIT_EXT"/>
-            <enum name="GL_MAP_UNSYNCHRONIZED_BIT"/>
-            <enum name="GL_MAP_UNSYNCHRONIZED_BIT_EXT"/>
             <enum name="GL_MAP_WRITE_BIT"/>
             <enum name="GL_MAP_WRITE_BIT_EXT"/>
+            <enum name="GL_SPARSE_STORAGE_BIT_ARB"/>
+            <enum name="GL_LGPU_SEPARATE_STORAGE_BIT_NVX"/>
+            <enum name="GL_PER_GPU_STORAGE_BIT_NV"/>
         </group>
 
         <group name="ClearBufferMask">
@@ -1546,11 +1545,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_XOR"/>
         </group>
 
-        <group name="MapBufferUsageMask">
-            <enum name="GL_CLIENT_STORAGE_BIT"/>
-            <enum name="GL_CLIENT_STORAGE_BIT_EXT"/>
-            <enum name="GL_DYNAMIC_STORAGE_BIT"/>
-            <enum name="GL_DYNAMIC_STORAGE_BIT_EXT"/>
+        <group name="MapBufferAccessMask">
             <enum name="GL_MAP_COHERENT_BIT"/>
             <enum name="GL_MAP_COHERENT_BIT_EXT"/>
             <enum name="GL_MAP_FLUSH_EXPLICIT_BIT"/>
@@ -1567,9 +1562,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_MAP_UNSYNCHRONIZED_BIT_EXT"/>
             <enum name="GL_MAP_WRITE_BIT"/>
             <enum name="GL_MAP_WRITE_BIT_EXT"/>
-            <enum name="GL_SPARSE_STORAGE_BIT_ARB"/>
-            <enum name="GL_LGPU_SEPARATE_STORAGE_BIT_NVX"/>
-            <enum name="GL_PER_GPU_STORAGE_BIT_NV"/>
         </group>
 
         <group name="MapTarget">
@@ -3552,8 +3544,17 @@ typedef unsigned int GLhandleARB;
         <enum value="0xFFFFFFFF" name="GL_ALL_ATTRIB_BITS" comment="Guaranteed to mark all attribute groups at once"/>
     </enums>
 
-    <enums namespace="GL" group="BufferAccessMask" type="bitmask" comment="GL_MAP_{COHERENT,FLUSH_EXPLICIT,INVALIDATE_BUFFER,INVALIDATE_RANGE,PERSISTENT,READ,UNSYNCHRONIZED,WRITE}_{BIT,BIT_EXT} also lie in this namespace">
-      <!-- Also used: 0x000000ff for bits reused from MapBufferUsageMask below -->
+    <enums namespace="GL" group="BufferStorageMask" type="bitmask" comment="GL_MAP_{COHERENT,PERSISTENT,READ,WRITE}_{BIT,BIT_EXT} also lie in this namespace">
+        <enum value="0x0100" name="GL_DYNAMIC_STORAGE_BIT"/>
+        <enum value="0x0100" name="GL_DYNAMIC_STORAGE_BIT_EXT"/>
+        <enum value="0x0200" name="GL_CLIENT_STORAGE_BIT"/>
+        <enum value="0x0200" name="GL_CLIENT_STORAGE_BIT_EXT"/>
+        <enum value="0x0400" name="GL_SPARSE_STORAGE_BIT_ARB"/>
+        <enum value="0x0800" name="GL_LGPU_SEPARATE_STORAGE_BIT_NVX"/>
+        <enum value="0x0800" name="GL_PER_GPU_STORAGE_BIT_NV"/>
+            <unused start="0x1000" end="0x1000" comment="Reserved for NVIDIA"/>
+        <enum value="0x2000" name="GL_EXTERNAL_STORAGE_BIT_NVX"/>
+            <!-- Also used: 0x000000ff for bits reused from MapBufferAccessMask below -->
     </enums>
 
     <enums namespace="GL" group="ClearBufferMask" type="bitmask" comment="GL_{DEPTH,ACCUM,STENCIL,COLOR}_BUFFER_BIT also lie in this namespace">
@@ -3583,7 +3584,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x00000002" name="GL_CONTEXT_COMPATIBILITY_PROFILE_BIT"/>
     </enums>
 
-    <enums namespace="GL" group="MapBufferUsageMask" type="bitmask">
+    <enums namespace="GL" group="MapBufferAccessMask" type="bitmask">
         <enum value="0x0001" name="GL_MAP_READ_BIT"/>
         <enum value="0x0001" name="GL_MAP_READ_BIT_EXT"/>
         <enum value="0x0002" name="GL_MAP_WRITE_BIT"/>
@@ -3600,15 +3601,6 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0040" name="GL_MAP_PERSISTENT_BIT_EXT"/>
         <enum value="0x0080" name="GL_MAP_COHERENT_BIT"/>
         <enum value="0x0080" name="GL_MAP_COHERENT_BIT_EXT"/>
-        <enum value="0x0100" name="GL_DYNAMIC_STORAGE_BIT"/>
-        <enum value="0x0100" name="GL_DYNAMIC_STORAGE_BIT_EXT"/>
-        <enum value="0x0200" name="GL_CLIENT_STORAGE_BIT"/>
-        <enum value="0x0200" name="GL_CLIENT_STORAGE_BIT_EXT"/>
-        <enum value="0x0400" name="GL_SPARSE_STORAGE_BIT_ARB"/>
-        <enum value="0x0800" name="GL_LGPU_SEPARATE_STORAGE_BIT_NVX"/>
-        <enum value="0x0800" name="GL_PER_GPU_STORAGE_BIT_NV"/>
-            <unused start="0x1000" end="0x1000" comment="Reserved for NVIDIA"/>
-        <enum value="0x2000" name="GL_EXTERNAL_STORAGE_BIT_NVX"/>
     </enums>
 
     <enums namespace="GL" group="MemoryBarrierMask" type="bitmask">
@@ -11433,14 +11425,14 @@ typedef unsigned int GLhandleARB;
             <param group="BufferStorageTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param len="size">const void *<name>data</name></param>
-            <param group="MapBufferUsageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="BufferStorageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
         </command>
         <command>
             <proto>void <name>glBufferStorageEXT</name></proto>
             <param group="BufferStorageTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param len="size">const void *<name>data</name></param>
-            <param group="MapBufferUsageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="BufferStorageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <alias name="glBufferStorage"/>
         </command>
         <command>
@@ -11449,7 +11441,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param><ptype>GLeglClientBufferEXT</ptype> <name>clientBuffer</name></param>
-            <param group="MapBufferUsageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="BufferStorageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
         </command>
         <command>
             <proto>void <name>glBufferStorageMemEXT</name></proto>
@@ -20575,7 +20567,7 @@ typedef unsigned int GLhandleARB;
             <param group="BufferTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="BufferOffset"><ptype>GLintptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>length</name></param>
-            <param group="BufferAccessMask"><ptype>GLbitfield</ptype> <name>access</name></param>
+            <param group="MapBufferAccessMask"><ptype>GLbitfield</ptype> <name>access</name></param>
             <glx type="single" opcode="205"/>
         </command>
         <command>
@@ -20583,7 +20575,7 @@ typedef unsigned int GLhandleARB;
             <param group="BufferTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>length</name></param>
-            <param group="BufferAccessMask"><ptype>GLbitfield</ptype> <name>access</name></param>
+            <param group="MapBufferAccessMask"><ptype>GLbitfield</ptype> <name>access</name></param>
             <alias name="glMapBufferRange"/>
         </command>
         <command>
@@ -20661,14 +20653,14 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>length</name></param>
-            <param group="BufferAccessMask"><ptype>GLbitfield</ptype> <name>access</name></param>
+            <param group="MapBufferAccessMask"><ptype>GLbitfield</ptype> <name>access</name></param>
         </command>
         <command>
             <proto>void *<name>glMapNamedBufferRangeEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>length</name></param>
-            <param group="BufferAccessMask"><ptype>GLbitfield</ptype> <name>access</name></param>
+            <param group="MapBufferAccessMask"><ptype>GLbitfield</ptype> <name>access</name></param>
         </command>
         <command>
             <proto>void *<name>glMapObjectBufferATI</name></proto>
@@ -22312,7 +22304,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param len="size">const void *<name>data</name></param>
-            <param group="MapBufferUsageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="BufferStorageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
         </command>
         <command>
             <proto>void <name>glNamedBufferStorageExternalEXT</name></proto>
@@ -22320,14 +22312,14 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param><ptype>GLeglClientBufferEXT</ptype> <name>clientBuffer</name></param>
-            <param group="MapBufferUsageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="BufferStorageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
         </command>
         <command>
             <proto>void <name>glNamedBufferStorageEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param len="size">const void *<name>data</name></param>
-            <param group="MapBufferUsageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="BufferStorageMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <alias name="glNamedBufferStorage"/>
         </command>
         <command>
