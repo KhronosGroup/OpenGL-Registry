@@ -41626,7 +41626,7 @@ typedef unsigned int GLhandleARB;
             <require comment="Supported only if GL_EXT_direct_state_access is supported">
                 <command name="glNamedBufferPageCommitmentEXT"/>
             </require>
-            <require comment="Supported only if GL_ARb_direct_state_access or GL 4.5 is supported">
+            <require comment="Supported only if GL_ARB_direct_state_access or GL 4.5 is supported">
                 <command name="glNamedBufferPageCommitmentARB"/>
             </require>
         </extension>
