@@ -12,6 +12,7 @@ Contributors
     Daniel Koch, NVIDIA
     Christophe Riccio, Unity
     Graham Sellers, AMD
+    Alejandro Piñeiro, Igalia
 
 Contact Point for Bug Reports
 
@@ -29,8 +30,8 @@ Status
 
 Version
 
-    Last Modified Date: January 9, 2019
-    Revision: 42
+    Last Modified Date: February 15, 2019
+    Revision: 44
 
 Number
 
@@ -361,6 +362,11 @@ Overview
       atomicCounterDecrement -> OpAtomicIDecrement (with post decrement)
       atomicCounter          -> OpAtomicLoad
 
+    Mapping of uniform initializers
+
+      Using the OpVariable initializer logic, but only from a constant
+      instruction (not a global one).
+
     Mapping of other instructions
 
       %     -> OpUMod/OpSMod
@@ -382,6 +388,7 @@ Overview
         version 4.5.)
       + *AtomicCounter* Storage Class can use the *Offset* decoration
       + OriginLowerLeft
+      + Uniforms support constant initializers.
 
     Corresponding features that GLSL keeps, despite GL_KHR_vulkan_glsl removal:
       . default uniforms (those not inside a uniform block)
@@ -2112,10 +2119,51 @@ Issues
         ARB_compute_variable_group_size
             - need new layout qualifiers and builtin variables
 
+28. Should a SPIR-V binary linked through this extension work with
+    ARB_get_program_binary? Do we need to define what would happen
+    with specialization constants?
+
+    RESOLVED. Yes it should work seamlessly, and no, it shouldn't be
+    required to add more details on how to store specialization
+    constants. It is expected that GetProgramBinary should operate
+    irrespective of how the program was created.
+
+    (from GL 4.6 spec section 7.5, Program Binaries):
+
+        GetProgramBinary returns a binary representation of the
+        program object's compiled and linked executable source,
+        henceforth referred to as its program binary.
+
+    There are two ways you can end up with a linked executable.
+
+    GLSL sources:
+        ShaderSource() -> CompileShader() -> AttachShader() -> LinkProgram()
+    SPIR-V binaries:
+        ShaderBinary() -> SpecializeShader() -> AttachShader() -> LinkProgram()
+
+    Exactly what is stored in a program binary is not defined by the
+    GL spec.
+
+    If the driver is storing the final compiled machine assembly for
+    the program in the program binary, it clearly shouldn't matter
+    which path it takes to get to the LinkProgram step.
+
+    If instead the driver is storing some higher level representation
+    of the shaders (say the original sources, or some IR) then it's up
+    to the implementation to store whatever it needs to reconstitute
+    the linked binary. If the given implementation happened to choose
+    to store the SPIR-V code then it would also need to store any
+    relevant specialization information with it as well.
+
+
 Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    44    15-Feb-2019    apinheiro      Added issue 28, about interaction with
+                                        ARB_get_program_binary (internal API issue 100)
+    43    15-Feb-2019    apinheiro      Add uniform initializers reference and
+                                        mapping (internal API issue 99)
     42    9-Jan-2019     JohnK          Explicitly give rules for SPIR-V
                                         uniform offsets (internal API issue
                                         92)
