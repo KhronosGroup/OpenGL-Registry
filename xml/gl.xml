@@ -45187,6 +45187,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glTextureNormalEXT"/>
             </require>
         </extension>
+        <extension name="GL_EXT_texture_query_lod" supported="gles2"/>
         <extension name="GL_EXT_texture_rg" supported="gles2">
             <require>
                 <enum name="GL_RED_EXT"/>

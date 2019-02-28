@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20190204 */
+/* Generated on date 20190228 */
 
 /* Generated C header for:
  * API: gles2
@@ -2159,6 +2159,10 @@ GL_APICALL void GL_APIENTRY glTexBufferRangeEXT (GLenum target, GLenum internalf
 #define GL_RGB16_SNORM_EXT                0x8F9A
 #endif /* GL_EXT_texture_norm16 */
 
+#ifndef GL_EXT_texture_query_lod
+#define GL_EXT_texture_query_lod 1
+#endif /* GL_EXT_texture_query_lod */
+
 #ifndef GL_EXT_texture_rg
 #define GL_EXT_texture_rg 1
 #define GL_RED_EXT                        0x1903
@@ -3380,6 +3384,18 @@ GL_APICALL void GL_APIENTRY glResolveDepthValuesNV (void);
 #ifndef GL_NV_sample_mask_override_coverage
 #define GL_NV_sample_mask_override_coverage 1
 #endif /* GL_NV_sample_mask_override_coverage */
+
+#ifndef GL_NV_scissor_exclusive
+#define GL_NV_scissor_exclusive 1
+#define GL_SCISSOR_TEST_EXCLUSIVE_NV      0x9555
+#define GL_SCISSOR_BOX_EXCLUSIVE_NV       0x9556
+typedef void (GL_APIENTRYP PFNGLSCISSOREXCLUSIVENVPROC) (GLint x, GLint y, GLsizei width, GLsizei height);
+typedef void (GL_APIENTRYP PFNGLSCISSOREXCLUSIVEARRAYVNVPROC) (GLuint first, GLsizei count, const GLint *v);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glScissorExclusiveNV (GLint x, GLint y, GLsizei width, GLsizei height);
+GL_APICALL void GL_APIENTRY glScissorExclusiveArrayvNV (GLuint first, GLsizei count, const GLint *v);
+#endif
+#endif /* GL_NV_scissor_exclusive */
 
 #ifndef GL_NV_shader_atomic_fp16_vector
 #define GL_NV_shader_atomic_fp16_vector 1
