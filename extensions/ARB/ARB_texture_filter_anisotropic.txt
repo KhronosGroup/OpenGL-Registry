@@ -17,6 +17,21 @@ Contributors
     Jon Leech, Khronos
     Daniel Koch, NVIDIA
 
+Notice
+
+    Copyright (c) 2017-2019 The Khronos Group Inc. Copyright terms at
+        http://www.khronos.org/registry/speccopyright.html
+
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL Working Group. For
+    extensions which have been promoted to a core Specification,
+    fixes will first appear in the latest version of that core Specification, and will eventually
+    be backported to the extension document. This policy is described in
+    more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
+
 Status
 
     Complete.
