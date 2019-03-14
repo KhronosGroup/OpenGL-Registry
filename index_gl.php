@@ -18,6 +18,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <p> <b>Table of Contents</b>
 <ul>
+<li> <b><a href="docs/update_policy.php">Working Group Policy</a></b> for
+     when Specifications and extensions will be updated. </li>
 <li> <b><a href="#apispecs">Current OpenGL API, Shading Language, GLX,
      and Related Specifications and Reference Pages</a></b> </li>
 <li> <a href="#headers">Core API and Extension Header Files</a> </li>

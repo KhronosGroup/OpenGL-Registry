@@ -17,6 +17,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <p> The current version of OpenGL SC is OpenGL SC 2.0. </p>
 
 <ul>
+<li> <b><a href="docs/update_policy.php">Working Group Policy</a></b> for
+     when Specifications and extensions will be updated. </li>
 <li> OpenGL SC 2.0
      <a href="specs/sc/sc_spec_2.0.pdf">
      Full Specification </a> (version 2.0.0, April 19, 2016). </li>
