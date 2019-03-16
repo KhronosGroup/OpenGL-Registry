@@ -16,6 +16,7 @@ Contributors
     Jeff Bolz, NVIDIA Corporation
     Pat Brown, NVIDIA Corporation
     Eric Werness, NVIDIA Corporation
+    Pyarelal Knowles, NVIDIA Corporation
 
 Status
 
@@ -23,19 +24,20 @@ Status
 
 Version
 
-    Last Modified Date:     September 15, 2018
-    NVIDIA Revision:        2
+    Last Modified Date:     March 7, 2019
+    NVIDIA Revision:        3
 
 Number
 
     OpenGL Extension #528
+    OpenGL ES Extension #314
 
 Dependencies
 
     This extension is written against the OpenGL 4.6 Specification
     (Compatibility Profile), dated May 14, 2018.
 
-    OpenGL 4.5 is required.
+    OpenGL 4.5 or OpenGL ES 3.2 is required.
 
 Overview
 
@@ -148,6 +150,10 @@ New Implementation Dependent State
 
     None
 
+Interactions with OpenGL ES
+
+    If implemented with OpenGL ES, ignore references to GetDoublev.
+
 Issues
 
     (1) Since the representative fragment test does not have guaranteed
@@ -172,6 +178,9 @@ Issues
 
 
 Revision History
+
+    Revision 3, March 7, 2019 (pknowles)
+    - Add ES interactions.
 
     Revision 2, September 15, 2018 (pbrown)
     - Prepare specification for publication.

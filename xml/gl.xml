@@ -47653,7 +47653,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glGetCombinerStageParameterfvNV"/>
             </require>
         </extension>
-        <extension name="GL_NV_representative_fragment_test" supported="gl|glcore">
+        <extension name="GL_NV_representative_fragment_test" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_REPRESENTATIVE_FRAGMENT_TEST_NV"/>
             </require>

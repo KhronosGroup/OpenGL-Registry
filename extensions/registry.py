@@ -3595,6 +3595,7 @@ registry = {
     },
     'GL_NV_representative_fragment_test' : {
         'number' : 528,
+        'esnumber' : 314,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_representative_fragment_test.txt',

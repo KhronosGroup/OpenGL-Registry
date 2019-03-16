@@ -651,4 +651,6 @@
 </li>
 <li value=313><a href="extensions/NV/NV_shader_texture_footprint.txt">GL_NV_shader_texture_footprint</a>
 </li>
+<li value=314><a href="extensions/NV/NV_representative_fragment_test.txt">GL_NV_representative_fragment_test</a>
+</li>
 </ol>
