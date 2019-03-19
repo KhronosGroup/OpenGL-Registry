@@ -653,4 +653,6 @@
 </li>
 <li value=314><a href="extensions/NV/NV_representative_fragment_test.txt">GL_NV_representative_fragment_test</a>
 </li>
+<li value=315><a href="extensions/NV/NV_shading_rate_image.txt">GL_NV_shading_rate_image</a>
+</li>
 </ol>

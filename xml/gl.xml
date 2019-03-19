@@ -47743,7 +47743,7 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_NV_shader_thread_shuffle" supported="gl|glcore"/>
-        <extension name="GL_NV_shading_rate_image" supported="gl|glcore">
+        <extension name="GL_NV_shading_rate_image" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_SHADING_RATE_IMAGE_NV"/>
                 <enum name="GL_SHADING_RATE_NO_INVOCATIONS_NV"/>
