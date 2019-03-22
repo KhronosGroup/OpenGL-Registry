@@ -4,13 +4,15 @@ $static_title = 'Khronos OpenGL SC Registry';
 include_once("../../assets/static_pages/khr_page_top.php");
 ?>
 
-<p> The OpenGL SC registry contains specifications of the core API;
+<p> The OpenGL SC Registry contains specifications of the core API;
     specifications of Khronos- and vendor-approved OpenGL SC extensions;
-    header files corresponding to the specifications; and other related
-    documentation. The companion <a
-    href="http://www.opengl.org/registry/"> OpenGL Registry </a> has
-    related material including the enumerant registry (shared between
-    OpenGL, OpenGL ES, and OpenGL SC).
+    header files corresponding to the specifications; and related
+    documentation. </p>
+
+<p> The OpenGL SC Registry is part of the combined <a
+    href="http://www.opengl.org/registry/"> OpenGL Registry </a> for OpenGL,
+    OpenGL ES, and OpenGL SC, which includes the <a href="xml/README.md">XML
+    API registry</a> of reserved enumerants and functions. </p>
 
 <h2> OpenGL SC Core API Specification, Headers, and Documentation </h2>
 

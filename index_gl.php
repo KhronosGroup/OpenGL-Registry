@@ -4,17 +4,16 @@ $static_title = 'Khronos OpenGL&reg; Registry';
 include_once("../../assets/static_pages/khr_page_top.php");
 ?>
 
-<p> The OpenGL Registry contains specifications, header files, and
-    related documentation for OpenGL and related APIs including GLU,
-    GLX, and WGL. In addition to the core API specifications, many
-    extensions to these APIs have been defined by vendors, groups of
-    vendors, and the ARB. The Registry also contains specifications and
-    header files for all registered extensions, written as modifications
-    to the appropriate core API specifications. </p>
+<p> The OpenGL Registry contains specifications of the core API and
+    shading language; specifications of Khronos- and vendor-approved
+    OpenGL extensions; header files corresponding to the specifications; and
+    related documentation including specifications, extensions, and headers
+    for the GLX, WGL, and GLU APIs. </p>
 
-<p> The Registry also includes naming conventions, guidelines for
-    creating new extensions and writing suitable extension
-    specifications, and other documentation related to these APIs. </p>
+<p> The OpenGL registry is part of the combined <a
+    href="http://www.opengl.org/registry/"> OpenGL Registry </a> for OpenGL,
+    OpenGL ES, and OpenGL SC, which includes the <a href="xml/README.md">XML
+    API registry</a> of reserved enumerants and functions. </p>
 
 <p> <b>Table of Contents</b>
 <ul>

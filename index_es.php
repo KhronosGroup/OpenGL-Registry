@@ -4,13 +4,15 @@ $static_title = 'Khronos OpenGL ES Registry';
 include_once("../../assets/static_pages/khr_page_top.php");
 ?>
 
-<p> The OpenGL ES registry contains specifications of the core API and
+<p> The OpenGL ES Registry contains specifications of the core API and
     shading language; specifications of Khronos- and vendor-approved
     OpenGL ES extensions; header files corresponding to the
-    specifications; and other related documentation. The companion <a
-    href="http://www.opengl.org/registry/"> OpenGL Registry </a> has
-    related material including the API registry of reserved enumerants
-    and functions (shared between OpenGL ES and OpenGL). </p>
+    specifications; and related documentation. </p>
+
+<p> The OpenGL ES Registry is part of the combined <a
+    href="http://www.opengl.org/registry/"> OpenGL Registry </a> for OpenGL,
+    OpenGL ES, and OpenGL SC, which includes the <a href="xml/README.md">XML
+    API registry</a> of reserved enumerants and functions. </p>
 
 <p> <b>Table of Contents</b>
 <ul>
