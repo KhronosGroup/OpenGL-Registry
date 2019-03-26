@@ -15,6 +15,16 @@ Notice
     Copyright (c) 2004-2013 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
 
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL Working Group. For
+    extensions which have been promoted to a core Specification, fixes will
+    first appear in the latest version of that core Specification, and will
+    eventually be backported to the extension document. This policy is
+    described in more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
+
 Status
 
     Ratified by the Khronos BOP, Aug 5, 2004.
@@ -74,7 +84,7 @@ Issues
 
         RESOLVED: They move smoothly as the point moves around on the
         screen, even though the pixels touched by the point do not.  The
-        exact formula is given in the spec below.  
+        exact formula is given in the spec below.
 
         A point sprite can be thought of as a quad whose upper-left corner has
         (s,t) texture coordinates of (0,0) and whose lower-right corner has
@@ -87,8 +97,8 @@ Issues
               ^
             +y| (0,0)
               |   +-----+
-              |   |     |   
-              |   |  P  |   
+              |   |     |
+              |   |  P  |
               |   |     |
               |   +-----+
               |       (1,1)
@@ -263,7 +273,7 @@ Additions to Chapter 3 of the OpenGL 1.4 Specification (Rasterization)
     the minimum and maximum point size and the point fade threshold size,
     three floating-point values specifying the distance attenuation
     coefficients, a bit indicating whether or not antialiasing is
-    enabled, a bit indicating whether or not point sprites are enabled, 
+    enabled, a bit indicating whether or not point sprites are enabled,
     and a bit for the point sprite texture coordinate replacement mode
     for each texture unit."
 
@@ -302,7 +312,7 @@ Functions)
 Additions to Chapter 6 of the OpenGL 1.4 Specification (State and
 State Requests)
 
-    None.    
+    None.
 
 Errors
 
@@ -312,7 +322,7 @@ New State
 
 (table 6.12, p. 220)
 
-Get Value                Type    Get Command     Initial Value   Description 
+Get Value                Type    Get Command     Initial Value   Description
 ---------                ----    -----------     -------------   -----------
 POINT_SPRITE_OES         B       IsEnabled       False           point sprite enable
 
@@ -325,4 +335,4 @@ COORD_REPLACE_OES        2* x B  GetTexEnviv     False           coordinate repl
 
 Revision History
 
-    
+
