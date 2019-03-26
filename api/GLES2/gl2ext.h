@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20190228 */
+/* Generated on date 20190326 */
 
 /* Generated C header for:
  * API: gles2
@@ -2959,6 +2959,68 @@ GL_APICALL void GL_APIENTRY glNamedBufferAttachMemoryNV (GLuint buffer, GLuint m
 #endif
 #endif /* GL_NV_memory_attachment */
 
+#ifndef GL_NV_mesh_shader
+#define GL_NV_mesh_shader 1
+#define GL_MESH_SHADER_NV                 0x9559
+#define GL_TASK_SHADER_NV                 0x955A
+#define GL_MAX_MESH_UNIFORM_BLOCKS_NV     0x8E60
+#define GL_MAX_MESH_TEXTURE_IMAGE_UNITS_NV 0x8E61
+#define GL_MAX_MESH_IMAGE_UNIFORMS_NV     0x8E62
+#define GL_MAX_MESH_UNIFORM_COMPONENTS_NV 0x8E63
+#define GL_MAX_MESH_ATOMIC_COUNTER_BUFFERS_NV 0x8E64
+#define GL_MAX_MESH_ATOMIC_COUNTERS_NV    0x8E65
+#define GL_MAX_MESH_SHADER_STORAGE_BLOCKS_NV 0x8E66
+#define GL_MAX_COMBINED_MESH_UNIFORM_COMPONENTS_NV 0x8E67
+#define GL_MAX_TASK_UNIFORM_BLOCKS_NV     0x8E68
+#define GL_MAX_TASK_TEXTURE_IMAGE_UNITS_NV 0x8E69
+#define GL_MAX_TASK_IMAGE_UNIFORMS_NV     0x8E6A
+#define GL_MAX_TASK_UNIFORM_COMPONENTS_NV 0x8E6B
+#define GL_MAX_TASK_ATOMIC_COUNTER_BUFFERS_NV 0x8E6C
+#define GL_MAX_TASK_ATOMIC_COUNTERS_NV    0x8E6D
+#define GL_MAX_TASK_SHADER_STORAGE_BLOCKS_NV 0x8E6E
+#define GL_MAX_COMBINED_TASK_UNIFORM_COMPONENTS_NV 0x8E6F
+#define GL_MAX_MESH_WORK_GROUP_INVOCATIONS_NV 0x95A2
+#define GL_MAX_TASK_WORK_GROUP_INVOCATIONS_NV 0x95A3
+#define GL_MAX_MESH_TOTAL_MEMORY_SIZE_NV  0x9536
+#define GL_MAX_TASK_TOTAL_MEMORY_SIZE_NV  0x9537
+#define GL_MAX_MESH_OUTPUT_VERTICES_NV    0x9538
+#define GL_MAX_MESH_OUTPUT_PRIMITIVES_NV  0x9539
+#define GL_MAX_TASK_OUTPUT_COUNT_NV       0x953A
+#define GL_MAX_DRAW_MESH_TASKS_COUNT_NV   0x953D
+#define GL_MAX_MESH_VIEWS_NV              0x9557
+#define GL_MESH_OUTPUT_PER_VERTEX_GRANULARITY_NV 0x92DF
+#define GL_MESH_OUTPUT_PER_PRIMITIVE_GRANULARITY_NV 0x9543
+#define GL_MAX_MESH_WORK_GROUP_SIZE_NV    0x953B
+#define GL_MAX_TASK_WORK_GROUP_SIZE_NV    0x953C
+#define GL_MESH_WORK_GROUP_SIZE_NV        0x953E
+#define GL_TASK_WORK_GROUP_SIZE_NV        0x953F
+#define GL_MESH_VERTICES_OUT_NV           0x9579
+#define GL_MESH_PRIMITIVES_OUT_NV         0x957A
+#define GL_MESH_OUTPUT_TYPE_NV            0x957B
+#define GL_UNIFORM_BLOCK_REFERENCED_BY_MESH_SHADER_NV 0x959C
+#define GL_UNIFORM_BLOCK_REFERENCED_BY_TASK_SHADER_NV 0x959D
+#define GL_REFERENCED_BY_MESH_SHADER_NV   0x95A0
+#define GL_REFERENCED_BY_TASK_SHADER_NV   0x95A1
+#define GL_MESH_SHADER_BIT_NV             0x00000040
+#define GL_TASK_SHADER_BIT_NV             0x00000080
+#define GL_MESH_SUBROUTINE_NV             0x957C
+#define GL_TASK_SUBROUTINE_NV             0x957D
+#define GL_MESH_SUBROUTINE_UNIFORM_NV     0x957E
+#define GL_TASK_SUBROUTINE_UNIFORM_NV     0x957F
+#define GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_MESH_SHADER_NV 0x959E
+#define GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_TASK_SHADER_NV 0x959F
+typedef void (GL_APIENTRYP PFNGLDRAWMESHTASKSNVPROC) (GLuint first, GLuint count);
+typedef void (GL_APIENTRYP PFNGLDRAWMESHTASKSINDIRECTNVPROC) (GLintptr indirect);
+typedef void (GL_APIENTRYP PFNGLMULTIDRAWMESHTASKSINDIRECTNVPROC) (GLintptr indirect, GLsizei drawcount, GLsizei stride);
+typedef void (GL_APIENTRYP PFNGLMULTIDRAWMESHTASKSINDIRECTCOUNTNVPROC) (GLintptr indirect, GLintptr drawcount, GLsizei maxdrawcount, GLsizei stride);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glDrawMeshTasksNV (GLuint first, GLuint count);
+GL_APICALL void GL_APIENTRY glDrawMeshTasksIndirectNV (GLintptr indirect);
+GL_APICALL void GL_APIENTRY glMultiDrawMeshTasksIndirectNV (GLintptr indirect, GLsizei drawcount, GLsizei stride);
+GL_APICALL void GL_APIENTRY glMultiDrawMeshTasksIndirectCountNV (GLintptr indirect, GLintptr drawcount, GLsizei maxdrawcount, GLsizei stride);
+#endif
+#endif /* GL_NV_mesh_shader */
+
 #ifndef GL_NV_non_square_matrices
 #define GL_NV_non_square_matrices 1
 #define GL_FLOAT_MAT2x3_NV                0x8B65
@@ -3347,6 +3409,11 @@ GL_APICALL void GL_APIENTRY glReadBufferNV (GLenum mode);
 #define GL_NV_read_stencil 1
 #endif /* GL_NV_read_stencil */
 
+#ifndef GL_NV_representative_fragment_test
+#define GL_NV_representative_fragment_test 1
+#define GL_REPRESENTATIVE_FRAGMENT_TEST_NV 0x937F
+#endif /* GL_NV_representative_fragment_test */
+
 #ifndef GL_NV_sRGB_formats
 #define GL_NV_sRGB_formats 1
 #define GL_SLUMINANCE_NV                  0x8C46
@@ -3404,6 +3471,10 @@ GL_APICALL void GL_APIENTRY glScissorExclusiveArrayvNV (GLuint first, GLsizei co
 #ifndef GL_NV_shader_noperspective_interpolation
 #define GL_NV_shader_noperspective_interpolation 1
 #endif /* GL_NV_shader_noperspective_interpolation */
+
+#ifndef GL_NV_shader_texture_footprint
+#define GL_NV_shader_texture_footprint 1
+#endif /* GL_NV_shader_texture_footprint */
 
 #ifndef GL_NV_shadow_samplers_array
 #define GL_NV_shadow_samplers_array 1
