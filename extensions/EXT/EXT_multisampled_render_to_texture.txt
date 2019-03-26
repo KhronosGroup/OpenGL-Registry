@@ -21,8 +21,8 @@ Status
 
 Version
 
-    Last Modified Date: June 28, 2016
-    Revision: 7
+    Last Modified Date: March 15, 2019
+    Revision: 8
 
 Number
 
@@ -280,6 +280,11 @@ Dependencies on GL and ES profiles, versions, and other extensions
            "The maximum number of samples supported can be determined by calling
            GetInternalformativ with a pname of SAMPLES."
 
+       RenderbufferStorageMultisampleEXT is not an alias of the OpenGL ES 3.0
+       core function RenderbufferStorageMultisample as only the former (described
+       by this extension) allows resolving multisample information in an implicit
+       way.
+
 Errors
 
     The error OUT_OF_MEMORY is generated when 
@@ -529,6 +534,9 @@ Issues
 
 
 Revision History
+
+    Revision 9, 2019/03/15
+     - Clarified relation to OpenGL ES 3.0 RenderbufferStorageMultisample.
 
     Revision 8, 2018/04/11
      - Clarified wording around implicit resolves, and added Issue 7.
