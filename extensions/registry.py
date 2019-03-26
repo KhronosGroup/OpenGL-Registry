@@ -3450,6 +3450,7 @@ registry = {
     },
     'GL_NV_mesh_shader' : {
         'number' : 527,
+        'esnumber' : 312,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_mesh_shader.txt',
@@ -3594,6 +3595,7 @@ registry = {
     },
     'GL_NV_representative_fragment_test' : {
         'number' : 528,
+        'esnumber' : 314,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_representative_fragment_test.txt',
@@ -3681,6 +3683,7 @@ registry = {
     },
     'GL_NV_shader_texture_footprint' : {
         'number' : 530,
+        'esnumber' : 313,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_shader_texture_footprint.txt',

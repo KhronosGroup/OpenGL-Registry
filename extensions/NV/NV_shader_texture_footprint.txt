@@ -22,19 +22,20 @@ Status
 
 Version
 
-    Last Modified Date:         September 15, 2018
-    NVIDIA Revision:            1
+    Last Modified Date:         February 8, 2018
+    NVIDIA Revision:            2
 
 Number
 
     OpenGL Extension #530
+    OpenGL ES Extension #313
 
 Dependencies
 
     This extension is written against the OpenGL 4.6 Specification
     (Compatibility Profile), dated July 30, 2017.
 
-    OpenGL 4.5 is required.
+    OpenGL 4.5 or OpenGL ES 3.2 is required.
 
     This extension requires support for the OpenGL Shading Language (GLSL)
     extension "NV_shader_texture_footprint", which can be found at the Khronos
@@ -318,6 +319,9 @@ Issues
     None, but please refer to issues in the GLSL extension specification.
 
 Revision History
+
+    Revision 2 (pknowles)
+    - Add ES interactions.
 
     Revision 1 (clentini, pbrown)
     - Internal revisions.

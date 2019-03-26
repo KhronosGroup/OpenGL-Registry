@@ -647,4 +647,10 @@
 </li>
 <li value=311><a href="extensions/NV/NV_scissor_exclusive.txt">GL_NV_scissor_exclusive</a>
 </li>
+<li value=312><a href="extensions/NV/NV_mesh_shader.txt">GL_NV_mesh_shader</a>
+</li>
+<li value=313><a href="extensions/NV/NV_shader_texture_footprint.txt">GL_NV_shader_texture_footprint</a>
+</li>
+<li value=314><a href="extensions/NV/NV_representative_fragment_test.txt">GL_NV_representative_fragment_test</a>
+</li>
 </ol>
