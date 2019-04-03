@@ -3700,6 +3700,7 @@ registry = {
     },
     'GL_NV_shading_rate_image' : {
         'number' : 531,
+        'esnumber' : 315,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_shading_rate_image.txt',

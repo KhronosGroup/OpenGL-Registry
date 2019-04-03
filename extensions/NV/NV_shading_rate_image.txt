@@ -16,6 +16,7 @@ Contributors
     Mark Kilgard, NVIDIA
     Jeff Bolz, NVIDIA
     Mathias Schott, NVIDIA
+    Pyarelal Knowles, NVIDIA
 
 Status
 
@@ -23,23 +24,24 @@ Status
 
 Version
 
-    Last Modified:      September 15, 2018
-    Revision:           1
+    Last Modified:      March 15, 2019
+    Revision:           2
 
 Number
 
     OpenGL Extension #531
+    OpenGL ES Extension #315
 
 Dependencies
 
     This extension is written against the OpenGL 4.5 Specification
     (Compatibility Profile), dated October 24, 2016.
 
-    OpenGL 4.5 is required.
+    OpenGL 4.5 or OpenGL ES 3.2 is required.
 
     This extension requires support for the OpenGL Shading Language (GLSL)
-    extension "NV_fragment_shader_barycentric", which can be found at the
-    Khronos Group Github site here:
+    extension "NV_shading_rate_image", which can be found at the Khronos Group
+    Github site here:
 
         https://github.com/KhronosGroup/GLSL
 
@@ -55,6 +57,9 @@ Dependencies
     This extension interacts with EXT_raster_multisample.
 
     NV_framebuffer_mixed_samples is required.
+
+    If implemented in OpenGL ES, at least one of NV_viewport_array or
+    OES_viewport_array is required.
 
 Overview
 
@@ -786,6 +791,23 @@ Dependencies on EXT_raster_multisample
     implementations to reduce the number of fragment shader invocations
     per pixel if RASTER_MULTISAMPLE_EXT is enabled.
 
+Interactions with NV_viewport_array or OES_viewport_array
+
+    If NV_viewport_array is supported, references to MAX_VIEWPORTS and
+    GetFloati_v apply to MAX_VIEWPORTS_NV and GetFloati_vNV respecively.
+
+    If OES_viewport_array is supported, references to MAX_VIEWPORTS and
+    GetFloati_v apply to MAX_VIEWPORTS_OES and GetFloati_vOES respectively.
+
+Interactions with OpenGL ES 3.2
+
+    If implemented in OpenGL ES, remove all references to GetDoublev,
+    GetDoublei_v, EnableIndexedEXT, DisableIndexedEXT, IsEnabledIndexedEXT,
+    GetBooleanIndexedvEXT, GetIntegerIndexedvEXT, GetFloatIndexedvEXT and
+    GetDoubleIndexedv.
+
+    If implemented in OpenGL ES, remove all references to the MULTISAMPLE enable
+    state.
 
 Additions to the AGL/GLX/WGL Specifications
 
@@ -1002,6 +1024,9 @@ Issues
     Also, please refer to issues in the GLSL extension specification.
 
 Revision History
+
+    Revision 2 (pknowles)
+    - ES interactions.
 
     Revision 1 (pbrown)
     - Internal revisions.
