@@ -655,4 +655,6 @@
 </li>
 <li value=315><a href="extensions/NV/NV_shading_rate_image.txt">GL_NV_shading_rate_image</a>
 </li>
+<li value=316><a href="extensions/NV/NV_fragment_shader_barycentric.txt">GL_NV_fragment_shader_barycentric</a>
+</li>
 </ol>

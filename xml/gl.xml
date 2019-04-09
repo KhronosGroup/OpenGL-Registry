@@ -46791,7 +46791,7 @@ typedef unsigned int GLhandleARB;
         </extension>
         <extension name="GL_NV_fragment_program4" supported="gl"/>
         <extension name="GL_NV_fragment_program_option" supported="gl"/>
-        <extension name="GL_NV_fragment_shader_barycentric" supported="gl|glcore"/>
+        <extension name="GL_NV_fragment_shader_barycentric" supported="gl|glcore|gles2"/>
         <extension name="GL_NV_fragment_shader_interlock" supported="gl|glcore|gles2"/>
         <extension name="GL_NV_framebuffer_blit" supported="gles2">
             <require>
