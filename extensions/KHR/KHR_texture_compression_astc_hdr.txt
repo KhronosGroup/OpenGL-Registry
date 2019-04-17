@@ -40,7 +40,7 @@ Notice
 Specification Update Policy
 
     Khronos-approved extension specifications are updated in response to
-    issues and bugs prioritized by the Khronos OpenGL Working Group. For
+    issues and bugs prioritized by the Khronos OpenGL and OpenGL ES Working Groups. For
     extensions which have been promoted to a core Specification, fixes will
     first appear in the latest version of that core Specification, and will
     eventually be backported to the extension document. This policy is
