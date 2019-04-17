@@ -3327,6 +3327,7 @@ registry = {
     },
     'GL_NV_fragment_shader_barycentric' : {
         'number' : 526,
+        'esnumber' : 316,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_fragment_shader_barycentric.txt',

@@ -14,6 +14,7 @@ Contributors
 
     Ashwin Lele, NVIDIA
     Jeff Bolz, NVIDIA
+    Michael Chock, NVIDIA
 
 Status
 
@@ -21,19 +22,20 @@ Status
 
 Version
 
-    Last Modified:      September 15, 2018
-    Revision:           1
+    Last Modified:      April 8, 2018
+    Revision:           2
 
 Number
 
     OpenGL Extension #526
+    OpenGL ES Extension #316
 
 Dependencies
 
     This extension is written against the OpenGL 4.6 Specification
     (Compatibility Profile), dated July 30, 2017.
 
-    OpenGL 4.5 is required.
+    OpenGL 4.5 or OpenGL ES 3.2 is required.
 
     This extension requires support for the OpenGL Shading Language (GLSL)
     extension "NV_fragment_shader_barycentric", which can be found at the
@@ -151,6 +153,14 @@ Additions to the AGL/GLX/WGL Specifications
 
     None
 
+Interactions with OpenGL ES
+
+    Vertex order always corresponds to provoking vertex convention
+    LAST_VERTEX_CONVENTION.
+
+    Ignore references to unsupported primitive types QUADS, QUAD_STRIP, and
+    POLYGON.
+
 Errors
 
     None
@@ -242,6 +252,9 @@ Issues
     Also, please refer to issues in the GLSL extension specification.
 
 Revision History
+
+    Revision 2 (mchock)
+    - Add support for OpenGL ES.
 
     Revision 1 (pbrown)
     - Internal revisions.
