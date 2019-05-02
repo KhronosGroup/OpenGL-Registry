@@ -20,8 +20,8 @@ Status
 
 Version
 
-    Last Modified Date:         October 18, 2018
-    Revision:                   1
+    Last Modified Date:         May 13,2019
+    Revision:                   2
 
 Number
 
@@ -31,7 +31,7 @@ Number
 Dependencies
 
     Requires OpenGL ES 3.0
-    Requires GL_EXT_YUV_target
+    Requires EXT_YUV_target
     Requires EXT_gpu_shader5
 
 
@@ -60,13 +60,13 @@ dated 29 January 2016.
     Including the following line in a shader can be used to control the
     language features described in this extension:
 
-      #extension QCOM_YUV_texture_gather : <behavior>
+      #extension GL_QCOM_YUV_texture_gather : <behavior>
 
     where <behavior> is as specified in section 3.4.
 
     A new preprocessor #define is added to the OpenGL ES Shading Language:
 
-      #define QCOM_YUV_texture_gather       1
+      #define GL_QCOM_YUV_texture_gather       1
 
 
     Add to the list of texture gather functions as introduced with EXT_gpu_shader5
@@ -95,3 +95,4 @@ Revision History
     Rev.    Date      Author    Changes
     ----  ----------  --------  -----------------------------------------
     1     2018-10-18  jleger    initial version
+    2     2019-05-13  jleger    prepend "GL_" to QCOM_YUV_texture_gather
