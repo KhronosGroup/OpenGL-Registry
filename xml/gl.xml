@@ -2636,11 +2636,15 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_TEXTURE31"/>
         </group>
 
-        <group name="TypeEnum">
+        <group name="ConditionalRenderMode">
             <enum name="GL_QUERY_WAIT"/>
             <enum name="GL_QUERY_NO_WAIT"/>
             <enum name="GL_QUERY_BY_REGION_WAIT"/>
             <enum name="GL_QUERY_BY_REGION_NO_WAIT"/>
+            <enum name="GL_QUERY_WAIT_INVERTED"/>
+            <enum name="GL_QUERY_NO_WAIT_INVERTED"/>
+            <enum name="GL_QUERY_BY_REGION_WAIT_INVERTED"/>
+            <enum name="GL_QUERY_BY_REGION_NO_WAIT_INVERTED"/>
         </group>
 
         <group name="FragmentOpATI">
@@ -10555,12 +10559,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glBeginConditionalRender</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="ConditionalRenderMode"><ptype>GLenum</ptype> <name>mode</name></param>
         </command>
         <command>
             <proto>void <name>glBeginConditionalRenderNV</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="ConditionalRenderMode"><ptype>GLenum</ptype> <name>mode</name></param>
             <alias name="glBeginConditionalRender"/>
             <glx type="render" opcode="348"/>
         </command>
@@ -16611,20 +16615,20 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetDoubleIndexedvEXT</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLdouble</ptype> *<name>data</name></param>
             <alias name="glGetDoublei_v"/>
         </command>
         <command>
             <proto>void <name>glGetDoublei_v</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLdouble</ptype> *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glGetDoublei_vEXT</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLdouble</ptype> *<name>params</name></param>
             <alias name="glGetDoublei_v"/>
@@ -16689,34 +16693,34 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetFloatIndexedvEXT</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLfloat</ptype> *<name>data</name></param>
             <alias name="glGetFloati_v"/>
         </command>
         <command>
             <proto>void <name>glGetFloati_v</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLfloat</ptype> *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glGetFloati_vEXT</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glGetFloati_v"/>
         </command>
         <command>
             <proto>void <name>glGetFloati_vNV</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLfloat</ptype> *<name>data</name></param>
             <alias name="glGetFloati_v"/>
         </command>
         <command>
             <proto>void <name>glGetFloati_vOES</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLfloat</ptype> *<name>data</name></param>
             <alias name="glGetFloati_v"/>
@@ -16938,7 +16942,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetInteger64i_v</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLint64</ptype> *<name>data</name></param>
         </command>
@@ -16963,13 +16967,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetIntegeri_v</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLint</ptype> *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glGetIntegeri_vEXT</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLint</ptype> *<name>data</name></param>
         </command>
@@ -17801,27 +17805,27 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetPixelTransformParameterfvEXT</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="2051"/>
         </command>
         <command>
             <proto>void <name>glGetPixelTransformParameterivEXT</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="2052"/>
         </command>
         <command>
             <proto>void <name>glGetPointerIndexedvEXT</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>target</name></param>
+            <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="1">void **<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glGetPointeri_vEXT</name></proto>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="1">void **<name>params</name></param>
         </command>
@@ -21288,7 +21292,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexBufferEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="TypeEnum"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
         </command>
         <command>
