@@ -1419,8 +1419,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_HISTOGRAM_EXT"/>
             <enum name="GL_PROXY_HISTOGRAM"/>
             <enum name="GL_PROXY_HISTOGRAM_EXT"/>
-            <enum name="GL_HISTOGRAM"/>
-            <enum name="GL_PROXY_HISTOGRAM"/>
         </group>
 
         <group name="IndexPointerType">
@@ -2999,7 +2997,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_LEFT"/>
             <enum name="GL_RIGHT"/>
             <enum name="GL_FRONT_AND_BACK"/>
-            <enum name="GL_NONE"/>
             <enum name="GL_COLOR_ATTACHMENT0"/>
             <enum name="GL_COLOR_ATTACHMENT1"/>
             <enum name="GL_COLOR_ATTACHMENT2"/>
