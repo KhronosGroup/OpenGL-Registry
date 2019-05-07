@@ -1904,7 +1904,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_DEPTH_COMPONENT32_SGIX"/>
             <enum name="GL_DEPTH_COMPONENT32F"/>
             <enum name="GL_DEPTH_COMPONENT32F_NV"/>
-            <enum name="GL_DEPTH_COMPONENT32F_NV"/>
             <!-- Base internal format: GL_DEPTH_STENCIL -->
             <enum name="GL_DEPTH_STENCIL"/>
             <enum name="GL_DEPTH_STENCIL_EXT"/>
