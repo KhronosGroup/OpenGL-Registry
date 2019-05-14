@@ -134,6 +134,59 @@ typedef unsigned int GLhandleARB;
             <enum name="FRAGMENT_COLOR_EXT"/>
         </group>
 
+        <group name="ProgramFormatARB">
+            <enum name="PROGRAM_FORMAT_ASCII_ARB"/>
+        </group>
+
+        <group name="PointParameterNameARB">
+            <enum name="GL_POINT_SIZE_MIN_EXT"/>
+            <enum name="GL_POINT_SIZE_MAX_EXT"/>
+            <enum name="GL_POINT_FADE_THRESHOLD_SIZE_EXT"/>
+        </group>
+
+        <group name="VertexAttribPropertyARB">
+            <enum name="VERTEX_ATTRIB_ARRAY_INTEGER_EXT"/>
+        </group>
+
+        <group name="VertexAttribPointerPropertyARB">
+            <enum name="VERTEX_ATTRIB_ARRAY_POINTER_ARB"/>
+        </group>
+
+        <group name="ProgramStringPropertyARB">
+            <enum name="PROGRAM_STRING_ARB"/>
+        </group>
+
+        <group name="BufferPointerNameARB">
+            <enum name="BUFFER_MAP_POINTER_ARB"/>
+        </group>
+
+        <group name="BufferPNameARB">
+            <enum name="BUFFER_SIZE_ARB"/>
+            <enum name="BUFFER_USAGE_ARB"/>
+            <enum name="BUFFER_ACCESS_ARB"/>
+            <enum name="BUFFER_MAPPED_ARB"/>
+        </group>
+
+        <group name="ClampColorModeARB">
+            <enum name="FIXED_ONLY_ARB"/>
+            <enum name="FALSE"/>
+            <enum name="TRUE"/>
+        </group>
+
+        <group name="ClampColorTargetARB">
+            <enum name="CLAMP_VERTEX_COLOR_ARB"/>
+            <enum name="CLAMP_FRAGMENT_COLOR_ARB"/>
+            <enum name="CLAMP_READ_COLOR_ARB"/>
+        </group>
+
+        <group name="">
+            <enum name=""/>
+        </group>
+
+        <group name="">
+            <enum name=""/>
+        </group>
+
         <group name="">
             <enum name=""/>
         </group>
