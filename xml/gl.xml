@@ -134,6 +134,33 @@ typedef unsigned int GLhandleARB;
             <enum name="FRAGMENT_COLOR_EXT"/>
         </group>
 
+        <group name="VertexShaderOpEXT">
+            <enum name="OP_INDEX_EXT"/>
+            <enum name="OP_NEGATE_EXT"/>
+            <enum name="OP_DOT3_EXT"/>
+            <enum name="OP_DOT4_EXT"/>
+            <enum name="OP_MUL_EXT"/>
+            <enum name="OP_ADD_EXT"/>
+            <enum name="OP_MADD_EXT"/>
+            <enum name="OP_FRAC_EXT"/>
+            <enum name="OP_MAX_EXT"/>
+            <enum name="OP_MIN_EXT"/>
+            <enum name="OP_SET_GE_EXT"/>
+            <enum name="OP_SET_LT_EXT"/>
+            <enum name="OP_CLAMP_EXT"/>
+            <enum name="OP_FLOOR_EXT"/>
+            <enum name="OP_ROUND_EXT"/>
+            <enum name="OP_EXP_BASE_2_EXT"/>
+            <enum name="OP_LOG_BASE_2_EXT"/>
+            <enum name="OP_POWER_EXT"/>
+            <enum name="OP_RECIP_EXT"/>
+            <enum name="OP_RECIP_SQRT_EXT"/>
+            <enum name="OP_SUB_EXT"/>
+            <enum name="OP_CROSS_PRODUCT_EXT"/>
+            <enum name="OP_MULTIPLY_MATRIX_EXT"/>
+            <enum name="OP_MOV_EXT"/>
+        </group>
+
         <group name="ProgramFormatARB">
             <enum name="PROGRAM_FORMAT_ASCII_ARB"/>
         </group>
