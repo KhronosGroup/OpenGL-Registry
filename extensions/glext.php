@@ -1007,4 +1007,6 @@
 </li>
 <li value=594><a href="extensions/EXT/EXT_texture_sRGB_R8.txt">GL_EXT_texture_sRGB_R8</a>
 </li>
+<li value=595><a href="extensions/EXT/GLX_EXT_context_priority.txt">GLX_EXT_context_priority</a>
+</li>
 </ol>

@@ -34,7 +34,7 @@ extern "C" {
 **   https://github.com/KhronosGroup/OpenGL-Registry
 */
 
-#define GLX_GLXEXT_VERSION 20190228
+#define GLX_GLXEXT_VERSION 20190411
 
 /* Generated C header for:
  * API: glx
@@ -279,6 +279,14 @@ void glXBlitContextFramebufferAMD (GLXContext dstCtx, GLint srcX0, GLint srcY0, 
 #define GLX_EXT_buffer_age 1
 #define GLX_BACK_BUFFER_AGE_EXT           0x20F4
 #endif /* GLX_EXT_buffer_age */
+
+#ifndef GLX_EXT_context_priority
+#define GLX_EXT_context_priority 1
+#define GLX_CONTEXT_PRIORITY_LEVEL_EXT    0x3100
+#define GLX_CONTEXT_PRIORITY_HIGH_EXT     0x3101
+#define GLX_CONTEXT_PRIORITY_MEDIUM_EXT   0x3102
+#define GLX_CONTEXT_PRIORITY_LOW_EXT      0x3103
+#endif /* GLX_EXT_context_priority */
 
 #ifndef GLX_EXT_create_context_es2_profile
 #define GLX_EXT_create_context_es2_profile 1
