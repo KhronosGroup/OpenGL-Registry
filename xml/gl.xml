@@ -263,6 +263,32 @@ typedef unsigned int GLhandleARB;
             <enum name="VERTEX_STREAM7_ATI"/>
         </group>
 
+        <group name="SpriteParameterNameSGIX">
+            <enum name="SPRITE_MODE_SGIX"/>
+        </group>
+
+        <group name="PixelTexGenModeSGIX">
+            <enum name="PIXEL_TEX_GEN_Q_CEILING_SGIX"/>
+            <enum name="PIXEL_TEX_GEN_Q_FLOOR_SGIX"/>
+            <enum name="PIXEL_TEX_GEN_Q_ROUND_SGIX"/>
+            <enum name="PIXEL_TEX_GEN_ALPHA_LS_SGIX"/>
+            <enum name="PIXEL_TEX_GEN_ALPHA_MS_SGIX"/>
+        </group>
+
+        <group name="IglooFunctionSelectSGIX">
+            <enum name="IGLOO_FULLSCREEN_SGIX"/>
+            <enum name="IGLOO_VIEWPORT_OFFSET_SGIX"/>
+            <enum name="IGLOO_SWAPTMESH_SGIX"/>
+            <enum name="IGLOO_COLORNORMAL_SGIX"/>
+            <enum name="IGLOO_IRISGL_MODE_SGIX"/>
+            <enum name="IGLOO_LMC_COLOR_SGIX"/>
+            <enum name="IGLOO_TMESHMODE_SGIX"/>
+        </group>
+
+        <group name="">
+            <enum name=""/>
+        </group>
+
         <group name="">
             <enum name=""/>
         </group>
