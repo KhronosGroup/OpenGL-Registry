@@ -431,6 +431,54 @@ typedef unsigned int GLhandleARB;
             <enum name="ALL_COMPLETED_NV"/>
         </group>
 
+        <group name="PathCoordType">
+            <enum name="CLOSE_PATH_NV"/>
+            <enum name="MOVE_TO_NV"/>
+            <enum name="RELATIVE_MOVE_TO_NV"/>
+            <enum name="LINE_TO_NV"/>
+            <enum name="RELATIVE_LINE_TO_NV"/>
+            <enum name="HORIZONTAL_LINE_TO_NV"/>
+            <enum name="RELATIVE_HORIZONTAL_LINE_TO_NV"/>
+            <enum name="VERTICAL_LINE_TO_NV"/>
+            <enum name="RELATIVE_VERTICAL_LINE_TO_NV"/>
+            <enum name="QUADRATIC_CURVE_TO_NV"/>
+            <enum name="RELATIVE_QUADRATIC_CURVE_TO_NV"/>
+            <enum name="CUBIC_CURVE_TO_NV"/>
+            <enum name="RELATIVE_CUBIC_CURVE_TO_NV"/>
+            <enum name="SMOOTH_QUADRATIC_CURVE_TO_NV"/>
+            <enum name="RELATIVE_SMOOTH_QUADRATIC_CURVE_TO_NV"/>
+            <enum name="SMOOTH_CUBIC_CURVE_TO_NV"/>
+            <enum name="RELATIVE_SMOOTH_CUBIC_CURVE_TO_NV"/>
+            <enum name="SMALL_CCW_ARC_TO_NV"/>
+            <enum name="RELATIVE_SMALL_CCW_ARC_TO_NV"/>
+            <enum name="SMALL_CW_ARC_TO_NV"/>
+            <enum name="RELATIVE_SMALL_CW_ARC_TO_NV"/>
+            <enum name="LARGE_CCW_ARC_TO_NV"/>
+            <enum name="RELATIVE_LARGE_CCW_ARC_TO_NV"/>
+            <enum name="LARGE_CW_ARC_TO_NV"/>
+            <enum name="RELATIVE_LARGE_CW_ARC_TO_NV"/>
+            <enum name="CONIC_CURVE_TO_NV"/>
+            <enum name="RELATIVE_CONIC_CURVE_TO_NV"/>
+            <enum name="ROUNDED_RECT_NV"/>
+            <enum name="RELATIVE_ROUNDED_RECT_NV"/>
+            <enum name="ROUNDED_RECT2_NV"/>
+            <enum name="RELATIVE_ROUNDED_RECT2_NV"/>
+            <enum name="ROUNDED_RECT4_NV"/>
+            <enum name="RELATIVE_ROUNDED_RECT4_NV"/>
+            <enum name="ROUNDED_RECT8_NV"/>
+            <enum name="RELATIVE_ROUNDED_RECT8_NV"/>
+            <enum name="RESTART_PATH_NV"/>
+            <enum name="DUP_FIRST_CUBIC_CURVE_TO_NV"/>
+            <enum name="DUP_LAST_CUBIC_CURVE_TO_NV"/>
+            <enum name="RECT_NV"/>
+            <enum name="RELATIVE_RECT_NV"/>
+            <enum name="CIRCULAR_CCW_ARC_TO_NV"/>
+            <enum name="CIRCULAR_CW_ARC_TO_NV"/>
+            <enum name="CIRCULAR_TANGENT_ARC_TO_NV"/>
+            <enum name="ARC_TO_NV"/>
+            <enum name="RELATIVE_ARC_TO_NV"/>
+        </group>
+
         <group name="">
             <enum name=""/>
         </group>
