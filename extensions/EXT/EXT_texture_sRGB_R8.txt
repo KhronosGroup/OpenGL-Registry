@@ -31,7 +31,7 @@ Version
 Number
 
     OpenGL ES Extension #221
-    OpenGL Extension #594
+    OpenGL Extension #534
 
 Dependencies
 

@@ -1457,7 +1457,7 @@ registry = {
         'url' : 'extensions/ATI/ATI_pn_triangles.txt',
     },
     'WGL_ATI_render_texture_rectangle' : {
-        'number' : 592,
+        'number' : 532,
         'flags' : { 'public' },
         'supporters' : { 'ATI' },
         'url' : 'extensions/ATI/WGL_ATI_render_texture_rectangle.txt',
@@ -1660,7 +1660,7 @@ registry = {
         'url' : 'extensions/EXT/EXT_conservative_depth.txt',
     },
     'GLX_EXT_context_priority' : {
-        'number' : 595,
+        'number' : 535,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/GLX_EXT_context_priority.txt',
     },
@@ -2512,7 +2512,7 @@ registry = {
         'url' : 'extensions/EXT/EXT_texture_sRGB.txt',
     },
     'GL_EXT_texture_sRGB_R8' : {
-        'number' : 594,
+        'number' : 534,
         'esnumber' : 221,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_texture_sRGB_R8.txt',
@@ -3866,7 +3866,7 @@ registry = {
         'url' : 'extensions/NV/NV_vdpau_interop.txt',
     },
     'GL_NV_vdpau_interop2' : {
-        'number' : 593,
+        'number' : 533,
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_vdpau_interop2.txt',
