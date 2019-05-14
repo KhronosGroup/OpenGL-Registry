@@ -336,10 +336,104 @@ typedef unsigned int GLhandleARB;
             <enum name="IMAGE_TRANSFORM_2D_HP"/>
         </group>
 
+        <group name="TextureFilterSGIS">
+            <enum name="FILTER4_SGIS"/>
+        </group>
+
+        <group name="OcclusionQueryParameterNameNV">
+            <enum name="PIXEL_COUNT_NV"/>
+            <enum name="PIXEL_COUNT_AVAILABLE_NV"/>
+        </group>
+
+        <group name="GetMultisamplePNameNV">
+            <enum name="SAMPLE_LOCATION_ARB"/>
+            <enum name="PROGRAMMABLE_SAMPLE_LOCATION_ARB"/>
+        </group>
+
+        <group name="MapParameterNV">
+            <enum name="MAP_TESSELLATION_NV"/>
+        </group>
+
+        <group name="MapAttribParameterNV">
+            <enum name="MAP_ATTRIB_U_ORDER_NV"/>
+            <enum name="MAP_ATTRIB_V_ORDER_NV"/>
+        </group>
+
+        <group name="FenceParameterNameNV">
+            <enum name="FENCE_STATUS_NV"/>
+            <enum name="FENCE_CONDITION_NV"/>
+        </group>
+
+        <group name="CombinerParameterNV">
+            <enum name="COMBINER_INPUT_NV"/>
+            <enum name="COMBINER_MAPPING_NV"/>
+            <enum name="COMBINER_COMPONENT_USAGE_NV"/>
+        </group>
+
+        <group name="CombinerBiasNV">
+            <enum name="NONE"/>
+            <enum name="BIAS_BY_NEGATIVE_ONE_HALF_NV"/>
+        </group>
+
+        <group name="CombinerScaleNV">
+            <enum name="NONE"/>
+            <enum name="SCALE_BY_TWO_NV"/>
+            <enum name="SCALE_BY_FOUR_NV"/>
+            <enum name="SCALE_BY_ONE_HALF_NV"/>
+        </group>
+
+        <group name="CombinerMappingNV">
+            <enum name="UNSIGNED_IDENTITY_NV"/>
+            <enum name="UNSIGNED_INVERT_NV"/>
+            <enum name="EXPAND_NORMAL_NV"/>
+            <enum name="EXPAND_NEGATE_NV"/>
+            <enum name="HALF_BIAS_NORMAL_NV"/>
+            <enum name="HALF_BIAS_NEGATE_NV"/>
+            <enum name="SIGNED_IDENTITY_NV"/>
+            <enum name="SIGNED_NEGATE_NV"/>
+        </group>
+
+        <group name="CombinerRegisterNV">
+            <enum name="DISCARD_NV"/>
+            <enum name="PRIMARY_COLOR_NV"/>
+            <enum name="SECONDARY_COLOR_NV"/>
+            <enum name="SPARE0_NV"/>
+            <enum name="SPARE1_NV"/>
+            <enum name="TEXTURE0_ARB"/>
+            <enum name="TEXTURE1_ARB"/>
+        </group>
+
+        <group name="CombinerVariableNV">
+            <enum name="VARIABLE_A_NV"/>
+            <enum name="VARIABLE_B_NV"/>
+            <enum name="VARIABLE_C_NV"/>
+            <enum name="VARIABLE_D_NV"/>
+            <enum name="VARIABLE_E_NV"/>
+            <enum name="VARIABLE_F_NV"/>
+            <enum name="VARIABLE_G_NV"/>
+        </group>
+
+        <group name="PixelDataRangeTargetNV">
+            <enum name="WRITE_PIXEL_DATA_RANGE_NV"/>
+            <enum name="READ_PIXEL_DATA_RANGE_NV"/>
+        </group>
+
+        <group name="EvalTargetNV">
+            <enum name="EVAL_2D_NV"/>
+            <enum name="EVAL_TRIANGULAR_2D_NV"/>
+        </group>
+
+        <group name="VertexAttribEnumNV">
+            <enum name="PROGRAM_PARAMETER_NV"/>
+        </group>
+
+        <group name="FenceConditionNV">
+            <enum name="ALL_COMPLETED_NV"/>
+        </group>
+
         <group name="">
             <enum name=""/>
         </group>
-
 
         <group name="AccumOp">
             <enum name="GL_ACCUM"/>
