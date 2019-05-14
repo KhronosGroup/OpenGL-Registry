@@ -194,8 +194,73 @@ typedef unsigned int GLhandleARB;
             <enum name="FENCE_APPLE"/>
         </group>
 
-        <group name="">
-            <enum name=""/>
+        <group name="PreserveModeATI">
+            <enum name="PRESERVE_ATI"/>
+            <enum name="DISCARD_ATI"/>
+        </group>
+
+        <group name="TexBumpParameterATI">
+            <enum name="BUMP_ROT_MATRIX_ATI"/>
+        </group>
+
+        <group name="SwizzleOpATI">
+            <enum name="SWIZZLE_STR_ATI"/>
+            <enum name="SWIZZLE_STQ_ATI"/>
+            <enum name="SWIZZLE_STR_DR_ATI"/>
+            <enum name="SWIZZLE_STQ_DQ_ATI"/>
+        </group>
+
+        <group name="PNTrianglesPNameATI">
+            <enum name="PN_TRIANGLES_POINT_MODE_ATI"/>
+            <enum name="PN_TRIANGLES_NORMAL_MODE_ATI"/>
+            <enum name="PN_TRIANGLES_TESSELATION_LEVEL_ATI"/>
+        </group>
+
+        <group name="ArrayObjectUsageATI">
+            <enum name="STATIC_ATI"/>
+            <enum name="DYNAMIC_ATI"/>
+        </group>
+
+        <group name="GetTexBumpParameterATI">
+            <enum name="BUMP_ROT_MATRIX_ATI"/>
+            <enum name="BUMP_ROT_MATRIX_SIZE_ATI"/>
+            <enum name="BUMP_NUM_TEX_UNITS_ATI"/>
+            <enum name="BUMP_TEX_UNITS_ATI"/>
+        </group>
+
+        <group name="ArrayObjectPNameATI">
+            <enum name="OBJECT_BUFFER_SIZE_ATI"/>
+            <enum name="OBJECT_BUFFER_USAGE_ATI"/>
+        </group>
+
+        <group name="DrawBufferModeATI">
+            <enum name="COLOR_ATTACHMENT0_NV"/>
+            <enum name="COLOR_ATTACHMENT1_NV"/>
+            <enum name="COLOR_ATTACHMENT2_NV"/>
+            <enum name="COLOR_ATTACHMENT3_NV"/>
+            <enum name="COLOR_ATTACHMENT4_NV"/>
+            <enum name="COLOR_ATTACHMENT5_NV"/>
+            <enum name="COLOR_ATTACHMENT6_NV"/>
+            <enum name="COLOR_ATTACHMENT7_NV"/>
+            <enum name="COLOR_ATTACHMENT8_NV"/>
+            <enum name="COLOR_ATTACHMENT9_NV"/>
+            <enum name="COLOR_ATTACHMENT10_NV"/>
+            <enum name="COLOR_ATTACHMENT11_NV"/>
+            <enum name="COLOR_ATTACHMENT12_NV"/>
+            <enum name="COLOR_ATTACHMENT13_NV"/>
+            <enum name="COLOR_ATTACHMENT14_NV"/>
+            <enum name="COLOR_ATTACHMENT15_NV"/>
+        </group>
+
+        <group name="VertexStreamATI">
+            <enum name="VERTEX_STREAM0_ATI"/>
+            <enum name="VERTEX_STREAM1_ATI"/>
+            <enum name="VERTEX_STREAM2_ATI"/>
+            <enum name="VERTEX_STREAM3_ATI"/>
+            <enum name="VERTEX_STREAM4_ATI"/>
+            <enum name="VERTEX_STREAM5_ATI"/>
+            <enum name="VERTEX_STREAM6_ATI"/>
+            <enum name="VERTEX_STREAM7_ATI"/>
         </group>
 
         <group name="">
