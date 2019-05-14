@@ -179,6 +179,21 @@ typedef unsigned int GLhandleARB;
             <enum name="CLAMP_READ_COLOR_ARB"/>
         </group>
 
+        <group name="ProgramTargetARB">
+            <enum name="TEXT_FRAGMENT_SHADER_ATI"/>
+        </group>
+
+        <group name="VertexArrayPNameAPPLE">
+            <enum name="STORAGE_CLIENT_APPLE"/>
+            <enum name="STORAGE_CACHED_APPLE"/>
+            <enum name="STORAGE_SHARED_APPLE"/>
+        </group>
+
+        <group name="ObjectTypeAPPLE">
+            <enum name="DRAW_PIXELS_APPLE"/>
+            <enum name="FENCE_APPLE"/>
+        </group>
+
         <group name="">
             <enum name=""/>
         </group>
