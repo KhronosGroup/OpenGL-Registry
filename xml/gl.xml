@@ -312,12 +312,28 @@ typedef unsigned int GLhandleARB;
             <enum name="IGLOO_TMESHMODE_SGIX"/>
         </group>
 
-        <group name="">
-            <enum name=""/>
+        <group name="HintTargetPGI">
+            <enum name="VERTEX_DATA_HINT_PGI"/>
+            <enum name="VERTEX_CONSISTENT_HINT_PGI"/>
+            <enum name="MATERIAL_SIDE_HINT_PGI"/>
+            <enum name="MAX_VERTEX_HINT_PGI"/>
         </group>
 
-        <group name="">
-            <enum name=""/>
+        <group name="ImageTransformPNameHP">
+            <enum name="IMAGE_SCALE_X_HP"/>
+            <enum name="IMAGE_SCALE_Y_HP"/>
+            <enum name="IMAGE_TRANSLATE_X_HP"/>
+            <enum name="IMAGE_TRANSLATE_Y_HP"/>
+            <enum name="IMAGE_ROTATE_ANGLE_HP"/>
+            <enum name="IMAGE_ROTATE_ORIGIN_X_HP"/>
+            <enum name="IMAGE_ROTATE_ORIGIN_Y_HP"/>
+            <enum name="IMAGE_MAG_FILTER_HP"/>
+            <enum name="IMAGE_MIN_FILTER_HP"/>
+            <enum name="IMAGE_CUBIC_WEIGHT_HP"/>
+        </group>
+
+        <group name="ImageTransformTargetHP">
+            <enum name="IMAGE_TRANSFORM_2D_HP"/>
         </group>
 
         <group name="">
