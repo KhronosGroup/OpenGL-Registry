@@ -82,6 +82,63 @@ typedef unsigned int GLhandleARB;
     <!-- SECTION: GL parameter class type definitions. -->
 
     <groups>
+        <group name="TextureNormalModeEXT">
+            <enum name="PERTURB_EXT"/>
+        </group>
+
+        <group name="LightTexturePNameEXT">
+            <enum name="ATTENUATION_EXT"/>
+            <enum name="SHADOW_ATTENUATION_EXT"/>
+        </group>
+
+        <group name="VertexShaderCoordOutEXT">
+            <enum name="X_EXT"/>
+            <enum name="Y_EXT"/>
+            <enum name="Z_EXT"/>
+            <enum name="W_EXT"/>
+            <enum name="NEGATIVE_X_EXT"/>
+            <enum name="NEGATIVE_Y_EXT"/>
+            <enum name="NEGATIVE_Z_EXT"/>
+            <enum name="NEGATIVE_W_EXT"/>
+            <enum name="ZERO_EXT"/>
+            <enum name="ONE_EXT"/>
+            <enum name="NEGATIVE_ONE_EXT"/>
+        </group>
+
+        <group name="SamplePatternEXT">
+            <enum name="1PASS_EXT"/>
+            <enum name="2PASS_0_EXT"/>
+            <enum name="2PASS_1_EXT"/>
+            <enum name="4PASS_0_EXT"/>
+            <enum name="4PASS_1_EXT"/>
+            <enum name="4PASS_2_EXT"/>
+            <enum name="4PASS_3_EXT"/>
+        </group>
+
+        <group name="VertexShaderStorageTypeEXT">
+            <enum name="VARIANT_EXT"/>
+            <enum name="INVARIANT_EXT"/>
+            <enum name="LOCAL_CONSTANT_EXT"/>
+            <enum name="LOCAL_EXT"/>
+        </group>
+
+        <group name="VertexShaderParameterEXT">
+            <enum name="CURRENT_VERTEX_EXT"/>
+            <enum name="MVP_MATRIX_EXT"/>
+        </group>
+
+        <group name="LightTextureModeEXT">
+            <enum name="FRAGMENT_MATERIAL_EXT"/>
+            <enum name="FRAGMENT_NORMAL_EXT"/>
+            <enum name="FRAGMENT_DEPTH_EXT"/>
+            <enum name="FRAGMENT_COLOR_EXT"/>
+        </group>
+
+        <group name="">
+            <enum name=""/>
+        </group>
+
+
         <group name="AccumOp">
             <enum name="GL_ACCUM"/>
             <enum name="GL_LOAD"/>
