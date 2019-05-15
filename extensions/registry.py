@@ -2006,6 +2006,27 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_multiview_draw_buffers.txt',
     },
+    'GL_EXT_multiview_tessellation_geometry_shader' : {
+        'number' : 538,
+        'esnumber' : 319,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/EXT/EXT_multiview_tessellation_geometry_shader.txt',
+    },
+    'GL_EXT_multiview_texture_multisample' : {
+        'number' : 537,
+        'esnumber' : 318,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/EXT/EXT_multiview_texture_multisample.txt',
+    },
+    'GL_EXT_multiview_timer_query' : {
+        'number' : 536,
+        'esnumber' : 317,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/EXT/EXT_multiview_timer_query.txt',
+    },
     'GLU_EXT_nurbs_tessellator' : {
         'number' : 100,
         'flags' : { 'public' },

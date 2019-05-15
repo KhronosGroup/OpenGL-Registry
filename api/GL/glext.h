@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20190326
+#define GL_GLEXT_VERSION 20190515
 
 #include <KHR/khrplatform.h>
 
@@ -7793,6 +7793,18 @@ GLAPI void APIENTRY glSampleMaskEXT (GLclampf value, GLboolean invert);
 GLAPI void APIENTRY glSamplePatternEXT (GLenum pattern);
 #endif
 #endif /* GL_EXT_multisample */
+
+#ifndef GL_EXT_multiview_tessellation_geometry_shader
+#define GL_EXT_multiview_tessellation_geometry_shader 1
+#endif /* GL_EXT_multiview_tessellation_geometry_shader */
+
+#ifndef GL_EXT_multiview_texture_multisample
+#define GL_EXT_multiview_texture_multisample 1
+#endif /* GL_EXT_multiview_texture_multisample */
+
+#ifndef GL_EXT_multiview_timer_query
+#define GL_EXT_multiview_timer_query 1
+#endif /* GL_EXT_multiview_timer_query */
 
 #ifndef GL_EXT_packed_depth_stencil
 #define GL_EXT_packed_depth_stencil 1

@@ -4567,6 +4567,18 @@ GLAPI void APIENTRY glDrawElementsInstancedEXT (GLenum mode, GLsizei count, GLen
 #endif
 #endif /* GL_EXT_draw_instanced */
 
+#ifndef GL_EXT_multiview_tessellation_geometry_shader
+#define GL_EXT_multiview_tessellation_geometry_shader 1
+#endif /* GL_EXT_multiview_tessellation_geometry_shader */
+
+#ifndef GL_EXT_multiview_texture_multisample
+#define GL_EXT_multiview_texture_multisample 1
+#endif /* GL_EXT_multiview_texture_multisample */
+
+#ifndef GL_EXT_multiview_timer_query
+#define GL_EXT_multiview_timer_query 1
+#endif /* GL_EXT_multiview_timer_query */
+
 #ifndef GL_EXT_polygon_offset_clamp
 #define GL_EXT_polygon_offset_clamp 1
 #define GL_POLYGON_OFFSET_CLAMP_EXT       0x8E1B

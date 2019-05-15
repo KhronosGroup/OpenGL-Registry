@@ -44265,6 +44265,9 @@ typedef unsigned int GLhandleARB;
                 <command name="glGetIntegeri_vEXT"/>
             </require>
         </extension>
+        <extension name="GL_EXT_multiview_tessellation_geometry_shader" supported="gl|glcore|gles2"/>
+        <extension name="GL_EXT_multiview_texture_multisample" supported="gl|glcore|gles2"/>
+        <extension name="GL_EXT_multiview_timer_query" supported="gl|glcore|gles2"/>
         <extension name="GL_EXT_occlusion_query_boolean" supported="gles2">
             <require>
                 <enum name="GL_ANY_SAMPLES_PASSED_EXT"/>
