@@ -479,14 +479,6 @@ typedef unsigned int GLhandleARB;
             <enum name="RELATIVE_ARC_TO_NV"/>
         </group>
 
-        <group name="">
-            <enum name=""/>
-        </group>
-
-        <group name="">
-            <enum name=""/>
-        </group>
-
         <group name="AccumOp">
             <enum name="GL_ACCUM"/>
             <enum name="GL_LOAD"/>
