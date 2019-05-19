@@ -423,7 +423,14 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_AUTO_NORMAL"/>
             <enum name="GL_BLEND"/>
             <enum name="GL_CALLIGRAPHIC_FRAGMENT_SGIX"/>
-            <enum name="GL_CLIP_DISTANCE"/>
+            <enum name="GL_CLIP_DISTANCE0"/>
+            <enum name="GL_CLIP_DISTANCE1"/>
+            <enum name="GL_CLIP_DISTANCE2"/>
+            <enum name="GL_CLIP_DISTANCE3"/>
+            <enum name="GL_CLIP_DISTANCE4"/>
+            <enum name="GL_CLIP_DISTANCE5"/>
+            <enum name="GL_CLIP_DISTANCE6"/>
+            <enum name="GL_CLIP_DISTANCE7"/>
             <enum name="GL_CLIP_PLANE0"/>
             <enum name="GL_CLIP_PLANE1"/>
             <enum name="GL_CLIP_PLANE2"/>
