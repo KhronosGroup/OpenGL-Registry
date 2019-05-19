@@ -2724,6 +2724,11 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_PRIMITIVES_GENERATED"/>
             <enum name="GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN"/>
             <enum name="GL_TIME_ELAPSED"/>
+            <enum name="GL_TRANSFORM_FEEDBACK_OVERFLOW"/>
+            <enum name="GL_TRANSFORM_FEEDBACK_STREAM_OVERFLOW"/>
+            <enum name="GL_VERTICES_SUBMITTED"/>
+            <enum name="GL_PRIMITIVES_SUBMITTED"/>
+            <enum name="GL_VERTEX_SHADER_INVOCATIONS"/>
         </group>
 
         <group name="QueryCounterTarget">
