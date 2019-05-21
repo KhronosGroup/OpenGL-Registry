@@ -657,4 +657,10 @@
 </li>
 <li value=316><a href="extensions/NV/NV_fragment_shader_barycentric.txt">GL_NV_fragment_shader_barycentric</a>
 </li>
+<li value=317><a href="extensions/EXT/EXT_multiview_timer_query.txt">GL_EXT_multiview_timer_query</a>
+</li>
+<li value=318><a href="extensions/EXT/EXT_multiview_texture_multisample.txt">GL_EXT_multiview_texture_multisample</a>
+</li>
+<li value=319><a href="extensions/EXT/EXT_multiview_tessellation_geometry_shader.txt">GL_EXT_multiview_tessellation_geometry_shader</a>
+</li>
 </ol>

@@ -1001,12 +1001,18 @@
 </li>
 <li value=531><a href="extensions/NV/NV_shading_rate_image.txt">GL_NV_shading_rate_image</a>
 </li>
-<li value=592><a href="extensions/ATI/WGL_ATI_render_texture_rectangle.txt">WGL_ATI_render_texture_rectangle</a>
+<li value=532><a href="extensions/ATI/WGL_ATI_render_texture_rectangle.txt">WGL_ATI_render_texture_rectangle</a>
 </li>
-<li value=593><a href="extensions/NV/NV_vdpau_interop2.txt">GL_NV_vdpau_interop2</a>
+<li value=533><a href="extensions/NV/NV_vdpau_interop2.txt">GL_NV_vdpau_interop2</a>
 </li>
-<li value=594><a href="extensions/EXT/EXT_texture_sRGB_R8.txt">GL_EXT_texture_sRGB_R8</a>
+<li value=534><a href="extensions/EXT/EXT_texture_sRGB_R8.txt">GL_EXT_texture_sRGB_R8</a>
 </li>
-<li value=595><a href="extensions/EXT/GLX_EXT_context_priority.txt">GLX_EXT_context_priority</a>
+<li value=535><a href="extensions/EXT/GLX_EXT_context_priority.txt">GLX_EXT_context_priority</a>
+</li>
+<li value=536><a href="extensions/EXT/EXT_multiview_timer_query.txt">GL_EXT_multiview_timer_query</a>
+</li>
+<li value=537><a href="extensions/EXT/EXT_multiview_texture_multisample.txt">GL_EXT_multiview_texture_multisample</a>
+</li>
+<li value=538><a href="extensions/EXT/EXT_multiview_tessellation_geometry_shader.txt">GL_EXT_multiview_tessellation_geometry_shader</a>
 </li>
 </ol>
