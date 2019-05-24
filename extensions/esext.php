@@ -663,4 +663,6 @@
 </li>
 <li value=319><a href="extensions/EXT/EXT_multiview_tessellation_geometry_shader.txt">GL_EXT_multiview_tessellation_geometry_shader</a>
 </li>
+<li value=320><a href="extensions/EXT/EXT_texture_shadow_lod.txt">GL_EXT_texture_shadow_lod</a>
+</li>
 </ol>
