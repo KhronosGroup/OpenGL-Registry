@@ -2550,6 +2550,13 @@ registry = {
         'supporters' : { 'APPLE', 'CodeWeavers', 'NVIDIA', 'TransGaming' },
         'url' : 'extensions/EXT/EXT_texture_sRGB_decode.txt',
     },
+    'GL_EXT_texture_shadow_lod' : {
+        'number' : 539,
+        'esnumber' : 320,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/EXT/EXT_texture_shadow_lod.txt',
+    },
     'GL_EXT_texture_shared_exponent' : {
         'number' : 333,
         'flags' : { 'public' },

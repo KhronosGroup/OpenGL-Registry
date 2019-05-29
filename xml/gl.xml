@@ -50574,5 +50574,6 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_FOG_SPECULAR_TEXTURE_WIN"/>
             </require>
         </extension>
+        <extension name="GL_EXT_texture_shadow_lod" supported="gl|glcore|gles2"/>
     </extensions>
 </registry>
