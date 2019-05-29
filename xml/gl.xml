@@ -82,6 +82,403 @@ typedef unsigned int GLhandleARB;
     <!-- SECTION: GL parameter class type definitions. -->
 
     <groups>
+        <group name="TextureNormalModeEXT">
+            <enum name="PERTURB_EXT"/>
+        </group>
+
+        <group name="LightTexturePNameEXT">
+            <enum name="ATTENUATION_EXT"/>
+            <enum name="SHADOW_ATTENUATION_EXT"/>
+        </group>
+
+        <group name="VertexShaderCoordOutEXT">
+            <enum name="X_EXT"/>
+            <enum name="Y_EXT"/>
+            <enum name="Z_EXT"/>
+            <enum name="W_EXT"/>
+            <enum name="NEGATIVE_X_EXT"/>
+            <enum name="NEGATIVE_Y_EXT"/>
+            <enum name="NEGATIVE_Z_EXT"/>
+            <enum name="NEGATIVE_W_EXT"/>
+            <enum name="ZERO_EXT"/>
+            <enum name="ONE_EXT"/>
+            <enum name="NEGATIVE_ONE_EXT"/>
+        </group>
+
+        <group name="SamplePatternEXT">
+            <enum name="1PASS_EXT"/>
+            <enum name="2PASS_0_EXT"/>
+            <enum name="2PASS_1_EXT"/>
+            <enum name="4PASS_0_EXT"/>
+            <enum name="4PASS_1_EXT"/>
+            <enum name="4PASS_2_EXT"/>
+            <enum name="4PASS_3_EXT"/>
+        </group>
+
+        <group name="VertexShaderStorageTypeEXT">
+            <enum name="VARIANT_EXT"/>
+            <enum name="INVARIANT_EXT"/>
+            <enum name="LOCAL_CONSTANT_EXT"/>
+            <enum name="LOCAL_EXT"/>
+        </group>
+
+        <group name="VertexShaderParameterEXT">
+            <enum name="CURRENT_VERTEX_EXT"/>
+            <enum name="MVP_MATRIX_EXT"/>
+        </group>
+
+        <group name="LightTextureModeEXT">
+            <enum name="FRAGMENT_MATERIAL_EXT"/>
+            <enum name="FRAGMENT_NORMAL_EXT"/>
+            <enum name="FRAGMENT_DEPTH_EXT"/>
+            <enum name="FRAGMENT_COLOR_EXT"/>
+        </group>
+
+        <group name="VertexShaderOpEXT">
+            <enum name="OP_INDEX_EXT"/>
+            <enum name="OP_NEGATE_EXT"/>
+            <enum name="OP_DOT3_EXT"/>
+            <enum name="OP_DOT4_EXT"/>
+            <enum name="OP_MUL_EXT"/>
+            <enum name="OP_ADD_EXT"/>
+            <enum name="OP_MADD_EXT"/>
+            <enum name="OP_FRAC_EXT"/>
+            <enum name="OP_MAX_EXT"/>
+            <enum name="OP_MIN_EXT"/>
+            <enum name="OP_SET_GE_EXT"/>
+            <enum name="OP_SET_LT_EXT"/>
+            <enum name="OP_CLAMP_EXT"/>
+            <enum name="OP_FLOOR_EXT"/>
+            <enum name="OP_ROUND_EXT"/>
+            <enum name="OP_EXP_BASE_2_EXT"/>
+            <enum name="OP_LOG_BASE_2_EXT"/>
+            <enum name="OP_POWER_EXT"/>
+            <enum name="OP_RECIP_EXT"/>
+            <enum name="OP_RECIP_SQRT_EXT"/>
+            <enum name="OP_SUB_EXT"/>
+            <enum name="OP_CROSS_PRODUCT_EXT"/>
+            <enum name="OP_MULTIPLY_MATRIX_EXT"/>
+            <enum name="OP_MOV_EXT"/>
+        </group>
+
+        <group name="ProgramFormatARB">
+            <enum name="PROGRAM_FORMAT_ASCII_ARB"/>
+        </group>
+
+        <group name="PointParameterNameARB">
+            <enum name="GL_POINT_SIZE_MIN_EXT"/>
+            <enum name="GL_POINT_SIZE_MAX_EXT"/>
+            <enum name="GL_POINT_FADE_THRESHOLD_SIZE_EXT"/>
+        </group>
+
+        <group name="VertexAttribPropertyARB">
+            <enum name="VERTEX_ATTRIB_ARRAY_INTEGER_EXT"/>
+        </group>
+
+        <group name="VertexAttribPointerPropertyARB">
+            <enum name="VERTEX_ATTRIB_ARRAY_POINTER_ARB"/>
+        </group>
+
+        <group name="ProgramStringPropertyARB">
+            <enum name="PROGRAM_STRING_ARB"/>
+        </group>
+
+        <group name="BufferPointerNameARB">
+            <enum name="BUFFER_MAP_POINTER_ARB"/>
+        </group>
+
+        <group name="BufferPNameARB">
+            <enum name="BUFFER_SIZE_ARB"/>
+            <enum name="BUFFER_USAGE_ARB"/>
+            <enum name="BUFFER_ACCESS_ARB"/>
+            <enum name="BUFFER_MAPPED_ARB"/>
+        </group>
+
+        <group name="ClampColorModeARB">
+            <enum name="FIXED_ONLY_ARB"/>
+            <enum name="FALSE"/>
+            <enum name="TRUE"/>
+        </group>
+
+        <group name="ClampColorTargetARB">
+            <enum name="CLAMP_VERTEX_COLOR_ARB"/>
+            <enum name="CLAMP_FRAGMENT_COLOR_ARB"/>
+            <enum name="CLAMP_READ_COLOR_ARB"/>
+        </group>
+
+        <group name="ProgramTargetARB">
+            <enum name="TEXT_FRAGMENT_SHADER_ATI"/>
+        </group>
+
+        <group name="VertexArrayPNameAPPLE">
+            <enum name="STORAGE_CLIENT_APPLE"/>
+            <enum name="STORAGE_CACHED_APPLE"/>
+            <enum name="STORAGE_SHARED_APPLE"/>
+        </group>
+
+        <group name="ObjectTypeAPPLE">
+            <enum name="DRAW_PIXELS_APPLE"/>
+            <enum name="FENCE_APPLE"/>
+        </group>
+
+        <group name="PreserveModeATI">
+            <enum name="PRESERVE_ATI"/>
+            <enum name="DISCARD_ATI"/>
+        </group>
+
+        <group name="TexBumpParameterATI">
+            <enum name="BUMP_ROT_MATRIX_ATI"/>
+        </group>
+
+        <group name="SwizzleOpATI">
+            <enum name="SWIZZLE_STR_ATI"/>
+            <enum name="SWIZZLE_STQ_ATI"/>
+            <enum name="SWIZZLE_STR_DR_ATI"/>
+            <enum name="SWIZZLE_STQ_DQ_ATI"/>
+        </group>
+
+        <group name="PNTrianglesPNameATI">
+            <enum name="PN_TRIANGLES_POINT_MODE_ATI"/>
+            <enum name="PN_TRIANGLES_NORMAL_MODE_ATI"/>
+            <enum name="PN_TRIANGLES_TESSELATION_LEVEL_ATI"/>
+        </group>
+
+        <group name="ArrayObjectUsageATI">
+            <enum name="STATIC_ATI"/>
+            <enum name="DYNAMIC_ATI"/>
+        </group>
+
+        <group name="GetTexBumpParameterATI">
+            <enum name="BUMP_ROT_MATRIX_ATI"/>
+            <enum name="BUMP_ROT_MATRIX_SIZE_ATI"/>
+            <enum name="BUMP_NUM_TEX_UNITS_ATI"/>
+            <enum name="BUMP_TEX_UNITS_ATI"/>
+        </group>
+
+        <group name="ArrayObjectPNameATI">
+            <enum name="OBJECT_BUFFER_SIZE_ATI"/>
+            <enum name="OBJECT_BUFFER_USAGE_ATI"/>
+        </group>
+
+        <group name="DrawBufferModeATI">
+            <enum name="COLOR_ATTACHMENT0_NV"/>
+            <enum name="COLOR_ATTACHMENT1_NV"/>
+            <enum name="COLOR_ATTACHMENT2_NV"/>
+            <enum name="COLOR_ATTACHMENT3_NV"/>
+            <enum name="COLOR_ATTACHMENT4_NV"/>
+            <enum name="COLOR_ATTACHMENT5_NV"/>
+            <enum name="COLOR_ATTACHMENT6_NV"/>
+            <enum name="COLOR_ATTACHMENT7_NV"/>
+            <enum name="COLOR_ATTACHMENT8_NV"/>
+            <enum name="COLOR_ATTACHMENT9_NV"/>
+            <enum name="COLOR_ATTACHMENT10_NV"/>
+            <enum name="COLOR_ATTACHMENT11_NV"/>
+            <enum name="COLOR_ATTACHMENT12_NV"/>
+            <enum name="COLOR_ATTACHMENT13_NV"/>
+            <enum name="COLOR_ATTACHMENT14_NV"/>
+            <enum name="COLOR_ATTACHMENT15_NV"/>
+        </group>
+
+        <group name="VertexStreamATI">
+            <enum name="VERTEX_STREAM0_ATI"/>
+            <enum name="VERTEX_STREAM1_ATI"/>
+            <enum name="VERTEX_STREAM2_ATI"/>
+            <enum name="VERTEX_STREAM3_ATI"/>
+            <enum name="VERTEX_STREAM4_ATI"/>
+            <enum name="VERTEX_STREAM5_ATI"/>
+            <enum name="VERTEX_STREAM6_ATI"/>
+            <enum name="VERTEX_STREAM7_ATI"/>
+        </group>
+
+        <group name="SpriteParameterNameSGIX">
+            <enum name="SPRITE_MODE_SGIX"/>
+        </group>
+
+        <group name="PixelTexGenModeSGIX">
+            <enum name="PIXEL_TEX_GEN_Q_CEILING_SGIX"/>
+            <enum name="PIXEL_TEX_GEN_Q_FLOOR_SGIX"/>
+            <enum name="PIXEL_TEX_GEN_Q_ROUND_SGIX"/>
+            <enum name="PIXEL_TEX_GEN_ALPHA_LS_SGIX"/>
+            <enum name="PIXEL_TEX_GEN_ALPHA_MS_SGIX"/>
+        </group>
+
+        <group name="IglooFunctionSelectSGIX">
+            <enum name="IGLOO_FULLSCREEN_SGIX"/>
+            <enum name="IGLOO_VIEWPORT_OFFSET_SGIX"/>
+            <enum name="IGLOO_SWAPTMESH_SGIX"/>
+            <enum name="IGLOO_COLORNORMAL_SGIX"/>
+            <enum name="IGLOO_IRISGL_MODE_SGIX"/>
+            <enum name="IGLOO_LMC_COLOR_SGIX"/>
+            <enum name="IGLOO_TMESHMODE_SGIX"/>
+        </group>
+
+        <group name="HintTargetPGI">
+            <enum name="VERTEX_DATA_HINT_PGI"/>
+            <enum name="VERTEX_CONSISTENT_HINT_PGI"/>
+            <enum name="MATERIAL_SIDE_HINT_PGI"/>
+            <enum name="MAX_VERTEX_HINT_PGI"/>
+        </group>
+
+        <group name="ImageTransformPNameHP">
+            <enum name="IMAGE_SCALE_X_HP"/>
+            <enum name="IMAGE_SCALE_Y_HP"/>
+            <enum name="IMAGE_TRANSLATE_X_HP"/>
+            <enum name="IMAGE_TRANSLATE_Y_HP"/>
+            <enum name="IMAGE_ROTATE_ANGLE_HP"/>
+            <enum name="IMAGE_ROTATE_ORIGIN_X_HP"/>
+            <enum name="IMAGE_ROTATE_ORIGIN_Y_HP"/>
+            <enum name="IMAGE_MAG_FILTER_HP"/>
+            <enum name="IMAGE_MIN_FILTER_HP"/>
+            <enum name="IMAGE_CUBIC_WEIGHT_HP"/>
+        </group>
+
+        <group name="ImageTransformTargetHP">
+            <enum name="IMAGE_TRANSFORM_2D_HP"/>
+        </group>
+
+        <group name="TextureFilterSGIS">
+            <enum name="FILTER4_SGIS"/>
+        </group>
+
+        <group name="OcclusionQueryParameterNameNV">
+            <enum name="PIXEL_COUNT_NV"/>
+            <enum name="PIXEL_COUNT_AVAILABLE_NV"/>
+        </group>
+
+        <group name="GetMultisamplePNameNV">
+            <enum name="SAMPLE_LOCATION_ARB"/>
+            <enum name="PROGRAMMABLE_SAMPLE_LOCATION_ARB"/>
+        </group>
+
+        <group name="MapParameterNV">
+            <enum name="MAP_TESSELLATION_NV"/>
+        </group>
+
+        <group name="MapAttribParameterNV">
+            <enum name="MAP_ATTRIB_U_ORDER_NV"/>
+            <enum name="MAP_ATTRIB_V_ORDER_NV"/>
+        </group>
+
+        <group name="FenceParameterNameNV">
+            <enum name="FENCE_STATUS_NV"/>
+            <enum name="FENCE_CONDITION_NV"/>
+        </group>
+
+        <group name="CombinerParameterNV">
+            <enum name="COMBINER_INPUT_NV"/>
+            <enum name="COMBINER_MAPPING_NV"/>
+            <enum name="COMBINER_COMPONENT_USAGE_NV"/>
+        </group>
+
+        <group name="CombinerBiasNV">
+            <enum name="NONE"/>
+            <enum name="BIAS_BY_NEGATIVE_ONE_HALF_NV"/>
+        </group>
+
+        <group name="CombinerScaleNV">
+            <enum name="NONE"/>
+            <enum name="SCALE_BY_TWO_NV"/>
+            <enum name="SCALE_BY_FOUR_NV"/>
+            <enum name="SCALE_BY_ONE_HALF_NV"/>
+        </group>
+
+        <group name="CombinerMappingNV">
+            <enum name="UNSIGNED_IDENTITY_NV"/>
+            <enum name="UNSIGNED_INVERT_NV"/>
+            <enum name="EXPAND_NORMAL_NV"/>
+            <enum name="EXPAND_NEGATE_NV"/>
+            <enum name="HALF_BIAS_NORMAL_NV"/>
+            <enum name="HALF_BIAS_NEGATE_NV"/>
+            <enum name="SIGNED_IDENTITY_NV"/>
+            <enum name="SIGNED_NEGATE_NV"/>
+        </group>
+
+        <group name="CombinerRegisterNV">
+            <enum name="DISCARD_NV"/>
+            <enum name="PRIMARY_COLOR_NV"/>
+            <enum name="SECONDARY_COLOR_NV"/>
+            <enum name="SPARE0_NV"/>
+            <enum name="SPARE1_NV"/>
+            <enum name="TEXTURE0_ARB"/>
+            <enum name="TEXTURE1_ARB"/>
+        </group>
+
+        <group name="CombinerVariableNV">
+            <enum name="VARIABLE_A_NV"/>
+            <enum name="VARIABLE_B_NV"/>
+            <enum name="VARIABLE_C_NV"/>
+            <enum name="VARIABLE_D_NV"/>
+            <enum name="VARIABLE_E_NV"/>
+            <enum name="VARIABLE_F_NV"/>
+            <enum name="VARIABLE_G_NV"/>
+        </group>
+
+        <group name="PixelDataRangeTargetNV">
+            <enum name="WRITE_PIXEL_DATA_RANGE_NV"/>
+            <enum name="READ_PIXEL_DATA_RANGE_NV"/>
+        </group>
+
+        <group name="EvalTargetNV">
+            <enum name="EVAL_2D_NV"/>
+            <enum name="EVAL_TRIANGULAR_2D_NV"/>
+        </group>
+
+        <group name="VertexAttribEnumNV">
+            <enum name="PROGRAM_PARAMETER_NV"/>
+        </group>
+
+        <group name="FenceConditionNV">
+            <enum name="ALL_COMPLETED_NV"/>
+        </group>
+
+        <group name="PathCoordType">
+            <enum name="CLOSE_PATH_NV"/>
+            <enum name="MOVE_TO_NV"/>
+            <enum name="RELATIVE_MOVE_TO_NV"/>
+            <enum name="LINE_TO_NV"/>
+            <enum name="RELATIVE_LINE_TO_NV"/>
+            <enum name="HORIZONTAL_LINE_TO_NV"/>
+            <enum name="RELATIVE_HORIZONTAL_LINE_TO_NV"/>
+            <enum name="VERTICAL_LINE_TO_NV"/>
+            <enum name="RELATIVE_VERTICAL_LINE_TO_NV"/>
+            <enum name="QUADRATIC_CURVE_TO_NV"/>
+            <enum name="RELATIVE_QUADRATIC_CURVE_TO_NV"/>
+            <enum name="CUBIC_CURVE_TO_NV"/>
+            <enum name="RELATIVE_CUBIC_CURVE_TO_NV"/>
+            <enum name="SMOOTH_QUADRATIC_CURVE_TO_NV"/>
+            <enum name="RELATIVE_SMOOTH_QUADRATIC_CURVE_TO_NV"/>
+            <enum name="SMOOTH_CUBIC_CURVE_TO_NV"/>
+            <enum name="RELATIVE_SMOOTH_CUBIC_CURVE_TO_NV"/>
+            <enum name="SMALL_CCW_ARC_TO_NV"/>
+            <enum name="RELATIVE_SMALL_CCW_ARC_TO_NV"/>
+            <enum name="SMALL_CW_ARC_TO_NV"/>
+            <enum name="RELATIVE_SMALL_CW_ARC_TO_NV"/>
+            <enum name="LARGE_CCW_ARC_TO_NV"/>
+            <enum name="RELATIVE_LARGE_CCW_ARC_TO_NV"/>
+            <enum name="LARGE_CW_ARC_TO_NV"/>
+            <enum name="RELATIVE_LARGE_CW_ARC_TO_NV"/>
+            <enum name="CONIC_CURVE_TO_NV"/>
+            <enum name="RELATIVE_CONIC_CURVE_TO_NV"/>
+            <enum name="ROUNDED_RECT_NV"/>
+            <enum name="RELATIVE_ROUNDED_RECT_NV"/>
+            <enum name="ROUNDED_RECT2_NV"/>
+            <enum name="RELATIVE_ROUNDED_RECT2_NV"/>
+            <enum name="ROUNDED_RECT4_NV"/>
+            <enum name="RELATIVE_ROUNDED_RECT4_NV"/>
+            <enum name="ROUNDED_RECT8_NV"/>
+            <enum name="RELATIVE_ROUNDED_RECT8_NV"/>
+            <enum name="RESTART_PATH_NV"/>
+            <enum name="DUP_FIRST_CUBIC_CURVE_TO_NV"/>
+            <enum name="DUP_LAST_CUBIC_CURVE_TO_NV"/>
+            <enum name="RECT_NV"/>
+            <enum name="RELATIVE_RECT_NV"/>
+            <enum name="CIRCULAR_CCW_ARC_TO_NV"/>
+            <enum name="CIRCULAR_CW_ARC_TO_NV"/>
+            <enum name="CIRCULAR_TANGENT_ARC_TO_NV"/>
+            <enum name="ARC_TO_NV"/>
+            <enum name="RELATIVE_ARC_TO_NV"/>
+        </group>
+
         <group name="AccumOp">
             <enum name="GL_ACCUM"/>
             <enum name="GL_LOAD"/>
