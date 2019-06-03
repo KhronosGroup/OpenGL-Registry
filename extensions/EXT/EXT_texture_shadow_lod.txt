@@ -16,7 +16,7 @@ Contributors
     Daniel Koch, NVIDIA Corporation 
     Graeme Leese, Broadcom Corporation
     Pyarelal Knowles, NVIDIA Corporation 
-    Sugar Ghuge, Intel Corporation
+    Sagar Ghuge, Intel Corporation
     Mark Janes, Intel Corporation
 
 Status
@@ -25,8 +25,8 @@ Status
 
 Version
 
-    Last Modified Date: May 24, 2019
-    Revision:   1
+    Last Modified Date: June 3, 2019
+    Revision:   2
 
 Number
 
@@ -151,6 +151,9 @@ Issues
          variants should be defined according to this extension.
 
 Revision History
+
+    Revision 2
+    - Minor correction on contributor name.
 
     Revision 1
     - Initial version.
