@@ -44158,6 +44158,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glEGLImageTargetTextureStorageEXT"/>
             </require>
         </extension>
+        <extension name="GL_EXT_EGL_sync" supported="gl|glcore"/>
         <extension name="GL_EXT_YUV_target" supported="gles2">
             <require>
                 <enum name="GL_SAMPLER_EXTERNAL_2D_Y2Y_EXT"/>
