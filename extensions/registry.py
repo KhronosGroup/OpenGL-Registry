@@ -2968,6 +2968,7 @@ registry = {
         'url' : 'extensions/MESA/GLX_MESA_copy_sub_buffer.txt',
     },
     'GL_MESA_framebuffer_flip_y' : {
+        'number' : 540,
         'esnumber' : 302,
         'flags' : { 'public' },
         'supporters' : { 'MESA' },
