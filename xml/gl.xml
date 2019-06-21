@@ -832,6 +832,22 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_COLOR_ATTACHMENT13"/>
             <enum name="GL_COLOR_ATTACHMENT14"/>
             <enum name="GL_COLOR_ATTACHMENT15"/>
+            <enum name="GL_COLOR_ATTACHMENT16"/>
+            <enum name="GL_COLOR_ATTACHMENT17"/>
+            <enum name="GL_COLOR_ATTACHMENT18"/>
+            <enum name="GL_COLOR_ATTACHMENT19"/>
+            <enum name="GL_COLOR_ATTACHMENT20"/>
+            <enum name="GL_COLOR_ATTACHMENT21"/>
+            <enum name="GL_COLOR_ATTACHMENT22"/>
+            <enum name="GL_COLOR_ATTACHMENT23"/>
+            <enum name="GL_COLOR_ATTACHMENT24"/>
+            <enum name="GL_COLOR_ATTACHMENT25"/>
+            <enum name="GL_COLOR_ATTACHMENT26"/>
+            <enum name="GL_COLOR_ATTACHMENT27"/>
+            <enum name="GL_COLOR_ATTACHMENT28"/>
+            <enum name="GL_COLOR_ATTACHMENT29"/>
+            <enum name="GL_COLOR_ATTACHMENT30"/>
+            <enum name="GL_COLOR_ATTACHMENT31"/>
         </group>
 
         <group name="DrawElementsType">
@@ -2286,6 +2302,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_RGB16F_EXT"/>
             <enum name="GL_RGB16_SNORM"/>
             <enum name="GL_RGB16_SNORM_EXT"/>
+            <enum name="GL_RGB32F"/>
             <enum name="GL_RGB8I"/>
             <enum name="GL_RGB16I"/>
             <enum name="GL_RGB32I"/>
@@ -3322,6 +3339,20 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_TEXTURE_BUFFER"/>
             <enum name="GL_TRANSFORM_FEEDBACK_BUFFER"/>
             <enum name="GL_UNIFORM_BUFFER"/>
+        </group>
+
+        <group name="CopyImageSubDataTarget">
+            <enum name="GL_RENDERBUFFER"/>
+            <enum name="GL_TEXTURE_1D"/>
+            <enum name="GL_TEXTURE_2D"/>
+            <enum name="GL_TEXTURE_3D"/>
+            <enum name="GL_TEXTURE_RECTANGLE"/>
+            <enum name="GL_TEXTURE_CUBE_MAP"/>
+            <enum name="GL_TEXTURE_CUBE_MAP_ARRAY"/>
+            <enum name="GL_TEXTURE_1D_ARRAY"/>
+            <enum name="GL_TEXTURE_2D_ARRAY"/>
+            <enum name="GL_TEXTURE_2D_MULTISAMPLE"/>
+            <enum name="GL_TEXTURE_2D_MULTISAMPLE_ARRAY"/>
         </group>
 
         <group name="ShaderType">
@@ -13792,13 +13823,13 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCopyImageSubData</name></proto>
             <param><ptype>GLuint</ptype> <name>srcName</name></param>
-            <param group="CopyBufferSubDataTarget"><ptype>GLenum</ptype> <name>srcTarget</name></param>
+            <param group="CopyImageSubDataTarget"><ptype>GLenum</ptype> <name>srcTarget</name></param>
             <param><ptype>GLint</ptype> <name>srcLevel</name></param>
             <param><ptype>GLint</ptype> <name>srcX</name></param>
             <param><ptype>GLint</ptype> <name>srcY</name></param>
             <param><ptype>GLint</ptype> <name>srcZ</name></param>
             <param><ptype>GLuint</ptype> <name>dstName</name></param>
-            <param group="CopyBufferSubDataTarget"><ptype>GLenum</ptype> <name>dstTarget</name></param>
+            <param group="CopyImageSubDataTarget"><ptype>GLenum</ptype> <name>dstTarget</name></param>
             <param><ptype>GLint</ptype> <name>dstLevel</name></param>
             <param><ptype>GLint</ptype> <name>dstX</name></param>
             <param><ptype>GLint</ptype> <name>dstY</name></param>
