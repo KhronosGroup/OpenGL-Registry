@@ -16823,18 +16823,18 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param group="ShaderType"><ptype>GLenum</ptype> <name>shadertype</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufsize</name></param>
+            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
-            <param len="bufsize"><ptype>GLchar</ptype> *<name>name</name></param>
+            <param len="bufSize"><ptype>GLchar</ptype> *<name>name</name></param>
         </command>
         <command>
             <proto>void <name>glGetActiveSubroutineUniformName</name></proto>
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <param group="ShaderType"><ptype>GLenum</ptype> <name>shadertype</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufsize</name></param>
+            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
-            <param len="bufsize"><ptype>GLchar</ptype> *<name>name</name></param>
+            <param len="bufSize"><ptype>GLchar</ptype> *<name>name</name></param>
         </command>
         <command>
             <proto>void <name>glGetActiveSubroutineUniformiv</name></proto>
@@ -17269,7 +17269,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetCoverageModulationTableNV</name></proto>
-            <param><ptype>GLsizei</ptype> <name>bufsize</name></param>
+            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param><ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
@@ -17286,12 +17286,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto><ptype>GLuint</ptype> <name>glGetDebugMessageLogAMD</name></proto>
             <param><ptype>GLuint</ptype> <name>count</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufsize</name></param>
+            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="count"><ptype>GLenum</ptype> *<name>categories</name></param>
             <param len="count" group="DebugSeverity"><ptype>GLuint</ptype> *<name>severities</name></param>
             <param len="count"><ptype>GLuint</ptype> *<name>ids</name></param>
             <param len="count"><ptype>GLsizei</ptype> *<name>lengths</name></param>
-            <param len="bufsize"><ptype>GLchar</ptype> *<name>message</name></param>
+            <param len="bufSize"><ptype>GLchar</ptype> *<name>message</name></param>
         </command>
         <command>
             <proto><ptype>GLuint</ptype> <name>glGetDebugMessageLogARB</name></proto>
@@ -17710,24 +17710,24 @@ typedef unsigned int GLhandleARB;
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="InternalFormatPName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param len="bufSize"><ptype>GLint</ptype> *<name>params</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
+            <param len="count"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetInternalformati64v</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="InternalFormatPName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param len="bufSize"><ptype>GLint64</ptype> *<name>params</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
+            <param len="count"><ptype>GLint64</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetInternalformativ</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="InternalFormatPName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param len="bufSize"><ptype>GLint</ptype> *<name>params</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
+            <param len="count"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetInvariantBooleanvEXT</name></proto>
@@ -18741,9 +18741,9 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>propCount</name></param>
             <param>const <ptype>GLenum</ptype> *<name>props</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLsizei</ptype> *<name>length</name></param>
-            <param><ptype>GLfloat</ptype> *<name>params</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
+            <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
+            <param len="count"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetProgramResourceiv</name></proto>
@@ -18752,9 +18752,9 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>propCount</name></param>
             <param group="ProgramResourceProperty" len="propCount">const <ptype>GLenum</ptype> *<name>props</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
-            <param len="bufSize"><ptype>GLint</ptype> *<name>params</name></param>
+            <param len="count"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetProgramStageiv</name></proto>
@@ -19113,17 +19113,17 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetSynciv</name></proto>
             <param group="sync"><ptype>GLsync</ptype> <name>sync</name></param>
             <param group="SyncParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
-            <param len="bufSize"><ptype>GLint</ptype> *<name>values</name></param>
+            <param len="count"><ptype>GLint</ptype> *<name>values</name></param>
         </command>
         <command>
             <proto>void <name>glGetSyncivAPPLE</name></proto>
             <param><ptype>GLsync</ptype> <name>sync</name></param>
             <param group="SyncParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param><ptype>GLsizei</ptype> *<name>length</name></param>
-            <param len="bufSize"><ptype>GLint</ptype> *<name>values</name></param>
+            <param len="count"><ptype>GLint</ptype> *<name>values</name></param>
             <alias name="glGetSynciv"/>
         </command>
         <command>
@@ -19518,7 +19518,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetTranslatedShaderSourceANGLE</name></proto>
             <param><ptype>GLuint</ptype> <name>shader</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufsize</name></param>
+            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
             <param><ptype>GLchar</ptype> *<name>source</name></param>
         </command>
@@ -25820,8 +25820,8 @@ typedef unsigned int GLhandleARB;
             <proto><ptype>GLint</ptype> <name>glQueryResourceNV</name></proto>
             <param><ptype>GLenum</ptype> <name>queryType</name></param>
             <param><ptype>GLint</ptype> <name>tagId</name></param>
-            <param><ptype>GLuint</ptype> <name>bufSize</name></param>
-            <param><ptype>GLint</ptype> *<name>buffer</name></param>
+            <param><ptype>GLuint</ptype> <name>count</name></param>
+            <param len="count"><ptype>GLint</ptype> *<name>buffer</name></param>
         </command>
         <command>
             <proto>void <name>glQueryResourceTagNV</name></proto>
@@ -30256,9 +30256,9 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVDPAUGetSurfaceivNV</name></proto>
             <param group="vdpauSurfaceNV"><ptype>GLvdpauSurfaceNV</ptype> <name>surface</name></param>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
-            <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param><ptype>GLsizei</ptype> *<name>length</name></param>
-            <param len="bufSize"><ptype>GLint</ptype> *<name>values</name></param>
+            <param len="count"><ptype>GLint</ptype> *<name>values</name></param>
         </command>
         <command>
             <proto>void <name>glVDPAUInitNV</name></proto>
