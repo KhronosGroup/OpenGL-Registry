@@ -5,8 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="author" content="Robert J. Simpson, Qualcomm (Editor) ; John Kessenich, Dave Baldwin and Randi Rost (Version 1.1 Authors)">
-<title>The OpenGL ES&#174; Shading Language, Version 3.20.5</title>
+<meta name="author" content="Robert J. Simpson, Qualcomm (Editor), John Kessenich, Google (Editor), Dave Baldwin and Randi Rost (Version 1.1 Authors)">
+<title>The OpenGL ES&#174; Shading Language, Version 3.20.6</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -544,11 +544,11 @@ table.CodeRay td.code>pre{padding:0}
 </script></head>
 <body class="book toc2 toc-left" style="max-width: 100;">
 <div id="header">
-<h1>The OpenGL ES<sup>&#174;</sup> Shading Language, Version 3.20.5</h1>
+<h1>The OpenGL ES<sup>&#174;</sup> Shading Language, Version 3.20.6</h1>
 <div class="details">
-<span id="author" class="author">Robert J. Simpson, Qualcomm (Editor) ; John Kessenich, Dave Baldwin and Randi Rost (Version 1.1 Authors)</span><br>
-<span id="revnumber">version 3.20.5,</span>
-<span id="revdate">Wed, 12 Dec 2018 23:37:49 +0000</span>
+<span id="author" class="author">Robert J. Simpson, Qualcomm (Editor), John Kessenich, Google (Editor), Dave Baldwin and Randi Rost (Version 1.1 Authors)</span><br>
+<span id="revnumber">version 3.20.6,</span>
+<span id="revdate">Wed, 10 Jul 2019 20:42:56 +0000</span>
 <br><span id="revremark">Git branch information not available</span>
 </div>
 <div id="toc" class="toc2">
@@ -563,7 +563,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#compatibility">1.5. Compatibility</a></li>
 </ul>
 </li>
-<li><a href="#overview-of-opengl-shading">2. Overview of OpenGL ES Shading</a>
+<li><a href="#overview-of-opengl-shading">2. Overview of Shading</a>
 <ul class="sectlevel2">
 <li><a href="#vertex-processor">2.1. Vertex Processor</a></li>
 <li><a href="#tessellation-control-processor">2.2. Tessellation Control Processor</a></li>
@@ -599,8 +599,9 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#variance-and-the-invariant-qualifier">4.8. Variance and the Invariant Qualifier</a></li>
 <li><a href="#the-precise-qualifier">4.9. The Precise Qualifier</a></li>
 <li><a href="#memory-qualifiers">4.10. Memory Qualifiers</a></li>
-<li><a href="#order-of-qualification">4.11. Order and Repetition of Qualification</a></li>
-<li><a href="#empty-declarations">4.12. Empty Declarations</a></li>
+<li><a href="#specialization-constant-qualifier">4.11. Specialization-Constant Qualifier</a></li>
+<li><a href="#order-of-qualification">4.12. Order and Repetition of Qualification</a></li>
+<li><a href="#empty-declarations">4.13. Empty Declarations</a></li>
 </ul>
 </li>
 <li><a href="#operators-and-expressions">5. Operators and Expressions</a>
@@ -615,7 +616,8 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#assignments">5.8. Assignments</a></li>
 <li><a href="#expressions">5.9. Expressions</a></li>
 <li><a href="#vector-and-matrix-operations">5.10. Vector and Matrix Operations</a></li>
-<li><a href="#evaluation-of-expressions">5.11. Evaluation of Expressions</a></li>
+<li><a href="#specialization-constant-operations">5.11. Specialization-Constant Operations</a></li>
+<li><a href="#evaluation-of-expressions">5.12. Evaluation of Expressions</a></li>
 </ul>
 </li>
 <li><a href="#statements-and-structure">6. Statements and Structure</a>
@@ -652,6 +654,7 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#fragment-processing-functions">8.14. Fragment Processing Functions</a></li>
 <li><a href="#shader-invocation-control-functions">8.15. Shader Invocation Control Functions</a></li>
 <li><a href="#shader-memory-control-functions">8.16. Shader Memory Control Functions</a></li>
+<li><a href="#_subpass_input_functions">8.17. Subpass-Input Functions</a></li>
 </ul>
 </li>
 <li><a href="#shader-interface-matching">9. Shader Interface Matching</a>
@@ -664,6 +667,12 @@ table.CodeRay td.code>pre{padding:0}
 <li><a href="#counting-of-inputs-and-outputs">11. Counting of Inputs and Outputs</a></li>
 <li><a href="#acknowledgments">12. Acknowledgments</a></li>
 <li><a href="#references">13. Normative References</a></li>
+<li><a href="#_non_normative_spir_v_mappings">14. Non-Normative SPIR-V Mappings</a>
+<ul class="sectlevel2">
+<li><a href="#_feature_comparisons">14.1. Feature Comparisons</a></li>
+<li><a href="#_mapping_from_glsl_to_spir_v">14.2. Mapping from GLSL to SPIR-V</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -734,15 +743,48 @@ belong to their respective owners.</p>
 <h2 id="introduction">1. Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This document specifies only version 3.20 of the OpenGL ES Shading Language.
+<p>This document specifies only version 3.20 of the OpenGL ES Shading Language (GLSL ES).
 It requires __VERSION__ to substitute 320, and requires
 <strong>#version</strong> to accept only
 <code>320 es</code>.
 If <strong>#version</strong> is declared with a smaller number, the language accepted is a
 previous version of the shading language, which will be supported depending
-on the version and type of context in the OpenGL ES API.
-See the <a href="#references">OpenGL ES Specification</a> for details on what language versions are
-supported.</p>
+on the version and type of context in the API.
+See the <a href="#references">normative references</a> for details on what language
+versions are supported.</p>
+</div>
+<div class="paragraph">
+<p>Throughout, when generating SPIR-V for consumption by the Vulkan API
+(see <a href="#references">normative references</a>), this will be said to be
+<em>targeting Vulkan</em>.</p>
+</div>
+<div class="paragraph">
+<p>While this specification and the OpenGL ES Specification are normative for OpenGL ES Shading Language, for
+SPIR-V generation it is still the SPIR-V specification and the SPIR-V client
+API specification that are normative for the generated SPIR-V.
+See the <a href="#references">normative references</a> for further detail.</p>
+</div>
+<div class="paragraph">
+<p>For SPIR-V generation, the SPIR-V client API specifies the commands used to
+manipulate SPIR-V shaders.</p>
+</div>
+<div class="paragraph">
+<p>Independent offline tool chains will compile GLSL ES down to the SPIR-V
+intermediate language.
+SPIR-V generation is not enabled with a <strong>#extension</strong>, <strong>#version</strong>, or a
+profile.
+Instead, use of GLSL ES for SPIR-V is determined by offline tool-chain use.
+See the documentation of such tools to see how to request generation of
+SPIR-V for its client API.</p>
+</div>
+<div class="paragraph">
+<p>GLSL ES &#8594; SPIR-V compilers must be directed as to what SPIR-V <strong>Capabilities</strong>
+are legal at run-time and give errors for GLSL ES feature use outside those
+capabilities.
+This is also true for implementation-dependent limits that can be error
+checked by the front-end against built-in constants present in the GLSL ES
+source: the front-end can be informed of such limits, and report errors when
+they are exceeded.</p>
 </div>
 <div class="paragraph">
 <p>All references in this specification to the <a href="#references">OpenGL ES Specification</a> are to
@@ -751,7 +793,22 @@ version 3.2.</p>
 <div class="sect2">
 <h3 id="changes">1.1. Changes</h3>
 <div class="sect3">
-<h4 id="changes-from-glsl-es-3.2-revision-4">1.1.1. Changes from GLSL ES 3.2 revision 4</h4>
+<h4 id="_changes_from_glsl_es_3_2_revision_5">1.1.1. Changes from GLSL ES 3.2 revision 5</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Incorporated the GL_KHR_vulkan_glsl specification.</p>
+</li>
+<li>
+<p>Clarify it is same location that triggers default-uniform block matching
+rules.
+See <a href="#uniform-variable-layout-qualifiers">Uniform Variable Layout Qualifiers</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="changes-from-glsl-es-3.2-revision-4">1.1.2. Changes from GLSL ES 3.2 revision 4</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -781,7 +838,7 @@ control flow and ternary operators (<strong>?:</strong>) are not included.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="changes-from-glsl-es-3.2-revision-3">1.1.2. Changes from GLSL ES 3.2 revision 3</h4>
+<h4 id="changes-from-glsl-es-3.2-revision-3">1.1.3. Changes from GLSL ES 3.2 revision 3</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -873,7 +930,7 @@ shader outputs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="changes-from-glsl-es-3.2-revision-2">1.1.3. Changes from GLSL ES 3.2 revision 2</h4>
+<h4 id="changes-from-glsl-es-3.2-revision-2">1.1.4. Changes from GLSL ES 3.2 revision 2</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -905,7 +962,7 @@ shader outputs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="changes-from-glsl-es-3.2-revision-1">1.1.4. Changes from GLSL ES 3.2 revision 1</h4>
+<h4 id="changes-from-glsl-es-3.2-revision-1">1.1.5. Changes from GLSL ES 3.2 revision 1</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -942,7 +999,7 @@ shader outputs.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="changes-from-glsl-es-3.1-revision-4">1.1.5. Changes from GLSL ES 3.1 revision 4</h4>
+<h4 id="changes-from-glsl-es-3.1-revision-4">1.1.6. Changes from GLSL ES 3.1 revision 4</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1005,8 +1062,8 @@ shader outputs.</p>
 A <em>program</em> is a set of shaders that are compiled and linked
 together.
 The aim of this document is to thoroughly specify the programming language.
-The <a href="#references">OpenGL ES Specification</a> will specify the OpenGL ES entry points used to
-manipulate and communicate with programs and shaders.</p>
+The <a href="#references">normative references</a> will specify the API entry points
+used to manipulate and communicate with programs and shaders.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1073,7 +1130,8 @@ for violations.
 The run-time behavior of the program in these cases is not constrained (and
 so may include termination or system instability).
 It is expected that systems will be designed to handle these cases
-gracefully but specification of this is outside the scope of OpenGL ES.</p>
+gracefully but specification of this is outside the scope of this
+specification.</p>
 </div>
 <div class="paragraph">
 <p>Implementations may not in general support functionality beyond the mandated
@@ -1125,14 +1183,14 @@ non-terminals.</p>
 <div class="sect2">
 <h3 id="compatibility">1.5. Compatibility</h3>
 <div class="paragraph">
-<p>The OpenGL ES 3.2 API is designed to work with GLSL ES v1.00, GLSL
-ES 3.00, GLSL ES 3.10 and GLSL ES 3.20.
+<p>The OpenGL ES 3.2 API is designed to work with GLSL ES v1.00,
+GLSL ES 3.00, GLSL ES 3.10 and GLSL ES 3.20.
 In general a shader written for versions prior to OpenGL ES 3.2
 should work without modification in OpenGL ES 3.2.</p>
 </div>
 <div class="paragraph">
-<p>When porting applications from an earlier to later version of the API, the
-following points should be noted:</p>
+<p>When porting applications from an earlier to later version of the GLSL ES,
+the following points should be noted:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1140,8 +1198,8 @@ following points should be noted:</p>
 <p>Not all language constructs present in earlier versions of the language
 are available in later versions e.g. attribute and varying qualifiers
 are present in v1.00 but not v3.00.
-However, the functionality of GLSL ES 3.20 is a super-set of GLSL
-ES 3.10.</p>
+However, the functionality of GLSL ES 3.20 is a super-set of
+GLSL ES 3.10.</p>
 </li>
 <li>
 <p>Some features of later versions of the API require language features
@@ -1175,12 +1233,12 @@ shader is used with the OpenGL ES 3.x APIs.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="overview-of-opengl-shading">2. Overview of OpenGL ES Shading</h2>
+<h2 id="overview-of-opengl-shading">2. Overview of Shading</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The OpenGL ES Shading Language is actually several closely related languages.
 These languages are used to create shaders for each of the programmable
-processors contained in the OpenGL ES processing pipeline.
+processors contained in the API&#8217;s processing pipeline.
 Currently, these processors are the vertex, tessellation control,
 tessellation evaluation, geometry, fragment, and compute processors.</p>
 </div>
@@ -1203,12 +1261,12 @@ target: vertex, tessellation control, tessellation evaluation, geometry,
 fragment, or compute.</p>
 </div>
 <div class="paragraph">
-<p>Most OpenGL ES state is not tracked or made available to shaders.
+<p>Most API state is not tracked or made available to shaders.
 Typically, user-defined variables will be used for communicating between
-different stages of the OpenGL ES pipeline.
+different stages of the API pipeline.
 However, a small amount of state is still tracked and automatically made
 available to shaders, and there are a few built-in variables for interfaces
-between different stages of the OpenGL ES pipeline.</p>
+between different stages of the API pipeline.</p>
 </div>
 <div class="sect2">
 <h3 id="vertex-processor">2.1. Vertex Processor</h3>
@@ -1310,8 +1368,8 @@ Compilation units written in the OpenGL ES Shading Language to run on this proce
 <p>A fragment shader cannot change a fragment&#8217;s (<em>x</em>, <em>y</em>) position.
 Access to neighboring fragments is not allowed.
 The values computed by the fragment shader are ultimately used to update
-framebuffer memory or texture memory, depending on the current OpenGL ES
-state and the OpenGL ES command that caused the fragments to be generated.</p>
+framebuffer memory or texture memory, depending on the current API
+state and the API command that caused the fragments to be generated.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1387,7 +1445,7 @@ carriage-return, line-feed.</p>
 </div>
 <div class="paragraph">
 <p>After preprocessing, only the following characters are allowed in the
-resulting stream of GLSL tokens:</p>
+resulting stream of GLSL ES tokens:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1644,8 +1702,8 @@ __VERSION__ substitute the decimal integer 320.</p>
 <div class="paragraph">
 <p>GL_ES will be defined and set to 1.
 This is not true for the non-ES OpenGL Shading Language, so it can be used
-to do a compile time test to determine if a shader is running on an ES
-system.</p>
+to do a compile time test to determine if a shader is compiling as an
+GLSL ES shader.</p>
 </div>
 <div class="paragraph">
 <p>By convention, all macro names containing two consecutive underscores (__)
@@ -2045,6 +2103,14 @@ results are implementation dependent. For example,
 </table>
 </div>
 <div class="paragraph">
+<p>When targeting Vulkan, the following predefined macro is available:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++"><span class="preprocessor">#define</span> VULKAN <span class="integer">100</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>If during macro expansion a preprocessor directive is encountered, the
 results are undefined; the compiler may or may not report an error in such
 cases.</p>
@@ -2238,6 +2304,57 @@ or an error results:</p>
 </dl>
 </div>
 <div class="paragraph">
+<p>In addition, when targeting Vulkan, the following keywords also exist:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"></dt>
+<dd>
+<p><strong>texture2D</strong> <strong>texture2DArray</strong></p>
+</dd>
+<dt class="hdlist1"></dt>
+<dd>
+<p><strong>itexture2D</strong> <strong>itexture2DArray</strong> <strong>utexture2D</strong> <strong>utexture2DArray</strong></p>
+</dd>
+<dt class="hdlist1"></dt>
+<dd>
+<p><strong>texture2DMS</strong> <strong>itexture2DMS</strong> <strong>utexture2DMS</strong></p>
+</dd>
+<dt class="hdlist1"></dt>
+<dd>
+<p><strong>texture2DMSArray</strong> <strong>itexture2DMSArray</strong> <strong>utexture2DMSArray</strong></p>
+</dd>
+<dt class="hdlist1"></dt>
+<dd>
+<p><strong>texture3D</strong> <strong>itexture3D</strong> <strong>utexture3D</strong></p>
+</dd>
+<dt class="hdlist1"></dt>
+<dd>
+<p><strong>textureCube</strong> <strong>itextureCube</strong> <strong>utextureCube</strong></p>
+</dd>
+<dt class="hdlist1"></dt>
+<dd>
+<p><strong>textureCubeArray</strong> <strong>itextureCubeArray</strong> <strong>utextureCubeArray</strong></p>
+</dd>
+<dt class="hdlist1"></dt>
+<dd>
+<p><strong>textureBuffer</strong> <strong>itextureBuffer</strong> <strong>utextureBuffer</strong></p>
+</dd>
+<dt class="hdlist1"></dt>
+<dd>
+<p><strong>sampler</strong> <strong>samplerShadow</strong></p>
+</dd>
+<dt class="hdlist1"></dt>
+<dd>
+<p><strong>subpassInput</strong> <strong>isubpassInput</strong> <strong>usubpassInput</strong></p>
+</dd>
+<dt class="hdlist1"></dt>
+<dd>
+<p><strong>subpassInputMS</strong> <strong>isubpassInputMS</strong> <strong>usubpassInputMS</strong></p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
 <p>The following are the keywords reserved for future use.
 Using them will result in an error:</p>
 </div>
@@ -2403,7 +2520,7 @@ Identifiers have the form:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Identifiers starting with &#8220;gl_&#8221; are reserved for use by OpenGL ES, and
+<p>Identifiers starting with &#8220;gl_&#8221; are reserved, and
 in general, may not be declared in a shader;
 this results in an error.
 However, as noted in the specification, there are some cases where
@@ -2618,8 +2735,9 @@ There are no implicit conversions between types.</p>
 <div class="paragraph">
 <p>The OpenGL ES Shading Language supports the following basic data types, grouped as follows.</p>
 </div>
-<div class="sect3">
-<h4 id="_transparent_types">4.1.1. Transparent Types</h4>
+<div class="paragraph">
+<p><strong>Transparent Types</strong></p>
+</div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2755,9 +2873,9 @@ There are no implicit conversions between types.</p>
 <strong>sampler*</strong> opaque types access textures, and the <strong>image*</strong> opaque types
 access images, of a specified type.</p>
 </div>
+<div class="paragraph">
+<p><strong>Floating-Point Opaque Types</strong></p>
 </div>
-<div class="sect3">
-<h4 id="_floating_point_opaque_types">4.1.2. Floating-Point Opaque Types</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2772,6 +2890,7 @@ access images, of a specified type.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>sampler2D</strong><br>
+  <strong>texture2D</strong><br>
   <strong>image2D</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a 2D texture</p></td>
 </tr>
@@ -2781,6 +2900,7 @@ access images, of a specified type.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>sampler2DArray</strong><br>
+  <strong>texture2DArray</strong><br>
   <strong>image2DArray</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a 2D array texture</p></td>
 </tr>
@@ -2789,7 +2909,8 @@ access images, of a specified type.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a 2D array depth texture with comparison</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>sampler2DMS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>sampler2DMS</strong><br>
+  <strong>texture2DMS</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a 2D multisample texture</p></td>
 </tr>
 <tr>
@@ -2798,11 +2919,13 @@ access images, of a specified type.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>sampler3D</strong><br>
+  <strong>texture3D</strong><br>
   <strong>image3D</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a 3D texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>samplerCube</strong><br>
+  <strong>textureCube</strong><br>
   <strong>imageCube</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a cube mapped texture</p></td>
 </tr>
@@ -2812,6 +2935,7 @@ access images, of a specified type.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>samplerCubeArray</strong><br>
+  <strong>textureCubeArray</strong><br>
   <strong>imageCubeArray</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a cube map array texture</p></td>
 </tr>
@@ -2821,14 +2945,23 @@ access images, of a specified type.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>samplerBuffer</strong><br>
+  <strong>textureBuffer</strong><br>
   <strong>imageBuffer</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a buffer texture</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>subpassInput</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a floating-point subpass input</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>subpassInputMS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a multi-sampled floating-point subpass input</p></td>
+</tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><strong>Signed Integer Opaque Types</strong></p>
 </div>
-<div class="sect3">
-<h4 id="_signed_integer_opaque_types">4.1.3. Signed Integer Opaque Types</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2843,47 +2976,63 @@ access images, of a specified type.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isampler2D</strong><br>
+  <strong>itexture2D</strong><br>
   <strong>iimage2D</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an integer 2D texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isampler2DArray</strong><br>
+  <strong>itexture2DArray</strong><br>
   <strong>iimage2DArray</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an integer 2D array texture</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isampler2DMS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isampler2DMS</strong><br>
+  <strong>itexture2DMS</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an integer 2D multisample texture</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isampler2DMSArray</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isampler2DMSArray</strong><br>
+  <strong>itexture2DMSArray</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an integer 2D multisample array texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isampler3D</strong><br>
+  <strong>itexture3D</strong><br>
   <strong>iimage3D</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an integer 3D texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isamplerCube</strong><br>
+  <strong>itextureCube</strong><br>
   <strong>iimageCube</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an integer cube mapped texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isamplerCubeArray</strong><br>
+  <strong>itextureCubeArray</strong><br>
   <strong>iimageCubeArray</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an integer cube map array texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isamplerBuffer</strong><br>
+  <strong>itextureBuffer</strong><br>
   <strong>iimageBuffer</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an integer buffer texture</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isubpassInput</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an integer subpass input</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>isubpassInputMS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a multi-sampled integer subpass input</p></td>
+</tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p><strong>Unsigned Integer Opaque Types</strong></p>
 </div>
-<div class="sect3">
-<h4 id="_unsigned_integer_opaque_types">4.1.4. Unsigned Integer Opaque Types</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -2898,45 +3047,87 @@ access images, of a specified type.</p>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usampler2D</strong><br>
+  <strong>utexture2D</strong><br>
   <strong>uimage2D</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an unsigned integer 2D texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usampler2DArray</strong><br>
+  <strong>utexture1DArray</strong><br>
   <strong>uimage2DArray</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an unsigned integer 2D array texture</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usampler2DMS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usampler2DMS</strong><br>
+  <strong>utexture2DMS</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an unsigned integer 2D multisample texture</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usampler2DMSArray</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usampler2DMSArray</strong><br>
+  <strong>utexture2DMSArray</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an unsigned integer 2D multisample array texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usampler3D</strong><br>
+  <strong>utexture3D</strong><br>
   <strong>uimage3D</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an unsigned integer 3D texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usamplerCube</strong><br>
+  <strong>utextureCube</strong><br>
   <strong>uimageCube</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an unsigned integer cube mapped texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usamplerCubeArray</strong><br>
+  <strong>utextureCubeArray</strong><br>
   <strong>uimageCubeArray</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an unsigned integer cube map array texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usamplerBuffer</strong><br>
+  <strong>utextureBuffer</strong><br>
   <strong>uimageBuffer</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an unsigned integer buffer texture</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>atomic_uint</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an unsigned integer atomic counter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usubpassInput</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing an unsigned-integer subpass input</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>usubpassInputMS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing a multi-sampled unsigned-integer subpass input</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Sampler Opaque Types</strong></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>sampler</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing state describing how to sample a texture</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>samplerShadow</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">a handle for accessing state describing how to sample a depth
+                            texture with comparison</p></td>
 </tr>
 </tbody>
 </table>
@@ -2947,9 +3138,8 @@ structures to build more complex types.</p>
 <div class="paragraph">
 <p>There are no pointer types.</p>
 </div>
-</div>
 <div class="sect3">
-<h4 id="void">4.1.5. Void</h4>
+<h4 id="void">4.1.1. Void</h4>
 <div class="paragraph">
 <p>Functions that do not return a value must be declared as <strong>void</strong>.
 There is no default function return type.
@@ -2958,7 +3148,7 @@ empty formal or actual parameter lists), or an error results.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="booleans">4.1.6. Booleans</h4>
+<h4 id="booleans">4.1.2. Booleans</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Definition</dt>
@@ -2990,7 +3180,7 @@ Booleans are declared and optionally initialized as in the follow example:</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="integers">4.1.7. Integers</h4>
+<h4 id="integers">4.1.3. Integers</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Definitions</dt>
@@ -3011,23 +3201,31 @@ It excludes arrays and structures.</p>
 <div class="paragraph">
 <p>Signed and unsigned integer variables are fully supported.
 In this document, the term <em>integer</em> is meant to generally include both
-signed and unsigned integers.
-<strong>highp</strong> unsigned
-integers have exactly 32 bits of precision.
-<strong>highp</strong> signed
-integers use 32 bits, including a sign bit, in two&#8217;s complement form.</p>
+signed and unsigned integers.</p>
 </div>
 <div class="paragraph">
-<p><strong>mediump</strong> and <strong>lowp</strong> integers have implementation-defined numbers of bits.
-See &#8220;<a href="#range-and-precision">Range and Precision</a>&#8221; for details.
-For all precisions,
-operations resulting in overflow or
-underflow will not cause any exception, nor will they saturate, rather they
-will &#8220;wrap&#8221; to yield the low-order
-n bits of the result where n is the size in bits of the integer.
-However, for the case where the minimum representable value is divided by
--1, it is allowed to return either the minimum representable value or the
-maximum representable value.</p>
+<p><strong>highp</strong>
+unsigned integers have exactly 32 bits of precision.</p>
+</div>
+<div class="paragraph">
+<p><strong>highp</strong>
+signed integers use 32 bits, including a sign bit, in two&#8217;s complement form.</p>
+</div>
+<div class="paragraph">
+<p>When targeting Vulkan, <strong>mediump</strong> and <strong>lowp</strong> integers are as defined by the
+SPIR-V <strong>RelaxedPrecision</strong> decoration.
+Otherwise, <strong>mediump</strong> and <strong>lowp</strong> integers have implementation-defined numbers of bits.
+See &#8220;<a href="#range-and-precision">Range and Precision</a>&#8221; for details.</p>
+</div>
+<div class="paragraph">
+<p>For all precisions, addition,
+subtraction and multiplication resulting in overflow or
+underflow will result in the low-order
+n
+bits of the correct result R, where
+n is the size in bits of the integer and
+R is computed with enough precision to avoid overflow or underflow.
+Division resulting in overflow will result in an undefined value.</p>
 </div>
 <div class="paragraph">
 <p>Integers are declared and optionally initialized with integer expressions,
@@ -3139,7 +3337,7 @@ negative value.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="floats">4.1.8. Floats</h4>
+<h4 id="floats">4.1.4. Floats</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Definition</dt>
@@ -3229,7 +3427,7 @@ Implementations may also convert subnormal (denormalized) numbers to zero.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="vectors">4.1.9. Vectors</h4>
+<h4 id="vectors">4.1.5. Vectors</h4>
 <div class="paragraph">
 <p>The OpenGL ES Shading Language includes data types for generic 2-, 3-, and 4-component vectors
 of floating-point values, integers, and Booleans.
@@ -3254,7 +3452,7 @@ See &#8220;<a href="#vector-and-matrix-constructors">Vector and Matrix Construct
 </div>
 </div>
 <div class="sect3">
-<h4 id="matrices">4.1.10. Matrices</h4>
+<h4 id="matrices">4.1.6. Matrices</h4>
 <div class="paragraph">
 <p>The OpenGL ES Shading Language has built-in types for 2 × 2, 2 × 3, 2 × 4, 3
 × 2, 3 × 3, 3 × 4, 4 × 2, 4 × 3, and 4 ×
@@ -3290,7 +3488,7 @@ mat2x2 b = a;</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="opaque-types">4.1.11. Opaque Types</h4>
+<h4 id="opaque-types">4.1.7. Opaque Types</h4>
 <div class="dlist">
 <dl>
 <dt class="hdlist1">Definition</dt>
@@ -3334,20 +3532,20 @@ The storage qualifier will qualify the opaque handle, while the memory
 qualifier will qualify the object it is a handle to.</p>
 </div>
 <div class="sect4">
-<h5 id="samplers">Samplers</h5>
+<h5 id="samplers">Texture-Combined Samplers</h5>
 <div class="paragraph">
-<p>Sampler types (e.g. <strong>sampler2D</strong>) are opaque types, declared and behaving as
-described above for opaque types.</p>
+<p>Texture-combined sampler types (e.g. <strong>sampler2D</strong>) are the sampler types
+described in the Basic Types tables as handles for accessing textures.
+(They do not include <strong>sampler</strong> and <strong>samplerShadow</strong>.)
+There are distinct texture-combined sampler types for each texture target,
+and for each of float, integer, and unsigned integer data types.
+Texture accesses are done through built-in texture functions (described in
+&#8220;<a href="#texture-functions">Texture Functions</a>&#8221;) and texture-combined samplers
+are used to specify which texture to access and how it is to be filtered.</p>
 </div>
 <div class="paragraph">
-<p>Sampler variables are handles to
-two-, and three- dimensional textures, cube maps, depth textures (shadowing),
-etc., as enumerated in the basic types tables.
-There are distinct sampler types for each texture target, and for each of
-float, integer, and unsigned integer data types.
-Texture accesses are done through built-in texture functions (described in
-&#8220;<a href="#texture-functions">Texture Functions</a>&#8221;) and samplers are used to
-specify which texture to access and how it is to be filtered.</p>
+<p>Texture-combined sampler types are opaque types,
+declared and behaving as described above for opaque types.</p>
 </div>
 </div>
 <div class="sect4">
@@ -3410,10 +3608,55 @@ undefined.</p>
 It is an error to declare an atomic type with a different precision or to
 specify the default precision for an atomic type to be <strong>lowp</strong> or <strong>mediump</strong>.</p>
 </div>
+<div class="paragraph">
+<p>Atomic counter types are not available when targeting Vulkan.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_texture_sampler_and_samplershadow_types">Texture, <strong>sampler</strong>, and <strong>samplerShadow</strong> Types</h5>
+<div class="paragraph">
+<p>Texture (e.g., <strong>texture2D</strong>), <strong>sampler</strong>, and <strong>samplerShadow</strong> types are opaque
+types, declared and behaving as described above for opaque types.
+These types are only available when targeting Vulkan.
+When aggregated into arrays within a shader, these types can only be indexed
+with a dynamically uniform expression, or texture lookup will result in
+undefined values.
+Texture variables are handles to one-, two-, and three-dimensional textures,
+cube maps, etc., as enumerated in the basic types tables.
+There are distinct texture types for each texture target, and for each of
+float, integer, and unsigned integer data types.
+Textures can be combined with a variable of type <strong>sampler</strong> or <strong>samplerShadow</strong>
+to create a texture-combined sampler type (e.g., sampler2D, or sampler2DShadow).
+This is done with a constructor, e.g., <code>sampler2D(texture2D, sampler)</code>,
+<code>sampler2DShadow(texture2D, sampler)</code>, <code>sampler2DShadow(texture2D, samplerShadow)</code>,
+or <code>sampler2D(texture2D, samplerShadow)</code> and is described in more detail
+in section 5.4 "Constructors".</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_subpass_inputs">Subpass Inputs</h5>
+<div class="paragraph">
+<p>Subpass-input types are only available when targeting Vulkan.</p>
+</div>
+<div class="paragraph">
+<p>Subpass-input types (e.g., <strong>subpassInput</strong>) are opaque types, declared
+and behaving as described above for opaque types.
+When aggregated into arrays within a shader, they can only be indexed with a
+dynamically uniform integral expression, otherwise results are undefined.</p>
+</div>
+<div class="paragraph">
+<p>Subpass-input types are handles to two-dimensional single sampled or
+multi-sampled images, with distinct types for each of float, integer,
+and unsigned integer data types.</p>
+</div>
+<div class="paragraph">
+<p>Subpass-input types are only available in fragment shaders.  It is
+an error to use them in any other stage.</p>
+</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="structures">4.1.12. Structures</h4>
+<h4 id="structures">4.1.8. Structures</h4>
 <div class="paragraph">
 <p>User-defined types can be created by aggregating other already defined types
 into a structure using the <strong>struct</strong> keyword.
@@ -3529,7 +3772,7 @@ qualifier)</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="arrays">4.1.13. Arrays</h4>
+<h4 id="arrays">4.1.9. Arrays</h4>
 <div class="paragraph">
 <p>Variables of the same type can be aggregated into arrays by declaring a name
 followed by brackets (<strong>[ ]</strong>) enclosing an optional size.</p>
@@ -4138,13 +4381,12 @@ These are summarized as</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>uniform</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">value does not change across the primitive being
                       processed, uniforms form the linkage between a shader,
-                      OpenGL ES, and the application</p></td>
+                      API, and the application</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>buffer</strong></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">value is stored in a buffer object, and can be read or
-                      written both by shader invocations and the OpenGL ES
-                      API</p></td>
+                      written both by shader invocations and the API</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>shared</strong></p></td>
@@ -4208,8 +4450,8 @@ const qualifier, any initializer must be a constant expression.
 Declarations of global variables with other storage qualifiers may not
 contain initializers.
 Global variables without storage qualifiers that are not initialized in
-their declaration or by the application will not be initialized by
-OpenGL ES, but rather will enter <em>main()</em> with undefined values.</p>
+their declaration or by the application will not be initialized,
+but rather will enter <em>main()</em> with undefined values.</p>
 </div>
 <div class="sect3">
 <h4 id="default-storage-qualifier">4.3.1. Default Storage Qualifier</h4>
@@ -4256,6 +4498,12 @@ must be constant expressions, as defined in
 <div class="sect3">
 <h4 id="constant-expressions">4.3.3. Constant Expressions</h4>
 <div class="paragraph">
+<p>SPIR-V specialization constants are expressed in GLSL ES as <strong>const</strong> with the
+layout qualifier <strong>constant_id</strong>, as described in
+&#8220;<a href="#specialization-constant-qualifier">Specialization-Constant
+Qualifier.</a>&#8221;</p>
+</div>
+<div class="paragraph">
 <p>A <em>constant expression</em> is one of</p>
 </div>
 <div class="ulist">
@@ -4264,8 +4512,14 @@ must be constant expressions, as defined in
 <p>A literal value (e.g. <strong>5</strong> or <strong>true</strong>).</p>
 </li>
 <li>
-<p>A global or local variable qualified as <strong>const</strong> (i.e., not including
-function parameters).</p>
+<p>A variable declared with the <strong>const</strong> qualifier and an initializer, where
+the initializer is a constant expression.
+This includes both <strong>const</strong> declared with a specialization-constant
+layout qualifier, e.g. <strong>layout</strong>(<strong>constant_id</strong> = &#8230;&#8203;), and those declared
+without a specialization-constant layout qualifier.</p>
+</li>
+<li>
+<p>Built-in variables qualified as <strong>const</strong>.</p>
 </li>
 <li>
 <p>An expression formed by an operator on operands that are all constant
@@ -4273,7 +4527,9 @@ expressions, including getting an element of a constant array, or a
 member of a constant structure, or components of a constant vector.
 However, the lowest precedence operators of the sequence operator (<strong>,</strong>)
 and the assignment operators (<strong>=</strong>, <strong>+=</strong>, <strong>&#8230;&#8203;</strong>) are not included in the
-operators that can create a constant expression.</p>
+operators that can create a constant expression.
+Also, an array access with a specialization constant as an index does
+not result in a constant expression.</p>
 </li>
 <li>
 <p>The <strong>length</strong>() method on a compile-time sized array, whether or not the
@@ -4283,7 +4539,8 @@ object itself is constant.</p>
 <p>A constructor whose arguments are all constant expressions.</p>
 </li>
 <li>
-<p>A built-in function call whose arguments are all constant expressions,
+<p>For non-specialization constants only:
+A built-in function call whose arguments are all constant expressions,
 with the exception of the texture lookup functions.
 This rule excludes functions with a <strong>void</strong> return or functions that have
 an <strong>out</strong> parameter.
@@ -4325,8 +4582,7 @@ See &#8220;<a href="#the-invariant-qualifier">The Invariant Qualifier</a>&#8221;
 to create invariant expressions.</p>
 </div>
 <div class="paragraph">
-<p>Constant
-expressions may be evaluated by the compiler&#8217;s
+<p>Constant-expressions may be evaluated by a
 host platform, and are therefore not required to compute the same value that
 the same expression would evaluate to on the shader execution target.
 However, the host must use the same or greater precision than the target
@@ -4335,12 +4591,17 @@ When the precision qualification cannot be determined, the expression is
 evaluated at <strong>highp</strong>.
 See &#8220;<a href="#default-precision-qualifiers">Default Precision Qualifiers</a>&#8221;.</p>
 </div>
+<div class="paragraph">
+<p>Specialization-constant expressions are never evaluated by the compiler
+front end, but instead retain the expression&#8217;s operations needed to evaluate
+them later on the host.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="input-variables">4.3.4. Input Variables</h4>
 <div class="paragraph">
 <p>Shader input variables are declared with the <strong>in</strong> storage qualifier.
-They form the input interface between previous stages of the OpenGL ES
+They form the input interface between previous stages of the API
 pipeline and the declaring shader.
 Input variables must be declared at global scope.
 Values from the previous pipeline stage are copied into input variables at
@@ -4362,7 +4623,7 @@ input names.</p>
 <p>Vertex shader input variables (or attributes) receive per-vertex data.
 It is an error to use auxiliary storage or interpolation qualifiers
 on a vertex shader input.
-The values copied in are established by the OpenGL ES API or through the use
+The values copied in are established by the API or through the use
 of the layout identifier <strong>location</strong>.</p>
 </div>
 <div class="paragraph">
@@ -4624,7 +4885,9 @@ user supplied code.</p>
 the same across the entire primitive being processed.
 All <strong>uniform</strong> variables are read-only.
 Except for variables declared within a uniform block, all uniform variables
-are initialized to 0 at link time and may be updated through the API.</p>
+are initialized to 0 at link time and may be updated through the API.
+When targeting Vulkan, it is an error to declare <strong>uniform</strong>
+variables outside a block.</p>
 </div>
 <div class="paragraph">
 <p>Example declarations are:</p>
@@ -4688,7 +4951,7 @@ layout(location = <span class="integer">3</span>) in mat4 y; <span class="commen
 <div class="paragraph">
 <p>Shader output variables are declared with the <strong>out</strong> storage qualifier.
 They form the output interface between the declaring shader and the
-subsequent stages of the OpenGL ES pipeline.
+subsequent stages of the API pipeline.
 Output variables must be declared at global scope.
 During shader execution they will behave as normal unqualified global
 variables.
@@ -4957,7 +5220,7 @@ image stores and operations on atomic counters.</p>
 <h4 id="buffer-variables">4.3.7. Buffer Variables</h4>
 <div class="paragraph">
 <p>The <strong>buffer</strong> qualifier is used to declare global variables whose values are
-stored in the data store of a buffer object bound through the OpenGL ES API.
+stored in the data store of a buffer object bound through the API.
 Buffer variables can be read and written, with the underlying storage shared
 among all active shader invocations.
 Buffer variable memory reads and writes within a single shader invocation
@@ -5476,175 +5739,223 @@ These are all discussed in detail in the following sections.</p>
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Layout Qualifier</th>
-<th class="tableblock halign-left valign-top">Qualifier Only</th>
-<th class="tableblock halign-left valign-top">Individual Variable</th>
-<th class="tableblock halign-left valign-top">Block</th>
-<th class="tableblock halign-left valign-top">Block Member</th>
-<th class="tableblock halign-left valign-top">Allowed Interfaces</th>
+<th class="tableblock halign-left valign-middle">Layout Qualifier</th>
+<th class="tableblock halign-center valign-middle">Qualifier Only</th>
+<th class="tableblock halign-center valign-middle">Individual Variable</th>
+<th class="tableblock halign-center valign-middle">Block</th>
+<th class="tableblock halign-center valign-middle">Block Member</th>
+<th class="tableblock halign-left valign-middle">Allowed Interfaces</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>shared</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>shared</strong><br>
   <strong>packed</strong><br>
   <strong>std140</strong><br>
   <strong>std430</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top" rowspan="4"><p class="tableblock"><strong>uniform</strong> / <strong>buffer</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle" rowspan="5"><p class="tableblock"><strong>uniform</strong> / <strong>buffer</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>row_major</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>row_major</strong><br>
   <strong>column_major</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>binding</strong> =</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">opaque types only</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>binding</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">opaque types only</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>offset</strong> =</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">atomic counters only</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>offset</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">atomic counters only</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Vulkan only</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>location</strong> =</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>uniform</strong> / <strong>buffer</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>align</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Vulkan only</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">Vulkan only</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>location</strong> =</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X<sup>1</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">all <strong>in</strong> / <strong>out</strong>, except for compute</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>set</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">opaque types only</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>uniform</strong> / <strong>buffer</strong> (Vulkan only)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>triangles</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>push_constant</strong></p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>uniform</strong> (Vulkan only)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>input_attachment_index</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">subpass types only</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>uniform</strong> (Vulkan only)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>location</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>uniform</strong> / <strong>buffer</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>location</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X<sup>1</sup></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">all <strong>in</strong> / <strong>out</strong>, except for compute</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>triangles</strong><br>
   <strong>quads</strong><br>
   <strong>isolines</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tessellation evaluation <strong>in</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">tessellation evaluation <strong>in</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>equal_spacing</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>equal_spacing</strong><br>
   <strong>fractional_even_spacing</strong><br>
   <strong>fractional_odd_spacing</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tessellation evaluation <strong>in</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">tessellation evaluation <strong>in</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>cw</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>cw</strong><br>
   <strong>ccw</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tessellation evaluation <strong>in</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">tessellation evaluation <strong>in</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>point_mode</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tessellation evaluation <strong>in</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>point_mode</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">tessellation evaluation <strong>in</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>points</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">geometry <strong>in</strong>/<strong>out</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>points</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">geometry <strong>in</strong>/<strong>out</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[ <strong>points</strong> ]<br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">[ <strong>points</strong> ]<br>
   <strong>lines</strong><br>
   <strong>lines_adjacency</strong><br>
   <strong>triangles</strong><br>
   <strong>triangles_adjacency</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">geometry <strong>in</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">geometry <strong>in</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>invocations</strong> =</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">geometry <strong>in</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>invocations</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">geometry <strong>in</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>early_fragment_tests</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fragment <strong>in</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>early_fragment_tests</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">fragment <strong>in</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>local_size_x</strong> =<br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>local_size_x</strong> =<br>
   <strong>local_size_y</strong> =<br>
   <strong>local_size_z</strong> =</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">compute <strong>in</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">compute <strong>in</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>vertices</strong> =</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">tessellation control <strong>out</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>local_size_x_id</strong> =<br>
+  <strong>local_size_y_id</strong> =<br>
+  <strong>local_size_z_id</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">compute <strong>in</strong> (SPIR-V only)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[ <strong>points</strong> ]<br>
-  <strong>line_strip</strong><br>
-  <strong>triangle_strip</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">geometry <strong>out</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>vertices</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">tessellation control <strong>out</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>max_vertices</strong> =</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">geometry <strong>out</strong></p></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">[ <strong>points</strong> ]<br>
+  <strong>line_strip</strong><br></p>
+<p class="tableblock">  <strong>triangle_strip</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle" rowspan="2"><p class="tableblock">geometry <strong>out</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>rgba32f</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>max_vertices</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>constant_id</strong> =</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">scalar only</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>const</strong> (SPIR-V only)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>rgba32f</strong><br>
   <strong>rgba16f</strong><br>
   <strong>r32f</strong><br>
   <strong>rgba8</strong><br>
@@ -5657,14 +5968,14 @@ These are all discussed in detail in the following sections.</p>
   <strong>rgba16ui</strong><br>
   <strong>rgba8ui</strong><br>
   <strong>r32ui</strong></p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">image types only</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>uniform</strong></p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">image types only</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>uniform</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>blend_support_multiply</strong><br>
+<td class="tableblock halign-left valign-middle"><p class="tableblock"><strong>blend_support_multiply</strong><br>
   <strong>blend_support_screen</strong><br>
   <strong>blend_support_overlay</strong><br>
   <strong>blend_support_darken</strong><br>
@@ -5678,11 +5989,11 @@ These are all discussed in detail in the following sections.</p>
   <strong>blend_support_hsl_saturation</strong><br>
   <strong>blend_support_hsl_color blend_support_hsl_luminosity</strong><br>
   <strong>blend_support_all_equations</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">X</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">fragment <strong>out</strong></p></td>
+<td class="tableblock halign-center valign-middle"><p class="tableblock">X</p></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-center valign-middle"></td>
+<td class="tableblock halign-left valign-middle"><p class="tableblock">fragment <strong>out</strong></p></td>
 </tr>
 </tbody>
 </table>
@@ -5812,6 +6123,12 @@ or a compile-time error results.</p>
 <p>If an input is declared as an array of blocks, excluding per-vertex-arrays
 as required for tessellation, it is an error to declare a member of the
 block with a <strong>location</strong> qualifier.</p>
+</div>
+<div class="paragraph">
+<p>When generating SPIR-V, all <strong>in</strong> and <strong>out</strong> qualified user-declared (non
+built-in) variables and blocks (or all their members) must have a
+shader-specified <strong>location</strong>.
+Otherwise, a compile-time error is generated.</p>
 </div>
 <div class="paragraph">
 <p>The locations consumed by block and structure members are determined by
@@ -6669,13 +6986,14 @@ The layout qualifier identifier for uniform variables is:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The location specifies the location by which the OpenGL ES API can reference
+<p>The location specifies the location by which the API can reference
 the uniform and update its value.
 Individual elements of a uniform array are assigned consecutive locations
 with the first element taking location <strong>location</strong>.
-No two default-block uniform variables in the program can have the same
-location, even if they are unused, otherwise a compile-time or link-time
-error will be generated.
+Default-block uniform variable declarations sharing the same location
+linked in the program have to match by name, type, qualifiers and arrayness.
+For arrays their array dimensionality and array sizes must match.
+For structs this rule applies recursively to all members.
 Valid locations for default-block uniform variable locations are in the
 range of 0 to the implementation-defined maximum number of uniform locations
 minus one.</p>
@@ -6694,6 +7012,21 @@ location, it assumes for all uniforms with an explicit location all their
 array elements and structure members are used and the linker will not
 generate a conflicting location, even if that element or member is deemed
 unused.</p>
+</div>
+<div class="paragraph">
+<p>When targeting Vulkan, the <strong>push_constant</strong> qualifier is used to
+declare an entire block, and represents a set of <em>push constants</em>, as defined
+by the Vulkan API.
+It is an error to apply this to anything other than a uniform block
+declaration, or when not targeting Vulkan.
+The values in the block will be initialized as per the Vulkan API specification.
+A block declared with <code>layout(push_constant)</code> may optionally include an
+<em>instance-name</em>.
+There can be only one <strong>push_constant</strong> block per stage, or a compile-time or
+link-time error will result.
+A push-constant array can only be indexed with dynamically uniform indices.
+Uniform blocks declared with <strong>push_constant</strong> use different resources
+than those without; and are accounted for separately.</p>
 </div>
 </div>
 <div class="sect3">
@@ -6716,7 +7049,9 @@ shader storage blocks are:</p>
 <strong>std430</strong><br>
 <strong>row_major</strong><br>
 <strong>column_major</strong><br>
-<strong>binding</strong> <strong>=</strong> <em>layout-qualifier-value</em></p>
+<strong>binding</strong> <strong>=</strong> <em>layout-qualifier-value</em><br>
+<strong>offset</strong> <strong>=</strong> <em>layout-qualifier-value</em>   // Vulkan only<br>
+<strong>align</strong> <strong>=</strong> <em>layout-qualifier-value</em>    // Vulkan only</p>
 </dd>
 </dl>
 </div>
@@ -6757,8 +7092,22 @@ The result becomes the new default qualification scoped to subsequent
 uniform or shader storage block definitions.</p>
 </div>
 <div class="paragraph">
-<p>The initial state of compilation
-is as if the following were declared:</p>
+<p>The initial state of compilation when generating SPIR-V is as if the
+following were declared:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++">layout(std140, column_major) uniform;
+layout(std430, column_major) buffer;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>However, when <strong>push_constant</strong> is declared, the default layout of the
+buffer will be <strong>std430</strong>. There is no method to globally set this default.</p>
+</div>
+<div class="paragraph">
+<p>The initial state of compilation when not generating SPIR-V is as if the
+following were declared:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -6784,7 +7133,9 @@ stages containing this definition will share the same memory layout for this
 block, as long as they also matched in their <strong>row_major</strong> and/or
 <strong>column_major</strong> qualifications.
 This allows use of the same buffer to back the same block definition across
-different programs.</p>
+different programs.
+It is a compile-time error to use the <strong>shared</strong> qualifier when generating
+SPIR-V.</p>
 </div>
 <div class="paragraph">
 <p>The <strong>packed</strong> qualifier overrides only <strong>std140</strong>, <strong>std430</strong>, and <strong>shared</strong>;
@@ -6802,13 +7153,16 @@ Attempts to access the same packed uniform or shader storage block across
 programs can result in conflicting member offsets and in undefined values
 being read.
 However, implementations may aid application management of packed blocks by
-using canonical layouts for packed blocks.</p>
+using canonical layouts for packed blocks.
+It is a compile-time error to use the <strong>packed</strong> qualifier when generating
+SPIR-V.</p>
 </div>
 <div class="paragraph">
 <p>The <strong>std140</strong> and <strong>std430</strong> qualifiers override only the <strong>packed</strong>, <strong>shared</strong>,
 <strong>std140</strong>, and <strong>std430</strong> qualifiers; other qualifiers are inherited.
 The <strong>std430</strong> qualifier is supported only for shader storage blocks; a shader
-using the <strong>std430</strong> qualifier on a uniform block will fail to compile.</p>
+using the <strong>std430</strong> qualifier on a uniform block will result in
+an error, unless it is also declared with <strong>push_constant</strong>.</p>
 </div>
 <div class="paragraph">
 <p>The layout is explicitly determined by this, as described in section 7.6.2.2
@@ -6849,16 +7203,28 @@ is initially assigned to block binding point zero.
 After a program is linked, the binding points used for uniform
 (but not shader storage) blocks
 declared with or without a <strong>binding</strong> qualifier can be updated
-by the OpenGL ES API.</p>
+by the API.</p>
 </div>
 <div class="paragraph">
-<p>If the <strong>binding</strong> qualifier is used with a uniform block or shader storage
+<p>When used with OpenGL ES,
+if the <strong>binding</strong> qualifier is used with a uniform block or shader storage
 block instanced as an array, the first element of the array takes the
 specified block binding and each subsequent element takes the next
 consecutive binding point.
 For an array of arrays, each element (e.g. 6 elements for a[2][3]) gets a
 binding point, and they are ordered per the array of array ordering
-described in &#8220;<a href="#arrays.">Arrays.</a>&#8221;</p>
+described in &#8220;<a href="#arrays">Arrays.</a>&#8221;</p>
+</div>
+<div class="paragraph">
+<p>When targeting Vulkan,
+if the <strong>binding</strong> qualifier is used with a uniform block or buffer block
+instanced as an array, the entire array takes only the provided binding
+number.
+The next consecutive binding number is available for a different
+object.
+For an array of arrays, descriptor set array element numbers used
+in descriptor set accesses are ordered per the array-of-array ordering
+described in &#8220;<a href="#arrays">Arrays.</a>&#8221;</p>
 </div>
 <div class="paragraph">
 <p>If the binding point for any uniform or shader storage block instance is
@@ -6868,6 +7234,25 @@ error will occur.
 When the <strong>binding</strong> qualifier is used with a uniform or shader storage block
 instanced as an array of size <em>N</em>, all elements of the array from <strong>binding</strong>
 through <em>binding + N - 1</em> must be within this range.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>set</strong> qualifier is only available when targeting Vulkan.
+It specifies the descriptor set this object belongs to.
+It is an error to apply <strong>set</strong> to a standalone qualifier, to
+a member of a block, or when not targeting an API that supports descriptor sets.
+It is an error to apply <strong>set</strong> to a block qualified as <strong>push_constant</strong>.
+By default, any non-push-constant uniform or shader storage block declared
+without a <strong>set</strong> identifier is assigned to descriptor set 0.
+Similarly, any sampler, texture, or subpass-input type declared as a uniform
+without a <strong>set</strong> identifier is also assigned to descriptor set 0.</p>
+</div>
+<div class="paragraph">
+<p>If applied to an object declared as an array, all elements of the array
+belong to the specified <strong>set</strong>.</p>
+</div>
+<div class="paragraph">
+<p>When generating SPIR-V, it is an error for either the <strong>set</strong> or
+<strong>binding</strong> value to exceed a front-end-configuration supplied maximum value.</p>
 </div>
 <div class="paragraph">
 <p>When multiple arguments are listed in a <strong>layout</strong> declaration, the effect
@@ -6908,18 +7293,82 @@ layout(column_major) uniform T3 {  <span class="comment">// shared and column ma
 };</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>When targeting Vulkan, the <strong>offset</strong> and <strong>align</strong> qualifiers for blocks and
+block members can only be used with <strong>uniform</strong> and <strong>buffer</strong> blocks.
+When not targeting Vulkan, they cannot be used with blocks or block members.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>offset</strong> qualifier can only be used on block members.
+The <strong>offset</strong> qualifier forces the qualified member to start at or after the
+specified <em>layout-qualifier-value</em>, which will be its byte offset from
+the beginning of the buffer.
+It is a compile-time error to have any offset, explicit or assigned, that
+lies within another member of the block.
+Two blocks linked together in the same program with the same block name must
+have the exact same set of members qualified with <strong>offset</strong> and their
+<em>layout-qualifier-value</em> values must be the same, or a link-time error
+results.
+The specified offset must be a multiple of the base alignment of the type of
+the block member it qualifies, or a compile-time error results.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>align</strong> qualifier makes the start of each block member have a minimum
+byte alignment.
+It does not affect the internal layout within each member, which will still
+follow the <strong>std140</strong> or <strong>std430</strong> rules.
+The specified alignment must be greater than 0 and a power of 2, or a
+compile-time error results.</p>
+</div>
+<div class="paragraph">
+<p>The <em>actual alignment</em> of a member will be the greater of the specified
+<strong>align</strong> alignment and the standard (e.g. <strong>std140</strong>) base alignment for the
+member&#8217;s type.
+The <em>actual offset</em> of a member is computed as follows: If <strong>offset</strong> was
+declared, start with that offset, otherwise start with the offset immediately
+following the preceding member (in declaration order).
+If the resulting offset is not a multiple of the <em>actual alignment</em>,
+increase it to the first offset that is a multiple of the <em>actual
+alignment</em>.
+This results in the <em>actual offset</em> the member will have.</p>
+</div>
+<div class="paragraph">
+<p>When <strong>align</strong> is applied to an array, it affects only the start of the array,
+not the array&#8217;s internal stride.
+Both an <strong>offset</strong> and an <strong>align</strong> qualifier can be specified on a declaration.</p>
+</div>
+<div class="paragraph">
+<p>The <strong>align</strong> qualifier, when used on a block, has the same effect as
+qualifying each member with the same <strong>align</strong> value as declared on the block,
+and gets the same compile-time results and errors as if this had been done.
+As described in general earlier, an individual member can specify its own
+<strong>align</strong>, which overrides the block-level <strong>align</strong>, but just for that member.</p>
+</div>
+<div class="paragraph">
+<p>Examples:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++">layout(std140) uniform block {
+ vec4 a;                         <span class="comment">// a takes offsets 0-15</span>
+ layout(offset = <span class="integer">32</span>) vec3 b;     <span class="comment">// b takes offsets 32-43</span>
+ layout(offset = <span class="integer">40</span>) vec2 c;     <span class="comment">// ERROR, lies within previous member</span>
+ layout(offset = <span class="integer">48</span>) vec2 d;     <span class="comment">// d takes offsets 48-55</span>
+ layout(align = <span class="integer">16</span>) <span class="predefined-type">float</span> e;     <span class="comment">// e takes offsets 64-67</span>
+ layout(align = <span class="integer">2</span>) <span class="predefined-type">double</span> f;     <span class="comment">// f takes offsets 72-79</span>
+ layout(align = <span class="integer">6</span>) <span class="predefined-type">double</span> g;     <span class="comment">// ERROR, 6 is not a power of 2</span>
+ layout(offset = <span class="integer">80</span>) <span class="predefined-type">float</span> h;    <span class="comment">// h takes offsets 80-83</span>
+ layout(align = <span class="integer">64</span>) dvec3 i;     <span class="comment">// i takes offsets 128-151</span>
+ layout(offset = <span class="integer">164</span>, align = <span class="integer">8</span>)
+ <span class="predefined-type">float</span> j;                        <span class="comment">// j takes offsets 168-171</span>
+};</code></pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="opaque-uniform-layout-qualifiers">4.4.5. Opaque Uniform Layout Qualifiers</h4>
 <div class="paragraph">
-<p>Uniform layout qualifiers can be used to bind opaque uniform variables to
-specific buffers or units.
-Samplers can be bound to texture image units, images can be bound to image
-units, and atomic counters can be bound to buffers.</p>
-</div>
-<div class="paragraph">
-<p>Sampler, image and atomic counter types take the uniform layout qualifier
-identifier for binding:</p>
+<p>Opaque uniform variables can take the uniform layout qualifier for binding:</p>
 </div>
 <div class="openblock bnf">
 <div class="content">
@@ -6934,26 +7383,29 @@ identifier for binding:</p>
 </div>
 </div>
 <div class="paragraph">
-<p>The identifier <strong>binding</strong> specifies which unit will be bound.
-Any uniform sampler, image or atomic counter
-variable declared without a binding qualifier
-is initially bound to unit zero.
-After a program is linked, the unit referenced by a sampler
-uniform variable declared with or without a <strong>binding</strong> qualifier can be
-updated by the OpenGL ES API.</p>
+<p>The <strong>binding</strong> qualifier specifies the point where the variable will be bound.
+Any opaque variable declared without a binding qualifier has a default binding
+of zero.</p>
 </div>
 <div class="paragraph">
-<p>If the <strong>binding</strong> qualifier is used with an array, the first element of the
-array takes the specified unit and each subsequent element takes the next
-consecutive unit.
+<p>When used with OpenGL ES,
+if the <strong>binding</strong> qualifier is used with an array, the first element of the
+array takes the specified binding point and each subsequent element takes the
+next consecutive binding point.
 For an array of arrays, each element (e.g. 6 elements for a[2][3]) gets a
 binding point, and they are ordered per the array of array ordering
-described in &#8220;<a href="#arrays.">Arrays.</a>&#8221;</p>
+described in &#8220;<a href="#arrays">Arrays.</a>&#8221;</p>
+</div>
+<div class="paragraph">
+<p>When targeting Vulkan,
+if the <strong>binding</strong> qualifier is used with an array, the entire array
+takes only the provided binding number. The next consecutive binding
+number is available for a different object.</p>
 </div>
 <div class="paragraph">
 <p>If the <strong>binding</strong> is less than zero, or greater than or equal to the
-implementation-dependent maximum supported number of units, a compile-time
-error will occur.
+implementation-dependent maximum supported number of binding points,
+a compile-time error will occur.
 When the <strong>binding</strong> qualifier is used with an array of size <em>N</em>, all elements
 of the array from <strong>binding</strong> through <em>binding + N - 1</em> must be within this
 range.</p>
@@ -6967,7 +7419,7 @@ declarations for the same name, as shown in the examples below.</p>
 <div class="listingblock">
 <div class="content">
 <pre class="CodeRay highlight"><code data-lang="c++"><span class="comment">// in one shader...</span>
-layout(binding=<span class="integer">3</span>) uniform sampler2D s; <span class="comment">// s bound to unit 3</span>
+layout(binding=<span class="integer">3</span>) uniform sampler2D s; <span class="comment">// s bound to point 3</span>
 
 <span class="comment">// in another shader...</span>
 uniform sampler2D s;                   <span class="comment">// okay, s still bound at 3</span>
@@ -6979,6 +7431,9 @@ layout(binding=<span class="integer">4</span>) uniform sampler2D s; <span class=
 </div>
 <div class="sect3">
 <h4 id="atomic-counter-layout-qualifiers">4.4.6. Atomic Counter Layout Qualifiers</h4>
+<div class="paragraph">
+<p>Atomic counters are not available when targeting Vulkan.</p>
+</div>
 <div class="paragraph">
 <p>Atomic counter layout qualifiers can be used on atomic counter declarations.
 The atomic counter qualifiers are:</p>
@@ -7165,6 +7620,43 @@ qualifier does not match the image variable type.</p>
 &#8220;<a href="#opaque-uniform-layout-qualifiers">Opaque Uniform Layout Qualifiers</a>&#8221;.</p>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_subpass_input_qualifier">4.4.8. Subpass Input Qualifier</h4>
+<div class="paragraph">
+<p>Subpass inputs are only available when targeting Vulkan.</p>
+</div>
+<div class="paragraph">
+<p>Subpass inputs are declared with the basic <strong>subpassInput</strong> types.
+They must be declared with the layout qualifier
+<strong>input_attachment_index</strong>, or an error results.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++">layout(input_attachment_index = <span class="integer">2</span>) uniform subpassInput t;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This selects which subpass input is being read from. The value assigned
+to <strong>input_attachment_index</strong>, say <em>i</em> (<code>input_attachment_index = i</code>), selects
+that entry (<em>i</em> th entry) in the input list for the pass.  See the API
+documentation for more detail about passes and the input list.</p>
+</div>
+<div class="paragraph">
+<p>If an array of size <em>N</em> is declared, it consumes <em>N</em> consecutive
+<strong>input_attachment_index</strong> values, starting with the one provided.</p>
+</div>
+<div class="paragraph">
+<p>It is a compile-time or link-time error to have different variables
+declared with the same <strong>input_attachment_index</strong>.
+This includes any overlap in the implicit <strong>input_attachment_index</strong> consumed by
+array declarations.</p>
+</div>
+<div class="paragraph">
+<p>It is an error if the value assigned to an <strong>input_attachment_index</strong>
+is greater than or equal to <em>gl_MaxInputAttachments</em>.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="interpolation-qualifiers">4.5. Interpolation Qualifiers</h3>
@@ -7207,7 +7699,7 @@ a compile-time error to use interpolation qualifiers with <strong>patch</strong>
 <p>A variable qualified as <strong>flat</strong> will not be interpolated.
 Instead, it will have the same value for every fragment within a primitive.
 This value will come from a single provoking vertex, as described by the
-<a href="#references">OpenGL ES Specification</a>.
+<a href="#references">API</a>.
 A variable qualified as <strong>flat</strong> may also be qualified as <strong>centroid</strong> or
 <strong>sample</strong>, which will mean the same thing as qualifying it only as <strong>flat</strong>.</p>
 </div>
@@ -7291,17 +7783,31 @@ have these parameter qualifiers.</p>
 </div>
 <div class="sect2">
 <h3 id="precision-and-precision-qualifiers">4.7. Precision and Precision Qualifiers</h3>
+<div class="paragraph">
+<p>When targeting Vulkan:
+For interface matching, uniform variables and uniform and buffer block
+members must have the same precision qualification.
+Global variables declared in different compilation units linked into the
+same shader stage must be declared with the same precision qualification.</p>
+</div>
+<div class="paragraph">
+<p>For the purposes of determining if an output from one shader stage matches
+an input of the next stage, the precision qualifier need not match.</p>
+</div>
 <div class="sect3">
 <h4 id="range-and-precision">4.7.1. Range and Precision</h4>
 <div class="paragraph">
-<p>The precision of <strong>highp</strong> floating-point variables is defined by the IEEE 754
-standard for 32-bit floating-point numbers.
-This includes support for NaNs (Not a Number) and Infs (positive or negative
+<p>The precision of <strong>highp</strong>
+floating-point variables is defined by the IEEE 754 standard for
+32-bit
+floating-point numbers.</p>
+</div>
+<div class="paragraph">
+<p>This includes support for NaNs (Not a Number) and Infs (positive or negative
 infinities) and positive and negative zeros.</p>
 </div>
 <div class="paragraph">
-<p>The following rules apply to
-<strong>highp</strong>
+<p>The following rules apply to <strong>highp</strong>
 operations:
 Signed infinities and zeros are generated as dictated by IEEE, but subject
 to the precisions allowed in the following table.
@@ -7446,14 +7952,14 @@ between 9 and 32 bits inclusive.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subset of IEEE-754<br>
       0.0, <span class="eq">[2<sup>-126</sup>,2<sup>128</sup>)</span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Subset of IEEE-754 relative:<br>
-      <span class="eq">2<sup>-24</sup></span></p></td>
+      <span class="eq">2<sup>-23</sup></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="eq">[-2<sup>31</sup>,2<sup>31</sup>-1]</span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="eq">[0,2<sup>32</sup>-1]</span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>mediump</strong> (minimum requirements)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="eq">(-2<sup>14</sup>,2<sup>14</sup>)</span></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><span class="eq">(2<sup>14</sup>,2<sup>14</sup>)</span></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">0.0, <span class="eq">[2<sup>-14</sup>,2<sup>14</sup>)</span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Relative:<br>
       <span class="eq">2<sup>-10</sup></span></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><span class="eq">[-2<sup>15</sup>,2<sup>15</sup>-1]</span></p></td>
@@ -7471,8 +7977,16 @@ between 9 and 32 bits inclusive.</p>
 </tbody>
 </table>
 <div class="paragraph">
+<p>The semi-open interval notation used for the magnitude ranges means that the
+lower end of the interval is included, but the upper end is excluded. Thus the
+largest required magnitude is half of the relative precision less than the
+value given. The largest required value for highp, for example, is <span class="eq">2<sup>128</sup>
+× (1 - 2<sup>-24</sup>)</span>.</p>
+</div>
+<div class="paragraph">
 <p><em>Relative precision</em> is defined as the worst case (i.e. largest) ratio of
-the smallest step in relation to the value for all non-zero values:</p>
+the smallest step in relation to the value for all non-zero values in the
+required ranges, above:</p>
 </div>
 <div class="stemblock">
 <div class="content">
@@ -7488,7 +8002,8 @@ the smallest step in relation to the value for all non-zero values:</p>
 </div>
 <div class="paragraph">
 <p>It is therefore twice the maximum rounding error when converting from a real
-number.</p>
+number.
+Subnormal numbers may be supported and may have lower relative precision.</p>
 </div>
 <div class="paragraph">
 <p>In addition, the range and precision of a <strong>mediump</strong> floating-point value
@@ -7514,7 +8029,7 @@ qualifier.</p>
 <div class="paragraph">
 <p>The actual ranges and precisions provided by an implementation can be
 queried through the API.
-See the <a href="#references">OpenGL ES Specification</a> specification for details on how to do
+See the <a href="#references">normative references</a> for details on how to do
 this.</p>
 </div>
 </div>
@@ -7572,13 +8087,15 @@ preceded by one of these precision qualifiers:</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>mediump</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The variable satisfies the minimum requirements for <strong>mediump</strong>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SPIR-V <strong>RelaxedPrecision</strong> when targeting Vulkan, otherwise
+              the variable satisfies the minimum requirements for <strong>mediump</strong>
               described above. <strong>mediump</strong> variables may typically be used to
               store high dynamic range colors and low precision geometry.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>lowp</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The variable satisfies the minimum requirements for <strong>lowp</strong>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SPIR-V <strong>RelaxedPrecision</strong> when targeting Vulkan, otherwise
+              the variable satisfies the minimum requirements for <strong>lowp</strong>
               described above. <strong>lowp</strong> variables may typically be used to
               store 8-bit color values.</p></td>
 </tr>
@@ -8378,7 +8895,110 @@ that variable) while <strong>const</strong> qualifies the variable itself.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="order-of-qualification">4.11. Order and Repetition of Qualification</h3>
+<h3 id="specialization-constant-qualifier">4.11. Specialization-Constant Qualifier</h3>
+<div class="paragraph">
+<p>Specialization constants are used only for SPIR-V and declared using the
+<strong>constant_id</strong> layout qualifier.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++">layout(constant_id = <span class="integer">17</span>) <span class="directive">const</span> <span class="predefined-type">int</span> arraySize = <span class="integer">12</span>;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above makes a specialization constant with a default value of 12.
+The number 17 is an example author-chosen id by which the API or other tools
+can later refer to this specific specialization constant.
+If it is never changed before final lowering, it will retain the value of
+12.
+It is a compile-time error to use the <strong>constant_id</strong> qualifier on anything
+but SPIR-V generation of a scalar <strong>bool</strong>, <strong>int</strong>, <strong>uint</strong>, <strong>float</strong>, or
+<strong>double</strong>.</p>
+</div>
+<div class="paragraph">
+<p>Built-in constants can be declared to be specialization constants.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++">layout(constant_id = <span class="integer">31</span>) gl_MaxClipDistances; <span class="comment">// add specialization_id</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The declaration uses just the name of the previously declared built-in
+variable, with a <strong>constant_id</strong> layout-qualifier declaration.
+It is a compile-time error to do this after the constant has been used:
+Constants are strictly either non-specialization constants or specialization
+constants, not both.</p>
+</div>
+<div class="paragraph">
+<p>The built-in constant vector <em>gl_WorkGroupSize</em> can be specialized using the
+<strong>local_size_{xyz}_id</strong> qualifiers, to individually give the components an id.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++">layout(local_size_x_id = <span class="integer">18</span>, local_size_z_id = <span class="integer">19</span>) in;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This leaves <em>gl_WorkGroupSize.y</em> as a non-specialization constant, with
+<em>gl_WorkGroupSize</em> being a partially specialized vector.
+Its <em>x</em> and <em>z</em> components can be later specialized, after generating
+SPIR-V, using the ids 18 and 19.
+These ids are declared independently from declaring the workgroup size:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++">layout(local_size_x = <span class="integer">32</span>, local_size_y = <span class="integer">32</span>) in;   <span class="comment">// size is (32,32,1)</span>
+layout(local_size_x_id = <span class="integer">18</span>) in;                   <span class="comment">// constant_id for x</span>
+layout(local_size_z_id = <span class="integer">19</span>) in;                   <span class="comment">// constant_id for z</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Existing rules for declaring <strong>local_size_x</strong>, <strong>local_size_y</strong>, and
+<strong>local_size_z</strong> are not changed.
+For the local-size ids, it is a compile-time error to provide different id
+values for the same local-size id, or to provide them after any use.
+Otherwise, order, placement, number of statements, and replication do not
+cause errors.</p>
+</div>
+<div class="paragraph">
+<p>Two arrays sized with specialization constants are the same type only if
+sized with the same symbol, and involving no operations.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++">layout(constant_id = <span class="integer">51</span>) <span class="directive">const</span> <span class="predefined-type">int</span> aSize = <span class="integer">20</span>;
+<span class="directive">const</span> <span class="predefined-type">int</span> pad = <span class="integer">2</span>;
+<span class="directive">const</span> <span class="predefined-type">int</span> total = aSize + pad; <span class="comment">// specialization constant</span>
+<span class="predefined-type">int</span> a[total], b[total];        <span class="comment">// a and b have the same type</span>
+<span class="predefined-type">int</span> c[<span class="integer">22</span>];                     <span class="comment">// different type than a or b</span>
+<span class="predefined-type">int</span> d[aSize + pad];            <span class="comment">// different type than a, b, or c</span>
+<span class="predefined-type">int</span> e[aSize + <span class="integer">2</span>];              <span class="comment">// different type than a, b, c, or d</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Types containing arrays sized with a specialization constant cannot be
+compared, assigned as aggregates, declared with an initializer, or used as
+an initializer.
+They can, however, be passed as arguments to functions having formal
+parameters of the same type.
+Only the outer-most dimension of a variable declared as an array of arrays
+can be a specialization constant, otherwise a compile-time error results.</p>
+</div>
+<div class="paragraph">
+<p>Arrays inside a block may be sized with a specialization constant, but the
+block will have a static layout.
+Changing the specialized size will not re-layout the block.
+In the absence of explicit offsets, the layout will be based on the default
+size of the array.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="order-of-qualification">4.12. Order and Repetition of Qualification</h3>
 <div class="paragraph">
 <p>When multiple qualifiers are present in a declaration, they may appear in
 any order, but they must all appear before the type.
@@ -8390,7 +9010,7 @@ Any violation of these rules will cause a compile-time error.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="empty-declarations">4.12. Empty Declarations</h3>
+<h3 id="empty-declarations">4.13. Empty Declarations</h3>
 <div class="paragraph">
 <p><em>Empty declarations</em> are declarations without a variable name, meaning no
 object is instantiated by the declaration.
@@ -8858,6 +9478,84 @@ vec4[][](b, b, b);      <span class="comment">// constructor, valid, both sizes 
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_texture_combined_sampler_constructors">5.4.5. Texture-Combined Sampler Constructors</h4>
+<div class="paragraph">
+<p>Texture-combined sampler constructors are only available when targeting Vulkan.</p>
+</div>
+<div class="paragraph">
+<p>Texture-combined sampler types, like <strong>sampler2D</strong>, can be declared with an
+initializer
+that is a constructor of the same type, and consuming a texture and a
+<strong>sampler</strong> or <strong>samplerShadow</strong>.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++">    layout(...) uniform sampler s;   <span class="comment">// handle to filtering information</span>
+    layout(...) uniform texture2D t; <span class="comment">// handle to a texture</span>
+    layout(...) in vec2 tCoord;
+    ...
+    texture(sampler2D(t, s), tCoord);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The result of a texture-combined sampler constructor cannot be assigned to a
+variable:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++">    ... sampler2D sConstruct = sampler2D(t, s);  <span class="comment">// ERROR</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Texture-combined sampler constructors can only be consumed by a function parameter.</p>
+</div>
+<div class="paragraph">
+<p>Texture-combined sampler constructors of arrays are illegal:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="c++">    layout(...) uniform texture2D tArray[<span class="integer">6</span>];
+    ...
+    ... sampler2D[](tArray, s) ...  <span class="comment">// ERROR</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Formally:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>every texture-combined sampler type can be used as a constructor</p>
+</li>
+<li>
+<p>the type of the constructor must match the type of the variable being declared</p>
+</li>
+<li>
+<p>the constructor&#8217;s first argument must be a texture type</p>
+</li>
+<li>
+<p>the constructor&#8217;s second argument must be a scalar of type <strong>sampler</strong>
+or <strong>samplerShadow</strong></p>
+</li>
+<li>
+<p>the dimensionality (1D, 2D, 3D, Cube, Rect, Buffer, MS, and Array)
+of the texture type must match that of the constructed type
+(that is, the suffixes of the type of the first argument and the
+type of the constructor will be spelled the same way)</p>
+</li>
+<li>
+<p>there is no control flow construct (e.g., <code>?:</code>) that consumes any sampler type</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Note: Shadow mismatches are allowed between constructors and the second argument.
+Texture-combined non-shadow samplers can be constructed from <strong>samplerShadow</strong> and
+texture-combined shadow samplers can be constructed from <strong>sampler</strong>.</p>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="vector-components">5.5. Vector Components</h3>
@@ -8898,8 +9596,8 @@ with period (<strong>.</strong>) and then the component name.</p>
 same (first) component in a vector.</p>
 </div>
 <div class="paragraph">
-<p>Note that the third component of the texture coordinate set, <em>r</em> in
-OpenGL ES, has been renamed <em>p</em> so as to avoid the confusion with <em>r</em> (for
+<p>Note that the third component of the texture coordinate set
+has been renamed <em>p</em> so as to avoid the confusion with <em>r</em> (for
 red) in a color.</p>
 </div>
 <div class="paragraph">
@@ -9393,7 +10091,8 @@ To operate on a vector, use the built-in function <strong>not</strong>.</p>
 the type and value of the right-most expression in a comma separated
 list of expressions.
 All expressions are evaluated, in order, from left to right.
-The operands to the sequence operator may have <strong>void</strong> type.</p>
+The operands to the sequence operator may have <strong>void</strong> type.
+Opaque types cannot be used with the sequence (,) operator.</p>
 </li>
 <li>
 <p>The ternary selection operator (<strong>?:</strong>).
@@ -9403,7 +10102,10 @@ scalar Boolean.
 If the result is true, it selects to evaluate the second expression,
 otherwise it selects to evaluate the third expression.
 Only one of the second and third expressions is evaluated.
-The second and third expressions can be any type, including <strong>void</strong>, as
+The second and third expressions cannot be opaque types,
+or there will be an error.
+Otherwise,
+the second and third expressions can be any type, including <strong>void</strong>, as
 long their types match.
 This resulting matching type is the type of the entire expression.</p>
 </li>
@@ -9574,7 +10276,100 @@ r[<span class="integer">2</span>].z = m[<span class="integer">0</span>].z * n[<s
 </div>
 </div>
 <div class="sect2">
-<h3 id="evaluation-of-expressions">5.11. Evaluation of Expressions</h3>
+<h3 id="specialization-constant-operations">5.11. Specialization-Constant Operations</h3>
+<div class="paragraph">
+<p>Specialization-constant operations are only available when targeting SPIR-V.</p>
+</div>
+<div class="paragraph">
+<p>Only some operations discussed in this section may be applied to a
+specialization constant and still yield a result that is a specialization
+constant.
+The operations that do so are listed below.
+When a specialization constant is operated on with one of these operators
+and with another constant or specialization constant, the result is
+implicitly a specialization constant.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>int</strong>(), <strong>uint</strong>(), and <strong>bool</strong>() constructors for type conversions from
+any of the following types to any of the following types:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>int</strong></p>
+</li>
+<li>
+<p><strong>uint</strong></p>
+</li>
+<li>
+<p><strong>bool</strong></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>vector versions of the above conversion constructors</p>
+</li>
+<li>
+<p>allowed implicit conversions of the above</p>
+</li>
+<li>
+<p>swizzles (e.g. <code>foo.yx</code>)</p>
+</li>
+<li>
+<p>the following when applied to integer or unsigned integer types:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>unary negative (<strong>-</strong>)</p>
+</li>
+<li>
+<p>binary operations (<strong>+</strong>, <strong>-</strong>, <strong>*</strong>, <strong>/</strong>, <strong>%</strong>)</p>
+</li>
+<li>
+<p>shift (<strong>&lt;&lt;</strong>, <strong>&gt;&gt;</strong>)</p>
+</li>
+<li>
+<p>bitwise operations (<strong>&amp;</strong>, <strong>|</strong>, <strong>^</strong>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>the following when applied to integer or unsigned integer scalar types:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>comparison (<strong>==</strong>, <strong>!=</strong>, <strong>&gt;</strong>, <strong>&gt;=</strong>, <strong>&lt;</strong>, <strong>&#8656;</strong>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The following when applied to the Boolean scalar type:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>not (<strong>!</strong>)</p>
+</li>
+<li>
+<p>logical operations (<strong>&amp;&amp;</strong>, <strong>||</strong>, <strong>^^</strong>)</p>
+</li>
+<li>
+<p>comparison (<strong>==</strong>, <strong>!=</strong>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>the ternary operator (<strong>?:</strong>)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="evaluation-of-expressions">5.12. Evaluation of Expressions</h3>
 <div class="paragraph">
 <p>In general expressions must be evaluated in the order specified by the
 precedence of operations and may only be regrouped if the result is the same or
@@ -10263,9 +11058,9 @@ as reaching the end of <em>main</em> before defining outputs.</p>
 <div class="sect2">
 <h3 id="built-in-language-variables">7.1. Built-In Language Variables</h3>
 <div class="paragraph">
-<p>Some OpenGL ES operations occur in fixed functionality and need to provide
+<p>Some operations occur outside shader functionality and need to provide
 values to or receive values from shader executables.
-Shaders communicate with fixed-function OpenGL ES pipeline stages, and
+Shaders communicate with fixed-function pipeline stages, and
 optionally with other shader executables, through the use of built-in input
 and output variables.</p>
 </div>
@@ -10276,8 +11071,10 @@ and output variables.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="c++">in highp <span class="predefined-type">int</span> gl_VertexID;
-in highp <span class="predefined-type">int</span> gl_InstanceID;
+<pre class="CodeRay highlight"><code data-lang="c++">in highp <span class="predefined-type">int</span> gl_VertexID;      <span class="comment">// only present when not targeting Vulkan</span>
+in highp <span class="predefined-type">int</span> gl_InstanceID;    <span class="comment">// only present when not targeting Vulkan</span>
+in highp <span class="predefined-type">int</span> gl_VertexIndex;   <span class="comment">// only present when targeting Vulkan</span>
+in highp <span class="predefined-type">int</span> gl_InstanceIndex; <span class="comment">// only present when targeting Vulkan</span>
 
 out gl_PerVertex {
     out highp vec4 gl_Position;
@@ -10306,16 +11103,31 @@ pipe stages.</p>
 <p>The variable <em>gl_VertexID</em> is a vertex shader input variable that holds an
 integer index for the vertex, as defined under &#8220;Shader Inputs&#8221; in section
 11.1.3.9 &#8220;Shader Inputs&#8221; of the <a href="#references">OpenGL ES Specification</a>.
-While the variable <em>gl_VertexID</em> is always present, its value is not always
-defined.</p>
+It is only present when not targeting Vulkan.
+Even when present, the value of <em>gl_VertexID</em> is not always defined.</p>
 </div>
 <div class="paragraph">
 <p>The variable <em>gl_InstanceID</em> is a vertex shader input variable that holds
 the instance number of the current primitive in an instanced draw call (see
 &#8220;Shader Inputs&#8221; in section 11.1.3.9 &#8220;Shader Inputs&#8221; of the
 <a href="#references">OpenGL ES Specification</a>).
+It is only present when not targeting Vulkan.
 If the current primitive does not come from an instanced draw call, the
 value of <em>gl_InstanceID</em> is zero.</p>
+</div>
+<div class="paragraph">
+<p>The variable <em>gl_VertexIndex</em> is a vertex language input variable that
+holds an integer index for the vertex, relative to a base.
+It is only present when targeting Vulkan.
+Even when present, the value of <em>gl_VertexIndex</em> is not always defined.</p>
+</div>
+<div class="paragraph">
+<p>The variable <em>gl_InstanceIndex</em> is a vertex language input variable that
+holds the instance number of the current primitive in an instanced draw
+call, relative to a base.
+It is only present when targeting Vulkan.
+If the current primitive does not come from an instanced draw call,
+the value of gl_InstanceIndex is zero.</p>
 </div>
 </div>
 <div class="sect3">
@@ -10602,7 +11414,7 @@ out highp <span class="predefined-type">int</span> gl_SampleMask[(gl_MaxSamples+
 </div>
 <div class="paragraph">
 <p>The output of the fragment shader executable is processed by the fixed
-function operations at the back end of the OpenGL ES pipeline.</p>
+function operations at the back end of the API pipeline.</p>
 </div>
 <div class="paragraph">
 <p>The fixed functionality computed depth for a fragment may be obtained by
@@ -10834,7 +11646,8 @@ variable containing the three-dimensional index of the current work item
 within the workgroup.
 The possible values for this variable range across the workgroup
 size, i.e., (0,0,0) to (<em>gl_WorkGroupSize.x</em> - 1, <em>gl_WorkGroupSize.y</em> - 1,
-<em>gl_WorkGroupSize.z</em> - 1).</p>
+<em>gl_WorkGroupSize.z</em> - 1). Use of <em>gl_LocalInvocationID</em> is allowed
+before declarations of <strong>local_size_x</strong>, <strong>local_size_y</strong>, and <strong>local_size_z</strong>.</p>
 </div>
 <div class="paragraph">
 <p>The built-in variable <em>gl_GlobalInvocationID</em> is a compute shader input
@@ -10863,12 +11676,16 @@ This is computed as:</p>
     gl_LocalInvocationID.x;</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p>Use of <em>gl_LocalInvocationIndex</em> is allowed before declarations of
+<strong>local_size_x</strong>, <strong>local_size_y</strong>, and <strong>local_size_z</strong>.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="built-in-constants">7.2. Built-In Constants</h3>
 <div class="paragraph">
-<p>The following built-in constants are provided to all shaders.
+<p>The following built-in constants are declared in all shaders.
 The actual values used are implementation-dependent, but must be at least
 the value shown.</p>
 </div>
@@ -10948,15 +11765,18 @@ the value shown.</p>
 <span class="directive">const</span> mediump <span class="predefined-type">int</span> gl_MaxCombinedAtomicCounters = <span class="integer">8</span>;
 <span class="directive">const</span> mediump <span class="predefined-type">int</span> gl_MaxCombinedAtomicCounterBuffers = <span class="integer">1</span>;
 <span class="directive">const</span> mediump <span class="predefined-type">int</span> gl_MaxAtomicCounterBindings = <span class="integer">1</span>;
-<span class="directive">const</span> mediump <span class="predefined-type">int</span> gl_MaxAtomicCounterBufferSize = <span class="integer">32</span>;</code></pre>
+<span class="directive">const</span> mediump <span class="predefined-type">int</span> gl_MaxAtomicCounterBufferSize = <span class="integer">32</span>;
+
+<span class="directive">const</span> highp <span class="predefined-type">int</span> gl_MaxInputAttachments = <span class="integer">1</span>;  <span class="comment">// only present when targeting Vulkan</span></code></pre>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="built-in-uniform-state">7.3. Built-In Uniform State</h3>
 <div class="paragraph">
-<p>As an aid to accessing OpenGL ES processing state, the following uniform
-variables are built into the OpenGL ES Shading Language.</p>
+<p>Built-in uniform state is not available when generating SPIR-V.
+Otherwise, as an aid to accessing OpenGL ES processing state, the following
+uniform variables are built into the OpenGL ES Shading Language.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -11134,14 +11954,15 @@ determined in one of the following ways:</p>
 </div>
 <div class="paragraph">
 <p>For the texture sampling, image load and image store functions, the
-precision of the return type matches the precision of the sampler type:</p>
+precision of the return type matches the precision of the
+texture-combined sampler type:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="c++">uniform lowp sampler2D sampler;
+<pre class="CodeRay highlight"><code data-lang="c++">uniform lowp sampler2D texSampler;
 highp vec2 coord;
 ...
-lowp vec4 col = texture (sampler, coord); <span class="comment">// texture() returns lowp</span></code></pre>
+lowp vec4 col = texture (texSampler, coord); <span class="comment">// texture() returns lowp</span></code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -11522,7 +12343,7 @@ edge1</span>.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">genFType <strong>fma</strong>(genFType <em>a</em>, genFType <em>b</em>, genFType <em>c</em>)<br></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Computes and returns <span class="eq">a * b + c</span>.
+<p>Computes and returns <code>a * b + c</code>.
       In uses where the return value is eventually consumed by a variable
       declared as <strong>precise</strong>:</p>
 </div>
@@ -11531,13 +12352,13 @@ edge1</span>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>fma</strong>() is considered a single operation, whereas the expression &#8220;a * b
-+ c&#8221; consumed by a variable declared <strong>precise</strong> is considered two
+<p><strong>fma</strong>() is considered a single operation, whereas the expression <code>a * b
++ c</code> consumed by a variable declared <strong>precise</strong> is considered two
 operations.</p>
 </li>
 <li>
 <p>The precision of <strong>fma</strong>() can differ from the precision of the expression
-&#8220;a * b + c&#8221;.</p>
+<code>a * b + c</code>.</p>
 </li>
 <li>
 <p><strong>fma</strong>() will be computed with the same precision as any other <strong>fma</strong>()
@@ -11549,7 +12370,7 @@ input values of <em>a</em>, <em>b</em>, and <em>c</em>.</p>
 <div class="paragraph">
 <p>Otherwise, in the absence of <strong>precise</strong> consumption, there are no special
 constraints on the number of operations or difference in precision between
-<strong>fma</strong>() and the expression &#8220;_a_ * <em>b</em> + <em>c</em>&#8221;.</p>
+<strong>fma</strong>() and the expression <code>a * b + c</code>.</p>
 </div>
 </div>
 </div></div></td>
@@ -11653,7 +12474,7 @@ case.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">highp uint <strong>packHalf2x16</strong>(vec2 <em>v</em>)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Returns an unsigned integer obtained by converting the components of a
       two-component floating-point vector to the 16-bit floating-point
-      representation found in the <a href="#references">OpenGL ES Specification</a>, and
+      representation of the <a href="#references">API</a>, and
       then packing these two 16-bit integers into a 32-bit unsigned integer.</p>
 <p class="tableblock">      The first vector component specifies the 16 least-significant bits of
       the result; the second component specifies the 16 most-significant
@@ -11664,7 +12485,7 @@ case.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Returns a two-component floating-point vector with components obtained
       by unpacking a 32-bit unsigned integer into a pair of 16-bit values,
       interpreting those values as 16-bit floating-point numbers according
-      to the <a href="#references">OpenGL ES Specification</a>, and converting them to
+      to the <a href="#references">API</a>, and converting them to
       32-bit floating-point values.</p>
 <p class="tableblock">      The first component of the vector is obtained from the 16
       least-significant bits of <em>v</em>; the second component is obtained from
@@ -12068,10 +12889,10 @@ However, level-of-detail is implicitly computed only for fragment shaders.
 Other shaders operate as though the base level-of-detail were computed as
 zero.
 The functions in the table below provide access to textures through
-samplers, as set up through the OpenGL ES API.
+texture-combined samplers, as set up through the API.
 Texture properties such as size, pixel format, number of dimensions,
 filtering method, number of mipmap levels, depth comparison, and so on are
-also defined by OpenGL ES API calls.
+also defined by API calls.
 Such properties are taken into account as the texture is accessed via the
 built-in functions defined below.</p>
 </div>
@@ -12093,7 +12914,7 @@ combinations.</p>
 </div>
 <div class="paragraph">
 <p>For depth/stencil textures, the internal texture format is determined by the
-component being accessed as set through the OpenGL ES API.
+component being accessed as set through the API.
 When the depth/stencil texture mode is set to DEPTH_COMPONENT, the internal
 format of the depth component should be used.
 When the depth/stencil texture mode is set to STENCIL_INDEX, the internal format
@@ -12150,10 +12971,10 @@ If a floating-point sampler type is used, the result of a texture lookup is
 a <strong>vec4</strong>.</p>
 </div>
 <div class="paragraph">
-<p>In the prototypes below, the &#8220;_g_&#8221; in the return type &#8220;_gvec4_&#8221; is used
-as a placeholder for nothing, &#8220;_i_&#8221;, or &#8220;_u_&#8221; making a return type of
+<p>In the prototypes below, the <code>g</code> in the return type <code>gvec4</code> is used
+as a placeholder for either nothing, <code>i</code>, or <code>u</code> making a return type of
 <strong>vec4</strong>, <strong>ivec4</strong>, or <strong>uvec4</strong>.
-In these cases, the sampler argument type also starts with &#8220;_g_&#8221;,
+In these cases, the sampler argument type also starts with <code>g</code>,
 indicating the same substitution done on the return type; it is either a
 floating-point, signed integer, or unsigned integer sampler, matching the
 basic type of the return type, as described above.</p>
@@ -12218,7 +13039,7 @@ component indicated in the tables below.</p>
 <h4 id="texture-query-functions">8.9.1. Texture Query Functions</h4>
 <div class="paragraph">
 <p>The <strong>textureSize</strong> functions query the dimensions of a specific texture level
-for a sampler.</p>
+for a texture-combined sampler.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -12275,8 +13096,8 @@ for a sampler.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">gvec4 <strong>texture</strong>(gsampler2D <em>sampler</em>, vec2 <em>P</em> [, float <em>bias</em>] )<br>
   gvec4 <strong>texture</strong>(gsampler3D <em>sampler</em>, vec3 <em>P</em> [, float <em>bias</em>] )<br>
   gvec4 <strong>texture</strong>(gsamplerCube <em>sampler</em>, vec3 <em>P</em>[, float <em>bias</em>] )<br>
-  float <strong>texture</strong>(sampler2DShadow <em>sampler</em>, <em>vec3 _P</em> [, float <em>bias</em>])<br>
-  float <strong>texture</strong>(samplerCubeShadow <em>sampler</em>, <em>vec4 _P</em> [, float <em>bias</em>] )<br>
+  float <strong>texture</strong>(sampler2DShadow <em>sampler</em>, vec3 <em>P</em> [, float <em>bias</em>])<br>
+  float <strong>texture</strong>(samplerCubeShadow <em>sampler</em>, vec4 <em>P</em> [, float <em>bias</em>] )<br>
   gvec4 <strong>texture</strong>(gsampler2DArray <em>sampler</em>, vec3 <em>P</em> [, float <em>bias</em>] )<br>
   gvec4 <strong>texture</strong>(gsamplerCubeArray <em>sampler</em>, vec4 <em>P</em> [, float <em>bias</em>] )<br>
   float <strong>texture</strong>(sampler2DArrayShadow <em>sampler</em>, vec4 <em>P</em>)<br>
@@ -12382,7 +13203,7 @@ for a sampler.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">gvec4 <strong>textureLodOffset</strong>(gsampler2D <em>sampler</em>, vec2 <em>P</em>, float <em>lod</em>, ivec2 <em>offset</em>)<br>
   gvec4 <strong>textureLodOffset</strong>(gsampler3D <em>sampler</em>, vec3 <em>P</em>, float <em>lod</em>, ivec3 <em>offset</em>)<br>
-  float <strong>textureLodOffset</strong>(sampler2DShadow <em>sampler</em>,  <em>P</em>, float <em>lod</em>, ivec2 <em>offset</em>)<br>
+  float <strong>textureLodOffset</strong>(sampler2DShadow <em>sampler</em>,  vec3 <em>P</em>, float <em>lod</em>, ivec2 <em>offset</em>)<br>
   gvec4 <strong>textureLodOffset</strong>(gsampler2DArray <em>sampler</em>, vec3 <em>P</em>, float <em>lod</em>, ivec2 <em>offset</em>)<br></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Do an offset texture lookup with explicit level-of-detail.
       See <strong>textureLod</strong> and <strong>textureOffset</strong>.</p></td>
@@ -12512,7 +13333,8 @@ If <em>comp</em> is omitted, it is treated as identifying the <em>R<sub>s</sub><
 four source texels.</p>
 </div>
 <div class="paragraph">
-<p>For texture gather functions using a shadow sampler type, each of the four
+<p>For texture gather functions using a texture-combined shadow sampler type,
+each of the four
 texel lookups perform a depth comparison against the depth reference value
 passed in (<em>refZ</em>), and returns the result of that comparison in the
 appropriate component of the result vector.</p>
@@ -12805,9 +13627,9 @@ are used to select an individual texel in the manner described in section
 </div>
 <div class="paragraph">
 <p>Loads and stores support float, integer, and unsigned integer types.
-The data types below starting &#8220;_gimage_&#8221; serve as placeholders meaning
+The data types below starting <code>gimage</code> serve as placeholders meaning
 types starting either &#8220;<strong>image</strong>&#8221;, &#8220;<strong>iimage</strong>&#8221;, or &#8220;<strong>uimage</strong>&#8221; in the same
-way as <em>gvec</em> or <em>gsampler</em> in earlier sections.</p>
+way as "<strong>gvec</strong>" or "<strong>gsampler</strong>" in earlier sections.</p>
 </div>
 <div class="paragraph">
 <p>The <em>IMAGE_PARAMS</em> in the prototypes below is a placeholder representing
@@ -13068,7 +13890,7 @@ only a single primitive.</p>
 <h4 id="derivative-functions">8.14.1. Derivative Functions</h4>
 <div class="paragraph">
 <p>Derivatives may be computationally expensive and/or numerically unstable.
-Therefore, an OpenGL ES implementation may approximate the true derivatives
+Therefore, an implementation may approximate the true derivatives
 by using a fast but not entirely accurate derivative computation.
 Derivatives are undefined within non-uniform control flow.</p>
 </div>
@@ -13103,7 +13925,7 @@ For multisample rasterization, \(dx &lt; 2.0\) in equations 1b and 2b.</p>
 <p>\(dFdy\) is approximated similarly, with <em>y</em> replacing <em>x</em>.</p>
 </div>
 <div class="paragraph">
-<p>An OpenGL ES implementation may use the above or other methods to perform
+<p>An implementation may use the above or other methods to perform
 the calculation, subject to the following conditions:</p>
 </div>
 <div class="olist arabic">
@@ -13465,6 +14287,38 @@ a variable that it previously wrote will always see the most recently
 written value unless another shader invocation also wrote to the same
 memory.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_subpass_input_functions">8.17. Subpass-Input Functions</h3>
+<div class="paragraph">
+<p>Subpass-input functions are only available when targeting a Vulkan fragment stage.</p>
+</div>
+<div class="paragraph">
+<p>Subpass inputs are read through the built-in functions below. The <code>g</code> is again
+a placeholder for either nothing, <code>i</code>, or <code>u</code>, indicating either a floating-point,
+signed integer, or unsigned integer, and these must match between argument type
+and return type.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Syntax</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">gvec4 <strong>subpassLoad</strong>(gsubpassInput subpass)<br>
+  gvec4 <strong>subpassLoad</strong>(gsubpassInputMS subpass, int sample)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Read from a subpass input, from the implicit location <em>(x, y, layer)</em>
+      of the current fragment coordinate.</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -13861,101 +14715,72 @@ or a default, only the resulting qualification must match.</p>
 <p>The grammar is fed from the output of lexical analysis.
 The tokens returned from lexical analysis are</p>
 </div>
-<div class="listingblock">
+<div class="openblock bnf">
 <div class="content">
-<pre class="CodeRay highlight"><code data-lang="c++">CONST BOOL FLOAT INT UINT
-
-BVEC2 BVEC3 BVEC4 IVEC2 IVEC3 IVEC4 UVEC2 UVEC3 UVEC4 VEC2 VEC3 VEC4
-
-MAT2 MAT3 MAT4 CENTROID IN OUT INOUT
-
-UNIFORM PATCH SAMPLE BUFFER SHARED
-
-COHERENT VOLATILE RESTRICT READONLY WRITEONLY
-
-FLAT SMOOTH LAYOUT
-
+<div class="paragraph">
+<p>CONST BOOL FLOAT INT UINT</p>
+</div>
+<div class="paragraph">
+<p>BVEC2 BVEC3 BVEC4 IVEC2 IVEC3 IVEC4 UVEC2 UVEC3 UVEC4 VEC2 VEC3 VEC4</p>
+</div>
+<div class="paragraph">
+<p>MAT2 MAT3 MAT4
 MAT2X2 MAT2X3 MAT2X4
-
 MAT3X2 MAT3X3 MAT3X4
-
-MAT4X2 MAT4X3 MAT4X4
-
-
-
-
-
-ATOMIC_UINT
-
-SAMPLER2D SAMPLER3D SAMPLERCUBE SAMPLER2DSHADOW
-
+MAT4X2 MAT4X3 MAT4X4</p>
+</div>
+<div class="paragraph">
+<p>CENTROID IN OUT INOUT UNIFORM PATCH SAMPLE BUFFER SHARED
+COHERENT VOLATILE RESTRICT READONLY WRITEONLY
+FLAT SMOOTH LAYOUT</p>
+</div>
+<div class="paragraph">
+<p>ATOMIC_UINT</p>
+</div>
+<div class="paragraph">
+<p>SAMPLER2D SAMPLER3D SAMPLERCUBE SAMPLER2DSHADOW
 SAMPLERCUBESHADOW SAMPLER2DARRAY SAMPLER2DARRAYSHADOW
-
 ISAMPLER2D ISAMPLER3D ISAMPLERCUBE ISAMPLER2DARRAY
-
-USAMPLER2D USAMPLER3D USAMPLERCUBE USAMPLER2DARRAY
-
-
-
-
-
-
-SAMPLERBUFFER ISAMPLERBUFFER USAMPLERBUFFER
-
+USAMPLER2D USAMPLER3D USAMPLERCUBE USAMPLER2DARRAY</p>
+</div>
+<div class="paragraph">
+<p>SAMPLERBUFFER ISAMPLERBUFFER USAMPLERBUFFER
 SAMPLERCUBEARRAY SAMPLERCUBEARRAYSHADOW
-
 ISAMPLERCUBEARRAY USAMPLERCUBEARRAY
-
 SAMPLER2DMS ISAMPLER2DMS USAMPLER2DMS
-
 SAMPLER2DMSARRAY ISAMPLER2DMSARRAY USAMPLER2DMSARRAY
-
 IMAGE2D IIMAGE2D UIMAGE2D
-
 IMAGE3D IIMAGE3D UIMAGE3D
-
 IMAGECUBE IIMAGECUBE UIMAGECUBE
-
 IMAGEBUFFER IIMAGEBUFFER UIMAGEBUFFER
-
 IMAGE2DARRAY IIMAGE2DARRAY UIMAGE2DARRAY
-
-IMAGECUBEARRAY IIMAGECUBEARRAY UIMAGECUBEARRAY
-
-
-
-
-
-
-STRUCT VOID
-
-WHILE BREAK CONTINUE DO ELSE FOR IF DISCARD RETURN SWITCH CASE DEFAULT
-
-IDENTIFIER TYPE_NAME
-
+IMAGECUBEARRAY IIMAGECUBEARRAY UIMAGECUBEARRAY</p>
+</div>
+<div class="paragraph">
+<p>STRUCT VOID</p>
+</div>
+<div class="paragraph">
+<p>WHILE BREAK CONTINUE DO ELSE FOR IF DISCARD RETURN SWITCH CASE DEFAULT</p>
+</div>
+<div class="paragraph">
+<p>IDENTIFIER TYPE_NAME
 FLOATCONSTANT INTCONSTANT UINTCONSTANT BOOLCONSTANT
-
-FIELD_SELECTION
-
-LEFT_OP RIGHT_OP
-
+FIELD_SELECTION</p>
+</div>
+<div class="paragraph">
+<p>LEFT_OP RIGHT_OP
 INC_OP DEC_OP LE_OP GE_OP EQ_OP NE_OP
-
 AND_OP OR_OP XOR_OP MUL_ASSIGN DIV_ASSIGN ADD_ASSIGN
-
 MOD_ASSIGN LEFT_ASSIGN RIGHT_ASSIGN AND_ASSIGN XOR_ASSIGN OR_ASSIGN
-
 SUB_ASSIGN
-
 LEFT_PAREN RIGHT_PAREN LEFT_BRACKET RIGHT_BRACKET LEFT_BRACE RIGHT_BRACE DOT
-
 COMMA COLON EQUAL SEMICOLON BANG DASH TILDE PLUS STAR SLASH PERCENT
-
-LEFT_ANGLE RIGHT_ANGLE VERTICAL_BAR CARET AMPERSAND QUESTION
-
-INVARIANT PRECISE
-
-HIGH_PRECISION MEDIUM_PRECISION LOW_PRECISION PRECISION</code></pre>
+LEFT_ANGLE RIGHT_ANGLE VERTICAL_BAR CARET AMPERSAND QUESTION</p>
+</div>
+<div class="paragraph">
+<p>INVARIANT PRECISE
+HIGH_PRECISION MEDIUM_PRECISION LOW_PRECISION PRECISION</p>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -14391,9 +15216,9 @@ Pointers are not supported.</p>
 <dt class="hdlist1"><em>array_specifier</em> : </dt>
 <dd>
 <p><em>LEFT_BRACKET</em> <em>RIGHT_BRACKET</em><br>
-<em>LEFT_BRACKET</em> <em>constant_expression</em> <em>RIGHT_BRACKET</em><br>
+<em>LEFT_BRACKET</em> <em>conditional_expression</em> <em>RIGHT_BRACKET</em><br>
 <em>array_specifier</em> <em>LEFT_BRACKET</em> <em>RIGHT_BRACKET</em><br>
-<em>array_specifier</em> <em>LEFT_BRACKET</em> <em>constant_expression</em> <em>RIGHT_BRACKET</em></p>
+<em>array_specifier</em> <em>LEFT_BRACKET</em> <em>conditional_expression</em> <em>RIGHT_BRACKET</em></p>
 </dd>
 <dt class="hdlist1"><em>type_specifier_nonarray</em> : </dt>
 <dd>
@@ -15211,15 +16036,1072 @@ interchange</p>
 <p>IEEE 754-2008.
 <em>IEEE Standard for Floating-Point Arithmetic</em></p>
 </li>
+<li>
+<p>&#8220;SPIR-V Specification, Version 1.3, Revision 7&#8221; ,
+<a href="https://www.khronos.org/registry/spir-v/" class="bare">https://www.khronos.org/registry/spir-v/</a>.</p>
+</li>
+<li>
+<p>&#8220;Vulkan<sup>R</sup> 1.1.105 - A Specification&#8221;,
+<a href="https://www.khronos.org/registry/vulkan/" class="bare">https://www.khronos.org/registry/vulkan/</a>,
+March 19, 2019.</p>
+</li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_non_normative_spir_v_mappings">14. Non-Normative SPIR-V Mappings</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This appendix includes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a comparision of feature differences with SPIR-V versus without, for both Vulkan and OpenGL</p>
+</li>
+<li>
+<p>a discussion of how GLSL features logically map to SPIR-V features.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_feature_comparisons">14.1. Feature Comparisons</h3>
+<div class="paragraph">
+<p>The following features are removed for both OpenGL and Vulkan:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>subroutines</p>
+</li>
+<li>
+<p>shared and packed block layouts</p>
+</li>
+<li>
+<p>the already deprecated texturing functions (e.g., <code>texture2D()</code>)</p>
+</li>
+<li>
+<p>the already deprecated noise functions (e.g., <code>noise1()</code>)</p>
+</li>
+<li>
+<p>compatibility-profile features</p>
+</li>
+<li>
+<p><em>gl_DepthRangeParameters</em> and <em>gl_NumSamples</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Vulkan removed the following features, which are still present for OpenGL:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Default uniforms, for non-opaque types:
+The <strong>UniformConstant</strong> storage class can be used on individual
+variables at global scope. (That is, uniforms don&#8217;t have to be in a
+block, unless they are built-in members that are in block in GLSL
+version 4.5 or above.)</p>
+</li>
+<li>
+<p>GLSL atomic-counter bindings have the <em>offset</em> layout qualifier &#8594;
+SPIR-V <strong>AtomicCounter</strong> storage class using the <strong>Offset</strong> decoration</p>
+</li>
+<li>
+<p>GLSL <em>origin_lower_left</em> &#8594; SPIR-V <strong>OriginLowerLeft</strong></p>
+</li>
+<li>
+<p>special rules for locations for input doubles in the vertex shader</p>
+</li>
+<li>
+<p><em>gl_VertexID</em> and <em>gl_InstanceID</em> (more detail follows)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following features are added for both OpenGL and Vulkan:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>specialization constants</p>
+</li>
+<li>
+<p><em>offset</em> can organize members in a different order than declaration order</p>
+</li>
+<li>
+<p><em>offset</em> and <em>align</em> layout qualifiers for uniform/buffer blocks for
+versions that did not support them</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Vulkan Only: The following features are added:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>push-constant buffers</p>
+</li>
+<li>
+<p>shader combining of separate textures and samplers (SPIR-V <strong>OpTypeSampler</strong>)</p>
+</li>
+<li>
+<p>descriptor sets (<strong>DescriptorSet</strong> must be 0, if present)</p>
+</li>
+<li>
+<p><em>gl_VertexIndex</em> and <em>gl_InstanceIndex</em></p>
+</li>
+<li>
+<p>subpass-input targets and input attachments (<em>input_attachment_index</em>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following features are changed in both OpenGL and Vulkan:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>gl_FragColor</em> will no longer indicate an implicit broadcast</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Vulkan Only: The following features are changed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>precision qualifiers (<strong>mediump</strong> and <strong>lowp</strong>) will be respected for all
+versions, not dropped for desktop versions (default precision for
+desktop versions is <strong>highp</strong> for all types)</p>
+</li>
+<li>
+<p>arrays of uniforms and buffer blocks take only one binding number for
+the entire object, not one per array element</p>
+</li>
+<li>
+<p>the default origin is <em>origin_upper_left</em> instead of <em>origin_lower_left</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Vulkan does not allow multi-dimensional arrays of resources like
+UBOs and SSBOs in its SPIR-V environment spec. SPIR-V supports
+it and OpenGL already allows this for GLSL shaders. SPIR-V
+for OpenGL also allows it.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mapping_from_glsl_to_spir_v">14.2. Mapping from GLSL to SPIR-V</h3>
+<div class="sect3">
+<h4 id="_specialization_constants">14.2.1. Specialization Constants</h4>
+<div class="paragraph">
+<p>SPIR-V specialization constants, which can be set later by the client API,
+can be declared using <code>layout(constant_id=&#8230;&#8203;)</code>. For example, to make a
+specialization constant with a default value of 12:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout(constant_id = 17) const int arraySize = 12;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Above, <code>17</code> is the ID by which the API or other tools can later refer to
+this specific specialization constant.  The API or an intermediate tool can
+then change its value to another constant integer before it is fully
+lowered to executable code.  If it is never changed before final lowering,
+it will retain the value of 12.</p>
+</div>
+<div class="paragraph">
+<p>Specialization constants have const semantics, except they don&#8217;t fold.
+Hence, an array can be declared with <code>arraySize</code> from above:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>vec4 data[arraySize];  // legal, even though arraySize might change</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Specialization constants can be in expressions:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>vec4 data2[arraySize + 2];</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will make <code>data2</code> be sized by 2 more than whatever constant value
+<code>arraySize</code> has when it is time to lower the shader to executable code.</p>
+</div>
+<div class="paragraph">
+<p>An expression formed with specialization constants also behaves in the
+shader like a specialization constant, not a like a constant.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>arraySize + 2       // a specialization constant (with no constant_id)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Such expressions can be used in the same places as a constant.</p>
+</div>
+<div class="paragraph">
+<p>The <em>constant_id</em> can only be applied to a scalar integer, a scalar floating-point
+or a scalar Boolean.</p>
+</div>
+<div class="paragraph">
+<p>Only basic operators and constructors can be applied to a specialization
+constant and still result in a specialization constant:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout(constant_id = 17) const int arraySize = 12;
+sin(float(arraySize));    // result is not a specialization constant</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>While SPIR-V specialization constants are only for scalars, a vector
+can be made by operations on scalars:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout(constant_id = 18) const int scX = 1;
+layout(constant_id = 19) const int scZ = 1;
+const vec3 scVec = vec3(scX, 1, scZ);  // partially specialized vector</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A built-in variable can have a <em>constant_id</em> attached to it:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout(constant_id = 18) gl_MaxImageUnits;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This makes it behave as a specialization constant.  It is not a full
+redeclaration; all other characteristics are left intact from the
+original built-in declaration.</p>
+</div>
+<div class="paragraph">
+<p>The built-in vector <em>gl_WorkGroupSize</em> can be specialized using special
+layout <code>local_size_{xyz}_id</code> applied to the <strong>in</strong> qualifier.  For example:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout(local_size_x_id = 18, local_size_z_id = 19) in;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This leaves <em>gl_WorkGroupSize.y</em> as a non-specialization constant, with
+<em>gl_WorkGroupSize</em> being a partially specialized vector.  Its <em>x</em> and <em>z</em>
+components can be later specialized using the ID&#8217;s 18 and 19.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_vulkan_only_push_constants">14.2.2. Vulkan Only: Push Constants</h4>
+<div class="paragraph">
+<p>Push constants reside in a uniform block declared using the new
+layout-qualifier-id <em>push_constant</em> applied to a uniform-block declaration.
+The API writes a set of constants to a push-constant buffer, and the shader
+reads them from a <em>push_constant</em> block:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout(push_constant) uniform BlockName {
+    int member1;
+    float member2;
+    ...
+} InstanceName; // optional instance name
+... = InstanceName.member2; // read a push constant</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The memory accounting used for the <em>push_constant</em> uniform block is different
+than for other uniform blocks:  There is a separate small pool of memory
+it must fit within.  By default, a <em>push_constant</em> buffer follows the std430
+packing rules.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_vulkan_only_descriptor_sets">14.2.3. Vulkan Only: Descriptor Sets</h4>
+<div class="paragraph">
+<p>Each shader resource in a descriptor set is assigned a tuple of (set
+number, binding number, array element) that defines its location within
+a descriptor set layout.
+In GLSL, the set number and binding number are assigned via the <em>set</em>
+and <em>binding</em> layout qualifiers respectively, and the array element is
+implicitly assigned consecutively starting with index equal to zero for
+the first element of an array (and array element is zero for non-array
+variables):</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>// Assign set number = M, binding number = N, array element = 0
+layout (set=M, binding=N) uniform sampler2D variableName;</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>// Assign set number = M, binding number = N for all array elements,
+// and array element = i for the ith member of an array of size I.
+layout (set=M, binding=N) uniform sampler2D variableNameArray[I];</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example, two combined texture/sampler objects can be declared in two
+different descriptor sets as follows</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout(set = 0, binding = 0) uniform sampler2D ts3;
+layout(set = 1, binding = 0) uniform sampler2D ts4;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See the API documentation for more detail on the operation model of
+descriptor sets.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_vulkan_only_samplers_images_textures_and_buffers">14.2.4. Vulkan Only: Samplers, Images, Textures, and Buffers</h4>
+<div class="sect4">
+<h5 id="_storage_images">Storage Images</h5>
+<div class="paragraph">
+<p>Storage images are declared in GLSL shader source using uniform image
+variables of the appropriate dimensionality as well as a format layout
+qualifier (if necessary):</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout (set=m, binding=n, r32f) uniform image2D myStorageImage;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which maps to the following SPIR-V:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        ...
+%1 = OpExtInstImport "GLSL.std.450"
+        ...
+        OpName %9 "myStorageImage"
+        OpDecorate %9 DescriptorSet m
+        OpDecorate %9 Binding n
+%2 = OpTypeVoid
+%3 = OpTypeFunction %2
+%6 = OpTypeFloat 32
+%7 = OpTypeImage %6 2D 0 0 0 2 R32f
+%8 = OpTypePointer UniformConstant %7
+%9 = OpVariable %8 UniformConstant
+        ...</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_samplers">Samplers</h5>
+<div class="paragraph">
+<p>SPIR-V samplers are declared in GLSL shader source using uniform <strong>sampler</strong> and
+<strong>samplerShadow</strong> types:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout (set=m, binding=n) uniform sampler mySampler;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which maps to the following SPIR-V:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        ...
+%1 = OpExtInstImport "GLSL.std.450"
+        ...
+        OpName %8 "mySampler"
+        OpDecorate %8 DescriptorSet m
+        OpDecorate %8 Binding n
+%2 = OpTypeVoid
+%3 = OpTypeFunction %2
+%6 = OpTypeSampler
+%7 = OpTypePointer UniformConstant %6
+%8 = OpVariable %7 UniformConstant
+        ...</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_textures_sampled_images">Textures (Sampled Images)</h5>
+<div class="paragraph">
+<p>Textures are declared in GLSL shader source using uniform texture
+variables of the appropriate dimensionality:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout (set=m, binding=n) uniform texture2D mySampledImage;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which maps to the following SPIR-V:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        ...
+%1 = OpExtInstImport "GLSL.std.450"
+        ...
+        OpName %9 "mySampledImage"
+        OpDecorate %9 DescriptorSet m
+        OpDecorate %9 Binding n
+%2 = OpTypeVoid
+%3 = OpTypeFunction %2
+%6 = OpTypeFloat 32
+%7 = OpTypeImage %6 2D 0 0 0 1 Unknown
+%8 = OpTypePointer UniformConstant %7
+%9 = OpVariable %8 UniformConstant
+        ...</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_combined_texture_and_samplers">Combined Texture and Samplers</h5>
+<div class="paragraph">
+<p>Combined textures and samplers are declared in GLSL shader source using
+uniform texture-combined sampler variables of the appropriate dimensionality:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout (set=m, binding=n) uniform sampler2D myCombinedImageSampler;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which maps to the following SPIR-V:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        ...
+%1 = OpExtInstImport "GLSL.std.450"
+        ...
+        OpName %10 "myCombinedImageSampler"
+        OpDecorate %10 DescriptorSet m
+        OpDecorate %10 Binding n
+%2 = OpTypeVoid
+%3 = OpTypeFunction %2
+%6 = OpTypeFloat 32
+%7 = OpTypeImage %6 2D 0 0 0 1 Unknown
+%8 = OpTypeSampledImage %7
+%9 = OpTypePointer UniformConstant %8
+%10 = OpVariable %9 UniformConstant
+        ...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that a combined image sampler descriptor can be referred to as just
+an image or sampler in the shader as per the above sections.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_combining_separate_samplers_and_textures">Combining Separate Samplers and Textures</h5>
+<div class="paragraph">
+<p>A sampler, declared with the keyword <strong>sampler</strong>, contains just filtering
+information, containing neither a texture nor an image:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>uniform sampler s;    // a handle to filtering information</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A texture, declared with keywords like <strong>texture2D</strong>, contains just image
+information, not filtering information:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>uniform texture2D t;  // a handle to a texture (an image in SPIR-V)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Constructors can then be used to combine a sampler and a texture at the
+point of making a texture lookup call:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>texture(sampler2D(t, s), ...);</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note, <code>layout()</code> information is omitted above for clarity of this feature.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_texture_buffers_uniform_texel_buffers">Texture Buffers (Uniform Texel Buffers)</h5>
+<div class="paragraph">
+<p>Texture buffers are declared in GLSL shader source using uniform
+textureBuffer variables:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout (set=m, binding=n) uniform textureBuffer myUniformTexelBuffer;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which maps to the following SPIR-V:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        ...
+%1 = OpExtInstImport "GLSL.std.450"
+        ...
+        OpName %9 "myUniformTexelBuffer"
+        OpDecorate %9 DescriptorSet m
+        OpDecorate %9 Binding n
+%2 = OpTypeVoid
+%3 = OpTypeFunction %2
+%6 = OpTypeFloat 32
+%7 = OpTypeImage %6 Buffer 0 0 0 1 Unknown
+%8 = OpTypePointer UniformConstant %7
+%9 = OpVariable %8 UniformConstant
+        ...</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_image_buffers_storage_texel_buffers">Image Buffers (Storage Texel Buffers)</h5>
+<div class="paragraph">
+<p>Image buffers are declared in GLSL shader source using uniform
+imageBuffer variables:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout (set=m, binding=n, r32f) uniform imageBuffer myStorageTexelBuffer;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which maps to the following SPIR-V:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        ...
+%1 = OpExtInstImport "GLSL.std.450"
+        ...
+        OpName %9 "myStorageTexelBuffer"
+        OpDecorate %9 DescriptorSet m
+        OpDecorate %9 Binding n
+%2 = OpTypeVoid
+%3 = OpTypeFunction %2
+%6 = OpTypeFloat 32
+%7 = OpTypeImage %6 Buffer 0 0 0 2 R32f
+%8 = OpTypePointer UniformConstant %7
+%9 = OpVariable %8 UniformConstant
+        ...</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_storage_buffers">Storage Buffers</h5>
+<div class="paragraph">
+<p>Storage buffers are declared in GLSL shader source using buffer storage
+qualifier and block syntax:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout (set=m, binding=n) buffer myStorageBuffer
+{
+    vec4 myElement[];
+};</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which maps to the following SPIR-V:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        ...
+%1 = OpExtInstImport "GLSL.std.450"
+        ...
+        OpName %9 "myStorageBuffer"
+        OpMemberName %9 0 "myElement"
+        OpName %11 ""
+        OpDecorate %8 ArrayStride 16
+        OpMemberDecorate %9 0 Offset 0
+        OpDecorate %9 BufferBlock
+        OpDecorate %11 DescriptorSet m
+        OpDecorate %11 Binding n
+%2 = OpTypeVoid
+%3 = OpTypeFunction %2
+%6 = OpTypeFloat 32
+%7 = OpTypeVector %6 4
+%8 = OpTypeRuntimeArray %7
+%9 = OpTypeStruct %8
+%10 = OpTypePointer Uniform %9
+%11 = OpVariable %10 Uniform
+        ...</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_uniform_buffers">Uniform Buffers</h5>
+<div class="paragraph">
+<p>Uniform buffers are declared in GLSL shader source using the uniform storage
+qualifier and block syntax:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout (set=m, binding=n) uniform myUniformBuffer
+{
+    vec4 myElement[32];
+};</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which maps to the following SPIR-V:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        ...
+%1 = OpExtInstImport "GLSL.std.450"
+        ...
+        OpName %11 "myUniformBuffer"
+        OpMemberName %11 0 "myElement"
+        OpName %13 ""
+        OpDecorate %10 ArrayStride 16
+        OpMemberDecorate %11 0 Offset 0
+        OpDecorate %11 Block
+        OpDecorate %13 DescriptorSet m
+        OpDecorate %13 Binding n
+%2 = OpTypeVoid
+%3 = OpTypeFunction %2
+%6 = OpTypeFloat 32
+%7 = OpTypeVector %6 4
+%8 = OpTypeInt 32 0
+%9 = OpConstant %8 32
+%10 = OpTypeArray %7 %9
+%11 = OpTypeStruct %10
+%12 = OpTypePointer Uniform %11
+%13 = OpVariable %12 Uniform
+        ...</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_subpass_inputs_2">Subpass Inputs</h5>
+<div class="paragraph">
+<p>Within a rendering pass, a subpass can write results to an output target
+that can then be read by the next subpass as an input subpass.  The
+"Subpass Input" feature regards the ability to read an output target.</p>
+</div>
+<div class="paragraph">
+<p>Subpass inputs are read through a new set of types, available only
+to fragment shaders:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>subpassInput
+subpassInputMS
+isubpassInput
+isubpassInputMS
+usubpassInput
+usubpassInputMS</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Unlike sampler and image objects, subpass inputs are implicitly addressed
+by the fragment&#8217;s (<em>x</em>, <em>y</em>, <em>layer</em>) coordinate.</p>
+</div>
+<div class="paragraph">
+<p>Input attachments are decorated with their input attachment index in
+addition to descriptor set and binding numbers.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>layout (input_attachment_index=i, set=m, binding=n) uniform subpassInput myInputAttachment;</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Which maps to the following SPIR-V:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        ...
+%1 = OpExtInstImport "GLSL.std.450"
+        ...
+        OpName %9 "myInputAttachment"
+        OpDecorate %9 DescriptorSet m
+        OpDecorate %9 Binding n
+        OpDecorate %9 InputAttachmentIndex i
+%2 = OpTypeVoid
+%3 = OpTypeFunction %2
+%6 = OpTypeFloat 32
+%7 = OpTypeImage %6 SubpassData 0 0 0 2 Unknown
+%8 = OpTypePointer UniformConstant %7
+%9 = OpVariable %8 UniformConstant
+        ...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An <em>input_attachment_index</em> of i selects the ith entry in the input pass
+list. (See API specification for more information.)</p>
+</div>
+<div class="paragraph">
+<p>These objects support reading the subpass input through the following
+functions:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>gvec4 subpassLoad(gsubpassInput   subpass);
+gvec4 subpassLoad(gsubpassInputMS subpass, int sample);</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mapping_variables">14.2.5. Mapping Variables</h4>
+<div class="sect4">
+<h5 id="_gl_fragcolor"><em>gl_FragColor</em></h5>
+<div class="paragraph">
+<p>The fragment-stage built-in <em>gl_FragColor</em>, which implies a broadcast to all
+outputs, is not present in SPIR-V. Shaders where writing to <em>gl_FragColor</em>
+is allowed can still write to it, but it only means to write to an output:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>of the same type as <em>gl_FragColor</em></p>
+</li>
+<li>
+<p>decorated with location 0</p>
+</li>
+<li>
+<p>not decorated as a built-in variable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>There is no implicit broadcast.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_vulkan_gl_vertexindex_and_gl_instanceindex">Vulkan <em>gl_VertexIndex</em> and <em>gl_InstanceIndex</em></h5>
+<div class="paragraph">
+<p>Adds two new built-in variables, <em>gl_VertexIndex</em> and <em>gl_InstanceIndex</em> to
+replace the existing built-in variables <em>gl_VertexID</em> and <em>gl_InstanceID</em>.</p>
+</div>
+<div class="paragraph">
+<p>In the situations where the indexing is relative to some base offset,
+these built-in variables are defined, for Vulkan, to take on values as
+follows:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>gl_VertexIndex             base, base+1, base+2, ...
+gl_InstanceIndex           base, base+1, base+2, ...</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where it depends on the situation what the base actually is.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_storage_classes">Storage Classes:</h5>
+<div class="literalblock">
+<div class="content">
+<pre>uniform sampler2D...;        -&gt; UniformConstant
+uniform blockN { ... } ...;  -&gt; Uniform, with Block decoration
+in / out variable            -&gt; Input/Output, possibly with block (below)
+in / out block...            -&gt; Input/Output, with Block decoration
+buffer  blockN { ... } ...;  -&gt; Uniform, with BufferBlock decoration
+shared                       -&gt; Workgroup
+&lt;normal global&gt;              -&gt; Private</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Vulkan Only: buffer  blockN { ... } ...;  -&gt; StorageBuffer, when requested
+OpenGL Only: uniform variable (non-block) -&gt; UniformConstant
+OpenGL Only: ... uniform atomic_uint ...  -&gt; AtomicCounter</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_inputoutput">Input/Output</h5>
+<div class="paragraph">
+<p>Mapping of input/output blocks or variables is the same for all versions
+of GLSL or ESSL. To the extent variables or members are available in a
+version, its location is as follows:</p>
+</div>
+<div class="paragraph">
+<p>These are mapped to SPIR-V individual variables, with similarly spelled
+built-in decorations (except as noted):</p>
+</div>
+<div class="paragraph">
+<p>Any stage:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>in gl_VertexIndex          (Vulkan only)
+in gl_VertexID             (OpenGL only)
+in gl_InstanceIndex        (Vulkan only)
+in gl_InstanceID           (OpenGL only)
+in gl_InvocationID
+in gl_PatchVerticesIn      (PatchVertices)
+in gl_PrimitiveIDIn        (PrimitiveID)
+in/out gl_PrimitiveID      (in/out based only on storage qualifier)
+in gl_TessCoord</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>in/out gl_Layer
+in/out gl_ViewportIndex</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>patch in/out gl_TessLevelOuter  (uses Patch decoration)
+patch in/out gl_TessLevelInner  (uses Patch decoration)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Compute stage only:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>in gl_NumWorkGroups
+in gl_WorkGroupSize
+in gl_WorkGroupID
+in gl_LocalInvocationID
+in gl_GlobalInvocationID
+in gl_LocalInvocationIndex</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Fragment stage only:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>in gl_FragCoord
+in gl_FrontFacing
+in gl_ClipDistance
+in gl_CullDistance
+in gl_PointCoord
+in gl_SampleID
+in gl_SamplePosition
+in gl_HelperInvocation
+out gl_FragDepth
+in gl_SampleMaskIn        (SampleMask)
+out gl_SampleMask         (in/out based only on storage qualifier)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These are mapped to SPIR-V blocks, as implied by the pseudo code, with
+the members decorated with similarly spelled built-in decorations:</p>
+</div>
+<div class="paragraph">
+<p>Non-fragment stage:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>in/out gl_PerVertex {   // some subset of these members will be used
+    gl_Position
+    gl_PointSize
+    gl_ClipDistance
+    gl_CullDistance
+}                       // name of block is for debug only</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There is at most one input and one output block per stage in SPIR-V.
+The subset and order of members will match between stages sharing an
+interface.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_vulkan_only_mapping_of_precision_qualifiers">14.2.6. Vulkan Only: Mapping of Precision Qualifiers</h4>
+<div class="literalblock">
+<div class="content">
+<pre>lowp     -&gt; RelaxedPrecision, on storage variable and operation
+mediump  -&gt; RelaxedPrecision, on storage variable and operation
+highp    -&gt; 32-bit, same as int or float</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>portability tool/mode  -&gt; OpQuantizeToF16</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mapping_of_precise">14.2.7. Mapping of <strong>precise</strong>:</h4>
+<div class="literalblock">
+<div class="content">
+<pre>precise -&gt; NoContraction</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_opengl_mapping_of_atomic_uint_offset_layout_qualifier">14.2.8. OpenGL Mapping of <strong>atomic_uint</strong> <em>offset</em> layout qualifier</h4>
+<div class="literalblock">
+<div class="content">
+<pre>offset         -&gt;  Offset (decoration)</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mapping_of_images">14.2.9. Mapping of Images</h4>
+<div class="literalblock">
+<div class="content">
+<pre>imageLoad()   -&gt; OpImageRead
+imageStore()  -&gt; OpImageWrite
+texelFetch()  -&gt; OpImageFetch
+subpassInput  -&gt; OpTypeImage with Dim of SubpassData (Vulkan only)
+subpassLoad() -&gt; OpImageRead                         (Vulkan only)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>imageAtomicXXX(params, data)  -&gt; %ptr = OpImageTexelPointer params
+                                        OpAtomicXXX %ptr, data</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>XXXQueryXXX(combined) -&gt; %image = OpImage combined
+                                OpXXXQueryXXX %image</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mapping_of_layouts">14.2.10. Mapping of Layouts</h4>
+<div class="literalblock">
+<div class="content">
+<pre>std140/std430  -&gt;  explicit Offset, ArrayStride, and MatrixStride
+                    Decoration on struct members
+shared/packed  -&gt;  not allowed
+&lt;default&gt;      -&gt;  not shared, but std140 or std430
+xfb_offset     -&gt;  Offset Decoration on the object or struct member
+xfb_buffer     -&gt;  XfbBuffer Decoration on the object
+xfb_stride     -&gt;  XfbStride Decoration on the object
+any xfb_*      -&gt;  the Xfb Execution Mode is set
+captured XFB   -&gt;  has both XfbBuffer and Offset
+non-captured   -&gt;  lacking XfbBuffer or Offset</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>max_vertices   -&gt;  OutputVertices</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mapping_of_barriers">14.2.11. Mapping of barriers</h4>
+<div class="literalblock">
+<div class="content">
+<pre>barrier() (compute) -&gt; OpControlBarrier(/*Execution*/Workgroup,
+                                        /*Memory*/Workgroup,
+                                        /*Semantics*/AcquireRelease |
+                                                    WorkgroupMemory)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>barrier() (tess control) -&gt; OpControlBarrier(/*Execution*/Workgroup,
+                                            /*Memory*/Invocation,
+                                            /*Semantics*/None)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>memoryBarrier() -&gt; OpMemoryBarrier(/*Memory*/Device,
+                                    /*Semantics*/AcquireRelease |
+                                                UniformMemory |
+                                                WorkgroupMemory |
+                                                ImageMemory)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>memoryBarrierBuffer() -&gt; OpMemoryBarrier(/*Memory*/Device,
+                                        /*Semantics*/AcquireRelease |
+                                                    UniformMemory)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>memoryBarrierShared() -&gt; OpMemoryBarrier(/*Memory*/Device,
+                                        /*Semantics*/AcquireRelease |
+                                                    WorkgroupMemory)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>memoryBarrierImage() -&gt; OpMemoryBarrier(/*Memory*/Device,
+                                        /*Semantics*/AcquireRelease |
+                                                    ImageMemory)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>groupMemoryBarrier() -&gt; OpMemoryBarrier(/*Memory*/Workgroup,
+                                        /*Semantics*/AcquireRelease |
+                                                    UniformMemory |
+                                                    WorkgroupMemory |
+                                                    ImageMemory)</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mapping_of_atomics">14.2.12. Mapping of atomics</h4>
+<div class="literalblock">
+<div class="content">
+<pre>all atomic builtin functions -&gt; Semantics = None(Relaxed)</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>atomicExchange()             -&gt; OpAtomicExchange
+imageAtomicExchange()        -&gt; OpAtomicExchange
+atomicCompSwap()             -&gt; OpAtomicCompareExchange
+imageAtomicCompSwap()        -&gt; OpAtomicCompareExchange
+N/A                          -&gt; OpAtomicCompareExchangeWeak</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_opengl_only_mapping_of_atomics">14.2.13. OpenGL Only: Mapping of Atomics</h4>
+<div class="literalblock">
+<div class="content">
+<pre>atomicCounterIncrement -&gt; OpAtomicIIncrement
+atomicCounterDecrement -&gt; OpAtomicIDecrement
+atomicCounter          -&gt; OpAtomicLoad</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mapping_of_other_instructions">14.2.14. Mapping of other instructions</h4>
+<div class="literalblock">
+<div class="content">
+<pre>%     -&gt; OpUMod/OpSMod
+mod() -&gt; OpFMod
+N/A   -&gt; OpSRem/OpFRem</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>pack/unpack (conversion)    -&gt; pack/unpack in GLSL extended instructions
+pack/unpack (no conversion) -&gt; OpBitcast</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Version 3.20.5<br>
-Last updated 2018-12-12 16:37:44 MST
+Version 3.20.6<br>
+Last updated 2019-07-10 14:42:53 MDT
 </div>
 </div>
 
