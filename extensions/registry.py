@@ -3421,6 +3421,18 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_gpu_multicast.txt',
     },
+    'GL_NVX_gpu_multicast2' : {
+        'number' : 540,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NVX/NVX_gpu_multicast2.txt',
+    },
+    'GL_NVX_progress_fence' : {
+        'number' : 541,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NVX/NVX_progress_fence.txt',
+    },
     'GL_NV_gpu_program4' : {
         'number' : 322,
         'flags' : { 'public' },
@@ -5512,5 +5524,11 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'KHR' },
         'url' : 'extensions/OML/WGL_OML_sync_control.txt',
+    },
+    'WGL_NV_multigpu_context' : {
+        'number' : 542,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/WGL_NV_multigpu_context.txt',
     },
 }

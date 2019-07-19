@@ -47793,6 +47793,25 @@ typedef unsigned int GLhandleARB;
                 <command name="glMulticastGetQueryObjectui64vNV"/>
             </require>
         </extension>
+        <extension name="GL_NVX_gpu_multicast2" supported="gl">
+			<require>
+			  <enum name="GL_UPLOAD_GPU_MASK_NV"/>
+			  <command name="glUploadGpuMaskNVX"/>
+			  <command name="glMulticastViewportArrayvNVX"/>
+			  <command name="glMulticastViewportPositionWScaleNVX"/>
+			  <command name="glMulticastScissorArrayvNVX"/>
+			  <command name="glAsyncCopyBufferSubDataNVX"/>
+			  <command name="glAsyncCopyImageSubDataNVX"/>
+			</require>
+        </extension>
+        <extension name="GL_NVX_progress_fence" supported="gl">
+            <require>
+                <command name="glCreateProgressFenceNVX"/>
+                <command name="glSignalSemaphoreui64NVX"/>
+                <command name="glWaitSemaphoreui64NVX"/>
+                <command name="glClientWaitSemaphoreui64NVX"/>
+            </require>
+        </extension>
         <extension name="GL_NV_memory_attachment" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_ATTACHED_MEMORY_OBJECT_NV"/>

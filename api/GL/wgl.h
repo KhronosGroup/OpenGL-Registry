@@ -939,6 +939,16 @@ BOOL WINAPI wglWaitForSbcOML (HDC hdc, INT64 target_sbc, INT64 *ust, INT64 *msc,
 #endif
 #endif /* WGL_OML_sync_control */
 
+#ifndef WGL_NV_multigpu_context
+#define WGL_NV_multigpu_context 1
+#define WGL_CONTEXT_MULTIGPU_ATTRIB_NV                       0x20AA
+#define WGL_CONTEXT_MULTIGPU_ATTRIB_NONE_NV                  0x0000
+#define WGL_CONTEXT_MULTIGPU_ATTRIB_SINGLE_NV                0x20AB
+#define WGL_CONTEXT_MULTIGPU_ATTRIB_AFR_NV                   0x20AC
+#define WGL_CONTEXT_MULTIGPU_ATTRIB_MULTICAST_NV             0x20AD
+#define WGL_CONTEXT_MULTIGPU_ATTRIB_MULTI_DISPLAY_MULTICAST_NV 0x20AE
+#endif /* WGL_NV_multigpu_context */
+
 #ifdef __cplusplus
 }
 #endif
