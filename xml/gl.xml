@@ -832,6 +832,22 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_COLOR_ATTACHMENT13"/>
             <enum name="GL_COLOR_ATTACHMENT14"/>
             <enum name="GL_COLOR_ATTACHMENT15"/>
+            <enum name="GL_COLOR_ATTACHMENT16"/>
+            <enum name="GL_COLOR_ATTACHMENT17"/>
+            <enum name="GL_COLOR_ATTACHMENT18"/>
+            <enum name="GL_COLOR_ATTACHMENT19"/>
+            <enum name="GL_COLOR_ATTACHMENT20"/>
+            <enum name="GL_COLOR_ATTACHMENT21"/>
+            <enum name="GL_COLOR_ATTACHMENT22"/>
+            <enum name="GL_COLOR_ATTACHMENT23"/>
+            <enum name="GL_COLOR_ATTACHMENT24"/>
+            <enum name="GL_COLOR_ATTACHMENT25"/>
+            <enum name="GL_COLOR_ATTACHMENT26"/>
+            <enum name="GL_COLOR_ATTACHMENT27"/>
+            <enum name="GL_COLOR_ATTACHMENT28"/>
+            <enum name="GL_COLOR_ATTACHMENT29"/>
+            <enum name="GL_COLOR_ATTACHMENT30"/>
+            <enum name="GL_COLOR_ATTACHMENT31"/>
         </group>
 
         <group name="DrawElementsType">
@@ -2286,6 +2302,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_RGB16F_EXT"/>
             <enum name="GL_RGB16_SNORM"/>
             <enum name="GL_RGB16_SNORM_EXT"/>
+            <enum name="GL_RGB32F"/>
             <enum name="GL_RGB8I"/>
             <enum name="GL_RGB16I"/>
             <enum name="GL_RGB32I"/>
@@ -3324,6 +3341,20 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_UNIFORM_BUFFER"/>
         </group>
 
+        <group name="CopyImageSubDataTarget">
+            <enum name="GL_RENDERBUFFER"/>
+            <enum name="GL_TEXTURE_1D"/>
+            <enum name="GL_TEXTURE_2D"/>
+            <enum name="GL_TEXTURE_3D"/>
+            <enum name="GL_TEXTURE_RECTANGLE"/>
+            <enum name="GL_TEXTURE_CUBE_MAP"/>
+            <enum name="GL_TEXTURE_CUBE_MAP_ARRAY"/>
+            <enum name="GL_TEXTURE_1D_ARRAY"/>
+            <enum name="GL_TEXTURE_2D_ARRAY"/>
+            <enum name="GL_TEXTURE_2D_MULTISAMPLE"/>
+            <enum name="GL_TEXTURE_2D_MULTISAMPLE_ARRAY"/>
+        </group>
+
         <group name="ShaderType">
             <enum name="GL_COMPUTE_SHADER"/>
             <enum name="GL_VERTEX_SHADER"/>
@@ -3694,12 +3725,12 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_SAMPLER_2D_SHADOW"/>
             <enum name="GL_SAMPLER_2D_RECT"/>
             <enum name="GL_SAMPLER_2D_RECT_SHADOW"/>
-            <enum name="GL_FLOAT_MAT_2X3"/>
-            <enum name="GL_FLOAT_MAT_2X4"/>
-            <enum name="GL_FLOAT_MAT_3X2"/>
-            <enum name="GL_FLOAT_MAT_3X4"/>
-            <enum name="GL_FLOAT_MAT_4X2"/>
-            <enum name="GL_FLOAT_MAT_4X3"/>
+            <enum name="GL_FLOAT_MAT2X3"/>
+            <enum name="GL_FLOAT_MAT2X4"/>
+            <enum name="GL_FLOAT_MAT3X2"/>
+            <enum name="GL_FLOAT_MAT3X4"/>
+            <enum name="GL_FLOAT_MAT4X2"/>
+            <enum name="GL_FLOAT_MAT4X3"/>
             <enum name="GL_SAMPLER_1D_ARRAY"/>
             <enum name="GL_SAMPLER_2D_ARRAY"/>
             <enum name="GL_SAMPLER_BUFFER"/>
@@ -3725,22 +3756,22 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_UNSIGNED_INT_SAMPLER_1D_ARRAY"/>
             <enum name="GL_UNSIGNED_INT_SAMPLER_2D_ARRAY"/>
             <enum name="GL_UNSIGNED_INT_SAMPLER_BUFFER"/>
-            <enum name="GL_DOUBLE_MAT_2"/>
-            <enum name="GL_DOUBLE_MAT_3"/>
-            <enum name="GL_DOUBLE_MAT_4"/>
-            <enum name="GL_DOUBLE_MAT_2x3"/>
-            <enum name="GL_DOUBLE_MAT_2x4"/>
-            <enum name="GL_DOUBLE_MAT_3x2"/>
-            <enum name="GL_DOUBLE_MAT_3x4"/>
-            <enum name="GL_DOUBLE_MAT_4x2"/>
-            <enum name="GL_DOUBLE_MAT_4x3"/>
+            <enum name="GL_DOUBLE_MAT2"/>
+            <enum name="GL_DOUBLE_MAT3"/>
+            <enum name="GL_DOUBLE_MAT4"/>
+            <enum name="GL_DOUBLE_MAT2x3"/>
+            <enum name="GL_DOUBLE_MAT2x4"/>
+            <enum name="GL_DOUBLE_MAT3x2"/>
+            <enum name="GL_DOUBLE_MAT3x4"/>
+            <enum name="GL_DOUBLE_MAT4x2"/>
+            <enum name="GL_DOUBLE_MAT4x3"/>
             <enum name="GL_DOUBLE_VEC2"/>
             <enum name="GL_DOUBLE_VEC3"/>
             <enum name="GL_DOUBLE_VEC4"/>
-            <enum name="GL_SAMPLER_CUBEMAP_ARRAY"/>
-            <enum name="GL_SAMPLER_CUBEMAP_ARRAY_SHADOW"/>
-            <enum name="GL_INT_SAMPLER_CUBEMAP_ARRAY"/>
-            <enum name="GL_UNSIGNED_INT_SAMPLER_CUBEMAP_ARRAY"/>
+            <enum name="GL_SAMPLER_CUBE_MAP_ARRAY"/>
+            <enum name="GL_SAMPLER_CUBE_MAP_ARRAY_SHADOW"/>
+            <enum name="GL_INT_SAMPLER_CUBE_MAP_ARRAY"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_CUBE_MAP_ARRAY"/>
             <enum name="GL_SAMPLER_2D_MULTISAMPLE"/>
             <enum name="GL_INT_SAMPLER_2D_MULTISAMPLE"/>
             <enum name="GL_UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE"/>
@@ -13792,13 +13823,13 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCopyImageSubData</name></proto>
             <param><ptype>GLuint</ptype> <name>srcName</name></param>
-            <param group="CopyBufferSubDataTarget"><ptype>GLenum</ptype> <name>srcTarget</name></param>
+            <param group="CopyImageSubDataTarget"><ptype>GLenum</ptype> <name>srcTarget</name></param>
             <param><ptype>GLint</ptype> <name>srcLevel</name></param>
             <param><ptype>GLint</ptype> <name>srcX</name></param>
             <param><ptype>GLint</ptype> <name>srcY</name></param>
             <param><ptype>GLint</ptype> <name>srcZ</name></param>
             <param><ptype>GLuint</ptype> <name>dstName</name></param>
-            <param group="CopyBufferSubDataTarget"><ptype>GLenum</ptype> <name>dstTarget</name></param>
+            <param group="CopyImageSubDataTarget"><ptype>GLenum</ptype> <name>dstTarget</name></param>
             <param><ptype>GLint</ptype> <name>dstLevel</name></param>
             <param><ptype>GLint</ptype> <name>dstX</name></param>
             <param><ptype>GLint</ptype> <name>dstY</name></param>
