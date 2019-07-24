@@ -22,8 +22,8 @@ Status
 
 Version
 
-    Last Modified Date: July 19, 2019
-    Author Revision: 7
+    Last Modified Date: July 23, 2019
+    Author Revision: 8
 
 Number
 
@@ -88,24 +88,28 @@ Specification by NV_gpu_multicast
     Additions to Section 20.1 (Controlling Individual GPUs)
 
     Texture data uploads using the functions TexImage1D, TexImage2D, TexImage3D, 
-	TexSubImage1D, TexSubImage2D and TexSubImage3D are restricted to a specific set of GPUs with
+    TexSubImage1D, TexSubImage2D and TexSubImage3D are restricted to a specific set of GPUs with
 
       void UploadGpuMaskNVX(bitfield mask);
 
-    Buffer object data uploads using the functions BufferStorage, NamedBufferStorage, 
-	BufferSubData and NamedBufferSubData are restricted to a specific set of GPUs with
+    This command also restricts buffer object data uploads using the functions BufferStorage, 
+    NamedBufferStorage, BufferSubData and NamedBufferSubData to the specified set of GPUs.
 
-      void UploadGpuMaskNVX(bitfield mask);
-
+    Further this command also restricts buffer object clears using the functions ClearBufferData,
+    ClearNamedBufferData, ClearBufferSubData and ClearNamedBufferSubData.
+    
     The following errors apply to UploadGpuMaskNVX:
 
     INVALID_VALUE is generated
     * if <mask> is zero,
-    * if <mask> is not zero and <mask> is greater than or equal to 2^n, where n is equal
-    to MULTICAST_GPUS_NV
+    * if <mask> is greater than or equal to 2^n, where n is equal to MULTICAST_GPUS_NV
 
-    If the command does not generate an error, UPLOAD_GPU_MASK_NVX is set to <mask>.  The default
-    value of UPLOAD_GPU_MASK_NVX is (2^n)-1.
+    If the command does not generate an error, UPLOAD_GPU_MASK_NVX is set to <mask>.  
+    
+    The default value of UPLOAD_GPU_MASK_NVX is (2^n)-1.
+
+    If a function restricted by UploadGpuMaskNVX operates on textures or buffer objects
+    with GPU-shared storage type (as opposed to per-GPU storage), UPLOAD_GPU_MASK_NVX is ignored.
 
     Modify Section 20.2 (Multi-GPU Buffer Storage)
 
@@ -123,9 +127,9 @@ Specification by NV_gpu_multicast
     This command behaves equivalently to MulticastCopyBufferSubDataNV, except that it may be
     performed concurrently with commands submitted in the future.
     Fence semaphore objects created with CreateProgressFenceNVX are used for synchronization of one or 
-	multiple copies. 
-	An array of <waitSemaphoreCount> synchronization objects can be specified in the <waitSemaphoresArray>
-	parameter as a pointer to the array of semaphore objects.
+    multiple copies. 
+    An array of <waitSemaphoreCount> synchronization objects can be specified in the <waitSemaphoresArray>
+    parameter as a pointer to the array of semaphore objects.
     The copy will wait for all fence semaphores in the <waitSemaphoreArray> array to be reach or exceed
     their corresponding fence value in <fenceValueArray> before starting the transfer. 
     A signal operation for each of the <signalSemaphoreCount> semaphores in <signalSemaphoresArray> is written
@@ -150,8 +154,8 @@ Specification by NV_gpu_multicast
     This command behaves equivalently to MulticastCopyImageSubDataNV, except that it may be
     performed concurrently with commands submitted in the future. 
     Fence semaphore objects created with CreateProgressFenceNVX are used for synchronization of one or
-	multiple copies. An array of <waitSemaphoreCount> synchronization objects can be specified in the 
-	<waitSemaphoreArray> parameter as a pointer to the array of semaphore objects.
+    multiple copies. An array of <waitSemaphoreCount> synchronization objects can be specified in the 
+    <waitSemaphoreArray> parameter as a pointer to the array of semaphore objects.
     The copy will wait for all fence semaphores in the <waitSemaphoresArray> array to be reach or exceed
     their corresponding fence value in <fenceValueArray> before starting the transfer. 
     A signal operation for each of the <signalSemaphoreCount> semaphores in <signalSemaphoreArray> is written
@@ -205,17 +209,17 @@ Errors
     ---------------------------------
     GetIntegerv and GetInteger64v now accept new tokens as
     described in the "New Tokens" section.
-	
+    
 New State
 
     Additions to Table 23.6 Buffer Object State
                                                    Initial
     Get Value                   Type  Get Command Value  Description               Sec.  Attribute
     -------------------------- ------ ----------- -----  -----------------------   ----  ---------
-    UPLOAD_GPU_MASK_NVX          Z+   GetIntegerv   *    Mask of GPUs that          6.2     -
+    UPLOAD_GPU_MASK_NVX          Z+   GetIntegerv   *    Mask of GPUs that         20.1     -
                                                          restricts buffer data
-														 writes
-    * See section 6.2
+                                                         writes
+    * See section 20.1
 
 
 New Implementation Dependent State
@@ -241,4 +245,5 @@ Revision History
      5    08/15/18  rbiermann updated draft with gl_deviceIndex
      6    04/16/19  rbiermann updated draft with UploadGpuMaskNVX
      7    07/19/19  rbiermann updated draft with modifications of UploadGpuMaskNVX section
+     8    07/23/19  rbiermann updated draft with support of Clear(Named)Buffer(Sub)Data by UploadGpuMaskNVX
 
