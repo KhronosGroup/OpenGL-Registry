@@ -1019,4 +1019,10 @@
 </li>
 <li value=540><a href="extensions/MESA/MESA_framebuffer_flip_y.txt">GL_MESA_framebuffer_flip_y</a>
 </li>
+<li value=541><a href="extensions/NVX/NVX_progress_fence.txt">GL_NVX_progress_fence</a>
+</li>
+<li value=542><a href="extensions/NV/WGL_NV_multigpu_context.txt">WGL_NV_multigpu_context</a>
+</li>
+<li value=543><a href="extensions/NVX/NVX_gpu_multicast2.txt">GL_NVX_gpu_multicast2</a>
+</li>
 </ol>

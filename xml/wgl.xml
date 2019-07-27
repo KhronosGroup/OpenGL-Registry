@@ -1985,5 +1985,14 @@ Registry at
                 <command name="wglWaitForSbcOML"/>
             </require>
         </extension>
+        <extension name="WGL_NV_multigpu_context" supported="wgl">
+            <require>
+                <enum name="WGL_CONTEXT_MULTIGPU_ATTRIB_NV"/>
+                <enum name="WGL_CONTEXT_MULTIGPU_ATTRIB_SINGLE_NV"/>
+                <enum name="WGL_CONTEXT_MULTIGPU_ATTRIB_AFR_NV"/>
+                <enum name="WGL_CONTEXT_MULTIGPU_ATTRIB_MULTICAST_NV"/>
+                <enum name="WGL_CONTEXT_MULTIGPU_ATTRIB_MULTI_DISPLAY_MULTICAST_NV"/>
+            </require>
+        </extension>
     </extensions>
 </registry>
