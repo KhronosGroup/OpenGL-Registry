@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20190524
+#define GL_GLEXT_VERSION 20190605
 
 #include <KHR/khrplatform.h>
 
@@ -9258,6 +9258,11 @@ GLAPI void APIENTRY glGetPerfQueryInfoINTEL (GLuint queryId, GLuint queryNameLen
 #define GL_TEXTURE_1D_STACK_BINDING_MESAX 0x875D
 #define GL_TEXTURE_2D_STACK_BINDING_MESAX 0x875E
 #endif /* GL_MESAX_texture_stack */
+
+#ifndef GL_MESA_framebuffer_flip_y
+#define GL_MESA_framebuffer_flip_y 1
+#define GL_FRAMEBUFFER_FLIP_Y_MESA        0x8BBB
+#endif /* GL_MESA_framebuffer_flip_y */
 
 #ifndef GL_MESA_pack_invert
 #define GL_MESA_pack_invert 1

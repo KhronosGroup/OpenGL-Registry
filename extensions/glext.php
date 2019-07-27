@@ -1017,4 +1017,6 @@
 </li>
 <li value=539><a href="extensions/EXT/EXT_texture_shadow_lod.txt">GL_EXT_texture_shadow_lod</a>
 </li>
+<li value=540><a href="extensions/MESA/MESA_framebuffer_flip_y.txt">GL_MESA_framebuffer_flip_y</a>
+</li>
 </ol>
