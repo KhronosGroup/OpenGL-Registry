@@ -10914,7 +10914,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9547" name="GL_QUERY_RESOURCE_BUFFEROBJECT_NV"/>
         <enum value="0x9548" name="GL_PER_GPU_STORAGE_NV"/>
         <enum value="0x9549" name="GL_MULTICAST_PROGRAMMABLE_SAMPLE_LOCATION_NV"/>
-            <unused start="0x954A" end="0x954C" vendor="NV"/>
+        <enum value="0x954A" name="GL_UPLOAD_GPU_MASK_NVX"/>
+            <unused start="0x954B" end="0x954C" vendor="NV"/>
         <enum value="0x954D" name="GL_CONSERVATIVE_RASTER_MODE_NV"/>
         <enum value="0x954E" name="GL_CONSERVATIVE_RASTER_MODE_POST_SNAP_NV"/>
         <enum value="0x954F" name="GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_TRIANGLES_NV"/>
@@ -11276,6 +11277,48 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <param><ptype>GLuint</ptype> <name>offset</name></param>
+        </command>
+        <command>
+            <proto><ptype>GLuint</ptype> <name>glAsyncCopyBufferSubDataNVX</name></proto>
+            <param><ptype>GLsizei</ptype> <name>waitSemaphoreCount</name></param>
+            <param len="waitSemaphoreCount">const <ptype>GLuint</ptype> *<name>waitSemaphoreArray</name></param>
+            <param len="waitSemaphoreCount">const <ptype>GLuint64</ptype> *<name>fenceValueArray</name></param>
+            <param><ptype>GLuint</ptype> <name>readGpu</name></param>
+            <param><ptype>GLbitfield</ptype> <name>writeGpuMask</name></param>
+            <param><ptype>GLuint</ptype> <name>readBuffer</name></param>
+            <param><ptype>GLuint</ptype> <name>writeBuffer</name></param>
+            <param><ptype>GLintptr</ptype> <name>readOffset</name></param>
+            <param><ptype>GLintptr</ptype> <name>writeOffset</name></param>
+            <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
+            <param><ptype>GLsizei</ptype> <name>signalSemaphoreCount</name></param>
+            <param len="signalSemaphoreCount">const <ptype>GLuint</ptype> *<name>signalSemaphoreArray</name></param>
+            <param len="signalSemaphoreCount">const <ptype>GLuint64</ptype> *<name>signalValueArray</name></param>
+        </command>
+        <command>
+            <proto><ptype>GLuint</ptype> <name>glAsyncCopyImageSubDataNVX</name></proto>
+            <param><ptype>GLsizei</ptype> <name>waitSemaphoreCount</name></param>
+            <param len="waitSemaphoreCount">const <ptype>GLuint</ptype> *<name>waitSemaphoreArray</name></param>
+            <param len="waitSemaphoreCount">const <ptype>GLuint64</ptype> *<name>waitValueArray</name></param>
+            <param><ptype>GLuint</ptype> <name>srcGpu</name></param>
+            <param><ptype>GLbitfield</ptype> <name>dstGpuMask</name></param>
+            <param><ptype>GLuint</ptype> <name>srcName</name></param>
+            <param><ptype>GLenum</ptype> <name>srcTarget</name></param>
+            <param><ptype>GLint</ptype> <name>srcLevel</name></param>
+            <param><ptype>GLint</ptype> <name>srcX</name></param>
+            <param><ptype>GLint</ptype> <name>srcY</name></param>
+            <param><ptype>GLint</ptype> <name>srcZ</name></param>
+            <param><ptype>GLuint</ptype> <name>dstName</name></param>
+            <param><ptype>GLenum</ptype> <name>dstTarget</name></param>
+            <param><ptype>GLint</ptype> <name>dstLevel</name></param>
+            <param><ptype>GLint</ptype> <name>dstX</name></param>
+            <param><ptype>GLint</ptype> <name>dstY</name></param>
+            <param><ptype>GLint</ptype> <name>dstZ</name></param>
+            <param><ptype>GLsizei</ptype> <name>srcWidth</name></param>
+            <param><ptype>GLsizei</ptype> <name>srcHeight</name></param>
+            <param><ptype>GLsizei</ptype> <name>srcDepth</name></param>
+            <param><ptype>GLsizei</ptype> <name>signalSemaphoreCount</name></param>
+            <param len="signalSemaphoreCount">const <ptype>GLuint</ptype> *<name>signalSemaphoreArray</name></param>
+            <param len="signalSemaphoreCount">const <ptype>GLuint64</ptype> *<name>signalValueArray</name></param>
         </command>
         <command>
             <proto>void <name>glAsyncMarkerSGIX</name></proto>
@@ -12540,6 +12583,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glClientAttribDefaultEXT</name></proto>
             <param group="ClientAttribMask"><ptype>GLbitfield</ptype> <name>mask</name></param>
+        </command>
+        <command>
+            <proto>void <name>glClientWaitSemaphoreui64NVX</name></proto>
+            <param><ptype>GLsizei</ptype> <name>fenceObjectCount</name></param>
+            <param len="fenceObjectCount">const <ptype>GLuint</ptype> *<name>semaphoreArray</name></param>
+            <param len="fenceObjectCount">const <ptype>GLuint64</ptype> *<name>fenceValueArray</name></param>
         </command>
         <command>
             <proto group="SyncStatus"><ptype>GLenum</ptype> <name>glClientWaitSync</name></proto>
@@ -14288,6 +14337,9 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCreateProgramPipelines</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
             <param len="n"><ptype>GLuint</ptype> *<name>pipelines</name></param>
+        </command>
+        <command>
+            <proto><ptype>GLuint</ptype> <name>glCreateProgressFenceNVX</name></proto>
         </command>
         <command>
             <proto>void <name>glCreateQueries</name></proto>
@@ -23006,6 +23058,27 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> *<name>params</name></param>
         </command>
         <command>
+            <proto>void <name>glMulticastScissorArrayvNVX</name></proto>
+            <param><ptype>GLuint</ptype> <name>gpu</name></param>
+            <param><ptype>GLuint</ptype> <name>first</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
+            <param len="COMPSIZE(count)">const <ptype>GLint</ptype> *<name>v</name></param>
+        </command>
+        <command>
+            <proto>void <name>glMulticastViewportArrayvNVX</name></proto>
+            <param><ptype>GLuint</ptype> <name>gpu</name></param>
+            <param><ptype>GLuint</ptype> <name>first</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
+            <param len="COMPSIZE(count)">const <ptype>GLfloat</ptype> *<name>v</name></param>
+        </command>
+        <command>
+            <proto>void <name>glMulticastViewportPositionWScaleNVX</name></proto>
+            <param><ptype>GLuint</ptype> <name>gpu</name></param>
+            <param><ptype>GLuint</ptype> <name>index</name></param>
+            <param><ptype>GLfloat</ptype> <name>xcoeff</name></param>
+            <param><ptype>GLfloat</ptype> <name>ycoeff</name></param>
+        </command>
+        <command>
             <proto>void <name>glMulticastWaitSyncNV</name></proto>
             <param><ptype>GLuint</ptype> <name>signalGpu</name></param>
             <param><ptype>GLbitfield</ptype> <name>waitGpuMask</name></param>
@@ -27213,6 +27286,13 @@ typedef unsigned int GLhandleARB;
             <param group="TextureLayout" len="COMPSIZE(numTextureBarriers)">const <ptype>GLenum</ptype> *<name>dstLayouts</name></param>
         </command>
         <command>
+            <proto>void <name>glSignalSemaphoreui64NVX</name></proto>
+            <param><ptype>GLuint</ptype> <name>signalGpu</name></param>
+            <param><ptype>GLsizei</ptype> <name>fenceObjectCount</name></param>
+            <param len="fenceObjectCount">const <ptype>GLuint</ptype> *<name>semaphoreArray</name></param>
+            <param len="fenceObjectCount">const <ptype>GLuint64</ptype> *<name>fenceValueArray</name></param>
+        </command>
+        <command>
             <proto>void <name>glSpecializeShader</name></proto>
             <param><ptype>GLuint</ptype> <name>shader</name></param>
             <param>const <ptype>GLchar</ptype> *<name>pEntryPoint</name></param>
@@ -30255,6 +30335,10 @@ typedef unsigned int GLhandleARB;
             <param group="PreserveModeATI"><ptype>GLenum</ptype> <name>preserve</name></param>
         </command>
         <command>
+            <proto>void <name>glUploadGpuMaskNVX</name></proto>
+            <param><ptype>GLbitfield</ptype> <name>mask</name></param>
+        </command>
+        <command>
             <proto>void <name>glUseProgram</name></proto>
             <param><ptype>GLuint</ptype> <name>program</name></param>
         </command>
@@ -32836,6 +32920,13 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>numTextureBarriers</name></param>
             <param len="COMPSIZE(numTextureBarriers)">const <ptype>GLuint</ptype> *<name>textures</name></param>
             <param group="TextureLayout" len="COMPSIZE(numTextureBarriers)">const <ptype>GLenum</ptype> *<name>srcLayouts</name></param>
+        </command>
+        <command>
+            <proto>void <name>glWaitSemaphoreui64NVX</name></proto>
+            <param><ptype>GLuint</ptype> <name>waitGpu</name></param>
+            <param><ptype>GLsizei</ptype> <name>fenceObjectCount</name></param>
+            <param len="fenceObjectCount">const <ptype>GLuint</ptype> *<name>semaphoreArray</name></param>
+            <param len="fenceObjectCount">const <ptype>GLuint64</ptype> *<name>fenceValueArray</name></param>
         </command>
         <command>
             <proto>void <name>glWaitSync</name></proto>
@@ -47826,7 +47917,7 @@ typedef unsigned int GLhandleARB;
         </extension>
         <extension name="GL_NVX_gpu_multicast2" supported="gl">
             <require>
-                <enum name="GL_UPLOAD_GPU_MASK_NV"/>
+                <enum name="GL_UPLOAD_GPU_MASK_NVX"/>
                 <command name="glUploadGpuMaskNVX"/>
                 <command name="glMulticastViewportArrayvNVX"/>
                 <command name="glMulticastViewportPositionWScaleNVX"/>
