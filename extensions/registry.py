@@ -2935,6 +2935,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/KHR/KHR_robustness.txt',
     },
+    'GL_KHR_shader_subgroup' : {
+        'arbnumber' : 196,
+        'esnumber' : 321,
+        'flags' : { 'public' },
+        'url' : 'extensions/KHR/KHR_shader_subgroup.txt',
+    },
     'GL_KHR_texture_compression_astc_hdr' : {
         'arbnumber' : 118,
         'esnumber' : 117,
@@ -3743,6 +3749,12 @@ registry = {
         'number' : 448,
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_shader_thread_shuffle.txt',
+    },
+    'GL_NV_shader_subgroup_partitioned' : {
+        'number' : 544,
+        'esnumber' : 322,
+        'flags' : { 'public' },
+        'url' : 'extensions/NV/NV_shader_subgroup_partitioned.txt',
     },
     'GL_NV_shading_rate_image' : {
         'number' : 531,

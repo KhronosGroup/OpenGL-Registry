@@ -1025,4 +1025,6 @@
 </li>
 <li value=543><a href="extensions/NVX/NVX_gpu_multicast2.txt">GL_NVX_gpu_multicast2</a>
 </li>
+<li value=544><a href="extensions/NV/NV_shader_subgroup_partitioned.txt">GL_NV_shader_subgroup_partitioned</a>
+</li>
 </ol>

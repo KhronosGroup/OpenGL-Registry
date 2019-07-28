@@ -2990,6 +2990,18 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_ALL_SHADER_BITS_EXT"/>
         </group>
 
+        <group name="SubgroupSupportedFeatures">
+            <enum name="GL_SUBGROUP_FEATURE_BASIC_BIT_KHR"/>
+            <enum name="GL_SUBGROUP_FEATURE_VOTE_BIT_KHR"/>
+            <enum name="GL_SUBGROUP_FEATURE_ARITHMETIC_BIT_KHR"/>
+            <enum name="GL_SUBGROUP_FEATURE_BALLOT_BIT_KHR"/>
+            <enum name="GL_SUBGROUP_FEATURE_SHUFFLE_BIT_KHR"/>
+            <enum name="GL_SUBGROUP_FEATURE_SHUFFLE_RELATIVE_BIT_KHR"/>
+            <enum name="GL_SUBGROUP_FEATURE_CLUSTERED_BIT_KHR"/>
+            <enum name="GL_SUBGROUP_FEATURE_QUAD_BIT_KHR"/>
+            <enum name="GL_SUBGROUP_FEATURE_PARTITIONED_BIT_NV"/>
+        </group>
+
         <group name="VertexPointerType">
             <enum name="GL_DOUBLE"/>
             <enum name="GL_FLOAT"/>
@@ -4414,6 +4426,18 @@ typedef unsigned int GLhandleARB;
         <enum value="0x00000080" name="GL_TASK_SHADER_BIT_NV"/>
         <enum value="0xFFFFFFFF" name="GL_ALL_SHADER_BITS"/>
         <enum value="0xFFFFFFFF" name="GL_ALL_SHADER_BITS_EXT"/>
+    </enums>
+
+    <enums namespace="GL" group="SubgroupSupportedFeatures" type="bitmask">
+        <enum value="0x00000001" name="GL_SUBGROUP_FEATURE_BASIC_BIT_KHR"/>
+        <enum value="0x00000002" name="GL_SUBGROUP_FEATURE_VOTE_BIT_KHR"/>
+        <enum value="0x00000004" name="GL_SUBGROUP_FEATURE_ARITHMETIC_BIT_KHR"/>
+        <enum value="0x00000008" name="GL_SUBGROUP_FEATURE_BALLOT_BIT_KHR"/>
+        <enum value="0x00000010" name="GL_SUBGROUP_FEATURE_SHUFFLE_BIT_KHR"/>
+        <enum value="0x00000020" name="GL_SUBGROUP_FEATURE_SHUFFLE_RELATIVE_BIT_KHR"/>
+        <enum value="0x00000040" name="GL_SUBGROUP_FEATURE_CLUSTERED_BIT_KHR"/>
+        <enum value="0x00000080" name="GL_SUBGROUP_FEATURE_QUAD_BIT_KHR"/>
+        <enum value="0x00000100" name="GL_SUBGROUP_FEATURE_PARTITIONED_BIT_NV"/>
     </enums>
 
     <!-- Bitmasks defined by vendor extensions -->
@@ -10893,7 +10917,10 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" start="0x9530" end="0x962F" vendor="NV" comment="Khronos bug 12977">
         <enum value="0x9530" name="GL_LAYOUT_DEPTH_READ_ONLY_STENCIL_ATTACHMENT_EXT"/>
         <enum value="0x9531" name="GL_LAYOUT_DEPTH_ATTACHMENT_STENCIL_READ_ONLY_EXT"/>
-            <unused start="0x9532" end="0x9535" vendor="NV"/>
+        <enum value="0x9532" name="GL_SUBGROUP_SIZE_KHR"/>
+        <enum value="0x9533" name="GL_SUBGROUP_SUPPORTED_STAGES_KHR"/>
+        <enum value="0x9534" name="GL_SUBGROUP_SUPPORTED_FEATURES_KHR"/>
+        <enum value="0x9535" name="GL_SUBGROUP_QUAD_ALL_STAGES_KHR"/>
         <enum value="0x9536" name="GL_MAX_MESH_TOTAL_MEMORY_SIZE_NV"/>
         <enum value="0x9537" name="GL_MAX_TASK_TOTAL_MEMORY_SIZE_NV"/>
         <enum value="0x9538" name="GL_MAX_MESH_OUTPUT_VERTICES_NV"/>
@@ -46975,6 +47002,22 @@ typedef unsigned int GLhandleARB;
                 <command name="glGetnUniformuivKHR"/>
             </require>
         </extension>
+        <extension name="GL_KHR_shader_subgroup" supported="gl|glcore|gles2">
+            <require>
+                <enum name="GL_SUBGROUP_SIZE_KHR"/>
+                <enum name="GL_SUBGROUP_SUPPORTED_STAGES_KHR"/>
+                <enum name="GL_SUBGROUP_SUPPORTED_FEATURES_KHR"/>
+                <enum name="GL_SUBGROUP_QUAD_ALL_STAGES_KHR"/>
+                <enum name="GL_SUBGROUP_FEATURE_BASIC_BIT_KHR"/>
+                <enum name="GL_SUBGROUP_FEATURE_VOTE_BIT_KHR"/>
+                <enum name="GL_SUBGROUP_FEATURE_ARITHMETIC_BIT_KHR"/>
+                <enum name="GL_SUBGROUP_FEATURE_BALLOT_BIT_KHR"/>
+                <enum name="GL_SUBGROUP_FEATURE_SHUFFLE_BIT_KHR"/>
+                <enum name="GL_SUBGROUP_FEATURE_SHUFFLE_RELATIVE_BIT_KHR"/>
+                <enum name="GL_SUBGROUP_FEATURE_CLUSTERED_BIT_KHR"/>
+                <enum name="GL_SUBGROUP_FEATURE_QUAD_BIT_KHR"/>
+            </require>
+        </extension>
         <extension name="GL_KHR_texture_compression_astc_hdr" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_COMPRESSED_RGBA_ASTC_4x4_KHR"/>
@@ -48594,6 +48637,11 @@ typedef unsigned int GLhandleARB;
         </extension>
         <extension name="GL_NV_shader_noperspective_interpolation" supported="gles2"/>
         <extension name="GL_NV_shader_storage_buffer_object" supported="gl"/>
+        <extension name="GL_NV_shader_subgroup_partitioned" supported="gl|glcore|gles2">
+            <require>
+                <enum name="GL_SUBGROUP_FEATURE_PARTITIONED_BIT_NV"/>
+            </require>
+        </extension>
         <extension name="GL_NV_shader_texture_footprint" supported="gl|glcore|gles2"/>
         <extension name="GL_NV_shader_thread_group" supported="gl|glcore">
             <require>

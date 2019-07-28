@@ -665,4 +665,8 @@
 </li>
 <li value=320><a href="extensions/EXT/EXT_texture_shadow_lod.txt">GL_EXT_texture_shadow_lod</a>
 </li>
+<li value=321><a href="extensions/KHR/KHR_shader_subgroup.txt">GL_KHR_shader_subgroup</a>
+</li>
+<li value=322><a href="extensions/NV/NV_shader_subgroup_partitioned.txt">GL_NV_shader_subgroup_partitioned</a>
+</li>
 </ol>
