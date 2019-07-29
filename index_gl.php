@@ -249,7 +249,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
     today. </p>
 
 <h2> <a name="arbextspecs"></a>
-     ARB Extensions by number</h2>
+     ARB and KHR Extensions by number</h2>
 
 <?php include("extensions/arbext.php"); ?>
 
