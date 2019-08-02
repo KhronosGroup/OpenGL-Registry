@@ -33430,6 +33430,18 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glSignalVkFenceNV</name></proto>
             <param><ptype>GLuint64</ptype> <name>vkFence</name></param>
         </command>
+         <command>
+            <proto>void <name>glFramebufferParameteriMESA</name></proto>
+            <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="FramebufferParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param><ptype>GLint</ptype> <name>param</name></param>
+        </command>
+        <command>
+            <proto>void <name>glGetFramebufferParameterivMESA</name></proto>
+            <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="FramebufferAttachmentParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
+        </command>
 
     </commands>
 
@@ -47103,6 +47115,8 @@ typedef unsigned int GLhandleARB;
         <extension name="GL_MESA_framebuffer_flip_y" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_FRAMEBUFFER_FLIP_Y_MESA"/>
+                <command name="glFramebufferParameteriMESA"/>
+                <command name="glGetFramebufferParameterivMESA"/>
             </require>
         </extension>
         <extension name="GL_MESA_pack_invert" supported="gl">
