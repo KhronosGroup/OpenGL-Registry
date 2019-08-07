@@ -21,9 +21,9 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <ul>
 <li> <b><a href="docs/update_policy.php">Working Group Policy</a></b> for
      when Specifications and extensions will be updated. </li>
-<li> OpenGL SC 2.0
+<li> OpenGL SC 2.0.1
      <a href="specs/sc/sc_spec_2.0.1.pdf">
-     Full Specification </a> (version 2.0.1, July 24, 2019). </li>
+     Full Specification </a> (July 24, 2019). </li>
 <li> <tt><a href="api/GLSC2/glsc2.h"> &lt;GLSC2/glsc2.h&gt; </a></tt>
      OpenGL SC 2.0 Header File. </li>
 <li> <tt><a href="api/GLSC2/glsc2ext.h"> &lt;GLSC2/glsc2ext.h&gt; </a></tt>
@@ -44,9 +44,11 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <p> OpenGL SC 2.0 </p>
 
+<ul>
 <li> OpenGL SC 2.0
      <a href="specs/sc/sc_spec_2.0.pdf">
      Full Specification </a> (April 19, 2016). </li>
+</ul>
 
 <p> OpenGL SC 1.0.1 </p>
 
