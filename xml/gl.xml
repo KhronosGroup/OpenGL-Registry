@@ -79,7 +79,14 @@ typedef unsigned int GLhandleARB;
         <type>typedef void (<apientry/> *<name>GLVULKANPROCNV</name>)(void);</type>
     </types>
 
-    <!-- SECTION: GL parameter class type definitions. -->
+    <!-- SECTION: GL parameter class type definitions.
+         The groups are intended to contain all the possible legal values
+         for corresponding function parameters, but it is likely that many
+         of the groups are out of date relative to current OpenGL and OpenGL
+         ES specifications, and the many extensions to those specifications.
+         We welcome assistance from the community in making the enum groups
+         more complete.
+    -->
 
     <groups>
         <group name="TextureNormalModeEXT">
