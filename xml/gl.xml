@@ -86,6 +86,23 @@ typedef unsigned int GLhandleARB;
             <enum name="">
         </group>
 
+        <group name="MatrixIndexPointerTypeARB">
+            <enum name="GL_UNSIGNED_BYTE_ARB">
+            <enum name="GL_UNSIGNED_SHORT_ARB">
+            <enum name="GL_UNSIGNED_INT_ARB">
+        </group>
+
+        <group name="WeightPointerTypeARB">
+            <enum name="GL_BYTE_ARB">
+            <enum name="GL_UNSIGNED_BYTE_ARB">
+            <enum name="GL_SHORT_ARB">
+            <enum name="GL_UNSIGNED_SHORT_ARB">
+            <enum name="GL_INT_ARB">
+            <enum name="GL_UNSIGNED_INT_ARB">
+            <enum name="GL_FLOAT_ARB">
+            <enum name="GL_DOUBLE_ARB">
+        </group>
+
         <group name="CullParameterEXT">
             <enum name="GL_CULL_VERTEX_EYE_POSITION_EXT">
             <enum name="GL_CULL_VERTEX_OBJECT_POSITION_EXT">
