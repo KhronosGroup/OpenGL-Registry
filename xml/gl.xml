@@ -86,6 +86,10 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_FILL_NV">
         </group>
 
+        <group name="ProgramTarget">
+            <enum name="GL_TEXT_FRAGMENT_SHADER">
+        </group>
+
         <group name="CombinerStageNV">
             <enum name="GL_COMBINER0_NV">
             <enum name="GL_COMBINER1_NV">
