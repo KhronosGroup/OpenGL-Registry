@@ -86,6 +86,16 @@ typedef unsigned int GLhandleARB;
             <enum name="">
         </group>
 
+        <group name="">
+            <enum name="">
+        </group>
+
+        <group name="ElementPointerTypeATI">
+            <enum name="GL_UNSIGNED_BYTE_ATI">
+            <enum name="GL_UNSIGNED_SHORT_ATI">
+            <enum name="GL_UNSIGNED_INT_ATI">
+        </group>
+
         <group name="MatrixIndexPointerTypeARB">
             <enum name="GL_UNSIGNED_BYTE_ARB">
             <enum name="GL_UNSIGNED_SHORT_ARB">
