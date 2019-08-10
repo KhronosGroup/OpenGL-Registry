@@ -86,6 +86,12 @@ typedef unsigned int GLhandleARB;
             <enum name="">
         </group>
 
+        <group name="ReplacementCodeTypeSUN">
+            <enum name="GL_UNSIGNED_BYTE_SUN">
+            <enum name="GL_UNSIGNED_SHORT_SUN">
+            <enum name="GL_UNSIGNED_INT_SUN">
+        </group>
+
         <group name="SecondaryColorPointerTypeIBM">
             <enum name="GL_SHORT_IBM">
             <enum name="GL_INT_IBM">
