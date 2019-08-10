@@ -86,6 +86,13 @@ typedef unsigned int GLhandleARB;
             <enum name="">
         </group>
 
+        <group name="SecondaryColorPointerTypeIBM">
+            <enum name="GL_SHORT_IBM">
+            <enum name="GL_INT_IBM">
+            <enum name="GL_FLOAT_IBM">
+            <enum name="GL_DOUBLE_IBM">
+        </group>
+
         <group name="FragmentLightNameSGIX">
             <enum name="GL_FRAGMENT_LIGHT0_SGIX">
             <enum name="GL_FRAGMENT_LIGHT1_SGIX">
