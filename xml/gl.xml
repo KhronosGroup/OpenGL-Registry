@@ -86,8 +86,33 @@ typedef unsigned int GLhandleARB;
             <enum name="">
         </group>
 
-        <group name="">
-            <enum name="">
+        <group name="FragmentLightNameSGIX">
+            <enum name="GL_FRAGMENT_LIGHT0_SGIX">
+            <enum name="GL_FRAGMENT_LIGHT1_SGIX">
+            <enum name="GL_FRAGMENT_LIGHT2_SGIX">
+            <enum name="GL_FRAGMENT_LIGHT3_SGIX">
+            <enum name="GL_FRAGMENT_LIGHT4_SGIX">
+            <enum name="GL_FRAGMENT_LIGHT5_SGIX">
+            <enum name="GL_FRAGMENT_LIGHT6_SGIX">
+            <enum name="GL_FRAGMENT_LIGHT7_SGIX">
+        </group>
+
+        <group name="FragmentLightParameterSGIX">
+            <enum name="GL_SPOT_EXPONENT_SGIX">
+            <enum name="GL_SPOT_CUTOFF_SGIX">
+            <enum name="GL_CONSTANT_ATTENUATION_SGIX">
+            <enum name="GL_LINEAR_ATTENUATION_SGIX">
+            <enum name="GL_QUADRATIC_ATTENUATION_SGIX">
+            <enum name="GL_AMBIENT_SGIX">
+            <enum name="GL_DIFFUSE_SGIX">
+            <enum name="GL_SPECULAR_SGIX">
+            <enum name="GL_POSITION_SGIX">
+            <enum name="GL_SPOT_DIRECTION_SGIX">
+            <enum name="GL_SPOT_EXPONENT_SGIX">
+            <enum name="GL_SPOT_CUTOFF_SGIX">
+            <enum name="GL_CONSTANT_ATTENUATION_SGIX">
+            <enum name="GL_LINEAR_ATTENUATION_SGIX">
+            <enum name="GL_QUADRATIC_ATTENUATION_SGIX">
         </group>
 
         <group name="ElementPointerTypeATI">
