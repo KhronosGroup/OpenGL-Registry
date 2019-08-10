@@ -86,6 +86,35 @@ typedef unsigned int GLhandleARB;
             <enum name="">
         </group>
 
+        <group name="ScalarType">
+            <enum name="GL_UNSIGNED_BYTE">
+            <enum name="GL_UNSIGNED_SHORT">
+            <enum name="GL_UNSIGNED_INT">
+        </group>
+
+        <group name="VertexShaderTextureUnitParameter">
+            <enum name="GL_CURRENT_TEXTURE_COORDS">
+            <enum name="GL_TEXTURE_MATRIX">
+        </group>
+
+        <group name="ProgramStringProperty">
+            <enum name="GL_PROGRAM_STRING"/>
+        </group>
+
+        <group name="ProgramFormat">
+            <enum name="GL_PROGRAM_FORMAT_ASCII">
+        </group>
+
+        <group name="PathColorFormat">
+            <enum name="GL_NONE">
+            <enum name="GL_LUMINANCE">
+            <enum name="GL_ALPHA">
+            <enum name="GL_INTENSITY">
+            <enum name="GL_LUMINANCE_ALPHA">
+            <enum name="GL_RGB">
+            <enum name="GL_RGBA">
+        </group>
+
         <group name="ReplacementCodeTypeSUN">
             <enum name="GL_UNSIGNED_BYTE_SUN">
             <enum name="GL_UNSIGNED_SHORT_SUN">
