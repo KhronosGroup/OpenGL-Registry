@@ -82,8 +82,29 @@ typedef unsigned int GLhandleARB;
     <!-- SECTION: GL parameter class type definitions. -->
 
     <groups>
-        <group name="">
-            <enum name="">
+        <group name="EvalMapsModeNV">
+            <enum name="GL_FILL_NV">
+        </group>
+
+        <group name="CombinerStageNV">
+            <enum name="GL_COMBINER0_NV">
+            <enum name="GL_COMBINER1_NV">
+            <enum name="GL_COMBINER2_NV">
+            <enum name="GL_COMBINER3_NV">
+            <enum name="GL_COMBINER4_NV">
+            <enum name="GL_COMBINER5_NV">
+            <enum name="GL_COMBINER6_NV">
+            <enum name="GL_COMBINER7_NV">
+        </group>
+
+        <group name="CombinerPortionNV">
+            <enum name="GL_RGB_NV">
+            <enum name="GL_ALPHA_NV">
+        </group>
+
+        <group name="MapTypeNV">
+            <enum name="GL_FLOAT_NV">
+            <enum name="GL_DOUBLE_NV">
         </group>
 
         <group name="ScalarType">
