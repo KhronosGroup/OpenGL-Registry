@@ -128,8 +128,8 @@ New Procedures and Functions
     void DrawElementsInstancedBaseVertex(enum mode, sizei count,
          enum type, const void *indices, sizei primcount, int basevertex);
 
-    void MultiDrawElementsBaseVertex(enum mode, sizei *count, enum type,
-         void **indices, sizei primcount, int *basevertex)
+    void MultiDrawElementsBaseVertex(enum mode, const sizei *count, enum type,
+         const void *const *indices, sizei primcount, const int *basevertex)
 
 New Tokens
 
