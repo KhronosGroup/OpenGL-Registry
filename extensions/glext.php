@@ -1027,4 +1027,6 @@
 </li>
 <li value=544><a href="extensions/NV/NV_shader_subgroup_partitioned.txt">GL_NV_shader_subgroup_partitioned</a>
 </li>
+<li value=545><a href="extensions/NV/GLX_NV_multigpu_context.txt">GLX_NV_multigpu_context</a>
+</li>
 </ol>
