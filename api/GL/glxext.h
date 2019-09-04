@@ -34,7 +34,7 @@ extern "C" {
 **   https://github.com/KhronosGroup/OpenGL-Registry
 */
 
-#define GLX_GLXEXT_VERSION 20190728
+#define GLX_GLXEXT_VERSION 20190822
 
 /* Generated C header for:
  * API: glx
@@ -554,6 +554,15 @@ Bool glXDelayBeforeSwapNV (Display *dpy, GLXDrawable drawable, GLfloat seconds);
 #define GLX_NV_float_buffer 1
 #define GLX_FLOAT_COMPONENTS_NV           0x20B0
 #endif /* GLX_NV_float_buffer */
+
+#ifndef GLX_NV_multigpu_context
+#define GLX_NV_multigpu_context 1
+#define GLX_CONTEXT_MULTIGPU_ATTRIB_NV    0x20AA
+#define GLX_CONTEXT_MULTIGPU_ATTRIB_SINGLE_NV 0x20AB
+#define GLX_CONTEXT_MULTIGPU_ATTRIB_AFR_NV 0x20AC
+#define GLX_CONTEXT_MULTIGPU_ATTRIB_MULTICAST_NV 0x20AD
+#define GLX_CONTEXT_MULTIGPU_ATTRIB_MULTI_DISPLAY_MULTICAST_NV 0x20AE
+#endif /* GLX_NV_multigpu_context */
 
 #ifndef GLX_NV_multisample_coverage
 #define GLX_NV_multisample_coverage 1
