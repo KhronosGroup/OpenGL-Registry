@@ -23,8 +23,8 @@ Status
 
 Version
 
-    Last Modified Date:     February 7, 2019
-    NVIDIA Revision:        4
+    Last Modified Date:     September 5, 2019
+    NVIDIA Revision:        5
 
 Number
 
@@ -814,7 +814,7 @@ New Implementation Dependent State
     +------------------------------------------+-----------+---------------+---------------------+-----------------------------------------------------------------------+--------+
     | Get Value                                | Type      | Get Command   | Minimum Value       | Description                                                           | Sec.   |
     +------------------------------------------+-----------+---------------+---------------------+-----------------------------------------------------------------------+--------+
-    | MAX_DRAW_MESH_TASKS_COUNT_NV             | Z+        | GetIntegerv   | 2^32 - 1            | Maximum number of work groups that may be drawn by a single           | X.6    |
+    | MAX_DRAW_MESH_TASKS_COUNT_NV             | Z+        | GetIntegerv   | 2^16 - 1            | Maximum number of work groups that may be drawn by a single           | X.6    |
     |                                          |           |               |                     | draw mesh tasks command                                               |        |
     | MESH_OUTPUT_PER_VERTEX_GRANULARITY_NV    | Z+        | GetIntegerv   | -                   | Per-vertex output allocation granularity for mesh shaders             | X.3    |
     | MESH_OUTPUT_PER_PRIMITIVE_GRANULARITY_NV | Z+        | GetIntegerv   | -                   | Per-primitive output allocation granularity for mesh shaders          | X.3    |
@@ -1097,6 +1097,9 @@ Issues
     Also, please refer to issues in the GLSL extension specification.
 
 Revision History
+
+    Revision 5 (pdaniell)
+    - Fix minimum implementation limit of MAX_DRAW_MESH_TASKS_COUNT_NV.
 
     Revision 4 (pknowles)
     - Add ES interactions.
