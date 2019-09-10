@@ -40,8 +40,8 @@ Status
 
 Version
 
-    Last Modified Date:  August 2, 2009
-    Version:             3
+    Last Modified Date:  August 22, 2019
+    Version:             4
 
 Number
 
@@ -120,16 +120,16 @@ Overview
 New Procedures and Functions
 
     void DrawElementsBaseVertex(enum mode, sizei count, enum type,
-         void *indices, int basevertex);
+         const void *indices, int basevertex);
 
     void DrawRangeElementsBaseVertex(enum mode, uint start, uint end,
-         sizei count, enum type, void *indices, int basevertex);
+         sizei count, enum type, const void *indices, int basevertex);
 
     void DrawElementsInstancedBaseVertex(enum mode, sizei count,
-         enum type, const void *indices, sizei primcount, int basevertex);
+         enum type, const void *indices, sizei instancecount, int basevertex);
 
-    void MultiDrawElementsBaseVertex(enum mode, sizei *count, enum type,
-         void **indices, sizei primcount, int *basevertex)
+    void MultiDrawElementsBaseVertex(enum mode, const sizei *count, enum type,
+         const void *const *indices, sizei drawcount, const int *basevertex)
 
 New Tokens
 
@@ -147,13 +147,13 @@ Additions to Chapter 2 of the OpenGL 3.1 Specification (OpenGL Operation)
 
     "The commands
       void DrawElementsBaseVertex(enum mode, sizei count, enum type,
-           void *indices, int basevertex);
+           const void *indices, int basevertex);
 
       void DrawRangeElementsBaseVertex(enum mode, uint start, uint end,
-           sizei count, enum type, void *indices, int basevertex);
+           sizei count, enum type, const void *indices, int basevertex);
 
       void DrawElementsInstancedBaseVertex(enum mode, sizei count,
-           enum type, const void *indices, sizei primcount, int basevertex);
+           enum type, const void *indices, sizei instancecount, int basevertex);
 
     are equivalent to the commands with the same base name (without the
     "BaseVertex" suffix) except that the <i>th element transferred by
@@ -171,14 +171,14 @@ Additions to Chapter 2 of the OpenGL 3.1 Specification (OpenGL Operation)
 
     The command
 
-      void MultiDrawElementsBaseVertex(enum mode, sizei *count,
-           enum type, void **indices, sizei primcount, int *basevertex);
+      void MultiDrawElementsBaseVertex(enum mode, const sizei *count,
+           enum type, const void *const *indices, sizei drawcount, const int *basevertex);
 
     behaves identically to DrawElementsBaseVertex except that
-    <primcount> separate lists of elements are specified instead. It has
+    <drawcount> separate lists of elements are specified instead. It has
     the same effect as:
 
-      for (i = 0; i < primcount; i++) {
+      for (i = 0; i < drawcount; i++) {
         if (count[i] > 0)
           DrawElementsBaseVertex(mode, count[i], type, indices[i],
                                  basevertex[i]);
@@ -468,3 +468,4 @@ Revision History
      2     7/21/09  dgkoch     resync language with 20090630 3.2 spec
      3     8/02/09  Jon Leech  Reformat to 80 columns and assign ARB
                                extension number.
+     4     8/22/19  N Stewart  Parameter naming and const aligned to 4.6 core spec.

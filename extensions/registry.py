@@ -5544,4 +5544,10 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/WGL_NV_multigpu_context.txt',
     },
+    'GLX_NV_multigpu_context' : {
+        'number' : 545,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/GLX_NV_multigpu_context.txt',
+    },
 }
