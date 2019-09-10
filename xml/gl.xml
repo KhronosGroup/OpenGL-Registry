@@ -86,10 +86,10 @@ typedef unsigned int GLhandleARB;
          ES specifications, and the many extensions to those specifications.
          As such, they may not be a reliable source for enumeration info.
 
-         We welcome assistance from the community in making the enum groups
-         more complete. Khronos does not use the enum group information,
-         and the OpenGL Working Group does not have internal resources to
-         bring it up to date.
+         We welcome assistance from the community in achieving and
+         maintaining the completeness of the enum groups. Khronos does not
+         use the enum group information, and the OpenGL Working Group does
+         not have internal resources to bring it up to date.
     -->
 
     <groups>
