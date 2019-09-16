@@ -1801,6 +1801,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_EGL_image_storage.txt',
     },
+    'GL_EXT_EGL_sync' : {
+        'number' : 546,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/EXT/EXT_EGL_sync.txt',
+    },
     'GL_EXT_memory_object' : {
         'number' : 503,
         'esnumber' : 280,

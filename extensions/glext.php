@@ -1029,4 +1029,6 @@
 </li>
 <li value=545><a href="extensions/NV/GLX_NV_multigpu_context.txt">GLX_NV_multigpu_context</a>
 </li>
+<li value=546><a href="extensions/EXT/EXT_EGL_sync.txt">GL_EXT_EGL_sync</a>
+</li>
 </ol>

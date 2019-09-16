@@ -4026,6 +4026,10 @@ GLAPI void APIENTRY glEGLImageTargetTextureStorageEXT (GLuint texture, GLeglImag
 #endif
 #endif /* GL_EXT_EGL_image_storage */
 
+#ifndef GL_EXT_EGL_sync
+#define GL_EXT_EGL_sync 1
+#endif /* GL_EXT_EGL_sync */
+
 #ifndef GL_EXT_debug_label
 #define GL_EXT_debug_label 1
 #define GL_PROGRAM_PIPELINE_OBJECT_EXT    0x8A4F
