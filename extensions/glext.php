@@ -1017,4 +1017,18 @@
 </li>
 <li value=539><a href="extensions/EXT/EXT_texture_shadow_lod.txt">GL_EXT_texture_shadow_lod</a>
 </li>
+<li value=540><a href="extensions/MESA/MESA_framebuffer_flip_y.txt">GL_MESA_framebuffer_flip_y</a>
+</li>
+<li value=541><a href="extensions/NVX/NVX_progress_fence.txt">GL_NVX_progress_fence</a>
+</li>
+<li value=542><a href="extensions/NV/WGL_NV_multigpu_context.txt">WGL_NV_multigpu_context</a>
+</li>
+<li value=543><a href="extensions/NVX/NVX_gpu_multicast2.txt">GL_NVX_gpu_multicast2</a>
+</li>
+<li value=544><a href="extensions/NV/NV_shader_subgroup_partitioned.txt">GL_NV_shader_subgroup_partitioned</a>
+</li>
+<li value=545><a href="extensions/NV/GLX_NV_multigpu_context.txt">GLX_NV_multigpu_context</a>
+</li>
+<li value=546><a href="extensions/EXT/EXT_EGL_sync.txt">GL_EXT_EGL_sync</a>
+</li>
 </ol>

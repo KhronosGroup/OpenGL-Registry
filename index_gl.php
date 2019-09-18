@@ -61,7 +61,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
          Compatibility Profile Specification with changes marked </a>
          </li>
     </ul> </li>
-<li> OpenGL Shading Language 4.60 Specification (December 12, 2018)
+<li> OpenGL Shading Language 4.60 Specification (July 10, 2019)
      <a href="specs/gl/GLSLangSpec.4.60.html"> (HTML) </a> </li>
      <a href="specs/gl/GLSLangSpec.4.60.pdf"> (PDF) </a> </li>
 
@@ -249,7 +249,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
     today. </p>
 
 <h2> <a name="arbextspecs"></a>
-     ARB Extensions by number</h2>
+     ARB and KHR Extensions by number</h2>
 
 <?php include("extensions/arbext.php"); ?>
 

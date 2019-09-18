@@ -1801,6 +1801,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_EGL_image_storage.txt',
     },
+    'GL_EXT_EGL_sync' : {
+        'number' : 546,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/EXT/EXT_EGL_sync.txt',
+    },
     'GL_EXT_memory_object' : {
         'number' : 503,
         'esnumber' : 280,
@@ -2935,6 +2941,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/KHR/KHR_robustness.txt',
     },
+    'GL_KHR_shader_subgroup' : {
+        'arbnumber' : 196,
+        'esnumber' : 321,
+        'flags' : { 'public' },
+        'url' : 'extensions/KHR/KHR_shader_subgroup.txt',
+    },
     'GL_KHR_texture_compression_astc_hdr' : {
         'arbnumber' : 118,
         'esnumber' : 117,
@@ -2967,6 +2979,7 @@ registry = {
         'url' : 'extensions/MESA/GLX_MESA_copy_sub_buffer.txt',
     },
     'GL_MESA_framebuffer_flip_y' : {
+        'number' : 540,
         'esnumber' : 302,
         'flags' : { 'public' },
         'supporters' : { 'MESA' },
@@ -3421,6 +3434,18 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_gpu_multicast.txt',
     },
+    'GL_NVX_gpu_multicast2' : {
+        'number' : 543,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NVX/NVX_gpu_multicast2.txt',
+    },
+    'GL_NVX_progress_fence' : {
+        'number' : 541,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NVX/NVX_progress_fence.txt',
+    },
     'GL_NV_gpu_program4' : {
         'number' : 322,
         'flags' : { 'public' },
@@ -3730,6 +3755,12 @@ registry = {
         'number' : 448,
         'flags' : { 'public' },
         'url' : 'extensions/NV/NV_shader_thread_shuffle.txt',
+    },
+    'GL_NV_shader_subgroup_partitioned' : {
+        'number' : 544,
+        'esnumber' : 322,
+        'flags' : { 'public' },
+        'url' : 'extensions/NV/NV_shader_subgroup_partitioned.txt',
     },
     'GL_NV_shading_rate_image' : {
         'number' : 531,
@@ -5512,5 +5543,17 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'KHR' },
         'url' : 'extensions/OML/WGL_OML_sync_control.txt',
+    },
+    'WGL_NV_multigpu_context' : {
+        'number' : 542,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/WGL_NV_multigpu_context.txt',
+    },
+    'GLX_NV_multigpu_context' : {
+        'number' : 545,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/GLX_NV_multigpu_context.txt',
     },
 }

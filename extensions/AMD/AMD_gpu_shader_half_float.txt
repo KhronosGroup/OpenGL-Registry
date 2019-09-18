@@ -122,7 +122,7 @@ Additions to Chapter 7 of the OpenGL 4.5 (Core Profile) Specification
     | FLOAT16_MAT3x2_AMD         | f16mat3x2      |  *   |  *   |  *   |
     | FLOAT16_MAT3x4_AMD         | f16mat3x4      |  *   |  *   |  *   |
     | FLOAT16_MAT4x2_AMD         | f16mat4x2      |  *   |  *   |  *   |
-    | FLOAT16_MAT4x3_AMD         | f16mat4x2      |  *   |  *   |  *   |
+    | FLOAT16_MAT4x3_AMD         | f16mat4x3      |  *   |  *   |  *   |
     +----------------------------+----------------+------+------+------+
 
 
