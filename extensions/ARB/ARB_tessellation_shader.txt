@@ -27,7 +27,7 @@ Contributors
 
 Notice
 
-    Copyright (c) 2010-2015 The Khronos Group Inc. Copyright terms at
+    Copyright (c) 2010-2019 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
 
 Specification Update Policy
@@ -47,8 +47,8 @@ Status
     
 Version
 
-    Last Modified Date:         April 20, 2015
-    Revision: 22
+    Last Modified Date: September 17, 2019
+    Revision: 23
 
 Number
 
@@ -1139,7 +1139,7 @@ Operation)
     the outer and inner rectangles is completely filled by non-overlapping
     triangles.  Two of the three vertices of each triangle are adjacent
     vertices on a subdivided edge of one rectangle; the third is one of the
-    vertices on the corresponding edge of the other triangle.  If either edge
+    vertices on the corresponding edge of the other rectangle.  If either edge
     of the innermost rectangle is degenerate, the area near the corresponding
     outer edges is filled by connecting each vertex on the outer edge with the
     single vertex making up the inner "edge".
@@ -3518,6 +3518,8 @@ Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------- -----------------------------------------
+     23   09/17/19  Jon Leech Fix typo in quad tessellation language
+                              (internal API issue 113).
      22   04/21/15  Jon Leech Allow user-defined TCS input and output,
                               and TES input variable array size mismatches
                               to be detected at compile as well as link time
