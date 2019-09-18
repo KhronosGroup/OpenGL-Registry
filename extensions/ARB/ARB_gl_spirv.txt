@@ -40,8 +40,8 @@ Status
 
 Version
 
-    Last Modified Date: February 15, 2019
-    Revision: 44
+    Last Modified Date: September 17, 2019
+    Revision: 45
 
 Number
 
@@ -1105,6 +1105,8 @@ Add Appendix A.spv "The OpenGL SPIR-V Execution Environment" to the OpenGL 4.5
         only consume an /Image/ operand whose type has its /Sampled/
         operand set to 1.
       - The /Depth/ operand of OpTypeImage is ignored.
+      - The Image Format of OpImageWrite must not be Unknown, unless the
+        StorageImageWriteWithoutFormat OpCapability was declared.
 
     *AtomicCounter* storage class:
       - Unless otherwise specified, variables declared in the AtomicCounter
@@ -1149,6 +1151,10 @@ Add Appendix A.spv "The OpenGL SPIR-V Execution Environment" to the OpenGL 4.5
     Recursion:
      - For all entry points, the static function-call graph rooted at that
        entry point must not contain cycles.
+
+    User declared input and output variables:
+     - Must not use OpTypeBool, either directly or as part of an aggregate.
+
 
     A.spv.5 (Precision and Operation of SPIR-V Instructions)
 
@@ -2170,6 +2176,13 @@ Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    45    17-Sep-2019    Jon Leech      Add OpTypeBool constraint on user
+                                        interface variables, and require the
+                                        StorageImageWriteWithoutFormat
+                                        capability for OpImageWrite to
+                                        Unknown formats in the Validation
+                                        Rules section (internal API issues
+                                        111 and 112, respectively).
     44    15-Feb-2019    apinheiro      Added issue 28, about interaction with
                                         ARB_get_program_binary (internal API issue 100)
     43    15-Feb-2019    apinheiro      Add uniform initializers reference and
