@@ -3392,10 +3392,12 @@ typedef unsigned int GLhandleARB;
 
         <group name="RenderbufferTarget">
             <enum name="GL_RENDERBUFFER" />
+            <enum name="GL_RENDERBUFFER_OES" />
         </group>
 
         <group name="FramebufferTarget">
             <enum name="GL_FRAMEBUFFER" />
+            <enum name="GL_FRAMEBUFFER_OES" />
             <enum name="GL_DRAW_FRAMEBUFFER" />
             <enum name="GL_READ_FRAMEBUFFER" />
         </group>
@@ -3536,15 +3538,41 @@ typedef unsigned int GLhandleARB;
 
         <group name="RenderbufferParameterName">
             <enum name="GL_RENDERBUFFER_WIDTH"/>
+            <enum name="GL_RENDERBUFFER_WIDTH_EXT"/>
+            <enum name="GL_RENDERBUFFER_WIDTH_OES"/>
             <enum name="GL_RENDERBUFFER_HEIGHT"/>
+            <enum name="GL_RENDERBUFFER_HEIGHT_EXT"/>
+            <enum name="GL_RENDERBUFFER_HEIGHT_OES"/>
             <enum name="GL_RENDERBUFFER_INTERNAL_FORMAT"/>
+            <enum name="GL_RENDERBUFFER_INTERNAL_FORMAT_EXT"/>
+            <enum name="GL_RENDERBUFFER_INTERNAL_FORMAT_OES"/>
             <enum name="GL_RENDERBUFFER_SAMPLES"/>
+            <enum name="GL_RENDERBUFFER_SAMPLES_ANGLE"/>
+            <enum name="GL_RENDERBUFFER_SAMPLES_APPLE"/>
+            <enum name="GL_RENDERBUFFER_SAMPLES_EXT"/>
+            <enum name="GL_RENDERBUFFER_SAMPLES_IMG"/>
+            <enum name="GL_RENDERBUFFER_SAMPLES_NV"/>
             <enum name="GL_RENDERBUFFER_RED_SIZE"/>
+            <enum name="GL_RENDERBUFFER_RED_SIZE_EXT"/>
+            <enum name="GL_RENDERBUFFER_RED_SIZE_OES"/>
             <enum name="GL_RENDERBUFFER_GREEN_SIZE"/>
+            <enum name="GL_RENDERBUFFER_GREEN_SIZE_EXT"/>
+            <enum name="GL_RENDERBUFFER_GREEN_SIZE_OES"/>
             <enum name="GL_RENDERBUFFER_BLUE_SIZE"/>
+            <enum name="GL_RENDERBUFFER_BLUE_SIZE_EXT"/>
+            <enum name="GL_RENDERBUFFER_BLUE_SIZE_OES"/>
             <enum name="GL_RENDERBUFFER_ALPHA_SIZE"/>
+            <enum name="GL_RENDERBUFFER_ALPHA_SIZE_EXT"/>
+            <enum name="GL_RENDERBUFFER_ALPHA_SIZE_OES"/>
             <enum name="GL_RENDERBUFFER_DEPTH_SIZE"/>
+            <enum name="GL_RENDERBUFFER_DEPTH_SIZE_EXT"/>
+            <enum name="GL_RENDERBUFFER_DEPTH_SIZE_OES"/>
             <enum name="GL_RENDERBUFFER_STENCIL_SIZE"/>
+            <enum name="GL_RENDERBUFFER_STENCIL_SIZE_EXT"/>
+            <enum name="GL_RENDERBUFFER_STENCIL_SIZE_OES"/>
+            <enum name="GL_RENDERBUFFER_STORAGE_SAMPLES_AMD"/>
+            <enum name="GL_RENDERBUFFER_COVERAGE_SAMPLES_AMD"/>
+            <enum name="GL_RENDERBUFFER_COLOR_SAMPLES_AMD"/>
         </group>
 
         <group name="VertexBufferObjectUsage">
@@ -4180,13 +4208,33 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_FRAMEBUFFER_ATTACHMENT_DEPTH_SIZE"/>
             <enum name="GL_FRAMEBUFFER_ATTACHMENT_STENCIL_SIZE"/>
             <enum name="GL_FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT"/>
             <enum name="GL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT"/>
             <enum name="GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME"/>
-            <enum name="GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_EXT"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_OBJECT_NAME_OES"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_EXT"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE_OES"/>
             <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_EXT"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL_OES"/>
             <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE"/>
-            <enum name="GL_FRAMEBUFFER_ATTACHMENT_LAYERED"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_EXT"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE_OES"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_3D_ZOFFSET_EXT"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_3D_ZOFFSET_OES"/>
             <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_LAYER_EXT"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_NUM_VIEWS_OVR"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_BASE_VIEW_INDEX_OVR"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SCALE_IMG"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_LAYERED"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_LAYERED_ARB"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_LAYERED_EXT"/>
+            <enum name="GL_FRAMEBUFFER_ATTACHMENT_LAYERED_OES"/>
         </group>
 
         <group name="ProgramInterfacePName">
