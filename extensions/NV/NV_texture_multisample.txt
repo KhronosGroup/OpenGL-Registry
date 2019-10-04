@@ -4,7 +4,7 @@ Name
 
 Name Strings
 
-    NV_texture_multisample
+    GL_NV_texture_multisample
 
 Contact
 

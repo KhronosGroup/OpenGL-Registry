@@ -4,7 +4,7 @@ Name
 
 Name Strings
 
-    NV_explicit_multisample
+    GL_NV_explicit_multisample
 
 Contributors
 
