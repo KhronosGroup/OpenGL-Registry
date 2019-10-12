@@ -11,7 +11,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
     for the GLX, WGL, and GLU APIs. </p>
 
 <p> The OpenGL registry is part of the <a
-    href="http://www.khronos.org/registry/"> Combined OpenGL Registry </a>
+    href="http://www.khronos.org/registry/OpenGL/"> Combined OpenGL Registry </a>
     for OpenGL, OpenGL ES, and OpenGL SC, which includes the <a
     href="xml/README.md">XML API registry</a> of reserved enumerants and
     functions. </p>
