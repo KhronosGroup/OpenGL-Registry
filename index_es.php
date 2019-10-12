@@ -9,10 +9,11 @@ include_once("../../assets/static_pages/khr_page_top.php");
     OpenGL ES extensions; header files corresponding to the
     specifications; and related documentation. </p>
 
-<p> The OpenGL ES Registry is part of the combined <a
-    href="http://www.opengl.org/registry/"> OpenGL Registry </a> for OpenGL,
-    OpenGL ES, and OpenGL SC, which includes the <a href="xml/README.md">XML
-    API registry</a> of reserved enumerants and functions. </p>
+<p> The OpenGL ES Registry is part of the <a
+    href="http://www.khronos.org/registry/"> Combined OpenGL Registry </a>
+    for OpenGL, OpenGL ES, and OpenGL SC, which includes the <a
+    href="xml/README.md">XML API registry</a> of reserved enumerants and
+    functions. </p>
 
 <p> <b>Table of Contents</b>
 <ul>
@@ -67,8 +68,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> OpenGL ES Shading Language 3.20 Specification (July 10, 2019)
      <a href="specs/es/3.2/GLSL_ES_Specification_3.20.html"> (HTML) </a>
      <a href="specs/es/3.2/GLSL_ES_Specification_3.20.pdf"> (PDF) </a>
-<li> <a href="http://www.khronos.org/opengles/sdk/docs/man32/">
-     OpenGL ES 3.2 Online Manual Pages.</a> </li>
+<li> <a href="http://www.khronos.org/registry/OpenGL-Refpages/es3/">
+     OpenGL ES 3.2 Online Reference Pages.</a> </li>
 <li> <a href="https://www.khronos.org/developers/reference-cards">
      OpenGL ES Quick Reference Card </a> (available for different API
      versions). </li>
@@ -86,8 +87,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="specs/es/3.1/GLSL_ES_Specification_3.10.pdf"> without changes marked </a>
      and
      <a href="specs/es/3.1/GLSL_ES_Specification_3.10.withchanges.pdf"> with changes marked </a>. </li>
-<li> <a href="http://www.khronos.org/opengles/sdk/docs/man31/">
-     OpenGL ES 3.1 Online Manual Pages.</a> </li>
+<li> <a href="http://www.khronos.org/registry/OpenGL-Refpages/es3.1/">
+     OpenGL ES 3.1 Online Reference Pages.</a> </li>
 </ul>
 
 <h2> <a name="specs3"></a> OpenGL ES 3.0 Specifications and
@@ -101,8 +102,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> OpenGL ES Shading Language 3.00
      <a href="specs/es/3.0/GLSL_ES_Specification_3.00.pdf">
      Specification </a> (January 29, 2016). </li>
-<li> <a href="http://www.khronos.org/opengles/sdk/docs/man3/">
-     OpenGL ES 3.0 Online Manual Pages.</a> </li>
+<li> <a href="http://www.khronos.org/registry/OpenGL-Refpages/es3.0/">
+     OpenGL ES 3.0 Online Reference Pages.</a> </li>
 </ul>
 
 <h2> <a name="specs2"></a> OpenGL ES 2.0 Specifications and
@@ -123,8 +124,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> OpenGL ES Shading Language 1.00
      <a href="specs/es/2.0/GLSL_ES_Specification_1.00.pdf">
      Specification </a> (May 12, 2009). </li>
-<li> <a href="http://www.khronos.org/opengles/sdk/docs/man/">
-     OpenGL ES 2.0 Online Manual Pages.</a> </li>
+<li> <a href="http://www.khronos.org/registry/OpenGL-Refpages/es2.0/">
+     OpenGL ES 2.0 Online Reference Pages.</a> </li>
 </ul>
 
 
@@ -139,8 +140,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      (April 24, 2008). </li>
 <li> <a href="specs/es/1.1/opengles_spec_1_1_extension_pack.pdf"> OpenGL ES
      1.1.03 Extension Pack </a> (July 19, 2005). </li>
-<li> <a href="http://www.khronos.org/opengles/sdk/1.1/docs/man/">
-     OpenGL ES 1.1 Online Manual Pages.</a> </li>
+<li> <a href="http://www.khronos.org/registry/OpenGL-Refpages/es1.1/">
+     OpenGL ES 1.1 Online Reference Pages.</a> </li>
 </ul>
 
 <h2> <a name="specs10"></a> OpenGL ES 1.0 Specification and
@@ -152,8 +153,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <tt><a href="api/GLES/1.0/gl.h"> gl.h </a></tt> for OpenGL ES 1.0. </li>
 <li> The old <i>OpenGL ES 1.0 and EGL 1.0 Reference Manual</i> is
      obsolete and has been removed from the Registry. Please use the
-     <a href="http://www.khronos.org/opengles/sdk/1.1/docs/man/">
-     OpenGL ES 1.1 Online Manual Pages</a> instead. </li>
+     <a href="http://www.khronos.org/registry/OpenGL-Refpages/es1.1/">
+     OpenGL ES 1.1 Online Reference Pages</a> instead. </li>
 </ul>
 
 <hr>

@@ -10,10 +10,11 @@ include_once("../../assets/static_pages/khr_page_top.php");
     related documentation including specifications, extensions, and headers
     for the GLX, WGL, and GLU APIs. </p>
 
-<p> The OpenGL registry is part of the combined <a
-    href="http://www.opengl.org/registry/"> OpenGL Registry </a> for OpenGL,
-    OpenGL ES, and OpenGL SC, which includes the <a href="xml/README.md">XML
-    API registry</a> of reserved enumerants and functions. </p>
+<p> The OpenGL registry is part of the <a
+    href="http://www.khronos.org/registry/"> Combined OpenGL Registry </a>
+    for OpenGL, OpenGL ES, and OpenGL SC, which includes the <a
+    href="xml/README.md">XML API registry</a> of reserved enumerants and
+    functions. </p>
 
 <p> <b>Table of Contents</b>
 <ul>
@@ -65,7 +66,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="specs/gl/GLSLangSpec.4.60.html"> (HTML) </a> </li>
      <a href="specs/gl/GLSLangSpec.4.60.pdf"> (PDF) </a> </li>
 
-<li> <a href="http://www.opengl.org/sdk/docs/man4/"> OpenGL 4.5 API and
+<li> <a href="http://www.khronos.org/registry/OpenGL-Refpages/gl4/"> OpenGL 4.5 API and
      Shading Language Reference Pages </a> (not yet updated) </li>
 
 <li> <b> OpenGL X Window System Binding (GLX 1.4) Specification </b> </li>
@@ -181,10 +182,6 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <a href="specs/gl/GLSLangSpec.3.30.pdf"> OpenGL Shading Language
      3.30 Specification </a> </li>
 
-<li> <b> OpenGL 3.3 Reference Pages </b>
-<li> <a href="http://www.opengl.org/sdk/docs/man3/"> OpenGL 3.3 Reference
-     Pages </a> </li>
-
 <li> <b> OpenGL 3.2 </b>
 <li> <a href="specs/gl/glspec32.core.pdf"> (API Core Profile) </a> </li>
 <li> <a href="specs/gl/glspec32.compatibility.pdf"> (API Compatibility Profile) </a> </li>
@@ -209,7 +206,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      1.20 Specification </a> </li>
 
 <li> <b> OpenGL 2.1 Reference Pages </b>
-<li> <a href="http://www.opengl.org/sdk/docs/man/"> OpenGL 2.1 Reference
+<li> <a href="http://www.khronos.org/registry/OpenGL-Refpages/gl2.1/"> OpenGL 2.1 Reference
      Pages </a> </li>
 
 <li> <b> OpenGL 2.0 </b>
