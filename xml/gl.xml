@@ -2940,6 +2940,8 @@ typedef unsigned int GLhandleARB;
         </group>
 
         <group name="ReadBufferMode">
+            <enum name="GL_NONE"/>
+            <enum name="GL_NONE_OES"/>
             <enum name="GL_AUX0"/>
             <enum name="GL_AUX1"/>
             <enum name="GL_AUX2"/>
