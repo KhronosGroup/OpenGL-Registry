@@ -3316,9 +3316,6 @@ typedef unsigned int GLhandleARB;
         </group>
 
         <group name="FramebufferAttachment">
-            <enum name="GL_MAX_COLOR_ATTACHMENTS"/>
-            <enum name="GL_MAX_COLOR_ATTACHMENTS_EXT"/>
-            <enum name="GL_MAX_COLOR_ATTACHMENTS_NV"/>
             <enum name="GL_COLOR_ATTACHMENT0"/>
             <enum name="GL_COLOR_ATTACHMENT0_EXT"/>
             <enum name="GL_COLOR_ATTACHMENT0_NV"/>
@@ -3388,6 +3385,9 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_DEPTH_STENCIL_ATTACHMENT"/>
             <enum name="GL_DEPTH_ATTACHMENT_EXT"/>
             <enum name="GL_DEPTH_ATTACHMENT_OES"/>
+            <enum name="GL_STENCIL_ATTACHMENT"/>
+            <enum name="GL_STENCIL_ATTACHMENT_EXT"/>
+            <enum name="GL_STENCIL_ATTACHMENT_OES"/>
         </group>
 
         <group name="RenderbufferTarget">
