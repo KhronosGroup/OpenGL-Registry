@@ -1065,7 +1065,7 @@ R   Weight Range  Trits  Quints  Bits       Weight Range  Trits  Quints  Bits
             if Q[2:1] = 11
                 q2 = 4; C = { Q[4:3], ~Q[6:5], Q[0] }
             else
-                q2 = T[6:5]; C = Q[4:0]
+                q2 = Q[6:5]; C = Q[4:0]
 
             if C[2:0] = 101
                 q1 = 4; q0 = C[4:3]
