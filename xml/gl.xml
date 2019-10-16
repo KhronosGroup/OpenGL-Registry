@@ -3392,6 +3392,84 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_STENCIL_ATTACHMENT_OES"/>
         </group>
 
+        <group name="InvalidateFramebufferAttachment">
+            <enum name="GL_COLOR_ATTACHMENT0"/>
+            <enum name="GL_COLOR_ATTACHMENT0_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT0_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT0_OES"/>
+            <enum name="GL_COLOR_ATTACHMENT1"/>
+            <enum name="GL_COLOR_ATTACHMENT1_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT1_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT2"/>
+            <enum name="GL_COLOR_ATTACHMENT2_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT2_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT3"/>
+            <enum name="GL_COLOR_ATTACHMENT3_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT3_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT4"/>
+            <enum name="GL_COLOR_ATTACHMENT4_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT4_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT5"/>
+            <enum name="GL_COLOR_ATTACHMENT5_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT5_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT6"/>
+            <enum name="GL_COLOR_ATTACHMENT6_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT6_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT7"/>
+            <enum name="GL_COLOR_ATTACHMENT7_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT7_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT8"/>
+            <enum name="GL_COLOR_ATTACHMENT8_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT8_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT9"/>
+            <enum name="GL_COLOR_ATTACHMENT9_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT9_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT10"/>
+            <enum name="GL_COLOR_ATTACHMENT10_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT10_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT11"/>
+            <enum name="GL_COLOR_ATTACHMENT11_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT11_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT12"/>
+            <enum name="GL_COLOR_ATTACHMENT12_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT12_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT13"/>
+            <enum name="GL_COLOR_ATTACHMENT13_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT13_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT14"/>
+            <enum name="GL_COLOR_ATTACHMENT14_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT14_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT15"/>
+            <enum name="GL_COLOR_ATTACHMENT15_EXT"/>
+            <enum name="GL_COLOR_ATTACHMENT15_NV"/>
+            <enum name="GL_COLOR_ATTACHMENT16"/>
+            <enum name="GL_COLOR_ATTACHMENT17"/>
+            <enum name="GL_COLOR_ATTACHMENT18"/>
+            <enum name="GL_COLOR_ATTACHMENT19"/>
+            <enum name="GL_COLOR_ATTACHMENT20"/>
+            <enum name="GL_COLOR_ATTACHMENT21"/>
+            <enum name="GL_COLOR_ATTACHMENT22"/>
+            <enum name="GL_COLOR_ATTACHMENT23"/>
+            <enum name="GL_COLOR_ATTACHMENT24"/>
+            <enum name="GL_COLOR_ATTACHMENT25"/>
+            <enum name="GL_COLOR_ATTACHMENT26"/>
+            <enum name="GL_COLOR_ATTACHMENT27"/>
+            <enum name="GL_COLOR_ATTACHMENT28"/>
+            <enum name="GL_COLOR_ATTACHMENT29"/>
+            <enum name="GL_COLOR_ATTACHMENT30"/>
+            <enum name="GL_COLOR_ATTACHMENT31"/>
+            <enum name="GL_DEPTH_ATTACHMENT"/>
+            <enum name="GL_DEPTH_STENCIL_ATTACHMENT"/>
+            <enum name="GL_DEPTH_ATTACHMENT_EXT"/>
+            <enum name="GL_DEPTH_ATTACHMENT_OES"/>
+            <enum name="GL_STENCIL"/>
+            <enum name="GL_STENCIL_ATTACHMENT_EXT"/>
+            <enum name="GL_STENCIL_ATTACHMENT_OES"/>
+            <enum name="GL_COLOR"/>
+            <enum name="GL_DEPTH"/>
+            <enum name="GL_STENCIL"/>
+        </group>
+
         <group name="RenderbufferTarget">
             <enum name="GL_RENDERBUFFER" />
             <enum name="GL_RENDERBUFFER_OES" />
@@ -15397,9 +15475,9 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDiscardFramebufferEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>numAttachments</name></param>
-            <param len="numAttachments">const <ptype>GLenum</ptype> *<name>attachments</name></param>
+            <param group="InvalidateFramebufferAttachment" len="numAttachments">const <ptype>GLenum</ptype> *<name>attachments</name></param>
         </command>
         <command>
             <proto>void <name>glDispatchCompute</name></proto>
@@ -21011,7 +21089,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glInvalidateFramebuffer</name></proto>
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>numAttachments</name></param>
-            <param group="FramebufferAttachment" len="numAttachments">const <ptype>GLenum</ptype> *<name>attachments</name></param>
+            <param group="InvalidateFramebufferAttachment" len="numAttachments">const <ptype>GLenum</ptype> *<name>attachments</name></param>
         </command>
         <command>
             <proto>void <name>glInvalidateNamedFramebufferData</name></proto>
@@ -21033,7 +21111,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glInvalidateSubFramebuffer</name></proto>
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>numAttachments</name></param>
-            <param len="numAttachments" group="FramebufferAttachment">const <ptype>GLenum</ptype> *<name>attachments</name></param>
+            <param len="numAttachments" group="InvalidateFramebufferAttachment">const <ptype>GLenum</ptype> *<name>attachments</name></param>
             <param><ptype>GLint</ptype> <name>x</name></param>
             <param><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
