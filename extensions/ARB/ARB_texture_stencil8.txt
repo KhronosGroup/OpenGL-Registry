@@ -4,7 +4,7 @@ Name
 
 Name Strings
 
-    ARB_texture_stencil8
+    GL_ARB_texture_stencil8
 
 Contact
 

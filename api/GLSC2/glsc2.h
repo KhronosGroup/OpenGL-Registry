@@ -1,12 +1,12 @@
-#ifndef __glsc2_h_
-#define __glsc2_h_ 1
+#ifndef __glsc2_glsc2_h_
+#define __glsc2_glsc2_h_ 1
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 /*
-** Copyright (c) 2013-2016 The Khronos Group Inc.
+** Copyright (c) 2013-2018 The Khronos Group Inc.
 **
 ** Permission is hereby granted, free of charge, to any person obtaining a
 ** copy of this software and/or associated documentation files (the
@@ -31,9 +31,7 @@ extern "C" {
 ** This header is generated from the Khronos OpenGL / OpenGL ES XML
 ** API Registry. The current version of the Registry, generator scripts
 ** used to make the header, and the header can be found at
-**   http://www.opengl.org/registry/
-**
-** Khronos $Revision$ on $Date$
+**   https://github.com/KhronosGroup/OpenGL-Registry
 */
 
 #include <GLSC2/gl2platform.h>
@@ -42,7 +40,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20160419 */
+/* Generated on date 20191013 */
 
 /* Generated C header for:
  * API: glsc2
@@ -56,12 +54,12 @@ extern "C" {
 
 #ifndef GL_SC_VERSION_2_0
 #define GL_SC_VERSION_2_0 1
-typedef signed char GLbyte;
-typedef short GLshort;
-typedef unsigned short GLushort;
+#include <KHR/khrplatform.h>
+typedef khronos_int8_t GLbyte;
+typedef khronos_int16_t GLshort;
+typedef khronos_uint16_t GLushort;
 typedef unsigned int GLenum;
 typedef unsigned int GLuint;
-#include <KHR/khrplatform.h>
 typedef khronos_float_t GLfloat;
 typedef khronos_ssize_t GLsizeiptr;
 typedef khronos_intptr_t GLintptr;

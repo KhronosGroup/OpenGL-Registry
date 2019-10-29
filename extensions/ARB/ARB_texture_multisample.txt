@@ -4,7 +4,7 @@ Name
 
 Name Strings
 
-    ARB_texture_multisample
+    GL_ARB_texture_multisample
 
 Contact
 

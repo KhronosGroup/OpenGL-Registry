@@ -10,9 +10,10 @@ include_once("../../assets/static_pages/khr_page_top.php");
     documentation. </p>
 
 <p> The OpenGL SC Registry is part of the combined <a
-    href="http://www.opengl.org/registry/"> OpenGL Registry </a> for OpenGL,
-    OpenGL ES, and OpenGL SC, which includes the <a href="xml/README.md">XML
-    API registry</a> of reserved enumerants and functions. </p>
+    href="http://www.khronos.org/registry/OpenGL/"> Combined OpenGL Registry </a>
+    for OpenGL, OpenGL ES, and OpenGL SC, which includes the <a
+    href="xml/README.md">XML API registry</a> of reserved enumerants and
+    functions. </p>
 
 <h2> OpenGL SC Core API Specification, Headers, and Documentation </h2>
 
