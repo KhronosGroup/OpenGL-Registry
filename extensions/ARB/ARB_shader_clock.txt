@@ -15,6 +15,7 @@ Contributors
     Timothy Lottes, AMD
     Graham Sellers, AMD
     Daniel Rakos, AMD
+    Daniel Koch, NVIDIA
 
 Notice
 
@@ -38,8 +39,8 @@ Status
 
 Version
 
-    Last Modified Date: 06/17/2015
-    Revision: 4
+    Last Modified Date: 10/29/2019
+    Revision: 5
 
 Number
 
@@ -57,6 +58,16 @@ Overview
     This extension exposes a 64-bit monotonically incrementing shader
     counter which may be used to derive local timing information within
     a single shader invocation.
+
+    Mapping to SPIR-V
+    -----------------
+
+    For informational purposes (non-specification), the following is an
+    expected way for an implementation to map GLSL constructs to SPIR-V
+    constructs:
+
+        clock2x32ARB -> OpReadClockKHR with a Scope of Subgroup, Result type of uvec2
+        clockARB -> OpReadClockKHR with a Scope of Subgroup, Result type of uitn64_t
 
 New Procedures and Functions
 
@@ -134,3 +145,4 @@ Revision History
       2  04/20/2015  tlottes   Now uint64, noted code motion barrier.
       3  04/22/2015  gsellers  Add clock2x32ARB. Add interaction with gpu_shader_64.
       4  06/17/2015  gsellers  General tidyment. Add issue 2.
+      5  10/28/2019  dgkoch    Add mapping to SPIR-V section.
