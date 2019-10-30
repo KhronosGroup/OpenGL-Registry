@@ -46,8 +46,8 @@ Status
 
 Version
 
-    Last Modified Date:         June 6, 2016
-    Revision:                   8
+    Last Modified Date:         October 30, 2019
+    Revision:                   9
 
 Number
 
@@ -369,15 +369,16 @@ Appendix
     subset, then green and blue stored similarly. If a block has non-zero
     alpha bits, the alpha data follows the color data with the same
     organization. If not, alpha is overridden to 1.0. These bits are treated
-    as the high bits of a fixed-point value in a byte. If the format has a
-    shared P-bit, there are two bits for endpoints 0 and 1 from low to
-    high. If the format has a per-endpoint P-bits, then there are 2*subsets
-    P-bits stored in the same order as color and alpha. Both kinds of P-bits
-    are added as a bit below the color data stored in the byte. So, for a
-    format with 5 red bits, the P-bit ends up in bit 2. For final scaling, the
-    top bits of the value are replicated into any remaining bits in the
-    byte. For the preceding example, bits 6 and 7 would be written to bits 0
-    and 1.
+    as the high bits of a fixed-point value in a byte. If the format has
+    shared P-bits, there are two endpoint bits, the lower of which applies to
+    both endpoints of subset 0 and the upper of which applies to both
+    endpoints of subset 1. If the format has a per-endpoint P-bits, then there
+    are 2*subsets P-bits stored in the same order as color and alpha. Both
+    kinds of P-bits are added as a bit below the color data stored in the
+    byte. So, for a format with 5 red bits, the P-bit ends up in bit 2. For
+    final scaling, the top bits of the value are replicated into any remaining
+    bits in the byte. For the preceding example, bits 6 and 7 would be written
+    to bits 0 and 1.
 
     The endpoint colors are interpolated using index values stored in the
     block. The index bits are stored in x-major order. Each index has the
@@ -893,6 +894,9 @@ Revision History
 
     Rev.    Date    Author       Changes
     ----  --------  -----------  --------------------------------------------
+     9    30/10/19  pdaniell     Fix shared p-bits specification to match
+                                 DX and the Khronos Data Format spec.
+     
      8    06/06/16  Nanley Chery Reduce the requirements to the minimal set.
 
      7    01/20/11  pbrown       Change the base internal format of the floating-
