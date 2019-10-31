@@ -127,8 +127,8 @@ New Procedures and Functions
 
     void FragmentColorMaterialSGIX(enum face, enum mode);
 
-    void GetFragmentMaterialfvSGIX(enum face, enum pname, const float *data);
-    void GetFragmentMaterialivSGIX(enum face, enum pname, const int *data);
+    void GetFragmentMaterialfvSGIX(enum face, enum pname, float *data);
+    void GetFragmentMaterialivSGIX(enum face, enum pname, int *data);
 
 New Tokens
 
