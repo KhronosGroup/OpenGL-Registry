@@ -24,8 +24,8 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <ul>
      <li> <a href="#specs32">OpenGL ES 3.2 Specifications</a> </li>
      <li> <a href="#specs31">OpenGL ES 3.1 Specifications</a> </li>
-     <li> <a href="#specs3">OpenGL ES 3 Specifications</a> </li>
-     <li> <a href="#specs2">OpenGL ES 2 Specifications</a> </li>
+     <li> <a href="#specs3">OpenGL ES 3.0 Specifications</a> </li>
+     <li> <a href="#specs2">OpenGL ES 2.0 Specifications</a> </li>
      <li> <a href="#specs11">OpenGL ES 1.1 Specifications</a> </li>
      <li> <a href="#specs10">OpenGL ES 1.0 Specification</a> </li>
      </ul> </li>
@@ -34,7 +34,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <li> <a href="#headers32">OpenGL ES 3.2 Header Files</a> </li>
      <li> <a href="#headers31">OpenGL ES 3.1 Header Files</a> </li>
      <li> <a href="#headers3">OpenGL ES 3.0 Header Files</a> </li>
-     <li> <a href="#headers2">OpenGL ES 2 Header Files</a> </li>
+     <li> <a href="#headers2">OpenGL ES 2.0 Header Files</a> </li>
      <li> <a href="#headers1">OpenGL ES 1.1 Header Files</a> </li>
      <li> <a href="#headerskhr">Shared Khronos Header File</a> </li>
      </ul> </li>
@@ -95,7 +95,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      Documentation </h2>
 
 <ul>
-<li> OpenGL ES 3.0.5 Specification (November 3, 2016),
+<li> OpenGL ES 3.0.6 Specification (November 1, 2019),
      <a href="specs/es/3.0/es_spec_3.0.pdf"> without changes marked </a>
      and
      <a href="specs/es/3.0/es_spec_3.0.withchanges.pdf"> with changes marked </a>. </li>
