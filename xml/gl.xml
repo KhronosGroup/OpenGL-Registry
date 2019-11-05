@@ -22331,7 +22331,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiDrawArrays</name></proto>
             <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
-            <param len="COMPSIZE(count)">const <ptype>GLint</ptype> *<name>first</name></param>
+            <param len="COMPSIZE(drawcount)">const <ptype>GLint</ptype> *<name>first</name></param>
             <param len="COMPSIZE(drawcount)">const <ptype>GLsizei</ptype> *<name>count</name></param>
             <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
         </command>
