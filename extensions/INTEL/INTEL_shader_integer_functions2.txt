@@ -19,8 +19,8 @@ Status
 
 Version
 
-    Last Modification Date: 01/22/2019
-    Revision: 3
+    Last Modification Date: 11/14/2019
+    Revision: 4
 
 Number
 
@@ -195,8 +195,8 @@ Issues
 
     1) What should this extension be called?
 
-    UNRESOLVED.  There already exists a MESA_shader_integer_functions
-    extension, so this is called INTEL_shader_integer_functions2 for now.
+    RESOLVED.  There already exists a MESA_shader_integer_functions extension,
+    so this is called INTEL_shader_integer_functions2 to prevent confusion.
 
     2) How does countLeadingZeros differ from findMSB?
 
@@ -241,7 +241,9 @@ Issues
 
     5) Should 64-bit versions of the arithmetic functions be provided?
 
-    UNRESOLVED.
+    RESOLVED: NO.  Since recent generations of Intel GPUs have removed
+    hardware support for 64-bit integer arithmetic, there doesn't seem to be
+    much value in providing 64-bit arithmetic functions.
 
     6) Should this extension include average()?
 
@@ -262,3 +264,4 @@ Revision History
       1  04-Sep-2018  idr       Initial version.
       2  19-Sep-2018  idr       Add interactions with AMD_gpu_shader_int16.
       3  22-Jan-2019  idr       Add interactions with EXT_shader_explicit_arithmetic_types.
+      4  14-Nov-2019  idr       Resolve issue #1 and issue #5.x
