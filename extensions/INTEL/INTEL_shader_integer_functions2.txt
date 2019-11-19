@@ -24,7 +24,8 @@ Version
 
 Number
 
-    TBD
+    OpenGL Extension #547
+    OpenGL ES Extension #323
 
 Dependencies
 
