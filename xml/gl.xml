@@ -134,7 +134,6 @@ typedef unsigned int GLhandleARB;
         </group>
 
         <group name="ProgramStringProperty">
-            <!-- Note to reviewer: could be PROGRAM_STRING_NV -->
             <enum name="GL_PROGRAM_STRING_ARB"/>
         </group>
 
