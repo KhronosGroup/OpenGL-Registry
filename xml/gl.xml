@@ -11699,7 +11699,7 @@ typedef unsigned int GLhandleARB;
             <param group="LightTextureModeEXT"><ptype>GLenum</ptype> <name>mode</name></param>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glAcquireKeyedMutexWin32EXT</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glAcquireKeyedMutexWin32EXT</name></proto>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
             <param><ptype>GLuint64</ptype> <name>key</name></param>
             <param><ptype>GLuint</ptype> <name>timeout</name></param>
@@ -12665,7 +12665,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
-            <param><ptype>GLboolean</ptype> <name>commit</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>commit</name></param>
         </command>
         <command>
             <proto>void <name>glBufferParameteriAPPLE</name></proto>
@@ -14751,7 +14751,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glCoverageMaskNV</name></proto>
-            <param><ptype>GLboolean</ptype> <name>mask</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>mask</name></param>
         </command>
         <command>
             <proto>void <name>glCoverageModulationNV</name></proto>
@@ -14947,7 +14947,7 @@ typedef unsigned int GLhandleARB;
             <param group="DebugSeverity"><ptype>GLenum</ptype> <name>severity</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param>const <ptype>GLuint</ptype> *<name>ids</name></param>
-            <param><ptype>GLboolean</ptype> <name>enabled</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>enabled</name></param>
             <alias name="glDebugMessageControl"/>
         </command>
         <command>
@@ -16408,7 +16408,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> *<name>numTextures</name></param>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glExtIsProgramBinaryQCOM</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glExtIsProgramBinaryQCOM</name></proto>
             <param><ptype>GLuint</ptype> <name>program</name></param>
         </command>
         <command>
@@ -18163,7 +18163,7 @@ typedef unsigned int GLhandleARB;
             <proto><ptype>GLuint64</ptype> <name>glGetImageHandleARB</name></proto>
             <param><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLint</ptype> <name>level</name></param>
-            <param><ptype>GLboolean</ptype> <name>layered</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>layered</name></param>
             <param><ptype>GLint</ptype> <name>layer</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
         </command>
@@ -20543,7 +20543,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetnHistogram</name></proto>
             <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLboolean</ptype> <name>reset</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
@@ -20603,7 +20603,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetnMinmax</name></proto>
             <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLboolean</ptype> <name>reset</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
@@ -21157,7 +21157,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLenum</ptype> <name>target</name></param>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glIsCommandListNV</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glIsCommandListNV</name></proto>
             <param><ptype>GLuint</ptype> <name>list</name></param>
         </command>
         <command>
@@ -21216,11 +21216,11 @@ typedef unsigned int GLhandleARB;
             <glx type="vendor" opcode="1425"/>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glIsFramebufferOES</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glIsFramebufferOES</name></proto>
             <param><ptype>GLuint</ptype> <name>framebuffer</name></param>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glIsImageHandleResidentARB</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glIsImageHandleResidentARB</name></proto>
             <param><ptype>GLuint64</ptype> <name>handle</name></param>
         </command>
         <command>
@@ -21296,7 +21296,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>pipeline</name></param>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glIsProgramPipelineEXT</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glIsProgramPipelineEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>pipeline</name></param>
         </command>
         <command>
@@ -21310,7 +21310,7 @@ typedef unsigned int GLhandleARB;
             <alias name="glIsQuery"/>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glIsQueryEXT</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glIsQueryEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
         </command>
         <command>
@@ -21325,7 +21325,7 @@ typedef unsigned int GLhandleARB;
             <glx type="vendor" opcode="1422"/>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glIsRenderbufferOES</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glIsRenderbufferOES</name></proto>
             <param><ptype>GLuint</ptype> <name>renderbuffer</name></param>
         </command>
         <command>
@@ -21342,7 +21342,7 @@ typedef unsigned int GLhandleARB;
             <glx type="single" opcode="196"/>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glIsStateNV</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glIsStateNV</name></proto>
             <param><ptype>GLuint</ptype> <name>state</name></param>
         </command>
         <command>
@@ -21350,7 +21350,7 @@ typedef unsigned int GLhandleARB;
             <param group="sync"><ptype>GLsync</ptype> <name>sync</name></param>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glIsSyncAPPLE</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glIsSyncAPPLE</name></proto>
             <param><ptype>GLsync</ptype> <name>sync</name></param>
             <alias name="glIsSync"/>
         </command>
@@ -21365,7 +21365,7 @@ typedef unsigned int GLhandleARB;
             <glx type="vendor" opcode="14"/>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glIsTextureHandleResidentARB</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glIsTextureHandleResidentARB</name></proto>
             <param><ptype>GLuint64</ptype> <name>handle</name></param>
         </command>
         <command>
@@ -21397,7 +21397,7 @@ typedef unsigned int GLhandleARB;
             <alias name="glIsVertexArray"/>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glIsVertexArrayOES</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glIsVertexArrayOES</name></proto>
             <param><ptype>GLuint</ptype> <name>array</name></param>
             <alias name="glIsVertexArray"/>
         </command>
@@ -23579,14 +23579,14 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
-            <param><ptype>GLboolean</ptype> <name>commit</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>commit</name></param>
         </command>
         <command>
             <proto>void <name>glNamedBufferPageCommitmentEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
-            <param><ptype>GLboolean</ptype> <name>commit</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>commit</name></param>
         </command>
         <command>
             <proto>void <name>glNamedBufferStorage</name></proto>
@@ -26580,7 +26580,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glRasterSamplesEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>samples</name></param>
-            <param><ptype>GLboolean</ptype> <name>fixedsamplelocations</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedsamplelocations</name></param>
         </command>
         <command>
             <proto>void <name>glReadBuffer</name></proto>
@@ -26661,7 +26661,7 @@ typedef unsigned int GLhandleARB;
             <alias name="glReadnPixels"/>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glReleaseKeyedMutexWin32EXT</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glReleaseKeyedMutexWin32EXT</name></proto>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
             <param><ptype>GLuint64</ptype> <name>key</name></param>
         </command>
@@ -27108,12 +27108,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glSampleCoveragex</name></proto>
             <param><ptype>GLclampx</ptype> <name>value</name></param>
-            <param><ptype>GLboolean</ptype> <name>invert</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>invert</name></param>
         </command>
         <command>
             <proto>void <name>glSampleCoveragexOES</name></proto>
             <param><ptype>GLclampx</ptype> <name>value</name></param>
-            <param><ptype>GLboolean</ptype> <name>invert</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>invert</name></param>
         </command>
         <command>
             <proto>void <name>glSampleMapATI</name></proto>
@@ -27721,7 +27721,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glShadingRateImageBarrierNV</name></proto>
-            <param><ptype>GLboolean</ptype> <name>synchronize</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>synchronize</name></param>
         </command>
         <command>
             <proto>void <name>glShadingRateImagePaletteNV</name></proto>
@@ -28928,7 +28928,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param><ptype>GLboolean</ptype> <name>commit</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>commit</name></param>
         </command>
         <command>
             <proto>void <name>glTexPageCommitmentEXT</name></proto>
@@ -28940,7 +28940,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param><ptype>GLboolean</ptype> <name>commit</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>commit</name></param>
             <alias name="glTexPageCommitmentARB"/>
         </command>
         <command>
@@ -29149,7 +29149,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
             <param><ptype>GLuint64</ptype> <name>offset</name></param>
         </command>
@@ -29172,7 +29172,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
             <param><ptype>GLuint64</ptype> <name>offset</name></param>
         </command>
@@ -29469,7 +29469,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param><ptype>GLboolean</ptype> <name>commit</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>commit</name></param>
         </command>
         <command>
             <proto>void <name>glTextureParameterIiv</name></proto>
@@ -29602,7 +29602,7 @@ typedef unsigned int GLhandleARB;
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param><ptype>GLboolean</ptype> <name>fixedsamplelocations</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedsamplelocations</name></param>
         </command>
         <command>
             <proto>void <name>glTextureStorage2DMultisampleEXT</name></proto>
@@ -29641,7 +29641,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param><ptype>GLboolean</ptype> <name>fixedsamplelocations</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedsamplelocations</name></param>
         </command>
         <command>
             <proto>void <name>glTextureStorage3DMultisampleEXT</name></proto>
@@ -29680,7 +29680,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
             <param><ptype>GLuint64</ptype> <name>offset</name></param>
         </command>
@@ -29703,7 +29703,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
             <param><ptype>GLuint64</ptype> <name>offset</name></param>
         </command>
@@ -30776,12 +30776,12 @@ typedef unsigned int GLhandleARB;
             <alias name="glUnmapBuffer"/>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glUnmapBufferOES</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glUnmapBufferOES</name></proto>
             <param><ptype>GLenum</ptype> <name>target</name></param>
             <alias name="glUnmapBuffer"/>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glUnmapNamedBuffer</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glUnmapNamedBuffer</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
         </command>
         <command>
@@ -30852,7 +30852,7 @@ typedef unsigned int GLhandleARB;
             <param>const void *<name>getProcAddress</name></param>
         </command>
         <command>
-            <proto><ptype>GLboolean</ptype> <name>glVDPAUIsSurfaceNV</name></proto>
+            <proto group="Boolean"><ptype>GLboolean</ptype> <name>glVDPAUIsSurfaceNV</name></proto>
             <param group="vdpauSurfaceNV"><ptype>GLvdpauSurfaceNV</ptype> <name>surface</name></param>
         </command>
         <command>
@@ -31217,7 +31217,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>attribindex</name></param>
             <param><ptype>GLint</ptype> <name>size</name></param>
             <param group="VertexAttribType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param><ptype>GLboolean</ptype> <name>normalized</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>normalized</name></param>
             <param><ptype>GLuint</ptype> <name>relativeoffset</name></param>
         </command>
         <command>
@@ -31402,7 +31402,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLint</ptype> <name>size</name></param>
             <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param><ptype>GLboolean</ptype> <name>normalized</name></param>
+            <param group="Boolean"><ptype>GLboolean</ptype> <name>normalized</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
         </command>
