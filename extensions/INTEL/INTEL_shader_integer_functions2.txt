@@ -19,8 +19,8 @@ Status
 
 Version
 
-    Last Modification Date: 11/14/2019
-    Revision: 4
+    Last Modification Date: 11/25/2019
+    Revision: 5
 
 Number
 
@@ -102,7 +102,7 @@ Additions to Chapter 8 of the OpenGL Shading Language Specification
 
     Returns the number of trailing 0-bits, stating at the least significant bit,
     in the binary representation of value.  If value is zero, the size in bits
-    of the type of value or component type of value, if value is a vector will
+    of the type of value or component type of value (if value is a vector) will
     be returned.
 
 
@@ -180,14 +180,14 @@ Interactions with OpenGL 4.6 and ARB_gl_spirv
 
 Interactions with ARB_gpu_shader_int64 and EXT_shader_explicit_arithmetic_types_int64
 
-    If the shader enables only INTEL_shader_integer_functions but not
+    If the shader enables only INTEL_shader_integer_functions2 but not
     ARB_gpu_shader_int64 or EXT_shader_explicit_arithmetic_types_int64,
     remove all function overloads that have either genU64Type or genI64Type
     parameters.
 
 Interactions with AMD_gpu_shader_int16 and EXT_shader_explicit_arithmetic_types_int16
 
-    If the shader enables only INTEL_shader_integer_functions but not
+    If the shader enables only INTEL_shader_integer_functions2 but not
     AMD_gpu_shader_int16 or EXT_shader_explicit_arithmetic_types_int16,
     remove all function overloads that have either genU16Type or genI16Type
     parameters.
@@ -207,7 +207,7 @@ Issues
 
     3) How does countTrailingZeros differ from findLSB?
 
-    RESOLVED: countTrailingZeros is equivalent to max(genUType(findLSB(x)),
+    RESOLVED: countTrailingZeros is equivalent to min(genUType(findLSB(x)),
     32).  This corresponds to the ctz() function in OpenCL.
 
     4) Should 64-bit versions of countLeadingZeros and countTrailingZeros be
@@ -265,4 +265,5 @@ Revision History
       1  04-Sep-2018  idr       Initial version.
       2  19-Sep-2018  idr       Add interactions with AMD_gpu_shader_int16.
       3  22-Jan-2019  idr       Add interactions with EXT_shader_explicit_arithmetic_types.
-      4  14-Nov-2019  idr       Resolve issue #1 and issue #5.x
+      4  14-Nov-2019  idr       Resolve issue #1 and issue #5.
+      5  25-Nov-2019  idr       Fix a bunch of typos noticed by @cmarcelo.
