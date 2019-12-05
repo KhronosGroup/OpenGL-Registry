@@ -176,6 +176,21 @@ typedef unsigned int GLhandleARB;
         </group>
 
         <group name="FragmentLightParameterSGIX">
+            <!--<enum name="GL_SPOT_EXPONENT_SGIX"/>
+            <enum name="GL_SPOT_CUTOFF_SGIX"/>
+            <enum name="GL_CONSTANT_ATTENUATION_SGIX"/>
+            <enum name="GL_LINEAR_ATTENUATION_SGIX"/>
+            <enum name="GL_QUADRATIC_ATTENUATION_SGIX"/>
+            <enum name="GL_AMBIENT_SGIX"/>
+            <enum name="GL_DIFFUSE_SGIX"/>
+            <enum name="GL_SPECULAR_SGIX"/>
+            <enum name="GL_POSITION_SGIX"/>
+            <enum name="GL_SPOT_DIRECTION_SGIX"/>
+            <enum name="GL_SPOT_EXPONENT_SGIX"/>
+            <enum name="GL_SPOT_CUTOFF_SGIX"/>
+            <enum name="GL_CONSTANT_ATTENUATION_SGIX"/>
+            <enum name="GL_LINEAR_ATTENUATION_SGIX"/>
+            <enum name="GL_QUADRATIC_ATTENUATION_SGIX"/>-->
             <enum name="GL_SPOT_EXPONENT"/>
             <enum name="GL_SPOT_CUTOFF"/>
             <enum name="GL_CONSTANT_ATTENUATION"/>
@@ -291,6 +306,10 @@ typedef unsigned int GLhandleARB;
         </group>
 
         <group name="BinormalPointerTypeEXT">
+            <!--<enum name="GL_BYTE_EXT"/>
+            <enum name="GL_SHORT_EXT"/>
+            <enum name="GL_FLOAT_EXT"/>
+            <enum name="GL_DOUBLE_EXT"/>-->
             <enum name="GL_BYTE"/>
             <enum name="GL_SHORT"/>
             <enum name="GL_FLOAT"/>
