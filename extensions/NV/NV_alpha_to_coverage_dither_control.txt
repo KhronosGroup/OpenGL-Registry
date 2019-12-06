@@ -43,7 +43,7 @@ Overview
 
 New Procedures and Functions
 
-    AlphaToCoverageDitherControlNV(enum mode):.
+    void AlphaToCoverageDitherControlNV(enum mode)
     
 New Tokens
 
