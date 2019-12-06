@@ -2885,6 +2885,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/INTEL/INTEL_performance_query.txt',
     },
+    'GL_INTEL_shader_integer_functions2' : {
+        'number' : 547,
+        'esnumber' : 323,
+        'flags' : { 'public' },
+        'url' : 'extensions/INTEL/INTEL_shader_integer_functions2.txt',
+    },
     'GLX_INTEL_swap_event' : {
         'number' : 384,
         'flags' : { 'public' },

@@ -669,4 +669,6 @@
 </li>
 <li value=322><a href="extensions/NV/NV_shader_subgroup_partitioned.txt">GL_NV_shader_subgroup_partitioned</a>
 </li>
+<li value=323><a href="extensions/INTEL/INTEL_shader_integer_functions2.txt">GL_INTEL_shader_integer_functions2</a>
+</li>
 </ol>
