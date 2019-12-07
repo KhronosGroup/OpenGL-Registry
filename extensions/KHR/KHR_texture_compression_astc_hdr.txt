@@ -1812,7 +1812,7 @@ Texture Image Formats)
                 { sh1 = (seed&2 ? 4:5); sh2 = (partitioncount==3 ? 6:5); }
             else
                 { sh1 = (partitioncount==3 ? 6:5); sh2 = (seed&2 ? 4:5); }
-            sh3 = (seed & 0x10) ? sh1 : sh2:
+            sh3 = (seed & 0x10) ? sh1 : sh2;
 
             seed1 >>= sh1; seed2  >>= sh2; seed3  >>= sh1; seed4  >>= sh2;
             seed5 >>= sh1; seed6  >>= sh2; seed7  >>= sh1; seed8  >>= sh2;
