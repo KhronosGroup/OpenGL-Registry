@@ -220,7 +220,7 @@ New Procedures and Functions
                                   int drawbuffer, const uint *value);
 
     void ClearNamedFramebufferfv(uint framebuffer, enum buffer,
-                                 int drawbuffer, float *value);
+                                 int drawbuffer, const float *value);
 
     void ClearNamedFramebufferfi(uint framebuffer, enum buffer,
                                  int drawbuffer, float depth, int stencil);
