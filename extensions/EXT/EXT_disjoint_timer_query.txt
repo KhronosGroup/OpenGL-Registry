@@ -755,7 +755,7 @@ Issues
 
 Revision History
     Revision 8, 2019/12/11 (Jon Leech)
-      - Add actual spec language defining GetInteger64v (github
+      - Add actual spec language defining GetInteger64vEXT (github
         OpenGL-Registry issue 326)
     Revision 7, 2016/9/2 (Maurice Ribble)
       - Clarify language dealing with GetInteger64v
