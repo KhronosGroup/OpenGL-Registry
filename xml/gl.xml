@@ -302,19 +302,22 @@ typedef unsigned int GLhandleARB;
         <group name="TangentPointerTypeEXT">
             <enum name="GL_BYTE"/>
             <enum name="GL_SHORT"/>
+            <enum name="GL_INT"/>
             <enum name="GL_FLOAT"/>
             <enum name="GL_DOUBLE"/>
+            <enum name="GL_DOUBLE_EXT"/>
         </group>
 
         <group name="BinormalPointerTypeEXT">
             <!--<enum name="GL_BYTE_EXT"/>
             <enum name="GL_SHORT_EXT"/>
-            <enum name="GL_FLOAT_EXT"/>
-            <enum name="GL_DOUBLE_EXT"/>-->
+            <enum name="GL_FLOAT_EXT"/>-->
             <enum name="GL_BYTE"/>
             <enum name="GL_SHORT"/>
+            <enum name="GL_INT"/>
             <enum name="GL_FLOAT"/>
             <enum name="GL_DOUBLE"/>
+            <enum name="GL_DOUBLE_EXT"/>
         </group>
 
         <group name="TextureNormalModeEXT">
