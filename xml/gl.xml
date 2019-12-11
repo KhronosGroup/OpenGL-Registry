@@ -25068,7 +25068,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramEnvParameter4dARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLdouble</ptype> <name>x</name></param>
             <param><ptype>GLdouble</ptype> <name>y</name></param>
@@ -25132,7 +25132,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramEnvParameters4fvEXT</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param len="count*4">const <ptype>GLfloat</ptype> *<name>params</name></param>
