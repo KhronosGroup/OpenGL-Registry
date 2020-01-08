@@ -31,8 +31,8 @@ Status
 
 Version
 
-    Date: November 8, 2017
-    Revision: 0.91
+    Date: January 8, 2020
+    Revision: 0.92
 
 Number
 
@@ -265,6 +265,13 @@ Dependencies on ARB_framebuffer_object or OpenGL 3.0 or later
 Dependencies on EXT_texture_compression_s3tc
 
     If EXT_texture_compression_s3tc is NOT supported, delete
+    COMPRESSED_SRGB_S3TC_DXT1_EXT, COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT,
+    COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT, and
+    COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT from Section 3.8.15.
+    
+Dependencies on EXT_texture_sRGB
+
+    If EXT_texture_sRGB is NOT supported, delete
     COMPRESSED_SRGB_S3TC_DXT1_EXT, COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT,
     COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT, and
     COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT from Section 3.8.15.
@@ -668,6 +675,7 @@ Revision History
 
         Rev.    Date    Author    Changes
         ----  --------  --------  -------------------------------------
+        0.92  01/08/20  pdaniell  Add EXT_texture_sRGB dependency
         0.91  11/08/17  nhaehnle  Add interaction with bindless textures
                                   (API issue #51)
         0.90  04/27/16  Jon Leech Add interaction with texelFetch builtins
