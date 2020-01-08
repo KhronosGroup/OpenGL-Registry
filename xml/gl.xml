@@ -98,7 +98,13 @@ typedef unsigned int GLhandleARB;
         </group>
 
         <group name="ProgramTarget">
+            <enum name="GL_FRAGMENT_PROGRAM_ARB"/>
+            <enum name="GL_VERTEX_PROGRAM_ARB"/>
             <enum name="GL_TEXT_FRAGMENT_SHADER_ATI"/>
+            <enum name="GL_COMPUTE_PROGRAM_NV"/>
+            <enum name="GL_GEOMETRY_PROGRAM_NV"/>
+            <enum name="GL_TESS_CONTROL_PROGRAM_NV"/>
+            <enum name="GL_TESS_EVALUATION_PROGRAM_NV"/>
         </group>
 
         <group name="CombinerStageNV">
@@ -201,11 +207,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_SPECULAR"/>
             <enum name="GL_POSITION"/>
             <enum name="GL_SPOT_DIRECTION"/>
-            <enum name="GL_SPOT_EXPONENT"/>
-            <enum name="GL_SPOT_CUTOFF"/>
-            <enum name="GL_CONSTANT_ATTENUATION"/>
-            <enum name="GL_LINEAR_ATTENUATION"/>
-            <enum name="GL_QUADRATIC_ATTENUATION"/>
         </group>
 
         <group name="ElementPointerTypeATI">
@@ -301,19 +302,22 @@ typedef unsigned int GLhandleARB;
         <group name="TangentPointerTypeEXT">
             <enum name="GL_BYTE"/>
             <enum name="GL_SHORT"/>
+            <enum name="GL_INT"/>
             <enum name="GL_FLOAT"/>
             <enum name="GL_DOUBLE"/>
+            <enum name="GL_DOUBLE_EXT"/>
         </group>
 
         <group name="BinormalPointerTypeEXT">
             <!--<enum name="GL_BYTE_EXT"/>
             <enum name="GL_SHORT_EXT"/>
-            <enum name="GL_FLOAT_EXT"/>
-            <enum name="GL_DOUBLE_EXT"/>-->
+            <enum name="GL_FLOAT_EXT"/>-->
             <enum name="GL_BYTE"/>
             <enum name="GL_SHORT"/>
+            <enum name="GL_INT"/>
             <enum name="GL_FLOAT"/>
             <enum name="GL_DOUBLE"/>
+            <enum name="GL_DOUBLE_EXT"/>
         </group>
 
         <group name="TextureNormalModeEXT">
@@ -395,10 +399,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_OP_MOV_EXT"/>
         </group>
 
-        <group name="ProgramFormatARB">
-            <enum name="GL_PROGRAM_FORMAT_ASCII_ARB"/>
-        </group>
-
         <group name="PointParameterNameARB">
             <enum name="GL_POINT_SIZE_MIN_EXT"/>
             <enum name="GL_POINT_SIZE_MAX_EXT"/>
@@ -425,10 +425,6 @@ typedef unsigned int GLhandleARB;
         <group name="VertexAttribPointerPropertyARB">
             <enum name="GL_VERTEX_ATTRIB_ARRAY_POINTER_ARB"/>
             <enum name="GL_VERTEX_ATTRIB_ARRAY_POINTER"/>
-        </group>
-
-        <group name="ProgramStringPropertyARB">
-            <enum name="GL_PROGRAM_STRING_ARB"/>
         </group>
 
         <group name="BufferPointerNameARB">
@@ -466,10 +462,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_CLAMP_FRAGMENT_COLOR_ARB"/>
             <enum name="GL_CLAMP_READ_COLOR_ARB"/>
             <enum name="GL_CLAMP_READ_COLOR"/>
-        </group>
-
-        <group name="ProgramTargetARB">
-            <enum name="GL_TEXT_FRAGMENT_SHADER_ATI"/>
         </group>
 
         <group name="VertexArrayPNameAPPLE">
@@ -896,6 +888,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_SPARSE_STORAGE_BIT_ARB"/>
             <enum name="GL_LGPU_SEPARATE_STORAGE_BIT_NVX"/>
             <enum name="GL_PER_GPU_STORAGE_BIT_NV"/>
+            <enum name="GL_EXTERNAL_STORAGE_BIT_NVX"/>
         </group>
 
         <group name="ClearBufferMask">
@@ -4104,18 +4097,28 @@ typedef unsigned int GLhandleARB;
         </group>
 
         <group name="AttributeType">
+            <enum name="GL_FLOAT"/>
             <enum name="GL_FLOAT_VEC2"/>
             <enum name="GL_FLOAT_VEC2_ARB"/>
             <enum name="GL_FLOAT_VEC3"/>
             <enum name="GL_FLOAT_VEC3_ARB"/>
             <enum name="GL_FLOAT_VEC4"/>
             <enum name="GL_FLOAT_VEC4_ARB"/>
+            <enum name="GL_DOUBLE"/>
+            <enum name="GL_DOUBLE_VEC2"/>
+            <enum name="GL_DOUBLE_VEC3"/>
+            <enum name="GL_DOUBLE_VEC4"/>
+            <enum name="GL_INT"/>
             <enum name="GL_INT_VEC2"/>
             <enum name="GL_INT_VEC2_ARB"/>
             <enum name="GL_INT_VEC3"/>
             <enum name="GL_INT_VEC3_ARB"/>
             <enum name="GL_INT_VEC4"/>
             <enum name="GL_INT_VEC4_ARB"/>
+            <enum name="GL_UNSIGNED_INT"/>
+            <enum name="GL_UNSIGNED_INT_VEC2"/>
+            <enum name="GL_UNSIGNED_INT_VEC3"/>
+            <enum name="GL_UNSIGNED_INT_VEC4"/>
             <enum name="GL_BOOL"/>
             <enum name="GL_BOOL_ARB"/>
             <enum name="GL_BOOL_VEC2"/>
@@ -4142,6 +4145,106 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_FLOAT_MAT4x2_NV"/>
             <enum name="GL_FLOAT_MAT4x3"/>
             <enum name="GL_FLOAT_MAT4x3_NV"/>
+            <enum name="GL_DOUBLE_MAT2"/>
+            <enum name="GL_DOUBLE_MAT3"/>
+            <enum name="GL_DOUBLE_MAT4"/>
+            <enum name="GL_DOUBLE_MAT2x3"/>
+            <enum name="GL_DOUBLE_MAT2x4"/>
+            <enum name="GL_DOUBLE_MAT3x2"/>
+            <enum name="GL_DOUBLE_MAT3x4"/>
+            <enum name="GL_DOUBLE_MAT4x2"/>
+            <enum name="GL_DOUBLE_MAT4x3"/>
+            <enum name="GL_SAMPLER_1D"/>
+            <enum name="GL_SAMPLER_1D_ARB"/>
+            <enum name="GL_SAMPLER_2D"/>
+            <enum name="GL_SAMPLER_2D_ARB"/>
+            <enum name="GL_SAMPLER_3D"/>
+            <enum name="GL_SAMPLER_3D_ARB"/>
+            <enum name="GL_SAMPLER_3D_OES"/>
+            <enum name="GL_SAMPLER_CUBE"/>
+            <enum name="GL_SAMPLER_CUBE_ARB"/>
+            <enum name="GL_SAMPLER_1D_SHADOW"/>
+            <enum name="GL_SAMPLER_1D_SHADOW_ARB"/>
+            <enum name="GL_SAMPLER_2D_SHADOW"/>
+            <enum name="GL_SAMPLER_2D_SHADOW_ARB"/>
+            <enum name="GL_SAMPLER_2D_SHADOW_EXT"/>
+            <enum name="GL_SAMPLER_CUBE_MAP_ARRAY"/>
+            <enum name="GL_SAMPLER_1D_ARRAY_SHADOW"/>
+            <enum name="GL_SAMPLER_2D_ARRAY_SHADOW"/>
+            <enum name="GL_SAMPLER_2D_MULTISAMPLE"/>
+            <enum name="GL_SAMPLER_2D_MULTISAMPLE_ARRAY"/>
+            <enum name="GL_SAMPLER_CUBE_SHADOW"/>
+            <enum name="GL_SAMPLER_CUBE_MAP_ARRAY_SHADOW"/>
+            <enum name="GL_SAMPLER_BUFFER"/>
+            <enum name="GL_SAMPLER_2D_RECT"/>
+            <enum name="GL_SAMPLER_2D_RECT_ARB"/>
+            <enum name="GL_SAMPLER_2D_RECT_SHADOW"/>
+            <enum name="GL_SAMPLER_2D_RECT_SHADOW_ARB"/>
+            <enum name="GL_INT_SAMPLER_1D"/>
+            <enum name="GL_INT_SAMPLER_2D"/>
+            <enum name="GL_INT_SAMPLER_3D"/>
+            <enum name="GL_INT_SAMPLER_CUBE"/>
+            <enum name="GL_INT_SAMPLER_1D_ARRAY"/>
+            <enum name="GL_INT_SAMPLER_2D_ARRAY"/>
+            <enum name="GL_INT_SAMPLER_CUBE_MAP_ARRAY"/>
+            <enum name="GL_INT_SAMPLER_2D_MULTISAMPLE"/>
+            <enum name="GL_INT_SAMPLER_2D_MULTISAMPLE_ARRAY"/>
+            <enum name="GL_INT_SAMPLER_BUFFER"/>
+            <enum name="GL_INT_SAMPLER_2D_RECT"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_1D"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_2D"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_3D"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_CUBE"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_1D_ARRAY"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_2D_ARRAY"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_CUBE_MAP_ARRAY"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE_ARRAY"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_BUFFER"/>
+            <enum name="GL_UNSIGNED_INT_SAMPLER_2D_RECT"/>
+            <enum name="GL_IMAGE_1D"/>
+            <enum name="GL_IMAGE_2D"/>
+            <enum name="GL_IMAGE_3D"/>
+            <enum name="GL_IMAGE_2D_RECT"/>
+            <enum name="GL_IMAGE_CUBE"/>
+            <enum name="GL_IMAGE_BUFFER"/>
+            <enum name="GL_IMAGE_1D_ARRAY"/>
+            <enum name="GL_IMAGE_2D_ARRAY"/>
+            <enum name="GL_IMAGE_CUBE_MAP_ARRAY"/>
+            <enum name="GL_IMAGE_2D_MULTISAMPLE"/>
+            <enum name="GL_IMAGE_2D_MULTISAMPLE_ARRAY"/>
+            <enum name="GL_INT_IMAGE_1D"/>
+            <enum name="GL_INT_IMAGE_2D"/>
+            <enum name="GL_INT_IMAGE_3D"/>
+            <enum name="GL_INT_IMAGE_2D_RECT"/>
+            <enum name="GL_INT_IMAGE_CUBE"/>
+            <enum name="GL_INT_IMAGE_BUFFER"/>
+            <enum name="GL_INT_IMAGE_1D_ARRAY"/>
+            <enum name="GL_INT_IMAGE_2D_ARRAY"/>
+            <enum name="GL_INT_IMAGE_CUBE_MAP_ARRAY"/>
+            <enum name="GL_INT_IMAGE_2D_MULTISAMPLE"/>
+            <enum name="GL_INT_IMAGE_2D_MULTISAMPLE_ARRAY"/>
+            <enum name="GL_UNSIGNED_INT_IMAGE_1D"/>
+            <enum name="GL_UNSIGNED_INT_IMAGE_2D"/>
+            <enum name="GL_UNSIGNED_INT_IMAGE_3D"/>
+            <enum name="GL_UNSIGNED_INT_IMAGE_2D_RECT"/>
+            <enum name="GL_UNSIGNED_INT_IMAGE_CUBE"/>
+            <enum name="GL_UNSIGNED_INT_IMAGE_BUFFER"/>
+            <enum name="GL_UNSIGNED_INT_IMAGE_1D_ARRAY"/>
+            <enum name="GL_UNSIGNED_INT_IMAGE_2D_ARRAY"/>
+            <enum name="GL_UNSIGNED_INT_IMAGE_CUBE_MAP_ARRAY"/>
+            <enum name="GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE"/>
+            <enum name="GL_UNSIGNED_INT_IMAGE_2D_MULTISAMPLE_ARRAY"/>
+            <enum name="GL_INT64_ARB"/>
+            <enum name="GL_INT64_NV"/>
+            <enum name="GL_INT64_VEC2_ARB"/>
+            <enum name="GL_INT64_VEC3_ARB"/>
+            <enum name="GL_INT64_VEC4_ARB"/>
+            <enum name="GL_UNSIGNED_INT64_ARB"/>
+            <enum name="GL_UNSIGNED_INT64_NV"/>
+            <enum name="GL_UNSIGNED_INT64_VEC2_ARB"/>
+            <enum name="GL_UNSIGNED_INT64_VEC3_ARB"/>
+            <enum name="GL_UNSIGNED_INT64_VEC4_ARB"/>
         </group>
 
         <group name="UniformType">
@@ -4366,6 +4469,10 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_INT_2_10_10_10_REV"/>
             <enum name="GL_UNSIGNED_INT_2_10_10_10_REV"/>
             <enum name="GL_UNSIGNED_INT_10F_11F_11F_REV"/>
+            <enum name="GL_INT64_ARB"/>
+            <enum name="GL_INT64_NV"/>
+            <enum name="GL_UNSIGNED_INT64_ARB"/>
+            <enum name="GL_UNSIGNED_INT64_NV"/>
         </group>
 
         <group name="SubroutineParameterName">
@@ -12100,7 +12207,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBindProgramARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>program</name></param>
             <glx type="render" opcode="4180"/>
         </command>
@@ -19167,13 +19274,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetProgramEnvParameterdvARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="4"><ptype>GLdouble</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetProgramEnvParameterfvARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="4"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
@@ -19206,13 +19313,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetProgramLocalParameterdvARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="4"><ptype>GLdouble</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetProgramLocalParameterfvARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="4"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
@@ -19338,8 +19445,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetProgramStringARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ProgramStringPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramStringProperty"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(target,pname)">void *<name>string</name></param>
         </command>
         <command>
@@ -19364,7 +19471,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetProgramivARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ProgramPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
@@ -24961,7 +25068,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramEnvParameter4dARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLdouble</ptype> <name>x</name></param>
             <param><ptype>GLdouble</ptype> <name>y</name></param>
@@ -24971,13 +25078,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramEnvParameter4dvARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="4">const <ptype>GLdouble</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glProgramEnvParameter4fARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLfloat</ptype> <name>x</name></param>
             <param><ptype>GLfloat</ptype> <name>y</name></param>
@@ -24987,7 +25094,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramEnvParameter4fvARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="4">const <ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
@@ -25025,7 +25132,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramEnvParameters4fvEXT</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param len="count*4">const <ptype>GLfloat</ptype> *<name>params</name></param>
@@ -25047,7 +25154,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramLocalParameter4dARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLdouble</ptype> <name>x</name></param>
             <param><ptype>GLdouble</ptype> <name>y</name></param>
@@ -25057,13 +25164,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramLocalParameter4dvARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="4">const <ptype>GLdouble</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glProgramLocalParameter4fARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLfloat</ptype> <name>x</name></param>
             <param><ptype>GLfloat</ptype> <name>y</name></param>
@@ -25073,7 +25180,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramLocalParameter4fvARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="4">const <ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
@@ -25111,7 +25218,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramLocalParameters4fvEXT</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param len="count*4">const <ptype>GLfloat</ptype> *<name>params</name></param>
@@ -25249,8 +25356,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramStringARB</name></proto>
-            <param group="ProgramTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ProgramFormatARB"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>len</name></param>
             <param len="len">const void *<name>string</name></param>
         </command>
