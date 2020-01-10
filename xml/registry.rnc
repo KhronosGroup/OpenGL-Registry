@@ -26,6 +26,7 @@ start = element registry {
     (
         element comment { text } ? |
         Types      * |
+        Groups     * |
         Enums      * |
         Commands   * |
         Feature    * |
@@ -61,6 +62,23 @@ Type = element type {
     text
 }
 
+# <groups> defines a group of enum groups
+Groups = element groups {
+    Group *
+}
+
+# <group> defines a single enum group. Enums may
+# be in multiple groups.
+#   name - group name
+#   comment - unused
+#   <enum name=""> - members of the group
+
+Group = element group {
+    Name ,
+    Comment ? ,
+    element enum { Name } *
+}
+
 # <enums> defines a group of enumerants
 #   namespace - identifies a numeric namespace
 #   group - identifies a functional subset of the namespace - same as group=""
@@ -92,7 +110,7 @@ Enum = element enum {
         attribute api { text } ? &
         attribute type { TypeSuffix } ? &
         attribute name { text } &
-        attribute group { text } &
+        attribute group { text } ? &
         attribute alias { text } ? &
         Comment ?
     )
