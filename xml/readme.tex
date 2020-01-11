@@ -24,7 +24,7 @@
 
 \title{The Khronos XML API Registry}
 \author{Jon Leech}
-\date{Last updated 2017-01-20}
+\date{Last updated 2020-01-11}
 \maketitle
 
 \begin{abstract}
@@ -382,6 +382,12 @@ Each \tag{enum} tag defines a single GL (or other API) token.
       for \code{unsigned} 32- and 64-bit integer values, respectively.
       Separated from the \attr{value} field since this eases parsing and
       sorting of values, and is rarely used.
+\item \attr{group} - group name, an arbitrary string for grouping a set of
+      enums together within a broader namespace.
+      \par {\bf Note:} the \tag{group} tag (see section~\ref{tag:group})
+      serves the same purpose, but is deprecated in favor of this attribute.
+      Eventually all \tag{group} tags will be removed from the XML
+      registries.
 \item \attr{alias} - name of another enumerant this is an alias of, used
       where token names have been changed as a result of profile changes
       or for consistency purposes. An enumerant alias is simply a
@@ -942,6 +948,8 @@ corresponding \tag{group} tags.
 \label{changelog}
 
 \begin{itemize}
+\item 2020-01-11 - Add \attr{group} attribute to \tag{enum} tags, and
+      deprecate \tag{group} tags (github issue 335).
 \item 2017-01-20 - Update for the move to the new github repository.
 \item 2014-06-16 - Add \tag{vendor} attribute to \tag{unused} tags.
 \item 2013-09-17 - Add \tag{comment} attribute to \tag{command} tags
