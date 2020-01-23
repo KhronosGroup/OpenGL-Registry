@@ -453,7 +453,7 @@ Additions to Chapter 3 of the OpenGL ES 3.0.2 Specification
     COMPRESSED_RGBA_S3TC_DXT5_EXT, the compressed texture is stored using one
     of several S3TC compressed texture image formats and is easily edited along
     4x4 texel boundaries. In this case,
-    CompressedTexImage2D/CompressedTexImage3D will result in an
+    CompressedTexSubImage2D/CompressedTexSubImage3D will result in an
     INVALID_OPERATION error if one of the following conditions occurs:
 
         * <width> is not a multiple of four, and <width> plus
@@ -464,7 +464,7 @@ Additions to Chapter 3 of the OpenGL ES 3.0.2 Specification
 
         * <xoffset> or <yoffset> is not a multiple of four.
 
-    For any other formats, calling CompressedTexSubImage2D/CompressedTexImage3D
+    For any other formats, calling CompressedTexSubImage2D/CompressedTexSubImage3D
     will result in an INVALID_OPERATION error if <xoffset> or <yoffset> is not
     equal to zero, or if <width> and <height> do not match the width and height
     of the texture, respectively. The contents of any texel outside the region
