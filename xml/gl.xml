@@ -15431,6 +15431,12 @@ typedef unsigned int GLhandleARB;
             <glx type="render" opcode="174"/>
         </command>
         <command>
+            <proto>void <name>glDepthRangeArraydvNV</name></proto>
+            <param><ptype>GLuint</ptype> <name>first</name></param>
+            <param><ptype>GLsizei</ptype> <name>count</name></param>
+            <param>const <ptype>GLdouble</ptype> *<name>v</name></param>
+        </command>
+        <command>
             <proto>void <name>glDepthRangeArrayfvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>first</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
@@ -15450,6 +15456,12 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDepthRangeIndexed</name></proto>
+            <param><ptype>GLuint</ptype> <name>index</name></param>
+            <param><ptype>GLdouble</ptype> <name>n</name></param>
+            <param><ptype>GLdouble</ptype> <name>f</name></param>
+        </command>
+        <command>
+            <proto>void <name>glDepthRangeIndexeddNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLdouble</ptype> <name>n</name></param>
             <param><ptype>GLdouble</ptype> <name>f</name></param>
@@ -44024,6 +44036,10 @@ typedef unsigned int GLhandleARB;
                 <command name="glGetFloati_v"/>
                 <command name="glGetDoublei_v"/>
             </require>
+            <require comment="ARB_viewport_array interactions with NV_depth_buffer_float">
+                <command name="glDepthRangeArraydvNV"/>
+                <command name="glDepthRangeIndexeddNV"/>
+            </require>
         </extension>
         <extension name="GL_ARB_window_pos" supported="gl">
             <require>
@@ -48021,7 +48037,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_MAX_DEEP_3D_TEXTURE_DEPTH_NV"/>
             </require>
         </extension>
-        <extension name="GL_NV_depth_buffer_float" supported="gl">
+        <extension name="GL_NV_depth_buffer_float" supported="gl|glcore">
             <require>
                 <enum name="GL_DEPTH_COMPONENT32F_NV"/>
                 <enum name="GL_DEPTH32F_STENCIL8_NV"/>
