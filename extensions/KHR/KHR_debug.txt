@@ -572,7 +572,7 @@ Additions to Chapter 5 of the OpenGL 4.2 Specification
     
     Care must also be taken in securing debug callbacks for use with
     asynchronous debug output by multi-threaded GL implementations.
-    Section 5.5.6 describes this in further detail.
+    Section 5.5.7 describes this in further detail.
 
     If the DEBUG_OUTPUT state is disabled then the GL will not call the
     callback function.        
