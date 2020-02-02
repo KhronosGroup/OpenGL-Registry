@@ -14,7 +14,7 @@
 # limitations under the License.
 
 # printreg(reg, varname)
-# Prints a registry Python data structure (see registry.py) in a consistent
+# Prints a registry Python data structure (see registry.json) in a consistent
 # fashion.
 
 def tab():

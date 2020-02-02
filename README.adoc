@@ -58,11 +58,11 @@ To create a new extension specification, take these steps:
 * Obtain whatever degree of review, implementation, and signoff you need
   from affected parties before declaring the extension complete.
 * Add the extension specification under extensions/*vendor*/*extension* .
-* Modify extensions/registry.py to include the extension, using the next
+* Modify extensions/registry.json to include the extension, using the next
   free ARB, GL, and/or ES extension numbers (depending on which API the
   extension is defined for). Execute the python script nextfree.py in the
   extensions/ directory to find the next free numbers.
-* Once registry.py is updated, 'make' in extensions/ to update the PHP
+* Once registry.json is updated, 'make' in extensions/ to update the PHP
   include files which are used to show an index of extensions on the
   registry website. This requires GNU make and Python 3.
 * Add the extension number(s) to the extension specification in the 'Number'
@@ -72,7 +72,7 @@ To create a new extension specification, take these steps:
   relevant extension headers are generated with the correct interfaces by
   running 'make' in xml/. This requires the lxml Python module.
 * Once the pull request adding the extension specification and modifying
-  registry.py is accepted, your extension is registered.
+  registry.json is accepted, your extension is registered.
 
 There are some documents under the docs/ directory describing some of the
 processes for making extensions, but they are largely out of date. They may
@@ -101,8 +101,8 @@ be updated or removed over time:
    Registry].
 * docs - Miscellaneous documentation on creating extensions, mostly out of date.
 * extensions - Extension specifications for all APIs
-** extensions/registry.py - combined extension registry for all APIs
-** extensions/makeindex.py - create HTML extension indices from registry.py
+** extensions/registry.json - combined extension registry for all APIs
+** extensions/makeindex.py - create HTML extension indices from registry.json
 * index_{es,gl,sc}.php - Index files for the website, linking to specifications, headers, and extensions relevant to each API
 * specs - API and Shading Language Specifications for all APIs
 ** specs/es - OpenGL ES Specifications

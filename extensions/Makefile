@@ -18,15 +18,16 @@
 # python3 is required. Sorry, python2 dudes.
 
 PYTHON = python3
-SCRIPTS = registry.py makeindex.py
+REGISTRY = registry.json
+SCRIPTS = makeindex.py
 
 all: arbext.php esext.php glext.php
 
-arbext.php: $(SCRIPTS)
+arbext.php: $(SCRIPTS) $(REGISTRY)
 	$(PYTHON) makeindex.py arbnumber >$@
 
-esext.php: $(SCRIPTS)
+esext.php: $(SCRIPTS) $(REGISTRY)
 	$(PYTHON) makeindex.py esnumber >$@
 
-glext.php: $(SCRIPTS)
+glext.php: $(SCRIPTS) $(REGISTRY)
 	$(PYTHON) makeindex.py number >$@

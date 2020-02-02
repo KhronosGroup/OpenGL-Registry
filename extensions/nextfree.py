@@ -19,7 +19,7 @@
 #
 # Use: nextfree.py
 
-import copy, os, re, string, sys
+import copy, os, re, string, sys, json
 
 def write(*args, **kwargs):
     file = kwargs.pop('file', sys.stdout)
@@ -27,9 +27,12 @@ def write(*args, **kwargs):
     file.write(' '.join([str(arg) for arg in args]))
     file.write(end)
 
+def loadJson(path):
+    with open(path) as file:
+        return json.load(file)
+
 # Load the registry
-file = 'registry.py'
-exec(open(file).read())
+registry = loadJson('registry.json')
 
 # Track each number separately
 keys = { 'arbnumber', 'number', 'esnumber' }

@@ -22,7 +22,7 @@
 #
 # Only extensions marked 'public' will be included in the index.
 
-import copy, os, re, string, sys
+import copy, os, re, string, sys, json
 
 # Keys in glregistry:
 #   arbnumber   OpenGL ARB extension # (if present)
@@ -43,6 +43,10 @@ def makeLink(name, link):
 def hasFlag(extension, key, flag):
     return (key in extension and flag in extension[key])
 
+def loadJson(path):
+    with open(path) as file:
+        return json.load(file)
+
 if __name__ == '__main__':
     if (len(sys.argv) > 1):
         key = sys.argv[1]
@@ -54,8 +58,7 @@ if __name__ == '__main__':
     # print('makeindex: key =', key)
 
     # Load the registry
-    file = 'registry.py'
-    exec(open(file).read())
+    registry = loadJson('registry.json')
 
     # Select extensions with the matching key
     dict = {k:v for k,v in registry.items() if key in v.keys()}
