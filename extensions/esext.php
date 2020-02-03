@@ -450,6 +450,8 @@
 <li value=213><a href="extensions/OES/OES_shader_io_blocks.txt">GL_OES_shader_io_blocks</a>
 </li>
 <li value=214><a href="extensions/OES/OES_tessellation_shader.txt">GL_OES_tessellation_shader</a>
+
+    <br> <a href="extensions/OES/OES_tessellation_shader.txt">GL_OES_tessellation_point_size</a>
 </li>
 <li value=215><a href="extensions/OES/OES_texture_border_clamp.txt">GL_OES_texture_border_clamp</a>
 </li>

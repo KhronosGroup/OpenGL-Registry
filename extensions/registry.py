@@ -4296,6 +4296,7 @@ registry = {
         'esnumber' : 214,
         'flags' : { 'public' },
         'url' : 'extensions/OES/OES_tessellation_shader.txt',
+        'alias' : { 'GL_OES_tessellation_point_size' }
     },
     'GL_OES_texture_3D' : {
         'esnumber' : 34,
