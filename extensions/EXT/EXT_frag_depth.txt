@@ -125,9 +125,9 @@ Additions to Chapter 7 of the OpenGL ES Shading Language specification:
     being processed. If MSAA is enabled, the depth value is copied to all
     samples corresponding to the fragment. If depth buffering is enabled, and
     no shader writes gl_FragDepthEXT, then the fixed function value for depth 
-    will be used as the fragment’s depth value. If a shader statically assigns
+    will be used as the fragment's depth value. If a shader statically assigns
     a value to gl_FragDepthEXT, and there is an execution path through the 
-    shader that does not set gl_FragDepthEXT, then the value of the fragment’s 
+    shader that does not set gl_FragDepthEXT, then the value of the fragment's
     depth may be undefined for executions of the shader that take that path. 
     That is, if the set of linked fragment shaders statically contain a write 
     to gl_FragDepthEXT, then it is responsible for always writing it."

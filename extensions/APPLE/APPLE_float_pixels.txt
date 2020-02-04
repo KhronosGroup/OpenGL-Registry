@@ -565,7 +565,7 @@ Operations and the Frame Buffer)
     color buffer is floating-point, no clamping occurs.  The
     resulting four values are sent to the next operation.
 
-    Blending is dependent on the incoming fragment’s alpha value and
+    Blending is dependent on the incoming fragment's alpha value and
     that of the corresponding currently stored pixel. Blending applies
     only in RGBA mode and only one of the following conditions is true:
         

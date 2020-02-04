@@ -424,7 +424,7 @@ Additions to Chapter 3 of the OpenGL 2.0 Specification (Rasterization)
     each array has a resolution lower than the previous one.
 
     If the image array of level level_base, excluding its border, has
-    dimensions, w_t × h_t × d_t, then there are floor(log2(maxsize)) + 1
+    dimensions, w_t x h_t x d_t, then there are floor(log2(maxsize)) + 1
     levels in the mipmap, where
 
       maxsize = w_t,                  for one-dimensional and one-dimensional
@@ -446,7 +446,7 @@ Additions to Chapter 3 of the OpenGL 2.0 Specification (Rasterization)
      d_d = 1, for two-dimensional array textures and 
            2 ^ i, otherwise,
 
-    until the last array is reached with dimension 1 × 1 × 1.
+    until the last array is reached with dimension 1 x 1 x 1.
 
     Each array in a mipmap is defined using TexImage3D, TexImage2D,
     CopyTexImage2D, TexImage1D, or CopyTexImage1D; the array being set is
