@@ -86,7 +86,7 @@ New Tokens
 
 Additions to Chapter 4 of the OpenGL 4.5 Specification (Event Model)
 
-  Addition to Section 4.2, "Semaphore Objects”
+  Addition to Section 4.2, "Semaphore Objects"
 
 
     A command 
