@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20191206 */
+/* Generated on date 20200221 */
 
 /* Generated C header for:
  * API: gles2
@@ -1080,6 +1080,11 @@ GL_APICALL void GL_APIENTRY glGetSyncivAPPLE (GLsync sync, GLenum pname, GLsizei
 #ifndef GL_ARM_shader_framebuffer_fetch_depth_stencil
 #define GL_ARM_shader_framebuffer_fetch_depth_stencil 1
 #endif /* GL_ARM_shader_framebuffer_fetch_depth_stencil */
+
+#ifndef GL_ARM_texture_unnormalized_coordinates
+#define GL_ARM_texture_unnormalized_coordinates 1
+#define GL_TEXTURE_UNNORMALIZED_COORDINATES_ARM 0x8F6A
+#endif /* GL_ARM_texture_unnormalized_coordinates */
 
 #ifndef GL_DMP_program_binary
 #define GL_DMP_program_binary 1

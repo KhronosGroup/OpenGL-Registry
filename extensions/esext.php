@@ -673,4 +673,6 @@
 </li>
 <li value=323><a href="extensions/INTEL/INTEL_shader_integer_functions2.txt">GL_INTEL_shader_integer_functions2</a>
 </li>
+<li value=324><a href="extensions/ARM/ARM_texture_unnormalized_coordinates.txt">GL_ARM_texture_unnormalized_coordinates</a>
+</li>
 </ol>

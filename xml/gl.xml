@@ -10339,7 +10339,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8F67" name="GL_MAX_SHADER_PIXEL_LOCAL_STORAGE_SIZE_EXT"/>
             <unused start="0x8F68" vendor="ARM"/>
         <enum value="0x8F69" name="GL_TEXTURE_ASTC_DECODE_PRECISION_EXT"/>
-            <unused start="0x8F6A" end="0x8F6F" vendor="ARM"/>
+        <enum value="0x8F6A" name="GL_TEXTURE_UNNORMALIZED_COORDINATES_ARM" group="SamplerParameterF,SamplerParameterI,GetTextureParameter,TextureParameterName"/>
+            <unused start="0x8F6B" end="0x8F6F" vendor="ARM"/>
     </enums>
 
     <enums namespace="GL" start="0x8F70" end="0x8F7F" vendor="HI" comment="For Mark Callow, Khronos bug 4055. Shared with EGL.">
@@ -44079,6 +44080,11 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_ARM_shader_framebuffer_fetch_depth_stencil" supported="gles2"/>
+        <extension name="GL_ARM_texture_unnormalized_coordinates" supported="gles2">
+            <require>
+                <enum name="GL_TEXTURE_UNNORMALIZED_COORDINATES_ARM"/>
+            </require>
+        </extension>
         <extension name="GL_ATI_draw_buffers" supported="gl">
             <require>
                 <enum name="GL_MAX_DRAW_BUFFERS_ATI"/>
