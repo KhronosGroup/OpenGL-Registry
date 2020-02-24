@@ -1414,6 +1414,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/ARM/ARM_shader_framebuffer_fetch_depth_stencil.txt',
     },
+    'GL_ARM_texture_unnormalized_coordinates' : {
+        'esnumber' : 324,
+        'flags' : { 'public' },
+        'url' : 'extensions/ARM/ARM_texture_unnormalized_coordinates.txt',
+    },
     'GL_ATI_draw_buffers' : {
         'number' : 277,
         'flags' : { 'public' },
