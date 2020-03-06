@@ -5006,36 +5006,36 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" group="FragmentShaderDestMaskATI" type="bitmask">
-        <enum value="0x00000001" name="GL_RED_BIT_ATI"/>
-        <enum value="0x00000002" name="GL_GREEN_BIT_ATI"/>
-        <enum value="0x00000004" name="GL_BLUE_BIT_ATI"/>
+        <enum value="0x00000001" name="GL_RED_BIT_ATI" group="FragmentShaderDestMaskATI"/>
+        <enum value="0x00000002" name="GL_GREEN_BIT_ATI" group="FragmentShaderDestMaskATI"/>
+        <enum value="0x00000004" name="GL_BLUE_BIT_ATI" group="FragmentShaderDestMaskATI"/>
     </enums>
 
     <enums namespace="GL" group="FragmentShaderDestModMaskATI" type="bitmask">
-        <enum value="0x00000001" name="GL_2X_BIT_ATI"/>
-        <enum value="0x00000002" name="GL_4X_BIT_ATI"/>
-        <enum value="0x00000004" name="GL_8X_BIT_ATI"/>
-        <enum value="0x00000008" name="GL_HALF_BIT_ATI"/>
-        <enum value="0x00000010" name="GL_QUARTER_BIT_ATI"/>
-        <enum value="0x00000020" name="GL_EIGHTH_BIT_ATI"/>
-        <enum value="0x00000040" name="GL_SATURATE_BIT_ATI"/>
+        <enum value="0x00000001" name="GL_2X_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
+        <enum value="0x00000002" name="GL_4X_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
+        <enum value="0x00000004" name="GL_8X_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
+        <enum value="0x00000008" name="GL_HALF_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
+        <enum value="0x00000010" name="GL_QUARTER_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
+        <enum value="0x00000020" name="GL_EIGHTH_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
+        <enum value="0x00000040" name="GL_SATURATE_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
     </enums>
 
     <enums namespace="GL" group="FragmentShaderColorModMaskATI" type="bitmask">
             <!-- Also used: 0x00000001 for GL_2X_BIT_ATI reused from FragmentShaderDestModMaskAT above -->
-        <enum value="0x00000002" name="GL_COMP_BIT_ATI"/>
-        <enum value="0x00000004" name="GL_NEGATE_BIT_ATI"/>
-        <enum value="0x00000008" name="GL_BIAS_BIT_ATI"/>
+        <enum value="0x00000002" name="GL_COMP_BIT_ATI" group="FragmentShaderColorModMaskATI"/>
+        <enum value="0x00000004" name="GL_NEGATE_BIT_ATI" group="FragmentShaderColorModMaskATI"/>
+        <enum value="0x00000008" name="GL_BIAS_BIT_ATI" group="FragmentShaderColorModMaskATI"/>
     </enums>
 
     <enums namespace="GL" group="TraceMaskMESA" type="bitmask">
-        <enum value="0x0001" name="GL_TRACE_OPERATIONS_BIT_MESA"/>
-        <enum value="0x0002" name="GL_TRACE_PRIMITIVES_BIT_MESA"/>
-        <enum value="0x0004" name="GL_TRACE_ARRAYS_BIT_MESA"/>
-        <enum value="0x0008" name="GL_TRACE_TEXTURES_BIT_MESA"/>
-        <enum value="0x0010" name="GL_TRACE_PIXELS_BIT_MESA"/>
-        <enum value="0x0020" name="GL_TRACE_ERRORS_BIT_MESA"/>
-        <enum value="0xFFFF" name="GL_TRACE_ALL_BITS_MESA"/>
+        <enum value="0x0001" name="GL_TRACE_OPERATIONS_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0x0002" name="GL_TRACE_PRIMITIVES_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0x0004" name="GL_TRACE_ARRAYS_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0x0008" name="GL_TRACE_TEXTURES_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0x0010" name="GL_TRACE_PIXELS_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0x0020" name="GL_TRACE_ERRORS_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0xFFFF" name="GL_TRACE_ALL_BITS_MESA" group="TraceMaskMESA"/>
     </enums>
 
     <enums namespace="GL" group="PathRenderingMaskNV" type="bitmask">
@@ -5067,29 +5067,29 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" group="PerformanceQueryCapsMaskINTEL" type="bitmask">
-        <enum value="0x00000000" name="GL_PERFQUERY_SINGLE_CONTEXT_INTEL"/>
-        <enum value="0x00000001" name="GL_PERFQUERY_GLOBAL_CONTEXT_INTEL"/>
+        <enum value="0x00000000" name="GL_PERFQUERY_SINGLE_CONTEXT_INTEL" group="PerformanceQueryCapsMaskINTEL"/>
+        <enum value="0x00000001" name="GL_PERFQUERY_GLOBAL_CONTEXT_INTEL" group="PerformanceQueryCapsMaskINTEL"/>
     </enums>
 
     <enums namespace="GL" group="VertexHintsMaskPGI" type="bitmask">
-        <enum value="0x00000004" name="GL_VERTEX23_BIT_PGI"/>
-        <enum value="0x00000008" name="GL_VERTEX4_BIT_PGI"/>
-        <enum value="0x00010000" name="GL_COLOR3_BIT_PGI"/>
-        <enum value="0x00020000" name="GL_COLOR4_BIT_PGI"/>
-        <enum value="0x00040000" name="GL_EDGEFLAG_BIT_PGI"/>
-        <enum value="0x00080000" name="GL_INDEX_BIT_PGI"/>
-        <enum value="0x00100000" name="GL_MAT_AMBIENT_BIT_PGI"/>
-        <enum value="0x00200000" name="GL_MAT_AMBIENT_AND_DIFFUSE_BIT_PGI"/>
-        <enum value="0x00400000" name="GL_MAT_DIFFUSE_BIT_PGI"/>
-        <enum value="0x00800000" name="GL_MAT_EMISSION_BIT_PGI"/>
-        <enum value="0x01000000" name="GL_MAT_COLOR_INDEXES_BIT_PGI"/>
-        <enum value="0x02000000" name="GL_MAT_SHININESS_BIT_PGI"/>
-        <enum value="0x04000000" name="GL_MAT_SPECULAR_BIT_PGI"/>
-        <enum value="0x08000000" name="GL_NORMAL_BIT_PGI"/>
-        <enum value="0x10000000" name="GL_TEXCOORD1_BIT_PGI"/>
-        <enum value="0x20000000" name="GL_TEXCOORD2_BIT_PGI"/>
-        <enum value="0x40000000" name="GL_TEXCOORD3_BIT_PGI"/>
-        <enum value="0x80000000" name="GL_TEXCOORD4_BIT_PGI"/>
+        <enum value="0x00000004" name="GL_VERTEX23_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x00000008" name="GL_VERTEX4_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x00010000" name="GL_COLOR3_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x00020000" name="GL_COLOR4_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x00040000" name="GL_EDGEFLAG_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x00080000" name="GL_INDEX_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x00100000" name="GL_MAT_AMBIENT_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x00200000" name="GL_MAT_AMBIENT_AND_DIFFUSE_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x00400000" name="GL_MAT_DIFFUSE_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x00800000" name="GL_MAT_EMISSION_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x01000000" name="GL_MAT_COLOR_INDEXES_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x02000000" name="GL_MAT_SHININESS_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x04000000" name="GL_MAT_SPECULAR_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x08000000" name="GL_NORMAL_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x10000000" name="GL_TEXCOORD1_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x20000000" name="GL_TEXCOORD2_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x40000000" name="GL_TEXCOORD3_BIT_PGI" group="VertexHintsMaskPGI"/>
+        <enum value="0x80000000" name="GL_TEXCOORD4_BIT_PGI" group="VertexHintsMaskPGI"/>
     </enums>
 
     <enums namespace="GL" group="BufferBitQCOM" type="bitmask">
@@ -5128,14 +5128,14 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" group="FoveationConfigBitQCOM" type="bitmask">
-        <enum value="0x00000001" name="GL_FOVEATION_ENABLE_BIT_QCOM"/>
-        <enum value="0x00000002" name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM"/>
-        <enum value="0x00000004" name="GL_FOVEATION_SUBSAMPLED_LAYOUT_METHOD_BIT_QCOM"/>
+        <enum value="0x00000001" name="GL_FOVEATION_ENABLE_BIT_QCOM" group="FoveationConfigBitQCOM"/>
+        <enum value="0x00000002" name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM" group="FoveationConfigBitQCOM"/>
+        <enum value="0x00000004" name="GL_FOVEATION_SUBSAMPLED_LAYOUT_METHOD_BIT_QCOM" group="FoveationConfigBitQCOM"/>
     </enums>
 
     <enums namespace="GL" group="FfdMaskSGIX" type="bitmask">
-        <enum value="0x00000001" name="GL_TEXTURE_DEFORMATION_BIT_SGIX"/>
-        <enum value="0x00000002" name="GL_GEOMETRY_DEFORMATION_BIT_SGIX"/>
+        <enum value="0x00000001" name="GL_TEXTURE_DEFORMATION_BIT_SGIX" group="FfdMaskSGIX"/>
+        <enum value="0x00000002" name="GL_GEOMETRY_DEFORMATION_BIT_SGIX" group="FfdMaskSGIX"/>
     </enums>
 
 
@@ -5143,25 +5143,25 @@ typedef unsigned int GLhandleARB;
          used for indexed access. -->
 
     <enums namespace="GL" group="CommandOpcodesNV" vendor="NV" comment="For NV_command_list.">
-        <enum value="0x0000" name="GL_TERMINATE_SEQUENCE_COMMAND_NV"/>
-        <enum value="0x0001" name="GL_NOP_COMMAND_NV"/>
-        <enum value="0x0002" name="GL_DRAW_ELEMENTS_COMMAND_NV"/>
-        <enum value="0x0003" name="GL_DRAW_ARRAYS_COMMAND_NV"/>
-        <enum value="0x0004" name="GL_DRAW_ELEMENTS_STRIP_COMMAND_NV"/>
-        <enum value="0x0005" name="GL_DRAW_ARRAYS_STRIP_COMMAND_NV"/>
-        <enum value="0x0006" name="GL_DRAW_ELEMENTS_INSTANCED_COMMAND_NV"/>
-        <enum value="0x0007" name="GL_DRAW_ARRAYS_INSTANCED_COMMAND_NV"/>
-        <enum value="0x0008" name="GL_ELEMENT_ADDRESS_COMMAND_NV"/>
-        <enum value="0x0009" name="GL_ATTRIBUTE_ADDRESS_COMMAND_NV"/>
-        <enum value="0x000A" name="GL_UNIFORM_ADDRESS_COMMAND_NV"/>
-        <enum value="0x000B" name="GL_BLEND_COLOR_COMMAND_NV"/>
-        <enum value="0x000C" name="GL_STENCIL_REF_COMMAND_NV"/>
-        <enum value="0x000D" name="GL_LINE_WIDTH_COMMAND_NV"/>
-        <enum value="0x000E" name="GL_POLYGON_OFFSET_COMMAND_NV"/>
-        <enum value="0x000F" name="GL_ALPHA_REF_COMMAND_NV"/>
-        <enum value="0x0010" name="GL_VIEWPORT_COMMAND_NV"/>
-        <enum value="0x0011" name="GL_SCISSOR_COMMAND_NV"/>
-        <enum value="0x0012" name="GL_FRONT_FACE_COMMAND_NV"/>
+        <enum value="0x0000" name="GL_TERMINATE_SEQUENCE_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0001" name="GL_NOP_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0002" name="GL_DRAW_ELEMENTS_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0003" name="GL_DRAW_ARRAYS_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0004" name="GL_DRAW_ELEMENTS_STRIP_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0005" name="GL_DRAW_ARRAYS_STRIP_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0006" name="GL_DRAW_ELEMENTS_INSTANCED_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0007" name="GL_DRAW_ARRAYS_INSTANCED_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0008" name="GL_ELEMENT_ADDRESS_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0009" name="GL_ATTRIBUTE_ADDRESS_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x000A" name="GL_UNIFORM_ADDRESS_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x000B" name="GL_BLEND_COLOR_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x000C" name="GL_STENCIL_REF_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x000D" name="GL_LINE_WIDTH_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x000E" name="GL_POLYGON_OFFSET_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x000F" name="GL_ALPHA_REF_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0010" name="GL_VIEWPORT_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0011" name="GL_SCISSOR_COMMAND_NV" group="CommandOpcodesNV"/>
+        <enum value="0x0012" name="GL_FRONT_FACE_COMMAND_NV" group="CommandOpcodesNV"/>
     </enums>
 
     <enums namespace="GL" group="MapTextureFormatINTEL" vendor="INTEL" comment="Texture memory layouts for INTEL_map_texture">
@@ -5222,17 +5222,17 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" group="TransformFeedbackTokenNV" vendor="NV" comment="For NV_transform_feedback. No clue why small negative values are used">
-        <enum value="-2" name="GL_NEXT_BUFFER_NV"/>
-        <enum value="-3" name="GL_SKIP_COMPONENTS4_NV"/>
-        <enum value="-4" name="GL_SKIP_COMPONENTS3_NV"/>
-        <enum value="-5" name="GL_SKIP_COMPONENTS2_NV"/>
-        <enum value="-6" name="GL_SKIP_COMPONENTS1_NV"/>
+        <enum value="-2" name="GL_NEXT_BUFFER_NV" group="TransformFeedbackTokenNV"/>
+        <enum value="-3" name="GL_SKIP_COMPONENTS4_NV" group="TransformFeedbackTokenNV"/>
+        <enum value="-4" name="GL_SKIP_COMPONENTS3_NV" group="TransformFeedbackTokenNV"/>
+        <enum value="-5" name="GL_SKIP_COMPONENTS2_NV" group="TransformFeedbackTokenNV"/>
+        <enum value="-6" name="GL_SKIP_COMPONENTS1_NV" group="TransformFeedbackTokenNV"/>
     </enums>
 
     <enums namespace="GL" group="TriangleListSUN" vendor="SUN">
-        <enum value="0x0001" name="GL_RESTART_SUN"/>
-        <enum value="0x0002" name="GL_REPLACE_MIDDLE_SUN"/>
-        <enum value="0x0003" name="GL_REPLACE_OLDEST_SUN"/>
+        <enum value="0x0001" name="GL_RESTART_SUN" group="TriangleListSUN"/>
+        <enum value="0x0002" name="GL_REPLACE_MIDDLE_SUN" group="TriangleListSUN"/>
+        <enum value="0x0003" name="GL_REPLACE_OLDEST_SUN" group="TriangleListSUN"/>
     </enums>
 
     <!-- The default ("API") enum namespace starts here. While some
