@@ -21014,8 +21014,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glIglooInterfaceSGIX</name></proto>
-            <param group="IglooFunctionSelectSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param group="IglooParameterSGIX" len="COMPSIZE(pname)">const void *<name>params</name></param>
+            <param><ptype>GLenum</ptype> <name>pname</name></param>
+            <param len="COMPSIZE(pname)">const void *<name>params</name></param>
             <glx type="render" opcode="200"/>
         </command>
         <command>
