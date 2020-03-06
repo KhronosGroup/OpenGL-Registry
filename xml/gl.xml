@@ -5325,11 +5325,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0401" name="GL_FRONT_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
         <enum value="0x0402" name="GL_BACK_LEFT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
         <enum value="0x0403" name="GL_BACK_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
-        <enum value="0x0404" name="GL_FRONT" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,ReadBufferMode,StencilFaceDirection"/>
-        <enum value="0x0405" name="GL_BACK" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,ReadBufferMode,StencilFaceDirection"/>
+        <enum value="0x0404" name="GL_FRONT" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,ReadBufferMode,StencilFaceDirection,MaterialFace"/>
+        <enum value="0x0405" name="GL_BACK" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,ReadBufferMode,StencilFaceDirection,MaterialFace"/>
         <enum value="0x0406" name="GL_LEFT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
         <enum value="0x0407" name="GL_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
-        <enum value="0x0408" name="GL_FRONT_AND_BACK" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,StencilFaceDirection"/>
+        <enum value="0x0408" name="GL_FRONT_AND_BACK" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,StencilFaceDirection,MaterialFace"/>
         <enum value="0x0409" name="GL_AUX0" group="ReadBufferMode,DrawBufferMode"/>
         <enum value="0x040A" name="GL_AUX1" group="ReadBufferMode,DrawBufferMode"/>
         <enum value="0x040B" name="GL_AUX2" group="ReadBufferMode,DrawBufferMode"/>
