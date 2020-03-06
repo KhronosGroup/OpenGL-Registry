@@ -6324,26 +6324,26 @@ typedef unsigned int GLhandleARB;
         <enum value="0x80D4" name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
         <enum value="0x80D5" name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE" group="ColorTableTargetSGI"/>
         <enum value="0x80D5" name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
-        <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE_SGI" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS_SGI" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80D8" name="GL_COLOR_TABLE_FORMAT" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80D8" name="GL_COLOR_TABLE_FORMAT_SGI" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80D9" name="GL_COLOR_TABLE_WIDTH" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80D9" name="GL_COLOR_TABLE_WIDTH_SGI" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DA" name="GL_COLOR_TABLE_RED_SIZE" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DA" name="GL_COLOR_TABLE_RED_SIZE_SGI" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DB" name="GL_COLOR_TABLE_GREEN_SIZE" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DB" name="GL_COLOR_TABLE_GREEN_SIZE_SGI" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DC" name="GL_COLOR_TABLE_BLUE_SIZE" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DC" name="GL_COLOR_TABLE_BLUE_SIZE_SGI" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DD" name="GL_COLOR_TABLE_ALPHA_SIZE" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DD" name="GL_COLOR_TABLE_ALPHA_SIZE_SGI" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DE" name="GL_COLOR_TABLE_LUMINANCE_SIZE" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DE" name="GL_COLOR_TABLE_LUMINANCE_SIZE_SGI" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DF" name="GL_COLOR_TABLE_INTENSITY_SIZE" group="GetColorTableParameterPNameSGI"/>
-        <enum value="0x80DF" name="GL_COLOR_TABLE_INTENSITY_SIZE_SGI" group="GetColorTableParameterPNameSGI"/>
+        <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80D8" name="GL_COLOR_TABLE_FORMAT" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80D8" name="GL_COLOR_TABLE_FORMAT_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80D9" name="GL_COLOR_TABLE_WIDTH" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80D9" name="GL_COLOR_TABLE_WIDTH_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DA" name="GL_COLOR_TABLE_RED_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DA" name="GL_COLOR_TABLE_RED_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DB" name="GL_COLOR_TABLE_GREEN_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DB" name="GL_COLOR_TABLE_GREEN_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DC" name="GL_COLOR_TABLE_BLUE_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DC" name="GL_COLOR_TABLE_BLUE_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DD" name="GL_COLOR_TABLE_ALPHA_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DD" name="GL_COLOR_TABLE_ALPHA_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DE" name="GL_COLOR_TABLE_LUMINANCE_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DE" name="GL_COLOR_TABLE_LUMINANCE_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DF" name="GL_COLOR_TABLE_INTENSITY_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80DF" name="GL_COLOR_TABLE_INTENSITY_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
     </enums>
 
     <enums namespace="GL" start="0x80E0" end="0x810F" vendor="MS">
