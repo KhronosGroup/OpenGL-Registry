@@ -8253,7 +8253,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8772" name="GL_VERTEX_STREAM6_ATI" group="VertexStreamATI"/>
         <enum value="0x8773" name="GL_VERTEX_STREAM7_ATI" group="VertexStreamATI"/>
         <enum value="0x8774" name="GL_VERTEX_SOURCE_ATI"/>
-        <enum value="0x8775" name="GL_BUMP_ROT_MATRIX_ATI" group="GetTexBumpParameterATI"/>
+        <enum value="0x8775" name="GL_BUMP_ROT_MATRIX_ATI" group="GetTexBumpParameterATI,TexBumpParameterATI"/>
         <enum value="0x8776" name="GL_BUMP_ROT_MATRIX_SIZE_ATI" group="GetTexBumpParameterATI"/>
         <enum value="0x8777" name="GL_BUMP_NUM_TEX_UNITS_ATI" group="GetTexBumpParameterATI"/>
         <enum value="0x8778" name="GL_BUMP_TEX_UNITS_ATI" group="GetTexBumpParameterATI"/>
