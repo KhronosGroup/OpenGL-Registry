@@ -25,8 +25,8 @@ Status
 
 Version
 
-    Last Modified Date:         January 3, 2019
-    Revision:                   6
+    Last Modified Date:         April 2, 2019
+    Revision:                   7
 
 Number
 
@@ -44,6 +44,8 @@ Dependencies
     This extension interacts with ARB_sparse_buffer.
 
     This extension requires EXT_direct_state_access.
+
+    This extension interacts with EXT_bindable_uniform
 
 Overview
 
@@ -201,7 +203,6 @@ Additions to the OpenGL 4.5 Specification (Compatibility Profile)
     The following rules apply to buffer objects with per-GPU storage:
 
       When mapped updates apply to all GPUs (only WRITE_ONLY access is supported).
-      When bound to UNIFORM_BUFFER, client uniform updates apply to all GPUs.
       When used as the write buffer for CopyBufferSubData or CopyNamedBufferSubData, writes apply
       to all GPUs.
 
@@ -212,8 +213,6 @@ Additions to the OpenGL 4.5 Specification (Compatibility Profile)
     
     An INVALID_VALUE error is generated if BufferStorage/NamedBufferStorageEXT is called with
     PER_GPU_STORAGE_BIT_NV set with MAP_READ_BIT or SPARSE_STORAGE_BIT_ARB.
-    An INVALID_OPERATION is generated if a buffer with PER_GPU_STORAGE_BIT_NV is bound to
-    UNIFORM_BUFFER and GetUniformfv, GetUniformiv, GetUniformuiv or GetUniformdv is called.
 
     To modify buffer object data on one or more GPUs, the client may use the command
 
@@ -246,10 +245,28 @@ Additions to the OpenGL 4.5 Specification (Compatibility Profile)
         uint readBuffer, uint writeBuffer,
         intptr readOffset, intptr writeOffset, sizeiptr size);
 
-    This command operates similarly to CopyNamedBufferSubData, with the exception that it operates
-    on per-GPU instances of the buffer object.  The read GPU index is specified by <readGpu> and
-    the set of write GPUs is specified by the mask in <writeGpuMask>.  The following errors apply
-    to MulticastCopyBufferSubDataNV:
+    This command operates similarly to CopyNamedBufferSubData, while adding control over the
+    source and destination GPU(s).  The read GPU index is specified by <readGpu> and
+    the set of write GPUs is specified by the mask in <writeGpuMask>.
+    
+    Implementations may also support this command with buffers not created with
+    PER_GPU_STORAGE_BIT_NV.  This support can be determined with one test copy with an error check
+    (see error discussion below).  Note that a buffer created without PER_GPU_STORAGE_BIT_NV is
+    considered to have undefined storage and the behavior of the command depends on the storage
+    type (per-GPU or GPU-shared) currently used for <writeBuffer>.  If <writeBuffer> is using
+    GPU-shared storage, the normal error checks apply but the command behaves as if <writeGpuMask>
+    includes all GPUs.  If <writeBuffer> is using per-GPU storage, the command behaves as if
+    PER_GPU_STORAGE_BIT_NV were set, however performance may be reduced.
+
+    This following error may apply to MulticastCopyBufferSubDataNV on some implementations and not
+    on others.  In earlier revisions of this extension the error was required, therefore
+    applications should perform a test copy using buffers without PER_GPU_STORAGE_BIT_NV before
+    relying on that functionality:
+
+    An INVALID_OPERATION error is generated if the value of BUFFER_STORAGE_FLAGS for <readBuffer>
+    or <writeBuffer> does not have PER_GPU_STORAGE_BIT_NV set.
+
+    The following errors apply to MulticastCopyBufferSubDataNV:
 
     An INVALID_OPERATION error is generated if <readBuffer> or <writeBuffer> is not the name of an
     existing buffer object.
@@ -259,8 +276,6 @@ Additions to the OpenGL 4.5 Specification (Compatibility Profile)
     An INVALID_OPERATION error is generated if either the source or destination buffer objects is
     mapped, unless they were mapped with MAP_PERSISTENT_BIT set in the Map*BufferRange access
     flags.
-    An INVALID_OPERATION error is generated if the value of BUFFER_STORAGE_FLAGS for <readBuffer>
-    or <writeBuffer> does not have PER_GPU_STORAGE_BIT_NV set.
     An INVALID_VALUE error is generated if <readGpu> is greater than or equal to
     MULTICAST_GPUS_NV.
     An INVALID_OPERATION error is generated if <writeGpuMask> is zero.  An INVALID_VALUE error is
@@ -574,6 +589,15 @@ Dependencies on ARB_sparse_buffer
     If ARB_sparse_buffer is not supported, any reference to SPARSE_STORAGE_BIT_ARB should be
     removed.
 
+Interactions with EXT_bindable_uniform
+
+    When using the functionality of EXT_bindable_uniform and a per-GPU storage buffer is bound
+    to a bindable location in a program object, client uniform updates apply to all GPUs.
+
+    An INVALID_OPERATION is generated if a buffer with PER_GPU_STORAGE_BIT_NV is bound to a
+    program object’s bindable location and GetUniformfv, GetUniformiv, GetUniformuiv or
+    GetUniformdv is called.
+
 Errors
 
     Relaxation of INVALID_ENUM errors
@@ -776,6 +800,10 @@ Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------  -----------------------------------------------
+     7    04/02/19  jschnarr  clarify that the interactions with uniform APIs only apply to
+                              EXT_bindable_uniform (not ARB_uniform_buffer_object).
+                              optionally allow MulticastCopyBufferSubDataNV with buffers lacking
+                              per-GPU storage
      6    01/03/19  jschnarr  reduce MULTICAST_GPUS_NV minimum to 1
                               clarify that MULTICAST_GPUS_NV is constant for a context
      5    10/07/16  jschnarr  trivial typo fix
