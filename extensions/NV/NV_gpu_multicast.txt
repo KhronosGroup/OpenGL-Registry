@@ -595,7 +595,7 @@ Interactions with EXT_bindable_uniform
     to a bindable location in a program object, client uniform updates apply to all GPUs.
 
     An INVALID_OPERATION is generated if a buffer with PER_GPU_STORAGE_BIT_NV is bound to a
-    program object’s bindable location and GetUniformfv, GetUniformiv, GetUniformuiv or
+    program object's bindable location and GetUniformfv, GetUniformiv, GetUniformuiv or
     GetUniformdv is called.
 
 Errors
