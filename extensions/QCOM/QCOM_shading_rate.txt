@@ -76,7 +76,7 @@ New Tokens
 
     Accepted by the <cap> parameter of Enable, Disable, IsEnabled:
 
-         PRESERVE_SHADING_RATE_ASPECT_RATIO_QCOM  0x96A5
+         SHADING_RATE_PRESERVE_ASPECT_RATIO_QCOM  0x96A5
 
     Allowed in the <rate> parameter in ShadingRateQCOM:
          SHADING_RATE_1X1_PIXELS_QCOM             0x96A6
