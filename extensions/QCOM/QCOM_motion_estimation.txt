@@ -105,12 +105,13 @@ Additions to Chapter 8 of the OpenGL ES 3.2 Specification
         output.width  = ref.width  / MOTION_ESTIMATION_SEARCH_BLOCK_X_QCOM
         output.height = ref.height / MOTION_ESTIMATION_SEARCH_BLOCK_Y_QCOM
 
-    Each texel in the <output> texture represents the estimated motion vector, for the supported
-    search block size, from the <ref> texture to the <target> target texture.  The motion vector
-    X and Y components are provided in the R and G channels respectively.  The B and A components
-    are currently undefined and left for future expansion.  If no motion is detected for a block,
-    or if the <mask> texture indicates that the block should be skipped, then the R and G channels
-    will contain 0, indicating no motion.
+    Each texel in the <output> texture represents the estimated motion in pixels, for the supported
+    search block size, from the <ref> texture to the <target> target texture.  Implementations may
+    generate sub-pixel motion vectors, in which case the returned vector components may have fractional
+    values.  The motion vector X and Y components are provided in the R and G channels respectively.
+    The B and A components are currently undefined and left for future expansion.  If no motion is
+    detected for a block, or if the <mask> texture indicates that the block should be skipped, then
+    the R and G channels will be set to zero, indicating no motion.
 
     The <mask> texture is used to control the region-of-interest which can help to reduce the
     overall workload.  The <mask> texture dimensions must exactly match that of the <output>
