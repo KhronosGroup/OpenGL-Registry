@@ -175,12 +175,12 @@ Modifications to the OpenGL Shading Language Specification, Version 4.50
     select a specific layer (or face and layer of a cube map) of a
     multi-layer framebuffer attachment. The actual layer used will come
     from one of the vertices in the primitive being shaded. Which vertex
-    the layer comes from is discussed in section 11.4 “Layer and
-    Viewport Selection” of the OpenGL Specification. It might be undefined,
+    the layer comes from is discussed in section 11.4 "Layer and
+    Viewport Selection" of the OpenGL Specification. It might be undefined,
     so it is best to write the same layer value for all vertices of a
     primitive. If a shader statically assigns a value to gl_Layer, layered
-    rendering mode is enabled. See section 11.3.4.5 “Geometry Shader
-    Outputs” and section 9.4.9 “Layered Framebuffers” of the OpenGL
+    rendering mode is enabled. See section 11.3.4.5 "Geometry Shader
+    Outputs" and section 9.4.9 "Layered Framebuffers" of the OpenGL
     Graphics System Specification for more information. If a shader
     statically assigns a value to gl_Layer, and there is an execution path
     through the shader that does not set gl_Layer, then the value of
