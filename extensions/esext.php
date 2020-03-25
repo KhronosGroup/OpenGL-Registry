@@ -675,4 +675,6 @@
 </li>
 <li value=324><a href="extensions/ARM/ARM_texture_unnormalized_coordinates.txt">GL_ARM_texture_unnormalized_coordinates</a>
 </li>
+<li value=325><a href="extensions/QCOM/QCOM_shading_rate.txt">GL_QCOM_shading_rate</a>
+</li>
 </ol>

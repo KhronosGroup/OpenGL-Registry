@@ -4504,6 +4504,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_shader_framebuffer_fetch_rate.txt',
     },
+    'GL_QCOM_shading_rate' : {
+        'esnumber' : 325,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_shading_rate.txt',
+    },
     'GL_QCOM_texture_foveated' : {
         'esnumber' : 293,
         'flags' : { 'public' },

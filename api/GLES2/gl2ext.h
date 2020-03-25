@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20200312 */
+/* Generated on date 20200319 */
 
 /* Generated C header for:
  * API: gles2
@@ -3794,6 +3794,22 @@ GL_APICALL void GL_APIENTRY glFramebufferFetchBarrierQCOM (void);
 #ifndef GL_QCOM_shader_framebuffer_fetch_rate
 #define GL_QCOM_shader_framebuffer_fetch_rate 1
 #endif /* GL_QCOM_shader_framebuffer_fetch_rate */
+
+#ifndef GL_QCOM_shading_rate
+#define GL_QCOM_shading_rate 1
+#define GL_SHADING_RATE_QCOM              0x96A4
+#define GL_SHADING_RATE_PRESERVE_ASPECT_RATIO_QCOM 0x96A5
+#define GL_SHADING_RATE_1X1_PIXELS_QCOM   0x96A6
+#define GL_SHADING_RATE_1X2_PIXELS_QCOM   0x96A7
+#define GL_SHADING_RATE_2X1_PIXELS_QCOM   0x96A8
+#define GL_SHADING_RATE_2X2_PIXELS_QCOM   0x96A9
+#define GL_SHADING_RATE_4X2_PIXELS_QCOM   0x96AC
+#define GL_SHADING_RATE_4X4_PIXELS_QCOM   0x96AE
+typedef void (GL_APIENTRYP PFNGLSHADINGRATEQCOMPROC) (GLenum rate);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glShadingRateQCOM (GLenum rate);
+#endif
+#endif /* GL_QCOM_shading_rate */
 
 #ifndef GL_QCOM_texture_foveated
 #define GL_QCOM_texture_foveated 1
