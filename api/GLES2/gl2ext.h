@@ -3777,18 +3777,6 @@ GL_APICALL void GL_APIENTRY glFramebufferFoveationParametersQCOM (GLuint framebu
 #endif
 #endif /* GL_QCOM_framebuffer_foveated */
 
-#ifndef GL_QCOM_motion_estimation
-#define GL_QCOM_motion_estimation 1
-#define GL_MOTION_ESTIMATION_SEARCH_BLOCK_X_QCOM 0x8C90
-#define GL_MOTION_ESTIMATION_SEARCH_BLOCK_Y_QCOM 0x8C91
-typedef void (GL_APIENTRYP PFNGLTEXESTIMATEMOTIONQCOMPROC) (GLuint ref, GLuint target, GLuint output);
-typedef void (GL_APIENTRYP PFNGLTEXESTIMATEMOTIONREGIONSQCOMPROC) (GLuint ref, GLuint target, GLuint output, GLuint mask);
-#ifdef GL_GLEXT_PROTOTYPES
-GL_APICALL void GL_APIENTRY glTexEstimateMotionQCOM (GLuint ref, GLuint target, GLuint output);
-GL_APICALL void GL_APIENTRY glTexEstimateMotionRegionsQCOM (GLuint ref, GLuint target, GLuint output, GLuint mask);
-#endif
-#endif /* GL_QCOM_motion_estimation */
-
 #ifndef GL_QCOM_perfmon_global_mode
 #define GL_QCOM_perfmon_global_mode 1
 #define GL_PERFMON_GLOBAL_MODE_QCOM       0x8FA0
