@@ -8,9 +8,9 @@ Name Strings
 
 Contributors
 
-    Nicolas Capens, TransGaming
-    Daniel Koch, TransGaming
-    Shannon Woods, TransGaming
+    Nicolas Capens, TransGaming / Google
+    Daniel Koch, TransGaming / NVIDIA
+    Shannon Woods, TransGaming / Google
     Kenneth Russell, Google
     Vangelis Kokkevis, Google
     Gregg Tavares, Google
@@ -19,7 +19,7 @@ Contributors
 
 Contact
 
-    Shannon Woods, TransGaming (shannon 'dot' woods 'at' transgaming.com)
+    Shannon Woods, Google (shannonwoods 'at' google.com)
 
 Status
 
@@ -32,7 +32,7 @@ Version
 
 Number
 
-    TBD
+    OpenGL ES Extension #138
 
 Dependencies
 
