@@ -24,8 +24,8 @@ Status
 
 Version
 
-    Last Modified:      March 15, 2019
-    Revision:           2
+    Last Modified:      March 16, 2020
+    Revision:           3
 
 Number
 
@@ -111,7 +111,7 @@ New Procedures and Functions
       void GetShadingRateImagePaletteNV(uint viewport, uint entry,
                                         enum *rate);
       void ShadingRateImageBarrierNV(boolean synchronize);
-      void ShadingRateImageBarrierNV(enum order);
+      void ShadingRateSampleOrderNV(enum order);
       void ShadingRateSampleOrderCustomNV(enum rate, uint samples,
                                           const int *locations);
       void GetShadingRateSampleLocationivNV(enum rate, uint samples,
@@ -1024,6 +1024,11 @@ Issues
     Also, please refer to issues in the GLSL extension specification.
 
 Revision History
+
+    Revision 3 (pbrown), March 16, 2020
+    - Fix cut-and-paste error in "New Procedures and Functions" incorrectly
+      listing ShadingRateSampleOrderNV as a second instance of
+      ShadingRateImageBarrier.
 
     Revision 2 (pknowles)
     - ES interactions.
