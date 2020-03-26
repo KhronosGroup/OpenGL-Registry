@@ -511,7 +511,7 @@ Additions to Chapter 4 of the OpenGL 4.5 Specification (Event Model)
         | GL_NONE                                          | VK_IMAGE_LAYOUT_UNDEFINED                                      |
         | GL_LAYOUT_GENERAL_EXT                            | VK_IMAGE_LAYOUT_GENERAL                                        |
         | GL_LAYOUT_COLOR_ATTACHMENT_EXT                   | VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL                       |
-        | GL_LAYOUT_DEPTH_STENCIL_ATTACHMENT_EXT           | VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT                       |
+        | GL_LAYOUT_DEPTH_STENCIL_ATTACHMENT_EXT           | VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL                       |
         | GL_LAYOUT_DEPTH_STENCIL_READ_ONLY_EXT            | VK_IMAGE_LAYOUT_DEPTH_STENCIL_READ_ONLY_OPTIMAL                |
         | GL_LAYOUT_SHADER_READ_ONLY_EXT                   | VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL                       |
         | GL_LAYOUT_TRANSFER_SRC_EXT                       | VK_IMAGE_LAYOUT_TRANSFER_SRC_OPTIMAL                           |
