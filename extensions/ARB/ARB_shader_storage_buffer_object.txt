@@ -1022,7 +1022,7 @@ New Implementation Dependent State
 
     Get Value                         Type  Get Command    Minimum Value  Description                Sec. 
     -----------------------           ----  -----------    -------------  -------------------------  -----
-    MAX_COMBINED_SHADER_OUTPUT   _    Z+    GetIntegerv    8              limit on active image      3.10.22
+    MAX_COMBINED_SHADER_OUTPUT_       Z+    GetIntegerv    8              limit on active image      3.10.22
       RESOURCES                                                           units, shader storage
                                                                           blocks, and fragment outputs
 
