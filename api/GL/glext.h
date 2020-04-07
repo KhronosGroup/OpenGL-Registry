@@ -51,7 +51,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20200319
+#define GL_GLEXT_VERSION 20200407
 
 #include <KHR/khrplatform.h>
 
