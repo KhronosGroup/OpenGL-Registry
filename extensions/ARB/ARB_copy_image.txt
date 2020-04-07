@@ -268,7 +268,7 @@ Dependencies on OpenGL 3.0 and ARB_texture_compression_rgtc:
 Dependencies on OpenGL 4.2 and ARB_texture_compression_bptc:
 
     If OpenGL 4.2 or later, and ARB_texture_compression_bptc is not
-    supported, remove any references to the PBTC compressed texture
+    supported, remove any references to the BPTC compressed texture
     formats.
     
 Errors
