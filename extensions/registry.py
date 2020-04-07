@@ -4484,6 +4484,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_framebuffer_foveated.txt',
     },
+    'GL_QCOM_motion_estimation' : {
+        'esnumber' : 326,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_motion_estimation.txt',
+    },
     'GL_QCOM_performance_monitor_global_mode' : {
         'esnumber' : 56,
         'flags' : { 'public' },

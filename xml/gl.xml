@@ -9526,7 +9526,8 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8C90" end="0x8C9F" vendor="QCOM" comment="For Affie Munshi. Reassigned from AMD to QCOM (bug 5874)">
-            <unused start="0x8C90" end="0x8C91" vendor="QCOM"/>
+        <enum value="0x8C90" name="GL_MOTION_ESTIMATION_SEARCH_BLOCK_X_QCOM" group="GetPName"/>
+        <enum value="0x8C91" name="GL_MOTION_ESTIMATION_SEARCH_BLOCK_Y_QCOM" group="GetPName"/>
         <enum value="0x8C92" name="GL_ATC_RGB_AMD"/>
         <enum value="0x8C93" name="GL_ATC_RGBA_EXPLICIT_ALPHA_AMD"/>
             <unused start="0x8C94" end="0x8C9F" vendor="QCOM"/>
@@ -28863,6 +28864,19 @@ typedef unsigned int GLhandleARB;
             <param group="TextureEnvTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="TextureEnvParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLfixed</ptype> *<name>params</name></param>
+        </command>
+        <command>
+            <proto>void <name>glTexEstimateMotionQCOM</name></proto>
+            <param group="Texture"><ptype>GLuint</ptype> <name>ref</name></param>
+            <param group="Texture"><ptype>GLuint</ptype> <name>target</name></param>
+            <param group="Texture"><ptype>GLuint</ptype> <name>output</name></param>
+        </command>
+        <command>
+            <proto>void <name>glTexEstimateMotionRegionsQCOM</name></proto>
+            <param group="Texture"><ptype>GLuint</ptype> <name>ref</name></param>
+            <param group="Texture"><ptype>GLuint</ptype> <name>target</name></param>
+            <param group="Texture"><ptype>GLuint</ptype> <name>output</name></param>
+            <param group="Texture"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
             <proto>void <name>glTexFilterFuncSGIS</name></proto>
@@ -50954,6 +50968,15 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM"/>
                 <command name="glFramebufferFoveationConfigQCOM"/>
                 <command name="glFramebufferFoveationParametersQCOM"/>
+            </require>
+        </extension>
+        <extension name="GL_QCOM_motion_estimation" supported="gles2">
+            <require>
+                <enum name="GL_MOTION_ESTIMATION_SEARCH_BLOCK_X_QCOM"/>
+                <enum name="GL_MOTION_ESTIMATION_SEARCH_BLOCK_Y_QCOM"/>
+                <enum name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM"/>
+                <command name="glTexEstimateMotionQCOM"/>
+                <command name="glTexEstimateMotionRegionsQCOM"/>
             </require>
         </extension>
         <extension name="GL_QCOM_texture_foveated" supported="gles2">

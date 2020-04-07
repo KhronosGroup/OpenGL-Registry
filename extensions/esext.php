@@ -677,4 +677,6 @@
 </li>
 <li value=325><a href="extensions/QCOM/QCOM_shading_rate.txt">GL_QCOM_shading_rate</a>
 </li>
+<li value=326><a href="extensions/QCOM/QCOM_motion_estimation.txt">GL_QCOM_motion_estimation</a>
+</li>
 </ol>
