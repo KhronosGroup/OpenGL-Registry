@@ -679,4 +679,8 @@
 </li>
 <li value=326><a href="extensions/QCOM/QCOM_motion_estimation.txt">GL_QCOM_motion_estimation</a>
 </li>
+<li value=327><a href="extensions/MESA/MESA_framebuffer_flip_x.txt">GL_MESA_framebuffer_flip_x</a>
+</li>
+<li value=328><a href="extensions/MESA/MESA_framebuffer_swap_xy.txt">GL_MESA_framebuffer_swap_xy</a>
+</li>
 </ol>

@@ -2989,12 +2989,26 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/GLX_MESA_copy_sub_buffer.txt',
     },
+    'GL_MESA_framebuffer_flip_x' : {
+        'number' : 548,
+        'esnumber' : 327,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_framebuffer_flip_x.txt',
+    },
     'GL_MESA_framebuffer_flip_y' : {
         'number' : 540,
         'esnumber' : 302,
         'flags' : { 'public' },
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/MESA_framebuffer_flip_y.txt',
+    },
+    'GL_MESA_framebuffer_swap_xy' : {
+        'number' : 549,
+        'esnumber' : 328,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_framebuffer_swap_xy.txt',
     },
     'GL_MESA_pack_invert' : {
         'number' : 300,

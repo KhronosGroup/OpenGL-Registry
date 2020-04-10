@@ -1033,4 +1033,8 @@
 </li>
 <li value=547><a href="extensions/INTEL/INTEL_shader_integer_functions2.txt">GL_INTEL_shader_integer_functions2</a>
 </li>
+<li value=548><a href="extensions/MESA/MESA_framebuffer_flip_x.txt">GL_MESA_framebuffer_flip_x</a>
+</li>
+<li value=549><a href="extensions/MESA/MESA_framebuffer_swap_xy.txt">GL_MESA_framebuffer_swap_xy</a>
+</li>
 </ol>
