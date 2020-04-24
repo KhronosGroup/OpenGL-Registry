@@ -19796,6 +19796,11 @@ typedef unsigned int GLhandleARB;
             <proto><ptype>GLushort</ptype> <name>glGetStageIndexNV</name></proto>
             <param group="ShaderType"><ptype>GLenum</ptype> <name>shadertype</name></param>
         </command>
+        <!-- These commands represent strings as GLubyte* instead of GLchar* as represented elsewhere.
+             While functionally the same, these commands continue to use GLubyte* as there's no way to
+             change the signature of these commands without potentially breaking lots of applications
+             using these APIs. For more information, see public issue 363:
+             https://github.com/KhronosGroup/OpenGL-Registry/issues/363 -->
         <command>
             <proto group="String">const <ptype>GLubyte</ptype> *<name>glGetString</name></proto>
             <param group="StringName"><ptype>GLenum</ptype> <name>name</name></param>
