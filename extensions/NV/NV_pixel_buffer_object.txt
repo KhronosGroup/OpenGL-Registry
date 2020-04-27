@@ -21,8 +21,8 @@ Status
 
 Version
 
-    Last Modified Date: October 23rd, 2012
-    Revision: 2.0
+    Last Modified Date: April 27th, 2020
+    Revision: 3.0
 
 Number
 
@@ -552,11 +552,11 @@ Usage Examples
 
         glBindBuffer(GL_PIXEL_PACK_BUFFER_NV, imageBuffers[0]);
         glBufferData(GL_PIXEL_PACK_BUFFER_NV, imageSize / 2, NULL,
-                     GL_STREAM_READ);
+                     GL_STREAM_DRAW);
 
         glBindBuffer(GL_PIXEL_PACK_BUFFER_NV, imageBuffers[1]);
         glBufferData(GL_PIXEL_PACK_BUFFER_NV, imageSize / 2, NULL,
-                     GL_STREAM_READ);
+                     GL_STREAM_DRAW);
 
         // Render to framebuffer
         glDrawBuffer(GL_BACK);
@@ -576,12 +576,12 @@ Usage Examples
         // Process partial images.  Mapping the buffer waits for
         // outstanding DMA transfers into the buffer to finish.
         glBindBuffer(GL_PIXEL_PACK_BUFFER_NV, imageBuffers[0]);
-        pboMemory1 = glMapBuffer(GL_PIXEL_PACK_BUFFER_NV,
-                                 GL_READ_ONLY);
+        pboMemory1 = glMapBufferRangeEXT(GL_PIXEL_PACK_BUFFER_NV,0,
+                                         imageSize/2, GL_MAP_READ_BIT_EXT);
         processImage(pboMemory1);
         glBindBuffer(GL_PIXEL_PACK_BUFFER_NV, imageBuffers[1]);
-        pboMemory2 = glMapBuffer(GL_PIXEL_PACK_BUFFER_NV,
-                                 GL_READ_ONLY);
+        pboMemory2 = glMapBufferRangeEXT(GL_PIXEL_PACK_BUFFER_NV,0,
+                                         imageSize/2, GL_MAP_READ_BIT_EXT);
         processImage(pboMemory2);
 
         // Unmap the image buffers
@@ -750,6 +750,8 @@ Issues
         
 Revision History
 
+    3   04/27/2020 fix example code: GL_STREAM_READ is not available in ES2.0
+                   glMapBufferOES does not allow reading from the mapped pointer.
     2   10/23/2012 more cleanup, interaction with EXT_map_buffer_range
     1   04/19/2012 initial revision
         - took ARB_pixel_buffer_object, stripped everything not applicable to 
