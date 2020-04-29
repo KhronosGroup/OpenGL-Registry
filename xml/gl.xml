@@ -18779,37 +18779,37 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetNamedBufferParameteri64v</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="VertexBufferObjectParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="BufferPNameARB"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint64</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetNamedBufferParameteriv</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="VertexBufferObjectParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="BufferPNameARB"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetNamedBufferParameterivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="VertexBufferObjectParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="BufferPNameARB"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetNamedBufferParameterui64vNV</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="VertexBufferObjectParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="BufferPNameARB"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLuint64EXT</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetNamedBufferPointerv</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="VertexBufferObjectParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="BufferPointerNameARB"><ptype>GLenum</ptype> <name>pname</name></param>
             <param>void **<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetNamedBufferPointervEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="VertexBufferObjectParameter"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="BufferPointerNameARB"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1">void **<name>params</name></param>
         </command>
         <command>
