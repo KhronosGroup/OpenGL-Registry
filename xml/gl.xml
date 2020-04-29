@@ -10199,10 +10199,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8E88" name="GL_TESS_CONTROL_SHADER" group="PipelineParameterName,ShaderType"/>
         <enum value="0x8E88" name="GL_TESS_CONTROL_SHADER_EXT"/>
         <enum value="0x8E88" name="GL_TESS_CONTROL_SHADER_OES"/>
-        <enum value="0x8E89" name="GL_MAX_TESS_CONTROL_UNIFORM_BLOCKS"/>
+        <enum value="0x8E89" name="GL_MAX_TESS_CONTROL_UNIFORM_BLOCKS" group="GetPName"/>
         <enum value="0x8E89" name="GL_MAX_TESS_CONTROL_UNIFORM_BLOCKS_EXT"/>
         <enum value="0x8E89" name="GL_MAX_TESS_CONTROL_UNIFORM_BLOCKS_OES"/>
-        <enum value="0x8E8A" name="GL_MAX_TESS_EVALUATION_UNIFORM_BLOCKS"/>
+        <enum value="0x8E8A" name="GL_MAX_TESS_EVALUATION_UNIFORM_BLOCKS" group="GetPName"/>
         <enum value="0x8E8A" name="GL_MAX_TESS_EVALUATION_UNIFORM_BLOCKS_EXT"/>
         <enum value="0x8E8A" name="GL_MAX_TESS_EVALUATION_UNIFORM_BLOCKS_OES"/>
             <unused start="0x8E8B" vendor="NV"/>
@@ -10807,7 +10807,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9124" name="GL_MAX_GEOMETRY_OUTPUT_COMPONENTS_EXT"/>
         <enum value="0x9124" name="GL_MAX_GEOMETRY_OUTPUT_COMPONENTS_OES"/>
         <enum value="0x9125" name="GL_MAX_FRAGMENT_INPUT_COMPONENTS" group="GetPName"/>
-        <enum value="0x9126" name="GL_CONTEXT_PROFILE_MASK"/>
+        <enum value="0x9126" name="GL_CONTEXT_PROFILE_MASK" group="GetPName"/>
         <enum value="0x9127" name="GL_UNPACK_COMPRESSED_BLOCK_WIDTH"/>
         <enum value="0x9128" name="GL_UNPACK_COMPRESSED_BLOCK_HEIGHT"/>
         <enum value="0x9129" name="GL_UNPACK_COMPRESSED_BLOCK_DEPTH"/>
