@@ -576,11 +576,11 @@ Usage Examples
         // Process partial images.  Mapping the buffer waits for
         // outstanding DMA transfers into the buffer to finish.
         glBindBuffer(GL_PIXEL_PACK_BUFFER_NV, imageBuffers[0]);
-        pboMemory1 = glMapBufferRangeEXT(GL_PIXEL_PACK_BUFFER_NV,0,
+        pboMemory1 = glMapBufferRangeEXT(GL_PIXEL_PACK_BUFFER_NV, 0,
                                          imageSize/2, GL_MAP_READ_BIT_EXT);
         processImage(pboMemory1);
         glBindBuffer(GL_PIXEL_PACK_BUFFER_NV, imageBuffers[1]);
-        pboMemory2 = glMapBufferRangeEXT(GL_PIXEL_PACK_BUFFER_NV,0,
+        pboMemory2 = glMapBufferRangeEXT(GL_PIXEL_PACK_BUFFER_NV, 0,
                                          imageSize/2, GL_MAP_READ_BIT_EXT);
         processImage(pboMemory2);
 
