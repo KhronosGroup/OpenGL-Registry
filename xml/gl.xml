@@ -9379,7 +9379,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C29" name="GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_ARB"/>
         <enum value="0x8C29" name="GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_EXT"/>
         <enum value="0x8C29" name="GL_MAX_GEOMETRY_TEXTURE_IMAGE_UNITS_OES"/>
-        <enum value="0x8C2A" name="GL_TEXTURE_BUFFER" group="CopyBufferSubDataTarget,BufferTargetARB,BufferStorageTarget"/>
+        <enum value="0x8C2A" name="GL_TEXTURE_BUFFER" group="TextureTarget,CopyBufferSubDataTarget,BufferTargetARB,BufferStorageTarget"/>
         <enum value="0x8C2A" name="GL_TEXTURE_BUFFER_ARB"/>
         <enum value="0x8C2A" name="GL_TEXTURE_BUFFER_EXT"/>
         <enum value="0x8C2A" name="GL_TEXTURE_BUFFER_OES"/>
