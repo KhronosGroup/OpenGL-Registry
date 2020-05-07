@@ -32699,7 +32699,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribIPointer</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLint</ptype> <name>size</name></param>
-            <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="VertexAttribIType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
         </command>
@@ -32707,7 +32707,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribIPointerEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLint</ptype> <name>size</name></param>
-            <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="VertexAttribIType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
             <alias name="glVertexAttribIPointer"/>
@@ -32932,7 +32932,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribLPointer</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLint</ptype> <name>size</name></param>
-            <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="VertexAttribLType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param len="size">const void *<name>pointer</name></param>
         </command>
@@ -32940,7 +32940,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribLPointerEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLint</ptype> <name>size</name></param>
-            <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="VertexAttribLType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param len="size">const void *<name>pointer</name></param>
             <alias name="glVertexAttribLPointer"/>
