@@ -352,7 +352,7 @@ Sample Usage
             //
             glGetProgramiv(newProgram, GL_PROGRAM_BINARY_LENGTH_OES, &binaryLength);
             binary = (void*)malloc(binaryLength);
-            glGetProgramBinaryOES(newProgram, &binaryLength, NULL, binaryFormat, binary);
+            glGetProgramBinaryOES(newProgram, binaryLength, NULL, binaryFormat, binary);
 
             //
             //  Cache the program binary for future runs
