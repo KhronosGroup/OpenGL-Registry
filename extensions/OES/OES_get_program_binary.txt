@@ -10,7 +10,6 @@ Contributors
 
     Acorn Pooley
     Aske Simon Christensen
-    Arthur Tombs
     David Garcia
     Georg Kolling
     Jason Green
