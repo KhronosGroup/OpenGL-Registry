@@ -44,8 +44,8 @@ Status
 
 Version
 
-    Last Modified Date: January 11, 2019
-    Revision: #15
+    Last Modified Date: June 24, 2020
+    Revision: #16
 
 Number
 
@@ -352,7 +352,7 @@ Sample Usage
             //
             glGetProgramiv(newProgram, GL_PROGRAM_BINARY_LENGTH_OES, &binaryLength);
             binary = (void*)malloc(binaryLength);
-            glGetProgramBinaryOES(newProgram, &binaryLength, NULL, binaryFormat, binary);
+            glGetProgramBinaryOES(newProgram, binaryLength, NULL, binaryFormat, binary);
 
             //
             //  Cache the program binary for future runs
@@ -416,6 +416,8 @@ Sample Usage
 
 Revision History
 
+    #16    24/06/2020    Arthur Tombs    Fix typo: pass binaryLength by value
+                                         instead of by pointer in example code
     #15    01/11/2019    Jon Leech       Add an error for ProgramBinary if there
                                          are no binary formats (Bug 16155).
     #14    10/08/2013    Jon Leech       Change GLvoid -> void (Bug 10412).
