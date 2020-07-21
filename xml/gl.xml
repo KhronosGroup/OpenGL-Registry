@@ -5937,7 +5937,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8010" name="GL_CONVOLUTION_1D_EXT" group="GetPName,ConvolutionTargetEXT,EnableCap"/>
         <enum value="0x8011" name="GL_CONVOLUTION_2D" group="ConvolutionTarget,ConvolutionTargetEXT"/>
         <enum value="0x8011" name="GL_CONVOLUTION_2D_EXT" group="GetPName,ConvolutionTargetEXT,EnableCap"/>
-        <enum value="0x8012" name="GL_SEPARABLE_2D" group="SeparableTargetEXT"/>
+        <enum value="0x8012" name="GL_SEPARABLE_2D" group="SeparableTarget,SeparableTargetEXT"/>
         <enum value="0x8012" name="GL_SEPARABLE_2D_EXT" group="SeparableTargetEXT,EnableCap,GetPName"/>
         <enum value="0x8013" name="GL_CONVOLUTION_BORDER_MODE" group="GetConvolutionParameter,ConvolutionParameterEXT"/>
         <enum value="0x8013" name="GL_CONVOLUTION_BORDER_MODE_EXT" group="GetConvolutionParameter,ConvolutionParameterEXT"/>
@@ -20827,7 +20827,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetnSeparableFilter</name></proto>
-            <param group="SeparableTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="SeparableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>rowBufSize</name></param>
@@ -38078,6 +38078,7 @@ typedef unsigned int GLhandleARB;
             <command name="glReadnPixels"/>
         </require>
         <require profile="compatibility" comment="Reuse GL_ARB_robustness">
+            <enum name="GL_SEPARABLE_2D"/>
             <command name="glGetnMapdv"/>
             <command name="glGetnMapfv"/>
             <command name="glGetnMapiv"/>
