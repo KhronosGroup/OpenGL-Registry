@@ -3531,6 +3531,13 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_memory_attachment.txt',
     },
+    'GL_NV_memory_object_sparse' : {
+        'number' : 550,
+        'esnumber' : 329,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_memory_object_sparse.txt',
+    },
     'GL_NV_mesh_shader' : {
         'number' : 527,
         'esnumber' : 312,

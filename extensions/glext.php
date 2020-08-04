@@ -1037,4 +1037,6 @@
 </li>
 <li value=549><a href="extensions/MESA/MESA_framebuffer_swap_xy.txt">GL_MESA_framebuffer_swap_xy</a>
 </li>
+<li value=550><a href="extensions/NV/NV_memory_object_sparse.txt">GL_NV_memory_object_sparse</a>
+</li>
 </ol>
