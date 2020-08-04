@@ -11571,6 +11571,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9593" name="GL_LAYOUT_TRANSFER_DST_EXT" group="TextureLayout"/>
         <enum value="0x9594" name="GL_HANDLE_TYPE_D3D12_FENCE_EXT" group="ExternalHandleType"/>
         <enum value="0x9595" name="GL_D3D12_FENCE_VALUE_EXT" group="SemaphoreParameterName"/>
+        <enum value="0x9595" name="GL_TIMELINE_SEMAPHORE_VALUE_NV" group="SemaphoreParameterName"/>
         <enum value="0x9596" name="GL_NUM_DEVICE_UUIDS_EXT" group="GetPName"/>
         <enum value="0x9597" name="GL_DEVICE_UUID_EXT" group="GetPName"/>
         <enum value="0x9598" name="GL_DRIVER_UUID_EXT" group="GetPName"/>
@@ -11598,7 +11599,12 @@ typedef unsigned int GLhandleARB;
         <enum value="0x95AE" name="GL_SHADING_RATE_SAMPLE_ORDER_DEFAULT_NV"/>
         <enum value="0x95AF" name="GL_SHADING_RATE_SAMPLE_ORDER_PIXEL_MAJOR_NV"/>
         <enum value="0x95B0" name="GL_SHADING_RATE_SAMPLE_ORDER_SAMPLE_MAJOR_NV"/>
-        <unused start="0x9581" end="0x962F" vendor="NV"/>
+        <unused start="0x95B1" end="0x95B2" vendor="NV"/>
+        <enum value="0x95B3" name="GL_SEMAPHORE_TYPE_NV"/>
+        <enum value="0x95B4" name="GL_SEMAPHORE_TYPE_BINARY_NV"/>
+        <enum value="0x95B5" name="GL_SEMAPHORE_TYPE_TIMELINE_NV"/>
+        <enum value="0x95B6" name="GL_MAX_TIMELINE_SEMAPHORE_VALUE_DIFFERENCE_NV"/>
+        <unused start="0x95B7" end="0x962F" vendor="NV"/>
     </enums>
 
     <enums namespace="GL" start="0x9630" end="0x963F" vendor="Oculus" comment="Email from Cass Everitt">
@@ -14965,6 +14971,11 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCreateSamplers</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
             <param len="n"><ptype>GLuint</ptype> *<name>samplers</name></param>
+        </command>
+        <command>
+            <proto>void <name>glCreateSemaphoresNV</name></proto>
+            <param><ptype>GLsizei</ptype> <name>n</name></param>
+            <param len="n"><ptype>GLuint</ptype> *<name>semaphores</name></param>
         </command>
         <command>
             <proto><ptype>GLuint</ptype> <name>glCreateShader</name></proto>
@@ -19708,6 +19719,12 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
             <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
+        </command>
+        <command>
+            <proto>void <name>glGetSemaphoreParameterivNV</name></proto>
+            <param><ptype>GLuint</ptype> <name>semaphore</name></param>
+            <param group="SemaphoreParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetSemaphoreParameterui64vEXT</name></proto>
@@ -27760,6 +27777,12 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>group</name></param>
             <param><ptype>GLint</ptype> <name>numCounters</name></param>
             <param len="numCounters"><ptype>GLuint</ptype> *<name>counterList</name></param>
+        </command>
+        <command>
+            <proto>void <name>glSemaphoreParameterivNV</name></proto>
+            <param><ptype>GLuint</ptype> <name>semaphore</name></param>
+            <param group="SemaphoreParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param>const <ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glSemaphoreParameterui64vEXT</name></proto>
@@ -46837,6 +46860,18 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_TEXTURE_VIEW_NUM_LAYERS_EXT"/>
                 <enum name="GL_TEXTURE_IMMUTABLE_LEVELS"/>
                 <command name="glTextureViewEXT"/>
+            </require>
+        </extension>
+        <extension name="GL_NV_timeline_semaphore" supported="gl|gles2">
+            <require>
+                <enum name="GL_TIMELINE_SEMAPHORE_VALUE_NV"/>
+                <enum name="GL_SEMAPHORE_TYPE_NV"/>
+                <enum name="GL_SEMAPHORE_TYPE_BINARY_NV"/>
+                <enum name="GL_SEMAPHORE_TYPE_TIMELINE_NV"/>
+                <enum name="GL_MAX_TIMELINE_SEMAPHORE_VALUE_DIFFERENCE_NV"/>
+                <command name="glCreateSemaphoresNV"/>
+                <command name="glSemaphoreParameterivNV"/>
+                <command name="glGetSemaphoreParameterivNV"/>
             </require>
         </extension>
         <extension name="GL_EXT_timer_query" supported="gl">

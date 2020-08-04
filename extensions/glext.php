@@ -1037,4 +1037,6 @@
 </li>
 <li value=549><a href="extensions/MESA/MESA_framebuffer_swap_xy.txt">GL_MESA_framebuffer_swap_xy</a>
 </li>
+<li value=551><a href="extensions/NV/GL_NV_timeline_semaphore.txt">GL_NV_timeline_semaphore</a>
+</li>
 </ol>

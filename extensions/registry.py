@@ -3937,6 +3937,13 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_transform_feedback2.txt',
     },
+    'GL_NV_timeline_semaphore' : {
+        'number' : 551,
+        'esnumber' : 330,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_timeline_semaphore.txt',
+    },
     'GL_NV_uniform_buffer_unified_memory' : {
         'number' : 459,
         'flags' : { 'public' },
