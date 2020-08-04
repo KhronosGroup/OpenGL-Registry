@@ -167,7 +167,7 @@ Operations and the Frame Buffer)
     buffers.  If more than one color buffer is selected for drawing,
     blending is computed and applied independently for each buffer.
 
-    Specifying NONE in the <locations> array for an fragment color will
+    Specifying NONE in the <locations> array for a fragment color will
     inhibit that fragment color from being written to any buffer.
 
     Monoscopic surfaces include only left buffers, while stereoscopic
@@ -337,7 +337,7 @@ Dependencies on NV_draw_buffers:
     Indicating a buffer using DrawBuffersIndexedEXT causes subsequent
     pixel color value writes to affect the indicated buffer.
 
-    Specifying NONE in the <locations> array for an fragment color will
+    Specifying NONE in the <locations> array for a fragment color will
     inhibit that fragment color from being written to any buffer.
 
     Monoscopic surfaces include only left buffers, while stereoscopic

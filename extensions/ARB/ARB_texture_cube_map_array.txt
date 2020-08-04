@@ -23,6 +23,16 @@ Notice
     Copyright (c) 2009-2013 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
 
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL Working Group. For
+    extensions which have been promoted to a core Specification, fixes will
+    first appear in the latest version of that core Specification, and will
+    eventually be backported to the extension document. This policy is
+    described in more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
+
 Status
 
     Complete. Approved by the ARB on July 3, 2009.
@@ -147,7 +157,7 @@ Addition to Chapter 3 of OpenGL 3.0 Specification (Rasterization)
 
     is used to specify a three-dimensional texture image. <target> must
     be one of TEXTURE_3D for a three-dimensional texture or
-    TEXTURE_2D_ARRAY for an two-dimensional array texture or
+    TEXTURE_2D_ARRAY for a two-dimensional array texture or
     TEXTURE_CUBE_MAP_ARRAY_ARB. Additionally, target may be
     PROXY_TEXTURE_3D for a three-dimensional proxy texture,
     PROXY_TEXTURE_2D_ARRAY for a two-dimensional proxy array texture, or

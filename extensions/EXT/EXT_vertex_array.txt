@@ -63,7 +63,7 @@ Issues
 
         A: No. If this is necessary, define a separate quad_mesh extension
            that supports both immediate mode and arrays.  (Add QUAD_MESH_EXT
-           as an token accepted by Begin and DrawArraysEXT.  Add
+           as a token accepted by Begin and DrawArraysEXT.  Add
            QuadMeshLengthEXT to specify the length of the mesh.)
 
 Reasoning

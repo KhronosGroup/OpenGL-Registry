@@ -21,8 +21,8 @@ Status
 
 Version
 
-    Last Modified Date:         October 21, 2015
-    Revision:                   2
+    Last Modified Date:         December 10, 2018
+    Revision:                   3
 
 Number
 
@@ -45,12 +45,12 @@ Overview
     implementation-dependent, and this extension provides no guarantee over
     how individual shader invocations are assigned to such sets.  In
     particular, the set of shader invocations has no necessary relationship
-    with the compute shader local work group -- a pair of shader invocations
-    in a single compute shader work group may end up in different sets used by
+    with the compute shader workgroup -- a pair of shader invocations
+    in a single compute shader workgroup may end up in different sets used by
     these built-ins.
 
     Compute shaders operate on an explicitly specified group of threads (a
-    local work group), but many implementations of OpenGL ES 3.0 will even group
+    workgroup), but many implementations of OpenGL ES 3.0 will even group
     non-compute shader invocations and execute them in a SIMD fashion.  When
     executing code like
 
@@ -194,6 +194,9 @@ Issues
 
 Revision History
 
+    Revision 3, December 10, 2018 (Jon Leech)
+      - Use 'workgroup' consistently throughout (Bug 11723, internal API
+        issue 87).
     Revision 2, October 21, 2015
       - Promoted to EXT
     Revision 1, October 23, 2014

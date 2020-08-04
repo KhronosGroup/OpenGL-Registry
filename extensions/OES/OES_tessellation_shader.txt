@@ -34,6 +34,16 @@ Notice
     Copyright (c) 2010-2016 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
 
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL ES Working Group. For
+    extensions which have been promoted to a core Specification, fixes will
+    first appear in the latest version of that core Specification, and will
+    eventually be backported to the extension document. This policy is
+    described in more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
+
     Portions Copyright (c) 2013-2014 NVIDIA Corporation.
 
 Status
@@ -43,8 +53,8 @@ Status
 
 Version
 
-    Last Modified Date: May 31, 2016
-    Revision: 6
+    Last Modified Date: December 10, 2018
+    Revision: 7
 
 Number
 
@@ -2408,7 +2418,7 @@ Additions to the OpenGL ES Shading Language 3.10 Specification
     The shader invocation control function is only available in tessellation
     control and compute shaders. It is used to control the relative
     execution order of multiple shader invocations used to process a patch
-    (in the case of tessellation control shaders) or a local work group (in
+    (in the case of tessellation control shaders) or a workgroup (in
     the case of compute shaders), which are otherwise executed with an
     undefined order.
 
@@ -2685,7 +2695,10 @@ Issues
 Revision History
 
     Rev.    Date      Author     Changes
-    ----  ----------  --------  -------------------------------------------------
+    ----  ----------  --------- -------------------------------------------------
+     7    12/10/2018  Jon Leech Use 'workgroup' consistently throughout (Bug
+                                11723, internal API issue 87).
+
      6    05/31/2016  Jon Leech Note that primitive ID counters are reset to zero
                                 after each instance drawn (Bug 14024).
 

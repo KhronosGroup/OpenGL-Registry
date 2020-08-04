@@ -33,7 +33,7 @@ Status
 
 Version
 
-    Version 7, September 2, 2016
+    Version 8, December 11, 2019
 
 Number
 
@@ -45,8 +45,8 @@ Dependencies
 
     The extension is written against the OpenGL ES 2.0 specification.
     
-    Interaction: This extension adds GetInteger64vEXT if OpenGL ES 3.0 is not
-    supported
+    The GetInteger64vEXT command is required only if OpenGL ES 3.0 or
+    later is not supported (see the Interactions section for details).
 
 Overview
 
@@ -84,6 +84,7 @@ New Procedures and Functions
     void GetQueryObjectuivEXT(uint id, enum pname, uint *params);
     void GetQueryObjecti64vEXT(uint id, enum pname, int64 *params);
     void GetQueryObjectui64vEXT(uint id, enum pname, uint64 *params);
+    void GetInteger64vEXT(enum pname, int64 *data)
 
 New Tokens
 
@@ -249,6 +250,15 @@ Additions to Chapter 5 of the OpenGL ES 2.0 Specification (Special Functions)
 Additions to Chapter 6 of the OpenGL ES 2.0 Specification (State and State
 Requests)
 
+    Add GetInteger64vEXT to section 6.1.1 "Simple Queries", following
+    the prototype for GetIntegerv:
+
+    "  void GetInteger64vEXT(enum pname, int64 *data);
+       void GetFloatv(enum value, float *data);
+
+    The commands obtain boolean, integer, 64-bit integer, or floating-point
+    variables..."
+
     Add a new section 6.1.9 "Timer Queries":
 
     "The command
@@ -386,6 +396,14 @@ New Implementation Dependent State
     --------------------------     ----    -----------      -------------      ----------------      ------
     QUERY_COUNTER_BITS_EXT         Z+      GetQueryivEXT    see 6.1.9          Number of bits in     6.1.9
                                                                                query counter
+
+Interactions with OpenGL ES 2.0 and OpenGL ES 3.x
+
+    If only OpenGL ES 2.0 is supported, then GetInteger64vEXT is defined,
+    and is used instead of the GetInteger64v command defined by OpenGL ES
+    3.x. If OpenGL ES 3.0 or later is supported, GetInteger64vEXT is not
+    required by an implementation of this extension, and the changes to
+    section 6.1.1 are ignored.
 
 Examples
 
@@ -736,6 +754,9 @@ Issues
     will not be set.
 
 Revision History
+    Revision 8, 2019/12/11 (Jon Leech)
+      - Add actual spec language defining GetInteger64vEXT (github
+        OpenGL-Registry issue 326)
     Revision 7, 2016/9/2 (Maurice Ribble)
       - Clarify language dealing with GetInteger64v
     Revision 6, 2016/7/15 (Maurice Ribble)

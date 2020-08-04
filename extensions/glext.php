@@ -987,4 +987,54 @@
 </li>
 <li value=524><a href="extensions/NV/NV_memory_attachment.txt">GL_NV_memory_attachment</a>
 </li>
+<li value=525><a href="extensions/NV/NV_compute_shader_derivatives.txt">GL_NV_compute_shader_derivatives</a>
+</li>
+<li value=526><a href="extensions/NV/NV_fragment_shader_barycentric.txt">GL_NV_fragment_shader_barycentric</a>
+</li>
+<li value=527><a href="extensions/NV/NV_mesh_shader.txt">GL_NV_mesh_shader</a>
+</li>
+<li value=528><a href="extensions/NV/NV_representative_fragment_test.txt">GL_NV_representative_fragment_test</a>
+</li>
+<li value=529><a href="extensions/NV/NV_scissor_exclusive.txt">GL_NV_scissor_exclusive</a>
+</li>
+<li value=530><a href="extensions/NV/NV_shader_texture_footprint.txt">GL_NV_shader_texture_footprint</a>
+</li>
+<li value=531><a href="extensions/NV/NV_shading_rate_image.txt">GL_NV_shading_rate_image</a>
+</li>
+<li value=532><a href="extensions/ATI/WGL_ATI_render_texture_rectangle.txt">WGL_ATI_render_texture_rectangle</a>
+</li>
+<li value=533><a href="extensions/NV/NV_vdpau_interop2.txt">GL_NV_vdpau_interop2</a>
+</li>
+<li value=534><a href="extensions/EXT/EXT_texture_sRGB_R8.txt">GL_EXT_texture_sRGB_R8</a>
+</li>
+<li value=535><a href="extensions/EXT/GLX_EXT_context_priority.txt">GLX_EXT_context_priority</a>
+</li>
+<li value=536><a href="extensions/EXT/EXT_multiview_timer_query.txt">GL_EXT_multiview_timer_query</a>
+</li>
+<li value=537><a href="extensions/EXT/EXT_multiview_texture_multisample.txt">GL_EXT_multiview_texture_multisample</a>
+</li>
+<li value=538><a href="extensions/EXT/EXT_multiview_tessellation_geometry_shader.txt">GL_EXT_multiview_tessellation_geometry_shader</a>
+</li>
+<li value=539><a href="extensions/EXT/EXT_texture_shadow_lod.txt">GL_EXT_texture_shadow_lod</a>
+</li>
+<li value=540><a href="extensions/MESA/MESA_framebuffer_flip_y.txt">GL_MESA_framebuffer_flip_y</a>
+</li>
+<li value=541><a href="extensions/NVX/NVX_progress_fence.txt">GL_NVX_progress_fence</a>
+</li>
+<li value=542><a href="extensions/NV/WGL_NV_multigpu_context.txt">WGL_NV_multigpu_context</a>
+</li>
+<li value=543><a href="extensions/NVX/NVX_gpu_multicast2.txt">GL_NVX_gpu_multicast2</a>
+</li>
+<li value=544><a href="extensions/NV/NV_shader_subgroup_partitioned.txt">GL_NV_shader_subgroup_partitioned</a>
+</li>
+<li value=545><a href="extensions/NV/GLX_NV_multigpu_context.txt">GLX_NV_multigpu_context</a>
+</li>
+<li value=546><a href="extensions/EXT/EXT_EGL_sync.txt">GL_EXT_EGL_sync</a>
+</li>
+<li value=547><a href="extensions/INTEL/INTEL_shader_integer_functions2.txt">GL_INTEL_shader_integer_functions2</a>
+</li>
+<li value=548><a href="extensions/MESA/MESA_framebuffer_flip_x.txt">GL_MESA_framebuffer_flip_x</a>
+</li>
+<li value=549><a href="extensions/MESA/MESA_framebuffer_swap_xy.txt">GL_MESA_framebuffer_swap_xy</a>
+</li>
 </ol>

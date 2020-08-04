@@ -21,18 +21,28 @@ Contributors
 
 Notice
 
-    Copyright (c) 2011-2013 The Khronos Group Inc. Copyright terms at
+    Copyright (c) 2011-2019 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
+
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL ES Working Group. For
+    extensions which have been promoted to a core Specification, fixes will
+    first appear in the latest version of that core Specification, and will
+    eventually be backported to the extension document. This policy is
+    described in more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
 
 Status
 
-    Complete. 
+    Complete.
     Ratified by the Khronos Board of Promoters on 2014/03/14.
 
 Version
 
-    Last Modified Date:         February 12, 2014
-    Revision:                   9
+    Last Modified Date:         January 10, 2019
+    Revision:                   10
 
 Number
 
@@ -134,10 +144,8 @@ Additions to Chapter 3 of the OpenGL ES 3.0 Specification (Rasterization)
     gl_SamplePosition variables, only the bit for the current sample is
     set in gl_SampleMaskIn.
     When OpenGL ES API state specifies multiple fragment shader invocations
-    for a given fragment, the sample mask for any single fragment shader
-    invocation may specify a subset of the covered samples for the fragment.
-    In this case, the bit corresponding to each covered sample will be set in
-    exactly one fragment shader invocation.
+    for a given fragment, the bit corresponding to each covered sample will
+    be set in exactly one fragment shader invocation.
 
     Modify section Shader Outputs, p. 165
 
@@ -392,6 +400,8 @@ Revision History
 
     Rev.    Date      Author    Changes
     ----  ----------  --------  -----------------------------------------
+    10    2019-01-10  Jon Leech Clarify the requirements on gl_SampleMaskIn
+                                (internal API issue #45).
     9     2014-02-12  dkoch     remove GLSL suffixes per Issue 6.
     8     2014-01-30  dkoch     rename to OES, clean editing notes
     7     2013-12-11  dkoch     correct names of interacting extensions

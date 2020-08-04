@@ -718,8 +718,8 @@ Add a new subsection 10.X.3 (Drawing with Commands and State Objects)
     
     where LookupFbo and LookupStateObject return the driver's internal fbo
     and stateObject object and stateObject.fbo is the driver's fbo state
-    object and fbo.configuration and fbo.name are the current configuration of an fbo
-    and the fbo's name respectively.
+    object and fbo.configuration and fbo.name are the current configuration
+    of a fbo and the fbo's name respectively.
 
 Add a new section 10.X.4 (Command Lists)
 

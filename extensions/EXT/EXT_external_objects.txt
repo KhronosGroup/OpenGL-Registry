@@ -592,7 +592,7 @@ and Multiple Contexts) and Chapter 6 (Buffer Objects)
         +-------------+----------------+
         +-------------+----------------+
 
-    Applications must only import external semaphore handles exported
+    Applications must only import external memory handles exported
     from the same device or set of devices used by the current context.
     Refer to section 4.2.1 for methods to determine which devices are
     used by the current context.

@@ -12,15 +12,26 @@ Contributors
     Daniel Koch, NVIDIA
     Christophe Riccio, Unity
     Graham Sellers, AMD
+    Alejandro Piñeiro, Igalia
 
 Contact Point for Bug Reports
 
-    https://www.khronos.org/bugzilla/enter_bug.cgi?product=OpenGL
+    https://github.com/KhronosGroup/OpenGL-Registry/issues/
 
 Notice
 
-    Copyright (c) 2015-2016 The Khronos Group Inc. Copyright terms at
+    Copyright (c) 2015-2019 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
+
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL Working Group. For
+    extensions which have been promoted to a core Specification, fixes will
+    first appear in the latest version of that core Specification, and will
+    eventually be backported to the extension document. This policy is
+    described in more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
 
 Status
 
@@ -29,8 +40,8 @@ Status
 
 Version
 
-    Last Modified Date: 29-May-2018
-    Revision: 40
+    Last Modified Date: September 17, 2019
+    Revision: 45
 
 Number
 
@@ -361,6 +372,11 @@ Overview
       atomicCounterDecrement -> OpAtomicIDecrement (with post decrement)
       atomicCounter          -> OpAtomicLoad
 
+    Mapping of uniform initializers
+
+      Using the OpVariable initializer logic, but only from a constant
+      instruction (not a global one).
+
     Mapping of other instructions
 
       %     -> OpUMod/OpSMod
@@ -382,6 +398,7 @@ Overview
         version 4.5.)
       + *AtomicCounter* Storage Class can use the *Offset* decoration
       + OriginLowerLeft
+      + Uniforms support constant initializers.
 
     Corresponding features that GLSL keeps, despite GL_KHR_vulkan_glsl removal:
       . default uniforms (those not inside a uniform block)
@@ -706,12 +723,51 @@ Modifications to Chapter 7 of the OpenGL 4.5 (Core Profile) Specification
     "7.6.2.spv SPIR-V Uniform Offsets and Strides
 
     The SPIR-V decorations *GLSLShared* or *GLSLPacked* must not be used. A
-    variable in the *Uniform* Storage Class decorated as a *Block* must be
-    explicitly laid out using the *Offset*, *ArrayStride*, and *MatrixStride*
-    decorations. If the variable is decorated as a *BufferBlock*, its offsets
-    and strides must not contradict std430 alignment and minimum offset
-    requirements.  Otherwise, its offsets and strides must not contradict
-    std140 alignment and minimum offset requirements."
+    variable in the *Uniform* Storage Class decorated as a *Block* or
+    *BufferBlock* must be explicitly laid out using the *Offset*, *ArrayStride*,
+    and *MatrixStride* decorations. These must follow the alignment rules listed
+    above, but not necessarily the packing rules. More specifically, explicit
+    SPIR-V offsets and strides must obey the following:
+
+    Define the /base alignment/ recursively as:
+
+      - A scalar of size N has a base alignment of N.
+
+      - A two-component vector, with components of size N, has a base alignment
+        of 2N.
+
+      - A three- or four-component vector, with components of size N, has a base
+        alignment of 4N.
+
+      - An array has a base alignment equal to the base alignment of its element
+        type, rounded up to a multiple of 16.
+
+      - A structure has a base alignment equal to the largest base alignment of
+        any of its members, rounded up to a multiple of 16.
+
+      - A row-major matrix of C columns has a base alignment equal to the base
+        alignment of a vector of C matrix components.
+
+      - A column-major matrix has a base alignment equal to the base alignment
+        of the matrix column type.
+
+    Given this definition, blocks must be laid out such that:
+
+      - The *Offset* decoration must be a multiple of its base alignment.
+
+      - Any *ArrayStride* or *MatrixStride* decoration must be an integer
+        multiple of the base alignment of the array or matrix.
+
+      - The *Offset* decoration of a member must not place it between the end of
+        a structure or an array and the next multiple of the base alignment of
+        that structure or array.
+
+      - The numeric order of *Offset* decorations need not follow member
+        declaration order.
+
+    With one exception: Variables in the *Uniform* storage class with a
+    decoration of *BufferBlock* do not need their base alignments rounded up
+    to a multiple of 16.
 
   Modifications to Section 7.13 "Shader, Program, and Program Pipeline Queries"
 
@@ -1049,6 +1105,8 @@ Add Appendix A.spv "The OpenGL SPIR-V Execution Environment" to the OpenGL 4.5
         only consume an /Image/ operand whose type has its /Sampled/
         operand set to 1.
       - The /Depth/ operand of OpTypeImage is ignored.
+      - The Image Format of OpImageWrite must not be Unknown, unless the
+        StorageImageWriteWithoutFormat OpCapability was declared.
 
     *AtomicCounter* storage class:
       - Unless otherwise specified, variables declared in the AtomicCounter
@@ -1093,6 +1151,10 @@ Add Appendix A.spv "The OpenGL SPIR-V Execution Environment" to the OpenGL 4.5
     Recursion:
      - For all entry points, the static function-call graph rooted at that
        entry point must not contain cycles.
+
+    User declared input and output variables:
+     - Must not use OpTypeBool, either directly or as part of an aggregate.
+
 
     A.spv.5 (Precision and Operation of SPIR-V Instructions)
 
@@ -1319,7 +1381,7 @@ Changes to The OpenGL Shading Language Specification, Version 4.50
       "This leaves gl_WorkGroupSize.y as a non-specialization constant, with
       gl_WorkGroupSize being a partially specialized vector.  Its x and z
       components can be later specialized using the ids 18 and 19.  These ids
-      are declared independently from declaring the work-group size:
+      are declared independently from declaring the workgroup size:
 
         layout(local_size_x = 32, local_size_y = 32) in;   // size is (32,32,1)
         layout(local_size_x_id = 18) in;                   // constant_id for x
@@ -2073,10 +2135,64 @@ Issues
         ARB_compute_variable_group_size
             - need new layout qualifiers and builtin variables
 
+28. Should a SPIR-V binary linked through this extension work with
+    ARB_get_program_binary? Do we need to define what would happen
+    with specialization constants?
+
+    RESOLVED. Yes it should work seamlessly, and no, it shouldn't be
+    required to add more details on how to store specialization
+    constants. It is expected that GetProgramBinary should operate
+    irrespective of how the program was created.
+
+    (from GL 4.6 spec section 7.5, Program Binaries):
+
+        GetProgramBinary returns a binary representation of the
+        program object's compiled and linked executable source,
+        henceforth referred to as its program binary.
+
+    There are two ways you can end up with a linked executable.
+
+    GLSL sources:
+        ShaderSource() -> CompileShader() -> AttachShader() -> LinkProgram()
+    SPIR-V binaries:
+        ShaderBinary() -> SpecializeShader() -> AttachShader() -> LinkProgram()
+
+    Exactly what is stored in a program binary is not defined by the
+    GL spec.
+
+    If the driver is storing the final compiled machine assembly for
+    the program in the program binary, it clearly shouldn't matter
+    which path it takes to get to the LinkProgram step.
+
+    If instead the driver is storing some higher level representation
+    of the shaders (say the original sources, or some IR) then it's up
+    to the implementation to store whatever it needs to reconstitute
+    the linked binary. If the given implementation happened to choose
+    to store the SPIR-V code then it would also need to store any
+    relevant specialization information with it as well.
+
+
 Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    45    17-Sep-2019    Jon Leech      Add OpTypeBool constraint on user
+                                        interface variables, and require the
+                                        StorageImageWriteWithoutFormat
+                                        capability for OpImageWrite to
+                                        Unknown formats in the Validation
+                                        Rules section (internal API issues
+                                        111 and 112, respectively).
+    44    15-Feb-2019    apinheiro      Added issue 28, about interaction with
+                                        ARB_get_program_binary (internal API issue 100)
+    43    15-Feb-2019    apinheiro      Add uniform initializers reference and
+                                        mapping (internal API issue 99)
+    42    9-Jan-2019     JohnK          Explicitly give rules for SPIR-V
+                                        uniform offsets (internal API issue
+                                        92)
+    41    10-Dec-2018    Jon Leech      Use 'workgroup' consistently
+                                        throughout (Bug 11723, internal API
+                                        issue 87).
     40    29-May-2018    dgkoch         note post decrement for atomicCounterDecrement
                                         mapping
     39    25-Apr-2018    JohnK          add mappings of barriers and atomics

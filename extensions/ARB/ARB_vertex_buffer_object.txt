@@ -40,6 +40,16 @@ Notice
     Copyright (c) 2003-2013 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
 
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL Working Group. For
+    extensions which have been promoted to a core Specification, fixes will
+    first appear in the latest version of that core Specification, and will
+    eventually be backported to the extension document. This policy is
+    described in more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
+
 IP Status
 
     None.
@@ -188,7 +198,7 @@ Issues
 
     Should this extension include support for allowing vertex indices
     to be stored in buffer objects?
-    
+
         RESOLVED: YES.  It is easily and cleanly added with just the
         addition of a binding point for the index buffer object.  Since
         our approach of overloading pointers works for any pointer in GL,
@@ -482,7 +492,7 @@ Issues
         size of the underlying data type.  So, for example, float data in
         a buffer object must have an offset that is (typically) a
         multiple of 4.  This should make the server implementation
-        easier, since this additional rule will guarantee that no 
+        easier, since this additional rule will guarantee that no
         alignment checking is required on most platforms.
 
     Should MapBufferARB return the pointer to the map, or should there be
@@ -678,7 +688,7 @@ Issues
 
     Is a "provoke" flag needed in the ArrayElement command protocol to switch
     between the case where the VERTEX_ARRAY is client-side vs. server-side?
-    
+
         NO.  The server will know whether or not the ArrayElement command
         will provoke a vertex because it knows whether or not a buffer object
         is bound to VERTEX_ARRAY.
@@ -692,7 +702,7 @@ Issues
 
     Can't the server-side array bindings just be sent in a the ARRAY_INFO
     when DrawArrays is called?
-    
+
         NO.  The only way to do that would be to transmit the offset, type,
         size, stride, etc. parameters and the buffer ID.  However, the buffer
         may have been deleted in the meantime.  The binding information must
@@ -715,7 +725,7 @@ Issues
         To avoid errors caused by naive clients attempting to use buffer
         objects without performing the appropriate byte swapping, clients
         must opt in to buffer object support at context creation time using
-        the GLX_CONTEXT_ALLOW_BUFFER_BYTE_ORDER_MISMATCH_ARB context attrib.  
+        the GLX_CONTEXT_ALLOW_BUFFER_BYTE_ORDER_MISMATCH_ARB context attrib.
         If this attribute is not specified and the byte ordering of the client
         and server differ, the VBO extension must not be exposed and the
         maximum context version that can be reported is 1.4.
@@ -735,7 +745,7 @@ Issues
         parameter normally used for indexed arrays.  The value of
         <index> will be an offset from GL_TEXTURE0.
 
-        OTHER OPTIONS CONSIDERED: Add a separate parameter to 
+        OTHER OPTIONS CONSIDERED: Add a separate parameter to
         VertexAttribPointer rather than alias the index parameter.
         Only advantage is slightly improved clarity.
 
@@ -1032,7 +1042,7 @@ Additions to Chapter 2 of the 1.4 Specification (OpenGL Operation)
                            source for GL (drawing) commands.
         STATIC_READ_ARB    The data store contents will be specified once
                            by reading data from the GL, and queried many
-                           times by the application. 
+                           times by the application.
         STATIC_COPY_ARB    The data store contents will be specified once
                            by reading data from the GL, and used many
                            times as the source for GL (drawing) commands.
@@ -1294,9 +1304,9 @@ Requests)
 
         boolean IsBufferARB(uint buffer);
 
-    returns TRUE if <buffer> is the name of an buffer object. If
+    returns TRUE if <buffer> is the name of a buffer object. If
     <buffer> is zero, or if <buffer> is a non-zero value that is not
-    the name of an buffer object, IsBufferARB return FALSE.
+    the name of a buffer object, IsBufferARB return FALSE.
 
     The command
 

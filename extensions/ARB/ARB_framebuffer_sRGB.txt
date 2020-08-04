@@ -21,6 +21,7 @@ Contributors
     Yanjun Zhang, S3 Graphics
     Jeremy Sandmel, Apple
     Jon Leech
+    Adam Jackson, Red Hat
 
 Contact
 
@@ -31,14 +32,24 @@ Notice
     Copyright (c) 2008-2013 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
 
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL Working Group. For
+    extensions which have been promoted to a core Specification, fixes will
+    first appear in the latest version of that core Specification, and will
+    eventually be backported to the extension document. This policy is
+    described in more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
+
 Status
 
     Approved by the ARB on July 11, 2008
 
 Version
 
-    Date: August 11, 2008
-    Revision: 1.2
+    Date: September 19, 2019
+    Revision: 1.3
 
 Number
 
@@ -101,8 +112,9 @@ New Procedures and Functions
 
 New Tokens
 
-    Accepted by the <attribList> parameter of glXChooseVisual, and by
-    the <attrib> parameter of glXGetConfig:
+    Accepted by the <attribList> parameter of glXChooseVisual and
+    glXChooseFBConfig, and by the <attrib> parameter of glXGetConfig
+    and glXGetFBConfigAttrib:
 
         GLX_FRAMEBUFFER_SRGB_CAPABLE_ARB             0x20B2
 
@@ -234,7 +246,10 @@ Additions to the OpenGL Shading Language specification
 
 Additions to the GLX Specification
 
-    None
+    If GLX_FRAMEBUFFER_SRGB_CAPABLE_ARB is specified for glXChooseVisual or
+    glXChooseFBConfig, it is treated as an exact match. If it is not specified,
+    it is treated as GLX_DONT_CARE. Sorting of visuals and fbconfigs by
+    GLX_FRAMEBUFFER_SRGB_CAPABLE_ARB is undefined.
 
 Dependencies on ARB_color_buffer_float
 
@@ -591,6 +606,7 @@ Revision History
 
         Rev.    Date    Author    Changes
         ----  --------  --------  -------------------------------------
+         1.3  09/19/19  ajax      Clarify GLX interaction.
          1.2  08/11/08  jleech    Use per-FBO-attachment state for
                                   sRGB-capable queries, rather then the
                                   EXT's single boolean query for the

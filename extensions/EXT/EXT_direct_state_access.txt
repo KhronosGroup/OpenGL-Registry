@@ -4113,7 +4113,7 @@ Issues
         glVertexArray*OffsetEXT routines?
 
         RESOLVED:  When the buffer is non-zero, the offset really should
-        be a positive value so generate an GL_INVALID_VALUE if a negative
+        be a positive value so generate a GL_INVALID_VALUE if a negative
         offset is passed to these routines when buffer is non-zero.
         When the buffer is non-negative, the GLintptr offset parameter
         will be treated as a pointer; in this case, there should be

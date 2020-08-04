@@ -4,7 +4,7 @@ Name
 
 Name Strings
 
-    EXT_shader_image_load_store
+    GL_EXT_shader_image_load_store
 
 Contact
 

@@ -16,11 +16,22 @@ Contributors
     Pat Brown, NVIDIA
     Greg Roth, NVIDIA
     Eric Werness, NVIDIA
+    Alejandro Piñeiro, Igalia, SL
 
 Notice
 
     Copyright (c) 2009-2013 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
+
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL Working Group. For
+    extensions which have been promoted to a core Specification, fixes will
+    first appear in the latest version of that core Specification, and will
+    eventually be backported to the extension document. This policy is
+    described in more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
 
 Status
 
@@ -28,8 +39,8 @@ Status
 
 Version
 
-    Last Modified Date:         04/10/2013
-    Revision:                   7
+    Last Modified Date:         04/22/2020
+    Revision:                   8
 
 Number
 
@@ -37,7 +48,7 @@ Number
 
 Dependencies
 
-    OpenGL 2.0 is required.
+    OpenGL 3.0 is required.
 
     OpenGL Shading Language 1.30 is required
 
@@ -233,6 +244,10 @@ Revision History
 
     Rev.    Date      Author    Changes
     ----  ----------  --------  -----------------------------------------
+    8     04/22/2020  apinheiro Update OpenGL version required, to be
+                                consistent with GLSL version required (internal API
+                                issue 124)
+
     7     04/10/2013  Jon Leech Add issue 3 regarding different spelling
                                 of "LOD" vs. "Lod" in extension & core.
 

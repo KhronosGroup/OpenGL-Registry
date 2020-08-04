@@ -450,6 +450,8 @@
 <li value=213><a href="extensions/OES/OES_shader_io_blocks.txt">GL_OES_shader_io_blocks</a>
 </li>
 <li value=214><a href="extensions/OES/OES_tessellation_shader.txt">GL_OES_tessellation_shader</a>
+
+    <br> <a href="extensions/OES/OES_tessellation_shader.txt">GL_OES_tessellation_point_size</a>
 </li>
 <li value=215><a href="extensions/OES/OES_texture_border_clamp.txt">GL_OES_texture_border_clamp</a>
 </li>
@@ -634,5 +636,51 @@
 <li value=304><a href="extensions/QCOM/QCOM_shader_framebuffer_fetch_rate.txt">GL_QCOM_shader_framebuffer_fetch_rate</a>
 </li>
 <li value=305><a href="extensions/NV/NV_memory_attachment.txt">GL_NV_memory_attachment</a>
+</li>
+<li value=306><a href="extensions/QCOM/QCOM_texture_foveated_subsampled_layout.txt">GL_QCOM_texture_foveated_subsampled_layout</a>
+</li>
+<li value=307><a href="extensions/QCOM/QCOM_YUV_texture_gather.txt">GL_QCOM_YUV_texture_gather</a>
+</li>
+<li value=308><a href="extensions/NV/NV_compute_shader_derivatives.txt">GL_NV_compute_shader_derivatives</a>
+</li>
+<li value=309><a href="extensions/EXT/EXT_depth_clamp.txt">GL_EXT_depth_clamp</a>
+</li>
+<li value=310><a href="extensions/EXT/EXT_texture_query_lod.txt">GL_EXT_texture_query_lod</a>
+</li>
+<li value=311><a href="extensions/NV/NV_scissor_exclusive.txt">GL_NV_scissor_exclusive</a>
+</li>
+<li value=312><a href="extensions/NV/NV_mesh_shader.txt">GL_NV_mesh_shader</a>
+</li>
+<li value=313><a href="extensions/NV/NV_shader_texture_footprint.txt">GL_NV_shader_texture_footprint</a>
+</li>
+<li value=314><a href="extensions/NV/NV_representative_fragment_test.txt">GL_NV_representative_fragment_test</a>
+</li>
+<li value=315><a href="extensions/NV/NV_shading_rate_image.txt">GL_NV_shading_rate_image</a>
+</li>
+<li value=316><a href="extensions/NV/NV_fragment_shader_barycentric.txt">GL_NV_fragment_shader_barycentric</a>
+</li>
+<li value=317><a href="extensions/EXT/EXT_multiview_timer_query.txt">GL_EXT_multiview_timer_query</a>
+</li>
+<li value=318><a href="extensions/EXT/EXT_multiview_texture_multisample.txt">GL_EXT_multiview_texture_multisample</a>
+</li>
+<li value=319><a href="extensions/EXT/EXT_multiview_tessellation_geometry_shader.txt">GL_EXT_multiview_tessellation_geometry_shader</a>
+</li>
+<li value=320><a href="extensions/EXT/EXT_texture_shadow_lod.txt">GL_EXT_texture_shadow_lod</a>
+</li>
+<li value=321><a href="extensions/KHR/KHR_shader_subgroup.txt">GL_KHR_shader_subgroup</a>
+</li>
+<li value=322><a href="extensions/NV/NV_shader_subgroup_partitioned.txt">GL_NV_shader_subgroup_partitioned</a>
+</li>
+<li value=323><a href="extensions/INTEL/INTEL_shader_integer_functions2.txt">GL_INTEL_shader_integer_functions2</a>
+</li>
+<li value=324><a href="extensions/ARM/ARM_texture_unnormalized_coordinates.txt">GL_ARM_texture_unnormalized_coordinates</a>
+</li>
+<li value=325><a href="extensions/QCOM/QCOM_shading_rate.txt">GL_QCOM_shading_rate</a>
+</li>
+<li value=326><a href="extensions/QCOM/QCOM_motion_estimation.txt">GL_QCOM_motion_estimation</a>
+</li>
+<li value=327><a href="extensions/MESA/MESA_framebuffer_flip_x.txt">GL_MESA_framebuffer_flip_x</a>
+</li>
+<li value=328><a href="extensions/MESA/MESA_framebuffer_swap_xy.txt">GL_MESA_framebuffer_swap_xy</a>
 </li>
 </ol>

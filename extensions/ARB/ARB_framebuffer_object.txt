@@ -55,6 +55,16 @@ Notice
     Copyright (c) 2008-2013 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
 
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL Working Group. For
+    extensions which have been promoted to a core Specification, fixes will
+    first appear in the latest version of that core Specification, and will
+    eventually be backported to the extension document. This policy is
+    described in more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
+
 Status
 
     Approved by the ARB on August 4, 2008
@@ -1358,7 +1368,7 @@ Operations and the Framebuffer)
     results.
 
     If DrawBuffer is supplied with a constant that is neither legal for
-    the default framebuffer nor an framebuffer object, then the error
+    the default framebuffer nor a framebuffer object, then the error
     INVALID_ENUM results.
 
     DrawBuffer will set the draw buffer for fragment colors other than
@@ -2270,7 +2280,7 @@ Operations and the Framebuffer)
     set to their default values listed in table 5.nnn.
 
     If <texture> is not zero, then <texture> must either name an existing
-    texture object with an target of <textarget>, or <texture> must name an
+    texture object with a target of <textarget>, or <texture> must name an
     existing cube map texture and <textarget> must be one of
     TEXTURE_CUBE_MAP_POSITIVE_X, TEXTURE_CUBE_MAP_POSITIVE_Y,
     TEXTURE_CUBE_MAP_POSITIVE_Z, TEXTURE_CUBE_MAP_NEGATIVE_X,
@@ -2808,9 +2818,9 @@ Requests)
 
             boolean IsFramebuffer( uint framebuffer );
 
-        returns TRUE if <framebuffer> is the name of an framebuffer
+        returns TRUE if <framebuffer> is the name of a framebuffer
         object.  If <framebuffer> is zero, or if <framebuffer> is a
-        non-zero value that is not the name of an framebuffer object,
+        non-zero value that is not the name of a framebuffer object,
         IsFramebuffer return FALSE.
 
         The command

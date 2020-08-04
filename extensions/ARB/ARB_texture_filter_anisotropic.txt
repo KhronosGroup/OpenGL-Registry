@@ -17,14 +17,29 @@ Contributors
     Jon Leech, Khronos
     Daniel Koch, NVIDIA
 
+Notice
+
+    Copyright (c) 2017-2019 The Khronos Group Inc. Copyright terms at
+        http://www.khronos.org/registry/speccopyright.html
+
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL Working Group. For
+    extensions which have been promoted to a core Specification, fixes will
+    first appear in the latest version of that core Specification, and will
+    eventually be backported to the extension document. This policy is
+    described in more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
+
 Status
 
     Complete.
 
 Version
 
-    Last Modified Date: June 2, 2017
-    Revision: 5
+    Last Modified Date: February 26, 2019
+    Revision: 6
 
 Number
 
@@ -274,11 +289,13 @@ Issues
       filtering performance or quality.
 
     4) Should anything particular be said about anisotropic 3D texture
-      filtering?
+      and cube texture filtering?
 
-      Not sure.  Does the implementation example shown in the spec for
-      2D anisotropic texture filtering readily extend to 3D anisotropic
-      texture filtering?
+      RESOLUTION:  NO. It was decided by the OpenGL working group to leave
+      anisotropic filtering for 3D or cube textures as undefined. Anisotropic
+      filtering is only well-defined for 2D and 2D array textures. For
+      defined results with 3D and cube textures isotropic filtering should
+      be used by setting the anisotropy level to 1.0.
 
     5) Should the maximum degree of anisotropy be a sampler parameter?
 
@@ -289,6 +306,7 @@ Revision History
 
     Rev.    Date      Author     Changes
     ----  ---------- ---------  -----------------------------------------------
+    6     2019-02-26 pdaniell   Update issue 4 question and resolution.
     5     2017-06-02 Jon Leech  Include anisotropy state in sampler objects
                                 (opengl/API/issues/15).
     4     2017-05-29 dgkoch     Minor typography/gramatical fixes from OpenGL 4.6.

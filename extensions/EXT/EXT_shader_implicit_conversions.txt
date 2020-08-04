@@ -116,7 +116,7 @@ Modifications to The OpenGL ES Shading Language Specification, Version 3.10
     Expressions in the shading language are built from the following:
 
     * The arithmetic binary operators add (+), subtract (-), multiply (*),
-      and divide (/) operate on integer an floating-point scalars, vectors,
+      and divide (/) operate on integer and floating-point scalars, vectors,
       and matrices. If the fundamental types in the operands do not match,
       then the conversions from section 4.1.10 "Implicit Conversions" are
       applied to create matching types. All arithmetic binary operators ...

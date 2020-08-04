@@ -570,7 +570,7 @@ Additions to Chapter 2 of the OpenGL 1.5 Specification (OpenGL Operation)
     If an attribute binding prefix matches "primitive" or "primitive.in", the
     attribute binding refers to an attribute of the input patch.
 
-    If an tessellation control program attribute binding prefix matches
+    If a tessellation control program attribute binding prefix matches
     "vertex.out[m]", the attribute binding refers to an attribute of the
     vertex numbered <m> in the output patch.  These attributes correspond to
     per-vertex output values written by the tessellation control program
@@ -579,7 +579,7 @@ Additions to Chapter 2 of the OpenGL 1.5 Specification (OpenGL Operation)
     Tessellation evaluation programs do not have an output patch and do not
     support this attribute binding prefix.
 
-    If an tessellation control program attribute binding prefix matches
+    If a tessellation control program attribute binding prefix matches
     "vertex.out", the attribute binding identifies a specific attribute for
     each of the vertices of the output patch.  Bindings of this form may only
     be used in explicit variable declarations, and all the usage rules
@@ -788,7 +788,7 @@ Additions to Chapter 2 of the OpenGL 1.5 Specification (OpenGL Operation)
     suffix may only be used with the prefixes "primitive", "primitive.in", or
     "primitive.out", and produces the same value in all cases.
 
-    If an tessellation control program attribute binding suffix matches
+    If a tessellation control program attribute binding suffix matches
     "invocation", the "x" component is filled with the thread number of the
     program invocation.  The invocation number identifies the number of the
     vertex in the output patch whose attributes are produced by this

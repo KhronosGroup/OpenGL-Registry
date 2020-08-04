@@ -413,7 +413,7 @@ Issues
         rasterization passes.  See the NV_float_buffer extension for more
         information.
 
-    Should we provide a method for specifying an fp16 depth component output
+    Should we provide a method for specifying a fp16 depth component output
     value?
 
         RESOLVED:  No.  There is no good reason for supporting half-precision
@@ -1157,8 +1157,8 @@ Additions to Chapter 3 of the OpenGL 1.2.1 Specification (Rasterization)
 
     In addition to the normal temporary registers, there are two temporary
     pseudo-registers, "RC" and "HC".  RC and HC are treated as unnumbered,
-    write-only temporary registers.  The components of RC have an fp32 data
-    type; the components of HC have an fp16 data type.  The sole purpose of
+    write-only temporary registers.  The components of RC have a fp32 data
+    type; the components of HC have a fp16 data type.  The sole purpose of
     these registers is to permit instructions to modify the condition code
     register (section 3.11.1.4) without overwriting the values in any
     temporary register.
@@ -1990,7 +1990,7 @@ Additions to Chapter 3 of the OpenGL 1.2.1 Specification (Rasterization)
     in floating-point with eight exponent and twenty-three mantissa bits, as
     in the standard IEEE single-precision format.  If S represents the sign (0
     or 1), E represents the exponent in the range [0,255], and M represents
-    the mantissa in the range [0,2^23-1], then an fp32 float is decoded as:
+    the mantissa in the range [0,2^23-1], then a fp32 float is decoded as:
 
        (-1)^S * 0.0,                           if E == 0,
        (-1)^S * 2^(E-127) * (1 + M/2^23),      if 0 < E < 255,

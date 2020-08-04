@@ -101,7 +101,7 @@ Issues
 
     *  X does not all rendering in the alpha bitplanes.  X rendering
        should be assumed to always draw an alpha of 1.0.  This means that
-       an BLENDED_RGBA_SGIS overlay will act as an overlay with no
+       a BLENDED_RGBA_SGIS overlay will act as an overlay with no
        transparent pixel when it comes to X rendering.  Blended overlays
        overlays will only be usable for transparency via OpenGL
        rendering.  The SEVER_OVERLAY_VISUALS (SOV) X convention will

@@ -21,8 +21,8 @@ Status
 
 Version
 
-    Last Modified Date: 03/17/2014
-    Revision: 3
+    Last Modified Date: 06/24/2019
+    Revision: 4
 
 Number
 
@@ -59,13 +59,14 @@ IP Status
     None.
 
 Additions to Chapter 7 of the OpenGL Shading Language Specification
-(Built-in Variables)
+(Built-In Language Variables)
 
-    Modify Section 7.3, Built-In Constants
+    Modify Section 7.1, Built-In Language Variables
 
-    (add to the list of built-in constants)
+    (add to the list of built-in constants for each shader stage listed in
+     the chapter)
 
-      const int gl_SIMDGroupSizeAMD = 64;
+      in int gl_SIMDGroupSizeAMD;
 
 Additions to Chapter 8 of the OpenGL Shading Language Specification
 (Built-in Functions)
@@ -149,6 +150,7 @@ Revision History
 
     Rev.    Date      Author    Changes
     ----  --------    --------  ---------------------------------------------
+      4   06/24/2019  dwitczak  gl_SIMDGroupSizeAMD is no longer a built-in constant.
       3   03/17/2013  drakos    Internal updates + ready to post
       2   10/08/2013  gsellers  Internal updates
       1   09/20/2013  gsellers  Initial revision

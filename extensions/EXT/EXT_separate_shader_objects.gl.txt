@@ -511,7 +511,7 @@ Issues
     6a. Should the fragment shader program object be allowed to changed
         within transform feedback mode?
 
-        RESOLVED:  No, this should generate an GL_INVALID_OPERATION error.
+        RESOLVED:  No, this should generate a GL_INVALID_OPERATION error.
 
         The OpenGL 3.0 and EXT_transform_feedback specifications say
         glUseProgram generates a GL_INVALID_OPERATION error when transform
@@ -833,7 +833,7 @@ Issues
         extension?
 
         RESOLUTION:  Consider the (not uncommon) case of a vertex shader
-        for skinning an character.  The vertex shader is used in four
+        for skinning a character.  The vertex shader is used in four
         distinct types of rendering passes, each using the one vertex
         shader but different fragment shaders.
 

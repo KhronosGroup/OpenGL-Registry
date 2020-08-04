@@ -26,6 +26,16 @@ Notice
     Copyright (c) 2012-2013 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
 
+Specification Update Policy
+
+    Khronos-approved extension specifications are updated in response to
+    issues and bugs prioritized by the Khronos OpenGL Working Group. For
+    extensions which have been promoted to a core Specification, fixes will
+    first appear in the latest version of that core Specification, and will
+    eventually be backported to the extension document. This policy is
+    described in more detail at
+        https://www.khronos.org/registry/OpenGL/docs/update_policy.php
+
 Status
 
     Complete.
@@ -33,8 +43,8 @@ Status
 
 Version
 
-    Last Modified Date: February 14, 2018
-    Revision: 19
+    Last Modified Date: October 12, 2018
+    Revision: 20
 
 Number
 
@@ -42,7 +52,7 @@ Number
 
 Dependencies
 
-    OpenGL 2.0 or OpenGL ES 2.0 is required.
+    OpenGL 2.0 is required.
 
     ARB_internalformat_query is required.
 
@@ -61,7 +71,8 @@ Dependencies
     ARB_depth_texture, OES_depth_texture, ARB_texture_view,
     ARB_texture_storage, ARB_texture_storage_multisample,
     ARB_shader_image_load_store, EXT_direct_state_access,
-    EXT_texture_compression_s3tc, and core specifications
+    EXT_texture_compression_s3tc, ARB_ES3_compatibility,
+    KHR_texture_compression_astc_ldr, and core specifications
     that incorporate these extensions affect the definition
     of this extension.
 
@@ -252,7 +263,28 @@ New Tokens
         VIEW_CLASS_RGTC1_RED                            0x82D0  
         VIEW_CLASS_RGTC2_RG                             0x82D1  
         VIEW_CLASS_BPTC_UNORM                           0x82D2  
-        VIEW_CLASS_BPTC_FLOAT                           0x82D3  
+        VIEW_CLASS_BPTC_FLOAT                           0x82D3
+    [interactions with ARB_ES3_compatibility]
+        VIEW_CLASS_EAC_R11                              0x9383
+        VIEW_CLASS_EAC_RG11                             0x9384
+        VIEW_CLASS_ETC2_RGB                             0x9385
+        VIEW_CLASS_ETC2_RGBA                            0x9386
+        VIEW_CLASS_ETC2_EAC_RGBA                        0x9387
+    [interactions with KHR_texture_compression_astc_ldr]
+        VIEW_CLASS_ASTC_4x4_RGBA                        0x9388
+        VIEW_CLASS_ASTC_5x4_RGBA                        0x9389
+        VIEW_CLASS_ASTC_5x5_RGBA                        0x938A
+        VIEW_CLASS_ASTC_6x5_RGBA                        0x938B
+        VIEW_CLASS_ASTC_6x6_RGBA                        0x938C
+        VIEW_CLASS_ASTC_8x5_RGBA                        0x938D
+        VIEW_CLASS_ASTC_8x6_RGBA                        0x938E
+        VIEW_CLASS_ASTC_8x8_RGBA                        0x938F
+        VIEW_CLASS_ASTC_10x5_RGBA                       0x9390
+        VIEW_CLASS_ASTC_10x6_RGBA                       0x9391
+        VIEW_CLASS_ASTC_10x8_RGBA                       0x9392
+        VIEW_CLASS_ASTC_10x10_RGBA                      0x9393
+        VIEW_CLASS_ASTC_12x10_RGBA                      0x9394
+        VIEW_CLASS_ASTC_12x12_RGBA                      0x9395
 
 
 Additions to Chapter 2 of the OpenGL 4.2 (Core Profile) Specification
@@ -828,7 +860,8 @@ Additions to Chapter 6 of the OpenGL 4.2 (Core Profile) Specification
  
     - VIEW_COMPATIBILITY_CLASS: The compatibility class of the resource when
       used as a texture view is returned in <params>. The compatibility
-      class is one of the values from the /Class/ column of Table 3.X.2. If
+      class is one of the values from the /Class/ column of Table 3.X.2
+      (added by the ARB_texture_view extension). If
       the resource has no other formats that are compatible, the resource
       does not support views, or if texture views are not supported, NONE is
       returned.
@@ -1058,6 +1091,21 @@ Dependencies on ARB_texture_compression_rgtc
     If ARB_texture_compression_rgtc or equivalent functionality is not
     supported, ignore all references to VIEW_CLASS_RGTC1_RED and
     VIEW_CLASS_RGTC2_RG.
+
+Dependencies on ARB_ES3_compatibility
+    If ARB_ES3_compatibility or equivalent functionality is not supported,
+    ingore all references to VIEW_CLASS_EAC_R11, VIEW_CLASS_EAC_RG11,
+    VIEW_CLASS_ETC2_RGB, VIEW_CLASS_ETC2_RGBA, and VIEW_CLASS_ETC2_EAC_RGBA.
+
+Dependencies on KHR_texture_compression_astc_ldr
+    If KHR_texture_compression_astc_ldr or equivalent functionality is not
+    supported, ignore all references to VIEW_CLASS_ASTC_4x4_RGBA,
+    VIEW_CLASS_ASTC_5x4_RGBA, VIEW_CLASS_ASTC_5x5_RGBA,
+    VIEW_CLASS_ASTC_6x5_RGBA, VIEW_CLASS_ASTC_6x6_RGBA,
+    VIEW_CLASS_ASTC_8x5_RGBA, VIEW_CLASS_ASTC_8x6_RGBA, VIEW_CLASS_ASTC_8x8_RGBA,
+    VIEW_CLASS_ASTC_10x5_RGBA, VIEW_CLASS_ASTC_10x6_RGBA,
+    VIEW_CLASS_ASTC_10x8_RGBA, VIEW_CLASS_ASTC_10x10_RGBA,
+    VIEW_CLASS_ASTC_12x10_RGBA, and VIEW_CLASS_ASTC_12x12_RGBA.
 
 Dependencies on ARB_stencil_texturing
     If ARB_stencil_texturing or equivalent functionality is not supported,
@@ -1339,6 +1387,9 @@ Revision History
 
     Rev.  Date        Author    Changes
     ----  ----------  --------  --------------------------------------------
+     20   10/12/2018  dgkoch    Add tokens for ETC2/EAC and ASTC VIEW_CLASSES
+                                as interactions with ARB_ES3_compatibility
+                                and KHR_texture_compression_astc_ldr.
      19   02/14/2018  dgkoch    Add issue 16, clarify references to
                                 GetTexLevelParameter (gitlab/opengl/api/65)
      18   07/15/2013  Jon Leech Remove redundant list of VIEW_CLASS_* tokens 

@@ -4,22 +4,27 @@ $static_title = 'Khronos OpenGL SC Registry';
 include_once("../../assets/static_pages/khr_page_top.php");
 ?>
 
-<p> The OpenGL SC registry contains specifications of the core API;
+<p> The OpenGL SC Registry contains specifications of the core API;
     specifications of Khronos- and vendor-approved OpenGL SC extensions;
-    header files corresponding to the specifications; and other related
-    documentation. The companion <a
-    href="http://www.opengl.org/registry/"> OpenGL Registry </a> has
-    related material including the enumerant registry (shared between
-    OpenGL, OpenGL ES, and OpenGL SC).
+    header files corresponding to the specifications; and related
+    documentation. </p>
+
+<p> The OpenGL SC Registry is part of the combined <a
+    href="http://www.khronos.org/registry/OpenGL/"> Combined OpenGL Registry </a>
+    for OpenGL, OpenGL ES, and OpenGL SC, which includes the <a
+    href="xml/README.md">XML API registry</a> of reserved enumerants and
+    functions. </p>
 
 <h2> OpenGL SC Core API Specification, Headers, and Documentation </h2>
 
-<p> The current version of OpenGL SC is OpenGL SC 2.0. </p>
+<p> The current version of OpenGL SC is OpenGL SC 2.0.1 </p>
 
 <ul>
-<li> OpenGL SC 2.0
-     <a href="specs/sc/sc_spec_2.0.pdf">
-     Full Specification </a> (version 2.0.0, April 19, 2016). </li>
+<li> <b><a href="docs/update_policy.php">Working Group Policy</a></b> for
+     when Specifications and extensions will be updated. </li>
+<li> OpenGL SC 2.0.1
+     <a href="specs/sc/sc_spec_2.0.1.pdf">
+     Full Specification </a> (July 24, 2019). </li>
 <li> <tt><a href="api/GLSC2/glsc2.h"> &lt;GLSC2/glsc2.h&gt; </a></tt>
      OpenGL SC 2.0 Header File. </li>
 <li> <tt><a href="api/GLSC2/glsc2ext.h"> &lt;GLSC2/glsc2ext.h&gt; </a></tt>
@@ -37,6 +42,14 @@ include_once("../../assets/static_pages/khr_page_top.php");
 </ul>
 
 <h2> Older versions of OpenGL SC are also available </h2>
+
+<p> OpenGL SC 2.0 </p>
+
+<ul>
+<li> OpenGL SC 2.0
+     <a href="specs/sc/sc_spec_2.0.pdf">
+     Full Specification </a> (April 19, 2016). </li>
+</ul>
 
 <p> OpenGL SC 1.0.1 </p>
 

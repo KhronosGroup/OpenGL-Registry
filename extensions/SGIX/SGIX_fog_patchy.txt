@@ -40,7 +40,7 @@ Issues
     - Since there is no API introduction is this extension the
     good way to present things?
 
-    - Should we introduce an glEnable for patchy fog?
+    - Should we introduce a glEnable for patchy fog?
 
     - We should move the description of the patchy fog equation
     up to the overview but we do not want to disclose it for the

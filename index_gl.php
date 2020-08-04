@@ -4,20 +4,22 @@ $static_title = 'Khronos OpenGL&reg; Registry';
 include_once("../../assets/static_pages/khr_page_top.php");
 ?>
 
-<p> The OpenGL Registry contains specifications, header files, and
-    related documentation for OpenGL and related APIs including GLU,
-    GLX, and WGL. In addition to the core API specifications, many
-    extensions to these APIs have been defined by vendors, groups of
-    vendors, and the ARB. The Registry also contains specifications and
-    header files for all registered extensions, written as modifications
-    to the appropriate core API specifications. </p>
+<p> The OpenGL Registry contains specifications of the core API and
+    shading language; specifications of Khronos- and vendor-approved
+    OpenGL extensions; header files corresponding to the specifications; and
+    related documentation including specifications, extensions, and headers
+    for the GLX, WGL, and GLU APIs. </p>
 
-<p> The Registry also includes naming conventions, guidelines for
-    creating new extensions and writing suitable extension
-    specifications, and other documentation related to these APIs. </p>
+<p> The OpenGL registry is part of the <a
+    href="http://www.khronos.org/registry/OpenGL/"> Combined OpenGL Registry </a>
+    for OpenGL, OpenGL ES, and OpenGL SC, which includes the <a
+    href="xml/README.md">XML API registry</a> of reserved enumerants and
+    functions. </p>
 
 <p> <b>Table of Contents</b>
 <ul>
+<li> <b><a href="docs/update_policy.php">Working Group Policy</a></b> for
+     when Specifications and extensions will be updated. </li>
 <li> <b><a href="#apispecs">Current OpenGL API, Shading Language, GLX,
      and Related Specifications and Reference Pages</a></b> </li>
 <li> <a href="#headers">Core API and Extension Header Files</a> </li>
@@ -48,7 +50,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <ul>
 <li> <b> Current Specifications (OpenGL 4.6) </b>
-<li> OpenGL 4.6 API Specification (updated May 14, 2018)
+<li> OpenGL 4.6 API Specification (October 22, 2019)
     <ul>
     <li> <a href="specs/gl/glspec46.core.pdf"> Core Profile Specification
          </a> </li>
@@ -60,10 +62,11 @@ include_once("../../assets/static_pages/khr_page_top.php");
          Compatibility Profile Specification with changes marked </a>
          </li>
     </ul> </li>
-<li> OpenGL Shading Language 4.60 Specification (updated May 11, 2018)
+<li> OpenGL Shading Language 4.60 Specification (July 10, 2019)
+     <a href="specs/gl/GLSLangSpec.4.60.html"> (HTML) </a> </li>
      <a href="specs/gl/GLSLangSpec.4.60.pdf"> (PDF) </a> </li>
 
-<li> <a href="http://www.opengl.org/sdk/docs/man4/"> OpenGL 4.5 API and
+<li> <a href="http://www.khronos.org/registry/OpenGL-Refpages/gl4/"> OpenGL 4.5 API and
      Shading Language Reference Pages </a> (not yet updated) </li>
 
 <li> <b> OpenGL X Window System Binding (GLX 1.4) Specification </b> </li>
@@ -179,10 +182,6 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <a href="specs/gl/GLSLangSpec.3.30.pdf"> OpenGL Shading Language
      3.30 Specification </a> </li>
 
-<li> <b> OpenGL 3.3 Reference Pages </b>
-<li> <a href="http://www.opengl.org/sdk/docs/man3/"> OpenGL 3.3 Reference
-     Pages </a> </li>
-
 <li> <b> OpenGL 3.2 </b>
 <li> <a href="specs/gl/glspec32.core.pdf"> (API Core Profile) </a> </li>
 <li> <a href="specs/gl/glspec32.compatibility.pdf"> (API Compatibility Profile) </a> </li>
@@ -207,7 +206,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      1.20 Specification </a> </li>
 
 <li> <b> OpenGL 2.1 Reference Pages </b>
-<li> <a href="http://www.opengl.org/sdk/docs/man/"> OpenGL 2.1 Reference
+<li> <a href="http://www.khronos.org/registry/OpenGL-Refpages/gl2.1/"> OpenGL 2.1 Reference
      Pages </a> </li>
 
 <li> <b> OpenGL 2.0 </b>
@@ -222,7 +221,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <a href="specs/gl/glspec14.pdf"> OpenGL 1.4 API Specification </a>
 <li> <a href="specs/gl/glspec13.pdf"> OpenGL 1.3 API Specification </a>
 <li> <a href="specs/gl/glspec121.pdf"> OpenGL 1.2.1 API Specification </a>
-<li> <a href="specs/gl/glspec11.ps"> OpenGL 1.1 API Specification (PostScript format) </a>
+<li> <a href="specs/gl/glspec11.pdf"> OpenGL 1.1 API Specification </a>
 <li> <a href="specs/gl/glspec10.pdf"> OpenGL 1.0 API Specification </a>
 
 <li> <b> Older GLX Specifications </b>
@@ -247,7 +246,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
     today. </p>
 
 <h2> <a name="arbextspecs"></a>
-     ARB Extensions by number</h2>
+     ARB and KHR Extensions by number</h2>
 
 <?php include("extensions/arbext.php"); ?>
 

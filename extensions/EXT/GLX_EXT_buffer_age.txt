@@ -198,7 +198,7 @@ Issues
        for a drawable that isn't bound to the calling thread's
        context?
 
-        RESOLVED: we report an GLXBadDrawable error.
+        RESOLVED: we report a GLXBadDrawable error.
 
     3) Is the buffer age tracked in the GLX client or the GLX server?
 

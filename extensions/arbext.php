@@ -419,4 +419,6 @@
 </li>
 <li value=195><a href="extensions/ARB/ARB_texture_filter_anisotropic.txt">GL_ARB_texture_filter_anisotropic</a>
 </li>
+<li value=196><a href="extensions/KHR/KHR_shader_subgroup.txt">GL_KHR_shader_subgroup</a>
+</li>
 </ol>

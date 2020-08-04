@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 #
 # Copyright (c) 2013-2018 The Khronos Group Inc.
 #
@@ -37,40 +37,6 @@ errFilename = None
 diagFilename = 'diag.txt'
 regFilename = 'gl.xml'
 
-if __name__ == '__main__':
-    i = 1
-    while (i < len(sys.argv)):
-        arg = sys.argv[i]
-        i = i + 1
-        if (arg == '-debug'):
-            write('Enabling debug (-debug)', file=sys.stderr)
-            debug = True
-        elif (arg == '-dump'):
-            write('Enabling dump (-dump)', file=sys.stderr)
-            dump = True
-        elif (arg == '-noprotect'):
-            write('Disabling inclusion protection in output headers', file=sys.stderr)
-            protect = False
-        elif (arg == '-profile'):
-            write('Enabling profiling (-profile)', file=sys.stderr)
-            profile = True
-        elif (arg == '-registry'):
-            regFilename = sys.argv[i]
-            i = i+1
-            write('Using registry ', regFilename, file=sys.stderr)
-        elif (arg == '-time'):
-            write('Enabling timing (-time)', file=sys.stderr)
-            timeit = True
-        elif (arg == '-validate'):
-            write('Enabling group validation (-validate)', file=sys.stderr)
-            validate = True
-        elif (arg[0:1] == '-'):
-            write('Unrecognized argument:', arg, file=sys.stderr)
-            exit(1)
-        else:
-            target = arg
-            write('Using target', target, file=sys.stderr)
-
 # Simple timer functions
 startTime = None
 def startTimer():
@@ -82,26 +48,6 @@ def endTimer(msg):
     if (timeit):
         write(msg, endTime - startTime)
         startTime = None
-
-# Load & parse registry
-reg = Registry()
-
-startTimer()
-tree = etree.parse(regFilename)
-endTimer('Time to make ElementTree =')
-
-startTimer()
-reg.loadElementTree(tree)
-endTimer('Time to parse ElementTree =')
-
-if (validate):
-    reg.validateGroups()
-
-if (dump):
-    write('***************************************')
-    write('Performing Registry dump to regdump.txt')
-    write('***************************************')
-    reg.dumpReg(filehandle = open('regdump.txt','w'))
 
 # Turn a list of strings into a regexp string matching exactly those strings
 def makeREstring(list):
@@ -257,6 +203,12 @@ glxextVersionStrings = [
     format('#define GLX_GLXEXT_VERSION %s' % time.strftime('%Y%m%d')),
     ''
 ]
+# This is a bad but functional workaround for a structural problem in the scripts
+# identified in https://github.com/KhronosGroup/OpenGL-Registry/pull/186#issuecomment-416196246
+glextKHRplatformStrings = [
+    '#include <KHR/khrplatform.h>',
+    ''
+]
 # EGL_EGLEXT_VERSION is defined only in eglext.h
 eglextVersionStrings = [
     format('#define EGL_EGLEXT_VERSION %s' % time.strftime('%Y%m%d')),
@@ -279,7 +231,7 @@ buildList = [
         defaultExtensions = 'gl',                   # Default extensions for GL
         addExtensions     = None,
         removeExtensions  = None,
-        prefixText        = prefixStrings + glExtPlatformStrings + glextVersionStrings,
+        prefixText        = prefixStrings + glExtPlatformStrings + glextVersionStrings + glextKHRplatformStrings,
         genFuncPointers   = True,
         protectFile       = protectFile,
         protectFeature    = protectFeature,
@@ -560,13 +512,6 @@ buildList = [
     None
 ]
 
-# create error/warning & diagnostic files
-if (errFilename):
-    errWarn = open(errFilename,'w')
-else:
-    errWarn = sys.stderr
-diag = open(diagFilename, 'w')
-
 def genHeaders():
     # Loop over targets, building each
     generated = 0
@@ -589,12 +534,74 @@ def genHeaders():
     if (target and generated == 0):
         write('Failed to generate target:', target)
 
-if (debug):
-    pdb.run('genHeaders()')
-elif (profile):
-    import cProfile, pstats
-    cProfile.run('genHeaders()', 'profile.txt')
-    p = pstats.Stats('profile.txt')
-    p.strip_dirs().sort_stats('time').print_stats(50)
-else:
-    genHeaders()
+
+if __name__ == '__main__':
+    i = 1
+    while (i < len(sys.argv)):
+        arg = sys.argv[i]
+        i = i + 1
+        if (arg == '-debug'):
+            write('Enabling debug (-debug)', file=sys.stderr)
+            debug = True
+        elif (arg == '-dump'):
+            write('Enabling dump (-dump)', file=sys.stderr)
+            dump = True
+        elif (arg == '-noprotect'):
+            write('Disabling inclusion protection in output headers', file=sys.stderr)
+            protect = False
+        elif (arg == '-profile'):
+            write('Enabling profiling (-profile)', file=sys.stderr)
+            profile = True
+        elif (arg == '-registry'):
+            regFilename = sys.argv[i]
+            i = i+1
+            write('Using registry ', regFilename, file=sys.stderr)
+        elif (arg == '-time'):
+            write('Enabling timing (-time)', file=sys.stderr)
+            timeit = True
+        elif (arg == '-validate'):
+            write('Enabling group validation (-validate)', file=sys.stderr)
+            validate = True
+        elif (arg[0:1] == '-'):
+            write('Unrecognized argument:', arg, file=sys.stderr)
+            exit(1)
+        else:
+            target = arg
+            write('Using target', target, file=sys.stderr)
+
+    # Load & parse registry
+    reg = Registry()
+
+    startTimer()
+    tree = etree.parse(regFilename)
+    endTimer('Time to make ElementTree =')
+
+    startTimer()
+    reg.loadElementTree(tree)
+    endTimer('Time to parse ElementTree =')
+
+    if (validate):
+        reg.validateGroups()
+
+    if (dump):
+        write('***************************************')
+        write('Performing Registry dump to regdump.txt')
+        write('***************************************')
+        reg.dumpReg(filehandle = open('regdump.txt','w'))
+
+    # create error/warning & diagnostic files
+    if (errFilename):
+        errWarn = open(errFilename,'w')
+    else:
+        errWarn = sys.stderr
+    diag = open(diagFilename, 'w')
+
+    if (debug):
+        pdb.run('genHeaders()')
+    elif (profile):
+        import cProfile, pstats
+        cProfile.run('genHeaders()', 'profile.txt')
+        p = pstats.Stats('profile.txt')
+        p.strip_dirs().sort_stats('time').print_stats(50)
+    else:
+        genHeaders()

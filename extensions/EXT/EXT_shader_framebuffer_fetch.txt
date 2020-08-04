@@ -21,8 +21,8 @@ Status
 
 Version
 
-    Last Modified Date: November 13, 2017
-    Author Revision: 7
+    Last Modified Date: September 6, 2018
+    Author Revision: 8
 
 Number
 
@@ -638,7 +638,7 @@ Changes to the OpenGL ES Shading Language 3.00.3 Specification, Chapter 7
 
     "A helper invocation is a fragment shader invocation that is created solely
     for the purposes of evaluating derivatives for the built-in functions
-    texture() (section 8.9 “Texture Functions”), dFdx(), dFdy(), and fwidth()
+    texture() (section 8.9 "Texture Functions"), dFdx(), dFdy(), and fwidth()
     for other non-helper fragment shader invocations.
 
     Fragment shader helper invocations execute the same shader code as
@@ -740,6 +740,7 @@ Interactions with ARB_sample_shading and OES_sample_shading
 
 Revision History
 
+    Version 8, 2018/09/06 - Replace non-ASCII quote characters.
     Version 7, 2017/11/13 - Specify interactions with desktop OpenGL APIs.
                           - Specify interaction with ARB/OES_sample_shading
                             and unextended GL versions that provide the same
