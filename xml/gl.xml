@@ -11600,10 +11600,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x95AF" name="GL_SHADING_RATE_SAMPLE_ORDER_PIXEL_MAJOR_NV"/>
         <enum value="0x95B0" name="GL_SHADING_RATE_SAMPLE_ORDER_SAMPLE_MAJOR_NV"/>
         <unused start="0x95B1" end="0x95B2" vendor="NV"/>
-        <enum value="0x95B3" name="GL_SEMAPHORE_TYPE_NV"/>
-        <enum value="0x95B4" name="GL_SEMAPHORE_TYPE_BINARY_NV"/>
-        <enum value="0x95B5" name="GL_SEMAPHORE_TYPE_TIMELINE_NV"/>
-        <enum value="0x95B6" name="GL_MAX_TIMELINE_SEMAPHORE_VALUE_DIFFERENCE_NV"/>
+        <enum value="0x95B3" name="GL_SEMAPHORE_TYPE_NV" group="SemaphoreParameterName"/>
+        <enum value="0x95B4" name="GL_SEMAPHORE_TYPE_BINARY_NV" group="SemaphoreParameterName"/>
+        <enum value="0x95B5" name="GL_SEMAPHORE_TYPE_TIMELINE_NV" group="SemaphoreParameterName"/>
+        <enum value="0x95B6" name="GL_MAX_TIMELINE_SEMAPHORE_VALUE_DIFFERENCE_NV" group="GetPName"/>
         <unused start="0x95B7" end="0x962F" vendor="NV"/>
     </enums>
 
