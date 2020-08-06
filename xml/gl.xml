@@ -45761,6 +45761,10 @@ typedef unsigned int GLhandleARB;
                 <command name="glFramebufferTexture2DMultisampleEXT"/>
             </require>
         </extension>
+        <extension name="GL_EXT_multisampled_render_to_texture2" supported="gles2">
+            <require>
+            </require>
+        </extension>
         <extension name="GL_EXT_multiview_draw_buffers" supported="gles2">
             <require>
                 <enum name="GL_COLOR_ATTACHMENT_EXT"/>
