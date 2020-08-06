@@ -38,7 +38,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20200423 */
+/* Generated on date 20200806 */
 
 /* Generated C header for:
  * API: gles2
@@ -1623,6 +1623,10 @@ GL_APICALL void GL_APIENTRY glRenderbufferStorageMultisampleEXT (GLenum target, 
 GL_APICALL void GL_APIENTRY glFramebufferTexture2DMultisampleEXT (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples);
 #endif
 #endif /* GL_EXT_multisampled_render_to_texture */
+
+#ifndef GL_EXT_multisampled_render_to_texture2
+#define GL_EXT_multisampled_render_to_texture2 1
+#endif /* GL_EXT_multisampled_render_to_texture2 */
 
 #ifndef GL_EXT_multiview_draw_buffers
 #define GL_EXT_multiview_draw_buffers 1

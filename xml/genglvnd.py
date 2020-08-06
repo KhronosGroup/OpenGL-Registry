@@ -75,10 +75,10 @@ if __name__ == '__main__':
 startTime = None
 def startTimer():
     global startTime
-    startTime = time.clock()
+    startTime = time.process_time()
 def endTimer(msg):
     global startTime
-    endTime = time.clock()
+    endTime = time.process_time()
     if (timeit):
         write(msg, endTime - startTime)
         startTime = None
