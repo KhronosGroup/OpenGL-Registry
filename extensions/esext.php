@@ -685,6 +685,6 @@
 </li>
 <li value=329><a href="extensions/NV/NV_memory_object_sparse.txt">GL_NV_memory_object_sparse</a>
 </li>
-<li value=330><a href="extensions/NV/GL_NV_timeline_semaphore.txt">GL_NV_timeline_semaphore</a>
+<li value=330><a href="extensions/NV/NV_timeline_semaphore.txt">GL_NV_timeline_semaphore</a>
 </li>
 </ol>
