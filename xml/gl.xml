@@ -48730,7 +48730,8 @@ typedef unsigned int GLhandleARB;
                 <command name="glNamedBufferAttachMemoryNV"/>
             </require>
         </extension>
-        <extension name="GL_NV_memory_object_sparse" supported="gl|glcore|gles2">
+        <!-- until fixed, per #421 supported="gl|glcore|gles2" -->
+        <extension name="GL_NV_memory_object_sparse" supported="disabled">
             <require>
                 <command name="glBufferPageCommitmentMemNV"/>
                 <command name="glTexPageCommitmentMemNV"/>
