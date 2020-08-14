@@ -3531,6 +3531,13 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_memory_attachment.txt',
     },
+    'GL_NV_memory_object_sparse' : {
+        'number' : 550,
+        'esnumber' : 329,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_memory_object_sparse.txt',
+    },
     'GL_NV_mesh_shader' : {
         'number' : 527,
         'esnumber' : 312,
@@ -3936,6 +3943,13 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_transform_feedback2.txt',
+    },
+    'GL_NV_timeline_semaphore' : {
+        'number' : 551,
+        'esnumber' : 330,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_timeline_semaphore.txt',
     },
     'GL_NV_uniform_buffer_unified_memory' : {
         'number' : 459,
