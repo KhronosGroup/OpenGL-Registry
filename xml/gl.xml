@@ -12810,7 +12810,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
-            <param><ptype>GLuint64</ptype> <name>memOffset</name></param>
+            <param><ptype>GLuint64</ptype> <name>offset</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>commit</name></param>
         </command>
         <command>
@@ -23768,7 +23768,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
-            <param><ptype>GLuint64</ptype> <name>memOffset</name></param>
+            <param><ptype>GLuint64</ptype> <name>offset</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>commit</name></param>
         </command>
         <command>
@@ -48730,7 +48730,8 @@ typedef unsigned int GLhandleARB;
                 <command name="glNamedBufferAttachMemoryNV"/>
             </require>
         </extension>
-        <extension name="GL_NV_memory_object_sparse" supported="gl|glcore|gles2">
+        <!-- until fixed, per #421 supported="gl|glcore|gles2" -->
+        <extension name="GL_NV_memory_object_sparse" supported="disabled">
             <require>
                 <command name="glBufferPageCommitmentMemNV"/>
                 <command name="glTexPageCommitmentMemNV"/>
