@@ -21,8 +21,8 @@ Status
 
 Version
 
-    Last Modified Date: Jul 10, 2020
-    Revision:           1
+    Last Modified Date: August 14, 2020
+    Revision:           2
 
 Number
 
@@ -53,12 +53,12 @@ New Procedures and Functions
 
     void BufferPageCommitmentMemNV(enum target,
                                    intptr offset, sizeiptr size,
-                                   uint memory, uint64 offset,
+                                   uint memory, uint64 memOffset,
                                    boolean commit);
 
     void NamedBufferPageCommitmentMemNV(uint buffer,
                                         intptr offset, sizeiptr size,
-                                        uint memory, uint64 offset,
+                                        uint memory, uint64 memOffset,
                                         boolean commit);
 
     void TexPageCommitmentMemNV(enum target,
@@ -91,18 +91,18 @@ Additions to Chapter 6 of the OpenGL 4.4 (core) Specification (Buffer Objects)
 
         void BufferPageCommitmentMemNV(enum target,
                                        intptr offset, sizeiptr size,
-                                       uint memory, uint64 offset,
+                                       uint memory, uint64 memOffset,
                                        boolean commit);
 
         void NamedBufferPageCommitmentMemNV(uint buffer,
                                             intptr offset,
                                             sizeiptr size,
-                                            uint memory, uint64 offset,
+                                            uint memory, uint64 memOffset,
                                             boolean commit);
 
     behaves similarly to BufferPageCommitmentARB and
     NamedBufferPageCommitmentMemARB except that the pages of the sparse buffer
-    are bound to the memory specified by <memory> and <offset>.
+    are bound to the memory specified by <memory> and <memOffset>.
 
     Errors (additionally to non-Mem variants)
 
@@ -178,6 +178,10 @@ Issues
               isn't required for NVIDIA hardware.
 
 Revision History
+
+    Revision 2, 2020-08-14 (Piers Daniell)
+        - Fix duplicate parameter names in BufferPageCommitmentMemNV and
+          NamedBufferPageCommitmentMemNV.
 
     Revision 1, 2020-08-04 (Carsten Rohde)
         - Initial draft.
