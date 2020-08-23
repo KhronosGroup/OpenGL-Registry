@@ -21757,9 +21757,9 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>list</name></param>
             <param><ptype>GLuint</ptype> <name>segment</name></param>
             <param len="count">const void **<name>indirects</name></param>
-            <param>const <ptype>GLsizei</ptype> *<name>sizes</name></param>
-            <param>const <ptype>GLuint</ptype> *<name>states</name></param>
-            <param>const <ptype>GLuint</ptype> *<name>fbos</name></param>
+            <param len="count">const <ptype>GLsizei</ptype> *<name>sizes</name></param>
+            <param len="count">const <ptype>GLuint</ptype> *<name>states</name></param>
+            <param len="count">const <ptype>GLuint</ptype> *<name>fbos</name></param>
             <param><ptype>GLuint</ptype> <name>count</name></param>
         </command>
         <command>
