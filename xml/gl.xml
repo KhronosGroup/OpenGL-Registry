@@ -6318,31 +6318,31 @@ typedef unsigned int GLhandleARB;
         <enum value="0x80D1" name="GL_POST_CONVOLUTION_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableCap"/>
         <enum value="0x80D2" name="GL_POST_COLOR_MATRIX_COLOR_TABLE" group="ColorTableTarget,ColorTableTargetSGI,EnableCap"/>
         <enum value="0x80D2" name="GL_POST_COLOR_MATRIX_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D3" name="GL_PROXY_COLOR_TABLE" group="ColorTableTarget"/>
+        <enum value="0x80D3" name="GL_PROXY_COLOR_TABLE" group="ColorTableTargetSGI,ColorTableTarget"/>
         <enum value="0x80D3" name="GL_PROXY_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
-        <enum value="0x80D4" name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE" group="ColorTableTarget"/>
+        <enum value="0x80D4" name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE" group="ColorTableTargetSGI,ColorTableTarget"/>
         <enum value="0x80D4" name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
-        <enum value="0x80D5" name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE" group="ColorTableTarget"/>
+        <enum value="0x80D5" name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE" group="ColorTableTargetSGI,ColorTableTarget"/>
         <enum value="0x80D5" name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
-        <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE" group="GetColorTableParameterPName,ColorTableParameterPName"/>
+        <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
         <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS" group="GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS_SGI" group="GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80D8" name="GL_COLOR_TABLE_FORMAT" group="GetColorTableParameterPName,ColorTableParameterPName"/>
+        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
+        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80D8" name="GL_COLOR_TABLE_FORMAT" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
         <enum value="0x80D8" name="GL_COLOR_TABLE_FORMAT_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80D9" name="GL_COLOR_TABLE_WIDTH" group="GetColorTableParameterPName,ColorTableParameterPName"/>
+        <enum value="0x80D9" name="GL_COLOR_TABLE_WIDTH" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
         <enum value="0x80D9" name="GL_COLOR_TABLE_WIDTH_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DA" name="GL_COLOR_TABLE_RED_SIZE" group="GetColorTableParameterPName,ColorTableParameterPName"/>
+        <enum value="0x80DA" name="GL_COLOR_TABLE_RED_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
         <enum value="0x80DA" name="GL_COLOR_TABLE_RED_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DB" name="GL_COLOR_TABLE_GREEN_SIZE" group="GetColorTableParameterPName,ColorTableParameterPName"/>
+        <enum value="0x80DB" name="GL_COLOR_TABLE_GREEN_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
         <enum value="0x80DB" name="GL_COLOR_TABLE_GREEN_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DC" name="GL_COLOR_TABLE_BLUE_SIZE" group="GetColorTableParameterPName,ColorTableParameterPName"/>
+        <enum value="0x80DC" name="GL_COLOR_TABLE_BLUE_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
         <enum value="0x80DC" name="GL_COLOR_TABLE_BLUE_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DD" name="GL_COLOR_TABLE_ALPHA_SIZE" group="GetColorTableParameterPName,ColorTableParameterPName"/>
+        <enum value="0x80DD" name="GL_COLOR_TABLE_ALPHA_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
         <enum value="0x80DD" name="GL_COLOR_TABLE_ALPHA_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DE" name="GL_COLOR_TABLE_LUMINANCE_SIZE" group="GetColorTableParameterPName,ColorTableParameterPName"/>
+        <enum value="0x80DE" name="GL_COLOR_TABLE_LUMINANCE_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
         <enum value="0x80DE" name="GL_COLOR_TABLE_LUMINANCE_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DF" name="GL_COLOR_TABLE_INTENSITY_SIZE" group="GetColorTableParameterPName,ColorTableParameterPName"/>
+        <enum value="0x80DF" name="GL_COLOR_TABLE_INTENSITY_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
         <enum value="0x80DF" name="GL_COLOR_TABLE_INTENSITY_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
     </enums>
 
@@ -38078,18 +38078,6 @@ typedef unsigned int GLhandleARB;
             <command name="glReadnPixels"/>
         </require>
         <require profile="compatibility" comment="Reuse GL_ARB_robustness">
-            <enum name="GL_COLOR_TABLE"/>
-            <enum name="GL_POST_CONVOLUTION_COLOR_TABLE"/>
-            <enum name="GL_POST_COLOR_MATRIX_COLOR_TABLE"/>
-            <enum name="GL_PROXY_COLOR_TABLE"/>
-            <enum name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE"/>
-            <enum name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE"/>
-            <enum name="GL_CONVOLUTION_1D"/>
-            <enum name="GL_CONVOLUTION_2D"/>
-            <enum name="GL_SEPARABLE_2D"/>
-            <enum name="GL_HISTOGRAM"/>
-            <enum name="GL_PROXY_HISTOGRAM"/>
-            <enum name="GL_MINMAX"/>
             <command name="glGetnMapdv"/>
             <command name="glGetnMapfv"/>
             <command name="glGetnMapiv"/>
@@ -38102,6 +38090,20 @@ typedef unsigned int GLhandleARB;
             <command name="glGetnSeparableFilter"/>
             <command name="glGetnHistogram"/>
             <command name="glGetnMinmax"/>
+        </require>
+        <require profile="compatibility">
+            <enum name="GL_COLOR_TABLE"/>
+            <enum name="GL_POST_CONVOLUTION_COLOR_TABLE"/>
+            <enum name="GL_POST_COLOR_MATRIX_COLOR_TABLE"/>
+            <enum name="GL_PROXY_COLOR_TABLE"/>
+            <enum name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE"/>
+            <enum name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE"/>
+            <enum name="GL_CONVOLUTION_1D"/>
+            <enum name="GL_CONVOLUTION_2D"/>
+            <enum name="GL_SEPARABLE_2D"/>
+            <enum name="GL_HISTOGRAM"/>
+            <enum name="GL_PROXY_HISTOGRAM"/>
+            <enum name="GL_MINMAX"/>
         </require>
         <require comment="Reuse GL_ARB_texture_barrier">
             <command name="glTextureBarrier"/>
