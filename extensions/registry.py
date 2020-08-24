@@ -1896,6 +1896,12 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/EXT/EXT_geometry_shader4.txt',
     },
+    'GLX_EXT_get_drawable_type' : {
+        'number' : 552,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/EXT/GLX_EXT_get_drawable_type.txt',
+    },
     'GLX_EXT_stereo_tree' : {
         'number' : 452,
         'flags' : { 'public' },
