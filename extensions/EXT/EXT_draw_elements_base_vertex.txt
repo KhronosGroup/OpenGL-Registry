@@ -29,8 +29,8 @@ Status
 
 Version
 
-    Last Modified Date:  September 30, 2014
-    Version:             3
+    Last Modified Date:  August 11, 2020
+    Version:             4
 
 Number
 
@@ -138,7 +138,7 @@ New Procedures and Functions
                                         const sizei *count,
                                         enum type,
                                         const void * const *indices,
-                                        sizei primcount,
+                                        sizei drawcount,
                                         const int *basevertex);
 
 New Tokens
@@ -361,7 +361,12 @@ Issues
 Revision History
 
     Rev.    Date    Author     Changes
-    ----  -------- ---------  ----------------------------------------
+    ----  -------- ---------  ----------------------------------------------
+     4    08/11/20  pdaniell  Renamed the 'primcount' parameter of
+                              MultiDrawElementsBaseVertexEXT in the
+                              "New Procedures and Functions" section to
+                              'drawcount' to match the extension spec body.
+                              
      3    09/30/14  dkoch     Resolved issues 1, 2 as proposed.
                               Added issue 5. Mark complete.
 

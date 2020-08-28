@@ -21,8 +21,8 @@ Status
 
 Version
 
-    Last Modified Date: March 17, 2020
-    Revision: #1
+    Last Modified Date: April 22, 2020
+    Revision: #2
 
 Number
 
@@ -227,7 +227,7 @@ Modifications to the OpenGL ES 3.2 Specification
         1x1.
 
         If the <W>x<H> value of SHADING_RATE_QCOM is expressed as <w, h> then the
-        adjusted rate may be any <w', h'> as long as w' <= w and h' <= h.  If
+        adjusted rate may be any <w', h'> as long as (w' * h') <= (w * h).  If
         PRESERVE_SHADING_RATE_ASPECT_RATIO is TRUE, then the implementation further
         guarantees that (w'/h') equals (w/h) or that w'=1 and h'=1.
 
@@ -421,3 +421,5 @@ Revision History
     Rev.    Date    Author    Changes
     ----  --------  --------  ----------------------------------------------
      1    03/17/20  jleger    Initial draft.
+     2    04/22/20  jleger    Relaxed the <w', h'> guarantee from "w'<=w and
+                              h'<=h" to "w’*h’ <= w*h".

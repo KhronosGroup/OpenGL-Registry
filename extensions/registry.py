@@ -2989,12 +2989,26 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/GLX_MESA_copy_sub_buffer.txt',
     },
+    'GL_MESA_framebuffer_flip_x' : {
+        'number' : 548,
+        'esnumber' : 327,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_framebuffer_flip_x.txt',
+    },
     'GL_MESA_framebuffer_flip_y' : {
         'number' : 540,
         'esnumber' : 302,
         'flags' : { 'public' },
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/MESA_framebuffer_flip_y.txt',
+    },
+    'GL_MESA_framebuffer_swap_xy' : {
+        'number' : 549,
+        'esnumber' : 328,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_framebuffer_swap_xy.txt',
     },
     'GL_MESA_pack_invert' : {
         'number' : 300,
@@ -3517,6 +3531,13 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_memory_attachment.txt',
     },
+    'GL_NV_memory_object_sparse' : {
+        'number' : 550,
+        'esnumber' : 329,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_memory_object_sparse.txt',
+    },
     'GL_NV_mesh_shader' : {
         'number' : 527,
         'esnumber' : 312,
@@ -3922,6 +3943,13 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_transform_feedback2.txt',
+    },
+    'GL_NV_timeline_semaphore' : {
+        'number' : 551,
+        'esnumber' : 330,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_timeline_semaphore.txt',
     },
     'GL_NV_uniform_buffer_unified_memory' : {
         'number' : 459,
@@ -4483,6 +4511,11 @@ registry = {
         'esnumber' : 273,
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_framebuffer_foveated.txt',
+    },
+    'GL_QCOM_motion_estimation' : {
+        'esnumber' : 326,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_motion_estimation.txt',
     },
     'GL_QCOM_performance_monitor_global_mode' : {
         'esnumber' : 56,
