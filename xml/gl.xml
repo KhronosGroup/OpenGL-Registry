@@ -11507,7 +11507,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x954E" name="GL_CONSERVATIVE_RASTER_MODE_POST_SNAP_NV"/>
         <enum value="0x954F" name="GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_TRIANGLES_NV"/>
         <enum value="0x9550" name="GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_NV"/>
-        <enum value="0x9551" name="GL_SHADER_BINARY_FORMAT_SPIR_V" group="ShaderBinaryformat"/>
+        <enum value="0x9551" name="GL_SHADER_BINARY_FORMAT_SPIR_V" group="ShaderBinaryFormat"/>
         <enum value="0x9551" name="GL_SHADER_BINARY_FORMAT_SPIR_V_ARB" alias="GL_SHADER_BINARY_FORMAT_SPIR_V"/>
         <enum value="0x9552" name="GL_SPIR_V_BINARY"/>
         <enum value="0x9552" name="GL_SPIR_V_BINARY_ARB" alias="GL_SPIR_V_BINARY"/>
@@ -27826,7 +27826,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glShaderBinary</name></proto>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param len="count">const <ptype>GLuint</ptype> *<name>shaders</name></param>
-            <param group="ShaderBinaryformat"><ptype>GLenum</ptype> <name>binaryFormat</name></param>
+            <param group="ShaderBinaryFormat"><ptype>GLenum</ptype> <name>binaryFormat</name></param>
             <param len="length">const void *<name>binary</name></param>
             <param><ptype>GLsizei</ptype> <name>length</name></param>
         </command>
