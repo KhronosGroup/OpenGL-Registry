@@ -5234,7 +5234,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0" name="GL_FALSE" group="Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
         <enum value="0" name="GL_NO_ERROR" group="GraphicsResetStatus,ErrorCode"/>
         <enum value="0" name="GL_ZERO" group="TextureSwizzle,StencilOp,BlendingFactor"/>
-        <enum value="0" name="GL_NONE" group="EmptyFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenMode,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
+        <enum value="0" name="GL_NONE" group="SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenMode,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
         <enum value="0" name="GL_NONE_OES" group="ReadBufferMode,DrawBufferMode"/>
         <enum value="1" name="GL_TRUE" group="Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
         <enum value="1" name="GL_ONE" group="TextureSwizzle,BlendingFactor"/>
@@ -16602,12 +16602,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto group="sync"><ptype>GLsync</ptype> <name>glFenceSync</name></proto>
             <param group="SyncCondition"><ptype>GLenum</ptype> <name>condition</name></param>
-            <param group="EmptyFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="SyncBehaviorFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
         </command>
         <command>
             <proto group="sync"><ptype>GLsync</ptype> <name>glFenceSyncAPPLE</name></proto>
             <param group="SyncCondition"><ptype>GLenum</ptype> <name>condition</name></param>
-            <param group="EmptyFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="SyncBehaviorFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <alias name="glFenceSync"/>
         </command>
         <command>
@@ -33638,13 +33638,13 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glWaitSync</name></proto>
             <param group="sync"><ptype>GLsync</ptype> <name>sync</name></param>
-            <param group="EmptyFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="SyncBehaviorFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <param><ptype>GLuint64</ptype> <name>timeout</name></param>
         </command>
         <command>
             <proto>void <name>glWaitSyncAPPLE</name></proto>
             <param><ptype>GLsync</ptype> <name>sync</name></param>
-            <param group="EmptyFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="SyncBehaviorFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <param><ptype>GLuint64</ptype> <name>timeout</name></param>
             <alias name="glWaitSync"/>
         </command>
