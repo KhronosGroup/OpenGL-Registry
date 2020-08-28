@@ -677,4 +677,14 @@
 </li>
 <li value=325><a href="extensions/QCOM/QCOM_shading_rate.txt">GL_QCOM_shading_rate</a>
 </li>
+<li value=326><a href="extensions/QCOM/QCOM_motion_estimation.txt">GL_QCOM_motion_estimation</a>
+</li>
+<li value=327><a href="extensions/MESA/MESA_framebuffer_flip_x.txt">GL_MESA_framebuffer_flip_x</a>
+</li>
+<li value=328><a href="extensions/MESA/MESA_framebuffer_swap_xy.txt">GL_MESA_framebuffer_swap_xy</a>
+</li>
+<li value=329><a href="extensions/NV/NV_memory_object_sparse.txt">GL_NV_memory_object_sparse</a>
+</li>
+<li value=330><a href="extensions/NV/NV_timeline_semaphore.txt">GL_NV_timeline_semaphore</a>
+</li>
 </ol>

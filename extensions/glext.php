@@ -1033,4 +1033,12 @@
 </li>
 <li value=547><a href="extensions/INTEL/INTEL_shader_integer_functions2.txt">GL_INTEL_shader_integer_functions2</a>
 </li>
+<li value=548><a href="extensions/MESA/MESA_framebuffer_flip_x.txt">GL_MESA_framebuffer_flip_x</a>
+</li>
+<li value=549><a href="extensions/MESA/MESA_framebuffer_swap_xy.txt">GL_MESA_framebuffer_swap_xy</a>
+</li>
+<li value=550><a href="extensions/NV/NV_memory_object_sparse.txt">GL_NV_memory_object_sparse</a>
+</li>
+<li value=551><a href="extensions/NV/NV_timeline_semaphore.txt">GL_NV_timeline_semaphore</a>
+</li>
 </ol>

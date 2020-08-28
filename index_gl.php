@@ -221,7 +221,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <a href="specs/gl/glspec14.pdf"> OpenGL 1.4 API Specification </a>
 <li> <a href="specs/gl/glspec13.pdf"> OpenGL 1.3 API Specification </a>
 <li> <a href="specs/gl/glspec121.pdf"> OpenGL 1.2.1 API Specification </a>
-<li> <a href="specs/gl/glspec11.ps"> OpenGL 1.1 API Specification (PostScript format) </a>
+<li> <a href="specs/gl/glspec11.pdf"> OpenGL 1.1 API Specification </a>
 <li> <a href="specs/gl/glspec10.pdf"> OpenGL 1.0 API Specification </a>
 
 <li> <b> Older GLX Specifications </b>
