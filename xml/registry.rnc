@@ -142,7 +142,7 @@ Command = element command {
     ObjectNameType = attribute object_name_type { "buffer" | "display list" | "framebuffer" | "program" | "program pipeline" | "query" | "renderbuffer" | "sampler" | "sampler" | "shader" | "sync" | "texture" | "transform feedback" | "vertex array" } ,
     element proto {
         attribute group { text } ? ,
-        ObjectNameType ,
+        ObjectNameType ? ,
         text ,
         element ptype { TypeName } ? ,
         text ,
@@ -151,7 +151,7 @@ Command = element command {
     } ,
     element param {
         attribute group { text } ? ,
-        ObjectNameType ,
+        ObjectNameType ? ,
         attribute len { text } ? ,
         text ,
         element ptype { TypeName } ? ,
