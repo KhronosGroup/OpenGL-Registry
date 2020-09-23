@@ -123,7 +123,7 @@ Commands = element commands {
 # <command> defines a single command
 #   <proto> is the C function prototype, including the return type
 #   <param> are function parameters, in order
-#     object_name_type - type of object name. One object name type correspond to one namespace of OpenGL objects
+#     object_name_type - type of object name (object handle). Handles with different types are not interchangeable. So handle created as [object_name_type=buffer] can not be passed to [object_name_type=shader]
 #     <ptype> is a <type> name, if present
 #     <name> is the function / parameter name
 # The textual contents of <proto> and <param> should be legal C
