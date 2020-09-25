@@ -123,7 +123,7 @@ Commands = element commands {
 # <command> defines a single command
 #   <proto> is the C function prototype, including the return type
 #   <param> are function parameters, in order
-#     object_name_type - type of object name (object handle). Handles with different types are not interchangeable. So handle created as [object_name_type=buffer] can not be passed to [object_name_type=shader]
+#     class - type of object name (object handle). Handles with different types are not interchangeable. So handle created as [class=buffer] can not be passed to [class=shader]
 #     <ptype> is a <type> name, if present
 #     <name> is the function / parameter name
 # The textual contents of <proto> and <param> should be legal C
@@ -137,12 +137,12 @@ Commands = element commands {
 #     opcode - numeric opcode of specified type for this function
 #     name - if present, protocol name (defaults to command name)
 #     comment - unused
+ArgumentClass = attribute class { "buffer" | "display list" | "framebuffer" | "program" | "program pipeline" | "query" | "renderbuffer" | "sampler" | "sampler" | "shader" | "sync" | "texture" | "transform feedback" | "vertex array" }
 Command = element command {
     Comment ? ,
-    ObjectNameType = attribute object_name_type { "buffer" | "display list" | "framebuffer" | "program" | "program pipeline" | "query" | "renderbuffer" | "sampler" | "sampler" | "shader" | "sync" | "texture" | "transform feedback" | "vertex array" } ,
     element proto {
         attribute group { text } ? ,
-        ObjectNameType ? ,
+        ArgumentClass ? ,
         text ,
         element ptype { TypeName } ? ,
         text ,
@@ -151,7 +151,7 @@ Command = element command {
     } ,
     element param {
         attribute group { text } ? ,
-        ObjectNameType ? ,
+        ArgumentClass ? ,
         attribute len { text } ? ,
         text ,
         element ptype { TypeName } ? ,
