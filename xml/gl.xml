@@ -16503,7 +16503,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glExtGetBufferPointervQCOM</name></proto>
             <param><ptype>GLenum</ptype> <name>target</name></param>
-            <param>void **<name>params</name></param>
+            <param len="1">void **<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glExtGetBuffersQCOM</name></proto>
@@ -17720,7 +17720,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetBufferPointervOES</name></proto>
             <param group="BufferTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="BufferPointerNameARB"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param>void **<name>params</name></param>
+            <param len="1">void **<name>params</name></param>
             <alias name="glGetBufferPointerv"/>
         </command>
         <command>
@@ -18811,7 +18811,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetNamedBufferPointerv</name></proto>
             <param><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="BufferPointerNameARB"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param>void **<name>params</name></param>
+            <param len="1">void **<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetNamedBufferPointervEXT</name></proto>
@@ -19271,7 +19271,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetPointervKHR</name></proto>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
-            <param>void **<name>params</name></param>
+            <param len="1">void **<name>params</name></param>
             <alias name="glGetPointerv"/>
         </command>
         <command>
@@ -20444,7 +20444,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>vaobj</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param group="VertexArrayPName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param>void **<name>param</name></param>
+            <param len="1">void **<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexArrayPointervEXT</name></proto>
@@ -21756,10 +21756,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glListDrawCommandsStatesClientNV</name></proto>
             <param><ptype>GLuint</ptype> <name>list</name></param>
             <param><ptype>GLuint</ptype> <name>segment</name></param>
-            <param>const void **<name>indirects</name></param>
-            <param>const <ptype>GLsizei</ptype> *<name>sizes</name></param>
-            <param>const <ptype>GLuint</ptype> *<name>states</name></param>
-            <param>const <ptype>GLuint</ptype> *<name>fbos</name></param>
+            <param len="count">const void **<name>indirects</name></param>
+            <param len="count">const <ptype>GLsizei</ptype> *<name>sizes</name></param>
+            <param len="count">const <ptype>GLuint</ptype> *<name>states</name></param>
+            <param len="count">const <ptype>GLuint</ptype> *<name>fbos</name></param>
             <param><ptype>GLuint</ptype> <name>count</name></param>
         </command>
         <command>
