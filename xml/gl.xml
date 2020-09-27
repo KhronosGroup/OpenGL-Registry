@@ -13210,7 +13210,8 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto group="SyncStatus"><ptype>GLenum</ptype> <name>glClientWaitSyncAPPLE</name></proto>
             <param><ptype>GLsync</ptype> <name>sync</name></param>
-            <param class="sync" group="sync"><ptype>GLsync</ptype> <name>sync</name></param>            <param group="SyncObjectMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param class="sync" group="sync"><ptype>GLsync</ptype> <name>sync</name></param>
+            <param group="SyncObjectMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <param><ptype>GLuint64</ptype> <name>timeout</name></param>
             <alias name="glClientWaitSync"/>
         </command>
