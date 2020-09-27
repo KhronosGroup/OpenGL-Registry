@@ -5234,7 +5234,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0" name="GL_FALSE" group="Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
         <enum value="0" name="GL_NO_ERROR" group="GraphicsResetStatus,ErrorCode"/>
         <enum value="0" name="GL_ZERO" group="TextureSwizzle,StencilOp,BlendingFactor"/>
-        <enum value="0" name="GL_NONE" group="TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenMode,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
+        <enum value="0" name="GL_NONE" group="SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenMode,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
         <enum value="0" name="GL_NONE_OES" group="ReadBufferMode,DrawBufferMode"/>
         <enum value="1" name="GL_TRUE" group="Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
         <enum value="1" name="GL_ONE" group="TextureSwizzle,BlendingFactor"/>
@@ -11497,7 +11497,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x954E" name="GL_CONSERVATIVE_RASTER_MODE_POST_SNAP_NV"/>
         <enum value="0x954F" name="GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_TRIANGLES_NV"/>
         <enum value="0x9550" name="GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_NV"/>
-        <enum value="0x9551" name="GL_SHADER_BINARY_FORMAT_SPIR_V"/>
+        <enum value="0x9551" name="GL_SHADER_BINARY_FORMAT_SPIR_V" group="ShaderBinaryFormat"/>
         <enum value="0x9551" name="GL_SHADER_BINARY_FORMAT_SPIR_V_ARB" alias="GL_SHADER_BINARY_FORMAT_SPIR_V"/>
         <enum value="0x9552" name="GL_SPIR_V_BINARY"/>
         <enum value="0x9552" name="GL_SPIR_V_BINARY_ARB" alias="GL_SPIR_V_BINARY"/>
@@ -13209,7 +13209,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto group="SyncStatus"><ptype>GLenum</ptype> <name>glClientWaitSyncAPPLE</name></proto>
-            <param><ptype>GLsync</ptype> <name>sync</name></param>
+            <param group="sync"><ptype>GLsync</ptype> <name>sync</name></param>
             <param group="SyncObjectMask"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <param><ptype>GLuint64</ptype> <name>timeout</name></param>
             <alias name="glClientWaitSync"/>
@@ -16602,12 +16602,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto group="sync"><ptype>GLsync</ptype> <name>glFenceSync</name></proto>
             <param group="SyncCondition"><ptype>GLenum</ptype> <name>condition</name></param>
-            <param><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="SyncBehaviorFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
         </command>
         <command>
-            <proto><ptype>GLsync</ptype> <name>glFenceSyncAPPLE</name></proto>
+            <proto group="sync"><ptype>GLsync</ptype> <name>glFenceSyncAPPLE</name></proto>
             <param group="SyncCondition"><ptype>GLenum</ptype> <name>condition</name></param>
-            <param><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="SyncBehaviorFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <alias name="glFenceSync"/>
         </command>
         <command>
@@ -18036,20 +18036,20 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetDoubleIndexedvEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLdouble</ptype> *<name>data</name></param>
             <alias name="glGetDoublei_v"/>
         </command>
         <command>
             <proto>void <name>glGetDoublei_v</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLdouble</ptype> *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glGetDoublei_vEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLdouble</ptype> *<name>params</name></param>
             <alias name="glGetDoublei_v"/>
@@ -18114,34 +18114,34 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetFloatIndexedvEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLfloat</ptype> *<name>data</name></param>
             <alias name="glGetFloati_v"/>
         </command>
         <command>
             <proto>void <name>glGetFloati_v</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLfloat</ptype> *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glGetFloati_vEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glGetFloati_v"/>
         </command>
         <command>
             <proto>void <name>glGetFloati_vNV</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLfloat</ptype> *<name>data</name></param>
             <alias name="glGetFloati_v"/>
         </command>
         <command>
             <proto>void <name>glGetFloati_vOES</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLfloat</ptype> *<name>data</name></param>
             <alias name="glGetFloati_v"/>
@@ -18363,7 +18363,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetInteger64i_v</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLint64</ptype> *<name>data</name></param>
         </command>
@@ -18386,7 +18386,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetIntegerIndexedvEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLint</ptype> *<name>data</name></param>
             <alias name="glGetIntegeri_v"/>
@@ -18394,13 +18394,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetIntegeri_v</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="COMPSIZE(target)"><ptype>GLint</ptype> *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glGetIntegeri_vEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="GetPName"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLint</ptype> *<name>data</name></param>
         </command>
@@ -27862,7 +27862,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glShaderBinary</name></proto>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param len="count">const <ptype>GLuint</ptype> *<name>shaders</name></param>
-            <param><ptype>GLenum</ptype> <name>binaryformat</name></param>
+            <param group="ShaderBinaryFormat"><ptype>GLenum</ptype> <name>binaryFormat</name></param>
             <param len="length">const void *<name>binary</name></param>
             <param><ptype>GLsizei</ptype> <name>length</name></param>
         </command>
@@ -33638,13 +33638,13 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glWaitSync</name></proto>
             <param group="sync"><ptype>GLsync</ptype> <name>sync</name></param>
-            <param><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="SyncBehaviorFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <param><ptype>GLuint64</ptype> <name>timeout</name></param>
         </command>
         <command>
             <proto>void <name>glWaitSyncAPPLE</name></proto>
             <param><ptype>GLsync</ptype> <name>sync</name></param>
-            <param><ptype>GLbitfield</ptype> <name>flags</name></param>
+            <param group="SyncBehaviorFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <param><ptype>GLuint64</ptype> <name>timeout</name></param>
             <alias name="glWaitSync"/>
         </command>
