@@ -40,8 +40,8 @@ Status
 
 Version
 
-    Last Modified Date: September 17, 2019
-    Revision: 45
+    Last Modified Date: August 19, 2020
+    Revision: 46
 
 Number
 
@@ -1149,12 +1149,16 @@ Add Appendix A.spv "The OpenGL SPIR-V Execution Environment" to the OpenGL 4.5
         be specified.
 
     Recursion:
-     - For all entry points, the static function-call graph rooted at that
-       entry point must not contain cycles.
+      - For all entry points, the static function-call graph rooted at that
+        entry point must not contain cycles.
 
     User declared input and output variables:
-     - Must not use OpTypeBool, either directly or as part of an aggregate.
+      - Must not use OpTypeBool, either directly or as part of an aggregate.
 
+    Atomic Access Rules:
+      - Atomic instructions must declare a scalar 32-bit integer type, or a
+        scalar 64-bit integer type if the *Int64Atomics* capability is enabled,
+        for the value pointed to by *Pointer*
 
     A.spv.5 (Precision and Operation of SPIR-V Instructions)
 
@@ -2176,6 +2180,9 @@ Revision History
 
     Rev.    Date         Author         Changes
     ----  -----------    ------------   ---------------------------------
+    46    19-Aug-2020    dgkoch         Atomic pointers must be 32-bit or
+                                        64-bit scalar integers (SPIR-V/254,
+                                        internal API issue 132)
     45    17-Sep-2019    Jon Leech      Add OpTypeBool constraint on user
                                         interface variables, and require the
                                         StorageImageWriteWithoutFormat
