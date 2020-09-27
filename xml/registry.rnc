@@ -137,12 +137,11 @@ Commands = element commands {
 #     opcode - numeric opcode of specified type for this function
 #     name - if present, protocol name (defaults to command name)
 #     comment - unused
-ArgumentClass = attribute class { "buffer" | "display list" | "framebuffer" | "program" | "program pipeline" | "query" | "renderbuffer" | "sampler" | "sampler" | "shader" | "sync" | "texture" | "transform feedback" | "vertex array" }
 Command = element command {
     Comment ? ,
     element proto {
         attribute group { text } ? ,
-        ArgumentClass ? ,
+        attribute class { text } ? ,
         text ,
         element ptype { TypeName } ? ,
         text ,
@@ -151,7 +150,7 @@ Command = element command {
     } ,
     element param {
         attribute group { text } ? ,
-        ArgumentClass ? ,
+        attribute class { text } ? ,
         attribute len { text } ? ,
         text ,
         element ptype { TypeName } ? ,
