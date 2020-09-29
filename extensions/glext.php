@@ -1041,4 +1041,6 @@
 </li>
 <li value=551><a href="extensions/NV/NV_timeline_semaphore.txt">GL_NV_timeline_semaphore</a>
 </li>
+<li value=552><a href="extensions/EXT/GLX_EXT_get_drawable_type.txt">GLX_EXT_get_drawable_type</a>
+</li>
 </ol>
