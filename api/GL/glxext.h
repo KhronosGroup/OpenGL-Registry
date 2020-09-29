@@ -15,7 +15,7 @@ extern "C" {
 **   https://github.com/KhronosGroup/OpenGL-Registry
 */
 
-#define GLX_GLXEXT_VERSION 20200813
+#define GLX_GLXEXT_VERSION 20200929
 
 /* Generated C header for:
  * API: glx
@@ -289,6 +289,10 @@ void glXBlitContextFramebufferAMD (GLXContext dstCtx, GLint srcX0, GLint srcY0, 
 #define GLX_EXT_framebuffer_sRGB 1
 #define GLX_FRAMEBUFFER_SRGB_CAPABLE_EXT  0x20B2
 #endif /* GLX_EXT_framebuffer_sRGB */
+
+#ifndef GLX_EXT_get_drawable_type
+#define GLX_EXT_get_drawable_type 1
+#endif /* GLX_EXT_get_drawable_type */
 
 #ifndef GLX_EXT_import_context
 #define GLX_EXT_import_context 1
