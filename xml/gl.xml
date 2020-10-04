@@ -9686,11 +9686,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8CFE" name="GL_COLOR_ATTACHMENT30" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CFF" name="GL_COLOR_ATTACHMENT31" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8D00" name="GL_DEPTH_ATTACHMENT" group="InvalidateFramebufferAttachment,FramebufferAttachment"/>
-        <enum value="0x8D00" name="GL_DEPTH_ATTACHMENT_EXT" group="InvalidateFramebufferAttachment"/>
+        <enum value="0x8D00" name="GL_DEPTH_ATTACHMENT_EXT" group="InvalidateFramebufferAttachment,FramebufferAttachment"/>
         <enum value="0x8D00" name="GL_DEPTH_ATTACHMENT_OES" group="InvalidateFramebufferAttachment"/>
             <unused start="0x8D01" end="0x8D1F" vendor="ARB" comment="For depth attachments 16-31"/>
-        <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT" group="FramebufferAttachment"/>
-        <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT_EXT" group="InvalidateFramebufferAttachment"/>
+        <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT" group="InvalidateFramebufferAttachment,FramebufferAttachment"/>
+        <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT_EXT" group="InvalidateFramebufferAttachment,FramebufferAttachment"/>
         <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT_OES" group="InvalidateFramebufferAttachment"/>
             <unused start="0x8D21" end="0x8D3F" vendor="ARB" comment="For stencil attachments 16-31"/>
         <enum value="0x8D40" name="GL_FRAMEBUFFER" group="ObjectIdentifier,FramebufferTarget,CheckFramebufferStatusTarget"/>
