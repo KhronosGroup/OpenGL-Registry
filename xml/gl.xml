@@ -6546,11 +6546,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x81A5" name="GL_DEPTH_COMPONENT16_ARB" group="InternalFormat"/>
         <enum value="0x81A5" name="GL_DEPTH_COMPONENT16_OES" group="InternalFormat"/>
         <enum value="0x81A5" name="GL_DEPTH_COMPONENT16_SGIX" group="InternalFormat"/>
-        <enum value="0x81A6" name="GL_DEPTH_COMPONENT24"/>
+        <enum value="0x81A6" name="GL_DEPTH_COMPONENT24" group="InternalFormat"/>
         <enum value="0x81A6" name="GL_DEPTH_COMPONENT24_ARB" group="InternalFormat"/>
         <enum value="0x81A6" name="GL_DEPTH_COMPONENT24_OES" group="InternalFormat"/>
         <enum value="0x81A6" name="GL_DEPTH_COMPONENT24_SGIX" group="InternalFormat"/>
-        <enum value="0x81A7" name="GL_DEPTH_COMPONENT32"/>
+        <enum value="0x81A7" name="GL_DEPTH_COMPONENT32" group="InternalFormat"/>
         <enum value="0x81A7" name="GL_DEPTH_COMPONENT32_ARB" group="InternalFormat"/>
         <enum value="0x81A7" name="GL_DEPTH_COMPONENT32_OES" group="InternalFormat"/>
         <enum value="0x81A7" name="GL_DEPTH_COMPONENT32_SGIX" group="InternalFormat"/>
