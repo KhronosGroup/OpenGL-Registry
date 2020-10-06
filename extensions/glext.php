@@ -1043,4 +1043,6 @@
 </li>
 <li value=552><a href="extensions/EXT/GLX_EXT_get_drawable_type.txt">GLX_EXT_get_drawable_type</a>
 </li>
+<li value=553><a href="extensions/EXT/GLX_EXT_no_config_context.txt">GLX_EXT_no_config_context</a>
+</li>
 </ol>
