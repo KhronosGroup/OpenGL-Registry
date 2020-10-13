@@ -5308,19 +5308,19 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0308" name="GL_SRC_ALPHA_SATURATE" group="BlendingFactor"/>
         <enum value="0x0308" name="GL_SRC_ALPHA_SATURATE_EXT"/>
             <unused start="0x0309" end="0x03FF" comment="Unused for BlendingFactor"/>
-        <enum value="0x0400" name="GL_FRONT_LEFT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
-        <enum value="0x0401" name="GL_FRONT_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
-        <enum value="0x0402" name="GL_BACK_LEFT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
-        <enum value="0x0403" name="GL_BACK_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
+        <enum value="0x0400" name="GL_FRONT_LEFT" group="ColorBuffer,DrawBufferMode,ReadBufferMode,GetFramebufferAttachment"/>
+        <enum value="0x0401" name="GL_FRONT_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode,GetFramebufferAttachment"/>
+        <enum value="0x0402" name="GL_BACK_LEFT" group="ColorBuffer,DrawBufferMode,ReadBufferMode,GetFramebufferAttachment"/>
+        <enum value="0x0403" name="GL_BACK_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode,GetFramebufferAttachment"/>
         <enum value="0x0404" name="GL_FRONT" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,ReadBufferMode,StencilFaceDirection,MaterialFace"/>
         <enum value="0x0405" name="GL_BACK" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,ReadBufferMode,StencilFaceDirection,MaterialFace"/>
         <enum value="0x0406" name="GL_LEFT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
         <enum value="0x0407" name="GL_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
         <enum value="0x0408" name="GL_FRONT_AND_BACK" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,StencilFaceDirection,MaterialFace"/>
-        <enum value="0x0409" name="GL_AUX0" group="ReadBufferMode,DrawBufferMode"/>
-        <enum value="0x040A" name="GL_AUX1" group="ReadBufferMode,DrawBufferMode"/>
-        <enum value="0x040B" name="GL_AUX2" group="ReadBufferMode,DrawBufferMode"/>
-        <enum value="0x040C" name="GL_AUX3" group="ReadBufferMode,DrawBufferMode"/>
+        <enum value="0x0409" name="GL_AUX0" group="ReadBufferMode,DrawBufferMode,GetFramebufferAttachment"/>
+        <enum value="0x040A" name="GL_AUX1" group="ReadBufferMode,DrawBufferMode,GetFramebufferAttachment"/>
+        <enum value="0x040B" name="GL_AUX2" group="ReadBufferMode,DrawBufferMode,GetFramebufferAttachment"/>
+        <enum value="0x040C" name="GL_AUX3" group="ReadBufferMode,DrawBufferMode,GetFramebufferAttachment"/>
             <unused start="0x040D" end="0x04FF" comment="Unused for DrawBufferMode"/>
         <enum value="0x0500" name="GL_INVALID_ENUM" group="ErrorCode"/>
         <enum value="0x0501" name="GL_INVALID_VALUE" group="ErrorCode"/>
@@ -5723,9 +5723,9 @@ typedef unsigned int GLhandleARB;
             <unused start="0x1703" end="0x17FF" comment="Unused for MatrixMode"/>
         <enum value="0x1800" name="GL_COLOR" group="Buffer,PixelCopyType,InvalidateFramebufferAttachment,VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x1800" name="GL_COLOR_EXT" group="PixelCopyType"/>
-        <enum value="0x1801" name="GL_DEPTH" group="Buffer,PixelCopyType,InvalidateFramebufferAttachment"/>
+        <enum value="0x1801" name="GL_DEPTH" group="Buffer,PixelCopyType,InvalidateFramebufferAttachment,GetFramebufferAttachment"/>
         <enum value="0x1801" name="GL_DEPTH_EXT" group="PixelCopyType"/>
-        <enum value="0x1802" name="GL_STENCIL" group="Buffer,PixelCopyType,InvalidateFramebufferAttachment"/>
+        <enum value="0x1802" name="GL_STENCIL" group="Buffer,PixelCopyType,InvalidateFramebufferAttachment,GetFramebufferAttachment"/>
         <enum value="0x1802" name="GL_STENCIL_EXT" group="PixelCopyType"/>
             <unused start="0x1803" end="0x18FF" comment="Unused for PixelCopyType"/>
         <enum value="0x1900" name="GL_COLOR_INDEX" group="PixelFormat"/>
@@ -6674,7 +6674,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8218" name="GL_FRAMEBUFFER_DEFAULT"/>
         <enum value="0x8219" name="GL_FRAMEBUFFER_UNDEFINED" group="FramebufferStatus"/>
         <enum value="0x8219" name="GL_FRAMEBUFFER_UNDEFINED_OES"/>
-        <enum value="0x821A" name="GL_DEPTH_STENCIL_ATTACHMENT" group="InvalidateFramebufferAttachment"/>
+        <enum value="0x821A" name="GL_DEPTH_STENCIL_ATTACHMENT" group="InvalidateFramebufferAttachment,FramebufferAttachment,GetFramebufferAttachment"/>
         <enum value="0x821B" name="GL_MAJOR_VERSION" group="GetPName"/>
         <enum value="0x821C" name="GL_MINOR_VERSION" group="GetPName"/>
         <enum value="0x821D" name="GL_NUM_EXTENSIONS" group="GetPName"/>
@@ -9620,78 +9620,78 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8CDF" name="GL_MAX_COLOR_ATTACHMENTS" group="GetPName"/>
         <enum value="0x8CDF" name="GL_MAX_COLOR_ATTACHMENTS_EXT"/>
         <enum value="0x8CDF" name="GL_MAX_COLOR_ATTACHMENTS_NV"/>
-        <enum value="0x8CE0" name="GL_COLOR_ATTACHMENT0" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CE0" name="GL_COLOR_ATTACHMENT0_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE0" name="GL_COLOR_ATTACHMENT0" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE0" name="GL_COLOR_ATTACHMENT0_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CE0" name="GL_COLOR_ATTACHMENT0_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CE0" name="GL_COLOR_ATTACHMENT0_OES" group="InvalidateFramebufferAttachment"/>
-        <enum value="0x8CE1" name="GL_COLOR_ATTACHMENT1" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CE1" name="GL_COLOR_ATTACHMENT1_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE0" name="GL_COLOR_ATTACHMENT0_OES" group="InvalidateFramebufferAttachment,FramebufferAttachment,GetFramebufferAttachment"/>
+        <enum value="0x8CE1" name="GL_COLOR_ATTACHMENT1" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE1" name="GL_COLOR_ATTACHMENT1_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CE1" name="GL_COLOR_ATTACHMENT1_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CE2" name="GL_COLOR_ATTACHMENT2" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CE2" name="GL_COLOR_ATTACHMENT2_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE2" name="GL_COLOR_ATTACHMENT2" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE2" name="GL_COLOR_ATTACHMENT2_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CE2" name="GL_COLOR_ATTACHMENT2_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CE3" name="GL_COLOR_ATTACHMENT3" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CE3" name="GL_COLOR_ATTACHMENT3_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE3" name="GL_COLOR_ATTACHMENT3" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE3" name="GL_COLOR_ATTACHMENT3_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CE3" name="GL_COLOR_ATTACHMENT3_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CE4" name="GL_COLOR_ATTACHMENT4" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CE4" name="GL_COLOR_ATTACHMENT4_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE4" name="GL_COLOR_ATTACHMENT4" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE4" name="GL_COLOR_ATTACHMENT4_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CE4" name="GL_COLOR_ATTACHMENT4_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CE5" name="GL_COLOR_ATTACHMENT5" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CE5" name="GL_COLOR_ATTACHMENT5_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE5" name="GL_COLOR_ATTACHMENT5" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE5" name="GL_COLOR_ATTACHMENT5_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CE5" name="GL_COLOR_ATTACHMENT5_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CE6" name="GL_COLOR_ATTACHMENT6" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CE6" name="GL_COLOR_ATTACHMENT6_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE6" name="GL_COLOR_ATTACHMENT6" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE6" name="GL_COLOR_ATTACHMENT6_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CE6" name="GL_COLOR_ATTACHMENT6_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CE7" name="GL_COLOR_ATTACHMENT7" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CE7" name="GL_COLOR_ATTACHMENT7_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE7" name="GL_COLOR_ATTACHMENT7" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE7" name="GL_COLOR_ATTACHMENT7_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CE7" name="GL_COLOR_ATTACHMENT7_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CE8" name="GL_COLOR_ATTACHMENT8" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CE8" name="GL_COLOR_ATTACHMENT8_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE8" name="GL_COLOR_ATTACHMENT8" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE8" name="GL_COLOR_ATTACHMENT8_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CE8" name="GL_COLOR_ATTACHMENT8_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CE9" name="GL_COLOR_ATTACHMENT9" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CE9" name="GL_COLOR_ATTACHMENT9_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE9" name="GL_COLOR_ATTACHMENT9" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CE9" name="GL_COLOR_ATTACHMENT9_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CE9" name="GL_COLOR_ATTACHMENT9_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CEA" name="GL_COLOR_ATTACHMENT10" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CEA" name="GL_COLOR_ATTACHMENT10_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CEA" name="GL_COLOR_ATTACHMENT10" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CEA" name="GL_COLOR_ATTACHMENT10_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CEA" name="GL_COLOR_ATTACHMENT10_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CEB" name="GL_COLOR_ATTACHMENT11" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CEB" name="GL_COLOR_ATTACHMENT11_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CEB" name="GL_COLOR_ATTACHMENT11" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CEB" name="GL_COLOR_ATTACHMENT11_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CEB" name="GL_COLOR_ATTACHMENT11_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CEC" name="GL_COLOR_ATTACHMENT12" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CEC" name="GL_COLOR_ATTACHMENT12_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CEC" name="GL_COLOR_ATTACHMENT12" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CEC" name="GL_COLOR_ATTACHMENT12_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CEC" name="GL_COLOR_ATTACHMENT12_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CED" name="GL_COLOR_ATTACHMENT13" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CED" name="GL_COLOR_ATTACHMENT13_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CED" name="GL_COLOR_ATTACHMENT13" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CED" name="GL_COLOR_ATTACHMENT13_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CED" name="GL_COLOR_ATTACHMENT13_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CEE" name="GL_COLOR_ATTACHMENT14" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CEE" name="GL_COLOR_ATTACHMENT14_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CEE" name="GL_COLOR_ATTACHMENT14" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CEE" name="GL_COLOR_ATTACHMENT14_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CEE" name="GL_COLOR_ATTACHMENT14_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CEF" name="GL_COLOR_ATTACHMENT15" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CEF" name="GL_COLOR_ATTACHMENT15_EXT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CEF" name="GL_COLOR_ATTACHMENT15" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CEF" name="GL_COLOR_ATTACHMENT15_EXT" group="FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CEF" name="GL_COLOR_ATTACHMENT15_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
-        <enum value="0x8CF0" name="GL_COLOR_ATTACHMENT16" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CF1" name="GL_COLOR_ATTACHMENT17" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CF2" name="GL_COLOR_ATTACHMENT18" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CF3" name="GL_COLOR_ATTACHMENT19" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CF4" name="GL_COLOR_ATTACHMENT20" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CF5" name="GL_COLOR_ATTACHMENT21" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CF6" name="GL_COLOR_ATTACHMENT22" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CF7" name="GL_COLOR_ATTACHMENT23" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CF8" name="GL_COLOR_ATTACHMENT24" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CF9" name="GL_COLOR_ATTACHMENT25" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CFA" name="GL_COLOR_ATTACHMENT26" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CFB" name="GL_COLOR_ATTACHMENT27" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CFC" name="GL_COLOR_ATTACHMENT28" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CFD" name="GL_COLOR_ATTACHMENT29" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CFE" name="GL_COLOR_ATTACHMENT30" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8CFF" name="GL_COLOR_ATTACHMENT31" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
-        <enum value="0x8D00" name="GL_DEPTH_ATTACHMENT" group="InvalidateFramebufferAttachment,FramebufferAttachment"/>
-        <enum value="0x8D00" name="GL_DEPTH_ATTACHMENT_EXT" group="InvalidateFramebufferAttachment,FramebufferAttachment"/>
-        <enum value="0x8D00" name="GL_DEPTH_ATTACHMENT_OES" group="InvalidateFramebufferAttachment"/>
+        <enum value="0x8CF0" name="GL_COLOR_ATTACHMENT16" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CF1" name="GL_COLOR_ATTACHMENT17" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CF2" name="GL_COLOR_ATTACHMENT18" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CF3" name="GL_COLOR_ATTACHMENT19" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CF4" name="GL_COLOR_ATTACHMENT20" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CF5" name="GL_COLOR_ATTACHMENT21" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CF6" name="GL_COLOR_ATTACHMENT22" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CF7" name="GL_COLOR_ATTACHMENT23" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CF8" name="GL_COLOR_ATTACHMENT24" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CF9" name="GL_COLOR_ATTACHMENT25" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CFA" name="GL_COLOR_ATTACHMENT26" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CFB" name="GL_COLOR_ATTACHMENT27" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CFC" name="GL_COLOR_ATTACHMENT28" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CFD" name="GL_COLOR_ATTACHMENT29" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CFE" name="GL_COLOR_ATTACHMENT30" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8CFF" name="GL_COLOR_ATTACHMENT31" group="ColorBuffer,DrawBufferMode,FramebufferAttachment,GetFramebufferAttachment,InvalidateFramebufferAttachment"/>
+        <enum value="0x8D00" name="GL_DEPTH_ATTACHMENT" group="InvalidateFramebufferAttachment,FramebufferAttachment,GetFramebufferAttachment"/>
+        <enum value="0x8D00" name="GL_DEPTH_ATTACHMENT_EXT" group="InvalidateFramebufferAttachment,FramebufferAttachment,GetFramebufferAttachment"/>
+        <enum value="0x8D00" name="GL_DEPTH_ATTACHMENT_OES" group="InvalidateFramebufferAttachment,FramebufferAttachment,GetFramebufferAttachment"/>
             <unused start="0x8D01" end="0x8D1F" vendor="ARB" comment="For depth attachments 16-31"/>
-        <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT" group="InvalidateFramebufferAttachment,FramebufferAttachment"/>
-        <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT_EXT" group="InvalidateFramebufferAttachment,FramebufferAttachment"/>
-        <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT_OES" group="InvalidateFramebufferAttachment"/>
+        <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT" group="InvalidateFramebufferAttachment,FramebufferAttachment,GetFramebufferAttachment"/>
+        <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT_EXT" group="InvalidateFramebufferAttachment,FramebufferAttachment,GetFramebufferAttachment"/>
+        <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT_OES" group="InvalidateFramebufferAttachment,FramebufferAttachment,GetFramebufferAttachment"/>
             <unused start="0x8D21" end="0x8D3F" vendor="ARB" comment="For stencil attachments 16-31"/>
         <enum value="0x8D40" name="GL_FRAMEBUFFER" group="ObjectIdentifier,FramebufferTarget,CheckFramebufferStatusTarget"/>
         <enum value="0x8D40" name="GL_FRAMEBUFFER_EXT" group="FramebufferTarget"/>
@@ -18205,7 +18205,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetFramebufferAttachmentParameteriv</name></proto>
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
+            <param group="GetFramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param group="FramebufferAttachmentParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="1428"/>
@@ -18845,7 +18845,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetNamedFramebufferAttachmentParameteriv</name></proto>
             <param><ptype>GLuint</ptype> <name>framebuffer</name></param>
-            <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
+            <param group="GetFramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param group="FramebufferAttachmentParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> *<name>params</name></param>
         </command>
