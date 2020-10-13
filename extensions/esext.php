@@ -687,4 +687,6 @@
 </li>
 <li value=330><a href="extensions/NV/NV_timeline_semaphore.txt">GL_NV_timeline_semaphore</a>
 </li>
+<li value=331><a href="extensions/QCOM/QCOM_texture_foveated2.txt">GL_QCOM_texture_foveated2</a>
+</li>
 </ol>

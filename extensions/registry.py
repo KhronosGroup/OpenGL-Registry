@@ -4553,6 +4553,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_texture_foveated.txt',
     },
+    'GL_QCOM_texture_foveated2' : {
+        'esnumber' : 331,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_texture_foveated2.txt',
+    },
     'GL_QCOM_texture_foveated_subsampled_layout' : {
         'esnumber' : 306,
         'flags' : { 'public' },

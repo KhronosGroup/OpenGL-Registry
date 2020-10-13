@@ -11620,7 +11620,8 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x96A0" end="0x96AF" vendor="Qualcomm" comment="contact Jeff Leger">
-            <unused start="0x96A0" end="0x96A1" vendor="Qualcomm"/>
+        <enum value="0x96A0" name="GL_TEXTURE_FOVEATED_CUTOFF_DENSITY_QCOM" group="TextureParameterName"/>
+            <unused start="0x96A1" end="0x96A1" vendor="Qualcomm"/>
         <enum value="0x96A2" name="GL_FRAMEBUFFER_FETCH_NONCOHERENT_QCOM" group="FramebufferFetchNoncoherent"/>
         <enum value="0x96A3" name="GL_VALIDATE_SHADER_BINARY_QCOM"/>
         <enum value="0x96A4" name="GL_SHADING_RATE_QCOM" group="GetPName"/>
@@ -51104,6 +51105,11 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_TEXTURE_FOVEATED_NUM_FOCAL_POINTS_QUERY_QCOM"/>
                 <enum name="GL_FRAMEBUFFER_INCOMPLETE_FOVEATION_QCOM"/>
                 <command name="glTextureFoveationParametersQCOM"/>
+            </require>
+        </extension>
+        <extension name="GL_QCOM_texture_foveated2" supported="gles2">
+            <require>
+                <enum name="GL_TEXTURE_FOVEATED_CUTOFF_DENSITY_QCOM"/>
             </require>
         </extension>
         <extension name="GL_QCOM_texture_foveated_subsampled_layout" supported="gles2">
