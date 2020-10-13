@@ -392,7 +392,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_POINT_FADE_THRESHOLD_SIZE"/>
         </group>
 
-        <group name="VertexAttribPropertyARB" comment="Deprecated, use the group attributes instead.">
+        <group name="VertexAttribPropertyARB" comment="Deprecated, use the GetVertexAttribPName group attribute instead.">
             <enum name="GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING"/>
             <enum name="GL_VERTEX_ATTRIB_ARRAY_ENABLED"/>
             <enum name="GL_VERTEX_ATTRIB_ARRAY_SIZE"/>
@@ -450,7 +450,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_CLAMP_READ_COLOR"/>
         </group>
 
-        <group name="VertexArrayPNameAPPLE" comment="Deprecated, use the group attributes instead.">
+        <group name="VertexArrayParamAPPLE" comment="Deprecated, use the group attributes instead.">
             <enum name="GL_STORAGE_CLIENT_APPLE"/>
             <enum name="GL_STORAGE_CACHED_APPLE"/>
             <enum name="GL_STORAGE_SHARED_APPLE"/>
@@ -4054,7 +4054,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_SHADER_STORAGE_BLOCK"/>
         </group>
 
-        <group name="VertexAttribEnum" comment="Deprecated, use the group attributes instead.">
+        <group name="VertexAttribEnum" comment="Deprecated, use the GetVertexAttribPName group attribute instead.">
             <enum name="GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING"/>
             <enum name="GL_VERTEX_ATTRIB_ARRAY_ENABLED"/>
             <enum name="GL_VERTEX_ATTRIB_ARRAY_SIZE"/>
@@ -5234,7 +5234,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0" name="GL_FALSE" group="Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
         <enum value="0" name="GL_NO_ERROR" group="GraphicsResetStatus,ErrorCode"/>
         <enum value="0" name="GL_ZERO" group="TextureSwizzle,StencilOp,BlendingFactor"/>
-        <enum value="0" name="GL_NONE" group="SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenMode,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
+        <enum value="0" name="GL_NONE" group="SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenMode,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle,VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0" name="GL_NONE_OES" group="ReadBufferMode,DrawBufferMode"/>
         <enum value="1" name="GL_TRUE" group="Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
         <enum value="1" name="GL_ONE" group="TextureSwizzle,BlendingFactor"/>
@@ -5713,15 +5713,15 @@ typedef unsigned int GLhandleARB;
         <enum value="0x1602" name="GL_AMBIENT_AND_DIFFUSE" group="MaterialParameter,ColorMaterialParameter"/>
         <enum value="0x1603" name="GL_COLOR_INDEXES" group="MaterialParameter"/>
             <unused start="0x1604" end="0x16FF" comment="Unused for MaterialParameter"/>
-        <enum value="0x1700" name="GL_MODELVIEW" group="MatrixMode"/>
+        <enum value="0x1700" name="GL_MODELVIEW" group="MatrixMode,VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x1700" name="GL_MODELVIEW0_ARB"/>
         <enum value="0x1700" name="GL_MODELVIEW0_EXT" group="MatrixMode"/>
         <enum value="0x1700" name="GL_PATH_MODELVIEW_NV"/>
-        <enum value="0x1701" name="GL_PROJECTION" group="MatrixMode"/>
+        <enum value="0x1701" name="GL_PROJECTION" group="MatrixMode,VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x1701" name="GL_PATH_PROJECTION_NV"/>
-        <enum value="0x1702" name="GL_TEXTURE" group="ObjectIdentifier,MatrixMode"/>
+        <enum value="0x1702" name="GL_TEXTURE" group="ObjectIdentifier,MatrixMode,VertexProgramTrackMatrixMatrixNV"/>
             <unused start="0x1703" end="0x17FF" comment="Unused for MatrixMode"/>
-        <enum value="0x1800" name="GL_COLOR" group="Buffer,PixelCopyType,InvalidateFramebufferAttachment"/>
+        <enum value="0x1800" name="GL_COLOR" group="Buffer,PixelCopyType,InvalidateFramebufferAttachment,VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x1800" name="GL_COLOR_EXT" group="PixelCopyType"/>
         <enum value="0x1801" name="GL_DEPTH" group="Buffer,PixelCopyType,InvalidateFramebufferAttachment"/>
         <enum value="0x1801" name="GL_DEPTH_EXT" group="PixelCopyType"/>
@@ -6129,64 +6129,64 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8073" name="GL_MAX_3D_TEXTURE_SIZE" group="GetPName"/>
         <enum value="0x8073" name="GL_MAX_3D_TEXTURE_SIZE_EXT" group="GetPName"/>
         <enum value="0x8073" name="GL_MAX_3D_TEXTURE_SIZE_OES"/>
-        <enum value="0x8074" name="GL_VERTEX_ARRAY" group="ObjectIdentifier,EnableCap,GetPName"/>
+        <enum value="0x8074" name="GL_VERTEX_ARRAY" group="ObjectIdentifier,EnableCap,GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8074" name="GL_VERTEX_ARRAY_EXT"/>
         <enum value="0x8074" name="GL_VERTEX_ARRAY_KHR"/>
-        <enum value="0x8075" name="GL_NORMAL_ARRAY" group="GetPName,EnableCap"/>
+        <enum value="0x8075" name="GL_NORMAL_ARRAY" group="GetPName,EnableCap,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8075" name="GL_NORMAL_ARRAY_EXT"/>
-        <enum value="0x8076" name="GL_COLOR_ARRAY" group="GetPName,EnableCap"/>
+        <enum value="0x8076" name="GL_COLOR_ARRAY" group="GetPName,EnableCap,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8076" name="GL_COLOR_ARRAY_EXT"/>
-        <enum value="0x8077" name="GL_INDEX_ARRAY" group="GetPName,EnableCap"/>
+        <enum value="0x8077" name="GL_INDEX_ARRAY" group="GetPName,EnableCap,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8077" name="GL_INDEX_ARRAY_EXT"/>
-        <enum value="0x8078" name="GL_TEXTURE_COORD_ARRAY" group="GetPName,EnableCap"/>
+        <enum value="0x8078" name="GL_TEXTURE_COORD_ARRAY" group="GetPName,EnableCap,GetVertexArrayIntegerPNameEXT,GetVertexArrayIntegeriPNameEXT"/>
         <enum value="0x8078" name="GL_TEXTURE_COORD_ARRAY_EXT"/>
-        <enum value="0x8079" name="GL_EDGE_FLAG_ARRAY" group="GetPName,EnableCap"/>
+        <enum value="0x8079" name="GL_EDGE_FLAG_ARRAY" group="GetPName,EnableCap,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8079" name="GL_EDGE_FLAG_ARRAY_EXT"/>
-        <enum value="0x807A" name="GL_VERTEX_ARRAY_SIZE" group="GetPName"/>
+        <enum value="0x807A" name="GL_VERTEX_ARRAY_SIZE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x807A" name="GL_VERTEX_ARRAY_SIZE_EXT"/>
-        <enum value="0x807B" name="GL_VERTEX_ARRAY_TYPE" group="GetPName"/>
+        <enum value="0x807B" name="GL_VERTEX_ARRAY_TYPE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x807B" name="GL_VERTEX_ARRAY_TYPE_EXT"/>
-        <enum value="0x807C" name="GL_VERTEX_ARRAY_STRIDE" group="GetPName"/>
+        <enum value="0x807C" name="GL_VERTEX_ARRAY_STRIDE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x807C" name="GL_VERTEX_ARRAY_STRIDE_EXT"/>
         <enum value="0x807D" name="GL_VERTEX_ARRAY_COUNT_EXT" group="GetPName"/>
-        <enum value="0x807E" name="GL_NORMAL_ARRAY_TYPE" group="GetPName"/>
+        <enum value="0x807E" name="GL_NORMAL_ARRAY_TYPE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x807E" name="GL_NORMAL_ARRAY_TYPE_EXT"/>
-        <enum value="0x807F" name="GL_NORMAL_ARRAY_STRIDE" group="GetPName"/>
+        <enum value="0x807F" name="GL_NORMAL_ARRAY_STRIDE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x807F" name="GL_NORMAL_ARRAY_STRIDE_EXT"/>
         <enum value="0x8080" name="GL_NORMAL_ARRAY_COUNT_EXT" group="GetPName"/>
-        <enum value="0x8081" name="GL_COLOR_ARRAY_SIZE" group="GetPName"/>
+        <enum value="0x8081" name="GL_COLOR_ARRAY_SIZE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8081" name="GL_COLOR_ARRAY_SIZE_EXT"/>
-        <enum value="0x8082" name="GL_COLOR_ARRAY_TYPE" group="GetPName"/>
+        <enum value="0x8082" name="GL_COLOR_ARRAY_TYPE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8082" name="GL_COLOR_ARRAY_TYPE_EXT"/>
-        <enum value="0x8083" name="GL_COLOR_ARRAY_STRIDE" group="GetPName"/>
+        <enum value="0x8083" name="GL_COLOR_ARRAY_STRIDE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8083" name="GL_COLOR_ARRAY_STRIDE_EXT"/>
         <enum value="0x8084" name="GL_COLOR_ARRAY_COUNT_EXT" group="GetPName"/>
-        <enum value="0x8085" name="GL_INDEX_ARRAY_TYPE" group="GetPName"/>
+        <enum value="0x8085" name="GL_INDEX_ARRAY_TYPE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8085" name="GL_INDEX_ARRAY_TYPE_EXT"/>
-        <enum value="0x8086" name="GL_INDEX_ARRAY_STRIDE" group="GetPName"/>
+        <enum value="0x8086" name="GL_INDEX_ARRAY_STRIDE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8086" name="GL_INDEX_ARRAY_STRIDE_EXT"/>
         <enum value="0x8087" name="GL_INDEX_ARRAY_COUNT_EXT" group="GetPName"/>
-        <enum value="0x8088" name="GL_TEXTURE_COORD_ARRAY_SIZE" group="GetPName"/>
+        <enum value="0x8088" name="GL_TEXTURE_COORD_ARRAY_SIZE" group="GetPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayIntegeriPNameEXT"/>
         <enum value="0x8088" name="GL_TEXTURE_COORD_ARRAY_SIZE_EXT"/>
-        <enum value="0x8089" name="GL_TEXTURE_COORD_ARRAY_TYPE" group="GetPName"/>
+        <enum value="0x8089" name="GL_TEXTURE_COORD_ARRAY_TYPE" group="GetPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayIntegeriPNameEXT"/>
         <enum value="0x8089" name="GL_TEXTURE_COORD_ARRAY_TYPE_EXT"/>
-        <enum value="0x808A" name="GL_TEXTURE_COORD_ARRAY_STRIDE" group="GetPName"/>
+        <enum value="0x808A" name="GL_TEXTURE_COORD_ARRAY_STRIDE" group="GetPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayIntegeriPNameEXT"/>
         <enum value="0x808A" name="GL_TEXTURE_COORD_ARRAY_STRIDE_EXT"/>
         <enum value="0x808B" name="GL_TEXTURE_COORD_ARRAY_COUNT_EXT" group="GetPName"/>
-        <enum value="0x808C" name="GL_EDGE_FLAG_ARRAY_STRIDE" group="GetPName"/>
+        <enum value="0x808C" name="GL_EDGE_FLAG_ARRAY_STRIDE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x808C" name="GL_EDGE_FLAG_ARRAY_STRIDE_EXT"/>
         <enum value="0x808D" name="GL_EDGE_FLAG_ARRAY_COUNT_EXT" group="GetPName"/>
-        <enum value="0x808E" name="GL_VERTEX_ARRAY_POINTER" group="GetPointervPName"/>
+        <enum value="0x808E" name="GL_VERTEX_ARRAY_POINTER" group="GetPointervPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayPointervPNameEXT"/>
         <enum value="0x808E" name="GL_VERTEX_ARRAY_POINTER_EXT" group="GetPointervPName"/>
-        <enum value="0x808F" name="GL_NORMAL_ARRAY_POINTER" group="GetPointervPName"/>
+        <enum value="0x808F" name="GL_NORMAL_ARRAY_POINTER" group="GetPointervPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayPointervPNameEXT"/>
         <enum value="0x808F" name="GL_NORMAL_ARRAY_POINTER_EXT" group="GetPointervPName"/>
-        <enum value="0x8090" name="GL_COLOR_ARRAY_POINTER" group="GetPointervPName"/>
+        <enum value="0x8090" name="GL_COLOR_ARRAY_POINTER" group="GetPointervPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayPointervPNameEXT"/>
         <enum value="0x8090" name="GL_COLOR_ARRAY_POINTER_EXT" group="GetPointervPName"/>
-        <enum value="0x8091" name="GL_INDEX_ARRAY_POINTER" group="GetPointervPName"/>
+        <enum value="0x8091" name="GL_INDEX_ARRAY_POINTER" group="GetPointervPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayPointervPNameEXT"/>
         <enum value="0x8091" name="GL_INDEX_ARRAY_POINTER_EXT" group="GetPointervPName"/>
-        <enum value="0x8092" name="GL_TEXTURE_COORD_ARRAY_POINTER" group="GetPointervPName"/>
+        <enum value="0x8092" name="GL_TEXTURE_COORD_ARRAY_POINTER" group="GetPointervPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayIntegeriPNameEXT,GetVertexArrayPointervPNameEXT,GetVertexArrayPointeriPNameEXT"/>
         <enum value="0x8092" name="GL_TEXTURE_COORD_ARRAY_POINTER_EXT" group="GetPointervPName"/>
-        <enum value="0x8093" name="GL_EDGE_FLAG_ARRAY_POINTER" group="GetPointervPName"/>
+        <enum value="0x8093" name="GL_EDGE_FLAG_ARRAY_POINTER" group="GetPointervPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayPointervPNameEXT"/>
         <enum value="0x8093" name="GL_EDGE_FLAG_ARRAY_POINTER_EXT" group="GetPointervPName"/>
         <enum value="0x8094" name="GL_INTERLACE_SGIX" group="GetPName,EnableCap"/>
         <enum value="0x8095" name="GL_DETAIL_TEXTURE_2D_SGIS" group="TextureTarget"/>
@@ -6950,10 +6950,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x82D1" name="GL_VIEW_CLASS_RGTC2_RG"/>
         <enum value="0x82D2" name="GL_VIEW_CLASS_BPTC_UNORM"/>
         <enum value="0x82D3" name="GL_VIEW_CLASS_BPTC_FLOAT"/>
-        <enum value="0x82D4" name="GL_VERTEX_ATTRIB_BINDING" group="VertexAttribPropertyARB"/>
-        <enum value="0x82D5" name="GL_VERTEX_ATTRIB_RELATIVE_OFFSET" group="VertexArrayPName,VertexAttribPropertyARB"/>
+        <enum value="0x82D4" name="GL_VERTEX_ATTRIB_BINDING" group="GetVertexAttribPName"/>
+        <enum value="0x82D5" name="GL_VERTEX_ATTRIB_RELATIVE_OFFSET" group="GetVertexAttribPName,GetVertexArrayIndexedPName"/>
         <enum value="0x82D6" name="GL_VERTEX_BINDING_DIVISOR" group="GetPName"/>
-        <enum value="0x82D7" name="GL_VERTEX_BINDING_OFFSET" group="GetPName"/>
+        <enum value="0x82D7" name="GL_VERTEX_BINDING_OFFSET" group="GetPName,GetVertexArrayIndexed64PName"/>
         <enum value="0x82D8" name="GL_VERTEX_BINDING_STRIDE" group="GetPName"/>
         <enum value="0x82D9" name="GL_MAX_VERTEX_ATTRIB_RELATIVE_OFFSET" group="GetPName"/>
         <enum value="0x82DA" name="GL_MAX_VERTEX_ATTRIB_BINDINGS" group="GetPName"/>
@@ -7313,32 +7313,32 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8453" name="GL_CURRENT_FOG_COORDINATE" group="GetPName"/>
         <enum value="0x8453" name="GL_CURRENT_FOG_COORD" alias="GL_CURRENT_FOG_COORDINATE" group="GetPName"/>
         <enum value="0x8453" name="GL_CURRENT_FOG_COORDINATE_EXT" group="GetPName"/>
-        <enum value="0x8454" name="GL_FOG_COORDINATE_ARRAY_TYPE" group="GetPName"/>
+        <enum value="0x8454" name="GL_FOG_COORDINATE_ARRAY_TYPE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8454" name="GL_FOG_COORDINATE_ARRAY_TYPE_EXT" group="GetPName"/>
-        <enum value="0x8454" name="GL_FOG_COORD_ARRAY_TYPE" alias="GL_FOG_COORDINATE_ARRAY_TYPE" group="GetPName"/>
-        <enum value="0x8455" name="GL_FOG_COORDINATE_ARRAY_STRIDE" group="GetPName"/>
+        <enum value="0x8454" name="GL_FOG_COORD_ARRAY_TYPE" alias="GL_FOG_COORDINATE_ARRAY_TYPE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
+        <enum value="0x8455" name="GL_FOG_COORDINATE_ARRAY_STRIDE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8455" name="GL_FOG_COORDINATE_ARRAY_STRIDE_EXT" group="GetPName"/>
-        <enum value="0x8455" name="GL_FOG_COORD_ARRAY_STRIDE" alias="GL_FOG_COORDINATE_ARRAY_STRIDE" group="GetPName"/>
-        <enum value="0x8456" name="GL_FOG_COORDINATE_ARRAY_POINTER" group="GetPointervPName"/>
+        <enum value="0x8455" name="GL_FOG_COORD_ARRAY_STRIDE" alias="GL_FOG_COORDINATE_ARRAY_STRIDE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
+        <enum value="0x8456" name="GL_FOG_COORDINATE_ARRAY_POINTER" group="GetPointervPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayPointervPNameEXT"/>
         <enum value="0x8456" name="GL_FOG_COORDINATE_ARRAY_POINTER_EXT" group="GetPointervPName"/>
-        <enum value="0x8456" name="GL_FOG_COORD_ARRAY_POINTER" alias="GL_FOG_COORDINATE_ARRAY_POINTER" group="GetPointervPName"/>
-        <enum value="0x8457" name="GL_FOG_COORDINATE_ARRAY" group="EnableCap"/>
+        <enum value="0x8456" name="GL_FOG_COORD_ARRAY_POINTER" alias="GL_FOG_COORDINATE_ARRAY_POINTER" group="GetPointervPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayPointervPNameEXT"/>
+        <enum value="0x8457" name="GL_FOG_COORDINATE_ARRAY" group="EnableCap,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8457" name="GL_FOG_COORDINATE_ARRAY_EXT"/>
-        <enum value="0x8457" name="GL_FOG_COORD_ARRAY" alias="GL_FOG_COORDINATE_ARRAY" group="EnableCap"/>
+        <enum value="0x8457" name="GL_FOG_COORD_ARRAY" alias="GL_FOG_COORDINATE_ARRAY" group="EnableCap,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8458" name="GL_COLOR_SUM" group="EnableCap"/>
         <enum value="0x8458" name="GL_COLOR_SUM_ARB"/>
         <enum value="0x8458" name="GL_COLOR_SUM_EXT"/>
         <enum value="0x8459" name="GL_CURRENT_SECONDARY_COLOR" group="GetPName"/>
         <enum value="0x8459" name="GL_CURRENT_SECONDARY_COLOR_EXT" group="GetPName"/>
-        <enum value="0x845A" name="GL_SECONDARY_COLOR_ARRAY_SIZE" group="GetPName"/>
+        <enum value="0x845A" name="GL_SECONDARY_COLOR_ARRAY_SIZE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x845A" name="GL_SECONDARY_COLOR_ARRAY_SIZE_EXT" group="GetPName"/>
-        <enum value="0x845B" name="GL_SECONDARY_COLOR_ARRAY_TYPE" group="GetPName"/>
+        <enum value="0x845B" name="GL_SECONDARY_COLOR_ARRAY_TYPE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x845B" name="GL_SECONDARY_COLOR_ARRAY_TYPE_EXT" group="GetPName"/>
-        <enum value="0x845C" name="GL_SECONDARY_COLOR_ARRAY_STRIDE" group="GetPName"/>
+        <enum value="0x845C" name="GL_SECONDARY_COLOR_ARRAY_STRIDE" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x845C" name="GL_SECONDARY_COLOR_ARRAY_STRIDE_EXT" group="GetPName"/>
-        <enum value="0x845D" name="GL_SECONDARY_COLOR_ARRAY_POINTER" group="GetPointervPName"/>
+        <enum value="0x845D" name="GL_SECONDARY_COLOR_ARRAY_POINTER" group="GetPointervPName,GetVertexArrayIntegerPNameEXT,GetVertexArrayPointervPNameEXT"/>
         <enum value="0x845D" name="GL_SECONDARY_COLOR_ARRAY_POINTER_EXT" group="GetPointervPName"/>
-        <enum value="0x845E" name="GL_SECONDARY_COLOR_ARRAY" group="GetPName,EnableCap"/>
+        <enum value="0x845E" name="GL_SECONDARY_COLOR_ARRAY" group="GetPName,EnableCap,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x845E" name="GL_SECONDARY_COLOR_ARRAY_EXT" group="GetPName"/>
         <enum value="0x845F" name="GL_CURRENT_RASTER_SECONDARY_COLOR" group="GetPName"/>
             <unused start="0x8460" end="0x846B" comment="Incomplete extension SGIX_icc_texture"/>
@@ -7376,69 +7376,69 @@ typedef unsigned int GLhandleARB;
 
     <enums namespace="GL" start="0x84C0" end="0x84EF" vendor="ARB">
         <enum value="0x84C0" name="GL_TEXTURE0" group="TextureUnit"/>
-        <enum value="0x84C0" name="GL_TEXTURE0_ARB" group="CombinerRegisterNV"/>
+        <enum value="0x84C0" name="GL_TEXTURE0_ARB" group="CombinerRegisterNV,VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84C1" name="GL_TEXTURE1" group="TextureUnit"/>
-        <enum value="0x84C1" name="GL_TEXTURE1_ARB" group="CombinerRegisterNV"/>
+        <enum value="0x84C1" name="GL_TEXTURE1_ARB" group="CombinerRegisterNV,VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84C2" name="GL_TEXTURE2" group="TextureUnit"/>
-        <enum value="0x84C2" name="GL_TEXTURE2_ARB"/>
+        <enum value="0x84C2" name="GL_TEXTURE2_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84C3" name="GL_TEXTURE3" group="TextureUnit"/>
-        <enum value="0x84C3" name="GL_TEXTURE3_ARB"/>
+        <enum value="0x84C3" name="GL_TEXTURE3_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84C4" name="GL_TEXTURE4" group="TextureUnit"/>
-        <enum value="0x84C4" name="GL_TEXTURE4_ARB"/>
+        <enum value="0x84C4" name="GL_TEXTURE4_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84C5" name="GL_TEXTURE5" group="TextureUnit"/>
-        <enum value="0x84C5" name="GL_TEXTURE5_ARB"/>
+        <enum value="0x84C5" name="GL_TEXTURE5_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84C6" name="GL_TEXTURE6" group="TextureUnit"/>
-        <enum value="0x84C6" name="GL_TEXTURE6_ARB"/>
+        <enum value="0x84C6" name="GL_TEXTURE6_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84C7" name="GL_TEXTURE7" group="TextureUnit"/>
-        <enum value="0x84C7" name="GL_TEXTURE7_ARB"/>
+        <enum value="0x84C7" name="GL_TEXTURE7_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84C8" name="GL_TEXTURE8" group="TextureUnit"/>
-        <enum value="0x84C8" name="GL_TEXTURE8_ARB"/>
+        <enum value="0x84C8" name="GL_TEXTURE8_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84C9" name="GL_TEXTURE9" group="TextureUnit"/>
-        <enum value="0x84C9" name="GL_TEXTURE9_ARB"/>
+        <enum value="0x84C9" name="GL_TEXTURE9_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84CA" name="GL_TEXTURE10" group="TextureUnit"/>
-        <enum value="0x84CA" name="GL_TEXTURE10_ARB"/>
+        <enum value="0x84CA" name="GL_TEXTURE10_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84CB" name="GL_TEXTURE11" group="TextureUnit"/>
-        <enum value="0x84CB" name="GL_TEXTURE11_ARB"/>
+        <enum value="0x84CB" name="GL_TEXTURE11_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84CC" name="GL_TEXTURE12" group="TextureUnit"/>
-        <enum value="0x84CC" name="GL_TEXTURE12_ARB"/>
+        <enum value="0x84CC" name="GL_TEXTURE12_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84CD" name="GL_TEXTURE13" group="TextureUnit"/>
-        <enum value="0x84CD" name="GL_TEXTURE13_ARB"/>
+        <enum value="0x84CD" name="GL_TEXTURE13_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84CE" name="GL_TEXTURE14" group="TextureUnit"/>
-        <enum value="0x84CE" name="GL_TEXTURE14_ARB"/>
+        <enum value="0x84CE" name="GL_TEXTURE14_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84CF" name="GL_TEXTURE15" group="TextureUnit"/>
-        <enum value="0x84CF" name="GL_TEXTURE15_ARB"/>
+        <enum value="0x84CF" name="GL_TEXTURE15_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84D0" name="GL_TEXTURE16" group="TextureUnit"/>
-        <enum value="0x84D0" name="GL_TEXTURE16_ARB"/>
+        <enum value="0x84D0" name="GL_TEXTURE16_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84D1" name="GL_TEXTURE17" group="TextureUnit"/>
-        <enum value="0x84D1" name="GL_TEXTURE17_ARB"/>
+        <enum value="0x84D1" name="GL_TEXTURE17_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84D2" name="GL_TEXTURE18" group="TextureUnit"/>
-        <enum value="0x84D2" name="GL_TEXTURE18_ARB"/>
+        <enum value="0x84D2" name="GL_TEXTURE18_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84D3" name="GL_TEXTURE19" group="TextureUnit"/>
-        <enum value="0x84D3" name="GL_TEXTURE19_ARB"/>
+        <enum value="0x84D3" name="GL_TEXTURE19_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84D4" name="GL_TEXTURE20" group="TextureUnit"/>
-        <enum value="0x84D4" name="GL_TEXTURE20_ARB"/>
+        <enum value="0x84D4" name="GL_TEXTURE20_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84D5" name="GL_TEXTURE21" group="TextureUnit"/>
-        <enum value="0x84D5" name="GL_TEXTURE21_ARB"/>
+        <enum value="0x84D5" name="GL_TEXTURE21_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84D6" name="GL_TEXTURE22" group="TextureUnit"/>
-        <enum value="0x84D6" name="GL_TEXTURE22_ARB"/>
+        <enum value="0x84D6" name="GL_TEXTURE22_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84D7" name="GL_TEXTURE23" group="TextureUnit"/>
-        <enum value="0x84D7" name="GL_TEXTURE23_ARB"/>
+        <enum value="0x84D7" name="GL_TEXTURE23_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84D8" name="GL_TEXTURE24" group="TextureUnit"/>
-        <enum value="0x84D8" name="GL_TEXTURE24_ARB"/>
+        <enum value="0x84D8" name="GL_TEXTURE24_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84D9" name="GL_TEXTURE25" group="TextureUnit"/>
-        <enum value="0x84D9" name="GL_TEXTURE25_ARB"/>
+        <enum value="0x84D9" name="GL_TEXTURE25_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84DA" name="GL_TEXTURE26" group="TextureUnit"/>
-        <enum value="0x84DA" name="GL_TEXTURE26_ARB"/>
+        <enum value="0x84DA" name="GL_TEXTURE26_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84DB" name="GL_TEXTURE27" group="TextureUnit"/>
-        <enum value="0x84DB" name="GL_TEXTURE27_ARB"/>
+        <enum value="0x84DB" name="GL_TEXTURE27_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84DC" name="GL_TEXTURE28" group="TextureUnit"/>
-        <enum value="0x84DC" name="GL_TEXTURE28_ARB"/>
+        <enum value="0x84DC" name="GL_TEXTURE28_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84DD" name="GL_TEXTURE29" group="TextureUnit"/>
-        <enum value="0x84DD" name="GL_TEXTURE29_ARB"/>
+        <enum value="0x84DD" name="GL_TEXTURE29_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84DE" name="GL_TEXTURE30" group="TextureUnit"/>
-        <enum value="0x84DE" name="GL_TEXTURE30_ARB"/>
+        <enum value="0x84DE" name="GL_TEXTURE30_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84DF" name="GL_TEXTURE31" group="TextureUnit"/>
-        <enum value="0x84DF" name="GL_TEXTURE31_ARB"/>
+        <enum value="0x84DF" name="GL_TEXTURE31_ARB" group="VertexProgramTrackMatrixMatrixNV"/>
         <enum value="0x84E0" name="GL_ACTIVE_TEXTURE" group="GetPName"/>
         <enum value="0x84E0" name="GL_ACTIVE_TEXTURE_ARB"/>
         <enum value="0x84E1" name="GL_CLIENT_ACTIVE_TEXTURE" group="GetPName"/>
@@ -7587,7 +7587,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x851E" name="GL_VERTEX_ARRAY_RANGE_LENGTH_APPLE"/>
         <enum value="0x851E" name="GL_VERTEX_ARRAY_RANGE_LENGTH_NV"/>
         <enum value="0x851F" name="GL_VERTEX_ARRAY_RANGE_VALID_NV"/>
-        <enum value="0x851F" name="GL_VERTEX_ARRAY_STORAGE_HINT_APPLE" group="HintTarget"/>
+        <enum value="0x851F" name="GL_VERTEX_ARRAY_STORAGE_HINT_APPLE" group="HintTarget,VertexArrayPNameAPPLE,GetPName"/>
         <enum value="0x8520" name="GL_MAX_VERTEX_ARRAY_RANGE_ELEMENT_NV"/>
         <enum value="0x8521" name="GL_VERTEX_ARRAY_RANGE_POINTER_APPLE"/>
         <enum value="0x8521" name="GL_VERTEX_ARRAY_RANGE_POINTER_NV"/>
@@ -7776,8 +7776,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x85B1" name="GL_TRANSFORM_HINT_APPLE" group="HintTarget"/>
         <enum value="0x85B2" name="GL_UNPACK_CLIENT_STORAGE_APPLE"/>
         <enum value="0x85B3" name="GL_BUFFER_OBJECT_APPLE"/>
-        <enum value="0x85B4" name="GL_STORAGE_CLIENT_APPLE" group="VertexArrayPNameAPPLE"/>
-        <enum value="0x85B5" name="GL_VERTEX_ARRAY_BINDING" group="GetPName"/>
+        <enum value="0x85B4" name="GL_STORAGE_CLIENT_APPLE" group="VertexArrayParamAPPLE"/>
+        <enum value="0x85B5" name="GL_VERTEX_ARRAY_BINDING" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x85B5" name="GL_VERTEX_ARRAY_BINDING_APPLE"/>
         <enum value="0x85B5" name="GL_VERTEX_ARRAY_BINDING_OES"/>
             <unused start="0x85B6" vendor="APPLE" comment="Unknown extension (Khronos bug 632)"/>
@@ -7791,8 +7791,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x85BB" name="GL_UNSIGNED_SHORT_8_8_REV_MESA"/>
         <enum value="0x85BC" name="GL_TEXTURE_STORAGE_HINT_APPLE" group="HintTarget"/>
         <enum value="0x85BD" name="GL_STORAGE_PRIVATE_APPLE"/>
-        <enum value="0x85BE" name="GL_STORAGE_CACHED_APPLE" group="VertexArrayPNameAPPLE"/>
-        <enum value="0x85BF" name="GL_STORAGE_SHARED_APPLE" group="VertexArrayPNameAPPLE"/>
+        <enum value="0x85BE" name="GL_STORAGE_CACHED_APPLE" group="VertexArrayParamAPPLE"/>
+        <enum value="0x85BF" name="GL_STORAGE_SHARED_APPLE" group="VertexArrayParamAPPLE"/>
     </enums>
 
     <enums namespace="GL" start="0x85C0" end="0x85CF" vendor="SUN">
@@ -7861,43 +7861,43 @@ typedef unsigned int GLhandleARB;
 
     <enums namespace="GL" start="0x8620" end="0x867F" vendor="NV">
         <enum value="0x8620" name="GL_VERTEX_PROGRAM_ARB" group="ProgramTarget"/>
-        <enum value="0x8620" name="GL_VERTEX_PROGRAM_NV"/>
-        <enum value="0x8621" name="GL_VERTEX_STATE_PROGRAM_NV"/>
-        <enum value="0x8622" name="GL_VERTEX_ATTRIB_ARRAY_ENABLED" group="VertexAttribEnum,VertexAttribPropertyARB,VertexArrayPName"/>
-        <enum value="0x8622" name="GL_VERTEX_ATTRIB_ARRAY_ENABLED_ARB"/>
-        <enum value="0x8623" name="GL_ATTRIB_ARRAY_SIZE_NV"/>
-        <enum value="0x8623" name="GL_VERTEX_ATTRIB_ARRAY_SIZE" group="VertexAttribEnum,VertexAttribPropertyARB,VertexArrayPName"/>
-        <enum value="0x8623" name="GL_VERTEX_ATTRIB_ARRAY_SIZE_ARB"/>
-        <enum value="0x8624" name="GL_ATTRIB_ARRAY_STRIDE_NV"/>
-        <enum value="0x8624" name="GL_VERTEX_ATTRIB_ARRAY_STRIDE" group="VertexAttribEnum,VertexAttribPropertyARB,VertexArrayPName"/>
-        <enum value="0x8624" name="GL_VERTEX_ATTRIB_ARRAY_STRIDE_ARB"/>
-        <enum value="0x8625" name="GL_ATTRIB_ARRAY_TYPE_NV"/>
-        <enum value="0x8625" name="GL_VERTEX_ATTRIB_ARRAY_TYPE" group="VertexAttribEnum,VertexAttribPropertyARB,VertexArrayPName"/>
-        <enum value="0x8625" name="GL_VERTEX_ATTRIB_ARRAY_TYPE_ARB"/>
-        <enum value="0x8626" name="GL_CURRENT_ATTRIB_NV"/>
-        <enum value="0x8626" name="GL_CURRENT_VERTEX_ATTRIB" group="VertexAttribEnum,VertexAttribPropertyARB"/>
-        <enum value="0x8626" name="GL_CURRENT_VERTEX_ATTRIB_ARB"/>
+        <enum value="0x8620" name="GL_VERTEX_PROGRAM_NV" group="ProgramTargetNV,LoadProgramTargetNV"/>
+        <enum value="0x8621" name="GL_VERTEX_STATE_PROGRAM_NV" group="LoadProgramTargetNV"/>
+        <enum value="0x8622" name="GL_VERTEX_ATTRIB_ARRAY_ENABLED" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x8622" name="GL_VERTEX_ATTRIB_ARRAY_ENABLED_ARB" group="GetVertexAttribPName"/>
+        <enum value="0x8623" name="GL_ATTRIB_ARRAY_SIZE_NV" group="ProgramAttribPNameNV"/>
+        <enum value="0x8623" name="GL_VERTEX_ATTRIB_ARRAY_SIZE" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x8623" name="GL_VERTEX_ATTRIB_ARRAY_SIZE_ARB" group="GetVertexAttribPName"/>
+        <enum value="0x8624" name="GL_ATTRIB_ARRAY_STRIDE_NV" group="ProgramAttribPNameNV"/>
+        <enum value="0x8624" name="GL_VERTEX_ATTRIB_ARRAY_STRIDE" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x8624" name="GL_VERTEX_ATTRIB_ARRAY_STRIDE_ARB" group="GetVertexAttribPName"/>
+        <enum value="0x8625" name="GL_ATTRIB_ARRAY_TYPE_NV" group="ProgramAttribPNameNV"/>
+        <enum value="0x8625" name="GL_VERTEX_ATTRIB_ARRAY_TYPE" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x8625" name="GL_VERTEX_ATTRIB_ARRAY_TYPE_ARB" group="GetVertexAttribPName"/>
+        <enum value="0x8626" name="GL_CURRENT_ATTRIB_NV" group="ProgramAttribPNameNV"/>
+        <enum value="0x8626" name="GL_CURRENT_VERTEX_ATTRIB" group="GetVertexAttribPName"/>
+        <enum value="0x8626" name="GL_CURRENT_VERTEX_ATTRIB_ARB" group="GetVertexAttribPName"/>
         <enum value="0x8627" name="GL_PROGRAM_LENGTH_ARB"/>
-        <enum value="0x8627" name="GL_PROGRAM_LENGTH_NV"/>
+        <enum value="0x8627" name="GL_PROGRAM_LENGTH_NV" group="ProgramPNameNV"/>
         <enum value="0x8628" name="GL_PROGRAM_STRING_ARB" group="ProgramStringProperty"/>
-        <enum value="0x8628" name="GL_PROGRAM_STRING_NV"/>
-        <enum value="0x8629" name="GL_MODELVIEW_PROJECTION_NV"/>
-        <enum value="0x862A" name="GL_IDENTITY_NV"/>
-        <enum value="0x862B" name="GL_INVERSE_NV"/>
-        <enum value="0x862C" name="GL_TRANSPOSE_NV"/>
-        <enum value="0x862D" name="GL_INVERSE_TRANSPOSE_NV"/>
+        <enum value="0x8628" name="GL_PROGRAM_STRING_NV" group="ProgramStringPNameNV"/>
+        <enum value="0x8629" name="GL_MODELVIEW_PROJECTION_NV" group="VertexProgramTrackMatrixMatrixNV"/>
+        <enum value="0x862A" name="GL_IDENTITY_NV" group="VertexProgramTrackMatrixTransformNV"/>
+        <enum value="0x862B" name="GL_INVERSE_NV" group="VertexProgramTrackMatrixTransformNV"/>
+        <enum value="0x862C" name="GL_TRANSPOSE_NV" group="VertexProgramTrackMatrixTransformNV"/>
+        <enum value="0x862D" name="GL_INVERSE_TRANSPOSE_NV" group="VertexProgramTrackMatrixTransformNV"/>
         <enum value="0x862E" name="GL_MAX_PROGRAM_MATRIX_STACK_DEPTH_ARB"/>
         <enum value="0x862E" name="GL_MAX_TRACK_MATRIX_STACK_DEPTH_NV"/>
         <enum value="0x862F" name="GL_MAX_PROGRAM_MATRICES_ARB"/>
         <enum value="0x862F" name="GL_MAX_TRACK_MATRICES_NV"/>
-        <enum value="0x8630" name="GL_MATRIX0_NV"/>
-        <enum value="0x8631" name="GL_MATRIX1_NV"/>
-        <enum value="0x8632" name="GL_MATRIX2_NV"/>
-        <enum value="0x8633" name="GL_MATRIX3_NV"/>
-        <enum value="0x8634" name="GL_MATRIX4_NV"/>
-        <enum value="0x8635" name="GL_MATRIX5_NV"/>
-        <enum value="0x8636" name="GL_MATRIX6_NV"/>
-        <enum value="0x8637" name="GL_MATRIX7_NV"/>
+        <enum value="0x8630" name="GL_MATRIX0_NV" group="MatrixMode,VertexProgramTrackMatrixMatrixNV"/>
+        <enum value="0x8631" name="GL_MATRIX1_NV" group="MatrixMode,VertexProgramTrackMatrixMatrixNV"/>
+        <enum value="0x8632" name="GL_MATRIX2_NV" group="MatrixMode,VertexProgramTrackMatrixMatrixNV"/>
+        <enum value="0x8633" name="GL_MATRIX3_NV" group="MatrixMode,VertexProgramTrackMatrixMatrixNV"/>
+        <enum value="0x8634" name="GL_MATRIX4_NV" group="MatrixMode,VertexProgramTrackMatrixMatrixNV"/>
+        <enum value="0x8635" name="GL_MATRIX5_NV" group="MatrixMode,VertexProgramTrackMatrixMatrixNV"/>
+        <enum value="0x8636" name="GL_MATRIX6_NV" group="MatrixMode,VertexProgramTrackMatrixMatrixNV"/>
+        <enum value="0x8637" name="GL_MATRIX7_NV" group="MatrixMode,VertexProgramTrackMatrixMatrixNV"/>
             <unused start="0x8638" end="0x863F" comment="Reserved for MATRIX{8-15}_NV"/>
             <!-- <enum value="0x8638" name="GL_MATRIX8_NV"/> -->
             <!-- <enum value="0x8639" name="GL_MATRIX9_NV"/> -->
@@ -7920,14 +7920,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8643" name="GL_VERTEX_PROGRAM_TWO_SIDE" group="EnableCap"/>
         <enum value="0x8643" name="GL_VERTEX_PROGRAM_TWO_SIDE_ARB"/>
         <enum value="0x8643" name="GL_VERTEX_PROGRAM_TWO_SIDE_NV"/>
-        <enum value="0x8644" name="GL_PROGRAM_PARAMETER_NV" group="VertexAttribEnumNV"/>
-        <enum value="0x8645" name="GL_ATTRIB_ARRAY_POINTER_NV"/>
-        <enum value="0x8645" name="GL_VERTEX_ATTRIB_ARRAY_POINTER" group="VertexAttribPointerPropertyARB"/>
-        <enum value="0x8645" name="GL_VERTEX_ATTRIB_ARRAY_POINTER_ARB" group="VertexAttribPointerPropertyARB"/>
-        <enum value="0x8646" name="GL_PROGRAM_TARGET_NV"/>
-        <enum value="0x8647" name="GL_PROGRAM_RESIDENT_NV"/>
-        <enum value="0x8648" name="GL_TRACK_MATRIX_NV"/>
-        <enum value="0x8649" name="GL_TRACK_MATRIX_TRANSFORM_NV"/>
+        <enum value="0x8644" name="GL_PROGRAM_PARAMETER_NV" group="ProgramParameterPNameNV"/>
+        <enum value="0x8645" name="GL_ATTRIB_ARRAY_POINTER_NV" group="VertexProgramAttribPointerPNameNV"/>
+        <enum value="0x8645" name="GL_VERTEX_ATTRIB_ARRAY_POINTER" group="GetVertexAttribPointerPName,GetVertexArrayIntegeriPNameEXT,GetVertexArrayPointeriPNameEXT"/>
+        <enum value="0x8645" name="GL_VERTEX_ATTRIB_ARRAY_POINTER_ARB" group="GetVertexAttribPointerPName"/>
+        <enum value="0x8646" name="GL_PROGRAM_TARGET_NV" group="ProgramPNameNV"/>
+        <enum value="0x8647" name="GL_PROGRAM_RESIDENT_NV" group="ProgramPNameNV"/>
+        <enum value="0x8648" name="GL_TRACK_MATRIX_NV" group="VertexProgramGetTrackMatrixPNameNV"/>
+        <enum value="0x8649" name="GL_TRACK_MATRIX_TRANSFORM_NV" group="VertexProgramGetTrackMatrixPNameNV"/>
         <enum value="0x864A" name="GL_VERTEX_PROGRAM_BINDING_NV"/>
         <enum value="0x864B" name="GL_PROGRAM_ERROR_POSITION_ARB"/>
         <enum value="0x864B" name="GL_PROGRAM_ERROR_POSITION_NV"/>
@@ -8188,7 +8188,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x874B" name="GL_REPLACE_VALUE_AMD"/>
         <enum value="0x874C" name="GL_STENCIL_OP_VALUE_AMD"/>
         <enum value="0x874D" name="GL_STENCIL_BACK_OP_VALUE_AMD"/>
-        <enum value="0x874E" name="GL_VERTEX_ATTRIB_ARRAY_LONG" group="VertexArrayPName,VertexAttribPropertyARB"/>
+        <enum value="0x874E" name="GL_VERTEX_ATTRIB_ARRAY_LONG" group="GetVertexAttribPName,GetVertexArrayIndexedPName"/>
         <enum value="0x874F" name="GL_OCCLUSION_QUERY_EVENT_MASK_AMD"/>
     </enums>
 
@@ -8634,8 +8634,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8868" name="GL_MAX_FRAGMENT_PROGRAM_LOCAL_PARAMETERS_NV"/>
         <enum value="0x8869" name="GL_MAX_VERTEX_ATTRIBS" group="GetPName"/>
         <enum value="0x8869" name="GL_MAX_VERTEX_ATTRIBS_ARB"/>
-        <enum value="0x886A" name="GL_VERTEX_ATTRIB_ARRAY_NORMALIZED" group="VertexAttribEnum,VertexAttribPropertyARB,VertexArrayPName"/>
-        <enum value="0x886A" name="GL_VERTEX_ATTRIB_ARRAY_NORMALIZED_ARB"/>
+        <enum value="0x886A" name="GL_VERTEX_ATTRIB_ARRAY_NORMALIZED" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x886A" name="GL_VERTEX_ATTRIB_ARRAY_NORMALIZED_ARB" group="GetVertexAttribPName"/>
             <unused start="0x886B" vendor="NV"/>
         <enum value="0x886C" name="GL_MAX_TESS_CONTROL_INPUT_COMPONENTS" group="GetPName"/>
         <enum value="0x886C" name="GL_MAX_TESS_CONTROL_INPUT_COMPONENTS_EXT"/>
@@ -8645,7 +8645,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x886D" name="GL_MAX_TESS_EVALUATION_INPUT_COMPONENTS_OES"/>
         <enum value="0x886E" name="GL_DEPTH_STENCIL_TO_RGBA_NV"/>
         <enum value="0x886F" name="GL_DEPTH_STENCIL_TO_BGRA_NV"/>
-        <enum value="0x8870" name="GL_FRAGMENT_PROGRAM_NV"/>
+        <enum value="0x8870" name="GL_FRAGMENT_PROGRAM_NV" group="ProgramTargetNV,LoadProgramTargetNV"/>
         <enum value="0x8871" name="GL_MAX_TEXTURE_COORDS" group="GetPName"/>
         <enum value="0x8871" name="GL_MAX_TEXTURE_COORDS_ARB"/>
         <enum value="0x8871" name="GL_MAX_TEXTURE_COORDS_NV"/>
@@ -8692,30 +8692,30 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8893" name="GL_ELEMENT_ARRAY_BUFFER_ARB"/>
         <enum value="0x8894" name="GL_ARRAY_BUFFER_BINDING" group="GetPName"/>
         <enum value="0x8894" name="GL_ARRAY_BUFFER_BINDING_ARB" group="GetPName"/>
-        <enum value="0x8895" name="GL_ELEMENT_ARRAY_BUFFER_BINDING" group="GetPName"/>
+        <enum value="0x8895" name="GL_ELEMENT_ARRAY_BUFFER_BINDING" group="GetPName,GetVertexArrayPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8895" name="GL_ELEMENT_ARRAY_BUFFER_BINDING_ARB" group="GetPName"/>
-        <enum value="0x8896" name="GL_VERTEX_ARRAY_BUFFER_BINDING" group="GetPName"/>
+        <enum value="0x8896" name="GL_VERTEX_ARRAY_BUFFER_BINDING" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8896" name="GL_VERTEX_ARRAY_BUFFER_BINDING_ARB" group="GetPName"/>
-        <enum value="0x8897" name="GL_NORMAL_ARRAY_BUFFER_BINDING" group="GetPName"/>
+        <enum value="0x8897" name="GL_NORMAL_ARRAY_BUFFER_BINDING" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8897" name="GL_NORMAL_ARRAY_BUFFER_BINDING_ARB" group="GetPName"/>
-        <enum value="0x8898" name="GL_COLOR_ARRAY_BUFFER_BINDING" group="GetPName"/>
+        <enum value="0x8898" name="GL_COLOR_ARRAY_BUFFER_BINDING" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8898" name="GL_COLOR_ARRAY_BUFFER_BINDING_ARB" group="GetPName"/>
-        <enum value="0x8899" name="GL_INDEX_ARRAY_BUFFER_BINDING" group="GetPName"/>
+        <enum value="0x8899" name="GL_INDEX_ARRAY_BUFFER_BINDING" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x8899" name="GL_INDEX_ARRAY_BUFFER_BINDING_ARB" group="GetPName"/>
-        <enum value="0x889A" name="GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING" group="GetPName"/>
+        <enum value="0x889A" name="GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x889A" name="GL_TEXTURE_COORD_ARRAY_BUFFER_BINDING_ARB" group="GetPName"/>
-        <enum value="0x889B" name="GL_EDGE_FLAG_ARRAY_BUFFER_BINDING" group="GetPName"/>
+        <enum value="0x889B" name="GL_EDGE_FLAG_ARRAY_BUFFER_BINDING" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x889B" name="GL_EDGE_FLAG_ARRAY_BUFFER_BINDING_ARB" group="GetPName"/>
-        <enum value="0x889C" name="GL_SECONDARY_COLOR_ARRAY_BUFFER_BINDING" group="GetPName"/>
+        <enum value="0x889C" name="GL_SECONDARY_COLOR_ARRAY_BUFFER_BINDING" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x889C" name="GL_SECONDARY_COLOR_ARRAY_BUFFER_BINDING_ARB" group="GetPName"/>
         <enum value="0x889D" name="GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING_ARB" group="GetPName"/>
-        <enum value="0x889D" name="GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING" group="GetPName"/>
-        <enum value="0x889D" name="GL_FOG_COORD_ARRAY_BUFFER_BINDING" alias="GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING" group="GetPName"/>
+        <enum value="0x889D" name="GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
+        <enum value="0x889D" name="GL_FOG_COORD_ARRAY_BUFFER_BINDING" alias="GL_FOG_COORDINATE_ARRAY_BUFFER_BINDING" group="GetPName,GetVertexArrayIntegerPNameEXT"/>
         <enum value="0x889E" name="GL_WEIGHT_ARRAY_BUFFER_BINDING" group="GetPName"/>
         <enum value="0x889E" name="GL_WEIGHT_ARRAY_BUFFER_BINDING_ARB" group="GetPName"/>
         <enum value="0x889E" name="GL_WEIGHT_ARRAY_BUFFER_BINDING_OES" group="GetPName"/>
-        <enum value="0x889F" name="GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING" group="VertexAttribEnum,VertexAttribPropertyARB"/>
-        <enum value="0x889F" name="GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING_ARB"/>
+        <enum value="0x889F" name="GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING" group="GetVertexAttribPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x889F" name="GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING_ARB" group="GetVertexAttribPName"/>
         <enum value="0x88A0" name="GL_PROGRAM_INSTRUCTIONS_ARB"/>
         <enum value="0x88A1" name="GL_MAX_PROGRAM_INSTRUCTIONS_ARB"/>
         <enum value="0x88A2" name="GL_PROGRAM_NATIVE_INSTRUCTIONS_ARB"/>
@@ -8848,14 +8848,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x88FB" name="GL_ONE_MINUS_SRC1_ALPHA_EXT"/>
         <enum value="0x88FC" name="GL_MAX_DUAL_SOURCE_DRAW_BUFFERS" group="GetPName"/>
         <enum value="0x88FC" name="GL_MAX_DUAL_SOURCE_DRAW_BUFFERS_EXT"/>
-        <enum value="0x88FD" name="GL_VERTEX_ATTRIB_ARRAY_INTEGER" group="VertexAttribEnum,VertexAttribPropertyARB,VertexArrayPName"/>
-        <enum value="0x88FD" name="GL_VERTEX_ATTRIB_ARRAY_INTEGER_EXT" group="VertexAttribPropertyARB"/>
+        <enum value="0x88FD" name="GL_VERTEX_ATTRIB_ARRAY_INTEGER" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x88FD" name="GL_VERTEX_ATTRIB_ARRAY_INTEGER_EXT" group="GetVertexAttribPName"/>
         <enum value="0x88FD" name="GL_VERTEX_ATTRIB_ARRAY_INTEGER_NV"/>
-        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR" group="VertexAttribEnum,VertexAttribPropertyARB,VertexArrayPName"/>
-        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE"/>
-        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ARB"/>
-        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR_EXT"/>
-        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR_NV"/>
+        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR" group="GetVertexAttribPName,GetVertexArrayIndexedPName"/>
+        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE" group="GetVertexAttribPName"/>
+        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ARB" group="GetVertexAttribPName"/>
+        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR_EXT" group="GetVertexAttribPName"/>
+        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR_NV" group="GetVertexAttribPName"/>
         <enum value="0x88FF" name="GL_MAX_ARRAY_TEXTURE_LAYERS" group="GetPName"/>
         <enum value="0x88FF" name="GL_MAX_ARRAY_TEXTURE_LAYERS_EXT"/>
         <enum value="0x8904" name="GL_MIN_PROGRAM_TEXEL_OFFSET" group="GetPName"/>
@@ -9022,14 +9022,14 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" start="0x8A00" end="0x8A7F" vendor="APPLE">
         <enum value="0x8A00" name="GL_VERTEX_ATTRIB_MAP1_APPLE"/>
         <enum value="0x8A01" name="GL_VERTEX_ATTRIB_MAP2_APPLE"/>
-        <enum value="0x8A02" name="GL_VERTEX_ATTRIB_MAP1_SIZE_APPLE"/>
-        <enum value="0x8A03" name="GL_VERTEX_ATTRIB_MAP1_COEFF_APPLE"/>
-        <enum value="0x8A04" name="GL_VERTEX_ATTRIB_MAP1_ORDER_APPLE"/>
-        <enum value="0x8A05" name="GL_VERTEX_ATTRIB_MAP1_DOMAIN_APPLE"/>
-        <enum value="0x8A06" name="GL_VERTEX_ATTRIB_MAP2_SIZE_APPLE"/>
-        <enum value="0x8A07" name="GL_VERTEX_ATTRIB_MAP2_COEFF_APPLE"/>
-        <enum value="0x8A08" name="GL_VERTEX_ATTRIB_MAP2_ORDER_APPLE"/>
-        <enum value="0x8A09" name="GL_VERTEX_ATTRIB_MAP2_DOMAIN_APPLE"/>
+        <enum value="0x8A02" name="GL_VERTEX_ATTRIB_MAP1_SIZE_APPLE" group="GetVertexAttribPName"/>
+        <enum value="0x8A03" name="GL_VERTEX_ATTRIB_MAP1_COEFF_APPLE" group="GetVertexAttribPName"/>
+        <enum value="0x8A04" name="GL_VERTEX_ATTRIB_MAP1_ORDER_APPLE" group="GetVertexAttribPName"/>
+        <enum value="0x8A05" name="GL_VERTEX_ATTRIB_MAP1_DOMAIN_APPLE" group="GetVertexAttribPName"/>
+        <enum value="0x8A06" name="GL_VERTEX_ATTRIB_MAP2_SIZE_APPLE" group="GetVertexAttribPName"/>
+        <enum value="0x8A07" name="GL_VERTEX_ATTRIB_MAP2_COEFF_APPLE" group="GetVertexAttribPName"/>
+        <enum value="0x8A08" name="GL_VERTEX_ATTRIB_MAP2_ORDER_APPLE" group="GetVertexAttribPName"/>
+        <enum value="0x8A09" name="GL_VERTEX_ATTRIB_MAP2_DOMAIN_APPLE" group="GetVertexAttribPName"/>
         <enum value="0x8A0A" name="GL_DRAW_PIXELS_APPLE" group="ObjectTypeAPPLE"/>
         <enum value="0x8A0B" name="GL_FENCE_APPLE" group="ObjectTypeAPPLE"/>
         <enum value="0x8A0C" name="GL_ELEMENT_ARRAY_APPLE"/>
@@ -10907,7 +10907,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x919F" name="GL_TEXTURE_BUFFER_OFFSET_ALIGNMENT_OES"/>
         <enum value="0x91A0" name="GL_STREAM_RASTERIZATION_AMD"/>
             <unused start="0x91A1" end="0x91A3" vendor="AMD"/>
-        <enum value="0x91A4" name="GL_VERTEX_ELEMENT_SWIZZLE_AMD"/>
+        <enum value="0x91A4" name="GL_VERTEX_ELEMENT_SWIZZLE_AMD" group="GetVertexAttribPName"/>
         <enum value="0x91A5" name="GL_VERTEX_ID_SWIZZLE_AMD"/>
         <enum value="0x91A6" name="GL_TEXTURE_SPARSE_ARB"/>
         <enum value="0x91A6" name="GL_TEXTURE_SPARSE_EXT"/>
@@ -12224,7 +12224,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBindProgramNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <alias name="glBindProgramARB"/>
             <glx type="render" opcode="4180"/>
@@ -16495,7 +16495,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glExecuteProgramNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="LoadProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <param len="4">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="4181"/>
@@ -19378,17 +19378,17 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetProgramParameterdvNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ProgramParameterPNameNV"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="4"><ptype>GLdouble</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="1297"/>
         </command>
         <command>
             <proto>void <name>glGetProgramParameterfvNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ProgramParameterPNameNV"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="4"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="1296"/>
         </command>
@@ -19489,7 +19489,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetProgramStringNV</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ProgramStringPNameNV"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="ProgramCharacterNV" len="COMPSIZE(id,pname)"><ptype>GLubyte</ptype> *<name>program</name></param>
             <glx type="vendor" opcode="1299"/>
         </command>
@@ -19515,7 +19515,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetProgramivNV</name></proto>
             <param><ptype>GLuint</ptype> <name>id</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ProgramPNameNV"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="4"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="1298"/>
         </command>
@@ -20189,9 +20189,9 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetTrackMatrixivNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>address</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="VertexProgramGetTrackMatrixPNameNV"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="1300"/>
         </command>
@@ -20416,46 +20416,46 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetVertexArrayIndexed64iv</name></proto>
             <param><ptype>GLuint</ptype> <name>vaobj</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexArrayPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexArrayIndexed64PName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint64</ptype> *<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexArrayIndexediv</name></proto>
             <param><ptype>GLuint</ptype> <name>vaobj</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexArrayPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexArrayIndexedPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> *<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexArrayIntegeri_vEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>vaobj</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexArrayPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexArrayIntegeriPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> *<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexArrayIntegervEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>vaobj</name></param>
-            <param group="VertexArrayPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexArrayIntegerPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> *<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexArrayPointeri_vEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>vaobj</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexArrayPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexArrayPointeriPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1">void **<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexArrayPointervEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>vaobj</name></param>
-            <param group="VertexArrayPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexArrayPointervPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1">void **<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexArrayiv</name></proto>
             <param><ptype>GLuint</ptype> <name>vaobj</name></param>
-            <param group="VertexArrayPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexArrayPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> *<name>param</name></param>
         </command>
         <command>
@@ -20473,92 +20473,92 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetVertexAttribIiv</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribIivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glGetVertexAttribIiv"/>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribIuiv</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLuint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribIuivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLuint</ptype> *<name>params</name></param>
             <alias name="glGetVertexAttribIuiv"/>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribLdv</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLdouble</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribLdvEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLdouble</ptype> *<name>params</name></param>
             <alias name="glGetVertexAttribLdv"/>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribLi64vNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint64EXT</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribLui64vARB</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLuint64EXT</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribLui64vNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnum"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLuint64EXT</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribPointerv</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribPointerPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPointerPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1">void **<name>pointer</name></param>
             <glx type="single" opcode="209"/>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribPointervARB</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribPointerPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPointerPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1">void **<name>pointer</name></param>
             <alias name="glGetVertexAttribPointerv"/>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribPointervNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="VertexProgramAttribPointerPNameNV"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1">void **<name>pointer</name></param>
             <alias name="glGetVertexAttribPointerv"/>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribdv</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="4"><ptype>GLdouble</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="1301"/>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribdvARB</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="4"><ptype>GLdouble</ptype> *<name>params</name></param>
             <alias name="glGetVertexAttribdv"/>
             <glx type="vendor" opcode="1301"/>
@@ -20566,7 +20566,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetVertexAttribdvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ProgramAttribPNameNV"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLdouble</ptype> *<name>params</name></param>
             <alias name="glGetVertexAttribdv"/>
             <glx type="vendor" opcode="1301"/>
@@ -20574,14 +20574,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetVertexAttribfv</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="4"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="1302"/>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribfvARB</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="4"><ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glGetVertexAttribfv"/>
             <glx type="vendor" opcode="1302"/>
@@ -20589,7 +20589,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetVertexAttribfvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ProgramAttribPNameNV"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glGetVertexAttribfv"/>
             <glx type="vendor" opcode="1302"/>
@@ -20597,14 +20597,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetVertexAttribiv</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="4"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="1303"/>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribivARB</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetVertexAttribPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="4"><ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glGetVertexAttribiv"/>
             <glx type="vendor" opcode="1303"/>
@@ -20612,7 +20612,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetVertexAttribivNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ProgramAttribPNameNV"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glGetVertexAttribiv"/>
             <glx type="vendor" opcode="1303"/>
@@ -21827,7 +21827,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glLoadProgramNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="LoadProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>id</name></param>
             <param><ptype>GLsizei</ptype> <name>len</name></param>
             <param len="len">const <ptype>GLubyte</ptype> *<name>program</name></param>
@@ -25335,7 +25335,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramParameter4dNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLdouble</ptype> <name>x</name></param>
             <param><ptype>GLdouble</ptype> <name>y</name></param>
@@ -25345,14 +25345,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramParameter4dvNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="4">const <ptype>GLdouble</ptype> *<name>v</name></param>
             <glx type="render" opcode="4185"/>
         </command>
         <command>
             <proto>void <name>glProgramParameter4fNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLfloat</ptype> <name>x</name></param>
             <param><ptype>GLfloat</ptype> <name>y</name></param>
@@ -25362,7 +25362,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramParameter4fvNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param len="4">const <ptype>GLfloat</ptype> *<name>v</name></param>
             <glx type="render" opcode="4184"/>
@@ -25389,7 +25389,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramParameters4dvNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param len="count*4">const <ptype>GLdouble</ptype> *<name>v</name></param>
@@ -25397,7 +25397,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glProgramParameters4fvNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param len="count*4">const <ptype>GLfloat</ptype> *<name>v</name></param>
@@ -30066,10 +30066,10 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTrackMatrixNV</name></proto>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ProgramTargetNV"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>address</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>matrix</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>transform</name></param>
+            <param group="VertexProgramTrackMatrixMatrixNV"><ptype>GLenum</ptype> <name>matrix</name></param>
+            <param group="VertexProgramTrackMatrixTransformNV"><ptype>GLenum</ptype> <name>transform</name></param>
             <glx type="render" opcode="4188"/>
         </command>
         <command>
@@ -31544,7 +31544,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glVertexArrayParameteriAPPLE</name></proto>
             <param group="VertexArrayPNameAPPLE"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param><ptype>GLint</ptype> <name>param</name></param>
+            <param group="VertexArrayParamAPPLE"><ptype>GLint</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glVertexArrayRangeAPPLE</name></proto>
@@ -33088,7 +33088,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribPointerNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLint</ptype> <name>fsize</name></param>
-            <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group=""><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param len="COMPSIZE(fsize,type,stride)">const void *<name>pointer</name></param>
         </command>
