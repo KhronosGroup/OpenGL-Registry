@@ -3873,7 +3873,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_UNIFORM_ATOMIC_COUNTER_BUFFER_INDEX"/>
         </group>
 
-        <group name="SamplerParameterI" comment="Deprecated, use the group attributes instead.">
+        <group name="SamplerParameterPName" comment="Deprecated, use the group attributes instead.">
             <enum name="GL_TEXTURE_WRAP_S"/>
             <enum name="GL_TEXTURE_WRAP_T"/>
             <enum name="GL_TEXTURE_WRAP_R"/>
@@ -3881,9 +3881,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_TEXTURE_MAG_FILTER"/>
             <enum name="GL_TEXTURE_COMPARE_MODE"/>
             <enum name="GL_TEXTURE_COMPARE_FUNC"/>
-        </group>
-
-        <group name="SamplerParameterF" comment="Deprecated, use the group attributes instead.">
             <enum name="GL_TEXTURE_BORDER_COLOR"/>
             <enum name="GL_TEXTURE_MIN_LOD"/>
             <enum name="GL_TEXTURE_MAX_LOD"/>
@@ -5638,10 +5635,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x1001" name="GL_TEXTURE_HEIGHT" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x1003" name="GL_TEXTURE_INTERNAL_FORMAT" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x1003" name="GL_TEXTURE_COMPONENTS" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x1004" name="GL_TEXTURE_BORDER_COLOR" group="SamplerParameterF,GetTextureParameter,TextureParameterName"/>
-        <enum value="0x1004" name="GL_TEXTURE_BORDER_COLOR_EXT"/>
+        <enum value="0x1004" name="GL_TEXTURE_BORDER_COLOR" group="SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
+        <enum value="0x1004" name="GL_TEXTURE_BORDER_COLOR_EXT" group="SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
         <enum value="0x1004" name="GL_TEXTURE_BORDER_COLOR_NV" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x1004" name="GL_TEXTURE_BORDER_COLOR_OES"/>
+        <enum value="0x1004" name="GL_TEXTURE_BORDER_COLOR_OES" group="SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
         <enum value="0x1005" name="GL_TEXTURE_BORDER" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x1006" name="GL_TEXTURE_TARGET" group="GetTextureParameter"/>
             <unused start="0x1007" end="0x10FF" comment="Unused for GetTextureParameter"/>
@@ -5803,10 +5800,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x2702" name="GL_NEAREST_MIPMAP_LINEAR" group="TextureMinFilter"/>
         <enum value="0x2703" name="GL_LINEAR_MIPMAP_LINEAR" group="TextureWrapMode,TextureMinFilter"/>
             <unused start="0x2704" end="0x27FF" comment="Unused for TextureMinFilter"/>
-        <enum value="0x2800" name="GL_TEXTURE_MAG_FILTER" group="SamplerParameterI,GetTextureParameter,TextureParameterName"/>
-        <enum value="0x2801" name="GL_TEXTURE_MIN_FILTER" group="SamplerParameterI,GetTextureParameter,TextureParameterName"/>
-        <enum value="0x2802" name="GL_TEXTURE_WRAP_S" group="SamplerParameterI,GetTextureParameter,TextureParameterName"/>
-        <enum value="0x2803" name="GL_TEXTURE_WRAP_T" group="SamplerParameterI,GetTextureParameter,TextureParameterName"/>
+        <enum value="0x2800" name="GL_TEXTURE_MAG_FILTER" group="SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
+        <enum value="0x2801" name="GL_TEXTURE_MIN_FILTER" group="SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
+        <enum value="0x2802" name="GL_TEXTURE_WRAP_S" group="SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
+        <enum value="0x2803" name="GL_TEXTURE_WRAP_T" group="SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
             <unused start="0x2804" end="0x28FF" comment="Unused for TextureParameterName"/>
         <enum value="0x2900" name="GL_CLAMP" group="TextureWrapMode"/>
         <enum value="0x2901" name="GL_REPEAT" group="TextureWrapMode"/>
@@ -6123,7 +6120,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8070" name="GL_PROXY_TEXTURE_3D_EXT" group="TextureTarget"/>
         <enum value="0x8071" name="GL_TEXTURE_DEPTH" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8071" name="GL_TEXTURE_DEPTH_EXT" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x8072" name="GL_TEXTURE_WRAP_R" group="SamplerParameterI,TextureParameterName,GetTextureParameter"/>
+        <enum value="0x8072" name="GL_TEXTURE_WRAP_R" group="SamplerParameterPName,TextureParameterName,GetTextureParameter"/>
         <enum value="0x8072" name="GL_TEXTURE_WRAP_R_EXT" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8072" name="GL_TEXTURE_WRAP_R_OES" group="TextureParameterName"/>
         <enum value="0x8073" name="GL_MAX_3D_TEXTURE_SIZE" group="GetPName"/>
@@ -6422,9 +6419,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8137" name="GL_TEXTURE_WRAP_Q_SGIS" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8138" name="GL_MAX_4D_TEXTURE_SIZE_SGIS" group="GetPName"/>
         <enum value="0x8139" name="GL_PIXEL_TEX_GEN_SGIX" group="GetPName,EnableCap"/>
-        <enum value="0x813A" name="GL_TEXTURE_MIN_LOD" group="SamplerParameterF,TextureParameterName,GetTextureParameter"/>
+        <enum value="0x813A" name="GL_TEXTURE_MIN_LOD" group="SamplerParameterPName,TextureParameterName,GetTextureParameter"/>
         <enum value="0x813A" name="GL_TEXTURE_MIN_LOD_SGIS" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x813B" name="GL_TEXTURE_MAX_LOD" group="SamplerParameterF,TextureParameterName,GetTextureParameter"/>
+        <enum value="0x813B" name="GL_TEXTURE_MAX_LOD" group="SamplerParameterPName,TextureParameterName,GetTextureParameter"/>
         <enum value="0x813B" name="GL_TEXTURE_MAX_LOD_SGIS" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x813C" name="GL_TEXTURE_BASE_LEVEL" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x813C" name="GL_TEXTURE_BASE_LEVEL_SGIS" group="TextureParameterName,GetTextureParameter"/>
@@ -7505,13 +7502,13 @@ typedef unsigned int GLhandleARB;
             <unused start="0x84FB" end="0x84FC" vendor="NV"/>
         <enum value="0x84FD" name="GL_MAX_TEXTURE_LOD_BIAS" group="GetPName"/>
         <enum value="0x84FD" name="GL_MAX_TEXTURE_LOD_BIAS_EXT"/>
-        <enum value="0x84FE" name="GL_TEXTURE_MAX_ANISOTROPY" group="SamplerParameterF,GetTextureParameter"/>
-        <enum value="0x84FE" name="GL_TEXTURE_MAX_ANISOTROPY_EXT" alias="GL_TEXTURE_MAX_ANISOTROPY"/>
+        <enum value="0x84FE" name="GL_TEXTURE_MAX_ANISOTROPY" group="SamplerParameterPName,GetTextureParameter"/>
+        <enum value="0x84FE" name="GL_TEXTURE_MAX_ANISOTROPY_EXT" alias="GL_TEXTURE_MAX_ANISOTROPY" group="SamplerParameterPName,GetTextureParameter"/>
         <enum value="0x84FF" name="GL_MAX_TEXTURE_MAX_ANISOTROPY" group="GetPName"/>
         <enum value="0x84FF" name="GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT" alias="GL_MAX_TEXTURE_MAX_ANISOTROPY" group="GetPName"/>
         <enum value="0x8500" name="GL_TEXTURE_FILTER_CONTROL"/>
         <enum value="0x8500" name="GL_TEXTURE_FILTER_CONTROL_EXT"/>
-        <enum value="0x8501" name="GL_TEXTURE_LOD_BIAS" group="TextureParameterName,SamplerParameterF,GetTextureParameter"/>
+        <enum value="0x8501" name="GL_TEXTURE_LOD_BIAS" group="TextureParameterName,SamplerParameterPName,GetTextureParameter"/>
         <enum value="0x8501" name="GL_TEXTURE_LOD_BIAS_EXT"/>
         <enum value="0x8502" name="GL_MODELVIEW1_STACK_DEPTH_EXT"/>
         <enum value="0x8503" name="GL_COMBINE4_NV"/>
@@ -8574,10 +8571,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x884A" name="GL_TEXTURE_DEPTH_SIZE_ARB"/>
         <enum value="0x884B" name="GL_DEPTH_TEXTURE_MODE" group="GetTextureParameter"/>
         <enum value="0x884B" name="GL_DEPTH_TEXTURE_MODE_ARB"/>
-        <enum value="0x884C" name="GL_TEXTURE_COMPARE_MODE" group="SamplerParameterI,TextureParameterName,GetTextureParameter"/>
+        <enum value="0x884C" name="GL_TEXTURE_COMPARE_MODE" group="SamplerParameterPName,TextureParameterName,GetTextureParameter"/>
         <enum value="0x884C" name="GL_TEXTURE_COMPARE_MODE_ARB"/>
         <enum value="0x884C" name="GL_TEXTURE_COMPARE_MODE_EXT"/>
-        <enum value="0x884D" name="GL_TEXTURE_COMPARE_FUNC" group="SamplerParameterI,TextureParameterName,GetTextureParameter"/>
+        <enum value="0x884D" name="GL_TEXTURE_COMPARE_FUNC" group="SamplerParameterPName,TextureParameterName,GetTextureParameter"/>
         <enum value="0x884D" name="GL_TEXTURE_COMPARE_FUNC_ARB"/>
         <enum value="0x884D" name="GL_TEXTURE_COMPARE_FUNC_EXT"/>
         <enum value="0x884E" name="GL_COMPARE_R_TO_TEXTURE" group="TextureCompareMode"/>
@@ -8585,7 +8582,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x884E" name="GL_COMPARE_REF_DEPTH_TO_TEXTURE_EXT"/>
         <enum value="0x884E" name="GL_COMPARE_REF_TO_TEXTURE" alias="GL_COMPARE_R_TO_TEXTURE" group="TextureCompareMode"/>
         <enum value="0x884E" name="GL_COMPARE_REF_TO_TEXTURE_EXT"/>
-        <enum value="0x884F" name="GL_TEXTURE_CUBE_MAP_SEAMLESS" group="EnableCap"/>
+        <enum value="0x884F" name="GL_TEXTURE_CUBE_MAP_SEAMLESS" group="EnableCap,SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
     </enums>
 
     <enums namespace="GL" start="0x8850" end="0x891F" vendor="NV">
@@ -9089,7 +9086,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8A45" name="GL_UNIFORM_BLOCK_REFERENCED_BY_GEOMETRY_SHADER" group="UniformBlockPName"/>
         <enum value="0x8A46" name="GL_UNIFORM_BLOCK_REFERENCED_BY_FRAGMENT_SHADER" group="UniformBlockPName"/>
             <unused start="0x8A47" vendor="APPLE"/>
-        <enum value="0x8A48" name="GL_TEXTURE_SRGB_DECODE_EXT"/>
+        <enum value="0x8A48" name="GL_TEXTURE_SRGB_DECODE_EXT" group="SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
         <enum value="0x8A49" name="GL_DECODE_EXT"/>
         <enum value="0x8A4A" name="GL_SKIP_DECODE_EXT"/>
             <unused start="0x8A4B" end="0x8A4E" vendor="APPLE"/>
@@ -10329,7 +10326,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8F67" name="GL_MAX_SHADER_PIXEL_LOCAL_STORAGE_SIZE_EXT"/>
             <unused start="0x8F68" vendor="ARM"/>
         <enum value="0x8F69" name="GL_TEXTURE_ASTC_DECODE_PRECISION_EXT"/>
-        <enum value="0x8F6A" name="GL_TEXTURE_UNNORMALIZED_COORDINATES_ARM" group="SamplerParameterF,SamplerParameterI,GetTextureParameter,TextureParameterName"/>
+        <enum value="0x8F6A" name="GL_TEXTURE_UNNORMALIZED_COORDINATES_ARM" group="SamplerParameterPName,SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
             <unused start="0x8F6B" end="0x8F6F" vendor="ARM"/>
     </enums>
 
@@ -11275,8 +11272,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x935F" name="GL_ZERO_TO_ONE_EXT" alias="GL_ZERO_TO_ONE"/>
             <unused start="0x9360" end="0x9364" vendor="NV"/>
         <enum value="0x9365" name="GL_CLEAR_TEXTURE" group="InternalFormatPName"/>
-        <enum value="0x9366" name="GL_TEXTURE_REDUCTION_MODE_ARB"/>
-        <enum value="0x9366" name="GL_TEXTURE_REDUCTION_MODE_EXT" alias="GL_TEXTURE_REDUCTION_MODE_ARB"/>
+        <enum value="0x9366" name="GL_TEXTURE_REDUCTION_MODE_ARB" group="SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
+        <enum value="0x9366" name="GL_TEXTURE_REDUCTION_MODE_EXT" alias="GL_TEXTURE_REDUCTION_MODE_ARB" group="SamplerParameterPName,GetTextureParameter,TextureParameterName"/>
         <enum value="0x9367" name="GL_WEIGHTED_AVERAGE_ARB"/>
         <enum value="0x9367" name="GL_WEIGHTED_AVERAGE_EXT" alias="GL_WEIGHTED_AVERAGE_ARB"/>
         <enum value="0x9368" name="GL_FONT_GLYPHS_AVAILABLE_NV"/>
@@ -19667,53 +19664,53 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetSamplerParameterIiv</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetSamplerParameterIivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glGetSamplerParameterIiv"/>
         </command>
         <command>
             <proto>void <name>glGetSamplerParameterIivOES</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glGetSamplerParameterIiv"/>
         </command>
         <command>
             <proto>void <name>glGetSamplerParameterIuiv</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLuint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetSamplerParameterIuivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLuint</ptype> *<name>params</name></param>
             <alias name="glGetSamplerParameterIuiv"/>
         </command>
         <command>
             <proto>void <name>glGetSamplerParameterIuivOES</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLuint</ptype> *<name>params</name></param>
             <alias name="glGetSamplerParameterIuiv"/>
         </command>
         <command>
             <proto>void <name>glGetSamplerParameterfv</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterF"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetSamplerParameteriv</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
@@ -27339,65 +27336,65 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glSamplerParameterIiv</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glSamplerParameterIivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>param</name></param>
             <alias name="glSamplerParameterIiv"/>
         </command>
         <command>
             <proto>void <name>glSamplerParameterIivOES</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>param</name></param>
             <alias name="glSamplerParameterIiv"/>
         </command>
         <command>
             <proto>void <name>glSamplerParameterIuiv</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLuint</ptype> *<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glSamplerParameterIuivEXT</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLuint</ptype> *<name>param</name></param>
             <alias name="glSamplerParameterIuiv"/>
         </command>
         <command>
             <proto>void <name>glSamplerParameterIuivOES</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLuint</ptype> *<name>param</name></param>
             <alias name="glSamplerParameterIuiv"/>
         </command>
         <command>
             <proto>void <name>glSamplerParameterf</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterF"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLfloat</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glSamplerParameterfv</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterF"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glSamplerParameteri</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glSamplerParameteriv</name></proto>
             <param><ptype>GLuint</ptype> <name>sampler</name></param>
-            <param group="SamplerParameterI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="SamplerParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>param</name></param>
         </command>
         <command>
