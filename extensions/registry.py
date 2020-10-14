@@ -2044,6 +2044,11 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/EXT/EXT_multiview_timer_query.txt',
     },
+    'GLX_EXT_no_config_context' : {
+            'number' : 553,
+            'flags' : { 'public' },
+            'url' : 'extensions/EXT/GLX_EXT_no_config_context.txt',
+    },
     'GLU_EXT_nurbs_tessellator' : {
         'number' : 100,
         'flags' : { 'public' },

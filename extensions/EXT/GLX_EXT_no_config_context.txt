@@ -40,7 +40,11 @@ Status
 
 Version
 
-    Version 6, 2017/12/05
+    Version 8, 2020/10/05
+
+Number
+
+    OpenGL Extension #553
 
 Dependencies
 
@@ -259,6 +263,9 @@ Issues
     little point.
 
 Revision History
+
+    Version 8, 2020/10/05 (Adam Jackson)
+    - Add extension number
 
     Version 7, 2017/12/05 (Adam Jackson)
     - Mark complete.
