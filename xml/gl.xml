@@ -18238,7 +18238,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetFramebufferParameteriv</name></proto>
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="FramebufferAttachmentParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="GetFramebufferParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
