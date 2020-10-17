@@ -5680,7 +5680,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x140A" name="GL_DOUBLE_EXT" group="BinormalPointerTypeEXT,TangentPointerTypeEXT"/>
         <enum value="0x140B" name="GL_HALF_FLOAT" group="VertexAttribPointerType,VertexAttribType,PixelType"/>
         <enum value="0x140B" name="GL_HALF_FLOAT_ARB" group="PixelType"/>
-        <enum value="0x140B" name="GL_HALF_FLOAT_NV" group="PixelType"/>
+        <enum value="0x140B" name="GL_HALF_FLOAT_NV" group="VertexAttribPointerType,PixelType"/>
         <enum value="0x140B" name="GL_HALF_APPLE" group="PixelType"/>
         <enum value="0x140C" name="GL_FIXED" group="VertexAttribPointerType,VertexAttribType"/>
         <enum value="0x140C" name="GL_FIXED_OES"/>
@@ -33088,7 +33088,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribPointerNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLint</ptype> <name>fsize</name></param>
-            <param group=""><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param len="COMPSIZE(fsize,type,stride)">const void *<name>pointer</name></param>
         </command>
