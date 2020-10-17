@@ -6951,7 +6951,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x82D2" name="GL_VIEW_CLASS_BPTC_UNORM"/>
         <enum value="0x82D3" name="GL_VIEW_CLASS_BPTC_FLOAT"/>
         <enum value="0x82D4" name="GL_VERTEX_ATTRIB_BINDING" group="GetVertexAttribPName"/>
-        <enum value="0x82D5" name="GL_VERTEX_ATTRIB_RELATIVE_OFFSET" group="GetVertexAttribPName,GetVertexArrayIndexedPName"/>
+        <enum value="0x82D5" name="GL_VERTEX_ATTRIB_RELATIVE_OFFSET" group="GetVertexAttribPName,VertexArrayPName"/>
         <enum value="0x82D6" name="GL_VERTEX_BINDING_DIVISOR" group="GetPName"/>
         <enum value="0x82D7" name="GL_VERTEX_BINDING_OFFSET" group="GetPName,GetVertexArrayIndexed64PName"/>
         <enum value="0x82D8" name="GL_VERTEX_BINDING_STRIDE" group="GetPName"/>
@@ -7863,16 +7863,16 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8620" name="GL_VERTEX_PROGRAM_ARB" group="ProgramTarget"/>
         <enum value="0x8620" name="GL_VERTEX_PROGRAM_NV" group="ProgramTargetNV,LoadProgramTargetNV"/>
         <enum value="0x8621" name="GL_VERTEX_STATE_PROGRAM_NV" group="LoadProgramTargetNV"/>
-        <enum value="0x8622" name="GL_VERTEX_ATTRIB_ARRAY_ENABLED" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x8622" name="GL_VERTEX_ATTRIB_ARRAY_ENABLED" group="GetVertexAttribPName,VertexArrayPName,GetVertexArrayIntegeriPNameEXT"/>
         <enum value="0x8622" name="GL_VERTEX_ATTRIB_ARRAY_ENABLED_ARB" group="GetVertexAttribPName"/>
         <enum value="0x8623" name="GL_ATTRIB_ARRAY_SIZE_NV" group="ProgramAttribPNameNV"/>
-        <enum value="0x8623" name="GL_VERTEX_ATTRIB_ARRAY_SIZE" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x8623" name="GL_VERTEX_ATTRIB_ARRAY_SIZE" group="GetVertexAttribPName,VertexArrayPName,GetVertexArrayIntegeriPNameEXT"/>
         <enum value="0x8623" name="GL_VERTEX_ATTRIB_ARRAY_SIZE_ARB" group="GetVertexAttribPName"/>
         <enum value="0x8624" name="GL_ATTRIB_ARRAY_STRIDE_NV" group="ProgramAttribPNameNV"/>
-        <enum value="0x8624" name="GL_VERTEX_ATTRIB_ARRAY_STRIDE" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x8624" name="GL_VERTEX_ATTRIB_ARRAY_STRIDE" group="GetVertexAttribPName,VertexArrayPName,GetVertexArrayIntegeriPNameEXT"/>
         <enum value="0x8624" name="GL_VERTEX_ATTRIB_ARRAY_STRIDE_ARB" group="GetVertexAttribPName"/>
         <enum value="0x8625" name="GL_ATTRIB_ARRAY_TYPE_NV" group="ProgramAttribPNameNV"/>
-        <enum value="0x8625" name="GL_VERTEX_ATTRIB_ARRAY_TYPE" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x8625" name="GL_VERTEX_ATTRIB_ARRAY_TYPE" group="GetVertexAttribPName,VertexArrayPName,GetVertexArrayIntegeriPNameEXT"/>
         <enum value="0x8625" name="GL_VERTEX_ATTRIB_ARRAY_TYPE_ARB" group="GetVertexAttribPName"/>
         <enum value="0x8626" name="GL_CURRENT_ATTRIB_NV" group="ProgramAttribPNameNV"/>
         <enum value="0x8626" name="GL_CURRENT_VERTEX_ATTRIB" group="GetVertexAttribPName"/>
@@ -7922,8 +7922,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8643" name="GL_VERTEX_PROGRAM_TWO_SIDE_NV"/>
         <enum value="0x8644" name="GL_PROGRAM_PARAMETER_NV" group="ProgramParameterPNameNV"/>
         <enum value="0x8645" name="GL_ATTRIB_ARRAY_POINTER_NV" group="VertexProgramAttribPointerPNameNV"/>
-        <enum value="0x8645" name="GL_VERTEX_ATTRIB_ARRAY_POINTER" group="GetVertexAttribPointerPName,GetVertexArrayIntegeriPNameEXT,GetVertexArrayPointeriPNameEXT"/>
-        <enum value="0x8645" name="GL_VERTEX_ATTRIB_ARRAY_POINTER_ARB" group="GetVertexAttribPointerPName"/>
+        <enum value="0x8645" name="GL_VERTEX_ATTRIB_ARRAY_POINTER" group="VertexAttribPointerPropertyARB,GetVertexArrayIntegeriPNameEXT,GetVertexArrayPointeriPNameEXT"/>
+        <enum value="0x8645" name="GL_VERTEX_ATTRIB_ARRAY_POINTER_ARB" group="VertexAttribPointerPropertyARB"/>
         <enum value="0x8646" name="GL_PROGRAM_TARGET_NV" group="ProgramPNameNV"/>
         <enum value="0x8647" name="GL_PROGRAM_RESIDENT_NV" group="ProgramPNameNV"/>
         <enum value="0x8648" name="GL_TRACK_MATRIX_NV" group="VertexProgramGetTrackMatrixPNameNV"/>
@@ -8188,7 +8188,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x874B" name="GL_REPLACE_VALUE_AMD"/>
         <enum value="0x874C" name="GL_STENCIL_OP_VALUE_AMD"/>
         <enum value="0x874D" name="GL_STENCIL_BACK_OP_VALUE_AMD"/>
-        <enum value="0x874E" name="GL_VERTEX_ATTRIB_ARRAY_LONG" group="GetVertexAttribPName,GetVertexArrayIndexedPName"/>
+        <enum value="0x874E" name="GL_VERTEX_ATTRIB_ARRAY_LONG" group="GetVertexAttribPName,VertexArrayPName"/>
         <enum value="0x874F" name="GL_OCCLUSION_QUERY_EVENT_MASK_AMD"/>
     </enums>
 
@@ -8634,7 +8634,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8868" name="GL_MAX_FRAGMENT_PROGRAM_LOCAL_PARAMETERS_NV"/>
         <enum value="0x8869" name="GL_MAX_VERTEX_ATTRIBS" group="GetPName"/>
         <enum value="0x8869" name="GL_MAX_VERTEX_ATTRIBS_ARB"/>
-        <enum value="0x886A" name="GL_VERTEX_ATTRIB_ARRAY_NORMALIZED" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x886A" name="GL_VERTEX_ATTRIB_ARRAY_NORMALIZED" group="GetVertexAttribPName,VertexArrayPName,GetVertexArrayIntegeriPNameEXT"/>
         <enum value="0x886A" name="GL_VERTEX_ATTRIB_ARRAY_NORMALIZED_ARB" group="GetVertexAttribPName"/>
             <unused start="0x886B" vendor="NV"/>
         <enum value="0x886C" name="GL_MAX_TESS_CONTROL_INPUT_COMPONENTS" group="GetPName"/>
@@ -8848,10 +8848,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x88FB" name="GL_ONE_MINUS_SRC1_ALPHA_EXT"/>
         <enum value="0x88FC" name="GL_MAX_DUAL_SOURCE_DRAW_BUFFERS" group="GetPName"/>
         <enum value="0x88FC" name="GL_MAX_DUAL_SOURCE_DRAW_BUFFERS_EXT"/>
-        <enum value="0x88FD" name="GL_VERTEX_ATTRIB_ARRAY_INTEGER" group="GetVertexAttribPName,GetVertexArrayIndexedPName,GetVertexArrayIntegeriPNameEXT"/>
+        <enum value="0x88FD" name="GL_VERTEX_ATTRIB_ARRAY_INTEGER" group="GetVertexAttribPName,VertexArrayPName,GetVertexArrayIntegeriPNameEXT"/>
         <enum value="0x88FD" name="GL_VERTEX_ATTRIB_ARRAY_INTEGER_EXT" group="GetVertexAttribPName"/>
         <enum value="0x88FD" name="GL_VERTEX_ATTRIB_ARRAY_INTEGER_NV"/>
-        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR" group="GetVertexAttribPName,GetVertexArrayIndexedPName"/>
+        <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR" group="GetVertexAttribPName,VertexArrayPName"/>
         <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE" group="GetVertexAttribPName"/>
         <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ARB" group="GetVertexAttribPName"/>
         <enum value="0x88FE" name="GL_VERTEX_ATTRIB_ARRAY_DIVISOR_EXT" group="GetVertexAttribPName"/>
@@ -20423,7 +20423,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetVertexArrayIndexediv</name></proto>
             <param><ptype>GLuint</ptype> <name>vaobj</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="GetVertexArrayIndexedPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="VertexArrayPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> *<name>param</name></param>
         </command>
         <command>
@@ -20530,14 +20530,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetVertexAttribPointerv</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="GetVertexAttribPointerPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="VertexAttribPointerPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1">void **<name>pointer</name></param>
             <glx type="single" opcode="209"/>
         </command>
         <command>
             <proto>void <name>glGetVertexAttribPointervARB</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="GetVertexAttribPointerPName"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="VertexAttribPointerPropertyARB"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1">void **<name>pointer</name></param>
             <alias name="glGetVertexAttribPointerv"/>
         </command>
