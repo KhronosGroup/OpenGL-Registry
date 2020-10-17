@@ -392,7 +392,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_POINT_FADE_THRESHOLD_SIZE"/>
         </group>
 
-        <group name="VertexAttribPropertyARB" comment="Deprecated, use the GetVertexAttribPName group attribute instead.">
+        <group name="VertexAttribPropertyARB" comment="Deprecated, use the group attributes instead.">
             <enum name="GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING"/>
             <enum name="GL_VERTEX_ATTRIB_ARRAY_ENABLED"/>
             <enum name="GL_VERTEX_ATTRIB_ARRAY_SIZE"/>
@@ -450,7 +450,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_CLAMP_READ_COLOR"/>
         </group>
 
-        <group name="VertexArrayParamAPPLE" comment="Deprecated, use the group attributes instead.">
+        <group name="VertexArrayPNameAPPLE" comment="Deprecated, use the group attributes instead.">
             <enum name="GL_STORAGE_CLIENT_APPLE"/>
             <enum name="GL_STORAGE_CACHED_APPLE"/>
             <enum name="GL_STORAGE_SHARED_APPLE"/>
@@ -3873,7 +3873,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_UNIFORM_ATOMIC_COUNTER_BUFFER_INDEX"/>
         </group>
 
-        <group name="SamplerParameterPName" comment="Deprecated, use the group attributes instead.">
+        <group name="SamplerParameterI" comment="Deprecated, use the group attributes instead.">
             <enum name="GL_TEXTURE_WRAP_S"/>
             <enum name="GL_TEXTURE_WRAP_T"/>
             <enum name="GL_TEXTURE_WRAP_R"/>
@@ -3881,6 +3881,9 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_TEXTURE_MAG_FILTER"/>
             <enum name="GL_TEXTURE_COMPARE_MODE"/>
             <enum name="GL_TEXTURE_COMPARE_FUNC"/>
+        </group>
+
+        <group name="SamplerParameterF" comment="Deprecated, use the group attributes instead.">
             <enum name="GL_TEXTURE_BORDER_COLOR"/>
             <enum name="GL_TEXTURE_MIN_LOD"/>
             <enum name="GL_TEXTURE_MAX_LOD"/>
@@ -4051,7 +4054,7 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_SHADER_STORAGE_BLOCK"/>
         </group>
 
-        <group name="VertexAttribEnum" comment="Deprecated, use the GetVertexAttribPName group attribute instead.">
+        <group name="VertexAttribEnum" comment="Deprecated, use the group attributes instead.">
             <enum name="GL_VERTEX_ATTRIB_ARRAY_BUFFER_BINDING"/>
             <enum name="GL_VERTEX_ATTRIB_ARRAY_ENABLED"/>
             <enum name="GL_VERTEX_ATTRIB_ARRAY_SIZE"/>
