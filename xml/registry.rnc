@@ -123,7 +123,7 @@ Commands = element commands {
 # <command> defines a single command
 #   <proto> is the C function prototype, including the return type
 #   <param> are function parameters, in order
-#     class - type of object name (object handle). Handles with different types are not interchangeable. So handle created as [class=buffer] can not be passed to [class=shader]
+#     class - type of object name (object handle). Handles with different types are not compatible. So handle created as [class=buffer] can not be passed to [class=shader]
 #     <ptype> is a <type> name, if present
 #     <name> is the function / parameter name
 # The textual contents of <proto> and <param> should be legal C
