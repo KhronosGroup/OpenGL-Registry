@@ -49434,7 +49434,6 @@ typedef unsigned int GLhandleARB;
                 <command name="glGetShadingRateImagePaletteNV"/>
                 <command name="glGetShadingRateSampleLocationivNV"/>
                 <command name="glShadingRateImageBarrierNV"/>
-                <command name="glShadingRateImageBarrierNV"/>
                 <command name="glShadingRateImagePaletteNV"/>
                 <command name="glShadingRateSampleOrderNV"/>
                 <command name="glShadingRateSampleOrderCustomNV"/>
