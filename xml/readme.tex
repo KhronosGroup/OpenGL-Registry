@@ -2,7 +2,7 @@
 
 % Various packages of possible use. {index} creates problems for some reason.
 % \usepackage{index}
-\def\specpdftitle{The Khronos XML API Registry}
+\def\specpdftitle{The Khronos OpenGL API Registry Schema}
 \usepackage[pdftex,bookmarksnumbered=true,linktocpage,plainpages=false,pdftitle={\specpdftitle},colorlinks=true]{hyperref}
 \usepackage{amsmath,enumerate,epsfig,framed,mdframed,multicol,longtable,times,url}
 \usepackage[normalem]{ulem}
@@ -22,14 +22,14 @@
 
 \begin{document}
 
-\title{The Khronos XML API Registry}
+\title{The Khronos OpenGL API Registry Schema}
 \author{Jon Leech}
-\date{Last updated 2020-01-11}
+\date{Last updated 2020-10-27}
 \maketitle
 
 \begin{abstract}
 
-This document describes the Khronos XML API Registry schema, and provides
+This document describes the Khronos OpenGL API Registry XML schema, and provides
 some additional information about using the registry and scripts to generate
 C header files. The underlying XML files and scripts, as well as headers
 generated from the current authoritative copy of the XML files, can be
@@ -51,6 +51,9 @@ scripts to manipulate the XML, based on the lxml Python bindings. It comes
 with an XML schema and validator. Outside users are welcome to submit pull
 requests on github, although the XML schema itself is mature and unlikely to
 change at this point.
+
+Other APIs defined by Khronos, such as Vulkan and OpenXR, use a similar XML
+schema originally based on the OpenGL schema to describe those APIs.
 
 Some groups outside Khronos have their own XML based API descriptions,
 often used for additional purposes such as library code generators or
@@ -539,9 +542,11 @@ The \tag{param} tag defines the type and name of a parameter.
       string expression with poorly defined syntax, usually representing
       a length that is computed as a combination of other command
       parameter values, and possibly current GL state as well.
-\item \attr{class} - an arbitrary string, defining type of object name (object handle).
-      Handles with different types are not compatible. So handle created as
-      \attr{class=buffer} can not be passed to \attr{class=shader}.
+\item \attr{class} - an arbitrary string defining the type of object handles
+      passed in this parameter. Handles with different types are not
+      compatible; for example, handles created with
+      \attr{class}{\tt="buffer"} can not be passed to a parameter with
+      \attr{class}{\tt="shader"}.
 \end{itemize}
 
 If the group name is defined, it may be interpreted as described in
@@ -818,18 +823,16 @@ extensions and API versions, and to general cleanup, such as
 canonicalization of the XML or sorting of \tag{command} and
 \tag{extension} tags by name. Changes to the schema will be described in
 the change log of this document (see section~\ref{changelog}). Changes
-to the \code{.xml} files will be described in Subversion revision
-history.
+to the \code{.xml} files will be described in Github revision history.
 
 
 \subsection{Feature Enhancements to the Registry}
 \label{general:enhancements}
 
-There are lots of tools and additional tags that would make the XML
-format more expressive and the tools more capable. Khronos is open to
-hosting additional processing scripts for other purposes. We're hoping
-to be much more responsive to bugs filed in the Khronos public bugzilla
-now that there's a more modern and maintainable framework to build on.
+There are lots of tools and additional tags that would make the XML format
+more expressive and the tools more capable. Khronos is open to hosting
+additional processing scripts for other purposes related to the definition
+of the API and bindings to it.
 
 A partial wishlist follows:
 
@@ -951,6 +954,10 @@ corresponding \tag{group} tags.
 \label{changelog}
 
 \begin{itemize}
+\item 2020-10-27 - Add \attr{class} attribute to \tag{param} tags (github
+      pull request 428), update document title and make minor tweaks to
+      reflect this not being the only Khronos XML API schema in use, and
+      having migrated from Subversion to Github.
 \item 2020-01-11 - Add \attr{group} attribute to \tag{enum} tags, and
       deprecate \tag{group} tags (github issue 335).
 \item 2017-01-20 - Update for the move to the new github repository.

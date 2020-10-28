@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20200814 */
+/* Generated on date 20201027 */
 
 /* Generated C header for:
  * API: gles2
@@ -3861,6 +3861,11 @@ typedef void (GL_APIENTRYP PFNGLTEXTUREFOVEATIONPARAMETERSQCOMPROC) (GLuint text
 GL_APICALL void GL_APIENTRY glTextureFoveationParametersQCOM (GLuint texture, GLuint layer, GLuint focalPoint, GLfloat focalX, GLfloat focalY, GLfloat gainX, GLfloat gainY, GLfloat foveaArea);
 #endif
 #endif /* GL_QCOM_texture_foveated */
+
+#ifndef GL_QCOM_texture_foveated2
+#define GL_QCOM_texture_foveated2 1
+#define GL_TEXTURE_FOVEATED_CUTOFF_DENSITY_QCOM 0x96A0
+#endif /* GL_QCOM_texture_foveated2 */
 
 #ifndef GL_QCOM_texture_foveated_subsampled_layout
 #define GL_QCOM_texture_foveated_subsampled_layout 1
