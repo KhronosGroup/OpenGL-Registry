@@ -539,6 +539,9 @@ The \tag{param} tag defines the type and name of a parameter.
       string expression with poorly defined syntax, usually representing
       a length that is computed as a combination of other command
       parameter values, and possibly current GL state as well.
+\item \attr{class} - an arbitrary string, defining type of object name (object handle).
+      Handles with different types are not compatible. So handle created as
+      \attr{class=buffer} can not be passed to \attr{class=shader}.
 \end{itemize}
 
 If the group name is defined, it may be interpreted as described in
