@@ -11586,7 +11586,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x95AE" name="GL_SHADING_RATE_SAMPLE_ORDER_DEFAULT_NV"/>
         <enum value="0x95AF" name="GL_SHADING_RATE_SAMPLE_ORDER_PIXEL_MAJOR_NV"/>
         <enum value="0x95B0" name="GL_SHADING_RATE_SAMPLE_ORDER_SAMPLE_MAJOR_NV"/>
-        <unused start="0x95B1" end="0x95B2" vendor="NV"/>
+        <enum value="0x95B1" name="GL_SHADING_RATE_IMAGE_PER_PRIMITIVE_NV"/>
+        <enum value="0x95B2" name="GL_SHADING_RATE_IMAGE_PALETTE_COUNT_NV"/>
         <enum value="0x95B3" name="GL_SEMAPHORE_TYPE_NV" group="SemaphoreParameterName"/>
         <enum value="0x95B4" name="GL_SEMAPHORE_TYPE_BINARY_NV" group="SemaphoreParameterName"/>
         <enum value="0x95B5" name="GL_SEMAPHORE_TYPE_TIMELINE_NV" group="SemaphoreParameterName"/>
@@ -49200,6 +49201,12 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_PRIMITIVE_RESTART_INDEX_NV"/>
                 <command name="glPrimitiveRestartNV"/>
                 <command name="glPrimitiveRestartIndexNV"/>
+            </require>
+        </extension>
+        <extension name="GL_NV_primitive_shading_rate" supported="gl|glcore|gles2">
+            <require>
+                <enum name="GL_SHADING_RATE_IMAGE_PER_PRIMITIVE_NV"/>
+                <enum name="GL_SHADING_RATE_IMAGE_PALETTE_COUNT_NV"/>
             </require>
         </extension>
         <extension name="GL_NV_query_resource" supported="gl">

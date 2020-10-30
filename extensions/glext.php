@@ -1045,4 +1045,6 @@
 </li>
 <li value=553><a href="extensions/EXT/GLX_EXT_no_config_context.txt">GLX_EXT_no_config_context</a>
 </li>
+<li value=554><a href="extensions/NV/NV_primitive_shading_rate.txt">GL_NV_primitive_shading_rate</a>
+</li>
 </ol>

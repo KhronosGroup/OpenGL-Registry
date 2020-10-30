@@ -3660,6 +3660,13 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_primitive_restart.txt',
     },
+    'GL_NV_primitive_shading_rate' : {
+        'number' : 554,
+        'esnumber' : 332,
+        'flags' : { 'public' },
+        'supporters' : { 'NVIDIA' },
+        'url' : 'extensions/NV/NV_primitive_shading_rate.txt',
+    },
     'GL_NV_query_resource' : {
         'number' : 511,
         'flags' : { 'public' },
