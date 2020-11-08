@@ -20845,10 +20845,10 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>rowBufSize</name></param>
-            <param>void *<name>row</name></param>
+            <param len="rowBufSize">void *<name>row</name></param>
             <param><ptype>GLsizei</ptype> <name>columnBufSize</name></param>
-            <param>void *<name>column</name></param>
-            <param>void *<name>span</name></param>
+            <param len="columnBufSize">void *<name>column</name></param>
+            <param len="0">void *<name>span</name></param>
         </command>
         <command>
             <proto>void <name>glGetnSeparableFilterARB</name></proto>
