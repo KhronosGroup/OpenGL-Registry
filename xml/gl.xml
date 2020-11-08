@@ -20690,7 +20690,7 @@ typedef unsigned int GLhandleARB;
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLint</ptype> <name>lod</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>pixels</name></param>
+            <param len="bufSize">void *<name>pixels</name></param>
         </command>
         <command>
             <proto>void <name>glGetnCompressedTexImageARB</name></proto>
