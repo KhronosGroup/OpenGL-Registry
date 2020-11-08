@@ -20803,7 +20803,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetnPixelMapfvARB</name></proto>
             <param group="PixelMap"><ptype>GLenum</ptype> <name>map</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param len="bufSize"><ptype>GLfloat</ptype> *<name>values</name></param>
+            <param len="COMPSIZE(bufSize)"><ptype>GLfloat</ptype> *<name>values</name></param>
         </command>
         <command>
             <proto>void <name>glGetnPixelMapuiv</name></proto>
