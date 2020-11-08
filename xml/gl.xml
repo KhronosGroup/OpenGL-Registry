@@ -16699,6 +16699,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glFlushVertexArrayRangeNV</name></proto>
+            <param><ptype>GLsizei</ptype> <name>length</name></param>
+            <param len="length">void *<name>pointer</name></param>
         </command>
         <command>
             <proto>void <name>glFogCoordFormatNV</name></proto>
