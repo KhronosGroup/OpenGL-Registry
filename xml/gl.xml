@@ -20675,7 +20675,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>table</name></param>
+            <param len="bufSize">void *<name>table</name></param>
         </command>
         <command>
             <proto>void <name>glGetnColorTableARB</name></proto>
@@ -20690,7 +20690,7 @@ typedef unsigned int GLhandleARB;
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLint</ptype> <name>lod</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>pixels</name></param>
+            <param len="bufSize">void *<name>pixels</name></param>
         </command>
         <command>
             <proto>void <name>glGetnCompressedTexImageARB</name></proto>
@@ -20705,7 +20705,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>image</name></param>
+            <param len="bufSize">void *<name>image</name></param>
         </command>
         <command>
             <proto>void <name>glGetnConvolutionFilterARB</name></proto>
@@ -20722,7 +20722,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>values</name></param>
+            <param len="bufSize">void *<name>values</name></param>
         </command>
         <command>
             <proto>void <name>glGetnHistogramARB</name></proto>
@@ -20738,14 +20738,14 @@ typedef unsigned int GLhandleARB;
             <param group="MapTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="MapQuery"><ptype>GLenum</ptype> <name>query</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLdouble</ptype> *<name>v</name></param>
+            <param len="COMPSIZE(bufSize)"><ptype>GLdouble</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glGetnMapdvARB</name></proto>
             <param group="MapTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="MapQuery"><ptype>GLenum</ptype> <name>query</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param len="bufSize"><ptype>GLdouble</ptype> *<name>v</name></param>
+            <param len="COMPSIZE(bufSize)"><ptype>GLdouble</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glGetnMapfv</name></proto>
@@ -20782,7 +20782,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>values</name></param>
+            <param len="bufSize">void *<name>values</name></param>
         </command>
         <command>
             <proto>void <name>glGetnMinmaxARB</name></proto>
@@ -20797,13 +20797,13 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetnPixelMapfv</name></proto>
             <param group="PixelMap"><ptype>GLenum</ptype> <name>map</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLfloat</ptype> *<name>values</name></param>
+            <param len="COMPSIZE(bufSize)"><ptype>GLfloat</ptype> *<name>values</name></param>
         </command>
         <command>
             <proto>void <name>glGetnPixelMapfvARB</name></proto>
             <param group="PixelMap"><ptype>GLenum</ptype> <name>map</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param len="bufSize"><ptype>GLfloat</ptype> *<name>values</name></param>
+            <param len="COMPSIZE(bufSize)"><ptype>GLfloat</ptype> *<name>values</name></param>
         </command>
         <command>
             <proto>void <name>glGetnPixelMapuiv</name></proto>
@@ -20832,7 +20832,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetnPolygonStipple</name></proto>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLubyte</ptype> *<name>pattern</name></param>
+            <param len="bufSize"><ptype>GLubyte</ptype> *<name>pattern</name></param>
         </command>
         <command>
             <proto>void <name>glGetnPolygonStippleARB</name></proto>
@@ -20845,10 +20845,10 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>rowBufSize</name></param>
-            <param>void *<name>row</name></param>
+            <param len="rowBufSize">void *<name>row</name></param>
             <param><ptype>GLsizei</ptype> <name>columnBufSize</name></param>
-            <param>void *<name>column</name></param>
-            <param>void *<name>span</name></param>
+            <param len="columnBufSize">void *<name>column</name></param>
+            <param len="0">void *<name>span</name></param>
         </command>
         <command>
             <proto>void <name>glGetnSeparableFilterARB</name></proto>
