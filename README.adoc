@@ -1,3 +1,23 @@
+// XX to be filled in by the merger of this PR (likely Jon)
+= *Advance Notice of Pending XML Registry Change (posted 2020-11-XX)*
+
+[WARNING]
+.Warning
+====
+Shortly after 2021-02-XX, we will be removing the old-style group blocks
+(contained within the `groups` section at the top of the XML registry)
+The groups are intended to contain all the possible legal values
+for corresponding function parameters, but it is likely that many
+of the groups are out of date relative to current OpenGL and OpenGL
+ES specifications, and the many extensions to those specifications.
+As of Wednesday 8th January 2020, these group blocks have been
+deprecated in favour of group attributes declared inline with
+the enumerant itself, which are currently the only actively updated
+source for groupings. For more information, see public issue 
+link:https://github.com/KhronosGroup/OpenGL-Registry/issues/335[#335].
+====
+
+
 = OpenGL-Registry
 
 
