@@ -33,7 +33,7 @@ Status
 
 Version
 
-    Version 8, December 11, 2019
+    Version 9, November 20, 2020
 
 Number
 
@@ -477,7 +477,7 @@ Examples
         
     (2) This example uses QueryCounter.
     
-        GLint queries[1];
+        GLint queries[2];
         GLint available = 0;
         GLint disjointOccurred = 0;
         /* Timer queries can contain more than 32 bits of data, so always
@@ -485,20 +485,24 @@ Examples
         GLuint64 timeStart, timeEnd, timeElapsed = 0;
 
         /* Create a query object. */
-        glGenQueries(1, queries);
+        glGenQueries(2, queries);
 
         /* Clear disjoint error */
         glGetIntegerv(GL_GPU_DISJOINT_EXT, &disjointOccurred);
 
+        /* Query current timestamp before drawing */
+        glQueryCounterEXT(queries[0], GL_TIMESTAMP_EXT);
+
         /* Draw full rendertarget of objects */
 
-        glQueryCounterEXT(queries[0], GL_TIMESTAMP_EXT);
+        /* Query current timestamp after drawing */
+        glQueryCounterEXT(queries[1], GL_TIMESTAMP_EXT);
         
         /* Do some other work so you don't stall waiting for available */
         
         /* Wait for the query result to become available */
         while (!available) {
-            glGetQueryObjectiv(queries[0], GL_QUERY_RESULT_AVAILABLE, &available);
+            glGetQueryObjectiv(queries[1], GL_QUERY_RESULT_AVAILABLE, &available);
         }
         
         /* Check for disjoint operation. */
@@ -507,15 +511,18 @@ Examples
         /* If a disjoint operation occurred, continue without reading the the
            values */
         if (!disjointOccurred) {
+            /* Get timestamp for when rendertarget started. */
+            glGetQueryObjectui64vEXT(queries[0], GL_QUERY_RESULT, &timeStart);
             /* Get timestamp for when rendertarget finished. */
-            glGetQueryObjectui64vEXT(queries[0], GL_QUERY_RESULT, &timeElapsed);
+            glGetQueryObjectui64vEXT(queries[1], GL_QUERY_RESULT, &timeEnd);
+            /* See how much time the rendering took in nanoseconds. */
+            timeElapsed = timeEnd - timeStart;
             
             /* Do something useful with the time if a disjoint operation did
                not occur.  Note that care should be taken to use all
                significant bits of the result, not just the least significant
                32 bits. */
-                
-            AdjustObjectLODBasedOnDrawTime(i, timeElapsed);
+            AdjustObjectLODBasedOnDrawTime(timeElapsed);
         }
         
     (3) This example demonstrates how to measure the latency between GL
@@ -538,7 +545,7 @@ Examples
         glGetIntegerv(GL_GPU_DISJOINT_EXT, &disjointOccurred);
         
         /* Queue a query to find out when the frame finishes on the GL */
-        glQueryCounterEXT(GL_TIMESTAMP_EXT, endFrameQuery);
+        glQueryCounterEXT(endFrameQuery, GL_TIMESTAMP_EXT);
 
         /* Get the current GL time without stalling the GL */
         glGetIntegerv(GL_TIMESTAMP_EXT, &flushTime);
@@ -754,6 +761,8 @@ Issues
     will not be set.
 
 Revision History
+    Revision 9, 2020/11/20 (xndcn)
+      - Minor fix of code sample
     Revision 8, 2019/12/11 (Jon Leech)
       - Add actual spec language defining GetInteger64vEXT (github
         OpenGL-Registry issue 326)
