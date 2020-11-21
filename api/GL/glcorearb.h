@@ -5612,6 +5612,12 @@ GLAPI void APIENTRY glGetProgramResourcefvNV (GLuint program, GLenum programInte
 #define GL_SHARED_EDGE_NV                 0xC0
 #endif /* GL_NV_path_rendering_shared_edge */
 
+#ifndef GL_NV_primitive_shading_rate
+#define GL_NV_primitive_shading_rate 1
+#define GL_SHADING_RATE_IMAGE_PER_PRIMITIVE_NV 0x95B1
+#define GL_SHADING_RATE_IMAGE_PALETTE_COUNT_NV 0x95B2
+#endif /* GL_NV_primitive_shading_rate */
+
 #ifndef GL_NV_representative_fragment_test
 #define GL_NV_representative_fragment_test 1
 #define GL_REPRESENTATIVE_FRAGMENT_TEST_NV 0x937F

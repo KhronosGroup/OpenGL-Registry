@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20201027 */
+/* Generated on date 20201119 */
 
 /* Generated C header for:
  * API: gles2
@@ -3441,6 +3441,12 @@ typedef void (GL_APIENTRYP PFNGLPOLYGONMODENVPROC) (GLenum face, GLenum mode);
 GL_APICALL void GL_APIENTRY glPolygonModeNV (GLenum face, GLenum mode);
 #endif
 #endif /* GL_NV_polygon_mode */
+
+#ifndef GL_NV_primitive_shading_rate
+#define GL_NV_primitive_shading_rate 1
+#define GL_SHADING_RATE_IMAGE_PER_PRIMITIVE_NV 0x95B1
+#define GL_SHADING_RATE_IMAGE_PALETTE_COUNT_NV 0x95B2
+#endif /* GL_NV_primitive_shading_rate */
 
 #ifndef GL_NV_read_buffer
 #define GL_NV_read_buffer 1

@@ -11586,7 +11586,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x95AE" name="GL_SHADING_RATE_SAMPLE_ORDER_DEFAULT_NV"/>
         <enum value="0x95AF" name="GL_SHADING_RATE_SAMPLE_ORDER_PIXEL_MAJOR_NV"/>
         <enum value="0x95B0" name="GL_SHADING_RATE_SAMPLE_ORDER_SAMPLE_MAJOR_NV"/>
-        <unused start="0x95B1" end="0x95B2" vendor="NV"/>
+        <enum value="0x95B1" name="GL_SHADING_RATE_IMAGE_PER_PRIMITIVE_NV" group="EnableCap,GetPName"/>
+        <enum value="0x95B2" name="GL_SHADING_RATE_IMAGE_PALETTE_COUNT_NV" group="GetPName"/>
         <enum value="0x95B3" name="GL_SEMAPHORE_TYPE_NV" group="SemaphoreParameterName"/>
         <enum value="0x95B4" name="GL_SEMAPHORE_TYPE_BINARY_NV" group="SemaphoreParameterName"/>
         <enum value="0x95B5" name="GL_SEMAPHORE_TYPE_TIMELINE_NV" group="SemaphoreParameterName"/>
@@ -15006,7 +15007,7 @@ typedef unsigned int GLhandleARB;
             <param len="n"><ptype>GLuint</ptype> *<name>states</name></param>
         </command>
         <command>
-            <proto group="sync"><ptype>GLsync</ptype> <name>glCreateSyncFromCLeventARB</name></proto>
+            <proto class="sync" group="sync"><ptype>GLsync</ptype> <name>glCreateSyncFromCLeventARB</name></proto>
             <param group="cl_context"><ptype>struct _cl_context</ptype> *<name>context</name></param>
             <param group="cl_event"><ptype>struct _cl_event</ptype> *<name>event</name></param>
             <param><ptype>GLbitfield</ptype> <name>flags</name></param>
@@ -16601,12 +16602,12 @@ typedef unsigned int GLhandleARB;
             <param len="n">const <ptype>GLfixed</ptype> *<name>buffer</name></param>
         </command>
         <command>
-            <proto group="sync"><ptype>GLsync</ptype> <name>glFenceSync</name></proto>
+            <proto class="sync" group="sync"><ptype>GLsync</ptype> <name>glFenceSync</name></proto>
             <param group="SyncCondition"><ptype>GLenum</ptype> <name>condition</name></param>
             <param group="SyncBehaviorFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
         </command>
         <command>
-            <proto group="sync"><ptype>GLsync</ptype> <name>glFenceSyncAPPLE</name></proto>
+            <proto class="sync" group="sync"><ptype>GLsync</ptype> <name>glFenceSyncAPPLE</name></proto>
             <param group="SyncCondition"><ptype>GLenum</ptype> <name>condition</name></param>
             <param group="SyncBehaviorFlags"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <alias name="glFenceSync"/>
@@ -20675,7 +20676,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>table</name></param>
+            <param len="bufSize">void *<name>table</name></param>
         </command>
         <command>
             <proto>void <name>glGetnColorTableARB</name></proto>
@@ -20690,7 +20691,7 @@ typedef unsigned int GLhandleARB;
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLint</ptype> <name>lod</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>pixels</name></param>
+            <param len="bufSize">void *<name>pixels</name></param>
         </command>
         <command>
             <proto>void <name>glGetnCompressedTexImageARB</name></proto>
@@ -20705,7 +20706,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>image</name></param>
+            <param len="bufSize">void *<name>image</name></param>
         </command>
         <command>
             <proto>void <name>glGetnConvolutionFilterARB</name></proto>
@@ -20722,7 +20723,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>values</name></param>
+            <param len="bufSize">void *<name>values</name></param>
         </command>
         <command>
             <proto>void <name>glGetnHistogramARB</name></proto>
@@ -20738,7 +20739,7 @@ typedef unsigned int GLhandleARB;
             <param group="MapTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="MapQuery"><ptype>GLenum</ptype> <name>query</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLdouble</ptype> *<name>v</name></param>
+            <param len="COMPSIZE(bufSize)"><ptype>GLdouble</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glGetnMapdvARB</name></proto>
@@ -20782,7 +20783,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>values</name></param>
+            <param len="bufSize">void *<name>values</name></param>
         </command>
         <command>
             <proto>void <name>glGetnMinmaxARB</name></proto>
@@ -20797,7 +20798,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetnPixelMapfv</name></proto>
             <param group="PixelMap"><ptype>GLenum</ptype> <name>map</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLfloat</ptype> *<name>values</name></param>
+            <param len="COMPSIZE(bufSize)"><ptype>GLfloat</ptype> *<name>values</name></param>
         </command>
         <command>
             <proto>void <name>glGetnPixelMapfvARB</name></proto>
@@ -20832,7 +20833,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetnPolygonStipple</name></proto>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLubyte</ptype> *<name>pattern</name></param>
+            <param len="bufSize"><ptype>GLubyte</ptype> *<name>pattern</name></param>
         </command>
         <command>
             <proto>void <name>glGetnPolygonStippleARB</name></proto>
@@ -20845,10 +20846,10 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>rowBufSize</name></param>
-            <param>void *<name>row</name></param>
+            <param len="rowBufSize">void *<name>row</name></param>
             <param><ptype>GLsizei</ptype> <name>columnBufSize</name></param>
-            <param>void *<name>column</name></param>
-            <param>void *<name>span</name></param>
+            <param len="columnBufSize">void *<name>column</name></param>
+            <param len="0">void *<name>span</name></param>
         </command>
         <command>
             <proto>void <name>glGetnSeparableFilterARB</name></proto>
@@ -21119,7 +21120,7 @@ typedef unsigned int GLhandleARB;
             <param>const void *<name>name</name></param>
         </command>
         <command>
-            <proto group="sync"><ptype>GLsync</ptype> <name>glImportSyncEXT</name></proto>
+            <proto class="sync" group="sync"><ptype>GLsync</ptype> <name>glImportSyncEXT</name></proto>
             <param><ptype>GLenum</ptype> <name>external_sync_type</name></param>
             <param><ptype>GLintptr</ptype> <name>external_sync</name></param>
             <param><ptype>GLbitfield</ptype> <name>flags</name></param>
@@ -46183,7 +46184,6 @@ typedef unsigned int GLhandleARB;
                 <command name="glProgramUniform2uivEXT"/>
                 <command name="glProgramUniform3uivEXT"/>
                 <command name="glProgramUniform4uivEXT"/>
-                <command name="glProgramUniformMatrix4fvEXT"/>
                 <command name="glProgramUniformMatrix2x3fvEXT"/>
                 <command name="glProgramUniformMatrix3x2fvEXT"/>
                 <command name="glProgramUniformMatrix2x4fvEXT"/>
@@ -49200,6 +49200,12 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_PRIMITIVE_RESTART_INDEX_NV"/>
                 <command name="glPrimitiveRestartNV"/>
                 <command name="glPrimitiveRestartIndexNV"/>
+            </require>
+        </extension>
+        <extension name="GL_NV_primitive_shading_rate" supported="gl|glcore|gles2">
+            <require>
+                <enum name="GL_SHADING_RATE_IMAGE_PER_PRIMITIVE_NV"/>
+                <enum name="GL_SHADING_RATE_IMAGE_PALETTE_COUNT_NV"/>
             </require>
         </extension>
         <extension name="GL_NV_query_resource" supported="gl">
