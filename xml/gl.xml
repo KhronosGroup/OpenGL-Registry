@@ -19132,7 +19132,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>monitor</name></param>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLsizei</ptype> <name>dataSize</name></param>
-            <param len="COMPSIZE(dataSize)"><ptype>GLuint</ptype> *<name>data</name></param>
+            <param len="dataSize / 4"><ptype>GLuint</ptype> *<name>data</name></param>
             <param len="1"><ptype>GLint</ptype> *<name>bytesWritten</name></param>
         </command>
         <command>
