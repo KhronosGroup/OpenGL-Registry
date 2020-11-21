@@ -9982,7 +9982,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8DF5" name="GL_HIGH_INT" group="PrecisionType"/>
         <enum value="0x8DF6" name="GL_UNSIGNED_INT_10_10_10_2_OES"/>
         <enum value="0x8DF7" name="GL_INT_10_10_10_2_OES"/>
-        <enum value="0x8DF8" name="GL_SHADER_BINARY_FORMATS"/>
+        <enum value="0x8DF8" name="GL_SHADER_BINARY_FORMATS" group="ShaderBinaryFormat"/>
         <enum value="0x8DF9" name="GL_NUM_SHADER_BINARY_FORMATS" group="GetPName"/>
         <enum value="0x8DFA" name="GL_SHADER_COMPILER" group="GetPName"/>
         <enum value="0x8DFB" name="GL_MAX_VERTEX_UNIFORM_VECTORS" group="GetPName"/>
