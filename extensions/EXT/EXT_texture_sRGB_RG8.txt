@@ -31,7 +31,7 @@ Version
 Number
 
     OpenGL ES Extension #223
-    OpenGL Extension #PENDING (what a trendy hashtag (wow so trendy))
+    OpenGL Extension #555
 
 Dependencies
 
