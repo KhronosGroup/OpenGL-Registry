@@ -51869,5 +51869,13 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_EXT_texture_shadow_lod" supported="gl|glcore|gles2"/>
+        <extension name="GL_EXT_ES1_compatibility" supported="gl">
+            <require>
+                <command name="glClipPlanef"/>
+                <command name="glFrustumf"/>
+                <command name="glGetClipPlanef"/>
+                <command name="glOrthof"/>
+            </require>
+        </extension>
     </extensions>
 </registry>
