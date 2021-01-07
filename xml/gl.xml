@@ -28916,6 +28916,13 @@ typedef unsigned int GLhandleARB;
             <param class="texture" group="Texture"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
+            <proto>void <name>glExtrapolateTex2DQCOM</name></proto>
+            <param class="texture"><ptype>GLuint</ptype> <name>src1</name></param>
+            <param class="texture"><ptype>GLuint</ptype> <name>src2</name></param>
+            <param class="texture"><ptype>GLuint</ptype> <name>output</name></param>
+            <param><ptype>GLfloat</ptype> <name>scaleFactor</name></param>
+        </command>
+        <command>
             <proto>void <name>glTexFilterFuncSGIS</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="TextureFilterSGIS"><ptype>GLenum</ptype> <name>filter</name></param>
@@ -51098,6 +51105,11 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_FOVEATION_SCALED_BIN_METHOD_BIT_QCOM"/>
                 <command name="glTexEstimateMotionQCOM"/>
                 <command name="glTexEstimateMotionRegionsQCOM"/>
+            </require>
+        </extension>
+        <extension name="GL_QCOM_frame_extrapolation" supported="gles2">
+            <require>
+                <command name="glExtrapolateTex2DQCOM"/>
             </require>
         </extension>
         <extension name="GL_QCOM_texture_foveated" supported="gles2">

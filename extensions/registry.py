@@ -4535,6 +4535,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_motion_estimation.txt',
     },
+    'QCOM_frame_extrapolation' : {
+        'esnumber' : 333,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_frame_extrapolation.txt',
+    },
     'GL_QCOM_performance_monitor_global_mode' : {
         'esnumber' : 56,
         'flags' : { 'public' },
