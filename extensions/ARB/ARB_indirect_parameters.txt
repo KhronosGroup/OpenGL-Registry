@@ -36,8 +36,8 @@ Status
 
 Version
 
-    Last Modified Date: 23 October 2017
-    Revision: 4
+    Last Modified Date: 11 November 2020
+    Revision: 5
 
 Number
 
@@ -139,7 +139,7 @@ Additions to Chapter 10 of the OpenGL 4.3 (Core Profile) Specification
         void MultiDrawArraysIndirectCountARB(enum mode,
                                              const void *indirect,
                                              intptr drawcount,
-                                             intptr maxdrawcount,
+                                             sizei maxdrawcount,
                                              sizei stride);
 
     behaves similarly to MultiDrawArraysIndirect, except that <drawcount>
@@ -218,3 +218,6 @@ Revision History
      3    06/20/2013  pdaniell  Modify the <indirect> parameter type to
                                 const void *.
      4    10/23/2017  nhaehnle  Add COMMAND_BARRIER_BIT language.
+     5    11/11/2020  pdaniell  Fix the type of the maxdrawcount parameter
+                                of MultiDrawArraysIndirectCountARB to be
+                                sizei making it consistent in the extension.
