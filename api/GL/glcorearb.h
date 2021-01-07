@@ -4662,6 +4662,11 @@ GLAPI void APIENTRY glFramebufferFetchBarrierEXT (void);
 #define GL_SR8_EXT                        0x8FBD
 #endif /* GL_EXT_texture_sRGB_R8 */
 
+#ifndef GL_EXT_texture_sRGB_RG8
+#define GL_EXT_texture_sRGB_RG8 1
+#define GL_SRG8_EXT                       0x8FBE
+#endif /* GL_EXT_texture_sRGB_RG8 */
+
 #ifndef GL_EXT_texture_sRGB_decode
 #define GL_EXT_texture_sRGB_decode 1
 #define GL_TEXTURE_SRGB_DECODE_EXT        0x8A48

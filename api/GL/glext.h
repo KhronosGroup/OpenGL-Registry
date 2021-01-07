@@ -32,7 +32,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20201119
+#define GL_GLEXT_VERSION 20210107
 
 #include <KHR/khrplatform.h>
 
@@ -8535,6 +8535,11 @@ GLAPI void APIENTRY glTextureNormalEXT (GLenum mode);
 #define GL_EXT_texture_sRGB_R8 1
 #define GL_SR8_EXT                        0x8FBD
 #endif /* GL_EXT_texture_sRGB_R8 */
+
+#ifndef GL_EXT_texture_sRGB_RG8
+#define GL_EXT_texture_sRGB_RG8 1
+#define GL_SRG8_EXT                       0x8FBE
+#endif /* GL_EXT_texture_sRGB_RG8 */
 
 #ifndef GL_EXT_texture_sRGB_decode
 #define GL_EXT_texture_sRGB_decode 1
