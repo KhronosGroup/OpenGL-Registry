@@ -10375,8 +10375,8 @@ typedef unsigned int GLhandleARB;
             <unused start="0x8FB4" end="0x8FBA" vendor="QCOM"/>
         <enum value="0x8FBB" name="GL_GPU_DISJOINT_EXT"/>
             <unused start="0x8FBC" vendor="QCOM"/>
-        <enum value="0x8FBD" name="GL_SR8_EXT"/>
-        <enum value="0x8FBE" name="GL_SRG8_EXT"/>
+        <enum value="0x8FBD" name="GL_SR8_EXT" group="InternalFormat"/>
+        <enum value="0x8FBE" name="GL_SRG8_EXT" group="InternalFormat"/>
         <enum value="0x8FBF" name="GL_TEXTURE_FORMAT_SRGB_OVERRIDE_EXT"/>
     </enums>
 
@@ -46816,7 +46816,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_SR8_EXT"/>
             </require>
         </extension>
-        <extension name="GL_EXT_texture_sRGB_RG8" supported="gles2">
+        <extension name="GL_EXT_texture_sRGB_RG8" supported="gles2|gl|glcore">
             <require>
                 <enum name="GL_SRG8_EXT"/>
             </require>

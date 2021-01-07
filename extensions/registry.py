@@ -2560,6 +2560,7 @@ registry = {
         'url' : 'extensions/EXT/EXT_texture_sRGB_R8.txt',
     },
     'GL_EXT_texture_sRGB_RG8' : {
+        'number' : 555,
         'esnumber' : 223,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_texture_sRGB_RG8.txt',
