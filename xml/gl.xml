@@ -9324,7 +9324,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C07" name="GL_FACTOR_ALPHA_MODULATE_IMG"/>
         <enum value="0x8C08" name="GL_FRAGMENT_ALPHA_MODULATE_IMG"/>
         <enum value="0x8C09" name="GL_ADD_BLEND_IMG"/>
-        <enum value="0x8C0A" name="GL_SGX_BINARY_IMG"/>
+        <enum value="0x8C0A" name="GL_SGX_BINARY_IMG" group="ShaderBinaryFormat"/>
             <unused start="0x8C0B" end="0x8C0F" vendor="IMG"/>
     </enums>
 
@@ -9982,7 +9982,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8DF5" name="GL_HIGH_INT" group="PrecisionType"/>
         <enum value="0x8DF6" name="GL_UNSIGNED_INT_10_10_10_2_OES"/>
         <enum value="0x8DF7" name="GL_INT_10_10_10_2_OES"/>
-        <enum value="0x8DF8" name="GL_SHADER_BINARY_FORMATS"/>
+        <enum value="0x8DF8" name="GL_SHADER_BINARY_FORMATS" group="GetPName"/>
         <enum value="0x8DF9" name="GL_NUM_SHADER_BINARY_FORMATS" group="GetPName"/>
         <enum value="0x8DFA" name="GL_SHADER_COMPILER" group="GetPName"/>
         <enum value="0x8DFB" name="GL_MAX_VERTEX_UNIFORM_VECTORS" group="GetPName"/>
@@ -10319,7 +10319,7 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8F60" end="0x8F6F" vendor="ARM" comment="For Remi Pedersen, Khronos bug 3745">
-        <enum value="0x8F60" name="GL_MALI_SHADER_BINARY_ARM"/>
+        <enum value="0x8F60" name="GL_MALI_SHADER_BINARY_ARM" group="ShaderBinaryFormat"/>
         <enum value="0x8F61" name="GL_MALI_PROGRAM_BINARY_ARM"/>
             <unused start="0x8F62" vendor="ARM"/>
         <enum value="0x8F63" name="GL_MAX_SHADER_PIXEL_LOCAL_STORAGE_FAST_SIZE_EXT"/>
@@ -10381,7 +10381,7 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8FC0" end="0x8FDF" vendor="VIV" comment="For Frido Garritsen, bug 4526">
-        <enum value="0x8FC4" name="GL_SHADER_BINARY_VIV"/>
+        <enum value="0x8FC4" name="GL_SHADER_BINARY_VIV" group="ShaderBinaryFormat"/>
     </enums>
 
     <enums namespace="GL" start="0x8FE0" end="0x8FFF" vendor="NV" comment="For Pat Brown, bug 4935">
@@ -10964,7 +10964,7 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x9250" end="0x925F" vendor="DMP" comment="For Eisaku Ohbuchi via email">
-        <enum value="0x9250" name="GL_SHADER_BINARY_DMP"/>
+        <enum value="0x9250" name="GL_SHADER_BINARY_DMP" group="ShaderBinaryFormat"/>
         <enum value="0x9251" name="GL_SMAPHS30_PROGRAM_BINARY_DMP"/>
         <enum value="0x9252" name="GL_SMAPHS_PROGRAM_BINARY_DMP"/>
         <enum value="0x9253" name="GL_DMP_PROGRAM_BINARY_DMP"/>
@@ -10972,7 +10972,7 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x9260" end="0x926F" vendor="FJ" comment="Khronos bug 7486">
-        <enum value="0x9260" name="GL_GCCSO_SHADER_BINARY_FJ"/>
+        <enum value="0x9260" name="GL_GCCSO_SHADER_BINARY_FJ" group="ShaderBinaryFormat"/>
             <unused start="0x9261" end="0x926F" vendor="FJ"/>
     </enums>
 
