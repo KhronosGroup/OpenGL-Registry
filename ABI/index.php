@@ -69,21 +69,21 @@ include_once("../../../assets/static_pages/khr_page_top.php");
 
     <ul>
     <li> Internal implementation dependent issues - details of direct
-	rendering, loadable driver modules, etc. Such details are
-	hidden from the public interfaces by the implementation,
-	and are irrelevant to applications using the ABI. </li>
+        rendering, loadable driver modules, etc. Such details are
+        hidden from the public interfaces by the implementation,
+        and are irrelevant to applications using the ABI. </li>
     <li> Operating systems other than Linux. Other platforms such as BSD
-	are welcome to use whatever comes out of this project, but we
-	are explicitly not trying to solve this problem for every free
-	OS in the world. </li>
+        are welcome to use whatever comes out of this project, but we
+        are explicitly not trying to solve this problem for every free
+        OS in the world. </li>
     <li> Changes to the OpenGL API. The definition of OpenGL is
-	controlled by the OpenGL Architecture Review Board, and we in no
-	way challenge this. A single GLX extension is required; this
-	extension has already been approved by the ARB. </li>
+        controlled by the OpenGL Architecture Review Board, and we in no
+        way challenge this. A single GLX extension is required; this
+        extension has already been approved by the ARB. </li>
     <li> Use of 3D outside the X11/GLX context. There are a variety of
-	approaches (fxMesa, GGI, etc.) that again are welcome to use
-	relevant parts of this project, but whose support is not part of
-	its goals. </li>
+        approaches (fxMesa, GGI, etc.) that again are welcome to use
+        relevant parts of this project, but whose support is not part of
+        its goals. </li>
     </ul>
 
 <p> 1.3. We believe all critical decisions have been made. Some
@@ -119,50 +119,50 @@ include_once("../../../assets/static_pages/khr_page_top.php");
 
 <table border="1" class="center-table">
     <tr><td>GL datatype</td>
-	<td>Description</td>
-	<td>gcc equivalent for IA32</td></tr>
+        <td>Description</td>
+        <td>gcc equivalent for IA32</td></tr>
     <tr><td><tt>GLboolean</tt></td>
-	<td>8-bit boolean</td>
-	<td><tt>unsigned char</tt></td></tr>
+        <td>8-bit boolean</td>
+        <td><tt>unsigned char</tt></td></tr>
     <tr><td><tt>GLbyte</tt></td>
-	<td>signed 8-bit 2's-complement integer</td>
-	<td><tt>signed char</tt></td></tr>
+        <td>signed 8-bit 2's-complement integer</td>
+        <td><tt>signed char</tt></td></tr>
     <tr><td><tt>GLubyte</tt></td>
-	<td>unsigned 8-bit integer</td>
-	<td><tt>unsigned char</tt></td></tr>
+        <td>unsigned 8-bit integer</td>
+        <td><tt>unsigned char</tt></td></tr>
     <tr><td><tt>GLshort</tt></td>
-	<td>signed 16-bit 2's-complement integer</td>
-	<td><tt>short</tt></td></tr>
+        <td>signed 16-bit 2's-complement integer</td>
+        <td><tt>short</tt></td></tr>
     <tr><td><tt>GLushort</tt></td>
-	<td>unsigned 16-bit integer</td>
-	<td><tt>unsigned short</tt></td></tr>
+        <td>unsigned 16-bit integer</td>
+        <td><tt>unsigned short</tt></td></tr>
     <tr><td><tt>GLint</tt></td>
-	<td>signed 32-bit 2's-complement integer</td>
-	<td><tt>int</tt></td></tr>
+        <td>signed 32-bit 2's-complement integer</td>
+        <td><tt>int</tt></td></tr>
     <tr><td><tt>GLuint</tt></td>
-	<td>unsigned 32-bit integer</td>
-	<td><tt>unsigned int</tt></td></tr>
+        <td>unsigned 32-bit integer</td>
+        <td><tt>unsigned int</tt></td></tr>
     <tr><td><tt>GLsizei</tt></td>
-	<td>non-negative 32-bit binary integer size</td>
-	<td><tt>int</tt></td></tr>
+        <td>non-negative 32-bit binary integer size</td>
+        <td><tt>int</tt></td></tr>
     <tr><td><tt>GLenum</tt></td>
-	<td>enumerated 32-bit value</td>
-	<td><tt>unsigned int</tt></td></tr>
+        <td>enumerated 32-bit value</td>
+        <td><tt>unsigned int</tt></td></tr>
     <tr><td><tt>GLbitfield</tt></td>
-	<td>32 bit bitfield</td>
-	<td><tt>unsigned int</tt></td></tr>
+        <td>32 bit bitfield</td>
+        <td><tt>unsigned int</tt></td></tr>
     <tr><td><tt>GLfloat</tt></td>
-	<td>32-bit IEEE754 floating-point</td>
-	<td><tt>float</tt></td></tr>
+        <td>32-bit IEEE754 floating-point</td>
+        <td><tt>float</tt></td></tr>
     <tr><td><tt>GLclampf</tt></td>
-	<td>Same as GLfloat, but in range [0, 1]</td>
-	<td><tt>float</tt></td></tr>
+        <td>Same as GLfloat, but in range [0, 1]</td>
+        <td><tt>float</tt></td></tr>
     <tr><td><tt>GLdouble</tt></td>
-	<td>64-bit IEEE754 floating-point</td>
-	<td><tt>double</tt></td></tr>
+        <td>64-bit IEEE754 floating-point</td>
+        <td><tt>double</tt></td></tr>
     <tr><td><tt>GLclampd</tt></td>
-	<td>Same as GLdouble, but in range [0, 1]</td>
-	<td><tt>double</tt></td></tr>
+        <td>Same as GLdouble, but in range [0, 1]</td>
+        <td><tt>double</tt></td></tr>
 </table>
 
 <p> <a href="#issue2.1">Issues</a></p>
@@ -195,13 +195,13 @@ include_once("../../../assets/static_pages/khr_page_top.php");
 
 <table cellspacing="1" border="1" class="center-table">
     <tr><td>Link name</td>
-	<td>Runtime name (<tt>DT_SONAME</tt>)</td>
+        <td>Runtime name (<tt>DT_SONAME</tt>)</td>
     </tr>
     <tr><td><tt>libGL.so<tt></td>
-	<td><tt>libGL.so.1<tt></td>
+        <td><tt>libGL.so.1<tt></td>
     </tr>
     <tr><td><tt>libGLU.so<tt></td>
-	<td><tt>libGLU.so.1<tt></td>
+        <td><tt>libGLU.so.1<tt></td>
     </tr>
 </table>
 
@@ -250,7 +250,7 @@ include_once("../../../assets/static_pages/khr_page_top.php");
     <tt>libGL</tt> also must export an entry point called </p>
 
     <blockquote>
-	<tt>void (*glXGetProcAddressARB(const GLubyte *))();</tt>
+        <tt>void (*glXGetProcAddressARB(const GLubyte *))();</tt>
     </blockquote>
 
 <p> The <a href="http://www.opengl.org/registry/specs/ARB/get_proc_address.txt">full specification</a>
@@ -367,7 +367,7 @@ include_once("../../../assets/static_pages/khr_page_top.php");
     registry at <a href="http://www.opengl.org/registry/">
     http://www.opengl.org/registry/</a>. </p>
 
-<p> The <a href="../api/glext.h">latest version of
+<p> The <a href="../api/GL/glext.h">latest version of
     <tt>glext.h</tt></a> is available in the registry. It is
     automatically generated from the master OpenGL function and
     enumerant registries, and is updated as new extensions are
@@ -378,11 +378,11 @@ include_once("../../../assets/static_pages/khr_page_top.php");
     generating glext.h are also available. </p>
 
 <p> Likewise for GLX, a single header defining
-    all GLX extensions, <a href="../api/glxext.h"><tt>glxext.h</tt></a>,
+    all GLX extensions, <a href="../api/GL/glxext.h"><tt>glxext.h</tt></a>,
     is required and is maintained centrally. </p>
 
 <p> The registry also contains a header defining WGL
-    extensions, <a href="../api/wglext.h"><tt>wglext.h</tt></a>, but this is
+    extensions, <a href="../api/GL/wglext.h"><tt>wglext.h</tt></a>, but this is
     only for use on Windows; <tt>wglext.h</tt> is <b>not</b> required by
     or useful for the Linux ABI. </p>
 
@@ -420,8 +420,8 @@ include_once("../../../assets/static_pages/khr_page_top.php");
     #define GL_EXT_<i>extensionname</i> 1<br>
     <i> Define enumerants specific to this extension</i><br>
     <i> Typedef function pointers for entry points specifically to
-	this extension, dynamically obtained
-	with glXGetProcAddressARB</i><br>
+        this extension, dynamically obtained
+        with glXGetProcAddressARB</i><br>
     #ifdef GL_GLEXT_PROTOTYPES<br>
     <i> Define prototypes specific to this extension</i><br>
     #endif<br>
