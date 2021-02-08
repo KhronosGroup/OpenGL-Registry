@@ -5817,7 +5817,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x2A02" name="GL_POLYGON_OFFSET_LINE" group="GetPName,EnableCap"/>
         <enum value="0x2A02" name="GL_POLYGON_OFFSET_LINE_NV"/>
             <unused start="0x2A03" end="0x2A09" comment="Unused for PolygonOffset"/>
-        <enum value="0x2A10" name="GL_R3_G3_B2" group="InternalFormat"/>
+        <enum value="0x2A10" name="GL_R3_G3_B2" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x2A11" end="0x2A1F" comment="Unused for InternalFormat"/>
         <enum value="0x2A20" name="GL_V2F" group="InterleavedArrayFormat"/>
         <enum value="0x2A21" name="GL_V3F" group="InterleavedArrayFormat"/>
@@ -6005,79 +6005,79 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8039" name="GL_POLYGON_OFFSET_BIAS_EXT" group="GetPName"/>
         <enum value="0x803A" name="GL_RESCALE_NORMAL"/>
         <enum value="0x803A" name="GL_RESCALE_NORMAL_EXT" group="GetPName,EnableCap"/>
-        <enum value="0x803B" name="GL_ALPHA4" group="InternalFormat"/>
-        <enum value="0x803B" name="GL_ALPHA4_EXT"/>
-        <enum value="0x803C" name="GL_ALPHA8" group="InternalFormat"/>
-        <enum value="0x803C" name="GL_ALPHA8_EXT"/>
-        <enum value="0x803C" name="GL_ALPHA8_OES"/>
-        <enum value="0x803D" name="GL_ALPHA12" group="InternalFormat"/>
-        <enum value="0x803D" name="GL_ALPHA12_EXT"/>
-        <enum value="0x803E" name="GL_ALPHA16" group="InternalFormat"/>
-        <enum value="0x803E" name="GL_ALPHA16_EXT"/>
-        <enum value="0x803F" name="GL_LUMINANCE4" group="InternalFormat"/>
-        <enum value="0x803F" name="GL_LUMINANCE4_EXT"/>
-        <enum value="0x8040" name="GL_LUMINANCE8" group="InternalFormat"/>
-        <enum value="0x8040" name="GL_LUMINANCE8_EXT"/>
-        <enum value="0x8040" name="GL_LUMINANCE8_OES"/>
-        <enum value="0x8041" name="GL_LUMINANCE12" group="InternalFormat"/>
-        <enum value="0x8041" name="GL_LUMINANCE12_EXT"/>
-        <enum value="0x8042" name="GL_LUMINANCE16" group="InternalFormat"/>
-        <enum value="0x8042" name="GL_LUMINANCE16_EXT"/>
-        <enum value="0x8043" name="GL_LUMINANCE4_ALPHA4" group="InternalFormat"/>
-        <enum value="0x8043" name="GL_LUMINANCE4_ALPHA4_EXT"/>
-        <enum value="0x8043" name="GL_LUMINANCE4_ALPHA4_OES"/>
-        <enum value="0x8044" name="GL_LUMINANCE6_ALPHA2" group="InternalFormat"/>
-        <enum value="0x8044" name="GL_LUMINANCE6_ALPHA2_EXT"/>
-        <enum value="0x8045" name="GL_LUMINANCE8_ALPHA8" group="InternalFormat"/>
-        <enum value="0x8045" name="GL_LUMINANCE8_ALPHA8_EXT"/>
-        <enum value="0x8045" name="GL_LUMINANCE8_ALPHA8_OES"/>
-        <enum value="0x8046" name="GL_LUMINANCE12_ALPHA4" group="InternalFormat"/>
-        <enum value="0x8046" name="GL_LUMINANCE12_ALPHA4_EXT"/>
-        <enum value="0x8047" name="GL_LUMINANCE12_ALPHA12" group="InternalFormat"/>
-        <enum value="0x8047" name="GL_LUMINANCE12_ALPHA12_EXT"/>
-        <enum value="0x8048" name="GL_LUMINANCE16_ALPHA16" group="InternalFormat"/>
-        <enum value="0x8048" name="GL_LUMINANCE16_ALPHA16_EXT"/>
+        <enum value="0x803B" name="GL_ALPHA4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x803B" name="GL_ALPHA4_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x803C" name="GL_ALPHA8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x803C" name="GL_ALPHA8_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x803C" name="GL_ALPHA8_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x803D" name="GL_ALPHA12" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x803D" name="GL_ALPHA12_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x803E" name="GL_ALPHA16" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x803E" name="GL_ALPHA16_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x803F" name="GL_LUMINANCE4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x803F" name="GL_LUMINANCE4_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8040" name="GL_LUMINANCE8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8040" name="GL_LUMINANCE8_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8040" name="GL_LUMINANCE8_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8041" name="GL_LUMINANCE12" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8041" name="GL_LUMINANCE12_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8042" name="GL_LUMINANCE16" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8042" name="GL_LUMINANCE16_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8043" name="GL_LUMINANCE4_ALPHA4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8043" name="GL_LUMINANCE4_ALPHA4_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8043" name="GL_LUMINANCE4_ALPHA4_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8044" name="GL_LUMINANCE6_ALPHA2" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8044" name="GL_LUMINANCE6_ALPHA2_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8045" name="GL_LUMINANCE8_ALPHA8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8045" name="GL_LUMINANCE8_ALPHA8_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8045" name="GL_LUMINANCE8_ALPHA8_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8046" name="GL_LUMINANCE12_ALPHA4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8046" name="GL_LUMINANCE12_ALPHA4_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8047" name="GL_LUMINANCE12_ALPHA12" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8047" name="GL_LUMINANCE12_ALPHA12_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8048" name="GL_LUMINANCE16_ALPHA16" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8048" name="GL_LUMINANCE16_ALPHA16_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8049" name="GL_INTENSITY" group="InternalFormat,PathColorFormat"/>
         <enum value="0x8049" name="GL_INTENSITY_EXT"/>
-        <enum value="0x804A" name="GL_INTENSITY4" group="InternalFormat"/>
-        <enum value="0x804A" name="GL_INTENSITY4_EXT"/>
-        <enum value="0x804B" name="GL_INTENSITY8" group="InternalFormat"/>
-        <enum value="0x804B" name="GL_INTENSITY8_EXT"/>
-        <enum value="0x804C" name="GL_INTENSITY12" group="InternalFormat"/>
-        <enum value="0x804C" name="GL_INTENSITY12_EXT"/>
-        <enum value="0x804D" name="GL_INTENSITY16" group="InternalFormat"/>
-        <enum value="0x804D" name="GL_INTENSITY16_EXT"/>
-        <enum value="0x804E" name="GL_RGB2_EXT" group="InternalFormat"/>
-        <enum value="0x804F" name="GL_RGB4" group="InternalFormat"/>
-        <enum value="0x804F" name="GL_RGB4_EXT" group="InternalFormat"/>
-        <enum value="0x8050" name="GL_RGB5" group="InternalFormat"/>
-        <enum value="0x8050" name="GL_RGB5_EXT" group="InternalFormat"/>
-        <enum value="0x8051" name="GL_RGB8" group="InternalFormat"/>
-        <enum value="0x8051" name="GL_RGB8_EXT" group="InternalFormat"/>
-        <enum value="0x8051" name="GL_RGB8_OES" group="InternalFormat"/>
-        <enum value="0x8052" name="GL_RGB10" group="InternalFormat"/>
-        <enum value="0x8052" name="GL_RGB10_EXT" group="InternalFormat"/>
-        <enum value="0x8053" name="GL_RGB12" group="InternalFormat"/>
-        <enum value="0x8053" name="GL_RGB12_EXT" group="InternalFormat"/>
-        <enum value="0x8054" name="GL_RGB16" group="InternalFormat"/>
-        <enum value="0x8054" name="GL_RGB16_EXT" group="InternalFormat"/>
-        <enum value="0x8055" name="GL_RGBA2"/>
-        <enum value="0x8055" name="GL_RGBA2_EXT"/>
-        <enum value="0x8056" name="GL_RGBA4" group="InternalFormat"/>
-        <enum value="0x8056" name="GL_RGBA4_EXT" group="InternalFormat"/>
-        <enum value="0x8056" name="GL_RGBA4_OES" group="InternalFormat"/>
-        <enum value="0x8057" name="GL_RGB5_A1" group="InternalFormat"/>
-        <enum value="0x8057" name="GL_RGB5_A1_EXT" group="InternalFormat"/>
-        <enum value="0x8057" name="GL_RGB5_A1_OES" group="InternalFormat"/>
-        <enum value="0x8058" name="GL_RGBA8" group="InternalFormat"/>
-        <enum value="0x8058" name="GL_RGBA8_EXT" group="InternalFormat"/>
-        <enum value="0x8058" name="GL_RGBA8_OES" group="InternalFormat"/>
-        <enum value="0x8059" name="GL_RGB10_A2" group="InternalFormat"/>
-        <enum value="0x8059" name="GL_RGB10_A2_EXT" group="InternalFormat"/>
-        <enum value="0x805A" name="GL_RGBA12" group="InternalFormat"/>
-        <enum value="0x805A" name="GL_RGBA12_EXT" group="InternalFormat"/>
-        <enum value="0x805B" name="GL_RGBA16" group="InternalFormat"/>
-        <enum value="0x805B" name="GL_RGBA16_EXT" group="InternalFormat"/>
+        <enum value="0x804A" name="GL_INTENSITY4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x804A" name="GL_INTENSITY4_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x804B" name="GL_INTENSITY8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x804B" name="GL_INTENSITY8_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x804C" name="GL_INTENSITY12" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x804C" name="GL_INTENSITY12_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x804D" name="GL_INTENSITY16" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x804D" name="GL_INTENSITY16_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x804E" name="GL_RGB2_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x804F" name="GL_RGB4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x804F" name="GL_RGB4_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8050" name="GL_RGB5" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8050" name="GL_RGB5_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8051" name="GL_RGB8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8051" name="GL_RGB8_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8051" name="GL_RGB8_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8052" name="GL_RGB10" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8052" name="GL_RGB10_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8053" name="GL_RGB12" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8053" name="GL_RGB12_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8054" name="GL_RGB16" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8054" name="GL_RGB16_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8055" name="GL_RGBA2" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8055" name="GL_RGBA2_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8056" name="GL_RGBA4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8056" name="GL_RGBA4_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8056" name="GL_RGBA4_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8057" name="GL_RGB5_A1" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8057" name="GL_RGB5_A1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8057" name="GL_RGB5_A1_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8058" name="GL_RGBA8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8058" name="GL_RGBA8_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8058" name="GL_RGBA8_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8059" name="GL_RGB10_A2" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8059" name="GL_RGB10_A2_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x805A" name="GL_RGBA12" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x805A" name="GL_RGBA12_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x805B" name="GL_RGBA16" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x805B" name="GL_RGBA16_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x805C" name="GL_TEXTURE_RED_SIZE" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x805C" name="GL_TEXTURE_RED_SIZE_EXT"/>
         <enum value="0x805D" name="GL_TEXTURE_GREEN_SIZE" group="TextureParameterName,GetTextureParameter"/>
@@ -6542,18 +6542,18 @@ typedef unsigned int GLhandleARB;
             <!-- <enum value="0x81A2" name="GL_IGLOO_IRISGL_MODE_SGIX"/> -->
             <!-- <enum value="0x81A3" name="GL_IGLOO_LMC_COLOR_SGIX"/> -->
             <!-- <enum value="0x81A4" name="GL_IGLOO_TMESHMODE_SGIX"/> -->
-        <enum value="0x81A5" name="GL_DEPTH_COMPONENT16" group="InternalFormat"/>
-        <enum value="0x81A5" name="GL_DEPTH_COMPONENT16_ARB" group="InternalFormat"/>
-        <enum value="0x81A5" name="GL_DEPTH_COMPONENT16_OES" group="InternalFormat"/>
-        <enum value="0x81A5" name="GL_DEPTH_COMPONENT16_SGIX" group="InternalFormat"/>
-        <enum value="0x81A6" name="GL_DEPTH_COMPONENT24"/>
-        <enum value="0x81A6" name="GL_DEPTH_COMPONENT24_ARB" group="InternalFormat"/>
-        <enum value="0x81A6" name="GL_DEPTH_COMPONENT24_OES" group="InternalFormat"/>
-        <enum value="0x81A6" name="GL_DEPTH_COMPONENT24_SGIX" group="InternalFormat"/>
-        <enum value="0x81A7" name="GL_DEPTH_COMPONENT32"/>
-        <enum value="0x81A7" name="GL_DEPTH_COMPONENT32_ARB" group="InternalFormat"/>
-        <enum value="0x81A7" name="GL_DEPTH_COMPONENT32_OES" group="InternalFormat"/>
-        <enum value="0x81A7" name="GL_DEPTH_COMPONENT32_SGIX" group="InternalFormat"/>
+        <enum value="0x81A5" name="GL_DEPTH_COMPONENT16" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x81A5" name="GL_DEPTH_COMPONENT16_ARB" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x81A5" name="GL_DEPTH_COMPONENT16_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x81A5" name="GL_DEPTH_COMPONENT16_SGIX" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x81A6" name="GL_DEPTH_COMPONENT24" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x81A6" name="GL_DEPTH_COMPONENT24_ARB" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x81A6" name="GL_DEPTH_COMPONENT24_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x81A6" name="GL_DEPTH_COMPONENT24_SGIX" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x81A7" name="GL_DEPTH_COMPONENT32" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x81A7" name="GL_DEPTH_COMPONENT32_ARB" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x81A7" name="GL_DEPTH_COMPONENT32_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x81A7" name="GL_DEPTH_COMPONENT32_SGIX" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x81A8" name="GL_ARRAY_ELEMENT_LOCK_FIRST_EXT"/>
         <enum value="0x81A9" name="GL_ARRAY_ELEMENT_LOCK_COUNT_EXT"/>
         <enum value="0x81AA" name="GL_CULL_VERTEX_EXT"/>
@@ -6693,34 +6693,34 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8227" name="GL_RG" group="InternalFormat,PixelFormat"/>
         <enum value="0x8227" name="GL_RG_EXT"/>
         <enum value="0x8228" name="GL_RG_INTEGER" group="PixelFormat"/>
-        <enum value="0x8229" name="GL_R8" group="InternalFormat"/>
-        <enum value="0x8229" name="GL_R8_EXT" group="InternalFormat"/>
-        <enum value="0x822A" name="GL_R16" group="InternalFormat"/>
-        <enum value="0x822A" name="GL_R16_EXT" group="InternalFormat"/>
-        <enum value="0x822B" name="GL_RG8" group="InternalFormat"/>
-        <enum value="0x822B" name="GL_RG8_EXT" group="InternalFormat"/>
-        <enum value="0x822C" name="GL_RG16" group="InternalFormat"/>
-        <enum value="0x822C" name="GL_RG16_EXT" group="InternalFormat"/>
-        <enum value="0x822D" name="GL_R16F" group="InternalFormat"/>
-        <enum value="0x822D" name="GL_R16F_EXT" group="InternalFormat"/>
-        <enum value="0x822E" name="GL_R32F" group="InternalFormat"/>
-        <enum value="0x822E" name="GL_R32F_EXT" group="InternalFormat"/>
-        <enum value="0x822F" name="GL_RG16F" group="InternalFormat"/>
-        <enum value="0x822F" name="GL_RG16F_EXT" group="InternalFormat"/>
-        <enum value="0x8230" name="GL_RG32F" group="InternalFormat"/>
-        <enum value="0x8230" name="GL_RG32F_EXT" group="InternalFormat"/>
-        <enum value="0x8231" name="GL_R8I" group="InternalFormat"/>
-        <enum value="0x8232" name="GL_R8UI" group="InternalFormat"/>
-        <enum value="0x8233" name="GL_R16I" group="InternalFormat"/>
-        <enum value="0x8234" name="GL_R16UI" group="InternalFormat"/>
-        <enum value="0x8235" name="GL_R32I" group="InternalFormat"/>
-        <enum value="0x8236" name="GL_R32UI" group="InternalFormat"/>
-        <enum value="0x8237" name="GL_RG8I" group="InternalFormat"/>
-        <enum value="0x8238" name="GL_RG8UI" group="InternalFormat"/>
-        <enum value="0x8239" name="GL_RG16I" group="InternalFormat"/>
-        <enum value="0x823A" name="GL_RG16UI" group="InternalFormat"/>
-        <enum value="0x823B" name="GL_RG32I" group="InternalFormat"/>
-        <enum value="0x823C" name="GL_RG32UI" group="InternalFormat"/>
+        <enum value="0x8229" name="GL_R8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8229" name="GL_R8_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822A" name="GL_R16" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822A" name="GL_R16_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822B" name="GL_RG8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822B" name="GL_RG8_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822C" name="GL_RG16" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822C" name="GL_RG16_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822D" name="GL_R16F" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822D" name="GL_R16F_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822E" name="GL_R32F" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822E" name="GL_R32F_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822F" name="GL_RG16F" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x822F" name="GL_RG16F_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8230" name="GL_RG32F" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8230" name="GL_RG32F_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8231" name="GL_R8I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8232" name="GL_R8UI" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8233" name="GL_R16I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8234" name="GL_R16UI" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8235" name="GL_R32I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8236" name="GL_R32UI" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8237" name="GL_RG8I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8238" name="GL_RG8UI" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8239" name="GL_RG16I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x823A" name="GL_RG16UI" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x823B" name="GL_RG32I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x823C" name="GL_RG32UI" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x823D" end="0x823F" vendor="ARB"/>
     </enums>
 
@@ -7208,12 +7208,12 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" start="0x83F0" end="0x83FF" vendor="INTEL">
             <!-- This block was reclaimed from NTP, who never shipped
                  it, and reassigned to Intel. -->
-        <enum value="0x83F0" name="GL_COMPRESSED_RGB_S3TC_DXT1_EXT" group="InternalFormat"/>
-        <enum value="0x83F1" name="GL_COMPRESSED_RGBA_S3TC_DXT1_EXT" group="InternalFormat"/>
-        <enum value="0x83F2" name="GL_COMPRESSED_RGBA_S3TC_DXT3_ANGLE"/>
-        <enum value="0x83F2" name="GL_COMPRESSED_RGBA_S3TC_DXT3_EXT" group="InternalFormat"/>
-        <enum value="0x83F3" name="GL_COMPRESSED_RGBA_S3TC_DXT5_ANGLE"/>
-        <enum value="0x83F3" name="GL_COMPRESSED_RGBA_S3TC_DXT5_EXT" group="InternalFormat"/>
+        <enum value="0x83F0" name="GL_COMPRESSED_RGB_S3TC_DXT1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x83F1" name="GL_COMPRESSED_RGBA_S3TC_DXT1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x83F2" name="GL_COMPRESSED_RGBA_S3TC_DXT3_ANGLE" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x83F2" name="GL_COMPRESSED_RGBA_S3TC_DXT3_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x83F3" name="GL_COMPRESSED_RGBA_S3TC_DXT5_ANGLE" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x83F3" name="GL_COMPRESSED_RGBA_S3TC_DXT5_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x83F4" name="GL_PARALLEL_ARRAYS_INTEL"/>
         <enum value="0x83F5" name="GL_VERTEX_ARRAY_PARALLEL_POINTERS_INTEL"/>
         <enum value="0x83F6" name="GL_NORMAL_ARRAY_PARALLEL_POINTERS_INTEL"/>
@@ -8400,14 +8400,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x880F" name="GL_MAX_PROGRAM_NATIVE_TEX_INSTRUCTIONS_ARB"/>
         <enum value="0x8810" name="GL_MAX_PROGRAM_NATIVE_TEX_INDIRECTIONS_ARB"/>
             <unused start="0x8811" end="0x8813" vendor="AMD"/>
-        <enum value="0x8814" name="GL_RGBA32F" group="InternalFormat"/>
-        <enum value="0x8814" name="GL_RGBA32F_ARB" group="InternalFormat"/>
-        <enum value="0x8814" name="GL_RGBA32F_EXT" group="InternalFormat"/>
+        <enum value="0x8814" name="GL_RGBA32F" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8814" name="GL_RGBA32F_ARB" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8814" name="GL_RGBA32F_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8814" name="GL_RGBA_FLOAT32_APPLE"/>
         <enum value="0x8814" name="GL_RGBA_FLOAT32_ATI"/>
-        <enum value="0x8815" name="GL_RGB32F" group="InternalFormat"/>
-        <enum value="0x8815" name="GL_RGB32F_ARB"/>
-        <enum value="0x8815" name="GL_RGB32F_EXT"/>
+        <enum value="0x8815" name="GL_RGB32F" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8815" name="GL_RGB32F_ARB" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8815" name="GL_RGB32F_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8815" name="GL_RGB_FLOAT32_APPLE"/>
         <enum value="0x8815" name="GL_RGB_FLOAT32_ATI"/>
         <enum value="0x8816" name="GL_ALPHA32F_ARB"/>
@@ -8425,14 +8425,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8819" name="GL_LUMINANCE_ALPHA32F_EXT"/>
         <enum value="0x8819" name="GL_LUMINANCE_ALPHA_FLOAT32_APPLE"/>
         <enum value="0x8819" name="GL_LUMINANCE_ALPHA_FLOAT32_ATI"/>
-        <enum value="0x881A" name="GL_RGBA16F" group="InternalFormat"/>
-        <enum value="0x881A" name="GL_RGBA16F_ARB" group="InternalFormat"/>
-        <enum value="0x881A" name="GL_RGBA16F_EXT" group="InternalFormat"/>
+        <enum value="0x881A" name="GL_RGBA16F" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x881A" name="GL_RGBA16F_ARB" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x881A" name="GL_RGBA16F_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x881A" name="GL_RGBA_FLOAT16_APPLE"/>
         <enum value="0x881A" name="GL_RGBA_FLOAT16_ATI"/>
-        <enum value="0x881B" name="GL_RGB16F" group="InternalFormat"/>
-        <enum value="0x881B" name="GL_RGB16F_ARB" group="InternalFormat"/>
-        <enum value="0x881B" name="GL_RGB16F_EXT" group="InternalFormat"/>
+        <enum value="0x881B" name="GL_RGB16F" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x881B" name="GL_RGB16F_ARB" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x881B" name="GL_RGB16F_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x881B" name="GL_RGB_FLOAT16_APPLE"/>
         <enum value="0x881B" name="GL_RGB_FLOAT16_ATI"/>
         <enum value="0x881C" name="GL_ALPHA16F_ARB"/>
@@ -8828,9 +8828,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x88EF" name="GL_PIXEL_UNPACK_BUFFER_BINDING_ARB"/>
         <enum value="0x88EF" name="GL_PIXEL_UNPACK_BUFFER_BINDING_EXT"/>
         <enum value="0x88EF" name="GL_PIXEL_UNPACK_BUFFER_BINDING_NV"/>
-        <enum value="0x88F0" name="GL_DEPTH24_STENCIL8" group="InternalFormat"/>
-        <enum value="0x88F0" name="GL_DEPTH24_STENCIL8_EXT" group="InternalFormat"/>
-        <enum value="0x88F0" name="GL_DEPTH24_STENCIL8_OES" group="InternalFormat"/>
+        <enum value="0x88F0" name="GL_DEPTH24_STENCIL8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x88F0" name="GL_DEPTH24_STENCIL8_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x88F0" name="GL_DEPTH24_STENCIL8_OES" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x88F1" name="GL_TEXTURE_STENCIL_SIZE"/>
         <enum value="0x88F1" name="GL_TEXTURE_STENCIL_SIZE_EXT"/>
         <enum value="0x88F2" name="GL_STENCIL_TAG_BITS_EXT"/>
@@ -9397,16 +9397,16 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C37" name="GL_MIN_SAMPLE_SHADING_VALUE_ARB"/>
         <enum value="0x8C37" name="GL_MIN_SAMPLE_SHADING_VALUE_OES"/>
             <unused start="0x8C38" end="0x8C39" vendor="NV"/>
-        <enum value="0x8C3A" name="GL_R11F_G11F_B10F" group="InternalFormat"/>
-        <enum value="0x8C3A" name="GL_R11F_G11F_B10F_APPLE" group="InternalFormat"/>
-        <enum value="0x8C3A" name="GL_R11F_G11F_B10F_EXT" group="InternalFormat"/>
+        <enum value="0x8C3A" name="GL_R11F_G11F_B10F" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C3A" name="GL_R11F_G11F_B10F_APPLE" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C3A" name="GL_R11F_G11F_B10F_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8C3B" name="GL_UNSIGNED_INT_10F_11F_11F_REV" group="VertexAttribPointerType,VertexAttribType"/>
         <enum value="0x8C3B" name="GL_UNSIGNED_INT_10F_11F_11F_REV_APPLE"/>
         <enum value="0x8C3B" name="GL_UNSIGNED_INT_10F_11F_11F_REV_EXT"/>
         <enum value="0x8C3C" name="GL_RGBA_SIGNED_COMPONENTS_EXT"/>
-        <enum value="0x8C3D" name="GL_RGB9_E5" group="InternalFormat"/>
-        <enum value="0x8C3D" name="GL_RGB9_E5_APPLE" group="InternalFormat"/>
-        <enum value="0x8C3D" name="GL_RGB9_E5_EXT" group="InternalFormat"/>
+        <enum value="0x8C3D" name="GL_RGB9_E5" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C3D" name="GL_RGB9_E5_APPLE" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C3D" name="GL_RGB9_E5_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8C3E" name="GL_UNSIGNED_INT_5_9_9_9_REV"/>
         <enum value="0x8C3E" name="GL_UNSIGNED_INT_5_9_9_9_REV_APPLE"/>
         <enum value="0x8C3E" name="GL_UNSIGNED_INT_5_9_9_9_REV_EXT"/>
@@ -9414,13 +9414,13 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C3F" name="GL_TEXTURE_SHARED_SIZE_EXT"/>
         <enum value="0x8C40" name="GL_SRGB" group="InternalFormat"/>
         <enum value="0x8C40" name="GL_SRGB_EXT" group="InternalFormat"/>
-        <enum value="0x8C41" name="GL_SRGB8" group="InternalFormat"/>
-        <enum value="0x8C41" name="GL_SRGB8_EXT" group="InternalFormat"/>
-        <enum value="0x8C41" name="GL_SRGB8_NV" group="InternalFormat"/>
+        <enum value="0x8C41" name="GL_SRGB8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C41" name="GL_SRGB8_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C41" name="GL_SRGB8_NV" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8C42" name="GL_SRGB_ALPHA" group="InternalFormat"/>
         <enum value="0x8C42" name="GL_SRGB_ALPHA_EXT" group="InternalFormat"/>
-        <enum value="0x8C43" name="GL_SRGB8_ALPHA8" group="InternalFormat"/>
-        <enum value="0x8C43" name="GL_SRGB8_ALPHA8_EXT" group="InternalFormat"/>
+        <enum value="0x8C43" name="GL_SRGB8_ALPHA8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C43" name="GL_SRGB8_ALPHA8_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8C44" name="GL_SLUMINANCE_ALPHA"/>
         <enum value="0x8C44" name="GL_SLUMINANCE_ALPHA_EXT"/>
         <enum value="0x8C44" name="GL_SLUMINANCE_ALPHA_NV"/>
@@ -9441,14 +9441,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C4A" name="GL_COMPRESSED_SLUMINANCE_EXT"/>
         <enum value="0x8C4B" name="GL_COMPRESSED_SLUMINANCE_ALPHA"/>
         <enum value="0x8C4B" name="GL_COMPRESSED_SLUMINANCE_ALPHA_EXT"/>
-        <enum value="0x8C4C" name="GL_COMPRESSED_SRGB_S3TC_DXT1_EXT" group="InternalFormat"/>
-        <enum value="0x8C4C" name="GL_COMPRESSED_SRGB_S3TC_DXT1_NV"/>
-        <enum value="0x8C4D" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT" group="InternalFormat"/>
-        <enum value="0x8C4D" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_NV"/>
-        <enum value="0x8C4E" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT" group="InternalFormat"/>
-        <enum value="0x8C4E" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_NV"/>
-        <enum value="0x8C4F" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT" group="InternalFormat"/>
-        <enum value="0x8C4F" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_NV"/>
+        <enum value="0x8C4C" name="GL_COMPRESSED_SRGB_S3TC_DXT1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C4C" name="GL_COMPRESSED_SRGB_S3TC_DXT1_NV" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C4D" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C4D" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_NV" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C4E" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C4E" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_NV" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C4F" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C4F" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_NV" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x8C50" end="0x8C6F" vendor="NV"/>
         <enum value="0x8C70" name="GL_COMPRESSED_LUMINANCE_LATC1_EXT"/>
         <enum value="0x8C71" name="GL_COMPRESSED_SIGNED_LUMINANCE_LATC1_EXT"/>
@@ -9564,8 +9564,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8CAB" name="GL_RENDERBUFFER_SAMPLES_APPLE" group="RenderbufferParameterName"/>
         <enum value="0x8CAB" name="GL_RENDERBUFFER_SAMPLES_EXT" group="RenderbufferParameterName"/>
         <enum value="0x8CAB" name="GL_RENDERBUFFER_SAMPLES_NV" group="RenderbufferParameterName"/>
-        <enum value="0x8CAC" name="GL_DEPTH_COMPONENT32F" group="InternalFormat"/>
-        <enum value="0x8CAD" name="GL_DEPTH32F_STENCIL8" group="InternalFormat"/>
+        <enum value="0x8CAC" name="GL_DEPTH_COMPONENT32F" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8CAD" name="GL_DEPTH32F_STENCIL8" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x8CAE" end="0x8CAF" vendor="ARB"/>
     </enums>
 
@@ -9709,17 +9709,17 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8D44" name="GL_RENDERBUFFER_INTERNAL_FORMAT_EXT" group="RenderbufferParameterName"/>
         <enum value="0x8D44" name="GL_RENDERBUFFER_INTERNAL_FORMAT_OES" group="RenderbufferParameterName"/>
             <unused start="0x8D45" vendor="ARB" comment="Was for GL_STENCIL_INDEX_EXT, but now use core STENCIL_INDEX instead"/>
-        <enum value="0x8D46" name="GL_STENCIL_INDEX1" group="InternalFormat"/>
-        <enum value="0x8D46" name="GL_STENCIL_INDEX1_EXT" group="InternalFormat"/>
-        <enum value="0x8D46" name="GL_STENCIL_INDEX1_OES" group="InternalFormat"/>
-        <enum value="0x8D47" name="GL_STENCIL_INDEX4" group="InternalFormat"/>
-        <enum value="0x8D47" name="GL_STENCIL_INDEX4_EXT" group="InternalFormat"/>
-        <enum value="0x8D47" name="GL_STENCIL_INDEX4_OES" group="InternalFormat"/>
-        <enum value="0x8D48" name="GL_STENCIL_INDEX8" group="InternalFormat"/>
-        <enum value="0x8D48" name="GL_STENCIL_INDEX8_EXT" group="InternalFormat"/>
-        <enum value="0x8D48" name="GL_STENCIL_INDEX8_OES" group="InternalFormat"/>
-        <enum value="0x8D49" name="GL_STENCIL_INDEX16" group="InternalFormat"/>
-        <enum value="0x8D49" name="GL_STENCIL_INDEX16_EXT" group="InternalFormat"/>
+        <enum value="0x8D46" name="GL_STENCIL_INDEX1" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D46" name="GL_STENCIL_INDEX1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D46" name="GL_STENCIL_INDEX1_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D47" name="GL_STENCIL_INDEX4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D47" name="GL_STENCIL_INDEX4_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D47" name="GL_STENCIL_INDEX4_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D48" name="GL_STENCIL_INDEX8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D48" name="GL_STENCIL_INDEX8_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D48" name="GL_STENCIL_INDEX8_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D49" name="GL_STENCIL_INDEX16" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D49" name="GL_STENCIL_INDEX16_EXT" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x8D4A" end="0x8D4F" vendor="ARB" comment="For additional stencil formats"/>
         <enum value="0x8D50" name="GL_RENDERBUFFER_RED_SIZE" group="RenderbufferParameterName"/>
         <enum value="0x8D50" name="GL_RENDERBUFFER_RED_SIZE_EXT" group="RenderbufferParameterName"/>
@@ -9772,54 +9772,54 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8D70" end="0x8DEF" vendor="NV" comment="For Pat Brown 2005/10/13">
-        <enum value="0x8D70" name="GL_RGBA32UI" group="InternalFormat"/>
-        <enum value="0x8D70" name="GL_RGBA32UI_EXT"/>
-        <enum value="0x8D71" name="GL_RGB32UI" group="InternalFormat"/>
-        <enum value="0x8D71" name="GL_RGB32UI_EXT"/>
-        <enum value="0x8D72" name="GL_ALPHA32UI_EXT"/>
-        <enum value="0x8D73" name="GL_INTENSITY32UI_EXT"/>
-        <enum value="0x8D74" name="GL_LUMINANCE32UI_EXT"/>
-        <enum value="0x8D75" name="GL_LUMINANCE_ALPHA32UI_EXT"/>
-        <enum value="0x8D76" name="GL_RGBA16UI" group="InternalFormat"/>
-        <enum value="0x8D76" name="GL_RGBA16UI_EXT"/>
-        <enum value="0x8D77" name="GL_RGB16UI" group="InternalFormat"/>
-        <enum value="0x8D77" name="GL_RGB16UI_EXT"/>
-        <enum value="0x8D78" name="GL_ALPHA16UI_EXT"/>
-        <enum value="0x8D79" name="GL_INTENSITY16UI_EXT"/>
-        <enum value="0x8D7A" name="GL_LUMINANCE16UI_EXT"/>
-        <enum value="0x8D7B" name="GL_LUMINANCE_ALPHA16UI_EXT"/>
-        <enum value="0x8D7C" name="GL_RGBA8UI" group="InternalFormat"/>
-        <enum value="0x8D7C" name="GL_RGBA8UI_EXT"/>
-        <enum value="0x8D7D" name="GL_RGB8UI" group="InternalFormat"/>
-        <enum value="0x8D7D" name="GL_RGB8UI_EXT"/>
-        <enum value="0x8D7E" name="GL_ALPHA8UI_EXT"/>
-        <enum value="0x8D7F" name="GL_INTENSITY8UI_EXT"/>
-        <enum value="0x8D80" name="GL_LUMINANCE8UI_EXT"/>
-        <enum value="0x8D81" name="GL_LUMINANCE_ALPHA8UI_EXT"/>
-        <enum value="0x8D82" name="GL_RGBA32I" group="InternalFormat"/>
-        <enum value="0x8D82" name="GL_RGBA32I_EXT"/>
-        <enum value="0x8D83" name="GL_RGB32I" group="InternalFormat"/>
-        <enum value="0x8D83" name="GL_RGB32I_EXT"/>
-        <enum value="0x8D84" name="GL_ALPHA32I_EXT"/>
-        <enum value="0x8D85" name="GL_INTENSITY32I_EXT"/>
-        <enum value="0x8D86" name="GL_LUMINANCE32I_EXT"/>
-        <enum value="0x8D87" name="GL_LUMINANCE_ALPHA32I_EXT"/>
-        <enum value="0x8D88" name="GL_RGBA16I" group="InternalFormat"/>
-        <enum value="0x8D88" name="GL_RGBA16I_EXT"/>
-        <enum value="0x8D89" name="GL_RGB16I" group="InternalFormat"/>
-        <enum value="0x8D89" name="GL_RGB16I_EXT"/>
-        <enum value="0x8D8A" name="GL_ALPHA16I_EXT"/>
-        <enum value="0x8D8B" name="GL_INTENSITY16I_EXT"/>
-        <enum value="0x8D8C" name="GL_LUMINANCE16I_EXT"/>
-        <enum value="0x8D8D" name="GL_LUMINANCE_ALPHA16I_EXT"/>
-        <enum value="0x8D8E" name="GL_RGBA8I" group="InternalFormat"/>
-        <enum value="0x8D8E" name="GL_RGBA8I_EXT"/>
-        <enum value="0x8D8F" name="GL_RGB8I" group="InternalFormat"/>
-        <enum value="0x8D8F" name="GL_RGB8I_EXT"/>
-        <enum value="0x8D90" name="GL_ALPHA8I_EXT"/>
-        <enum value="0x8D91" name="GL_INTENSITY8I_EXT"/>
-        <enum value="0x8D92" name="GL_LUMINANCE8I_EXT"/>
-        <enum value="0x8D93" name="GL_LUMINANCE_ALPHA8I_EXT"/>
+        <enum value="0x8D70" name="GL_RGBA32UI" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D70" name="GL_RGBA32UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D71" name="GL_RGB32UI" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D71" name="GL_RGB32UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D72" name="GL_ALPHA32UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D73" name="GL_INTENSITY32UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D74" name="GL_LUMINANCE32UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D75" name="GL_LUMINANCE_ALPHA32UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D76" name="GL_RGBA16UI" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D76" name="GL_RGBA16UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D77" name="GL_RGB16UI" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D77" name="GL_RGB16UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D78" name="GL_ALPHA16UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D79" name="GL_INTENSITY16UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D7A" name="GL_LUMINANCE16UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D7B" name="GL_LUMINANCE_ALPHA16UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D7C" name="GL_RGBA8UI" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D7C" name="GL_RGBA8UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D7D" name="GL_RGB8UI" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D7D" name="GL_RGB8UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D7E" name="GL_ALPHA8UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D7F" name="GL_INTENSITY8UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D80" name="GL_LUMINANCE8UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D81" name="GL_LUMINANCE_ALPHA8UI_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D82" name="GL_RGBA32I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D82" name="GL_RGBA32I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D83" name="GL_RGB32I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D83" name="GL_RGB32I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D84" name="GL_ALPHA32I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D85" name="GL_INTENSITY32I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D86" name="GL_LUMINANCE32I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D87" name="GL_LUMINANCE_ALPHA32I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D88" name="GL_RGBA16I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D88" name="GL_RGBA16I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D89" name="GL_RGB16I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D89" name="GL_RGB16I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D8A" name="GL_ALPHA16I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D8B" name="GL_INTENSITY16I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D8C" name="GL_LUMINANCE16I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D8D" name="GL_LUMINANCE_ALPHA16I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D8E" name="GL_RGBA8I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D8E" name="GL_RGBA8I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D8F" name="GL_RGB8I" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D8F" name="GL_RGB8I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D90" name="GL_ALPHA8I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D91" name="GL_INTENSITY8I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D92" name="GL_LUMINANCE8I_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D93" name="GL_LUMINANCE_ALPHA8I_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8D94" name="GL_RED_INTEGER" group="PixelFormat"/>
         <enum value="0x8D94" name="GL_RED_INTEGER_EXT"/>
         <enum value="0x8D95" name="GL_GREEN_INTEGER" group="PixelFormat"/>
@@ -9859,8 +9859,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8DA9" name="GL_FRAMEBUFFER_INCOMPLETE_LAYER_COUNT_EXT"/>
             <!-- Also see the odd namespace "NVTransformFeedbackToken" above -->
         <enum value="0x8DAA" name="GL_LAYER_NV"/>
-        <enum value="0x8DAB" name="GL_DEPTH_COMPONENT32F_NV" group="InternalFormat"/>
-        <enum value="0x8DAC" name="GL_DEPTH32F_STENCIL8_NV" group="InternalFormat"/>
+        <enum value="0x8DAB" name="GL_DEPTH_COMPONENT32F_NV" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8DAC" name="GL_DEPTH32F_STENCIL8_NV" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8DAD" name="GL_FLOAT_32_UNSIGNED_INT_24_8_REV"/>
         <enum value="0x8DAD" name="GL_FLOAT_32_UNSIGNED_INT_24_8_REV_NV"/>
         <enum value="0x8DAE" name="GL_SHADER_INCLUDE_ARB"/>
@@ -9869,14 +9869,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8DB9" name="GL_FRAMEBUFFER_SRGB" group="EnableCap"/>
         <enum value="0x8DB9" name="GL_FRAMEBUFFER_SRGB_EXT"/>
         <enum value="0x8DBA" name="GL_FRAMEBUFFER_SRGB_CAPABLE_EXT"/>
-        <enum value="0x8DBB" name="GL_COMPRESSED_RED_RGTC1" group="InternalFormat"/>
-        <enum value="0x8DBB" name="GL_COMPRESSED_RED_RGTC1_EXT" group="InternalFormat"/>
-        <enum value="0x8DBC" name="GL_COMPRESSED_SIGNED_RED_RGTC1" group="InternalFormat"/>
-        <enum value="0x8DBC" name="GL_COMPRESSED_SIGNED_RED_RGTC1_EXT" group="InternalFormat"/>
-        <enum value="0x8DBD" name="GL_COMPRESSED_RED_GREEN_RGTC2_EXT"/>
-        <enum value="0x8DBD" name="GL_COMPRESSED_RG_RGTC2" group="InternalFormat"/>
-        <enum value="0x8DBE" name="GL_COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT"/>
-        <enum value="0x8DBE" name="GL_COMPRESSED_SIGNED_RG_RGTC2" group="InternalFormat"/>
+        <enum value="0x8DBB" name="GL_COMPRESSED_RED_RGTC1" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8DBB" name="GL_COMPRESSED_RED_RGTC1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8DBC" name="GL_COMPRESSED_SIGNED_RED_RGTC1" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8DBC" name="GL_COMPRESSED_SIGNED_RED_RGTC1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8DBD" name="GL_COMPRESSED_RED_GREEN_RGTC2_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8DBD" name="GL_COMPRESSED_RG_RGTC2" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8DBE" name="GL_COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8DBE" name="GL_COMPRESSED_SIGNED_RG_RGTC2" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8DC0" name="GL_SAMPLER_1D_ARRAY" group="GlslTypeToken,UniformType"/>
         <enum value="0x8DC0" name="GL_SAMPLER_1D_ARRAY_EXT"/>
         <enum value="0x8DC1" name="GL_SAMPLER_2D_ARRAY" group="GlslTypeToken,UniformType"/>
@@ -10193,18 +10193,18 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8E8A" name="GL_MAX_TESS_EVALUATION_UNIFORM_BLOCKS_EXT"/>
         <enum value="0x8E8A" name="GL_MAX_TESS_EVALUATION_UNIFORM_BLOCKS_OES"/>
             <unused start="0x8E8B" vendor="NV"/>
-        <enum value="0x8E8C" name="GL_COMPRESSED_RGBA_BPTC_UNORM" group="InternalFormat"/>
-        <enum value="0x8E8C" name="GL_COMPRESSED_RGBA_BPTC_UNORM_ARB"/>
-        <enum value="0x8E8C" name="GL_COMPRESSED_RGBA_BPTC_UNORM_EXT"/>
-        <enum value="0x8E8D" name="GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM" group="InternalFormat"/>
-        <enum value="0x8E8D" name="GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM_ARB"/>
-        <enum value="0x8E8D" name="GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT"/>
-        <enum value="0x8E8E" name="GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT" group="InternalFormat"/>
-        <enum value="0x8E8E" name="GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT_ARB"/>
-        <enum value="0x8E8E" name="GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT_EXT"/>
-        <enum value="0x8E8F" name="GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT" group="InternalFormat"/>
-        <enum value="0x8E8F" name="GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_ARB"/>
-        <enum value="0x8E8F" name="GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_EXT"/>
+        <enum value="0x8E8C" name="GL_COMPRESSED_RGBA_BPTC_UNORM" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8E8C" name="GL_COMPRESSED_RGBA_BPTC_UNORM_ARB" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8E8C" name="GL_COMPRESSED_RGBA_BPTC_UNORM_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8E8D" name="GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8E8D" name="GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM_ARB" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8E8D" name="GL_COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8E8E" name="GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8E8E" name="GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT_ARB" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8E8E" name="GL_COMPRESSED_RGB_BPTC_SIGNED_FLOAT_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8E8F" name="GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8E8F" name="GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_ARB" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8E8F" name="GL_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT_EXT" group="InternalFormat,SizedInternalFormat"/>
     </enums>
 
     <enums namespace="GL" start="0x8E90" end="0x8E9F" vendor="QNX" comment="For QNX_texture_tiling, QNX_complex_polygon, QNX_stippled_lines (Khronos bug 696)">
@@ -10346,18 +10346,18 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8F91" name="GL_RG_SNORM"/>
         <enum value="0x8F92" name="GL_RGB_SNORM"/>
         <enum value="0x8F93" name="GL_RGBA_SNORM"/>
-        <enum value="0x8F94" name="GL_R8_SNORM" group="InternalFormat"/>
-        <enum value="0x8F95" name="GL_RG8_SNORM" group="InternalFormat"/>
-        <enum value="0x8F96" name="GL_RGB8_SNORM" group="InternalFormat"/>
-        <enum value="0x8F97" name="GL_RGBA8_SNORM" group="InternalFormat"/>
-        <enum value="0x8F98" name="GL_R16_SNORM" group="InternalFormat"/>
-        <enum value="0x8F98" name="GL_R16_SNORM_EXT" group="InternalFormat"/>
-        <enum value="0x8F99" name="GL_RG16_SNORM" group="InternalFormat"/>
-        <enum value="0x8F99" name="GL_RG16_SNORM_EXT" group="InternalFormat"/>
-        <enum value="0x8F9A" name="GL_RGB16_SNORM" group="InternalFormat"/>
-        <enum value="0x8F9A" name="GL_RGB16_SNORM_EXT" group="InternalFormat"/>
-        <enum value="0x8F9B" name="GL_RGBA16_SNORM"/>
-        <enum value="0x8F9B" name="GL_RGBA16_SNORM_EXT"/>
+        <enum value="0x8F94" name="GL_R8_SNORM" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8F95" name="GL_RG8_SNORM" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8F96" name="GL_RGB8_SNORM" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8F97" name="GL_RGBA8_SNORM" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8F98" name="GL_R16_SNORM" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8F98" name="GL_R16_SNORM_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8F99" name="GL_RG16_SNORM" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8F99" name="GL_RG16_SNORM_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8F9A" name="GL_RGB16_SNORM" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8F9A" name="GL_RGB16_SNORM_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8F9B" name="GL_RGBA16_SNORM" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8F9B" name="GL_RGBA16_SNORM_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8F9C" name="GL_SIGNED_NORMALIZED"/>
         <enum value="0x8F9D" name="GL_PRIMITIVE_RESTART" group="EnableCap"/>
         <enum value="0x8F9E" name="GL_PRIMITIVE_RESTART_INDEX" group="GetPName"/>
@@ -10593,7 +10593,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x906D" name="GL_MAX_IMAGE_SAMPLES_EXT"/>
         <enum value="0x906E" name="GL_IMAGE_BINDING_FORMAT"/>
         <enum value="0x906E" name="GL_IMAGE_BINDING_FORMAT_EXT"/>
-        <enum value="0x906F" name="GL_RGB10_A2UI" group="InternalFormat"/>
+        <enum value="0x906F" name="GL_RGB10_A2UI" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x9070" name="GL_PATH_FORMAT_SVG_NV" group="PathStringFormat"/>
         <enum value="0x9071" name="GL_PATH_FORMAT_PS_NV" group="PathStringFormat"/>
         <enum value="0x9072" name="GL_STANDARD_FONT_NAME_NV" group="PathFontTarget"/>
@@ -10977,26 +10977,26 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x9270" end="0x927F" vendor="OES" comment="Khronos bug 7625">
-        <enum value="0x9270" name="GL_COMPRESSED_R11_EAC" group="InternalFormat"/>
-        <enum value="0x9270" name="GL_COMPRESSED_R11_EAC_OES"/>
-        <enum value="0x9271" name="GL_COMPRESSED_SIGNED_R11_EAC" group="InternalFormat"/>
-        <enum value="0x9271" name="GL_COMPRESSED_SIGNED_R11_EAC_OES"/>
-        <enum value="0x9272" name="GL_COMPRESSED_RG11_EAC" group="InternalFormat"/>
-        <enum value="0x9272" name="GL_COMPRESSED_RG11_EAC_OES"/>
-        <enum value="0x9273" name="GL_COMPRESSED_SIGNED_RG11_EAC" group="InternalFormat"/>
-        <enum value="0x9273" name="GL_COMPRESSED_SIGNED_RG11_EAC_OES"/>
-        <enum value="0x9274" name="GL_COMPRESSED_RGB8_ETC2" group="InternalFormat"/>
-        <enum value="0x9274" name="GL_COMPRESSED_RGB8_ETC2_OES"/>
-        <enum value="0x9275" name="GL_COMPRESSED_SRGB8_ETC2" group="InternalFormat"/>
-        <enum value="0x9275" name="GL_COMPRESSED_SRGB8_ETC2_OES"/>
-        <enum value="0x9276" name="GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2" group="InternalFormat"/>
-        <enum value="0x9276" name="GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2_OES"/>
-        <enum value="0x9277" name="GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2" group="InternalFormat"/>
-        <enum value="0x9277" name="GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2_OES"/>
-        <enum value="0x9278" name="GL_COMPRESSED_RGBA8_ETC2_EAC" group="InternalFormat"/>
-        <enum value="0x9278" name="GL_COMPRESSED_RGBA8_ETC2_EAC_OES"/>
-        <enum value="0x9279" name="GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC" group="InternalFormat"/>
-        <enum value="0x9279" name="GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC_OES"/>
+        <enum value="0x9270" name="GL_COMPRESSED_R11_EAC" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9270" name="GL_COMPRESSED_R11_EAC_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9271" name="GL_COMPRESSED_SIGNED_R11_EAC" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9271" name="GL_COMPRESSED_SIGNED_R11_EAC_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9272" name="GL_COMPRESSED_RG11_EAC" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9272" name="GL_COMPRESSED_RG11_EAC_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9273" name="GL_COMPRESSED_SIGNED_RG11_EAC" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9273" name="GL_COMPRESSED_SIGNED_RG11_EAC_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9274" name="GL_COMPRESSED_RGB8_ETC2" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9274" name="GL_COMPRESSED_RGB8_ETC2_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9275" name="GL_COMPRESSED_SRGB8_ETC2" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9275" name="GL_COMPRESSED_SRGB8_ETC2_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9276" name="GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9276" name="GL_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9277" name="GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9277" name="GL_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9278" name="GL_COMPRESSED_RGBA8_ETC2_EAC" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9278" name="GL_COMPRESSED_RGBA8_ETC2_EAC_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9279" name="GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9279" name="GL_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC_OES" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x927A" end="0x927F" vendor="OES"/>
     </enums>
 
@@ -11352,85 +11352,85 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x93B0" end="0x93EF" vendor="OES" comment="Khronos bug 8853">
-        <enum value="0x93B0" name="GL_COMPRESSED_RGBA_ASTC_4x4" group="InternalFormat"/>
-        <enum value="0x93B0" name="GL_COMPRESSED_RGBA_ASTC_4x4_KHR" group="InternalFormat"/>
-        <enum value="0x93B1" name="GL_COMPRESSED_RGBA_ASTC_5x4" group="InternalFormat"/>
-        <enum value="0x93B1" name="GL_COMPRESSED_RGBA_ASTC_5x4_KHR" group="InternalFormat"/>
-        <enum value="0x93B2" name="GL_COMPRESSED_RGBA_ASTC_5x5" group="InternalFormat"/>
-        <enum value="0x93B2" name="GL_COMPRESSED_RGBA_ASTC_5x5_KHR" group="InternalFormat"/>
-        <enum value="0x93B3" name="GL_COMPRESSED_RGBA_ASTC_6x5" group="InternalFormat"/>
-        <enum value="0x93B3" name="GL_COMPRESSED_RGBA_ASTC_6x5_KHR" group="InternalFormat"/>
-        <enum value="0x93B4" name="GL_COMPRESSED_RGBA_ASTC_6x6" group="InternalFormat"/>
-        <enum value="0x93B4" name="GL_COMPRESSED_RGBA_ASTC_6x6_KHR" group="InternalFormat"/>
-        <enum value="0x93B5" name="GL_COMPRESSED_RGBA_ASTC_8x5" group="InternalFormat"/>
-        <enum value="0x93B5" name="GL_COMPRESSED_RGBA_ASTC_8x5_KHR" group="InternalFormat"/>
-        <enum value="0x93B6" name="GL_COMPRESSED_RGBA_ASTC_8x6" group="InternalFormat"/>
-        <enum value="0x93B6" name="GL_COMPRESSED_RGBA_ASTC_8x6_KHR" group="InternalFormat"/>
-        <enum value="0x93B7" name="GL_COMPRESSED_RGBA_ASTC_8x8" group="InternalFormat"/>
-        <enum value="0x93B7" name="GL_COMPRESSED_RGBA_ASTC_8x8_KHR" group="InternalFormat"/>
-        <enum value="0x93B8" name="GL_COMPRESSED_RGBA_ASTC_10x5" group="InternalFormat"/>
-        <enum value="0x93B8" name="GL_COMPRESSED_RGBA_ASTC_10x5_KHR" group="InternalFormat"/>
-        <enum value="0x93B9" name="GL_COMPRESSED_RGBA_ASTC_10x6" group="InternalFormat"/>
-        <enum value="0x93B9" name="GL_COMPRESSED_RGBA_ASTC_10x6_KHR" group="InternalFormat"/>
-        <enum value="0x93BA" name="GL_COMPRESSED_RGBA_ASTC_10x8" group="InternalFormat"/>
-        <enum value="0x93BA" name="GL_COMPRESSED_RGBA_ASTC_10x8_KHR" group="InternalFormat"/>
-        <enum value="0x93BB" name="GL_COMPRESSED_RGBA_ASTC_10x10" group="InternalFormat"/>
-        <enum value="0x93BB" name="GL_COMPRESSED_RGBA_ASTC_10x10_KHR" group="InternalFormat"/>
-        <enum value="0x93BC" name="GL_COMPRESSED_RGBA_ASTC_12x10" group="InternalFormat"/>
-        <enum value="0x93BC" name="GL_COMPRESSED_RGBA_ASTC_12x10_KHR" group="InternalFormat"/>
-        <enum value="0x93BD" name="GL_COMPRESSED_RGBA_ASTC_12x12" group="InternalFormat"/>
-        <enum value="0x93BD" name="GL_COMPRESSED_RGBA_ASTC_12x12_KHR" group="InternalFormat"/>
+        <enum value="0x93B0" name="GL_COMPRESSED_RGBA_ASTC_4x4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B0" name="GL_COMPRESSED_RGBA_ASTC_4x4_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B1" name="GL_COMPRESSED_RGBA_ASTC_5x4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B1" name="GL_COMPRESSED_RGBA_ASTC_5x4_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B2" name="GL_COMPRESSED_RGBA_ASTC_5x5" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B2" name="GL_COMPRESSED_RGBA_ASTC_5x5_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B3" name="GL_COMPRESSED_RGBA_ASTC_6x5" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B3" name="GL_COMPRESSED_RGBA_ASTC_6x5_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B4" name="GL_COMPRESSED_RGBA_ASTC_6x6" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B4" name="GL_COMPRESSED_RGBA_ASTC_6x6_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B5" name="GL_COMPRESSED_RGBA_ASTC_8x5" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B5" name="GL_COMPRESSED_RGBA_ASTC_8x5_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B6" name="GL_COMPRESSED_RGBA_ASTC_8x6" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B6" name="GL_COMPRESSED_RGBA_ASTC_8x6_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B7" name="GL_COMPRESSED_RGBA_ASTC_8x8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B7" name="GL_COMPRESSED_RGBA_ASTC_8x8_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B8" name="GL_COMPRESSED_RGBA_ASTC_10x5" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B8" name="GL_COMPRESSED_RGBA_ASTC_10x5_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B9" name="GL_COMPRESSED_RGBA_ASTC_10x6" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93B9" name="GL_COMPRESSED_RGBA_ASTC_10x6_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93BA" name="GL_COMPRESSED_RGBA_ASTC_10x8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93BA" name="GL_COMPRESSED_RGBA_ASTC_10x8_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93BB" name="GL_COMPRESSED_RGBA_ASTC_10x10" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93BB" name="GL_COMPRESSED_RGBA_ASTC_10x10_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93BC" name="GL_COMPRESSED_RGBA_ASTC_12x10" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93BC" name="GL_COMPRESSED_RGBA_ASTC_12x10_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93BD" name="GL_COMPRESSED_RGBA_ASTC_12x12" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93BD" name="GL_COMPRESSED_RGBA_ASTC_12x12_KHR" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x93BE" end="0x93BF" vendor="OES"/>
-        <enum value="0x93C0" name="GL_COMPRESSED_RGBA_ASTC_3x3x3_OES" group="InternalFormat"/>
-        <enum value="0x93C1" name="GL_COMPRESSED_RGBA_ASTC_4x3x3_OES" group="InternalFormat"/>
-        <enum value="0x93C2" name="GL_COMPRESSED_RGBA_ASTC_4x4x3_OES" group="InternalFormat"/>
-        <enum value="0x93C3" name="GL_COMPRESSED_RGBA_ASTC_4x4x4_OES" group="InternalFormat"/>
-        <enum value="0x93C4" name="GL_COMPRESSED_RGBA_ASTC_5x4x4_OES" group="InternalFormat"/>
-        <enum value="0x93C5" name="GL_COMPRESSED_RGBA_ASTC_5x5x4_OES" group="InternalFormat"/>
-        <enum value="0x93C6" name="GL_COMPRESSED_RGBA_ASTC_5x5x5_OES" group="InternalFormat"/>
-        <enum value="0x93C7" name="GL_COMPRESSED_RGBA_ASTC_6x5x5_OES" group="InternalFormat"/>
-        <enum value="0x93C8" name="GL_COMPRESSED_RGBA_ASTC_6x6x5_OES" group="InternalFormat"/>
-        <enum value="0x93C9" name="GL_COMPRESSED_RGBA_ASTC_6x6x6_OES" group="InternalFormat"/>
+        <enum value="0x93C0" name="GL_COMPRESSED_RGBA_ASTC_3x3x3_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93C1" name="GL_COMPRESSED_RGBA_ASTC_4x3x3_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93C2" name="GL_COMPRESSED_RGBA_ASTC_4x4x3_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93C3" name="GL_COMPRESSED_RGBA_ASTC_4x4x4_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93C4" name="GL_COMPRESSED_RGBA_ASTC_5x4x4_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93C5" name="GL_COMPRESSED_RGBA_ASTC_5x5x4_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93C6" name="GL_COMPRESSED_RGBA_ASTC_5x5x5_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93C7" name="GL_COMPRESSED_RGBA_ASTC_6x5x5_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93C8" name="GL_COMPRESSED_RGBA_ASTC_6x6x5_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93C9" name="GL_COMPRESSED_RGBA_ASTC_6x6x6_OES" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x93CA" end="0x93CF" vendor="OES"/>
-        <enum value="0x93D0" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4" group="InternalFormat"/>
-        <enum value="0x93D0" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR" group="InternalFormat"/>
-        <enum value="0x93D1" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4" group="InternalFormat"/>
-        <enum value="0x93D1" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR" group="InternalFormat"/>
-        <enum value="0x93D2" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5" group="InternalFormat"/>
-        <enum value="0x93D2" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR" group="InternalFormat"/>
-        <enum value="0x93D3" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5" group="InternalFormat"/>
-        <enum value="0x93D3" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR" group="InternalFormat"/>
-        <enum value="0x93D4" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6" group="InternalFormat"/>
-        <enum value="0x93D4" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR" group="InternalFormat"/>
-        <enum value="0x93D5" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5" group="InternalFormat"/>
-        <enum value="0x93D5" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR" group="InternalFormat"/>
-        <enum value="0x93D6" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6" group="InternalFormat"/>
-        <enum value="0x93D6" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR" group="InternalFormat"/>
-        <enum value="0x93D7" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8" group="InternalFormat"/>
-        <enum value="0x93D7" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR" group="InternalFormat"/>
-        <enum value="0x93D8" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5" group="InternalFormat"/>
-        <enum value="0x93D8" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR" group="InternalFormat"/>
-        <enum value="0x93D9" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6" group="InternalFormat"/>
-        <enum value="0x93D9" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR" group="InternalFormat"/>
-        <enum value="0x93DA" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8" group="InternalFormat"/>
-        <enum value="0x93DA" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR" group="InternalFormat"/>
-        <enum value="0x93DB" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10" group="InternalFormat"/>
-        <enum value="0x93DB" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR" group="InternalFormat"/>
-        <enum value="0x93DC" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10" group="InternalFormat"/>
-        <enum value="0x93DC" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR" group="InternalFormat"/>
-        <enum value="0x93DD" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12" group="InternalFormat"/>
-        <enum value="0x93DD" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR" group="InternalFormat"/>
+        <enum value="0x93D0" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D0" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D1" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D1" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D2" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D2" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D3" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D3" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D4" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D4" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D5" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D5" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D6" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D6" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D7" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D7" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D8" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D8" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D9" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93D9" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93DA" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93DA" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93DB" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93DB" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93DC" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93DC" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93DD" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93DD" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x93DE" end="0x93DF" vendor="OES"/>
-        <enum value="0x93E0" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_3x3x3_OES" group="InternalFormat"/>
-        <enum value="0x93E1" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x3x3_OES" group="InternalFormat"/>
-        <enum value="0x93E2" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4x3_OES" group="InternalFormat"/>
-        <enum value="0x93E3" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4x4_OES" group="InternalFormat"/>
-        <enum value="0x93E4" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4x4_OES" group="InternalFormat"/>
-        <enum value="0x93E5" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5x4_OES" group="InternalFormat"/>
-        <enum value="0x93E6" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5x5_OES" group="InternalFormat"/>
-        <enum value="0x93E7" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5x5_OES" group="InternalFormat"/>
-        <enum value="0x93E8" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6x5_OES" group="InternalFormat"/>
-        <enum value="0x93E9" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6x6_OES" group="InternalFormat"/>
+        <enum value="0x93E0" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_3x3x3_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93E1" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x3x3_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93E2" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4x3_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93E3" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4x4_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93E4" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4x4_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93E5" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5x4_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93E6" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5x5_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93E7" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5x5_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93E8" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6x5_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93E9" name="GL_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6x6_OES" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x93EA" end="0x93EF" vendor="OES"/>
     </enums>
 
@@ -12942,7 +12942,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glClearBufferData</name></proto>
             <param group="BufferStorageTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type)">const void *<name>data</name></param>
@@ -12950,7 +12950,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glClearBufferSubData</name></proto>
             <param group="BufferTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="BufferOffset"><ptype>GLintptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -13060,7 +13060,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glClearNamedBufferData</name></proto>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param>const void *<name>data</name></param>
@@ -13068,7 +13068,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glClearNamedBufferDataEXT</name></proto>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type)">const void *<name>data</name></param>
@@ -13076,7 +13076,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glClearNamedBufferSubData</name></proto>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -13086,7 +13086,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glClearNamedBufferSubDataEXT</name></proto>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
-            <param><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -22731,7 +22731,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexBufferEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
         </command>
         <command>
@@ -28279,13 +28279,13 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexBuffer</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
         </command>
         <command>
             <proto>void <name>glTexBufferARB</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <alias name="glTexBuffer"/>
             <glx type="render" opcode="367"/>
@@ -28293,21 +28293,21 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexBufferEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <alias name="glTexBuffer"/>
         </command>
         <command>
             <proto>void <name>glTexBufferOES</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <alias name="glTexBuffer"/>
         </command>
         <command>
             <proto>void <name>glTexBufferRange</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="BufferOffset"><ptype>GLintptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
@@ -28315,7 +28315,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexBufferRangeEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="BufferOffset"><ptype>GLintptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
@@ -28324,7 +28324,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexBufferRangeOES</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="BufferOffset"><ptype>GLintptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
@@ -29041,7 +29041,7 @@ typedef unsigned int GLhandleARB;
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>coverageSamples</name></param>
             <param><ptype>GLsizei</ptype> <name>colorSamples</name></param>
-            <param><ptype>GLint</ptype> <name>internalFormat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
@@ -29091,7 +29091,7 @@ typedef unsigned int GLhandleARB;
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>coverageSamples</name></param>
             <param><ptype>GLsizei</ptype> <name>colorSamples</name></param>
-            <param><ptype>GLint</ptype> <name>internalFormat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29268,14 +29268,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorage1D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
         </command>
         <command>
             <proto>void <name>glTexStorage1DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <alias name="glTexStorage1D"/>
         </command>
@@ -29283,7 +29283,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorage2D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
         </command>
@@ -29291,7 +29291,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorage2DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <alias name="glTexStorage2D"/>
@@ -29300,7 +29300,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorage2DMultisample</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedsamplelocations</name></param>
@@ -29309,7 +29309,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorage3D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29318,7 +29318,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorage3DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29328,7 +29328,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorage3DMultisample</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29338,7 +29338,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorage3DMultisampleOES</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29349,7 +29349,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorageMem1DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
             <param><ptype>GLuint64</ptype> <name>offset</name></param>
@@ -29358,7 +29358,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorageMem2DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
@@ -29368,7 +29368,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorageMem2DMultisampleEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
@@ -29379,7 +29379,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorageMem3DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29390,7 +29390,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexStorageMem3DMultisampleEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29401,7 +29401,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorageSparseAMD</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29539,20 +29539,20 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureBuffer</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
         </command>
         <command>
             <proto>void <name>glTextureBufferEXT</name></proto>
             <param class="texture" group="Texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
         </command>
         <command>
             <proto>void <name>glTextureBufferRange</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
@@ -29561,7 +29561,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureBufferRangeEXT</name></proto>
             <param class="texture" group="Texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="BufferOffset"><ptype>GLintptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
@@ -29616,7 +29616,7 @@ typedef unsigned int GLhandleARB;
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>coverageSamples</name></param>
             <param><ptype>GLsizei</ptype> <name>colorSamples</name></param>
-            <param><ptype>GLint</ptype> <name>internalFormat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
@@ -29626,7 +29626,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param><ptype>GLint</ptype> <name>internalFormat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
@@ -29651,7 +29651,7 @@ typedef unsigned int GLhandleARB;
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>coverageSamples</name></param>
             <param><ptype>GLsizei</ptype> <name>colorSamples</name></param>
-            <param><ptype>GLint</ptype> <name>internalFormat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29662,7 +29662,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param><ptype>GLint</ptype> <name>internalFormat</name></param>
+            <param group="InternalFormat"><ptype>GLint</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29804,7 +29804,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorage1D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
         </command>
         <command>
@@ -29812,14 +29812,14 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
         </command>
         <command>
             <proto>void <name>glTextureStorage2D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
         </command>
@@ -29828,7 +29828,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
         </command>
@@ -29836,7 +29836,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorage2DMultisample</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedsamplelocations</name></param>
@@ -29846,7 +29846,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture" group="Texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedsamplelocations</name></param>
@@ -29855,7 +29855,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorage3D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29865,7 +29865,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29874,7 +29874,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorage3DMultisample</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29885,7 +29885,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29895,7 +29895,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorageMem1DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
             <param><ptype>GLuint64</ptype> <name>offset</name></param>
@@ -29904,7 +29904,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorageMem2DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
@@ -29914,7 +29914,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorageMem2DMultisampleEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>fixedSampleLocations</name></param>
@@ -29925,7 +29925,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorageMem3DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
-            <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29936,7 +29936,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorageMem3DMultisampleEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
-            <param><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -29948,7 +29948,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorageSparseAMD</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -30035,7 +30035,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>origtexture</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLuint</ptype> <name>minlevel</name></param>
             <param><ptype>GLuint</ptype> <name>numlevels</name></param>
             <param><ptype>GLuint</ptype> <name>minlayer</name></param>
@@ -30046,7 +30046,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>origtexture</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLuint</ptype> <name>minlevel</name></param>
             <param><ptype>GLuint</ptype> <name>numlevels</name></param>
             <param><ptype>GLuint</ptype> <name>minlayer</name></param>
@@ -30058,7 +30058,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>origtexture</name></param>
-            <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
+            <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLuint</ptype> <name>minlevel</name></param>
             <param><ptype>GLuint</ptype> <name>numlevels</name></param>
             <param><ptype>GLuint</ptype> <name>minlayer</name></param>
