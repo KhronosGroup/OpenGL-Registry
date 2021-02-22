@@ -6,10 +6,6 @@ Name Strings
 
     GLX_SGI_video_sync
 
-Version
-
-    $Date: 1995/09/15 01:22:58 $ $Revision: 1.8 $
-
 Number
 
     41
@@ -38,6 +34,13 @@ Overview
     code if the current context is not a direct one.
 
     The counter is an unsigned 32-bit integer.
+
+Interaction with {ARB,OES}_framebuffer_object
+
+    If the current context does not have a default framebuffer there may be
+    no "frame rate" to refer to, since there is no Window or GLXWindow to map
+    to an output device. If the client API context is in this state, all
+    interaction with this extension is undefined.
 
 Issues
 
@@ -124,3 +127,10 @@ New State
 New Implementation Dependent State
 
     None
+
+Version
+
+    $Date: 1995/09/15 01:22:58 $ $Revision: 1.8 $
+
+    Khronos revision 2:
+    - Note ARB_framebuffer_object interaction (ajax)
