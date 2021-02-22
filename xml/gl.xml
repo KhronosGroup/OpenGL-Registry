@@ -40514,7 +40514,6 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_FRAMEBUFFER_BINDING"/>
             <enum name="GL_RENDERBUFFER_BINDING"/>
             <enum name="GL_MAX_RENDERBUFFER_SIZE"/>
-            <enum name="GL_NO_ERROR"/>
             <enum name="GL_GUILTY_CONTEXT_RESET"/>
             <enum name="GL_INNOCENT_CONTEXT_RESET"/>
             <enum name="GL_UNKNOWN_CONTEXT_RESET"/>
@@ -48145,7 +48144,6 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_CONSERVATIVE_RASTER_MODE_NV"/>
                 <enum name="GL_CONSERVATIVE_RASTER_MODE_POST_SNAP_NV"/>
                 <enum name="GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_TRIANGLES_NV"/>
-                <enum name="GL_CONSERVATIVE_RASTER_MODE_NV"/>
                 <command name="glConservativeRasterParameteriNV"/>
             </require>
         </extension>
