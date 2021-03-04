@@ -23808,7 +23808,7 @@ typedef unsigned int GLhandleARB;
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
-            <param len="COMPSIZE(size)">const void *<name>data</name></param>
+            <param len="size">const void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glNamedBufferSubDataEXT</name></proto>
