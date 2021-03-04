@@ -23740,7 +23740,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glNamedBufferData</name></proto>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
-            <param>const void *<name>data</name></param>
+            <param len="size">const void *<name>data</name></param>
             <param group="VertexBufferObjectUsage"><ptype>GLenum</ptype> <name>usage</name></param>
         </command>
         <command>
