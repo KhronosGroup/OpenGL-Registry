@@ -27440,20 +27440,20 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glScissorArrayv</name></proto>
             <param><ptype>GLuint</ptype> <name>first</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
-            <param len="COMPSIZE(count)">const <ptype>GLint</ptype> *<name>v</name></param>
+            <param len="count * 4">const <ptype>GLint</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glScissorArrayvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>first</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
-            <param len="COMPSIZE(count)">const <ptype>GLint</ptype> *<name>v</name></param>
+            <param len="count * 4">const <ptype>GLint</ptype> *<name>v</name></param>
             <alias name="glScissorArrayv"/>
         </command>
         <command>
             <proto>void <name>glScissorArrayvOES</name></proto>
             <param><ptype>GLuint</ptype> <name>first</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
-            <param len="COMPSIZE(count)">const <ptype>GLint</ptype> *<name>v</name></param>
+            <param len="count * 4">const <ptype>GLint</ptype> *<name>v</name></param>
             <alias name="glScissorArrayv"/>
         </command>
         <command>
@@ -33555,20 +33555,20 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glViewportArrayv</name></proto>
             <param><ptype>GLuint</ptype> <name>first</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
-            <param len="COMPSIZE(count)">const <ptype>GLfloat</ptype> *<name>v</name></param>
+            <param len="count * 4">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glViewportArrayvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>first</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
-            <param len="COMPSIZE(count)">const <ptype>GLfloat</ptype> *<name>v</name></param>
+            <param len="count * 4">const <ptype>GLfloat</ptype> *<name>v</name></param>
             <alias name="glViewportArrayv"/>
         </command>
         <command>
             <proto>void <name>glViewportArrayvOES</name></proto>
             <param><ptype>GLuint</ptype> <name>first</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
-            <param len="COMPSIZE(count)">const <ptype>GLfloat</ptype> *<name>v</name></param>
+            <param len="count * 4">const <ptype>GLfloat</ptype> *<name>v</name></param>
             <alias name="glViewportArrayv"/>
         </command>
         <command>
