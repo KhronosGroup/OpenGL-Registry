@@ -20267,8 +20267,8 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetUniformIndices</name></proto>
             <param class="program"><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLsizei</ptype> <name>uniformCount</name></param>
-            <param len="COMPSIZE(uniformCount)">const <ptype>GLchar</ptype> *const*<name>uniformNames</name></param>
-            <param len="COMPSIZE(uniformCount)"><ptype>GLuint</ptype> *<name>uniformIndices</name></param>
+            <param len="uniformCount">const <ptype>GLchar</ptype> *const*<name>uniformNames</name></param>
+            <param len="uniformCount"><ptype>GLuint</ptype> *<name>uniformIndices</name></param>
             <glx type="single" opcode="215"/>
         </command>
         <command>
