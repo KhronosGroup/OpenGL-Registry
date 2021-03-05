@@ -22513,15 +22513,15 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiDrawArrays</name></proto>
             <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
-            <param len="COMPSIZE(drawcount)">const <ptype>GLint</ptype> *<name>first</name></param>
-            <param len="COMPSIZE(drawcount)">const <ptype>GLsizei</ptype> *<name>count</name></param>
+            <param len="drawcount">const <ptype>GLint</ptype> *<name>first</name></param>
+            <param len="drawcount">const <ptype>GLsizei</ptype> *<name>count</name></param>
             <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
         </command>
         <command>
             <proto>void <name>glMultiDrawArraysEXT</name></proto>
             <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
-            <param len="COMPSIZE(primcount)">const <ptype>GLint</ptype> *<name>first</name></param>
-            <param len="COMPSIZE(primcount)">const <ptype>GLsizei</ptype> *<name>count</name></param>
+            <param len="primcount">const <ptype>GLint</ptype> *<name>first</name></param>
+            <param len="primcount">const <ptype>GLsizei</ptype> *<name>count</name></param>
             <param><ptype>GLsizei</ptype> <name>primcount</name></param>
             <alias name="glMultiDrawArrays"/>
         </command>
@@ -22592,36 +22592,36 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiDrawElements</name></proto>
             <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
-            <param len="COMPSIZE(drawcount)">const <ptype>GLsizei</ptype> *<name>count</name></param>
+            <param len="drawcount">const <ptype>GLsizei</ptype> *<name>count</name></param>
             <param group="DrawElementsType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param len="COMPSIZE(drawcount)">const void *const*<name>indices</name></param>
+            <param len="drawcount">const void *const*<name>indices</name></param>
             <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsBaseVertex</name></proto>
             <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
-            <param len="COMPSIZE(drawcount)">const <ptype>GLsizei</ptype> *<name>count</name></param>
+            <param len="drawcount">const <ptype>GLsizei</ptype> *<name>count</name></param>
             <param group="DrawElementsType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param len="COMPSIZE(drawcount)">const void *const*<name>indices</name></param>
+            <param len="drawcount">const void *const*<name>indices</name></param>
             <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
-            <param len="COMPSIZE(drawcount)">const <ptype>GLint</ptype> *<name>basevertex</name></param>
+            <param len="drawcount">const <ptype>GLint</ptype> *<name>basevertex</name></param>
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsBaseVertexEXT</name></proto>
             <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
-            <param len="COMPSIZE(drawcount)">const <ptype>GLsizei</ptype> *<name>count</name></param>
+            <param len="drawcount">const <ptype>GLsizei</ptype> *<name>count</name></param>
             <param group="DrawElementsType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param len="COMPSIZE(drawcount)">const void *const*<name>indices</name></param>
+            <param len="drawcount">const void *const*<name>indices</name></param>
             <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
-            <param len="COMPSIZE(drawcount)">const <ptype>GLint</ptype> *<name>basevertex</name></param>
+            <param len="drawcount">const <ptype>GLint</ptype> *<name>basevertex</name></param>
             <alias name="glMultiDrawElementsBaseVertex"/>
         </command>
         <command>
             <proto>void <name>glMultiDrawElementsEXT</name></proto>
             <param group="PrimitiveType"><ptype>GLenum</ptype> <name>mode</name></param>
-            <param len="COMPSIZE(primcount)">const <ptype>GLsizei</ptype> *<name>count</name></param>
+            <param len="primcount">const <ptype>GLsizei</ptype> *<name>count</name></param>
             <param group="DrawElementsType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param len="COMPSIZE(primcount)">const void *const*<name>indices</name></param>
+            <param len="primcount">const void *const*<name>indices</name></param>
             <param><ptype>GLsizei</ptype> <name>primcount</name></param>
             <alias name="glMultiDrawElements"/>
         </command>
