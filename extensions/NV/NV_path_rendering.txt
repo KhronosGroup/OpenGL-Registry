@@ -513,7 +513,7 @@ New Procedures and Functions
                                    bitfield fontStyle,
                                    uint pathParameterTemplate,
                                    float emScale,
-                                   uint baseAndCount[2]);
+                                   uint* baseAndCount);
 
         PATH SPECIFICATION WITH EXISTING PATHS
 

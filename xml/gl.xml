@@ -24515,7 +24515,7 @@ typedef unsigned int GLhandleARB;
             <param group="PathFontStyle"><ptype>GLbitfield</ptype> <name>fontStyle</name></param>
             <param><ptype>GLuint</ptype> <name>pathParameterTemplate</name></param>
             <param><ptype>GLfloat</ptype> <name>emScale</name></param>
-            <param len="2">const <ptype>GLuint</ptype> *<name>baseAndCount</name></param>
+            <param len="2"><ptype>GLuint</ptype> *<name>baseAndCount</name></param>
         </command>
         <command>
             <proto>void <name>glPathGlyphRangeNV</name></proto>
