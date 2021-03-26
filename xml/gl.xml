@@ -45592,7 +45592,6 @@ typedef unsigned int GLhandleARB;
         </extension>
         <extension name="GL_EXT_gpu_shader4" supported="gl">
             <require>
-                <enum name="GL_VERTEX_ATTRIB_ARRAY_INTEGER_EXT"/>
                 <enum name="GL_SAMPLER_1D_ARRAY_EXT"/>
                 <enum name="GL_SAMPLER_2D_ARRAY_EXT"/>
                 <enum name="GL_SAMPLER_BUFFER_EXT"/>
@@ -45631,6 +45630,32 @@ typedef unsigned int GLhandleARB;
                 <command name="glUniform2uivEXT"/>
                 <command name="glUniform3uivEXT"/>
                 <command name="glUniform4uivEXT"/>
+            </require>
+            <require comment="Duplicated in GL_NV_vertex_program4 since both extensions list these functions and tokens">
+                <enum name="GL_VERTEX_ATTRIB_ARRAY_INTEGER_EXT"/>
+                <command name="glVertexAttribI1iEXT"/>
+                <command name="glVertexAttribI2iEXT"/>
+                <command name="glVertexAttribI3iEXT"/>
+                <command name="glVertexAttribI4iEXT"/>
+                <command name="glVertexAttribI1uiEXT"/>
+                <command name="glVertexAttribI2uiEXT"/>
+                <command name="glVertexAttribI3uiEXT"/>
+                <command name="glVertexAttribI4uiEXT"/>
+                <command name="glVertexAttribI1ivEXT"/>
+                <command name="glVertexAttribI2ivEXT"/>
+                <command name="glVertexAttribI3ivEXT"/>
+                <command name="glVertexAttribI4ivEXT"/>
+                <command name="glVertexAttribI1uivEXT"/>
+                <command name="glVertexAttribI2uivEXT"/>
+                <command name="glVertexAttribI3uivEXT"/>
+                <command name="glVertexAttribI4uivEXT"/>
+                <command name="glVertexAttribI4bvEXT"/>
+                <command name="glVertexAttribI4svEXT"/>
+                <command name="glVertexAttribI4ubvEXT"/>
+                <command name="glVertexAttribI4usvEXT"/>
+                <command name="glVertexAttribIPointerEXT"/>
+                <command name="glGetVertexAttribIivEXT"/>
+                <command name="glGetVertexAttribIuivEXT"/>
             </require>
         </extension>
         <extension name="GL_EXT_gpu_shader5" supported="gles2"/>
@@ -49978,7 +50003,7 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_NV_vertex_program4" supported="gl">
-            <require>
+            <require comment="Shared with the EXT_gpu_shader4 extension">
                 <enum name="GL_VERTEX_ATTRIB_ARRAY_INTEGER_NV"/>
                 <command name="glVertexAttribI1iEXT"/>
                 <command name="glVertexAttribI2iEXT"/>
