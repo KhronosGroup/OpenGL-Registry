@@ -51110,6 +51110,8 @@ typedef unsigned int GLhandleARB;
                 <command name="glExtrapolateTex2DQCOM"/>
             </require>
         </extension>
+        <extension name="GL_QCOM_render_shared_exponent" supported="gles2">
+        </extension>
         <extension name="GL_QCOM_texture_foveated" supported="gles2">
             <require>
                 <enum name="GL_FOVEATION_ENABLE_BIT_QCOM"/>

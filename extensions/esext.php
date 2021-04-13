@@ -691,6 +691,8 @@
 </li>
 <li value=332><a href="extensions/NV/NV_primitive_shading_rate.txt">GL_NV_primitive_shading_rate</a>
 </li>
-<li value=333><a href="extensions/QCOM/QCOM_frame_extrapolation.txt">QCOM_frame_extrapolation</a>
+<li value=333><a href="extensions/QCOM/QCOM_frame_extrapolation.txt">GL_QCOM_frame_extrapolation</a>
+</li>
+<li value=334><a href="extensions/QCOM/QCOM_render_shared_exponent.txt">GL_QCOM_render_shared_exponent</a>
 </li>
 </ol>
