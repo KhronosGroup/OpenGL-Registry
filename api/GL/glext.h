@@ -32,7 +32,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20210306
+#define GL_GLEXT_VERSION 20210420
 
 #include <KHR/khrplatform.h>
 
@@ -7524,7 +7524,6 @@ GLAPI void APIENTRY glProgramLocalParameters4fvEXT (GLenum target, GLuint index,
 
 #ifndef GL_EXT_gpu_shader4
 #define GL_EXT_gpu_shader4 1
-#define GL_VERTEX_ATTRIB_ARRAY_INTEGER_EXT 0x88FD
 #define GL_SAMPLER_1D_ARRAY_EXT           0x8DC0
 #define GL_SAMPLER_2D_ARRAY_EXT           0x8DC1
 #define GL_SAMPLER_BUFFER_EXT             0x8DC2
@@ -7552,6 +7551,7 @@ GLAPI void APIENTRY glProgramLocalParameters4fvEXT (GLenum target, GLuint index,
 #define GL_UNSIGNED_INT_SAMPLER_BUFFER_EXT 0x8DD8
 #define GL_MIN_PROGRAM_TEXEL_OFFSET_EXT   0x8904
 #define GL_MAX_PROGRAM_TEXEL_OFFSET_EXT   0x8905
+#define GL_VERTEX_ATTRIB_ARRAY_INTEGER_EXT 0x88FD
 typedef void (APIENTRYP PFNGLGETUNIFORMUIVEXTPROC) (GLuint program, GLint location, GLuint *params);
 typedef void (APIENTRYP PFNGLBINDFRAGDATALOCATIONEXTPROC) (GLuint program, GLuint color, const GLchar *name);
 typedef GLint (APIENTRYP PFNGLGETFRAGDATALOCATIONEXTPROC) (GLuint program, const GLchar *name);
@@ -7563,6 +7563,29 @@ typedef void (APIENTRYP PFNGLUNIFORM1UIVEXTPROC) (GLint location, GLsizei count,
 typedef void (APIENTRYP PFNGLUNIFORM2UIVEXTPROC) (GLint location, GLsizei count, const GLuint *value);
 typedef void (APIENTRYP PFNGLUNIFORM3UIVEXTPROC) (GLint location, GLsizei count, const GLuint *value);
 typedef void (APIENTRYP PFNGLUNIFORM4UIVEXTPROC) (GLint location, GLsizei count, const GLuint *value);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI1IEXTPROC) (GLuint index, GLint x);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI2IEXTPROC) (GLuint index, GLint x, GLint y);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI3IEXTPROC) (GLuint index, GLint x, GLint y, GLint z);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI4IEXTPROC) (GLuint index, GLint x, GLint y, GLint z, GLint w);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI1UIEXTPROC) (GLuint index, GLuint x);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI2UIEXTPROC) (GLuint index, GLuint x, GLuint y);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI3UIEXTPROC) (GLuint index, GLuint x, GLuint y, GLuint z);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI4UIEXTPROC) (GLuint index, GLuint x, GLuint y, GLuint z, GLuint w);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI1IVEXTPROC) (GLuint index, const GLint *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI2IVEXTPROC) (GLuint index, const GLint *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI3IVEXTPROC) (GLuint index, const GLint *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI4IVEXTPROC) (GLuint index, const GLint *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI1UIVEXTPROC) (GLuint index, const GLuint *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI2UIVEXTPROC) (GLuint index, const GLuint *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI3UIVEXTPROC) (GLuint index, const GLuint *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI4UIVEXTPROC) (GLuint index, const GLuint *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI4BVEXTPROC) (GLuint index, const GLbyte *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI4SVEXTPROC) (GLuint index, const GLshort *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI4UBVEXTPROC) (GLuint index, const GLubyte *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBI4USVEXTPROC) (GLuint index, const GLushort *v);
+typedef void (APIENTRYP PFNGLVERTEXATTRIBIPOINTEREXTPROC) (GLuint index, GLint size, GLenum type, GLsizei stride, const void *pointer);
+typedef void (APIENTRYP PFNGLGETVERTEXATTRIBIIVEXTPROC) (GLuint index, GLenum pname, GLint *params);
+typedef void (APIENTRYP PFNGLGETVERTEXATTRIBIUIVEXTPROC) (GLuint index, GLenum pname, GLuint *params);
 #ifdef GL_GLEXT_PROTOTYPES
 GLAPI void APIENTRY glGetUniformuivEXT (GLuint program, GLint location, GLuint *params);
 GLAPI void APIENTRY glBindFragDataLocationEXT (GLuint program, GLuint color, const GLchar *name);
@@ -7575,6 +7598,29 @@ GLAPI void APIENTRY glUniform1uivEXT (GLint location, GLsizei count, const GLuin
 GLAPI void APIENTRY glUniform2uivEXT (GLint location, GLsizei count, const GLuint *value);
 GLAPI void APIENTRY glUniform3uivEXT (GLint location, GLsizei count, const GLuint *value);
 GLAPI void APIENTRY glUniform4uivEXT (GLint location, GLsizei count, const GLuint *value);
+GLAPI void APIENTRY glVertexAttribI1iEXT (GLuint index, GLint x);
+GLAPI void APIENTRY glVertexAttribI2iEXT (GLuint index, GLint x, GLint y);
+GLAPI void APIENTRY glVertexAttribI3iEXT (GLuint index, GLint x, GLint y, GLint z);
+GLAPI void APIENTRY glVertexAttribI4iEXT (GLuint index, GLint x, GLint y, GLint z, GLint w);
+GLAPI void APIENTRY glVertexAttribI1uiEXT (GLuint index, GLuint x);
+GLAPI void APIENTRY glVertexAttribI2uiEXT (GLuint index, GLuint x, GLuint y);
+GLAPI void APIENTRY glVertexAttribI3uiEXT (GLuint index, GLuint x, GLuint y, GLuint z);
+GLAPI void APIENTRY glVertexAttribI4uiEXT (GLuint index, GLuint x, GLuint y, GLuint z, GLuint w);
+GLAPI void APIENTRY glVertexAttribI1ivEXT (GLuint index, const GLint *v);
+GLAPI void APIENTRY glVertexAttribI2ivEXT (GLuint index, const GLint *v);
+GLAPI void APIENTRY glVertexAttribI3ivEXT (GLuint index, const GLint *v);
+GLAPI void APIENTRY glVertexAttribI4ivEXT (GLuint index, const GLint *v);
+GLAPI void APIENTRY glVertexAttribI1uivEXT (GLuint index, const GLuint *v);
+GLAPI void APIENTRY glVertexAttribI2uivEXT (GLuint index, const GLuint *v);
+GLAPI void APIENTRY glVertexAttribI3uivEXT (GLuint index, const GLuint *v);
+GLAPI void APIENTRY glVertexAttribI4uivEXT (GLuint index, const GLuint *v);
+GLAPI void APIENTRY glVertexAttribI4bvEXT (GLuint index, const GLbyte *v);
+GLAPI void APIENTRY glVertexAttribI4svEXT (GLuint index, const GLshort *v);
+GLAPI void APIENTRY glVertexAttribI4ubvEXT (GLuint index, const GLubyte *v);
+GLAPI void APIENTRY glVertexAttribI4usvEXT (GLuint index, const GLushort *v);
+GLAPI void APIENTRY glVertexAttribIPointerEXT (GLuint index, GLint size, GLenum type, GLsizei stride, const void *pointer);
+GLAPI void APIENTRY glGetVertexAttribIivEXT (GLuint index, GLenum pname, GLint *params);
+GLAPI void APIENTRY glGetVertexAttribIuivEXT (GLuint index, GLenum pname, GLuint *params);
 #endif
 #endif /* GL_EXT_gpu_shader4 */
 
@@ -11770,54 +11816,6 @@ GLAPI void APIENTRY glVertexAttribs4ubvNV (GLuint index, GLsizei count, const GL
 #ifndef GL_NV_vertex_program4
 #define GL_NV_vertex_program4 1
 #define GL_VERTEX_ATTRIB_ARRAY_INTEGER_NV 0x88FD
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI1IEXTPROC) (GLuint index, GLint x);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI2IEXTPROC) (GLuint index, GLint x, GLint y);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI3IEXTPROC) (GLuint index, GLint x, GLint y, GLint z);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI4IEXTPROC) (GLuint index, GLint x, GLint y, GLint z, GLint w);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI1UIEXTPROC) (GLuint index, GLuint x);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI2UIEXTPROC) (GLuint index, GLuint x, GLuint y);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI3UIEXTPROC) (GLuint index, GLuint x, GLuint y, GLuint z);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI4UIEXTPROC) (GLuint index, GLuint x, GLuint y, GLuint z, GLuint w);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI1IVEXTPROC) (GLuint index, const GLint *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI2IVEXTPROC) (GLuint index, const GLint *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI3IVEXTPROC) (GLuint index, const GLint *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI4IVEXTPROC) (GLuint index, const GLint *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI1UIVEXTPROC) (GLuint index, const GLuint *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI2UIVEXTPROC) (GLuint index, const GLuint *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI3UIVEXTPROC) (GLuint index, const GLuint *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI4UIVEXTPROC) (GLuint index, const GLuint *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI4BVEXTPROC) (GLuint index, const GLbyte *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI4SVEXTPROC) (GLuint index, const GLshort *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI4UBVEXTPROC) (GLuint index, const GLubyte *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBI4USVEXTPROC) (GLuint index, const GLushort *v);
-typedef void (APIENTRYP PFNGLVERTEXATTRIBIPOINTEREXTPROC) (GLuint index, GLint size, GLenum type, GLsizei stride, const void *pointer);
-typedef void (APIENTRYP PFNGLGETVERTEXATTRIBIIVEXTPROC) (GLuint index, GLenum pname, GLint *params);
-typedef void (APIENTRYP PFNGLGETVERTEXATTRIBIUIVEXTPROC) (GLuint index, GLenum pname, GLuint *params);
-#ifdef GL_GLEXT_PROTOTYPES
-GLAPI void APIENTRY glVertexAttribI1iEXT (GLuint index, GLint x);
-GLAPI void APIENTRY glVertexAttribI2iEXT (GLuint index, GLint x, GLint y);
-GLAPI void APIENTRY glVertexAttribI3iEXT (GLuint index, GLint x, GLint y, GLint z);
-GLAPI void APIENTRY glVertexAttribI4iEXT (GLuint index, GLint x, GLint y, GLint z, GLint w);
-GLAPI void APIENTRY glVertexAttribI1uiEXT (GLuint index, GLuint x);
-GLAPI void APIENTRY glVertexAttribI2uiEXT (GLuint index, GLuint x, GLuint y);
-GLAPI void APIENTRY glVertexAttribI3uiEXT (GLuint index, GLuint x, GLuint y, GLuint z);
-GLAPI void APIENTRY glVertexAttribI4uiEXT (GLuint index, GLuint x, GLuint y, GLuint z, GLuint w);
-GLAPI void APIENTRY glVertexAttribI1ivEXT (GLuint index, const GLint *v);
-GLAPI void APIENTRY glVertexAttribI2ivEXT (GLuint index, const GLint *v);
-GLAPI void APIENTRY glVertexAttribI3ivEXT (GLuint index, const GLint *v);
-GLAPI void APIENTRY glVertexAttribI4ivEXT (GLuint index, const GLint *v);
-GLAPI void APIENTRY glVertexAttribI1uivEXT (GLuint index, const GLuint *v);
-GLAPI void APIENTRY glVertexAttribI2uivEXT (GLuint index, const GLuint *v);
-GLAPI void APIENTRY glVertexAttribI3uivEXT (GLuint index, const GLuint *v);
-GLAPI void APIENTRY glVertexAttribI4uivEXT (GLuint index, const GLuint *v);
-GLAPI void APIENTRY glVertexAttribI4bvEXT (GLuint index, const GLbyte *v);
-GLAPI void APIENTRY glVertexAttribI4svEXT (GLuint index, const GLshort *v);
-GLAPI void APIENTRY glVertexAttribI4ubvEXT (GLuint index, const GLubyte *v);
-GLAPI void APIENTRY glVertexAttribI4usvEXT (GLuint index, const GLushort *v);
-GLAPI void APIENTRY glVertexAttribIPointerEXT (GLuint index, GLint size, GLenum type, GLsizei stride, const void *pointer);
-GLAPI void APIENTRY glGetVertexAttribIivEXT (GLuint index, GLenum pname, GLint *params);
-GLAPI void APIENTRY glGetVertexAttribIuivEXT (GLuint index, GLenum pname, GLuint *params);
-#endif
 #endif /* GL_NV_vertex_program4 */
 
 #ifndef GL_NV_video_capture
