@@ -1047,4 +1047,6 @@
 </li>
 <li value=554><a href="extensions/NV/NV_primitive_shading_rate.txt">GL_NV_primitive_shading_rate</a>
 </li>
+<li value=555><a href="extensions/EXT/EXT_texture_sRGB_RG8.txt">GL_EXT_texture_sRGB_RG8</a>
+</li>
 </ol>
