@@ -23,8 +23,8 @@ Status
 
 Version
 
-     Last Modified Date:	March 13, 2014
-     NVIDIA Revision:		2
+     Last Modified Date:	May 11, 2021
+     NVIDIA Revision:		3
 
 Number
 
@@ -126,7 +126,7 @@ Dependencies on NV_shader_buffer_store and NV_gpu_shader5
 Dependencies on NV_gpu_program5, NV_compute_program5, and
 NV_shader_storage_buffer_object
 
-    If NV_gpu_program5 is supported and "OPTION NV_shader_atomic_uint64" is
+    If NV_gpu_program5 is supported and "OPTION NV_shader_atomic_int64" is
     specified in an assembly program, new combinations of atomic operations
     and storage modifiers are supported for the ATOM, ATOMB, and ATOMS
     instructions.  (Note:  ATOMB comes from NV_shader_storage_buffer_object
@@ -138,9 +138,9 @@ NV_shader_storage_buffer_object
     (Add to "Section 2.X.6, Program Options" of the NV_gpu_program4 extension,
      as extended by NV_gpu_program5:)
 
-      + Extended 64-bit Atomic Operations (NV_shader_atomic_uint64)
+      + Extended 64-bit Atomic Operations (NV_shader_atomic_int64)
 
-	If a program specifies the "NV_shader_atomic_uint64" option, it may
+	If a program specifies the "NV_shader_atomic_int64" option, it may
 	use the "S64" storage modifier with the atomic operations "MIN',
 	"MAX", "AND", "OR", "XOR", "ADD", "EXCH", and "CSWAP", and the "U64"
 	storage modifier with the atomic operations "MIN", "MAX", "AND", "OR",
@@ -182,6 +182,11 @@ Issues
      None.
 
 Revision History
+
+    Revision 3, May 11, 2021
+
+      Fix typos in the NV_gpu_program5 assembly option name, which should
+      have been specified as "NV_shader_atomic_int64".
 
     Revision 2, March 13, 2014 (pbrown)
 
