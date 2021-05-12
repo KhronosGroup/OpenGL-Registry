@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20210420 */
+/* Generated on date 20210512 */
 
 /* Generated C header for:
  * API: gles2
@@ -2443,6 +2443,11 @@ GL_APICALL void GL_APIENTRY glGetPerfQueryIdByNameINTEL (GLchar *queryName, GLui
 GL_APICALL void GL_APIENTRY glGetPerfQueryInfoINTEL (GLuint queryId, GLuint queryNameLength, GLchar *queryName, GLuint *dataSize, GLuint *noCounters, GLuint *noInstances, GLuint *capsMask);
 #endif
 #endif /* GL_INTEL_performance_query */
+
+#ifndef GL_MESA_bgra
+#define GL_MESA_bgra 1
+#define GL_BGR_EXT                        0x80E0
+#endif /* GL_MESA_bgra */
 
 #ifndef GL_MESA_framebuffer_flip_x
 #define GL_MESA_framebuffer_flip_x 1
