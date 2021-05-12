@@ -3001,6 +3001,13 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/GLX_MESA_copy_sub_buffer.txt',
     },
+    'GL_MESA_bgra' : {
+        'esnumber' : 335,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_bgra.txt',
+    },
+
     'GL_MESA_framebuffer_flip_x' : {
         'number' : 548,
         'esnumber' : 327,
