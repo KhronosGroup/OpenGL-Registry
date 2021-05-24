@@ -14441,7 +14441,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetPerfQueryInfoINTEL</name></proto>
             <param><ptype>GLuint</ptype> <name>queryId</name></param>
             <param><ptype>GLuint</ptype> <name>queryNameLength</name></param>
-            <param><ptype>GLchar</ptype> *<name>queryName</name></param>
+            <param len="queryNameLength"><ptype>GLchar</ptype> *<name>queryName</name></param>
             <param><ptype>GLuint</ptype> *<name>dataSize</name></param>
             <param><ptype>GLuint</ptype> *<name>noCounters</name></param>
             <param><ptype>GLuint</ptype> *<name>noInstances</name></param>
