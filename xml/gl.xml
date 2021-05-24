@@ -14371,9 +14371,9 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>queryId</name></param>
             <param><ptype>GLuint</ptype> <name>counterId</name></param>
             <param><ptype>GLuint</ptype> <name>counterNameLength</name></param>
-            <param><ptype>GLchar</ptype> *<name>counterName</name></param>
+            <param len="counterNameLength"><ptype>GLchar</ptype> *<name>counterName</name></param>
             <param><ptype>GLuint</ptype> <name>counterDescLength</name></param>
-            <param><ptype>GLchar</ptype> *<name>counterDesc</name></param>
+            <param len="counterDescLength"><ptype>GLchar</ptype> *<name>counterDesc</name></param>
             <param><ptype>GLuint</ptype> *<name>counterOffset</name></param>
             <param><ptype>GLuint</ptype> *<name>counterDataSize</name></param>
             <param><ptype>GLuint</ptype> *<name>counterTypeEnum</name></param>
