@@ -15502,7 +15502,7 @@ typedef unsigned int GLhandleARB;
             <param class="shader"><ptype>GLuint</ptype> <name>shader</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
-            <param><ptype>GLchar</ptype> *<name>source</name></param>
+            <param len="length"><ptype>GLchar</ptype> *<name>source</name></param>
         </command>
         <command>
             <proto><ptype>GLuint</ptype> <name>glGetUniformBlockIndex</name></proto>
