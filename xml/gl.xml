@@ -11775,7 +11775,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glExtGetProgramBinarySourceQCOM</name></proto>
             <param class="program"><ptype>GLuint</ptype> <name>program</name></param>
             <param group="ShaderType"><ptype>GLenum</ptype> <name>shadertype</name></param>
-            <param><ptype>GLchar</ptype> *<name>source</name></param>
+            <param len="length"><ptype>GLchar</ptype> *<name>source</name></param>
             <param><ptype>GLint</ptype> *<name>length</name></param>
         </command>
         <command>
