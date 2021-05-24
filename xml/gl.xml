@@ -12873,7 +12873,7 @@ typedef unsigned int GLhandleARB;
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>size</name></param>
             <param len="1"><ptype>GLenum</ptype> *<name>type</name></param>
-            <param len="COMPSIZE(program,index,bufSize)"><ptype>GLchar</ptype> *<name>name</name></param>
+            <param len="length"><ptype>GLchar</ptype> *<name>name</name></param>
         </command>
         <command>
             <proto>void <name>glGetArrayObjectfvATI</name></proto>
