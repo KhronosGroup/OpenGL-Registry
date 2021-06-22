@@ -11775,7 +11775,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glExtGetProgramBinarySourceQCOM</name></proto>
             <param class="program"><ptype>GLuint</ptype> <name>program</name></param>
             <param group="ShaderType"><ptype>GLenum</ptype> <name>shadertype</name></param>
-            <param><ptype>GLchar</ptype> *<name>source</name></param>
+            <param len="length"><ptype>GLchar</ptype> *<name>source</name></param>
             <param><ptype>GLint</ptype> *<name>length</name></param>
         </command>
         <command>
@@ -12873,7 +12873,7 @@ typedef unsigned int GLhandleARB;
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>size</name></param>
             <param len="1"><ptype>GLenum</ptype> *<name>type</name></param>
-            <param len="COMPSIZE(program,index,bufSize)"><ptype>GLchar</ptype> *<name>name</name></param>
+            <param len="bufSize"><ptype>GLchar</ptype> *<name>name</name></param>
         </command>
         <command>
             <proto>void <name>glGetArrayObjectfvATI</name></proto>
@@ -14371,9 +14371,9 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>queryId</name></param>
             <param><ptype>GLuint</ptype> <name>counterId</name></param>
             <param><ptype>GLuint</ptype> <name>counterNameLength</name></param>
-            <param><ptype>GLchar</ptype> *<name>counterName</name></param>
+            <param len="counterNameLength"><ptype>GLchar</ptype> *<name>counterName</name></param>
             <param><ptype>GLuint</ptype> <name>counterDescLength</name></param>
-            <param><ptype>GLchar</ptype> *<name>counterDesc</name></param>
+            <param len="counterDescLength"><ptype>GLchar</ptype> *<name>counterDesc</name></param>
             <param><ptype>GLuint</ptype> *<name>counterOffset</name></param>
             <param><ptype>GLuint</ptype> *<name>counterDataSize</name></param>
             <param><ptype>GLuint</ptype> *<name>counterTypeEnum</name></param>
@@ -14441,7 +14441,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetPerfQueryInfoINTEL</name></proto>
             <param><ptype>GLuint</ptype> <name>queryId</name></param>
             <param><ptype>GLuint</ptype> <name>queryNameLength</name></param>
-            <param><ptype>GLchar</ptype> *<name>queryName</name></param>
+            <param len="queryNameLength"><ptype>GLchar</ptype> *<name>queryName</name></param>
             <param><ptype>GLuint</ptype> *<name>dataSize</name></param>
             <param><ptype>GLuint</ptype> *<name>noCounters</name></param>
             <param><ptype>GLuint</ptype> *<name>noInstances</name></param>
@@ -15502,7 +15502,7 @@ typedef unsigned int GLhandleARB;
             <param class="shader"><ptype>GLuint</ptype> <name>shader</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
-            <param><ptype>GLchar</ptype> *<name>source</name></param>
+            <param len="bufSize"><ptype>GLchar</ptype> *<name>source</name></param>
         </command>
         <command>
             <proto><ptype>GLuint</ptype> <name>glGetUniformBlockIndex</name></proto>
