@@ -2921,85 +2921,85 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8570" end="0x859F" group="RegisterCombinerPname" vendor="AMD/NV">
-        <enum value="0x8570" name="GL_COMBINE"/>
-        <enum value="0x8570" name="GL_COMBINE_ARB"/>
-        <enum value="0x8570" name="GL_COMBINE_EXT"/>
-        <enum value="0x8571" name="GL_COMBINE_RGB"/>
-        <enum value="0x8571" name="GL_COMBINE_RGB_ARB"/>
-        <enum value="0x8571" name="GL_COMBINE_RGB_EXT"/>
-        <enum value="0x8572" name="GL_COMBINE_ALPHA"/>
-        <enum value="0x8572" name="GL_COMBINE_ALPHA_ARB"/>
-        <enum value="0x8572" name="GL_COMBINE_ALPHA_EXT"/>
-        <enum value="0x8573" name="GL_RGB_SCALE"/>
-        <enum value="0x8573" name="GL_RGB_SCALE_ARB"/>
-        <enum value="0x8573" name="GL_RGB_SCALE_EXT"/>
-        <enum value="0x8574" name="GL_ADD_SIGNED"/>
-        <enum value="0x8574" name="GL_ADD_SIGNED_ARB"/>
-        <enum value="0x8574" name="GL_ADD_SIGNED_EXT"/>
-        <enum value="0x8575" name="GL_INTERPOLATE"/>
-        <enum value="0x8575" name="GL_INTERPOLATE_ARB"/>
-        <enum value="0x8575" name="GL_INTERPOLATE_EXT"/>
-        <enum value="0x8576" name="GL_CONSTANT" group="PathGenMode"/>
-        <enum value="0x8576" name="GL_CONSTANT_ARB"/>
-        <enum value="0x8576" name="GL_CONSTANT_EXT"/>
-        <enum value="0x8576" name="GL_CONSTANT_NV"/>
-        <enum value="0x8577" name="GL_PRIMARY_COLOR" group="PathColor"/>
-        <enum value="0x8577" name="GL_PRIMARY_COLOR_ARB"/>
-        <enum value="0x8577" name="GL_PRIMARY_COLOR_EXT"/>
-        <enum value="0x8578" name="GL_PREVIOUS"/>
-        <enum value="0x8578" name="GL_PREVIOUS_ARB"/>
-        <enum value="0x8578" name="GL_PREVIOUS_EXT"/>
+        <enum value="0x8570" name="GL_COMBINE" group="RegisterCombinerPname"/>
+        <enum value="0x8570" name="GL_COMBINE_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8570" name="GL_COMBINE_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8571" name="GL_COMBINE_RGB" group="RegisterCombinerPname"/>
+        <enum value="0x8571" name="GL_COMBINE_RGB_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8571" name="GL_COMBINE_RGB_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8572" name="GL_COMBINE_ALPHA" group="RegisterCombinerPname"/>
+        <enum value="0x8572" name="GL_COMBINE_ALPHA_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8572" name="GL_COMBINE_ALPHA_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8573" name="GL_RGB_SCALE" group="RegisterCombinerPname"/>
+        <enum value="0x8573" name="GL_RGB_SCALE_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8573" name="GL_RGB_SCALE_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8574" name="GL_ADD_SIGNED" group="RegisterCombinerPname"/>
+        <enum value="0x8574" name="GL_ADD_SIGNED_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8574" name="GL_ADD_SIGNED_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8575" name="GL_INTERPOLATE" group="RegisterCombinerPname"/>
+        <enum value="0x8575" name="GL_INTERPOLATE_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8575" name="GL_INTERPOLATE_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8576" name="GL_CONSTANT" group="PathGenMode" group="RegisterCombinerPname"/>
+        <enum value="0x8576" name="GL_CONSTANT_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8576" name="GL_CONSTANT_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8576" name="GL_CONSTANT_NV" group="RegisterCombinerPname"/>
+        <enum value="0x8577" name="GL_PRIMARY_COLOR" group="PathColor" group="RegisterCombinerPname"/>
+        <enum value="0x8577" name="GL_PRIMARY_COLOR_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8577" name="GL_PRIMARY_COLOR_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8578" name="GL_PREVIOUS" group="RegisterCombinerPname"/>
+        <enum value="0x8578" name="GL_PREVIOUS_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8578" name="GL_PREVIOUS_EXT" group="RegisterCombinerPname"/>
             <unused start="0x8579" end="0x857F" comment="Additional combiner enums only"/>
-        <enum value="0x8580" name="GL_SOURCE0_RGB"/>
-        <enum value="0x8580" name="GL_SOURCE0_RGB_ARB"/>
-        <enum value="0x8580" name="GL_SOURCE0_RGB_EXT"/>
-        <enum value="0x8580" name="GL_SRC0_RGB" alias="GL_SOURCE0_RGB"/>
-        <enum value="0x8581" name="GL_SOURCE1_RGB"/>
-        <enum value="0x8581" name="GL_SOURCE1_RGB_ARB"/>
-        <enum value="0x8581" name="GL_SOURCE1_RGB_EXT"/>
-        <enum value="0x8581" name="GL_SRC1_RGB" alias="GL_SOURCE1_RGB"/>
-        <enum value="0x8582" name="GL_SOURCE2_RGB"/>
-        <enum value="0x8582" name="GL_SOURCE2_RGB_ARB"/>
-        <enum value="0x8582" name="GL_SOURCE2_RGB_EXT"/>
-        <enum value="0x8582" name="GL_SRC2_RGB" alias="GL_SOURCE2_RGB"/>
-        <enum value="0x8583" name="GL_SOURCE3_RGB_NV"/>
+        <enum value="0x8580" name="GL_SOURCE0_RGB" group="RegisterCombinerPname"/>
+        <enum value="0x8580" name="GL_SOURCE0_RGB_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8580" name="GL_SOURCE0_RGB_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8580" name="GL_SRC0_RGB" alias="GL_SOURCE0_RGB" group="RegisterCombinerPname"/>
+        <enum value="0x8581" name="GL_SOURCE1_RGB" group="RegisterCombinerPname"/>
+        <enum value="0x8581" name="GL_SOURCE1_RGB_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8581" name="GL_SOURCE1_RGB_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8581" name="GL_SRC1_RGB" alias="GL_SOURCE1_RGB" group="RegisterCombinerPname"/>
+        <enum value="0x8582" name="GL_SOURCE2_RGB" group="RegisterCombinerPname"/>
+        <enum value="0x8582" name="GL_SOURCE2_RGB_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8582" name="GL_SOURCE2_RGB_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8582" name="GL_SRC2_RGB" alias="GL_SOURCE2_RGB" group="RegisterCombinerPname"/>
+        <enum value="0x8583" name="GL_SOURCE3_RGB_NV" group="RegisterCombinerPname"/>
             <unused start="0x8584" end="0x8587" comment="Additional combiner enums only"/>
-        <enum value="0x8588" name="GL_SOURCE0_ALPHA"/>
-        <enum value="0x8588" name="GL_SOURCE0_ALPHA_ARB"/>
-        <enum value="0x8588" name="GL_SOURCE0_ALPHA_EXT"/>
-        <enum value="0x8588" name="GL_SRC0_ALPHA" alias="GL_SOURCE0_ALPHA"/>
-        <enum value="0x8589" name="GL_SOURCE1_ALPHA"/>
-        <enum value="0x8589" name="GL_SOURCE1_ALPHA_ARB"/>
-        <enum value="0x8589" name="GL_SOURCE1_ALPHA_EXT"/>
-        <enum value="0x8589" name="GL_SRC1_ALPHA" alias="GL_SOURCE1_ALPHA" group="BlendingFactor"/>
-        <enum value="0x8589" name="GL_SRC1_ALPHA_EXT"/>
-        <enum value="0x858A" name="GL_SOURCE2_ALPHA"/>
-        <enum value="0x858A" name="GL_SOURCE2_ALPHA_ARB"/>
-        <enum value="0x858A" name="GL_SOURCE2_ALPHA_EXT"/>
-        <enum value="0x858A" name="GL_SRC2_ALPHA" alias="GL_SOURCE2_ALPHA"/>
-        <enum value="0x858B" name="GL_SOURCE3_ALPHA_NV"/>
+        <enum value="0x8588" name="GL_SOURCE0_ALPHA" group="RegisterCombinerPname"/>
+        <enum value="0x8588" name="GL_SOURCE0_ALPHA_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8588" name="GL_SOURCE0_ALPHA_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8588" name="GL_SRC0_ALPHA" alias="GL_SOURCE0_ALPHA" group="RegisterCombinerPname"/>
+        <enum value="0x8589" name="GL_SOURCE1_ALPHA" group="RegisterCombinerPname"/>
+        <enum value="0x8589" name="GL_SOURCE1_ALPHA_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8589" name="GL_SOURCE1_ALPHA_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8589" name="GL_SRC1_ALPHA" alias="GL_SOURCE1_ALPHA" group="BlendingFactor" group="RegisterCombinerPname"/>
+        <enum value="0x8589" name="GL_SRC1_ALPHA_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x858A" name="GL_SOURCE2_ALPHA" group="RegisterCombinerPname"/>
+        <enum value="0x858A" name="GL_SOURCE2_ALPHA_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x858A" name="GL_SOURCE2_ALPHA_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x858A" name="GL_SRC2_ALPHA" alias="GL_SOURCE2_ALPHA" group="RegisterCombinerPname"/>
+        <enum value="0x858B" name="GL_SOURCE3_ALPHA_NV" group="RegisterCombinerPname"/>
             <unused start="0x858C" end="0x858F" comment="Additional combiner enums only"/>
-        <enum value="0x8590" name="GL_OPERAND0_RGB"/>
-        <enum value="0x8590" name="GL_OPERAND0_RGB_ARB"/>
-        <enum value="0x8590" name="GL_OPERAND0_RGB_EXT"/>
-        <enum value="0x8591" name="GL_OPERAND1_RGB"/>
-        <enum value="0x8591" name="GL_OPERAND1_RGB_ARB"/>
-        <enum value="0x8591" name="GL_OPERAND1_RGB_EXT"/>
-        <enum value="0x8592" name="GL_OPERAND2_RGB"/>
-        <enum value="0x8592" name="GL_OPERAND2_RGB_ARB"/>
-        <enum value="0x8592" name="GL_OPERAND2_RGB_EXT"/>
-        <enum value="0x8593" name="GL_OPERAND3_RGB_NV"/>
+        <enum value="0x8590" name="GL_OPERAND0_RGB" group="RegisterCombinerPname"/>
+        <enum value="0x8590" name="GL_OPERAND0_RGB_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8590" name="GL_OPERAND0_RGB_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8591" name="GL_OPERAND1_RGB" group="RegisterCombinerPname"/>
+        <enum value="0x8591" name="GL_OPERAND1_RGB_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8591" name="GL_OPERAND1_RGB_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8592" name="GL_OPERAND2_RGB" group="RegisterCombinerPname"/>
+        <enum value="0x8592" name="GL_OPERAND2_RGB_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8592" name="GL_OPERAND2_RGB_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8593" name="GL_OPERAND3_RGB_NV" group="RegisterCombinerPname"/>
             <unused start="0x8594" end="0x8597" comment="Additional combiner enums only"/>
-        <enum value="0x8598" name="GL_OPERAND0_ALPHA"/>
-        <enum value="0x8598" name="GL_OPERAND0_ALPHA_ARB"/>
-        <enum value="0x8598" name="GL_OPERAND0_ALPHA_EXT"/>
-        <enum value="0x8599" name="GL_OPERAND1_ALPHA"/>
-        <enum value="0x8599" name="GL_OPERAND1_ALPHA_ARB"/>
-        <enum value="0x8599" name="GL_OPERAND1_ALPHA_EXT"/>
-        <enum value="0x859A" name="GL_OPERAND2_ALPHA"/>
-        <enum value="0x859A" name="GL_OPERAND2_ALPHA_ARB"/>
-        <enum value="0x859A" name="GL_OPERAND2_ALPHA_EXT"/>
-        <enum value="0x859B" name="GL_OPERAND3_ALPHA_NV"/>
+        <enum value="0x8598" name="GL_OPERAND0_ALPHA" group="RegisterCombinerPname"/>
+        <enum value="0x8598" name="GL_OPERAND0_ALPHA_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8598" name="GL_OPERAND0_ALPHA_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x8599" name="GL_OPERAND1_ALPHA" group="RegisterCombinerPname"/>
+        <enum value="0x8599" name="GL_OPERAND1_ALPHA_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x8599" name="GL_OPERAND1_ALPHA_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x859A" name="GL_OPERAND2_ALPHA" group="RegisterCombinerPname"/>
+        <enum value="0x859A" name="GL_OPERAND2_ALPHA_ARB" group="RegisterCombinerPname"/>
+        <enum value="0x859A" name="GL_OPERAND2_ALPHA_EXT" group="RegisterCombinerPname"/>
+        <enum value="0x859B" name="GL_OPERAND3_ALPHA_NV" group="RegisterCombinerPname"/>
             <unused start="0x859C" end="0x859F" comment="Additional combiner enums only"/>
     </enums>
 
@@ -4374,8 +4374,8 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8B40" end="0x8B47" group="ContainerType" vendor="ARB">
-        <enum value="0x8B40" name="GL_PROGRAM_OBJECT_ARB"/>
-        <enum value="0x8B40" name="GL_PROGRAM_OBJECT_EXT"/>
+        <enum value="0x8B40" name="GL_PROGRAM_OBJECT_ARB" group="ContainerType"/>
+        <enum value="0x8B40" name="GL_PROGRAM_OBJECT_EXT" group="ContainerType"/>
             <unused start="0x8B41" end="0x8B47" comment="For container types"/>
     </enums>
 
