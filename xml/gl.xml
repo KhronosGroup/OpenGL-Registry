@@ -483,22 +483,22 @@ typedef unsigned int GLhandleARB;
          extensions and API versions). -->
 
     <enums namespace="GL" group="SpecialNumbers" vendor="ARB" comment="Tokens whose numeric value is intrinsically meaningful">
-        <enum value="0" name="GL_FALSE" group="Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
-        <enum value="0" name="GL_NO_ERROR" group="GraphicsResetStatus,ErrorCode"/>
-        <enum value="0" name="GL_ZERO" group="TextureSwizzle,StencilOp,BlendingFactor"/>
-        <enum value="0" name="GL_NONE" group="SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenMode,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
-        <enum value="0" name="GL_NONE_OES" group="ReadBufferMode,DrawBufferMode"/>
-        <enum value="1" name="GL_TRUE" group="Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
-        <enum value="1" name="GL_ONE" group="TextureSwizzle,BlendingFactor"/>
-        <enum value="0xFFFFFFFF" name="GL_INVALID_INDEX" type="u" comment="Tagged as uint"/>
-        <enum value="0xFFFFFFFF" name="GL_ALL_PIXELS_AMD"/>
-        <enum value="0xFFFFFFFFFFFFFFFF" name="GL_TIMEOUT_IGNORED" type="ull" comment="Tagged as uint64"/>
-        <enum value="0xFFFFFFFFFFFFFFFF" name="GL_TIMEOUT_IGNORED_APPLE" type="ull" comment="Tagged as uint64"/>
-        <enum value="1" name="GL_VERSION_ES_CL_1_0" comment="Not an API enum. API definition macro for ES 1.0/1.1 headers"/>
-        <enum value="1" name="GL_VERSION_ES_CM_1_1" comment="Not an API enum. API definition macro for ES 1.0/1.1 headers"/>
-        <enum value="1" name="GL_VERSION_ES_CL_1_1" comment="Not an API enum. API definition macro for ES 1.0/1.1 headers"/>
-        <enum value="16" name="GL_UUID_SIZE_EXT"/>
-        <enum value="8" name="GL_LUID_SIZE_EXT"/>
+        <enum value="0" name="GL_FALSE" group="SpecialNumbers,Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
+        <enum value="0" name="GL_NO_ERROR" group="SpecialNumbers,GraphicsResetStatus,ErrorCode"/>
+        <enum value="0" name="GL_ZERO" group="SpecialNumbers,TextureSwizzle,StencilOp,BlendingFactor"/>
+        <enum value="0" name="GL_NONE" group="SpecialNumbers,SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenMode,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
+        <enum value="0" name="GL_NONE_OES" group="SpecialNumbers,ReadBufferMode,DrawBufferMode"/>
+        <enum value="1" name="GL_TRUE" group="SpecialNumbers,Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
+        <enum value="1" name="GL_ONE" group="SpecialNumbers,TextureSwizzle,BlendingFactor"/>
+        <enum value="0xFFFFFFFF" name="GL_INVALID_INDEX" type="u" comment="Tagged as uint" group="SpecialNumbers"/>
+        <enum value="0xFFFFFFFF" name="GL_ALL_PIXELS_AMD" group="SpecialNumbers"/>
+        <enum value="0xFFFFFFFFFFFFFFFF" name="GL_TIMEOUT_IGNORED" type="ull" comment="Tagged as uint64" group="SpecialNumbers"/>
+        <enum value="0xFFFFFFFFFFFFFFFF" name="GL_TIMEOUT_IGNORED_APPLE" type="ull" comment="Tagged as uint64" group="SpecialNumbers"/>
+        <enum value="1" name="GL_VERSION_ES_CL_1_0" comment="Not an API enum. API definition macro for ES 1.0/1.1 headers" group="SpecialNumbers"/>
+        <enum value="1" name="GL_VERSION_ES_CM_1_1" comment="Not an API enum. API definition macro for ES 1.0/1.1 headers" group="SpecialNumbers"/>
+        <enum value="1" name="GL_VERSION_ES_CL_1_1" comment="Not an API enum. API definition macro for ES 1.0/1.1 headers" group="SpecialNumbers"/>
+        <enum value="16" name="GL_UUID_SIZE_EXT" group="SpecialNumbers"/>
+        <enum value="8" name="GL_LUID_SIZE_EXT" group="SpecialNumbers"/>
     </enums>
 
     <enums namespace="GL" start="0x0000" end="0x7FFF" vendor="ARB" comment="Mostly OpenGL 1.0/1.1 enum assignments. Unused ranges should generally remain unused.">
