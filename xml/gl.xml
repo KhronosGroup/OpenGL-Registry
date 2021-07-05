@@ -2939,11 +2939,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8575" name="GL_INTERPOLATE" group="RegisterCombinerPname"/>
         <enum value="0x8575" name="GL_INTERPOLATE_ARB" group="RegisterCombinerPname"/>
         <enum value="0x8575" name="GL_INTERPOLATE_EXT" group="RegisterCombinerPname"/>
-        <enum value="0x8576" name="GL_CONSTANT" group="PathGenMode" group="RegisterCombinerPname"/>
+        <enum value="0x8576" name="GL_CONSTANT" group="RegisterCombinerPname,PathGenMode"/>
         <enum value="0x8576" name="GL_CONSTANT_ARB" group="RegisterCombinerPname"/>
         <enum value="0x8576" name="GL_CONSTANT_EXT" group="RegisterCombinerPname"/>
         <enum value="0x8576" name="GL_CONSTANT_NV" group="RegisterCombinerPname"/>
-        <enum value="0x8577" name="GL_PRIMARY_COLOR" group="PathColor" group="RegisterCombinerPname"/>
+        <enum value="0x8577" name="GL_PRIMARY_COLOR" group="RegisterCombinerPname,PathColor"/>
         <enum value="0x8577" name="GL_PRIMARY_COLOR_ARB" group="RegisterCombinerPname"/>
         <enum value="0x8577" name="GL_PRIMARY_COLOR_EXT" group="RegisterCombinerPname"/>
         <enum value="0x8578" name="GL_PREVIOUS" group="RegisterCombinerPname"/>
@@ -2971,7 +2971,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8589" name="GL_SOURCE1_ALPHA" group="RegisterCombinerPname"/>
         <enum value="0x8589" name="GL_SOURCE1_ALPHA_ARB" group="RegisterCombinerPname"/>
         <enum value="0x8589" name="GL_SOURCE1_ALPHA_EXT" group="RegisterCombinerPname"/>
-        <enum value="0x8589" name="GL_SRC1_ALPHA" alias="GL_SOURCE1_ALPHA" group="BlendingFactor" group="RegisterCombinerPname"/>
+        <enum value="0x8589" name="GL_SRC1_ALPHA" alias="GL_SOURCE1_ALPHA" group="RegisterCombinerPname,BlendingFactor"/>
         <enum value="0x8589" name="GL_SRC1_ALPHA_EXT" group="RegisterCombinerPname"/>
         <enum value="0x858A" name="GL_SOURCE2_ALPHA" group="RegisterCombinerPname"/>
         <enum value="0x858A" name="GL_SOURCE2_ALPHA_ARB" group="RegisterCombinerPname"/>
