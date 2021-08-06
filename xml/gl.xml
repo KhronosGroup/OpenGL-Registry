@@ -9180,7 +9180,7 @@ typedef unsigned int GLhandleARB;
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
@@ -9193,7 +9193,7 @@ typedef unsigned int GLhandleARB;
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
@@ -9208,7 +9208,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
@@ -9308,7 +9308,7 @@ typedef unsigned int GLhandleARB;
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param group="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <glx type="render" opcode="217"/>
@@ -9320,7 +9320,7 @@ typedef unsigned int GLhandleARB;
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param group="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <alias name="glCompressedTexSubImage1D"/>
@@ -9334,7 +9334,7 @@ typedef unsigned int GLhandleARB;
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param group="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <glx type="render" opcode="218"/>
@@ -9348,7 +9348,7 @@ typedef unsigned int GLhandleARB;
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param group="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <alias name="glCompressedTexSubImage2D"/>
@@ -9364,7 +9364,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param group="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <glx type="render" opcode="219"/>
@@ -9380,7 +9380,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param group="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <alias name="glCompressedTexSubImage3D"/>
@@ -9396,7 +9396,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>data</name></param>
         </command>
@@ -9442,7 +9442,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param>const void *<name>data</name></param>
         </command>
@@ -9453,7 +9453,7 @@ typedef unsigned int GLhandleARB;
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
@@ -9465,7 +9465,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param>const void *<name>data</name></param>
         </command>
@@ -9478,7 +9478,7 @@ typedef unsigned int GLhandleARB;
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
@@ -9492,7 +9492,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param>const void *<name>data</name></param>
         </command>
@@ -9507,7 +9507,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
+            <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
