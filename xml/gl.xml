@@ -5576,8 +5576,8 @@ typedef unsigned int GLhandleARB;
             <unused start="0x8F62" vendor="ARM"/>
         <enum value="0x8F63" name="GL_MAX_SHADER_PIXEL_LOCAL_STORAGE_FAST_SIZE_EXT"/>
         <enum value="0x8F64" name="GL_SHADER_PIXEL_LOCAL_STORAGE_EXT"/>
-        <enum value="0x8F65" name="GL_FETCH_PER_SAMPLE_ARM"/>
-        <enum value="0x8F66" name="GL_FRAGMENT_SHADER_FRAMEBUFFER_FETCH_MRT_ARM"/>
+        <enum value="0x8F65" name="GL_FETCH_PER_SAMPLE_ARM" group="EnableCap,GetPName"/>
+        <enum value="0x8F66" name="GL_FRAGMENT_SHADER_FRAMEBUFFER_FETCH_MRT_ARM" group="GetPName"/>
         <enum value="0x8F67" name="GL_MAX_SHADER_PIXEL_LOCAL_STORAGE_SIZE_EXT"/>
             <unused start="0x8F68" vendor="ARM"/>
         <enum value="0x8F69" name="GL_TEXTURE_ASTC_DECODE_PRECISION_EXT"/>
