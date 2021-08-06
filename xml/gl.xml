@@ -4948,7 +4948,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8D40" name="GL_FRAMEBUFFER" group="ObjectIdentifier,FramebufferTarget,CheckFramebufferStatusTarget"/>
         <enum value="0x8D40" name="GL_FRAMEBUFFER_EXT"/>
         <enum value="0x8D40" name="GL_FRAMEBUFFER_OES" group="FramebufferTarget"/>
-        <enum value="0x8D41" name="GL_RENDERBUFFER" group="ObjectIdentifier,RenderbufferTarget,CopyImageSubDataTarget"/>
+        <enum value="0x8D41" name="GL_RENDERBUFFER" group="ObjectIdentifier,RenderbufferTarget,CopyImageSubDataTarget,TextureTarget"/>
         <enum value="0x8D41" name="GL_RENDERBUFFER_EXT"/>
         <enum value="0x8D41" name="GL_RENDERBUFFER_OES" group="RenderbufferTarget"/>
         <enum value="0x8D42" name="GL_RENDERBUFFER_WIDTH" group="RenderbufferParameterName"/>
