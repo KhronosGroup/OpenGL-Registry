@@ -5007,10 +5007,10 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" start="0x8D60" end="0x8D6F" vendor="OES">
         <enum value="0x8D60" name="GL_TEXTURE_GEN_STR_OES"/>
         <enum value="0x8D61" name="GL_HALF_FLOAT_OES"/>
-        <enum value="0x8D62" name="GL_RGB565_OES"/>
-        <enum value="0x8D62" name="GL_RGB565"/>
+        <enum value="0x8D62" name="GL_RGB565_OES" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8D62" name="GL_RGB565" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x8D63" vendor="OES" comment="Was GL_TEXTURE_IMMUTABLE_LEVELS in draft ES 3.0 spec"/>
-        <enum value="0x8D64" name="GL_ETC1_RGB8_OES"/>
+        <enum value="0x8D64" name="GL_ETC1_RGB8_OES" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8D65" name="GL_TEXTURE_EXTERNAL_OES"/>
         <enum value="0x8D66" name="GL_SAMPLER_EXTERNAL_OES"/>
         <enum value="0x8D67" name="GL_TEXTURE_BINDING_EXTERNAL_OES"/>
