@@ -333,7 +333,7 @@ Fundamentals)
         /sync object/, but with semantics based on Vulkan semaphores.
 
         Semaphore objects may be shared.  They are described in detail in
-        section XXX.
+        section 4.2.
 
         2.6.15 Memory Objects
 
@@ -499,7 +499,7 @@ Additions to Chapter 4 of the OpenGL 4.5 Specification (Event Model)
         textures must be specified to initialize internal GL state prior to
         using the textures after an external access.  The valid layouts
         correspond to those specified by the Vulkan API, as described in
-        table 4.3.  However, the layouts do not necessarily correspond to an
+        table 4.4.  However, the layouts do not necessarily correspond to an
         optimal state for any particular GL operation.  The GL will simply
         perform appropriate transitions internally as necessary based on the
         specified current layout of the texture.
@@ -985,7 +985,7 @@ Issues
 
         * Disallow Vulkan implementations from utilizing the usage
           information as input when determining the internal parameters of a
-          Vulkan image used with eternal memory.
+          Vulkan image used with external memory.
 
         * Only allow Vulkan implementations to utilize the usage information
           when using the dedicated allocation path where it can be stored as
