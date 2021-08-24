@@ -19,7 +19,7 @@ change the Registry, propose a pull request against the OpenGL-Registry
 repository and adding the appropriate extension specifications, making changes
 to the appropriate XML file, etc. Note that any changes you propose to
 reserved values in the registry are not official until your pull request is
-*accepted* into the master branch.
+*accepted* into the main branch.
 
 Feel free to post issues on the repository if it's unclear how to do
 something you need to with extensions, or if you find any problems.
@@ -51,7 +51,7 @@ To create a new extension specification, take these steps:
 * Request one or more blocks of unused enumerants for GL, GLX, or WGL
   depending on the needs of your extension, by adding the reservation(s) to
   the end of gl.xml, glx.xml, and/or wgl.xml.
-* Once the pull request modifying the XML files is accepted into master, you
+* Once the pull request modifying the XML files is accepted into main, you
   have control of those enumerant blocks.
 * Create an extension specification, following the model of existing vendor
   specifications under extensions/*vendor*/ .

@@ -24,7 +24,7 @@ API: </p>
 
 <p> The web registry is backed by a <a
     href="https://github.com/KhronosGroup/OpenGL-Registry"> github
-    repository</a>. Changes committed to the <b>master</b> branch of the
+    repository</a>. Changes committed to the <b>main</b> branch of the
     repository are reflected on the website. The repository includes
     everything visible on the registry website - specifications, extensions,
     headers, XML, and the index pages such as this one - as well as
