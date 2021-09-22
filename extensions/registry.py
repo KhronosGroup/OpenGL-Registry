@@ -2592,6 +2592,7 @@ registry = {
         'url' : 'extensions/EXT/EXT_texture_snorm.txt',
     },
     'GL_EXT_texture_storage' : {
+        'number' : 556,
         'esnumber' : 108,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_texture_storage.txt',
