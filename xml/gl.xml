@@ -42140,7 +42140,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_SIGNED_NORMALIZED"/>
             </require>
         </extension>
-        <extension name="GL_EXT_texture_storage" supported="gles1|gles2">
+        <extension name="GL_EXT_texture_storage" supported="gles1|gles2|gl|glcore">
             <require comment="Not clear all of these enums should be here for OpenGL ES. Many are only defined if other extensions also requiring them are supported">
                 <enum name="GL_TEXTURE_IMMUTABLE_FORMAT_EXT"/>
                 <enum name="GL_ALPHA8_EXT"/>

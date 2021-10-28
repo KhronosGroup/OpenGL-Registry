@@ -31,12 +31,13 @@ Status
 
 Version
 
-    Last Modified Date: 18 September, 2013
-    Author Revision: 28
+    Last Modified Date: 22 September, 2021
+    Author Revision: 29
 
 Number
 
     OpenGL ES Extension #108
+    OpenGL Extension #556
 
 Dependencies
 
@@ -997,6 +998,9 @@ Issues
     decision.
 
 Revision History
+
+    Revision 29, 2021/09/22 (Adam Jackson)
+      - Assign OpenGL extension number
 
     Revision 28, 2013/09/18 (Benj Lipchak)
       - Add interaction with APPLE_texture_format_BGRA8888.

@@ -1049,4 +1049,6 @@
 </li>
 <li value=555><a href="extensions/EXT/EXT_texture_sRGB_RG8.txt">GL_EXT_texture_sRGB_RG8</a>
 </li>
+<li value=556><a href="extensions/EXT/EXT_texture_storage.txt">GL_EXT_texture_storage</a>
+</li>
 </ol>
