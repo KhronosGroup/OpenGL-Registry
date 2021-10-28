@@ -1926,7 +1926,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8218" name="GL_FRAMEBUFFER_DEFAULT"/>
         <enum value="0x8219" name="GL_FRAMEBUFFER_UNDEFINED" group="FramebufferStatus"/>
         <enum value="0x8219" name="GL_FRAMEBUFFER_UNDEFINED_OES"/>
-        <enum value="0x821A" name="GL_DEPTH_STENCIL_ATTACHMENT" group="InvalidateFramebufferAttachment"/>
+        <enum value="0x821A" name="GL_DEPTH_STENCIL_ATTACHMENT" group="FramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x821B" name="GL_MAJOR_VERSION" group="GetPName"/>
         <enum value="0x821C" name="GL_MINOR_VERSION" group="GetPName"/>
         <enum value="0x821D" name="GL_NUM_EXTENSIONS" group="GetPName"/>
@@ -2734,12 +2734,12 @@ typedef unsigned int GLhandleARB;
         <enum value="0x84F2" name="GL_ALL_COMPLETED_NV" group="FenceConditionNV"/>
         <enum value="0x84F3" name="GL_FENCE_STATUS_NV" group="FenceParameterNameNV"/>
         <enum value="0x84F4" name="GL_FENCE_CONDITION_NV" group="FenceParameterNameNV"/>
-        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE" group="CopyImageSubDataTarget,TextureTarget"/>
-        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE_ARB"/>
-        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE_NV"/>
+        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE" group="CopyImageSubDataTarget,TextureTarget,EnableCap"/>
+        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE_ARB" group="TextureTarget,EnableCap"/>
+        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE_NV" group="TextureTarget,EnableCap"/>
         <enum value="0x84F6" name="GL_TEXTURE_BINDING_RECTANGLE" group="GetPName"/>
-        <enum value="0x84F6" name="GL_TEXTURE_BINDING_RECTANGLE_ARB"/>
-        <enum value="0x84F6" name="GL_TEXTURE_BINDING_RECTANGLE_NV"/>
+        <enum value="0x84F6" name="GL_TEXTURE_BINDING_RECTANGLE_ARB" group="GetPName"/>
+        <enum value="0x84F6" name="GL_TEXTURE_BINDING_RECTANGLE_NV" group="GetPName"/>
         <enum value="0x84F7" name="GL_PROXY_TEXTURE_RECTANGLE" group="TextureTarget"/>
         <enum value="0x84F7" name="GL_PROXY_TEXTURE_RECTANGLE_ARB" group="TextureTarget"/>
         <enum value="0x84F7" name="GL_PROXY_TEXTURE_RECTANGLE_NV" group="TextureTarget"/>
@@ -2795,14 +2795,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8512" name="GL_REFLECTION_MAP_EXT"/>
         <enum value="0x8512" name="GL_REFLECTION_MAP_NV"/>
         <enum value="0x8512" name="GL_REFLECTION_MAP_OES"/>
-        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP" group="CopyImageSubDataTarget,TextureTarget"/>
-        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_ARB"/>
-        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_EXT"/>
-        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_OES"/>
+        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP" group="CopyImageSubDataTarget,TextureTarget,EnableCap"/>
+        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_ARB" group="TextureTarget,EnableCap"/>
+        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_EXT" group="TextureTarget,EnableCap"/>
+        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_OES" group="TextureTarget,EnableCap"/>
         <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP" group="GetPName"/>
-        <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP_ARB"/>
-        <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP_EXT"/>
-        <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP_OES"/>
+        <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP_ARB" group="GetPName"/>
+        <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP_EXT" group="GetPName"/>
+        <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP_OES" group="GetPName"/>
         <enum value="0x8515" name="GL_TEXTURE_CUBE_MAP_POSITIVE_X" group="TextureTarget"/>
         <enum value="0x8515" name="GL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB"/>
         <enum value="0x8515" name="GL_TEXTURE_CUBE_MAP_POSITIVE_X_EXT"/>
@@ -4869,9 +4869,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8CDD" name="GL_FRAMEBUFFER_UNSUPPORTED_OES"/>
             <unused start="0x8CDE" vendor="ARB" comment="Removed 2005/05/31 in revision #113 of the FBO extension spec"/>
             <!-- <enum value="0x8CDE" name="GL_FRAMEBUFFER_STATUS_ERROR_EXT"/> -->
-        <enum value="0x8CDF" name="GL_MAX_COLOR_ATTACHMENTS"/>
-        <enum value="0x8CDF" name="GL_MAX_COLOR_ATTACHMENTS_EXT"/>
-        <enum value="0x8CDF" name="GL_MAX_COLOR_ATTACHMENTS_NV"/>
+        <enum value="0x8CDF" name="GL_MAX_COLOR_ATTACHMENTS" group="GetPName"/>
+        <enum value="0x8CDF" name="GL_MAX_COLOR_ATTACHMENTS_EXT" group="GetPName"/>
+        <enum value="0x8CDF" name="GL_MAX_COLOR_ATTACHMENTS_NV" group="GetPName"/>
         <enum value="0x8CE0" name="GL_COLOR_ATTACHMENT0" group="ColorBuffer,DrawBufferMode,ReadBufferMode,FramebufferAttachment,InvalidateFramebufferAttachment"/>
         <enum value="0x8CE0" name="GL_COLOR_ATTACHMENT0_EXT" group="InvalidateFramebufferAttachment"/>
         <enum value="0x8CE0" name="GL_COLOR_ATTACHMENT0_NV" group="InvalidateFramebufferAttachment,DrawBufferModeATI"/>
