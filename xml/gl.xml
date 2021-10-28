@@ -981,9 +981,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x1802" name="GL_STENCIL_EXT" group="PixelCopyType"/>
             <unused start="0x1803" end="0x18FF" comment="Unused for PixelCopyType"/>
         <enum value="0x1900" name="GL_COLOR_INDEX" group="PixelFormat"/>
-        <enum value="0x1901" name="GL_STENCIL_INDEX" group="InternalFormat,PixelFormat"/>
+        <enum value="0x1901" name="GL_STENCIL_INDEX" group="InternalFormat,PixelFormat,DepthStencilTextureMode"/>
         <enum value="0x1901" name="GL_STENCIL_INDEX_OES" group="InternalFormat"/>
-        <enum value="0x1902" name="GL_DEPTH_COMPONENT" group="InternalFormat,PixelFormat"/>
+        <enum value="0x1902" name="GL_DEPTH_COMPONENT" group="InternalFormat,PixelFormat,DepthStencilTextureMode"/>
         <enum value="0x1903" name="GL_RED" group="TextureSwizzle,PixelFormat,InternalFormat"/>
         <enum value="0x1903" name="GL_RED_EXT" group="InternalFormat,PixelFormat"/>
         <enum value="0x1903" name="GL_RED_NV"/>
@@ -2757,7 +2757,7 @@ typedef unsigned int GLhandleARB;
             <unused start="0x84FB" end="0x84FC" vendor="NV"/>
         <enum value="0x84FD" name="GL_MAX_TEXTURE_LOD_BIAS" group="GetPName"/>
         <enum value="0x84FD" name="GL_MAX_TEXTURE_LOD_BIAS_EXT"/>
-        <enum value="0x84FE" name="GL_TEXTURE_MAX_ANISOTROPY" group="SamplerParameterF"/>
+        <enum value="0x84FE" name="GL_TEXTURE_MAX_ANISOTROPY" group="SamplerParameterF,TextureParameterName"/>
         <enum value="0x84FE" name="GL_TEXTURE_MAX_ANISOTROPY_EXT" alias="GL_TEXTURE_MAX_ANISOTROPY"/>
         <enum value="0x84FF" name="GL_MAX_TEXTURE_MAX_ANISOTROPY"/>
         <enum value="0x84FF" name="GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT" alias="GL_MAX_TEXTURE_MAX_ANISOTROPY"/>
