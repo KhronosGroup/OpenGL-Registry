@@ -26,8 +26,8 @@ Status
 
 Version
 
-    Last Modified Date: June 07, 2011
-    NVIDIA Revision: 4.0
+    Last Modified Date: November 9, 2021
+    NVIDIA Revision: 5.0
 
 Number
 
@@ -37,8 +37,6 @@ Dependencies
 
     Written against the OpenGL ES 2.0 Specification.
 
-    NV_depth_buffer_float2 affects this extension.
-
     NV_read_depth_stencil requires OES_packed_depth_stencil.
 
 Overview
@@ -47,7 +45,7 @@ Overview
     default color buffer of the currently-bound framebuffer.  However, it is
     useful for debugging to be able to read from depth and stencil buffers.
     This extension re-introduces these features into OpenGL-ES 2.0.
-    
+
     This document describes several extensions in order to allow an
     implementation to support a subset of the total functionality.
 
@@ -127,7 +125,7 @@ Changes to Chapter 4 of the OpenGL ES 2.0 Specification
 Dependencies on NV_read_depth:
 
     If NV_read_depth is not supported, the paragraph in "Obtaining Pixels
-    from the Framebuffer" describing behavior when the <format> is 
+    from the Framebuffer" describing behavior when the <format> is
     DEPTH_COMPONENT is omitted.
 
 Dependencies on NV_read_stencil:
@@ -142,13 +140,6 @@ Dependencies on NV_read_depth_stencil:
     "Obtaining Pixels from the Framebuffer" describing behavior "when
     the <format> is  DEPTH_STENCIL_OES is omitted and UNSIGNED_INT_24_8_EXT is not an
     accepted <value> when <format> is DEPTH_COMPONENT.
-
-Dependencies on NV_depth_buffer_float2:
-
-    If NV_depth_buffer_float2 is not supported, FLOAT is not an accepted
-    <value> when <format> is DEPTH_COMPONENT and FLOAT_32_UNSIGNED_INT_-
-    24_8_REV_NV is not an accepted <value> when <format> is DEPTH_-
-    STENCIL_OES.
 
 Issues
 
@@ -183,13 +174,17 @@ Revision History
 
     Rev.    Date      Author       Changes
     ----   --------   ---------    -------------------------------------
-     4     06/01/11   groth        Mostly rewrote spec edits to better
+     5     11/09/21   Jon Leech    Removed references to
+                                   NV_depth_buffer_float2, which was
+                                   abandoned and never published.
+                                   (see KhronosGroup/OpenGL-Registry#488).
+     4     06/01/11    groth       Mostly rewrote spec edits to better
                                    match the spec and more clearly
                                    describe behavior. Reformatted.
-     3     03/22/09   gprisament   Split from NV_read_buffer.
+     3     03/22/09    gprisament  Split from NV_read_buffer.
                                    Broken into several extension names.
                                    Re-wrote overview section.
-     2     07/03/08   kashida      Change to depend on
+     2     07/03/08    kashida     Change to depend on
                                    NV_packed_depth_stencil2
-     1     06/10/07   kashida      First revision.
+     1     06/10/07    kashida     First revision.
 
