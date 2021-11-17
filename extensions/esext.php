@@ -697,4 +697,8 @@
 </li>
 <li value=335><a href="extensions/MESA/MESA_bgra.txt">GL_MESA_bgra</a>
 </li>
+<li value=336><a href="extensions/EXT/EXT_texture_storage_compression.txt">GL_EXT_texture_storage_compression</a>
+</li>
+<li value=337><a href="extensions/EXT/EXT_EGL_image_storage_compression.txt">GL_EXT_EGL_image_storage_compression</a>
+</li>
 </ol>

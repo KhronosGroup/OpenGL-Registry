@@ -1806,6 +1806,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_EGL_image_storage.txt',
     },
+    'GL_EXT_EGL_image_storage_compression' : {
+        'esnumber' : 337,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_EGL_image_storage_compression.txt',
+    },
     'GL_EXT_EGL_sync' : {
         'number' : 546,
         'flags' : { 'public' },
@@ -2596,6 +2601,11 @@ registry = {
         'esnumber' : 108,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_texture_storage.txt',
+    },
+    'GL_EXT_texture_storage_compression' : {
+        'esnumber' : 336,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_texture_storage_compression.txt',
     },
     'GL_EXT_texture_swizzle' : {
         'number' : 356,
