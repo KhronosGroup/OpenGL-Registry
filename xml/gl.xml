@@ -6916,6 +6916,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x96CF" name="GL_SURFACE_COMPRESSION_FIXED_RATE_12BPC_EXT" group="TexStorageAttribs"/>
     </enums>
 
+    <enums namespace="GL" start="0x96D0" end="0x96DF" vendor="ARM" comment="Contact Jan-Harald Fredriksen">
+            <unused start="0x96D0" end="0x96DF" vendor="ARM"/>
+    </enums>
+
 <!-- Enums reservable for future use. To reserve a new range, allocate one
      or more multiples of 16 starting at the lowest available point in this
      block and note it in a new <enums> block immediately above.
@@ -6925,8 +6929,8 @@ typedef unsigned int GLhandleARB;
      file) File requests in the Khronos Bugzilla, OpenGL project, Registry
      component. -->
 
-    <enums namespace="GL" start="0x96D0" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
-        <unused start="0x96D0" end="99999" comment="RESERVED"/>
+    <enums namespace="GL" start="0x96E0" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
+        <unused start="0x96E0" end="99999" comment="RESERVED"/>
     </enums>
 
 <!-- Historical large block allocations, all unused except (in older days) by IBM -->
