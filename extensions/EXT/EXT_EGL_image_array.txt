@@ -16,6 +16,7 @@ Contributors
     Jesse Hall
     Tate Hornbeck
     Daniel Koch
+    Jeff Vigil
 
 Status
 
