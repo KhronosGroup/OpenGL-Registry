@@ -24637,7 +24637,7 @@ typedef unsigned int GLhandleARB;
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param group="TexStorageAttribs">const GLint *<name>attrib_list</name></param>
+            <param group="TexStorageAttribs">const <ptype>GLint</ptype>* <name>attrib_list</name></param>
         </command>
         <command>
             <proto>void <name>TexStorageAttribs3DEXT</name></proto>
@@ -24647,7 +24647,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param group="TexStorageAttribs">const GLint *<name>attrib_list</name></param>
+            <param group="TexStorageAttribs">const <ptype>GLint</ptype>* <name>attrib_list</name></param>
         </command>
         <command>
             <proto>void <name>glTexStorageMem1DEXT</name></proto>
