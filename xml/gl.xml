@@ -24631,7 +24631,7 @@ typedef unsigned int GLhandleARB;
             <alias name="glTexStorage3DMultisample"/>
         </command>
         <command>
-            <proto>void <name>TexStorageAttribs2DEXT</name></proto>
+            <proto>void <name>glTexStorageAttribs2DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
@@ -24640,7 +24640,7 @@ typedef unsigned int GLhandleARB;
             <param group="TexStorageAttribs">const <ptype>GLint</ptype>* <name>attrib_list</name></param>
         </command>
         <command>
-            <proto>void <name>TexStorageAttribs3DEXT</name></proto>
+            <proto>void <name>glTexStorageAttribs3DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
@@ -42244,8 +42244,8 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_SURFACE_COMPRESSION_FIXED_RATE_10BPC_EXT"/>
                 <enum name="GL_SURFACE_COMPRESSION_FIXED_RATE_11BPC_EXT"/>
                 <enum name="GL_SURFACE_COMPRESSION_FIXED_RATE_12BPC_EXT"/>
-                <command name="TexStorageAttribs2DEXT"/>
-                <command name="TexStorageAttribs3DEXT"/>
+                <command name="glTexStorageAttribs2DEXT"/>
+                <command name="glTexStorageAttribs3DEXT"/>
             </require>
         </extension>
         <extension name="GL_EXT_texture_swizzle" supported="gl">
