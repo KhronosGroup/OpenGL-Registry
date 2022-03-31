@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20211115 */
+/* Generated on date 20220330 */
 
 /* Generated C header for:
  * API: gles2
@@ -1802,6 +1802,10 @@ GL_APICALL void GL_APIENTRY glImportSemaphoreWin32NameEXT (GLuint semaphore, GLe
 #endif
 #endif /* GL_EXT_semaphore_win32 */
 
+#ifndef GL_EXT_separate_depth_stencil
+#define GL_EXT_separate_depth_stencil 1
+#endif /* GL_EXT_separate_depth_stencil */
+
 #ifndef GL_EXT_separate_shader_objects
 #define GL_EXT_separate_shader_objects 1
 #define GL_ACTIVE_PROGRAM_EXT             0x8259
@@ -2266,11 +2270,11 @@ GL_APICALL void GL_APIENTRY glTextureStorage3DEXT (GLuint texture, GLenum target
 #define GL_SURFACE_COMPRESSION_FIXED_RATE_10BPC_EXT 0x96CD
 #define GL_SURFACE_COMPRESSION_FIXED_RATE_11BPC_EXT 0x96CE
 #define GL_SURFACE_COMPRESSION_FIXED_RATE_12BPC_EXT 0x96CF
-typedef void (GL_APIENTRYP PFNTEXSTORAGEATTRIBS2DEXTPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, const int *attrib_list);
-typedef void (GL_APIENTRYP PFNTEXSTORAGEATTRIBS3DEXTPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, const int *attrib_list);
+typedef void (GL_APIENTRYP PFNGLTEXSTORAGEATTRIBS2DEXTPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, const GLint* attrib_list);
+typedef void (GL_APIENTRYP PFNGLTEXSTORAGEATTRIBS3DEXTPROC) (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, const GLint* attrib_list);
 #ifdef GL_GLEXT_PROTOTYPES
-GL_APICALL void GL_APIENTRY TexStorageAttribs2DEXT (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, const int *attrib_list);
-GL_APICALL void GL_APIENTRY TexStorageAttribs3DEXT (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, const int *attrib_list);
+GL_APICALL void GL_APIENTRY glTexStorageAttribs2DEXT (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, const GLint* attrib_list);
+GL_APICALL void GL_APIENTRY glTexStorageAttribs3DEXT (GLenum target, GLsizei levels, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, const GLint* attrib_list);
 #endif
 #endif /* GL_EXT_texture_storage_compression */
 

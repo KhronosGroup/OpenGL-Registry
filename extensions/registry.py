@@ -2210,6 +2210,12 @@ registry = {
         'supporters' : { '3DFX', 'NVIDIA', 'REND' },
         'url' : 'extensions/EXT/EXT_secondary_color.txt',
     },
+    'GL_EXT_separate_depth_stencil' : {
+        'esnumber' : 338,
+        'flags' : { 'public' },
+        'supporters' : { 'BRCM' },
+        'url' : 'extensions/EXT/EXT_separate_depth_stencil.txt',
+    },
     'GL_EXT_separate_shader_objects' : {
         'number' : 377,
         'esnumber' : 101,
