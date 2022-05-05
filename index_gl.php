@@ -50,7 +50,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 
 <ul>
 <li> <b> Current Specifications (OpenGL 4.6) </b>
-<li> OpenGL 4.6 API Specification (October 22, 2019)
+<li> OpenGL 4.6 API Specification (May 5, 2022)
     <ul>
     <li> <a href="specs/gl/glspec46.core.pdf"> Core Profile Specification
          </a> </li>
