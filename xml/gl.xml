@@ -41464,6 +41464,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glSecondaryColorPointerEXT"/>
             </require>
         </extension>
+        <extension name="GL_EXT_separate_depth_stencil" supported="gles2"/>
         <extension name="GL_EXT_separate_shader_objects" supported="gl|glcore|gles2">
             <require api="gl" comment="The OpenGL version of this extension is completely unrelated to the OpenGL ES version">
                 <enum name="GL_ACTIVE_PROGRAM_EXT"/>
