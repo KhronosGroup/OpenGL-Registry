@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20220330 */
+/* Generated on date 20220525 */
 
 /* Generated C header for:
  * API: gles2
@@ -1960,6 +1960,10 @@ GL_APICALL GLsizei GL_APIENTRY glGetFramebufferPixelLocalStorageSizeEXT (GLuint 
 GL_APICALL void GL_APIENTRY glClearPixelLocalStorageuiEXT (GLsizei offset, GLsizei n, const GLuint *values);
 #endif
 #endif /* GL_EXT_shader_pixel_local_storage2 */
+
+#ifndef GL_EXT_shader_samples_identical
+#define GL_EXT_shader_samples_identical 1
+#endif /* GL_EXT_shader_samples_identical */
 
 #ifndef GL_EXT_shader_texture_lod
 #define GL_EXT_shader_texture_lod 1

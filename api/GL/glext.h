@@ -32,7 +32,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20211115
+#define GL_GLEXT_VERSION 20220525
 
 #include <KHR/khrplatform.h>
 
@@ -8213,6 +8213,10 @@ GLAPI void APIENTRY glMemoryBarrierEXT (GLbitfield barriers);
 #ifndef GL_EXT_shader_integer_mix
 #define GL_EXT_shader_integer_mix 1
 #endif /* GL_EXT_shader_integer_mix */
+
+#ifndef GL_EXT_shader_samples_identical
+#define GL_EXT_shader_samples_identical 1
+#endif /* GL_EXT_shader_samples_identical */
 
 #ifndef GL_EXT_shadow_funcs
 #define GL_EXT_shadow_funcs 1
