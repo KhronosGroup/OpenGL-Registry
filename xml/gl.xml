@@ -1587,10 +1587,10 @@ typedef unsigned int GLhandleARB;
 
     <enums namespace="GL" start="0x80E0" end="0x810F" vendor="MS">
         <enum value="0x80E0" name="GL_BGR" group="PixelFormat"/>
-        <enum value="0x80E0" name="GL_BGR_EXT"/>
+        <enum value="0x80E0" name="GL_BGR_EXT" group="PixelFormat"/>
         <enum value="0x80E1" name="GL_BGRA" group="PixelFormat"/>
-        <enum value="0x80E1" name="GL_BGRA_EXT"/>
-        <enum value="0x80E1" name="GL_BGRA_IMG"/>
+        <enum value="0x80E1" name="GL_BGRA_EXT" group="PixelFormat"/>
+        <enum value="0x80E1" name="GL_BGRA_IMG" group="PixelFormat"/>
         <enum value="0x80E2" name="GL_COLOR_INDEX1_EXT"/>
         <enum value="0x80E3" name="GL_COLOR_INDEX2_EXT"/>
         <enum value="0x80E4" name="GL_COLOR_INDEX4_EXT"/>
@@ -2373,21 +2373,21 @@ typedef unsigned int GLhandleARB;
         <enum value="0x835F" name="GL_MAX_ASYNC_TEX_IMAGE_SGIX" group="GetPName"/>
         <enum value="0x8360" name="GL_MAX_ASYNC_DRAW_PIXELS_SGIX" group="GetPName"/>
         <enum value="0x8361" name="GL_MAX_ASYNC_READ_PIXELS_SGIX" group="GetPName"/>
-        <enum value="0x8362" name="GL_UNSIGNED_BYTE_2_3_3_REV"/>
-        <enum value="0x8362" name="GL_UNSIGNED_BYTE_2_3_3_REV_EXT"/>
-        <enum value="0x8363" name="GL_UNSIGNED_SHORT_5_6_5"/>
-        <enum value="0x8363" name="GL_UNSIGNED_SHORT_5_6_5_EXT"/>
-        <enum value="0x8364" name="GL_UNSIGNED_SHORT_5_6_5_REV"/>
-        <enum value="0x8364" name="GL_UNSIGNED_SHORT_5_6_5_REV_EXT"/>
-        <enum value="0x8365" name="GL_UNSIGNED_SHORT_4_4_4_4_REV"/>
-        <enum value="0x8365" name="GL_UNSIGNED_SHORT_4_4_4_4_REV_EXT"/>
-        <enum value="0x8365" name="GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG"/>
-        <enum value="0x8366" name="GL_UNSIGNED_SHORT_1_5_5_5_REV"/>
-        <enum value="0x8366" name="GL_UNSIGNED_SHORT_1_5_5_5_REV_EXT"/>
-        <enum value="0x8367" name="GL_UNSIGNED_INT_8_8_8_8_REV"/>
-        <enum value="0x8367" name="GL_UNSIGNED_INT_8_8_8_8_REV_EXT"/>
-        <enum value="0x8368" name="GL_UNSIGNED_INT_2_10_10_10_REV" group="VertexAttribPointerType,VertexAttribType"/>
-        <enum value="0x8368" name="GL_UNSIGNED_INT_2_10_10_10_REV_EXT"/>
+        <enum value="0x8362" name="GL_UNSIGNED_BYTE_2_3_3_REV" group="PixelType"/>
+        <enum value="0x8362" name="GL_UNSIGNED_BYTE_2_3_3_REV_EXT" group="PixelType"/>
+        <enum value="0x8363" name="GL_UNSIGNED_SHORT_5_6_5" group="PixelType"/>
+        <enum value="0x8363" name="GL_UNSIGNED_SHORT_5_6_5_EXT" group="PixelType"/>
+        <enum value="0x8364" name="GL_UNSIGNED_SHORT_5_6_5_REV" group="PixelType"/>
+        <enum value="0x8364" name="GL_UNSIGNED_SHORT_5_6_5_REV_EXT" group="PixelType"/>
+        <enum value="0x8365" name="GL_UNSIGNED_SHORT_4_4_4_4_REV" group="PixelType"/>
+        <enum value="0x8365" name="GL_UNSIGNED_SHORT_4_4_4_4_REV_EXT" group="PixelType"/>
+        <enum value="0x8365" name="GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG" group="PixelType"/>
+        <enum value="0x8366" name="GL_UNSIGNED_SHORT_1_5_5_5_REV" group="PixelType"/>
+        <enum value="0x8366" name="GL_UNSIGNED_SHORT_1_5_5_5_REV_EXT" group="PixelType"/>
+        <enum value="0x8367" name="GL_UNSIGNED_INT_8_8_8_8_REV" group="PixelType"/>
+        <enum value="0x8367" name="GL_UNSIGNED_INT_8_8_8_8_REV_EXT" group="PixelType"/>
+        <enum value="0x8368" name="GL_UNSIGNED_INT_2_10_10_10_REV" group="PixelType,VertexAttribPointerType,VertexAttribType"/>
+        <enum value="0x8368" name="GL_UNSIGNED_INT_2_10_10_10_REV_EXT" group="PixelType,VertexAttribPointerType,VertexAttribType"/>
         <enum value="0x8369" name="GL_TEXTURE_MAX_CLAMP_S_SGIX" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x836A" name="GL_TEXTURE_MAX_CLAMP_T_SGIX" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x836B" name="GL_TEXTURE_MAX_CLAMP_R_SGIX" group="TextureParameterName,GetTextureParameter"/>
