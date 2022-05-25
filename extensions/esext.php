@@ -701,4 +701,5 @@
 </li>
 <li value=337><a href="extensions/EXT/EXT_EGL_image_storage_compression.txt">GL_EXT_EGL_image_storage_compression</a>
 </li>
+<li value=338><a href="extensions/EXT/EXT_shader_samples_identical.txt">EXT_shader_samples_identical</a>
 </ol>
