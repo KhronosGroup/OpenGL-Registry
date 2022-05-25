@@ -17,8 +17,8 @@ Status
 
 Version
 
-    Last Modified Date:         09/11/2014
-    NVIDIA Revision:            7
+    Last Modified Date:         05/25/2022
+    NVIDIA Revision:            8
 
 Number
 
@@ -3074,7 +3074,7 @@ Issues
             Texturing from layer X;
             Writing gl_Layer = 1 - X in the geometry shader;
           
-          MemoryBarrierNV(TEXTURE_FETCH_BARRIER_BIT_NV);
+          MemoryBarrierEXT(TEXTURE_FETCH_BARRIER_BIT_NV);
           X = 1 - X;
         }
 
@@ -3162,6 +3162,9 @@ Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------  -----------------------------------------
+     8    05/25/22  shqxu     Fix use of a removed function
+                              MemoryBarrierNV.
+
      7    09/11/14  pbrown    Minor typo fixes.
 
      6    07/04/13  pbrown    Add missing language describing the
