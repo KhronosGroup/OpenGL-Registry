@@ -704,5 +704,9 @@
 <li value=338><a href="extensions/EXT/EXT_separate_depth_stencil.txt">GL_EXT_separate_depth_stencil</a>
 </li>
 <li value=339><a href="extensions/EXT/EXT_shader_samples_identical.txt">GL_EXT_shader_samples_identical</a>
+<li value=340><a href="extensions/EXT/EXT_fragment_shading_rate.txt">GL_EXT_fragment_shading_rate</a>
+
+    <br> <a href="extensions/EXT/EXT_fragment_shading_rate.txt">GL_EXT_fragment_shading_rate_attachment</a>
+    <br> <a href="extensions/EXT/EXT_fragment_shading_rate.txt">GL_EXT_fragment_shading_rate_primitive</a>
 </li>
 </ol>
