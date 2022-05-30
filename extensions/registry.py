@@ -1821,7 +1821,7 @@ registry = {
         'url' : 'extensions/EXT/EXT_EGL_sync.txt',
     },
     'GL_EXT_fragment_shading_rate' : {
-        'esnumber' : 339,
+        'esnumber' : 340,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_fragment_shading_rate.txt',
         'alias' : { 'GL_EXT_fragment_shading_rate_primitive', 'GL_EXT_fragment_shading_rate_attachment' },
