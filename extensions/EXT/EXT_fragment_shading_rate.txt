@@ -111,15 +111,10 @@
             FRAGMENT_SHADING_RATE_COMBINER_OP_MAX_EXT               0x96D5
             FRAGMENT_SHADING_RATE_COMBINER_OP_MUL_EXT               0x96D6
 
-        Accepted by the <rate> parameter of ShadingRateEXT and as the <pname>
-        parameter of GetIntegerv, GetBooleanv, GetFloatv,
-        and GetInteger64v:
-
-            SHADING_RATE_EXT                                                     0x96D0
-
         Accepted by the <pname> parameter of GetIntegerv, GetBooleanv, GetFloatv,
         and GetInteger64v:
 
+            SHADING_RATE_EXT                                                         0x96D0
             MIN_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_WIDTH_EXT                     0x96D7
             MAX_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_WIDTH_EXT                     0x96D8
             MIN_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_HEIGHT_EXT                    0x96D9
@@ -135,7 +130,7 @@
 
         void ShadingRateEXT(enum rate)
         void ShadingRateCombinerOpsEXT(enum combinerOp0, enum combinerOp1)
-        void FramebufferShadingRateEXT(enum target, enum attachment, uint texture, GLint baseLayer, GLsizei numLayers, GLsizei texelWidth, GLsizei texelHeight)
+        void FramebufferShadingRateEXT(enum target, enum attachment, uint texture, int baseLayer, sizei numLayers, sizei texelWidth, sizei texelHeight)
         void GetFragmentShadingRatesEXT(sizei samples, sizei maxCount, sizei *count, enum *shadingRates)
 
     Modifications to the OpenGL ES 3.2 Specification
