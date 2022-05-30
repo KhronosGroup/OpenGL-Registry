@@ -2285,6 +2285,12 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_shader_pixel_local_storage2.txt',
     },
+    'GL_EXT_shader_samples_identical' : {
+        'number' : 557,
+        'esnumber' : 339,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_shader_samples_identical.txt',
+    },
     'GL_EXT_shader_texture_lod' : {
         'esnumber' : 77,
         'flags' : { 'public' },
