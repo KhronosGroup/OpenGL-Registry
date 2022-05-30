@@ -5584,7 +5584,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8F6A" name="GL_TEXTURE_UNNORMALIZED_COORDINATES_ARM" group="SamplerParameterF,SamplerParameterI,GetTextureParameter,TextureParameterName"/>
             <unused start="0x8F6B" end="0x8F6D" vendor="ARM"/>
         <enum value="0x8F6E" name="GL_NUM_SURFACE_COMPRESSION_FIXED_RATES_EXT" group="InternalFormatPName"/>
-        <enum value="0x8F6F" name="GL_FRAGMENT_SHADING_RATE_NON_TRIVIAL_COMBINERS_SUPPORTED_EXT" group=""/>
+        <enum value="0x8F6F" name="GL_FRAGMENT_SHADING_RATE_NON_TRIVIAL_COMBINERS_SUPPORTED_EXT" group="GetPName"/>
     </enums>
 
     <enums namespace="GL" start="0x8F70" end="0x8F7F" vendor="HI" comment="For Mark Callow, Khronos bug 4055. Shared with EGL.">
@@ -6890,15 +6890,15 @@ typedef unsigned int GLhandleARB;
         <enum value="0x96AC" name="GL_SHADING_RATE_4X2_PIXELS_QCOM" group="ShadingRateQCOM"/>
         <enum value="0x96AD" name="GL_SHADING_RATE_2X4_PIXELS_QCOM" group="ShadingRateQCOM"/>
         <enum value="0x96AE" name="GL_SHADING_RATE_4X4_PIXELS_QCOM" group="ShadingRateQCOM"/>
-        <enum value="0x96A6" name="GL_SHADING_RATE_1X1_PIXELS_EXT" alias="GL_SHADING_RATE_1X1_PIXELS_QCOM"/>
-        <enum value="0x96A7" name="GL_SHADING_RATE_1X2_PIXELS_EXT" alias="GL_SHADING_RATE_1X2_PIXELS_QCOM"/>
-        <enum value="0x96A8" name="GL_SHADING_RATE_2X1_PIXELS_EXT" alias="GL_SHADING_RATE_2X1_PIXELS_QCOM"/>
-        <enum value="0x96A9" name="GL_SHADING_RATE_2X2_PIXELS_EXT" alias="GL_SHADING_RATE_2X2_PIXELS_QCOM"/>
-        <enum value="0x96AA" name="GL_SHADING_RATE_1X4_PIXELS_EXT" alias="GL_SHADING_RATE_1X4_PIXELS_QCOM"/>
-        <enum value="0x96AB" name="GL_SHADING_RATE_4X1_PIXELS_EXT" alias="GL_SHADING_RATE_4X1_PIXELS_QCOM"/>
-        <enum value="0x96AC" name="GL_SHADING_RATE_4X2_PIXELS_EXT" alias="GL_SHADING_RATE_4X2_PIXELS_QCOM"/>
-        <enum value="0x96AD" name="GL_SHADING_RATE_2X4_PIXELS_EXT" alias="GL_SHADING_RATE_2X4_PIXELS_QCOM"/>
-        <enum value="0x96AE" name="GL_SHADING_RATE_4X4_PIXELS_EXT" alias="GL_SHADING_RATE_4X4_PIXELS_QCOM"/>
+        <enum value="0x96A6" name="GL_SHADING_RATE_1X1_PIXELS_EXT" alias="GL_SHADING_RATE_1X1_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96A7" name="GL_SHADING_RATE_1X2_PIXELS_EXT" alias="GL_SHADING_RATE_1X2_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96A8" name="GL_SHADING_RATE_2X1_PIXELS_EXT" alias="GL_SHADING_RATE_2X1_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96A9" name="GL_SHADING_RATE_2X2_PIXELS_EXT" alias="GL_SHADING_RATE_2X2_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96AA" name="GL_SHADING_RATE_1X4_PIXELS_EXT" alias="GL_SHADING_RATE_1X4_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96AB" name="GL_SHADING_RATE_4X1_PIXELS_EXT" alias="GL_SHADING_RATE_4X1_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96AC" name="GL_SHADING_RATE_4X2_PIXELS_EXT" alias="GL_SHADING_RATE_4X2_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96AD" name="GL_SHADING_RATE_2X4_PIXELS_EXT" alias="GL_SHADING_RATE_2X4_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96AE" name="GL_SHADING_RATE_4X4_PIXELS_EXT" alias="GL_SHADING_RATE_4X4_PIXELS_QCOM" group="ShadingRate"/>
             <unused start="0x96AF" end="0x96AF" vendor="Qualcomm"/>
     </enums>
 
@@ -6926,22 +6926,22 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x96D0" end="0x96DF" vendor="ARM" comment="Contact Jan-Harald Fredriksen">
-        <enum value="0x96D0" name="GL_SHADING_RATE_EXT" group=""/>
-        <enum value="0x96D1" name="GL_SHADING_RATE_ATTACHMENT_EXT" group=""/>
-        <enum value="0x96D2" name="GL_FRAGMENT_SHADING_RATE_COMBINER_OP_KEEP_EXT" group=""/>
-        <enum value="0x96D3" name="GL_FRAGMENT_SHADING_RATE_COMBINER_OP_REPLACE_EXT" group=""/>
-        <enum value="0x96D4" name="GL_FRAGMENT_SHADING_RATE_COMBINER_OP_MIN_EXT" group=""/>
-        <enum value="0x96D5" name="GL_FRAGMENT_SHADING_RATE_COMBINER_OP_MAX_EXT" group=""/>
-        <enum value="0x96D6" name="GL_FRAGMENT_SHADING_RATE_COMBINER_OP_MUL_EXT" group=""/>
-        <enum value="0x96D7" name="GL_MIN_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_WIDTH_EXT" group=""/>
-        <enum value="0x96D8" name="GL_MAX_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_WIDTH_EXT" group=""/>
-        <enum value="0x96D9" name="GL_MIN_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_HEIGHT_EXT" group=""/>
-        <enum value="0x96DA" name="GL_MAX_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_HEIGHT_EXT" group=""/>
-        <enum value="0x96DB" name="GL_MAX_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_ASPECT_RATIO_EXT" group=""/>
-        <enum value="0x96DC" name="GL_MAX_FRAGMENT_SHADING_RATE_ATTACHMENT_LAYERS_EXT" group=""/>
-        <enum value="0x96DD" name="GL_FRAGMENT_SHADING_RATE_WITH_SHADER_DEPTH_STENCIL_WRITES_SUPPORTED_EXT" group=""/>
-        <enum value="0x96DE" name="GL_FRAGMENT_SHADING_RATE_WITH_SAMPLE_MASK_SUPPORTED_EXT" group=""/>
-        <enum value="0x96DF" name="GL_FRAGMENT_SHADING_RATE_ATTACHMENT_WITH_DEFAULT_FRAMEBUFFER_SUPPORTED_EXT" group=""/>
+        <enum value="0x96D0" name="GL_SHADING_RATE_EXT" group="GetPName"/>
+        <enum value="0x96D1" name="GL_SHADING_RATE_ATTACHMENT_EXT" group="FramebufferAttachment"/>
+        <enum value="0x96D2" name="GL_FRAGMENT_SHADING_RATE_COMBINER_OP_KEEP_EXT" group="ShadingRateCombinerOp"/>
+        <enum value="0x96D3" name="GL_FRAGMENT_SHADING_RATE_COMBINER_OP_REPLACE_EXT" group="ShadingRateCombinerOp"/>
+        <enum value="0x96D4" name="GL_FRAGMENT_SHADING_RATE_COMBINER_OP_MIN_EXT" group="ShadingRateCombinerOp"/>
+        <enum value="0x96D5" name="GL_FRAGMENT_SHADING_RATE_COMBINER_OP_MAX_EXT" group="ShadingRateCombinerOp"/>
+        <enum value="0x96D6" name="GL_FRAGMENT_SHADING_RATE_COMBINER_OP_MUL_EXT" group="ShadingRateCombinerOp"/>
+        <enum value="0x96D7" name="GL_MIN_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_WIDTH_EXT" group="GetPName"/>
+        <enum value="0x96D8" name="GL_MAX_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_WIDTH_EXT" group="GetPName"/>
+        <enum value="0x96D9" name="GL_MIN_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_HEIGHT_EXT" group="GetPName"/>
+        <enum value="0x96DA" name="GL_MAX_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_HEIGHT_EXT" group="GetPName"/>
+        <enum value="0x96DB" name="GL_MAX_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_ASPECT_RATIO_EXT" group="GetPName"/>
+        <enum value="0x96DC" name="GL_MAX_FRAGMENT_SHADING_RATE_ATTACHMENT_LAYERS_EXT" group="GetPName"/>
+        <enum value="0x96DD" name="GL_FRAGMENT_SHADING_RATE_WITH_SHADER_DEPTH_STENCIL_WRITES_SUPPORTED_EXT" group="GetPName"/>
+        <enum value="0x96DE" name="GL_FRAGMENT_SHADING_RATE_WITH_SAMPLE_MASK_SUPPORTED_EXT" group="GetPName"/>
+        <enum value="0x96DF" name="GL_FRAGMENT_SHADING_RATE_ATTACHMENT_WITH_DEFAULT_FRAMEBUFFER_SUPPORTED_EXT" group="GetPName"/>
     </enums>
 
     <enums namespace="GL" start="0x96E0" end="0x96EF" vendor="ANGLE" comment="Reserved for Ken Russell - ANGLE (via github pull request)">
@@ -13520,7 +13520,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
             <param><ptype>GLsizei</ptype> <name>maxCount</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>count</name></param>
-            <param len="maxCount"><ptype>GLenum</ptype> *<name>shadingRates</name></param>
+            <param len="maxCount" group="ShadingRate"><ptype>GLenum</ptype> *<name>shadingRates</name></param>
         </command>
         <command>
             <proto>void <name>glGetFramebufferAttachmentParameteriv</name></proto>
@@ -23230,12 +23230,12 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glShadingRateEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>rate</name></param>
+            <param group="ShadingRate"><ptype>GLenum</ptype> <name>rate</name></param>
         </command>
         <command>
             <proto>void <name>glShadingRateCombinerOpsEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>combinerOp0</name></param>
-            <param><ptype>GLenum</ptype> <name>combinerOp1</name></param>
+            <param group="ShadingRateCombinerOp"><ptype>GLenum</ptype> <name>combinerOp0</name></param>
+            <param group="ShadingRateCombinerOp"><ptype>GLenum</ptype> <name>combinerOp1</name></param>
         </command>
         <command>
             <proto>void <name>glShadingRateImageBarrierNV</name></proto>
