@@ -6899,7 +6899,7 @@ typedef unsigned int GLhandleARB;
 
     <enums namespace="GL" start="0x96C0" end="0x96CF" vendor="ARM" comment="Contact Jan-Harald Fredriksen">
         <enum value="0x96C0" name="GL_SURFACE_COMPRESSION_EXT" group="TexStorageAttribs,GetTextureParameter"/>
-        <enum value="0x96C1" name="GL_SURFACE_COMPRESSION_FIXED_RATE_NONE_EXT" group="TexStorageAttribss"/>
+        <enum value="0x96C1" name="GL_SURFACE_COMPRESSION_FIXED_RATE_NONE_EXT" group="TexStorageAttribs"/>
         <enum value="0x96C2" name="GL_SURFACE_COMPRESSION_FIXED_RATE_DEFAULT_EXT" group="TexStorageAttribs"/>
             <unused start="0x96C3" end="0x96C3" vendor="ARM"/>
         <enum value="0x96C4" name="GL_SURFACE_COMPRESSION_FIXED_RATE_1BPC_EXT" group="TexStorageAttribs"/>
