@@ -30,7 +30,7 @@ Version
 Number
 
     OpenGL Extension #557
-    OpenGL ES Extension #338
+    OpenGL ES Extension #339
 
 Dependencies
 
