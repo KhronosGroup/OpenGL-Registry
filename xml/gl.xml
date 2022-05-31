@@ -6880,7 +6880,7 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" start="0x96A0" end="0x96AF" vendor="Qualcomm" comment="contact Jeff Leger">
         <enum value="0x96A0" name="GL_TEXTURE_FOVEATED_CUTOFF_DENSITY_QCOM" group="TextureParameterName"/>
             <unused start="0x96A1" end="0x96A1" vendor="Qualcomm"/>
-        <enum value="0x96A2" name="GL_FRAMEBUFFER_FETCH_NONCOHERENT_QCOM" group="FramebufferFetchNoncoherent"/>
+        <enum value="0x96A2" name="GL_FRAMEBUFFER_FETCH_NONCOHERENT_QCOM" group="GetPName,EnableCap"/>
         <enum value="0x96A3" name="GL_VALIDATE_SHADER_BINARY_QCOM"/>
         <enum value="0x96A4" name="GL_SHADING_RATE_QCOM" group="GetPName"/>
         <enum value="0x96A5" name="GL_SHADING_RATE_PRESERVE_ASPECT_RATIO_QCOM" group="EnableCap"/>
