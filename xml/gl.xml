@@ -5464,7 +5464,10 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8EA0" end="0x8EAF" vendor="IMG">
-            <unused start="0x8EA0" end="0x8EAF" vendor="IMG"/>
+        <enum value="0x8EA0" name="GL_TRP_IMG"/>
+        <enum value="0x8EA1" name="GL_TRP_ERROR_CONTEXT_RESET_IMG"/>
+        <enum value="0x8EA2" name="GL_TRP_UNSUPPORTED_CONTEXT_IMG"/>
+            <unused start="0x8EA3" end="0x8EAF" vendor="IMG"/>
     </enums>
 
     <enums namespace="GL" start="0x8EB0" end="0x8EBF" vendor="OES" comment="For Affie Munshi 2007/07/20">
@@ -42892,6 +42895,13 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_MAX_CLIP_PLANES_IMG"/>
                 <command name="glClipPlanefIMG"/>
                 <command name="glClipPlanexIMG"/>
+            </require>
+        </extension>
+        <extension name="GL_IMG_tile_region_protection" supported="glsc2">
+            <require>
+                <enum name="GL_TRP_IMG"/>
+                <enum name="GL_TRP_ERROR_CONTEXT_RESET_IMG"/>
+                <enum name="GL_TRP_UNSUPPORTED_CONTEXT_IMG"/>
             </require>
         </extension>
         <extension name="GL_INGR_blend_func_separate" supported="gl">

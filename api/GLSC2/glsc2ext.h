@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20191013 */
+/* Generated on date 20220613 */
 
 /* Generated C header for:
  * API: glsc2
@@ -59,6 +59,13 @@ extern "C" {
 #define GL_COMPRESSED_RGBA_S3TC_DXT3_EXT  0x83F2
 #define GL_COMPRESSED_RGBA_S3TC_DXT5_EXT  0x83F3
 #endif /* GL_EXT_texture_compression_s3tc */
+
+#ifndef GL_IMG_tile_region_protection
+#define GL_IMG_tile_region_protection 1
+#define GL_TRP_IMG                        0x8EA0
+#define GL_TRP_ERROR_CONTEXT_RESET_IMG    0x8EA1
+#define GL_TRP_UNSUPPORTED_CONTEXT_IMG    0x8EA2
+#endif /* GL_IMG_tile_region_protection */
 
 #ifdef __cplusplus
 }
