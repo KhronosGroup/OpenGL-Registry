@@ -25,7 +25,10 @@ GLHEADERS  = $(API)/GL/glext.h \
 	     $(API)/GLES/glext.h \
 	     $(API)/GLES2/gl2.h \
 	     $(API)/GLES2/gl2ext.h \
-	     $(API)/GLES3/gl3.h
+	     $(API)/GLES3/gl3.h \
+	     $(API)/GLSC2/glsc2.h \
+	     $(API)/GLSC2/glsc2ext.h
+
 GLXHEADERS = $(API)/GL/glxext.h
 WGLHEADERS = $(API)/GL/wglext.h \
 	     $(API)/GL/wgl.h
