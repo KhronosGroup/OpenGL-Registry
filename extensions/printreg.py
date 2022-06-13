@@ -50,6 +50,7 @@ def printreg(reg, varname):
         printNum(ext, 'arbnumber')
         printNum(ext, 'number')
         printNum(ext, 'esnumber')
+        printNum(ext, 'scnumber')
         printSet(ext, 'flags')
         printSet(ext, 'supporters')
         printStr(ext, 'url')

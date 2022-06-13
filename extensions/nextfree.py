@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 # nextfree.py - determine the next unused extension numbers.
-# Use this when registering a new ARB, vendor, and/or OpenGL ES extension.
+# Use this when registering a new extension
 #
 # Use: nextfree.py
 
@@ -21,7 +21,7 @@ file = 'registry.py'
 exec(open(file).read())
 
 # Track each number separately
-keys = { 'arbnumber', 'number', 'esnumber' }
+keys = { 'arbnumber', 'number', 'esnumber', 'scnumber' }
 max = {}
 for k in keys:
     max[k] = 0

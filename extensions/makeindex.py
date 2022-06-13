@@ -6,8 +6,8 @@
 # makeindex.py - create HTML indices for the OpenGL extension registry
 #
 # Use: makeindex.py key
-# where 'key' is 'arbnumber', 'number', or 'esnumber' for ARB OpenGL,
-# Vendor OpenGL, and OpenGL ES extensions, respectively.
+# where 'key' is 'arbnumber', 'number', 'esnumber', or 'scnumber' for ARB
+# OpenGL, Vendor OpenGL, OpenGL ES, and OpenGL SC extensions, respectively.
 #
 # Only extensions marked 'public' will be included in the index.
 
@@ -17,6 +17,7 @@ import copy, os, re, string, sys
 #   arbnumber   OpenGL ARB extension # (if present)
 #   number      OpenGL vendor/EXT extension # (if present)
 #   esnumber    OpenGL ES extension # (if present)
+#   scregistry  OpenGL SC extension # (if present)
 #   flags       Set containing one or more of 'public' 'private' 'obsolete' 'incomplete'
 #   url         Relative URL to extension spec
 #   esurl       Relative URL to ES-specific extension spec (if present)
@@ -47,7 +48,7 @@ if __name__ == '__main__':
     exec(open(file).read())
 
     # Select extensions with the matching key
-    dict = {k:v for k,v in registry.items() if key in v.keys()}
+    dict = { k : v for k,v in registry.items() if key in v.keys()}
 
     # print('Filtered', len(dict), 'extensions')
 
