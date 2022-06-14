@@ -37,6 +37,10 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="http://www.khronos.org/registry/EGL/"> EGL Registry </a>.
 <li> The headers are generated from the <a href="index.php#repository">
      OpenGL-Registry </a> github repository.
+<li> <b> Extension Specifications </b>
+    <ul>
+    <li> <a href="#otherextspecs">OpenGL SC 2.0 Extension Specifications</a> </li>
+    </ul> </li>
 <li> <a href="https://www.khronos.org/developers/reference-cards">
      OpenGL SC 2.0 Quick Reference Card. </a> </li>
 </ul>
@@ -74,6 +78,11 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <li> <a href="specs/sc/es_sc_philosophy.pdf"> OpenGL SC Philosophy </a>
      (June 6, 2005). </li>
 </ul>
+
+<h2> <a name="otherextspecs"></a>
+   Extension Specifications by number</h2>
+
+<?php include("extensions/scext.php"); ?>
 
 <?php include_once("../../assets/static_pages/khr_page_bottom.php"); ?>
 </body>
