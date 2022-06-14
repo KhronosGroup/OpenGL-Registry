@@ -16,8 +16,8 @@ Status
 
 Version
 
-    Last Modified Date:         August 13, 2012
-    NVIDIA Revision:            5
+    Last Modified Date:         May 25, 2022
+    NVIDIA Revision:            6
 
 Number
 
@@ -47,6 +47,8 @@ Dependencies
 
     This extension interacts with GLSL 4.30, ARB_shader_storage_buffer_object, 
     and ARB_compute_shader.
+
+    This extension interacts with OpenGL 4.2.
 
 Overview
 
@@ -81,7 +83,7 @@ New Procedures and Functions
 
 New Tokens
 
-    Accepted by the <barriers> parameter of MemoryBarrierNV:
+    Accepted by the <barriers> parameter of MemoryBarrierEXT:
 
         SHADER_GLOBAL_ACCESS_BARRIER_BIT_NV             0x00000010
 
@@ -147,7 +149,7 @@ Additions to Chapter 2 of the OpenGL 3.2 (Compatibility Profile) Specification
     pointers or with built-in image load, store, and atomic functions, as
     described in the OpenGL Shading Language Specification.  ...
 
-    (add to list of bits in <barriers> in MemoryBarrierNV)
+    (add to list of bits in <barriers> in MemoryBarrierEXT)
 
     - SHADER_GLOBAL_ACCESS_BARRIER_BIT_NV:  Memory accesses using pointers and
         assembly program global loads, stores, and atomics issued after the
@@ -166,7 +168,7 @@ Additions to Chapter 2 of the OpenGL 3.2 (Compatibility Profile) Specification
 
     - Data written using pointers in one rendering pass and read by the shader
       in a later pass need not use coherent variables or memoryBarrier().
-      Calling MemoryBarrierNV() with the SHADER_GLOBAL_ACCESS_BARRIER_BIT_NV
+      Calling MemoryBarrierEXT() with the SHADER_GLOBAL_ACCESS_BARRIER_BIT_NV
       set in <barriers> between passes is necessary.
 
 
@@ -405,7 +407,7 @@ Dependencies on EXT_shader_image_load_store
     construed to introduce:
 
       * the shader memory access language from that specification, including
-        the MemoryBarrierNV() command and the tokens accepted by <barriers>
+        the MemoryBarrierEXT() command and the tokens accepted by <barriers>
         from that specification;
 
       * the memoryBarrier() function to the OpenGL shading language
@@ -438,7 +440,6 @@ Dependencies on NV_gpu_program5
     Note also that NV_gpu_program5 also supports the LOAD opcode originally
     added by the NV_shader_buffer_load and the MEMBAR opcode originally
     provided by EXT_shader_image_load_store.
-
 
 Dependencies on GLSL 4.30, ARB_shader_storage_buffer_object, and
 ARB_compute_shader
@@ -474,6 +475,11 @@ ARB_compute_shader
 
     These functions are available if and only if GL_NV_gpu_shader5 is enabled
     via the "#extension" directive.
+
+Dependencies on OpenGL 4.2
+
+    If OpenGL 4.2 is supported, MemoryBarrierEXT can be replaced with the
+    equivalent core function MemoryBarrier.
 
 
 Errors
@@ -554,6 +560,10 @@ Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------  -----------------------------------------
+     6    05/25/22  shqxu     Update to address removal of function MemoryBarrierNV
+                              and replace with MemoryBarrierEXT. Add interaction
+                              with OpenGL 4.2 supporting MemoryBarrier.
+
      5    08/13/12  pbrown    Add interaction with OpenGL 4.3 (and related ARB
                               extensions) supporting atomic{Inc,Dec}Wrap and 
                               64-bit unsigned integer atomics to shared and
