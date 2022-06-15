@@ -2878,6 +2878,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/IMG/IMG_user_clip_plane.txt',
     },
+    'GL_IMG_tile_region_protection' : {
+        'scnumber' : 1,
+        'flags' : { 'public' },
+        'url' : 'extensions/IMG/IMG_tile_region_protection.txt',
+    },
     'GL_INGR_color_clamp' : {
         'number' : 174,
         'flags' : { 'public' },
