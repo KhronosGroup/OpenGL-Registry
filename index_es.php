@@ -12,7 +12,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
 <p> The OpenGL ES Registry is part of the <a
     href="http://www.khronos.org/registry/OpenGL/"> Combined OpenGL Registry </a>
     for OpenGL, OpenGL ES, and OpenGL SC, which includes the <a
-    href="xml/README.md">XML API registry</a> of reserved enumerants and
+    href="xml/README.adoc">XML API registry</a> of reserved enumerants and
     functions. </p>
 
 <p> <b>Table of Contents</b>

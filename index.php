@@ -38,7 +38,7 @@ API: </p>
     for new extension APIs. A set of Python scripts are provided to load the
     XML files and process them into header files. </p>
 
-<p> See <a href="xml/README.md"> xml/README.md </a> for more details of the
+<p> See <a href="xml/README.adoc"> xml/README.md </a> for more details of the
     API XML registry, how to obtain enumerant allocations, create extension
     specifications and register them, and other related topics.
 
