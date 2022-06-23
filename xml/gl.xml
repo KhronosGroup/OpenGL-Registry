@@ -1931,9 +1931,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x821C" name="GL_MINOR_VERSION" group="GetPName"/>
         <enum value="0x821D" name="GL_NUM_EXTENSIONS" group="GetPName"/>
         <enum value="0x821E" name="GL_CONTEXT_FLAGS" group="GetPName"/>
-        <enum value="0x821F" name="GL_BUFFER_IMMUTABLE_STORAGE" group="VertexBufferObjectParameter,BufferPNameARB"/>
+        <enum value="0x821F" name="GL_BUFFER_IMMUTABLE_STORAGE" group="BufferPNameARB"/>
         <enum value="0x821F" name="GL_BUFFER_IMMUTABLE_STORAGE_EXT"/>
-        <enum value="0x8220" name="GL_BUFFER_STORAGE_FLAGS" group="VertexBufferObjectParameter,BufferPNameARB"/>
+        <enum value="0x8220" name="GL_BUFFER_STORAGE_FLAGS" group="BufferPNameARB"/>
         <enum value="0x8220" name="GL_BUFFER_STORAGE_FLAGS_EXT"/>
         <enum value="0x8221" name="GL_PRIMITIVE_RESTART_FOR_PATCHES_SUPPORTED"/>
         <enum value="0x8221" name="GL_PRIMITIVE_RESTART_FOR_PATCHES_SUPPORTED_OES"/>
@@ -3471,10 +3471,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8761" name="GL_DYNAMIC_ATI" group="ArrayObjectUsageATI"/>
         <enum value="0x8762" name="GL_PRESERVE_ATI" group="PreserveModeATI"/>
         <enum value="0x8763" name="GL_DISCARD_ATI" group="PreserveModeATI"/>
-        <enum value="0x8764" name="GL_BUFFER_SIZE" group="VertexBufferObjectParameter,BufferPNameARB"/>
+        <enum value="0x8764" name="GL_BUFFER_SIZE" group="BufferPNameARB"/>
         <enum value="0x8764" name="GL_BUFFER_SIZE_ARB" group="BufferPNameARB"/>
         <enum value="0x8764" name="GL_OBJECT_BUFFER_SIZE_ATI" group="ArrayObjectPNameATI"/>
-        <enum value="0x8765" name="GL_BUFFER_USAGE" group="VertexBufferObjectParameter,BufferPNameARB"/>
+        <enum value="0x8765" name="GL_BUFFER_USAGE" group="BufferPNameARB"/>
         <enum value="0x8765" name="GL_BUFFER_USAGE_ARB" group="BufferPNameARB"/>
         <enum value="0x8765" name="GL_OBJECT_BUFFER_USAGE_ATI" group="ArrayObjectPNameATI"/>
         <enum value="0x8766" name="GL_ARRAY_OBJECT_BUFFER_ATI"/>
@@ -3999,10 +3999,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x88B9" name="GL_WRITE_ONLY_OES"/>
         <enum value="0x88BA" name="GL_READ_WRITE" group="BufferAccessARB"/>
         <enum value="0x88BA" name="GL_READ_WRITE_ARB"/>
-        <enum value="0x88BB" name="GL_BUFFER_ACCESS" group="VertexBufferObjectParameter,BufferPNameARB"/>
+        <enum value="0x88BB" name="GL_BUFFER_ACCESS" group="BufferPNameARB"/>
         <enum value="0x88BB" name="GL_BUFFER_ACCESS_ARB" group="BufferPNameARB"/>
         <enum value="0x88BB" name="GL_BUFFER_ACCESS_OES"/>
-        <enum value="0x88BC" name="GL_BUFFER_MAPPED" group="VertexBufferObjectParameter,BufferPNameARB"/>
+        <enum value="0x88BC" name="GL_BUFFER_MAPPED" group="BufferPNameARB"/>
         <enum value="0x88BC" name="GL_BUFFER_MAPPED_ARB" group="BufferPNameARB"/>
         <enum value="0x88BC" name="GL_BUFFER_MAPPED_OES"/>
         <enum value="0x88BD" name="GL_BUFFER_MAP_POINTER" group="BufferPointerNameARB"/>
@@ -6040,9 +6040,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x911C" name="GL_CONDITION_SATISFIED_APPLE"/>
         <enum value="0x911D" name="GL_WAIT_FAILED" group="SyncStatus"/>
         <enum value="0x911D" name="GL_WAIT_FAILED_APPLE"/>
-        <enum value="0x911F" name="GL_BUFFER_ACCESS_FLAGS" group="VertexBufferObjectParameter,BufferPNameARB"/>
-        <enum value="0x9120" name="GL_BUFFER_MAP_LENGTH" group="VertexBufferObjectParameter,BufferPNameARB"/>
-        <enum value="0x9121" name="GL_BUFFER_MAP_OFFSET" group="VertexBufferObjectParameter,BufferPNameARB"/>
+        <enum value="0x911F" name="GL_BUFFER_ACCESS_FLAGS" group="BufferPNameARB"/>
+        <enum value="0x9120" name="GL_BUFFER_MAP_LENGTH" group="BufferPNameARB"/>
+        <enum value="0x9121" name="GL_BUFFER_MAP_OFFSET" group="BufferPNameARB"/>
         <enum value="0x9122" name="GL_MAX_VERTEX_OUTPUT_COMPONENTS" group="GetPName"/>
         <enum value="0x9123" name="GL_MAX_GEOMETRY_INPUT_COMPONENTS" group="GetPName"/>
         <enum value="0x9123" name="GL_MAX_GEOMETRY_INPUT_COMPONENTS_EXT"/>
