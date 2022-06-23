@@ -1178,24 +1178,24 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8011" name="GL_CONVOLUTION_2D_EXT" group="GetPName,ConvolutionTargetEXT,EnableCap"/>
         <enum value="0x8012" name="GL_SEPARABLE_2D" group="SeparableTarget,SeparableTargetEXT"/>
         <enum value="0x8012" name="GL_SEPARABLE_2D_EXT" group="SeparableTargetEXT,EnableCap,GetPName"/>
-        <enum value="0x8013" name="GL_CONVOLUTION_BORDER_MODE" group="GetConvolutionParameter,ConvolutionParameterEXT"/>
-        <enum value="0x8013" name="GL_CONVOLUTION_BORDER_MODE_EXT" group="GetConvolutionParameter,ConvolutionParameterEXT"/>
-        <enum value="0x8014" name="GL_CONVOLUTION_FILTER_SCALE" group="GetConvolutionParameter,ConvolutionParameterEXT"/>
-        <enum value="0x8014" name="GL_CONVOLUTION_FILTER_SCALE_EXT" group="GetConvolutionParameter,ConvolutionParameterEXT"/>
-        <enum value="0x8015" name="GL_CONVOLUTION_FILTER_BIAS" group="GetConvolutionParameter,ConvolutionParameterEXT"/>
-        <enum value="0x8015" name="GL_CONVOLUTION_FILTER_BIAS_EXT" group="GetConvolutionParameter,ConvolutionParameterEXT"/>
+        <enum value="0x8013" name="GL_CONVOLUTION_BORDER_MODE" group="ConvolutionParameter"/>
+        <enum value="0x8013" name="GL_CONVOLUTION_BORDER_MODE_EXT" group="ConvolutionParameter"/>
+        <enum value="0x8014" name="GL_CONVOLUTION_FILTER_SCALE" group="ConvolutionParameter"/>
+        <enum value="0x8014" name="GL_CONVOLUTION_FILTER_SCALE_EXT" group="ConvolutionParameter"/>
+        <enum value="0x8015" name="GL_CONVOLUTION_FILTER_BIAS" group="ConvolutionParameter"/>
+        <enum value="0x8015" name="GL_CONVOLUTION_FILTER_BIAS_EXT" group="ConvolutionParameter"/>
         <enum value="0x8016" name="GL_REDUCE" group="ConvolutionBorderModeEXT"/>
         <enum value="0x8016" name="GL_REDUCE_EXT" group="ConvolutionBorderModeEXT"/>
-        <enum value="0x8017" name="GL_CONVOLUTION_FORMAT" group="GetConvolutionParameter"/>
-        <enum value="0x8017" name="GL_CONVOLUTION_FORMAT_EXT" group="GetConvolutionParameter"/>
-        <enum value="0x8018" name="GL_CONVOLUTION_WIDTH" group="GetConvolutionParameter"/>
-        <enum value="0x8018" name="GL_CONVOLUTION_WIDTH_EXT" group="GetConvolutionParameter"/>
-        <enum value="0x8019" name="GL_CONVOLUTION_HEIGHT" group="GetConvolutionParameter"/>
-        <enum value="0x8019" name="GL_CONVOLUTION_HEIGHT_EXT" group="GetConvolutionParameter"/>
-        <enum value="0x801A" name="GL_MAX_CONVOLUTION_WIDTH" group="GetConvolutionParameter"/>
-        <enum value="0x801A" name="GL_MAX_CONVOLUTION_WIDTH_EXT" group="GetConvolutionParameter"/>
-        <enum value="0x801B" name="GL_MAX_CONVOLUTION_HEIGHT" group="GetConvolutionParameter"/>
-        <enum value="0x801B" name="GL_MAX_CONVOLUTION_HEIGHT_EXT" group="GetConvolutionParameter"/>
+        <enum value="0x8017" name="GL_CONVOLUTION_FORMAT" group="ConvolutionParameter"/>
+        <enum value="0x8017" name="GL_CONVOLUTION_FORMAT_EXT" group="ConvolutionParameter"/>
+        <enum value="0x8018" name="GL_CONVOLUTION_WIDTH" group="ConvolutionParameter"/>
+        <enum value="0x8018" name="GL_CONVOLUTION_WIDTH_EXT" group="ConvolutionParameter"/>
+        <enum value="0x8019" name="GL_CONVOLUTION_HEIGHT" group="ConvolutionParameter"/>
+        <enum value="0x8019" name="GL_CONVOLUTION_HEIGHT_EXT" group="ConvolutionParameter"/>
+        <enum value="0x801A" name="GL_MAX_CONVOLUTION_WIDTH" group="ConvolutionParameter"/>
+        <enum value="0x801A" name="GL_MAX_CONVOLUTION_WIDTH_EXT" group="ConvolutionParameter"/>
+        <enum value="0x801B" name="GL_MAX_CONVOLUTION_HEIGHT" group="ConvolutionParameter"/>
+        <enum value="0x801B" name="GL_MAX_CONVOLUTION_HEIGHT_EXT" group="ConvolutionParameter"/>
         <enum value="0x801C" name="GL_POST_CONVOLUTION_RED_SCALE" group="PixelTransferParameter"/>
         <enum value="0x801C" name="GL_POST_CONVOLUTION_RED_SCALE_EXT" group="PixelTransferParameter,GetPName"/>
         <enum value="0x801D" name="GL_POST_CONVOLUTION_GREEN_SCALE" group="PixelTransferParameter"/>
@@ -1710,7 +1710,7 @@ typedef unsigned int GLhandleARB;
             <unused start="0x8152" vendor="HP" comment="GL_WRAP_BORDER = 0x8152 was proposed, but not actually promoted to core"/>
         <enum value="0x8153" name="GL_REPLICATE_BORDER"/>
         <enum value="0x8153" name="GL_REPLICATE_BORDER_HP"/>
-        <enum value="0x8154" name="GL_CONVOLUTION_BORDER_COLOR" group="GetConvolutionParameter"/>
+        <enum value="0x8154" name="GL_CONVOLUTION_BORDER_COLOR" group="ConvolutionParameter"/>
         <enum value="0x8154" name="GL_CONVOLUTION_BORDER_COLOR_HP"/>
         <enum value="0x8155" name="GL_IMAGE_SCALE_X_HP" group="ImageTransformPNameHP"/>
         <enum value="0x8156" name="GL_IMAGE_SCALE_Y_HP" group="ImageTransformPNameHP"/>
@@ -9622,14 +9622,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glConvolutionParameterf</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>params</name></param>
             <glx type="render" opcode="4103"/>
         </command>
         <command>
             <proto>void <name>glConvolutionParameterfEXT</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>params</name></param>
             <alias name="glConvolutionParameterf"/>
             <glx type="render" opcode="4103"/>
@@ -9637,14 +9637,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glConvolutionParameterfv</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="4104"/>
         </command>
         <command>
             <proto>void <name>glConvolutionParameterfvEXT</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glConvolutionParameterfv"/>
             <glx type="render" opcode="4104"/>
@@ -9652,14 +9652,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glConvolutionParameteri</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>params</name></param>
             <glx type="render" opcode="4105"/>
         </command>
         <command>
             <proto>void <name>glConvolutionParameteriEXT</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>params</name></param>
             <alias name="glConvolutionParameteri"/>
             <glx type="render" opcode="4105"/>
@@ -9667,14 +9667,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glConvolutionParameteriv</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="4106"/>
         </command>
         <command>
             <proto>void <name>glConvolutionParameterivEXT</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glConvolutionParameteriv"/>
             <glx type="render" opcode="4106"/>
@@ -9682,13 +9682,13 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glConvolutionParameterxOES</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLfixed</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glConvolutionParameterxvOES</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLfixed</ptype> *<name>params</name></param>
         </command>
         <command>
@@ -13263,28 +13263,28 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetConvolutionParameterfv</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="single" opcode="151"/>
         </command>
         <command>
             <proto>void <name>glGetConvolutionParameterfvEXT</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="2"/>
         </command>
         <command>
             <proto>void <name>glGetConvolutionParameteriv</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="single" opcode="152"/>
         </command>
         <command>
             <proto>void <name>glGetConvolutionParameterivEXT</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ConvolutionParameterEXT"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="3"/>
         </command>
