@@ -4795,12 +4795,12 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8CA7" name="GL_RENDERBUFFER_BINDING_ANGLE"/>
         <enum value="0x8CA7" name="GL_RENDERBUFFER_BINDING_EXT"/>
         <enum value="0x8CA7" name="GL_RENDERBUFFER_BINDING_OES"/>
-        <enum value="0x8CA8" name="GL_READ_FRAMEBUFFER" group="CheckFramebufferStatusTarget,FramebufferTarget"/>
+        <enum value="0x8CA8" name="GL_READ_FRAMEBUFFER" group="FramebufferTarget"/>
         <enum value="0x8CA8" name="GL_READ_FRAMEBUFFER_ANGLE"/>
         <enum value="0x8CA8" name="GL_READ_FRAMEBUFFER_APPLE"/>
         <enum value="0x8CA8" name="GL_READ_FRAMEBUFFER_EXT"/>
         <enum value="0x8CA8" name="GL_READ_FRAMEBUFFER_NV"/>
-        <enum value="0x8CA9" name="GL_DRAW_FRAMEBUFFER" group="CheckFramebufferStatusTarget,FramebufferTarget"/>
+        <enum value="0x8CA9" name="GL_DRAW_FRAMEBUFFER" group="FramebufferTarget"/>
         <enum value="0x8CA9" name="GL_DRAW_FRAMEBUFFER_ANGLE"/>
         <enum value="0x8CA9" name="GL_DRAW_FRAMEBUFFER_APPLE"/>
         <enum value="0x8CA9" name="GL_DRAW_FRAMEBUFFER_EXT"/>
@@ -4945,7 +4945,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT_EXT" group="InvalidateFramebufferAttachment"/>
         <enum value="0x8D20" name="GL_STENCIL_ATTACHMENT_OES" group="InvalidateFramebufferAttachment"/>
             <unused start="0x8D21" end="0x8D3F" vendor="ARB" comment="For stencil attachments 16-31"/>
-        <enum value="0x8D40" name="GL_FRAMEBUFFER" group="ObjectIdentifier,FramebufferTarget,CheckFramebufferStatusTarget"/>
+        <enum value="0x8D40" name="GL_FRAMEBUFFER" group="ObjectIdentifier,FramebufferTarget"/>
         <enum value="0x8D40" name="GL_FRAMEBUFFER_EXT"/>
         <enum value="0x8D40" name="GL_FRAMEBUFFER_OES" group="FramebufferTarget"/>
         <enum value="0x8D41" name="GL_RENDERBUFFER" group="ObjectIdentifier,RenderbufferTarget,CopyImageSubDataTarget,TextureTarget"/>
