@@ -13590,7 +13590,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto group="handleARB"><ptype>GLhandleARB</ptype> <name>glGetHandleARB</name></proto>
-            <param><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ContainerType"><ptype>GLenum</ptype> <name>pname</name></param>
         </command>
         <command>
             <proto>void <name>glGetHistogram</name></proto>
