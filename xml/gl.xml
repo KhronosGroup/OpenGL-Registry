@@ -1691,7 +1691,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8143" name="GL_PIXEL_TILE_GRID_HEIGHT_SGIX" group="PixelStoreParameter,GetPName"/>
         <enum value="0x8144" name="GL_PIXEL_TILE_GRID_DEPTH_SGIX" group="PixelStoreParameter,GetPName"/>
         <enum value="0x8145" name="GL_PIXEL_TILE_CACHE_SIZE_SGIX" group="PixelStoreParameter,GetPName"/>
-        <enum value="0x8146" name="GL_FILTER4_SGIS" group="TextureMinFilter,TextureFilterSGIS,TextureFilterFuncSGIS,TextureMagFilter"/>
+        <enum value="0x8146" name="GL_FILTER4_SGIS" group="TextureFilterSGIS,TextureMinFilter,TextureMagFilter"/>
         <enum value="0x8147" name="GL_TEXTURE_FILTER4_SIZE_SGIS" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8148" name="GL_SPRITE_SGIX" group="GetPName,EnableCap"/>
         <enum value="0x8149" name="GL_SPRITE_MODE_SGIX" group="GetPName,SpriteParameterNameSGIX"/>
