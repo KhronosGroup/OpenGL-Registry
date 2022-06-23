@@ -1563,26 +1563,26 @@ typedef unsigned int GLhandleARB;
         <enum value="0x80D4" name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
         <enum value="0x80D5" name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE" group="ColorTableTargetSGI,ColorTableTarget"/>
         <enum value="0x80D5" name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
-        <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80D8" name="GL_COLOR_TABLE_FORMAT" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80D8" name="GL_COLOR_TABLE_FORMAT_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80D9" name="GL_COLOR_TABLE_WIDTH" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80D9" name="GL_COLOR_TABLE_WIDTH_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DA" name="GL_COLOR_TABLE_RED_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80DA" name="GL_COLOR_TABLE_RED_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DB" name="GL_COLOR_TABLE_GREEN_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80DB" name="GL_COLOR_TABLE_GREEN_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DC" name="GL_COLOR_TABLE_BLUE_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80DC" name="GL_COLOR_TABLE_BLUE_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DD" name="GL_COLOR_TABLE_ALPHA_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80DD" name="GL_COLOR_TABLE_ALPHA_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DE" name="GL_COLOR_TABLE_LUMINANCE_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80DE" name="GL_COLOR_TABLE_LUMINANCE_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
-        <enum value="0x80DF" name="GL_COLOR_TABLE_INTENSITY_SIZE" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI,GetColorTableParameterPName,ColorTableParameterPName"/>
-        <enum value="0x80DF" name="GL_COLOR_TABLE_INTENSITY_SIZE_SGI" group="GetColorTableParameterPNameSGI,ColorTableParameterPNameSGI"/>
+        <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE" group="ColorTableParameterPName"/>
+        <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE_SGI" group="ColorTableParameterPName"/>
+        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS" group="ColorTableParameterPName"/>
+        <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS_SGI" group="ColorTableParameterPName"/>
+        <enum value="0x80D8" name="GL_COLOR_TABLE_FORMAT" group="ColorTableParameterPName"/>
+        <enum value="0x80D8" name="GL_COLOR_TABLE_FORMAT_SGI" group="ColorTableParameterPName"/>
+        <enum value="0x80D9" name="GL_COLOR_TABLE_WIDTH" group="ColorTableParameterPName"/>
+        <enum value="0x80D9" name="GL_COLOR_TABLE_WIDTH_SGI" group="ColorTableParameterPName"/>
+        <enum value="0x80DA" name="GL_COLOR_TABLE_RED_SIZE" group="ColorTableParameterPName"/>
+        <enum value="0x80DA" name="GL_COLOR_TABLE_RED_SIZE_SGI" group="ColorTableParameterPName"/>
+        <enum value="0x80DB" name="GL_COLOR_TABLE_GREEN_SIZE" group="ColorTableParameterPName"/>
+        <enum value="0x80DB" name="GL_COLOR_TABLE_GREEN_SIZE_SGI" group="ColorTableParameterPName"/>
+        <enum value="0x80DC" name="GL_COLOR_TABLE_BLUE_SIZE" group="ColorTableParameterPName"/>
+        <enum value="0x80DC" name="GL_COLOR_TABLE_BLUE_SIZE_SGI" group="ColorTableParameterPName"/>
+        <enum value="0x80DD" name="GL_COLOR_TABLE_ALPHA_SIZE" group="ColorTableParameterPName"/>
+        <enum value="0x80DD" name="GL_COLOR_TABLE_ALPHA_SIZE_SGI" group="ColorTableParameterPName"/>
+        <enum value="0x80DE" name="GL_COLOR_TABLE_LUMINANCE_SIZE" group="ColorTableParameterPName"/>
+        <enum value="0x80DE" name="GL_COLOR_TABLE_LUMINANCE_SIZE_SGI" group="ColorTableParameterPName"/>
+        <enum value="0x80DF" name="GL_COLOR_TABLE_INTENSITY_SIZE" group="ColorTableParameterPName"/>
+        <enum value="0x80DF" name="GL_COLOR_TABLE_INTENSITY_SIZE_SGI" group="ColorTableParameterPName"/>
     </enums>
 
     <enums namespace="GL" start="0x80E0" end="0x810F" vendor="MS">
@@ -9072,14 +9072,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glColorTableParameterfv</name></proto>
             <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="2054"/>
         </command>
         <command>
             <proto>void <name>glColorTableParameterfvSGI</name></proto>
             <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glColorTableParameterfv"/>
             <glx type="render" opcode="2054"/>
@@ -9087,14 +9087,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glColorTableParameteriv</name></proto>
             <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="2055"/>
         </command>
         <command>
             <proto>void <name>glColorTableParameterivSGI</name></proto>
             <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="ColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glColorTableParameteriv"/>
             <glx type="render" opcode="2055"/>
@@ -13101,42 +13101,42 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetColorTableParameterfv</name></proto>
             <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="GetColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="single" opcode="148"/>
         </command>
         <command>
             <proto>void <name>glGetColorTableParameterfvEXT</name></proto>
             <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="GetColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glGetColorTableParameterfv"/>
         </command>
         <command>
             <proto>void <name>glGetColorTableParameterfvSGI</name></proto>
             <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="GetColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="4099"/>
         </command>
         <command>
             <proto>void <name>glGetColorTableParameteriv</name></proto>
             <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="GetColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="single" opcode="149"/>
         </command>
         <command>
             <proto>void <name>glGetColorTableParameterivEXT</name></proto>
             <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="GetColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glGetColorTableParameteriv"/>
         </command>
         <command>
             <proto>void <name>glGetColorTableParameterivSGI</name></proto>
             <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
-            <param group="GetColorTableParameterPNameSGI"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="4100"/>
         </command>
