@@ -2477,7 +2477,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x83FC" name="GL_BLACKHOLE_RENDER_INTEL"/>
             <unused start="0x83FD" vendor="INTEL"/>
         <enum value="0x83FE" name="GL_CONSERVATIVE_RASTERIZATION_INTEL"/>
-        <enum value="0x83FF" name="GL_TEXTURE_MEMORY_LAYOUT_INTEL"/>
+        <enum value="0x83FF" name="GL_TEXTURE_MEMORY_LAYOUT_INTEL" group="TextureParameterName"/>
     </enums>
 
     <enums namespace="GL" start="0x8400" end="0x846F" vendor="SGI">
