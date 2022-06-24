@@ -13190,7 +13190,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto><ptype>GLuint</ptype> <name>glGetCommandHeaderNV</name></proto>
-            <param><ptype>GLenum</ptype> <name>tokenID</name></param>
+            <param group="CommandOpcodesNV"><ptype>GLenum</ptype> <name>tokenID</name></param>
             <param><ptype>GLuint</ptype> <name>size</name></param>
         </command>
         <command>
