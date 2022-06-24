@@ -486,7 +486,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0" name="GL_FALSE" group="SpecialNumbers,Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
         <enum value="0" name="GL_NO_ERROR" group="SpecialNumbers,GraphicsResetStatus,ErrorCode"/>
         <enum value="0" name="GL_ZERO" group="SpecialNumbers,TextureSwizzle,StencilOp,BlendingFactor"/>
-        <enum value="0" name="GL_NONE" group="SpecialNumbers,SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenMode,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
+        <enum value="0" name="GL_NONE" group="SpecialNumbers,SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenModeSGIX,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
         <enum value="0" name="GL_NONE_OES" group="SpecialNumbers,ReadBufferMode,DrawBufferMode"/>
         <enum value="1" name="GL_TRUE" group="SpecialNumbers,Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
         <enum value="1" name="GL_ONE" group="SpecialNumbers,TextureSwizzle,BlendingFactor"/>
@@ -991,11 +991,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x1904" name="GL_GREEN_NV"/>
         <enum value="0x1905" name="GL_BLUE" group="TextureSwizzle,CombinerComponentUsageNV,PixelFormat"/>
         <enum value="0x1905" name="GL_BLUE_NV"/>
-        <enum value="0x1906" name="GL_ALPHA" group="TextureSwizzle,CombinerPortionNV,PathColorFormat,CombinerComponentUsageNV,PixelFormat"/>
-        <enum value="0x1907" name="GL_RGB" group="PixelTexGenMode,CombinerPortionNV,PathColorFormat,CombinerComponentUsageNV,PixelFormat,InternalFormat"/>
-        <enum value="0x1908" name="GL_RGBA" group="PixelTexGenMode,PathColorFormat,PixelFormat,InternalFormat"/>
-        <enum value="0x1909" name="GL_LUMINANCE" group="PixelTexGenMode,PathColorFormat,PixelFormat"/>
-        <enum value="0x190A" name="GL_LUMINANCE_ALPHA" group="PixelTexGenMode,PathColorFormat,PixelFormat"/>
+        <enum value="0x1906" name="GL_ALPHA" group="PixelTexGenModeSGIX,TextureSwizzle,CombinerPortionNV,PathColorFormat,CombinerComponentUsageNV,PixelFormat"/>
+        <enum value="0x1907" name="GL_RGB" group="PixelTexGenModeSGIX,CombinerPortionNV,PathColorFormat,CombinerComponentUsageNV,PixelFormat,InternalFormat"/>
+        <enum value="0x1908" name="GL_RGBA" group="PixelTexGenModeSGIX,PathColorFormat,PixelFormat,InternalFormat"/>
+        <enum value="0x1909" name="GL_LUMINANCE" group="PathColorFormat,PixelFormat"/>
+        <enum value="0x190A" name="GL_LUMINANCE_ALPHA" group="PathColorFormat,PixelFormat"/>
             <unused start="0x1910" end="0x19FF" comment="Unused for PixelFormat"/>
         <enum value="0x1A00" name="GL_BITMAP" group="PixelType"/>
             <unused start="0x1A01" end="0x1AFF" comment="Unused for PixelType"/>
@@ -1760,10 +1760,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8184" name="GL_PIXEL_TEX_GEN_Q_CEILING_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
         <enum value="0x8185" name="GL_PIXEL_TEX_GEN_Q_ROUND_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
         <enum value="0x8186" name="GL_PIXEL_TEX_GEN_Q_FLOOR_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
-        <enum value="0x8187" name="GL_PIXEL_TEX_GEN_ALPHA_REPLACE_SGIX" group="PixelTexGenMode"/>
-        <enum value="0x8188" name="GL_PIXEL_TEX_GEN_ALPHA_NO_REPLACE_SGIX" group="PixelTexGenMode"/>
-        <enum value="0x8189" name="GL_PIXEL_TEX_GEN_ALPHA_LS_SGIX" group="PixelTexGenMode,PixelTexGenModeSGIX"/>
-        <enum value="0x818A" name="GL_PIXEL_TEX_GEN_ALPHA_MS_SGIX" group="PixelTexGenMode,PixelTexGenModeSGIX"/>
+        <enum value="0x8187" name="GL_PIXEL_TEX_GEN_ALPHA_REPLACE_SGIX"/>
+        <enum value="0x8188" name="GL_PIXEL_TEX_GEN_ALPHA_NO_REPLACE_SGIX"/>
+        <enum value="0x8189" name="GL_PIXEL_TEX_GEN_ALPHA_LS_SGIX" group="PixelTexGenModeSGIX"/>
+        <enum value="0x818A" name="GL_PIXEL_TEX_GEN_ALPHA_MS_SGIX" group="PixelTexGenModeSGIX"/>
         <enum value="0x818B" name="GL_FRAMEZOOM_SGIX" group="GetPName,EnableCap"/>
         <enum value="0x818C" name="GL_FRAMEZOOM_FACTOR_SGIX" group="GetPName"/>
         <enum value="0x818D" name="GL_MAX_FRAMEZOOM_FACTOR_SGIX" group="GetPName"/>
