@@ -16944,7 +16944,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glLightEnviSGIX</name></proto>
             <param group="LightEnvParameterSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param group="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
+            <param group="LightEnvModeSGIX"><ptype>GLint</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glLightModelf</name></proto>
