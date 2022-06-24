@@ -14514,7 +14514,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> *<name>dataSize</name></param>
             <param><ptype>GLuint</ptype> *<name>noCounters</name></param>
             <param><ptype>GLuint</ptype> *<name>noInstances</name></param>
-            <param><ptype>GLuint</ptype> *<name>capsMask</name></param>
+            <param group="PerformanceQueryCapsMaskINTEL"><ptype>GLuint</ptype> *<name>capsMask</name></param>
         </command>
         <command>
             <proto>void <name>glGetPixelMapfv</name></proto>
