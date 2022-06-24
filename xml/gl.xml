@@ -760,16 +760,16 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0C62" name="GL_TEXTURE_GEN_R" group="GetPName,EnableCap"/>
         <enum value="0x0C63" name="GL_TEXTURE_GEN_Q" group="GetPName,EnableCap"/>
 
-        <enum value="0x0C70" name="GL_PIXEL_MAP_I_TO_I" group="PixelMap,GetPixelMap"/>
-        <enum value="0x0C71" name="GL_PIXEL_MAP_S_TO_S" group="PixelMap,GetPixelMap"/>
-        <enum value="0x0C72" name="GL_PIXEL_MAP_I_TO_R" group="PixelMap,GetPixelMap"/>
-        <enum value="0x0C73" name="GL_PIXEL_MAP_I_TO_G" group="PixelMap,GetPixelMap"/>
-        <enum value="0x0C74" name="GL_PIXEL_MAP_I_TO_B" group="PixelMap,GetPixelMap"/>
-        <enum value="0x0C75" name="GL_PIXEL_MAP_I_TO_A" group="PixelMap,GetPixelMap"/>
-        <enum value="0x0C76" name="GL_PIXEL_MAP_R_TO_R" group="PixelMap,GetPixelMap"/>
-        <enum value="0x0C77" name="GL_PIXEL_MAP_G_TO_G" group="PixelMap,GetPixelMap"/>
-        <enum value="0x0C78" name="GL_PIXEL_MAP_B_TO_B" group="PixelMap,GetPixelMap"/>
-        <enum value="0x0C79" name="GL_PIXEL_MAP_A_TO_A" group="PixelMap,GetPixelMap"/>
+        <enum value="0x0C70" name="GL_PIXEL_MAP_I_TO_I" group="PixelMap"/>
+        <enum value="0x0C71" name="GL_PIXEL_MAP_S_TO_S" group="PixelMap"/>
+        <enum value="0x0C72" name="GL_PIXEL_MAP_I_TO_R" group="PixelMap"/>
+        <enum value="0x0C73" name="GL_PIXEL_MAP_I_TO_G" group="PixelMap"/>
+        <enum value="0x0C74" name="GL_PIXEL_MAP_I_TO_B" group="PixelMap"/>
+        <enum value="0x0C75" name="GL_PIXEL_MAP_I_TO_A" group="PixelMap"/>
+        <enum value="0x0C76" name="GL_PIXEL_MAP_R_TO_R" group="PixelMap"/>
+        <enum value="0x0C77" name="GL_PIXEL_MAP_G_TO_G" group="PixelMap"/>
+        <enum value="0x0C78" name="GL_PIXEL_MAP_B_TO_B" group="PixelMap"/>
+        <enum value="0x0C79" name="GL_PIXEL_MAP_A_TO_A" group="PixelMap"/>
 
         <enum value="0x0CB0" name="GL_PIXEL_MAP_I_TO_I_SIZE" group="GetPName"/>
         <enum value="0x0CB1" name="GL_PIXEL_MAP_S_TO_S_SIZE" group="GetPName"/>
