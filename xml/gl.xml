@@ -25471,15 +25471,15 @@ typedef unsigned int GLhandleARB;
             <param class="program"><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param len="count">const <ptype>GLchar</ptype> *const*<name>varyings</name></param>
-            <param><ptype>GLenum</ptype> <name>bufferMode</name></param>
+            <param group="TransformFeedbackBufferMode"><ptype>GLenum</ptype> <name>bufferMode</name></param>
             <alias name="glTransformFeedbackVaryings"/>
         </command>
         <command>
             <proto>void <name>glTransformFeedbackVaryingsNV</name></proto>
             <param class="program"><ptype>GLuint</ptype> <name>program</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
-            <param len="count">const <ptype>GLint</ptype> *<name>locations</name></param>
-            <param><ptype>GLenum</ptype> <name>bufferMode</name></param>
+            <param group="TransformFeedbackTokenNV" len="count">const <ptype>GLint</ptype> *<name>locations</name></param>
+            <param group="TransformFeedbackBufferMode"><ptype>GLenum</ptype> <name>bufferMode</name></param>
         </command>
         <command>
             <proto>void <name>glTransformPathNV</name></proto>
