@@ -16352,7 +16352,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glHintPGI</name></proto>
             <param group="HintTargetPGI"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLint</ptype> <name>mode</name></param>
+            <param group="VertexHintsMaskPGI"><ptype>GLint</ptype> <name>mode</name></param>
         </command>
         <command>
             <proto>void <name>glHistogram</name></proto>
