@@ -564,11 +564,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0401" name="GL_FRONT_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
         <enum value="0x0402" name="GL_BACK_LEFT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
         <enum value="0x0403" name="GL_BACK_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
-        <enum value="0x0404" name="GL_FRONT" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,ReadBufferMode,StencilFaceDirection,MaterialFace"/>
-        <enum value="0x0405" name="GL_BACK" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,ReadBufferMode,StencilFaceDirection,MaterialFace"/>
+        <enum value="0x0404" name="GL_FRONT" group="ColorBuffer,DrawBufferMode,ReadBufferMode,MaterialFace"/>
+        <enum value="0x0405" name="GL_BACK" group="ColorBuffer,DrawBufferMode,ReadBufferMode,MaterialFace"/>
         <enum value="0x0406" name="GL_LEFT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
         <enum value="0x0407" name="GL_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
-        <enum value="0x0408" name="GL_FRONT_AND_BACK" group="ColorBuffer,ColorMaterialFace,CullFaceMode,DrawBufferMode,StencilFaceDirection,MaterialFace"/>
+        <enum value="0x0408" name="GL_FRONT_AND_BACK" group="ColorBuffer,DrawBufferMode,MaterialFace"/>
         <enum value="0x0409" name="GL_AUX0" group="ReadBufferMode,DrawBufferMode"/>
         <enum value="0x040A" name="GL_AUX1" group="ReadBufferMode,DrawBufferMode"/>
         <enum value="0x040B" name="GL_AUX2" group="ReadBufferMode,DrawBufferMode"/>
@@ -7054,7 +7054,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glActiveStencilFaceEXT</name></proto>
-            <param group="StencilFaceDirection"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
             <glx type="render" opcode="4220"/>
         </command>
         <command>
@@ -10334,7 +10334,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glCullFace</name></proto>
-            <param group="CullFaceMode"><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="MaterialFace"><ptype>GLenum</ptype> <name>mode</name></param>
             <glx type="render" opcode="79"/>
         </command>
         <command>
@@ -23378,7 +23378,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glStencilFuncSeparate</name></proto>
-            <param group="StencilFaceDirection"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="StencilFunction"><ptype>GLenum</ptype> <name>func</name></param>
             <param group="StencilValue"><ptype>GLint</ptype> <name>ref</name></param>
             <param group="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
@@ -23397,7 +23397,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glStencilMaskSeparate</name></proto>
-            <param group="StencilFaceDirection"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
@@ -23409,14 +23409,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glStencilOpSeparate</name></proto>
-            <param group="StencilFaceDirection"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>sfail</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>dpfail</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>dppass</name></param>
         </command>
         <command>
             <proto>void <name>glStencilOpSeparateATI</name></proto>
-            <param group="StencilFaceDirection"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>sfail</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>dpfail</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>dppass</name></param>
@@ -23424,7 +23424,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glStencilOpValueAMD</name></proto>
-            <param group="StencilFaceDirection"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param><ptype>GLuint</ptype> <name>value</name></param>
         </command>
         <command>
