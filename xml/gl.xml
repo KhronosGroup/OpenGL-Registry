@@ -251,7 +251,7 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" group="FragmentShaderDestModMaskATI" type="bitmask">
-        <enum value="0x00000001" name="GL_2X_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
+        <enum value="0x00000001" name="GL_2X_BIT_ATI" group="FragmentShaderDestModMaskATI,FragmentShaderColorModMaskATI"/>
         <enum value="0x00000002" name="GL_4X_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
         <enum value="0x00000004" name="GL_8X_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
         <enum value="0x00000008" name="GL_HALF_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
@@ -486,7 +486,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0" name="GL_FALSE" group="SpecialNumbers,Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
         <enum value="0" name="GL_NO_ERROR" group="SpecialNumbers,GraphicsResetStatus,ErrorCode"/>
         <enum value="0" name="GL_ZERO" group="SpecialNumbers,TextureSwizzle,StencilOp,BlendingFactor"/>
-        <enum value="0" name="GL_NONE" group="SpecialNumbers,SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenMode,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
+        <enum value="0" name="GL_NONE" group="SpecialNumbers,FragmentShaderDestModMaskATI,FragmentShaderDestMaskATI,SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenModeSGIX,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
         <enum value="0" name="GL_NONE_OES" group="SpecialNumbers,ReadBufferMode,DrawBufferMode"/>
         <enum value="1" name="GL_TRUE" group="SpecialNumbers,Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
         <enum value="1" name="GL_ONE" group="SpecialNumbers,TextureSwizzle,BlendingFactor"/>
@@ -4150,7 +4150,7 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8920" end="0x897F" vendor="AMD">
-        <enum value="0x8920" name="GL_FRAGMENT_SHADER_ATI"/>
+        <enum value="0x8920" name="GL_FRAGMENT_SHADER_ATI" group="GetPName"/>
         <enum value="0x8921" name="GL_REG_0_ATI"/>
         <enum value="0x8922" name="GL_REG_1_ATI"/>
         <enum value="0x8923" name="GL_REG_2_ATI"/>
