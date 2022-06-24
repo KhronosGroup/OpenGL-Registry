@@ -7077,37 +7077,37 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glAlphaFragmentOp1ATI</name></proto>
             <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
             <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
             <param><ptype>GLuint</ptype> <name>arg1</name></param>
             <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
         </command>
         <command>
             <proto>void <name>glAlphaFragmentOp2ATI</name></proto>
             <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
             <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
             <param><ptype>GLuint</ptype> <name>arg1</name></param>
             <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
             <param><ptype>GLuint</ptype> <name>arg2</name></param>
             <param><ptype>GLuint</ptype> <name>arg2Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg2Mod</name></param>
         </command>
         <command>
             <proto>void <name>glAlphaFragmentOp3ATI</name></proto>
             <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
             <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
             <param><ptype>GLuint</ptype> <name>arg1</name></param>
             <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
             <param><ptype>GLuint</ptype> <name>arg2</name></param>
             <param><ptype>GLuint</ptype> <name>arg2Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg2Mod</name></param>
             <param><ptype>GLuint</ptype> <name>arg3</name></param>
             <param><ptype>GLuint</ptype> <name>arg3Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg3Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg3Mod</name></param>
         </command>
         <command>
             <proto>void <name>glAlphaFunc</name></proto>
@@ -8893,40 +8893,40 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glColorFragmentOp1ATI</name></proto>
             <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
             <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMask</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderDestMaskATI"><ptype>GLuint</ptype> <name>dstMask</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
             <param><ptype>GLuint</ptype> <name>arg1</name></param>
             <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
         </command>
         <command>
             <proto>void <name>glColorFragmentOp2ATI</name></proto>
             <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
             <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMask</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderDestMaskATI"><ptype>GLuint</ptype> <name>dstMask</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
             <param><ptype>GLuint</ptype> <name>arg1</name></param>
             <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
             <param><ptype>GLuint</ptype> <name>arg2</name></param>
             <param><ptype>GLuint</ptype> <name>arg2Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg2Mod</name></param>
         </command>
         <command>
             <proto>void <name>glColorFragmentOp3ATI</name></proto>
             <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
             <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMask</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderDestMaskATI"><ptype>GLuint</ptype> <name>dstMask</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
             <param><ptype>GLuint</ptype> <name>arg1</name></param>
             <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
             <param><ptype>GLuint</ptype> <name>arg2</name></param>
             <param><ptype>GLuint</ptype> <name>arg2Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg2Mod</name></param>
             <param><ptype>GLuint</ptype> <name>arg3</name></param>
             <param><ptype>GLuint</ptype> <name>arg3Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg3Mod</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg3Mod</name></param>
         </command>
         <command>
             <proto>void <name>glColorMask</name></proto>
