@@ -564,11 +564,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0401" name="GL_FRONT_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
         <enum value="0x0402" name="GL_BACK_LEFT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
         <enum value="0x0403" name="GL_BACK_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
-        <enum value="0x0404" name="GL_FRONT" group="ColorBuffer,DrawBufferMode,ReadBufferMode,MaterialFace"/>
-        <enum value="0x0405" name="GL_BACK" group="ColorBuffer,DrawBufferMode,ReadBufferMode,MaterialFace"/>
+        <enum value="0x0404" name="GL_FRONT" group="ColorBuffer,DrawBufferMode,ReadBufferMode,TriangleFace"/>
+        <enum value="0x0405" name="GL_BACK" group="ColorBuffer,DrawBufferMode,ReadBufferMode,TriangleFace"/>
         <enum value="0x0406" name="GL_LEFT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
         <enum value="0x0407" name="GL_RIGHT" group="ColorBuffer,DrawBufferMode,ReadBufferMode"/>
-        <enum value="0x0408" name="GL_FRONT_AND_BACK" group="ColorBuffer,DrawBufferMode,MaterialFace"/>
+        <enum value="0x0408" name="GL_FRONT_AND_BACK" group="ColorBuffer,DrawBufferMode,TriangleFace"/>
         <enum value="0x0409" name="GL_AUX0" group="ReadBufferMode,DrawBufferMode"/>
         <enum value="0x040A" name="GL_AUX1" group="ReadBufferMode,DrawBufferMode"/>
         <enum value="0x040B" name="GL_AUX2" group="ReadBufferMode,DrawBufferMode"/>
@@ -7054,7 +7054,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glActiveStencilFaceEXT</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <glx type="render" opcode="4220"/>
         </command>
         <command>
@@ -7509,7 +7509,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto><ptype>GLuint</ptype> <name>glBindMaterialParameterEXT</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>value</name></param>
         </command>
         <command>
@@ -8974,7 +8974,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glColorMaterial</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="ColorMaterialParameter"><ptype>GLenum</ptype> <name>mode</name></param>
             <glx type="render" opcode="78"/>
         </command>
@@ -10334,7 +10334,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glCullFace</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>mode</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>mode</name></param>
             <glx type="render" opcode="79"/>
         </command>
         <command>
@@ -12136,7 +12136,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glFragmentColorMaterialSGIX</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>mode</name></param>
         </command>
         <command>
@@ -12189,25 +12189,25 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glFragmentMaterialfSGIX</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentMaterialfvSGIX</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentMaterialiSGIX</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentMaterialivSGIX</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
         </command>
@@ -13508,13 +13508,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetFragmentMaterialfvSGIX</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetFragmentMaterialivSGIX</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
@@ -13914,33 +13914,33 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetMaterialfv</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="single" opcode="123"/>
         </command>
         <command>
             <proto>void <name>glGetMaterialiv</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="single" opcode="124"/>
         </command>
         <command>
             <proto>void <name>glGetMaterialxOES</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLfixed</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glGetMaterialxv</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfixed</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetMaterialxvOES</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfixed</ptype> *<name>params</name></param>
         </command>
@@ -16463,7 +16463,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glIndexMaterialEXT</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="IndexMaterialParameterEXT"><ptype>GLenum</ptype> <name>mode</name></param>
         </command>
         <command>
@@ -17501,53 +17501,53 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMaterialf</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
             <glx type="render" opcode="96"/>
         </command>
         <command>
             <proto>void <name>glMaterialfv</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="97"/>
         </command>
         <command>
             <proto>void <name>glMateriali</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
             <glx type="render" opcode="98"/>
         </command>
         <command>
             <proto>void <name>glMaterialiv</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="99"/>
         </command>
         <command>
             <proto>void <name>glMaterialx</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLfixed</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glMaterialxOES</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLfixed</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glMaterialxv</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLfixed</ptype> *<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glMaterialxvOES</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)">const <ptype>GLfixed</ptype> *<name>param</name></param>
         </command>
@@ -20219,13 +20219,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glPolygonMode</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="PolygonMode"><ptype>GLenum</ptype> <name>mode</name></param>
             <glx type="render" opcode="101"/>
         </command>
         <command>
             <proto>void <name>glPolygonModeNV</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="PolygonMode"><ptype>GLenum</ptype> <name>mode</name></param>
             <alias name="glPolygonMode"/>
         </command>
@@ -23378,7 +23378,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glStencilFuncSeparate</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="StencilFunction"><ptype>GLenum</ptype> <name>func</name></param>
             <param group="StencilValue"><ptype>GLint</ptype> <name>ref</name></param>
             <param group="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
@@ -23397,7 +23397,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glStencilMaskSeparate</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
@@ -23409,14 +23409,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glStencilOpSeparate</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>sfail</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>dpfail</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>dppass</name></param>
         </command>
         <command>
             <proto>void <name>glStencilOpSeparateATI</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>sfail</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>dpfail</name></param>
             <param group="StencilOp"><ptype>GLenum</ptype> <name>dppass</name></param>
@@ -23424,7 +23424,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glStencilOpValueAMD</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param><ptype>GLuint</ptype> <name>value</name></param>
         </command>
         <command>
@@ -25031,7 +25031,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTextureMaterialEXT</name></proto>
-            <param group="MaterialFace"><ptype>GLenum</ptype> <name>face</name></param>
+            <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>mode</name></param>
         </command>
         <command>
