@@ -1760,8 +1760,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8184" name="GL_PIXEL_TEX_GEN_Q_CEILING_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
         <enum value="0x8185" name="GL_PIXEL_TEX_GEN_Q_ROUND_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
         <enum value="0x8186" name="GL_PIXEL_TEX_GEN_Q_FLOOR_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
-        <enum value="0x8187" name="GL_PIXEL_TEX_GEN_ALPHA_REPLACE_SGIX" group="PixelTexGenMode"/>
-        <enum value="0x8188" name="GL_PIXEL_TEX_GEN_ALPHA_NO_REPLACE_SGIX" group="PixelTexGenMode"/>
+            <unused start="0x8187" end="0x8188" comment="Reserved but unused for PixelTexGenModeSGIX"/>
         <enum value="0x8189" name="GL_PIXEL_TEX_GEN_ALPHA_LS_SGIX" group="PixelTexGenMode,PixelTexGenModeSGIX"/>
         <enum value="0x818A" name="GL_PIXEL_TEX_GEN_ALPHA_MS_SGIX" group="PixelTexGenMode,PixelTexGenModeSGIX"/>
         <enum value="0x818B" name="GL_FRAMEZOOM_SGIX" group="GetPName,EnableCap"/>
