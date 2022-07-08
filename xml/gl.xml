@@ -1760,8 +1760,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8184" name="GL_PIXEL_TEX_GEN_Q_CEILING_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
         <enum value="0x8185" name="GL_PIXEL_TEX_GEN_Q_ROUND_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
         <enum value="0x8186" name="GL_PIXEL_TEX_GEN_Q_FLOOR_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
-        <enum value="0x8187" name="GL_PIXEL_TEX_GEN_ALPHA_REPLACE_SGIX"/>
-        <enum value="0x8188" name="GL_PIXEL_TEX_GEN_ALPHA_NO_REPLACE_SGIX"/>
+            <unused start="0x8187" end="0x8188" comment="Reserved but unused for PixelTexGenModeSGIX"/>
         <enum value="0x8189" name="GL_PIXEL_TEX_GEN_ALPHA_LS_SGIX" group="PixelTexGenModeSGIX"/>
         <enum value="0x818A" name="GL_PIXEL_TEX_GEN_ALPHA_MS_SGIX" group="PixelTexGenModeSGIX"/>
         <enum value="0x818B" name="GL_FRAMEZOOM_SGIX" group="GetPName,EnableCap"/>
@@ -2557,11 +2556,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8450" name="GL_FOG_COORDINATE_SOURCE"/>
         <enum value="0x8450" name="GL_FOG_COORDINATE_SOURCE_EXT"/>
         <enum value="0x8450" name="GL_FOG_COORD_SRC" alias="GL_FOG_COORDINATE_SOURCE" group="FogPName"/>
-        <enum value="0x8451" name="GL_FOG_COORDINATE"/>
-        <enum value="0x8451" name="GL_FOG_COORD" alias="GL_FOG_COORDINATE"/>
-        <enum value="0x8451" name="GL_FOG_COORDINATE_EXT"/>
-        <enum value="0x8452" name="GL_FRAGMENT_DEPTH"/>
-        <enum value="0x8452" name="GL_FRAGMENT_DEPTH_EXT" group="LightTextureModeEXT"/>
+        <enum value="0x8451" name="GL_FOG_COORDINATE" group="FogCoordSrc"/>
+        <enum value="0x8451" name="GL_FOG_COORDINATE_EXT" group="FogCoordSrc"/>
+        <enum value="0x8451" name="GL_FOG_COORD" group="FogCoordSrc" alias="GL_FOG_COORDINATE"/>
+        <enum value="0x8452" name="GL_FRAGMENT_DEPTH" group="FogCoordSrc,LightTextureModeEXT"/>
+        <enum value="0x8452" name="GL_FRAGMENT_DEPTH_EXT" group="FogCoordSrc,LightTextureModeEXT"/>
         <enum value="0x8453" name="GL_CURRENT_FOG_COORDINATE"/>
         <enum value="0x8453" name="GL_CURRENT_FOG_COORD" alias="GL_CURRENT_FOG_COORDINATE"/>
         <enum value="0x8453" name="GL_CURRENT_FOG_COORDINATE_EXT"/>
