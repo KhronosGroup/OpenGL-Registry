@@ -267,15 +267,15 @@ typedef unsigned int GLhandleARB;
         <enum value="0x00000008" name="GL_BIAS_BIT_ATI" group="FragmentShaderColorModMaskATI"/>
     </enums>
 
-    <enums namespace="GL" group="TraceMaskMESA" type="bitmask">
-        <enum value="0x0001" name="GL_TRACE_OPERATIONS_BIT_MESA"/>
-        <enum value="0x0002" name="GL_TRACE_PRIMITIVES_BIT_MESA"/>
-        <enum value="0x0004" name="GL_TRACE_ARRAYS_BIT_MESA"/>
-        <enum value="0x0008" name="GL_TRACE_TEXTURES_BIT_MESA"/>
-        <enum value="0x0010" name="GL_TRACE_PIXELS_BIT_MESA"/>
-        <enum value="0x0020" name="GL_TRACE_ERRORS_BIT_MESA"/>
-        <enum value="0xFFFF" name="GL_TRACE_ALL_BITS_MESA"/>
-    </enums>
+	<enums namespace="GL" group="TraceMaskMESA" type="bitmask">
+		<enum value="0x0001" name="GL_TRACE_OPERATIONS_BIT_MESA" group="TraceMaskMESA"/>
+		<enum value="0x0002" name="GL_TRACE_PRIMITIVES_BIT_MESA" group="TraceMaskMESA"/>
+		<enum value="0x0004" name="GL_TRACE_ARRAYS_BIT_MESA" group="TraceMaskMESA"/>
+		<enum value="0x0008" name="GL_TRACE_TEXTURES_BIT_MESA" group="TraceMaskMESA"/>
+		<enum value="0x0010" name="GL_TRACE_PIXELS_BIT_MESA" group="TraceMaskMESA"/>
+		<enum value="0x0020" name="GL_TRACE_ERRORS_BIT_MESA" group="TraceMaskMESA"/>
+		<enum value="0xFFFF" name="GL_TRACE_ALL_BITS_MESA" group="TraceMaskMESA"/>
+	</enums>
 
     <enums namespace="GL" group="PathRenderingMaskNV" type="bitmask">
         <enum value="0x01" name="GL_BOLD_BIT_NV" group="PathFontStyle"/>
