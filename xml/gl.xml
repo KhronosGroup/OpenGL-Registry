@@ -13314,7 +13314,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>count</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="count"><ptype>GLenum</ptype> *<name>categories</name></param>
-            <param len="count" group="DebugSeverity"><ptype>GLuint</ptype> *<name>severities</name></param>
+            <param len="count" group="DebugSeverity"><ptype>GLenum</ptype> *<name>severities</name></param>
             <param len="count"><ptype>GLuint</ptype> *<name>ids</name></param>
             <param len="count"><ptype>GLsizei</ptype> *<name>lengths</name></param>
             <param len="bufSize"><ptype>GLchar</ptype> *<name>message</name></param>
