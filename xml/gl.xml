@@ -5112,8 +5112,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8DAA" name="GL_LAYER_NV"/>
         <enum value="0x8DAB" name="GL_DEPTH_COMPONENT32F_NV" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8DAC" name="GL_DEPTH32F_STENCIL8_NV" group="InternalFormat,SizedInternalFormat"/>
-        <enum value="0x8DAD" name="GL_FLOAT_32_UNSIGNED_INT_24_8_REV"/>
-        <enum value="0x8DAD" name="GL_FLOAT_32_UNSIGNED_INT_24_8_REV_NV"/>
+        <enum value="0x8DAD" name="GL_FLOAT_32_UNSIGNED_INT_24_8_REV" group="PixelType"/>
+        <enum value="0x8DAD" name="GL_FLOAT_32_UNSIGNED_INT_24_8_REV_NV" group="PixelType"/>
         <enum value="0x8DAE" name="GL_SHADER_INCLUDE_ARB"/>
         <enum value="0x8DAF" name="GL_DEPTH_BUFFER_FLOAT_MODE_NV"/>
             <unused start="0x8DB0" end="0x8DB8" vendor="NV"/>
