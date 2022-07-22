@@ -252,6 +252,19 @@ Additions to Chapter 6 of the OpenGL 4.5 Specification (Memory Objects)
         handle types defined as NT handles, the application must release the
         handle using an appropriate system call when it is no longer needed.
 
+Additions to Chapter 21 of the OpenGL 4.5 Specification (Special Functions)
+
+    Add the following to section 21.4.1, Commands Not Usable in Display
+    Lists.
+
+    Under the "Memory Objects" section:
+
+        ImportMemoryWin32HandleEXT, ImportMemoryWin32NameEXT
+
+    Under the "GL command stream management" section:
+
+        ImportSemaphoreWin32HandleEXT, ImportSemaphoreWin32NameEXT
+
 Issues
 
     1) What should the type of the <name> parameter be in the functions
@@ -268,6 +281,10 @@ Issues
        prototype and define its type through spec language.
 
 Revision History
+
+    Revision 9, 2022-07-15 (James Jones)
+        - Added commands to the list of commands not permitted in display
+          lists.
 
     Revision 8, 2017-06-02 (James Jones)
         - Added extension numbers.

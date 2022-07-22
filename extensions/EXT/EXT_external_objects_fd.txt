@@ -130,6 +130,19 @@ Additions to Chapter 6 of the OpenGL 4.5 Specification (Memory Objects)
         <fd> in the application after an import results in undefined
         behavior.
 
+Additions to Chapter 21 of the OpenGL 4.5 Specification (Special Functions)
+
+    Add the following to section 21.4.1, Commands Not Usable in Display
+    Lists.
+
+    Under the "Memory Objects" section:
+
+        ImportMemoryFdEXT
+
+    Under the "GL command stream management" section:
+
+        ImportSemaphoreFdEXT
+
 Issues
 
     1)  Does this extension need to support importing Android/Linux
@@ -140,6 +153,10 @@ Issues
         contexts is not compelling enough to justify the additional effort.
 
 Revision History
+
+    Revision 8, 2022-07-15 (James Jones)
+        - Added commands to the list of commands not permitted in display
+          lists.
 
     Revision 7, 2017-06-02 (James Jones)
         - Added extension numbers.
