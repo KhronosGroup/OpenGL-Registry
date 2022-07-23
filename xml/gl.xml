@@ -267,15 +267,15 @@ typedef unsigned int GLhandleARB;
         <enum value="0x00000008" name="GL_BIAS_BIT_ATI" group="FragmentShaderColorModMaskATI"/>
     </enums>
 
-	<enums namespace="GL" group="TraceMaskMESA" type="bitmask">
-		<enum value="0x0001" name="GL_TRACE_OPERATIONS_BIT_MESA" group="TraceMaskMESA"/>
-		<enum value="0x0002" name="GL_TRACE_PRIMITIVES_BIT_MESA" group="TraceMaskMESA"/>
-		<enum value="0x0004" name="GL_TRACE_ARRAYS_BIT_MESA" group="TraceMaskMESA"/>
-		<enum value="0x0008" name="GL_TRACE_TEXTURES_BIT_MESA" group="TraceMaskMESA"/>
-		<enum value="0x0010" name="GL_TRACE_PIXELS_BIT_MESA" group="TraceMaskMESA"/>
-		<enum value="0x0020" name="GL_TRACE_ERRORS_BIT_MESA" group="TraceMaskMESA"/>
-		<enum value="0xFFFF" name="GL_TRACE_ALL_BITS_MESA" group="TraceMaskMESA"/>
-	</enums>
+    <enums namespace="GL" group="TraceMaskMESA" type="bitmask">
+        <enum value="0x0001" name="GL_TRACE_OPERATIONS_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0x0002" name="GL_TRACE_PRIMITIVES_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0x0004" name="GL_TRACE_ARRAYS_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0x0008" name="GL_TRACE_TEXTURES_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0x0010" name="GL_TRACE_PIXELS_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0x0020" name="GL_TRACE_ERRORS_BIT_MESA" group="TraceMaskMESA"/>
+        <enum value="0xFFFF" name="GL_TRACE_ALL_BITS_MESA" group="TraceMaskMESA"/>
+    </enums>
 
     <enums namespace="GL" group="PathRenderingMaskNV" type="bitmask">
         <enum value="0x01" name="GL_BOLD_BIT_NV" group="PathFontStyle"/>
@@ -994,8 +994,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x1906" name="GL_ALPHA" group="PixelTexGenModeSGIX,FragmentShaderValueRepATI,TextureSwizzle,CombinerPortionNV,PathColorFormat,CombinerComponentUsageNV,PixelFormat"/>
         <enum value="0x1907" name="GL_RGB" group="PixelTexGenModeSGIX,CombinerPortionNV,PathColorFormat,CombinerComponentUsageNV,PixelFormat,InternalFormat"/>
         <enum value="0x1908" name="GL_RGBA" group="PixelTexGenModeSGIX,PathColorFormat,PixelFormat,InternalFormat"/>
-        <enum value="0x1909" name="GL_LUMINANCE" group="PixelTexGenMode,PathColorFormat,PixelFormat"/>
-        <enum value="0x190A" name="GL_LUMINANCE_ALPHA" group="PixelTexGenMode,PathColorFormat,PixelFormat"/>
+        <enum value="0x1909" name="GL_LUMINANCE" group="PathColorFormat,PixelFormat"/>
+        <enum value="0x190A" name="GL_LUMINANCE_ALPHA" group="PathColorFormat,PixelFormat"/>
             <unused start="0x1910" end="0x19FF" comment="Unused for PixelFormat"/>
         <enum value="0x1A00" name="GL_BITMAP" group="PixelType"/>
             <unused start="0x1A01" end="0x1AFF" comment="Unused for PixelType"/>
