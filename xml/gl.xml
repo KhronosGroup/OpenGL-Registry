@@ -251,7 +251,7 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" group="FragmentShaderDestModMaskATI" type="bitmask">
-        <enum value="0x00000001" name="GL_2X_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
+        <enum value="0x00000001" name="GL_2X_BIT_ATI" group="FragmentShaderDestModMaskATI,FragmentShaderColorModMaskATI"/>
         <enum value="0x00000002" name="GL_4X_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
         <enum value="0x00000004" name="GL_8X_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
         <enum value="0x00000008" name="GL_HALF_BIT_ATI" group="FragmentShaderDestModMaskATI"/>
@@ -485,11 +485,11 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" group="SpecialNumbers" vendor="ARB" comment="Tokens whose numeric value is intrinsically meaningful">
         <enum value="0" name="GL_FALSE" group="SpecialNumbers,Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
         <enum value="0" name="GL_NO_ERROR" group="SpecialNumbers,GraphicsResetStatus,ErrorCode"/>
-        <enum value="0" name="GL_ZERO" group="SpecialNumbers,TextureSwizzle,StencilOp,BlendingFactor"/>
-        <enum value="0" name="GL_NONE" group="SpecialNumbers,SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenModeSGIX,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
+        <enum value="0" name="GL_ZERO" group="SpecialNumbers,TextureSwizzle,StencilOp,BlendingFactor,FragmentShaderGenericSourceATI"/>
+        <enum value="0" name="GL_NONE" group="SpecialNumbers,FragmentShaderValueRepATI,FragmentShaderDestModMaskATI,FragmentShaderDestMaskATI,SyncBehaviorFlags,TextureCompareMode,PathColorFormat,CombinerBiasNV,CombinerScaleNV,DrawBufferMode,PixelTexGenModeSGIX,ReadBufferMode,ColorBuffer,PathGenMode,PathTransformType,PathFontStyle"/>
         <enum value="0" name="GL_NONE_OES" group="SpecialNumbers,ReadBufferMode,DrawBufferMode"/>
         <enum value="1" name="GL_TRUE" group="SpecialNumbers,Boolean,VertexShaderWriteMaskEXT,ClampColorModeARB"/>
-        <enum value="1" name="GL_ONE" group="SpecialNumbers,TextureSwizzle,BlendingFactor"/>
+        <enum value="1" name="GL_ONE" group="SpecialNumbers,TextureSwizzle,BlendingFactor,FragmentShaderGenericSourceATI"/>
         <enum value="0xFFFFFFFF" name="GL_INVALID_INDEX" type="u" comment="Tagged as uint" group="SpecialNumbers"/>
         <enum value="0xFFFFFFFF" name="GL_ALL_PIXELS_AMD" group="SpecialNumbers"/>
         <enum value="0xFFFFFFFFFFFFFFFF" name="GL_TIMEOUT_IGNORED" type="ull" comment="Tagged as uint64" group="SpecialNumbers"/>
@@ -984,18 +984,18 @@ typedef unsigned int GLhandleARB;
         <enum value="0x1901" name="GL_STENCIL_INDEX" group="InternalFormat,PixelFormat,DepthStencilTextureMode"/>
         <enum value="0x1901" name="GL_STENCIL_INDEX_OES" group="InternalFormat"/>
         <enum value="0x1902" name="GL_DEPTH_COMPONENT" group="InternalFormat,PixelFormat,DepthStencilTextureMode"/>
-        <enum value="0x1903" name="GL_RED" group="TextureSwizzle,PixelFormat,InternalFormat"/>
+        <enum value="0x1903" name="GL_RED" group="FragmentShaderValueRepATI,TextureSwizzle,PixelFormat,InternalFormat"/>
         <enum value="0x1903" name="GL_RED_EXT" group="InternalFormat,PixelFormat"/>
         <enum value="0x1903" name="GL_RED_NV"/>
-        <enum value="0x1904" name="GL_GREEN" group="TextureSwizzle,PixelFormat"/>
+        <enum value="0x1904" name="GL_GREEN" group="FragmentShaderValueRepATI,TextureSwizzle,PixelFormat"/>
         <enum value="0x1904" name="GL_GREEN_NV"/>
-        <enum value="0x1905" name="GL_BLUE" group="TextureSwizzle,CombinerComponentUsageNV,PixelFormat"/>
+        <enum value="0x1905" name="GL_BLUE" group="FragmentShaderValueRepATI,TextureSwizzle,CombinerComponentUsageNV,PixelFormat"/>
         <enum value="0x1905" name="GL_BLUE_NV"/>
-        <enum value="0x1906" name="GL_ALPHA" group="PixelTexGenModeSGIX,TextureSwizzle,CombinerPortionNV,PathColorFormat,CombinerComponentUsageNV,PixelFormat"/>
+        <enum value="0x1906" name="GL_ALPHA" group="PixelTexGenModeSGIX,FragmentShaderValueRepATI,TextureSwizzle,CombinerPortionNV,PathColorFormat,CombinerComponentUsageNV,PixelFormat"/>
         <enum value="0x1907" name="GL_RGB" group="PixelTexGenModeSGIX,CombinerPortionNV,PathColorFormat,CombinerComponentUsageNV,PixelFormat,InternalFormat"/>
         <enum value="0x1908" name="GL_RGBA" group="PixelTexGenModeSGIX,PathColorFormat,PixelFormat,InternalFormat"/>
-        <enum value="0x1909" name="GL_LUMINANCE" group="PathColorFormat,PixelFormat"/>
-        <enum value="0x190A" name="GL_LUMINANCE_ALPHA" group="PathColorFormat,PixelFormat"/>
+        <enum value="0x1909" name="GL_LUMINANCE" group="PixelTexGenMode,PathColorFormat,PixelFormat"/>
+        <enum value="0x190A" name="GL_LUMINANCE_ALPHA" group="PixelTexGenMode,PathColorFormat,PixelFormat"/>
             <unused start="0x1910" end="0x19FF" comment="Unused for PixelFormat"/>
         <enum value="0x1A00" name="GL_BITMAP" group="PixelType"/>
             <unused start="0x1A01" end="0x1AFF" comment="Unused for PixelType"/>
@@ -2626,69 +2626,69 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x84C0" end="0x84EF" vendor="ARB">
-        <enum value="0x84C0" name="GL_TEXTURE0" group="TextureUnit"/>
+        <enum value="0x84C0" name="GL_TEXTURE0" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84C0" name="GL_TEXTURE0_ARB" group="CombinerRegisterNV"/>
-        <enum value="0x84C1" name="GL_TEXTURE1" group="TextureUnit"/>
+        <enum value="0x84C1" name="GL_TEXTURE1" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84C1" name="GL_TEXTURE1_ARB" group="CombinerRegisterNV"/>
-        <enum value="0x84C2" name="GL_TEXTURE2" group="TextureUnit"/>
+        <enum value="0x84C2" name="GL_TEXTURE2" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84C2" name="GL_TEXTURE2_ARB"/>
-        <enum value="0x84C3" name="GL_TEXTURE3" group="TextureUnit"/>
+        <enum value="0x84C3" name="GL_TEXTURE3" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84C3" name="GL_TEXTURE3_ARB"/>
-        <enum value="0x84C4" name="GL_TEXTURE4" group="TextureUnit"/>
+        <enum value="0x84C4" name="GL_TEXTURE4" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84C4" name="GL_TEXTURE4_ARB"/>
-        <enum value="0x84C5" name="GL_TEXTURE5" group="TextureUnit"/>
+        <enum value="0x84C5" name="GL_TEXTURE5" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84C5" name="GL_TEXTURE5_ARB"/>
-        <enum value="0x84C6" name="GL_TEXTURE6" group="TextureUnit"/>
+        <enum value="0x84C6" name="GL_TEXTURE6" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84C6" name="GL_TEXTURE6_ARB"/>
-        <enum value="0x84C7" name="GL_TEXTURE7" group="TextureUnit"/>
+        <enum value="0x84C7" name="GL_TEXTURE7" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84C7" name="GL_TEXTURE7_ARB"/>
-        <enum value="0x84C8" name="GL_TEXTURE8" group="TextureUnit"/>
+        <enum value="0x84C8" name="GL_TEXTURE8" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84C8" name="GL_TEXTURE8_ARB"/>
-        <enum value="0x84C9" name="GL_TEXTURE9" group="TextureUnit"/>
+        <enum value="0x84C9" name="GL_TEXTURE9" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84C9" name="GL_TEXTURE9_ARB"/>
-        <enum value="0x84CA" name="GL_TEXTURE10" group="TextureUnit"/>
+        <enum value="0x84CA" name="GL_TEXTURE10" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84CA" name="GL_TEXTURE10_ARB"/>
-        <enum value="0x84CB" name="GL_TEXTURE11" group="TextureUnit"/>
+        <enum value="0x84CB" name="GL_TEXTURE11" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84CB" name="GL_TEXTURE11_ARB"/>
-        <enum value="0x84CC" name="GL_TEXTURE12" group="TextureUnit"/>
+        <enum value="0x84CC" name="GL_TEXTURE12" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84CC" name="GL_TEXTURE12_ARB"/>
-        <enum value="0x84CD" name="GL_TEXTURE13" group="TextureUnit"/>
+        <enum value="0x84CD" name="GL_TEXTURE13" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84CD" name="GL_TEXTURE13_ARB"/>
-        <enum value="0x84CE" name="GL_TEXTURE14" group="TextureUnit"/>
+        <enum value="0x84CE" name="GL_TEXTURE14" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84CE" name="GL_TEXTURE14_ARB"/>
-        <enum value="0x84CF" name="GL_TEXTURE15" group="TextureUnit"/>
+        <enum value="0x84CF" name="GL_TEXTURE15" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84CF" name="GL_TEXTURE15_ARB"/>
-        <enum value="0x84D0" name="GL_TEXTURE16" group="TextureUnit"/>
+        <enum value="0x84D0" name="GL_TEXTURE16" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84D0" name="GL_TEXTURE16_ARB"/>
-        <enum value="0x84D1" name="GL_TEXTURE17" group="TextureUnit"/>
+        <enum value="0x84D1" name="GL_TEXTURE17" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84D1" name="GL_TEXTURE17_ARB"/>
-        <enum value="0x84D2" name="GL_TEXTURE18" group="TextureUnit"/>
+        <enum value="0x84D2" name="GL_TEXTURE18" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84D2" name="GL_TEXTURE18_ARB"/>
-        <enum value="0x84D3" name="GL_TEXTURE19" group="TextureUnit"/>
+        <enum value="0x84D3" name="GL_TEXTURE19" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84D3" name="GL_TEXTURE19_ARB"/>
-        <enum value="0x84D4" name="GL_TEXTURE20" group="TextureUnit"/>
+        <enum value="0x84D4" name="GL_TEXTURE20" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84D4" name="GL_TEXTURE20_ARB"/>
-        <enum value="0x84D5" name="GL_TEXTURE21" group="TextureUnit"/>
+        <enum value="0x84D5" name="GL_TEXTURE21" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84D5" name="GL_TEXTURE21_ARB"/>
-        <enum value="0x84D6" name="GL_TEXTURE22" group="TextureUnit"/>
+        <enum value="0x84D6" name="GL_TEXTURE22" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84D6" name="GL_TEXTURE22_ARB"/>
-        <enum value="0x84D7" name="GL_TEXTURE23" group="TextureUnit"/>
+        <enum value="0x84D7" name="GL_TEXTURE23" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84D7" name="GL_TEXTURE23_ARB"/>
-        <enum value="0x84D8" name="GL_TEXTURE24" group="TextureUnit"/>
+        <enum value="0x84D8" name="GL_TEXTURE24" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84D8" name="GL_TEXTURE24_ARB"/>
-        <enum value="0x84D9" name="GL_TEXTURE25" group="TextureUnit"/>
+        <enum value="0x84D9" name="GL_TEXTURE25" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84D9" name="GL_TEXTURE25_ARB"/>
-        <enum value="0x84DA" name="GL_TEXTURE26" group="TextureUnit"/>
+        <enum value="0x84DA" name="GL_TEXTURE26" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84DA" name="GL_TEXTURE26_ARB"/>
-        <enum value="0x84DB" name="GL_TEXTURE27" group="TextureUnit"/>
+        <enum value="0x84DB" name="GL_TEXTURE27" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84DB" name="GL_TEXTURE27_ARB"/>
-        <enum value="0x84DC" name="GL_TEXTURE28" group="TextureUnit"/>
+        <enum value="0x84DC" name="GL_TEXTURE28" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84DC" name="GL_TEXTURE28_ARB"/>
-        <enum value="0x84DD" name="GL_TEXTURE29" group="TextureUnit"/>
+        <enum value="0x84DD" name="GL_TEXTURE29" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84DD" name="GL_TEXTURE29_ARB"/>
-        <enum value="0x84DE" name="GL_TEXTURE30" group="TextureUnit"/>
+        <enum value="0x84DE" name="GL_TEXTURE30" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84DE" name="GL_TEXTURE30_ARB"/>
-        <enum value="0x84DF" name="GL_TEXTURE31" group="TextureUnit"/>
+        <enum value="0x84DF" name="GL_TEXTURE31" group="TextureUnit,FragmentShaderTextureSourceATI"/>
         <enum value="0x84DF" name="GL_TEXTURE31_ARB"/>
         <enum value="0x84E0" name="GL_ACTIVE_TEXTURE" group="GetPName"/>
         <enum value="0x84E0" name="GL_ACTIVE_TEXTURE_ARB"/>
@@ -2942,9 +2942,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8576" name="GL_CONSTANT_ARB" group="TextureEnvParameter"/>
         <enum value="0x8576" name="GL_CONSTANT_EXT" group="TextureEnvParameter"/>
         <enum value="0x8576" name="GL_CONSTANT_NV" group="TextureEnvParameter"/>
-        <enum value="0x8577" name="GL_PRIMARY_COLOR" group="TextureEnvParameter,PathColor"/>
-        <enum value="0x8577" name="GL_PRIMARY_COLOR_ARB" group="TextureEnvParameter"/>
-        <enum value="0x8577" name="GL_PRIMARY_COLOR_EXT" group="TextureEnvParameter"/>
+        <enum value="0x8577" name="GL_PRIMARY_COLOR" group="TextureEnvParameter,PathColor,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8577" name="GL_PRIMARY_COLOR_ARB" group="TextureEnvParameter,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8577" name="GL_PRIMARY_COLOR_EXT" group="TextureEnvParameter,FragmentShaderGenericSourceATI"/>
         <enum value="0x8578" name="GL_PREVIOUS" group="TextureEnvParameter"/>
         <enum value="0x8578" name="GL_PREVIOUS_ARB" group="TextureEnvParameter"/>
         <enum value="0x8578" name="GL_PREVIOUS_EXT" group="TextureEnvParameter"/>
@@ -4149,83 +4149,83 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8920" end="0x897F" vendor="AMD">
-        <enum value="0x8920" name="GL_FRAGMENT_SHADER_ATI"/>
-        <enum value="0x8921" name="GL_REG_0_ATI"/>
-        <enum value="0x8922" name="GL_REG_1_ATI"/>
-        <enum value="0x8923" name="GL_REG_2_ATI"/>
-        <enum value="0x8924" name="GL_REG_3_ATI"/>
-        <enum value="0x8925" name="GL_REG_4_ATI"/>
-        <enum value="0x8926" name="GL_REG_5_ATI"/>
-        <enum value="0x8927" name="GL_REG_6_ATI"/>
-        <enum value="0x8928" name="GL_REG_7_ATI"/>
-        <enum value="0x8929" name="GL_REG_8_ATI"/>
-        <enum value="0x892A" name="GL_REG_9_ATI"/>
-        <enum value="0x892B" name="GL_REG_10_ATI"/>
-        <enum value="0x892C" name="GL_REG_11_ATI"/>
-        <enum value="0x892D" name="GL_REG_12_ATI"/>
-        <enum value="0x892E" name="GL_REG_13_ATI"/>
-        <enum value="0x892F" name="GL_REG_14_ATI"/>
-        <enum value="0x8930" name="GL_REG_15_ATI"/>
-        <enum value="0x8931" name="GL_REG_16_ATI"/>
-        <enum value="0x8932" name="GL_REG_17_ATI"/>
-        <enum value="0x8933" name="GL_REG_18_ATI"/>
-        <enum value="0x8934" name="GL_REG_19_ATI"/>
-        <enum value="0x8935" name="GL_REG_20_ATI"/>
-        <enum value="0x8936" name="GL_REG_21_ATI"/>
-        <enum value="0x8937" name="GL_REG_22_ATI"/>
-        <enum value="0x8938" name="GL_REG_23_ATI"/>
-        <enum value="0x8939" name="GL_REG_24_ATI"/>
-        <enum value="0x893A" name="GL_REG_25_ATI"/>
-        <enum value="0x893B" name="GL_REG_26_ATI"/>
-        <enum value="0x893C" name="GL_REG_27_ATI"/>
-        <enum value="0x893D" name="GL_REG_28_ATI"/>
-        <enum value="0x893E" name="GL_REG_29_ATI"/>
-        <enum value="0x893F" name="GL_REG_30_ATI"/>
-        <enum value="0x8940" name="GL_REG_31_ATI"/>
-        <enum value="0x8941" name="GL_CON_0_ATI"/>
-        <enum value="0x8942" name="GL_CON_1_ATI"/>
-        <enum value="0x8943" name="GL_CON_2_ATI"/>
-        <enum value="0x8944" name="GL_CON_3_ATI"/>
-        <enum value="0x8945" name="GL_CON_4_ATI"/>
-        <enum value="0x8946" name="GL_CON_5_ATI"/>
-        <enum value="0x8947" name="GL_CON_6_ATI"/>
-        <enum value="0x8948" name="GL_CON_7_ATI"/>
-        <enum value="0x8949" name="GL_CON_8_ATI"/>
-        <enum value="0x894A" name="GL_CON_9_ATI"/>
-        <enum value="0x894B" name="GL_CON_10_ATI"/>
-        <enum value="0x894C" name="GL_CON_11_ATI"/>
-        <enum value="0x894D" name="GL_CON_12_ATI"/>
-        <enum value="0x894E" name="GL_CON_13_ATI"/>
-        <enum value="0x894F" name="GL_CON_14_ATI"/>
-        <enum value="0x8950" name="GL_CON_15_ATI"/>
-        <enum value="0x8951" name="GL_CON_16_ATI"/>
-        <enum value="0x8952" name="GL_CON_17_ATI"/>
-        <enum value="0x8953" name="GL_CON_18_ATI"/>
-        <enum value="0x8954" name="GL_CON_19_ATI"/>
-        <enum value="0x8955" name="GL_CON_20_ATI"/>
-        <enum value="0x8956" name="GL_CON_21_ATI"/>
-        <enum value="0x8957" name="GL_CON_22_ATI"/>
-        <enum value="0x8958" name="GL_CON_23_ATI"/>
-        <enum value="0x8959" name="GL_CON_24_ATI"/>
-        <enum value="0x895A" name="GL_CON_25_ATI"/>
-        <enum value="0x895B" name="GL_CON_26_ATI"/>
-        <enum value="0x895C" name="GL_CON_27_ATI"/>
-        <enum value="0x895D" name="GL_CON_28_ATI"/>
-        <enum value="0x895E" name="GL_CON_29_ATI"/>
-        <enum value="0x895F" name="GL_CON_30_ATI"/>
-        <enum value="0x8960" name="GL_CON_31_ATI"/>
-        <enum value="0x8961" name="GL_MOV_ATI" group="FragmentOpATI"/>
-        <enum value="0x8963" name="GL_ADD_ATI" group="FragmentOpATI"/>
-        <enum value="0x8964" name="GL_MUL_ATI" group="FragmentOpATI"/>
-        <enum value="0x8965" name="GL_SUB_ATI" group="FragmentOpATI"/>
-        <enum value="0x8966" name="GL_DOT3_ATI" group="FragmentOpATI"/>
-        <enum value="0x8967" name="GL_DOT4_ATI" group="FragmentOpATI"/>
-        <enum value="0x8968" name="GL_MAD_ATI" group="FragmentOpATI"/>
-        <enum value="0x8969" name="GL_LERP_ATI" group="FragmentOpATI"/>
-        <enum value="0x896A" name="GL_CND_ATI" group="FragmentOpATI"/>
-        <enum value="0x896B" name="GL_CND0_ATI" group="FragmentOpATI"/>
-        <enum value="0x896C" name="GL_DOT2_ADD_ATI" group="FragmentOpATI"/>
-        <enum value="0x896D" name="GL_SECONDARY_INTERPOLATOR_ATI"/>
+        <enum value="0x8920" name="GL_FRAGMENT_SHADER_ATI" group="GetPName"/>
+        <enum value="0x8921" name="GL_REG_0_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8922" name="GL_REG_1_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8923" name="GL_REG_2_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8924" name="GL_REG_3_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8925" name="GL_REG_4_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8926" name="GL_REG_5_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8927" name="GL_REG_6_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8928" name="GL_REG_7_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8929" name="GL_REG_8_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x892A" name="GL_REG_9_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x892B" name="GL_REG_10_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x892C" name="GL_REG_11_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x892D" name="GL_REG_12_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x892E" name="GL_REG_13_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x892F" name="GL_REG_14_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8930" name="GL_REG_15_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8931" name="GL_REG_16_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8932" name="GL_REG_17_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8933" name="GL_REG_18_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8934" name="GL_REG_19_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8935" name="GL_REG_20_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8936" name="GL_REG_21_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8937" name="GL_REG_22_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8938" name="GL_REG_23_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8939" name="GL_REG_24_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x893A" name="GL_REG_25_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x893B" name="GL_REG_26_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x893C" name="GL_REG_27_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x893D" name="GL_REG_28_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x893E" name="GL_REG_29_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x893F" name="GL_REG_30_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8940" name="GL_REG_31_ATI" group="FragmentShaderRegATI,FragmentShaderTextureSourceATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8941" name="GL_CON_0_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8942" name="GL_CON_1_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8943" name="GL_CON_2_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8944" name="GL_CON_3_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8945" name="GL_CON_4_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8946" name="GL_CON_5_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8947" name="GL_CON_6_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8948" name="GL_CON_7_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8949" name="GL_CON_8_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x894A" name="GL_CON_9_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x894B" name="GL_CON_10_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x894C" name="GL_CON_11_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x894D" name="GL_CON_12_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x894E" name="GL_CON_13_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x894F" name="GL_CON_14_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8950" name="GL_CON_15_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8951" name="GL_CON_16_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8952" name="GL_CON_17_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8953" name="GL_CON_18_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8954" name="GL_CON_19_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8955" name="GL_CON_20_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8956" name="GL_CON_21_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8957" name="GL_CON_22_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8958" name="GL_CON_23_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8959" name="GL_CON_24_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x895A" name="GL_CON_25_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x895B" name="GL_CON_26_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x895C" name="GL_CON_27_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x895D" name="GL_CON_28_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x895E" name="GL_CON_29_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x895F" name="GL_CON_30_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8960" name="GL_CON_31_ATI" group="FragmentShaderConATI,FragmentShaderGenericSourceATI"/>
+        <enum value="0x8961" name="GL_MOV_ATI" group="FragmentOp1ATI"/>
+        <enum value="0x8963" name="GL_ADD_ATI" group="FragmentOp2ATI"/>
+        <enum value="0x8964" name="GL_MUL_ATI" group="FragmentOp2ATI"/>
+        <enum value="0x8965" name="GL_SUB_ATI" group="FragmentOp2ATI"/>
+        <enum value="0x8966" name="GL_DOT3_ATI" group="FragmentOp2ATI"/>
+        <enum value="0x8967" name="GL_DOT4_ATI" group="FragmentOp2ATI"/>
+        <enum value="0x8968" name="GL_MAD_ATI" group="FragmentOp3ATI"/>
+        <enum value="0x8969" name="GL_LERP_ATI" group="FragmentOp3ATI"/>
+        <enum value="0x896A" name="GL_CND_ATI" group="FragmentOp3ATI"/>
+        <enum value="0x896B" name="GL_CND0_ATI" group="FragmentOp3ATI"/>
+        <enum value="0x896C" name="GL_DOT2_ADD_ATI" group="FragmentOp3ATI"/>
+        <enum value="0x896D" name="GL_SECONDARY_INTERPOLATOR_ATI" group="FragmentShaderGenericSourceATI"/>
         <enum value="0x896E" name="GL_NUM_FRAGMENT_REGISTERS_ATI"/>
         <enum value="0x896F" name="GL_NUM_FRAGMENT_CONSTANTS_ATI"/>
         <enum value="0x8970" name="GL_NUM_PASSES_ATI"/>
@@ -7074,39 +7074,39 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glAlphaFragmentOp1ATI</name></proto>
-            <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
-            <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentOp1ATI"><ptype>GLenum</ptype> <name>op</name></param>
+            <param group="FragmentShaderRegATI"><ptype>GLuint</ptype> <name>dst</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg1</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg1Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
         </command>
         <command>
             <proto>void <name>glAlphaFragmentOp2ATI</name></proto>
-            <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
-            <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Mod</name></param>
+            <param group="FragmentOp2ATI"><ptype>GLenum</ptype> <name>op</name></param>
+            <param group="FragmentShaderRegATI"><ptype>GLuint</ptype> <name>dst</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg1</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg1Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg2</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg2Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg2Mod</name></param>
         </command>
         <command>
             <proto>void <name>glAlphaFragmentOp3ATI</name></proto>
-            <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
-            <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Mod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg3</name></param>
-            <param><ptype>GLuint</ptype> <name>arg3Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg3Mod</name></param>
+            <param group="FragmentOp3ATI"><ptype>GLenum</ptype> <name>op</name></param>
+            <param group="FragmentShaderRegATI"><ptype>GLuint</ptype> <name>dst</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg1</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg1Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg2</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg2Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg2Mod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg3</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg3Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg3Mod</name></param>
         </command>
         <command>
             <proto>void <name>glAlphaFunc</name></proto>
@@ -8890,42 +8890,42 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glColorFragmentOp1ATI</name></proto>
-            <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
-            <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMask</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentOp1ATI"><ptype>GLenum</ptype> <name>op</name></param>
+            <param group="FragmentShaderRegATI"><ptype>GLuint</ptype> <name>dst</name></param>
+            <param group="FragmentShaderDestMaskATI"><ptype>GLuint</ptype> <name>dstMask</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg1</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg1Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
         </command>
         <command>
             <proto>void <name>glColorFragmentOp2ATI</name></proto>
-            <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
-            <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMask</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Mod</name></param>
+            <param group="FragmentOp2ATI"><ptype>GLenum</ptype> <name>op</name></param>
+            <param group="FragmentShaderRegATI"><ptype>GLuint</ptype> <name>dst</name></param>
+            <param group="FragmentShaderDestMaskATI"><ptype>GLuint</ptype> <name>dstMask</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg1</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg1Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg2</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg2Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg2Mod</name></param>
         </command>
         <command>
             <proto>void <name>glColorFragmentOp3ATI</name></proto>
-            <param group="FragmentOpATI"><ptype>GLenum</ptype> <name>op</name></param>
-            <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMask</name></param>
-            <param><ptype>GLuint</ptype> <name>dstMod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg1Mod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg2Mod</name></param>
-            <param><ptype>GLuint</ptype> <name>arg3</name></param>
-            <param><ptype>GLuint</ptype> <name>arg3Rep</name></param>
-            <param><ptype>GLuint</ptype> <name>arg3Mod</name></param>
+            <param group="FragmentOp3ATI"><ptype>GLenum</ptype> <name>op</name></param>
+            <param group="FragmentShaderRegATI"><ptype>GLuint</ptype> <name>dst</name></param>
+            <param group="FragmentShaderDestMaskATI"><ptype>GLuint</ptype> <name>dstMask</name></param>
+            <param group="FragmentShaderDestModMaskATI"><ptype>GLuint</ptype> <name>dstMod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg1</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg1Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg1Mod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg2</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg2Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg2Mod</name></param>
+            <param group="FragmentShaderGenericSourceATI"><ptype>GLuint</ptype> <name>arg3</name></param>
+            <param group="FragmentShaderValueRepATI"><ptype>GLuint</ptype> <name>arg3Rep</name></param>
+            <param group="FragmentShaderColorModMaskATI"><ptype>GLuint</ptype> <name>arg3Mod</name></param>
         </command>
         <command>
             <proto>void <name>glColorMask</name></proto>
@@ -19745,8 +19745,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glPassTexCoordATI</name></proto>
-            <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>coord</name></param>
+            <param group="FragmentShaderRegATI"><ptype>GLuint</ptype> <name>dst</name></param>
+            <param group="FragmentShaderTextureSourceATI"><ptype>GLuint</ptype> <name>coord</name></param>
             <param group="SwizzleOpATI"><ptype>GLenum</ptype> <name>swizzle</name></param>
         </command>
         <command>
@@ -22622,8 +22622,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSampleMapATI</name></proto>
-            <param><ptype>GLuint</ptype> <name>dst</name></param>
-            <param><ptype>GLuint</ptype> <name>interp</name></param>
+            <param group="FragmentShaderRegATI"><ptype>GLuint</ptype> <name>dst</name></param>
+            <param group="FragmentShaderTextureSourceATI"><ptype>GLuint</ptype> <name>interp</name></param>
             <param group="SwizzleOpATI"><ptype>GLenum</ptype> <name>swizzle</name></param>
         </command>
         <command>
@@ -23154,7 +23154,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSetFragmentShaderConstantATI</name></proto>
-            <param><ptype>GLuint</ptype> <name>dst</name></param>
+            <param group="FragmentShaderConATI"><ptype>GLuint</ptype> <name>dst</name></param>
             <param len="4">const <ptype>GLfloat</ptype> *<name>value</name></param>
         </command>
         <command>

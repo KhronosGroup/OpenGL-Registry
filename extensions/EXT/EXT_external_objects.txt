@@ -532,7 +532,8 @@ Additions to Chapter 4 of the OpenGL 4.5 Specification (Event Model)
                                     const GLenum *dstLayouts);
 
         will insert a semaphore signaling operation in the GL command
-        stream.
+        stream, and flush the command stream as if /Flush/ were inserted
+        immediately after the semaphore operation.
 
         Prior to signaling the semaphore, memory used by the specified
         buffer objects and textures will be made visible, and textures
@@ -784,6 +785,33 @@ Samplers)
         +--------------------+---------+---------------------------------------+
         | TEXTURE_TILING_EXT | enum    | OPTIMAL_TILING_EXT, LINEAR_TILING_EXT |
         +--------------------+---------+---------------------------------------+
+
+Additions to Chapter 21 of the OpenGL 4.5 Specification (Special Functions)
+
+    Add the following to section 21.4.1, Commands Not Usable in Display
+    Lists.
+
+    Under the "Memory objects" section:
+
+        DeleteMemoryObjectsEXT, CreateMemoryObjectsEXT,
+        MemoryObjectParameterivEXT
+
+    Under the "Pixels and textures" section:
+
+        TexStorageMem2DEXT, TexStorageMem2DMultisampleEXT,
+        TexStorageMem3DEXT, TexStorageMem3DMultisampleEXT,
+        TextureStorageMem2DEXT, TextureStorageMem2DMultisampleEXT,
+        TextureStorageMem3DEXT, TextureStorageMem3DMultisampleEXT,
+        TexStorageMem1DEXT, TextureStorageMem1DEXT
+
+    Under the "Buffer objects" section:
+
+        BufferStorageMemEXT, NamedBufferStorageMemEXT
+
+    Under the "GL command stream management" section:
+
+        GenSemaphoresEXT, DeleteSemaphoresEXT, SemaphoreParameterui64vEXT,
+        WaitSemaphoreEXT, SignalSemaphoreEXT
 
 Additions to Chapter 22 of the OpenGL 4.5 Specification (Context state
 Queries)
@@ -1121,6 +1149,11 @@ Issues
         the new OpenGL texture layouts.
 
 Revision History
+
+    Revision 15, 2022-07-15 (James Jones)
+        - Noted SignalSemaphoreEXT implicitly flushes the command stream
+        - Added commands to the list of commands not permitted in display
+          lists.
 
     Revision 14, 2018-07-18 (James Jones)
         - Fixed a typo: Replace NamedBufferStroage with NamedBufferStorage
