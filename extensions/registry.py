@@ -5684,4 +5684,10 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/GLX_NV_multigpu_context.txt',
     },
+    'GL_MESA_EGL_image_cubemap' : {
+        'number' : 546,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_EGL_image_cubemap.txt',
+    },
 }

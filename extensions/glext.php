@@ -1031,6 +1031,8 @@
 </li>
 <li value=546><a href="extensions/EXT/EXT_EGL_sync.txt">GL_EXT_EGL_sync</a>
 </li>
+<li value=546><a href="extensions/MESA/MESA_EGL_image_cubemap.txt">GL_MESA_EGL_image_cubemap</a>
+</li>
 <li value=547><a href="extensions/INTEL/INTEL_shader_integer_functions2.txt">GL_INTEL_shader_integer_functions2</a>
 </li>
 <li value=548><a href="extensions/MESA/MESA_framebuffer_flip_x.txt">GL_MESA_framebuffer_flip_x</a>
