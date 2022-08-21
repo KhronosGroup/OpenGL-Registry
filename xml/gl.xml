@@ -1232,8 +1232,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x802C" name="GL_HISTOGRAM_LUMINANCE_SIZE_EXT" group="GetHistogramParameterPNameEXT"/>
         <enum value="0x802D" name="GL_HISTOGRAM_SINK" group="GetHistogramParameterPNameEXT"/>
         <enum value="0x802D" name="GL_HISTOGRAM_SINK_EXT" group="GetHistogramParameterPNameEXT"/>
-        <enum value="0x802E" name="GL_MINMAX" group="MinmaxTarget,MinmaxTargetEXT"/>
-        <enum value="0x802E" name="GL_MINMAX_EXT" group="MinmaxTargetEXT,EnableCap,GetPName"/>
+        <enum value="0x802E" name="GL_MINMAX" group="MinmaxTarget"/>
+        <enum value="0x802E" name="GL_MINMAX_EXT" group="MinmaxTarget,EnableCap,GetPName"/>
         <enum value="0x802F" name="GL_MINMAX_FORMAT" group="GetMinmaxParameterPNameEXT"/>
         <enum value="0x802F" name="GL_MINMAX_FORMAT_EXT" group="GetMinmaxParameterPNameEXT"/>
         <enum value="0x8030" name="GL_MINMAX_SINK" group="GetMinmaxParameterPNameEXT"/>
@@ -13959,7 +13959,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetMinmax</name></proto>
-            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -13969,7 +13969,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetMinmaxEXT</name></proto>
-            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -13978,28 +13978,28 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetMinmaxParameterfv</name></proto>
-            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="GetMinmaxParameterPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="single" opcode="158"/>
         </command>
         <command>
             <proto>void <name>glGetMinmaxParameterfvEXT</name></proto>
-            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="GetMinmaxParameterPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="9"/>
         </command>
         <command>
             <proto>void <name>glGetMinmaxParameteriv</name></proto>
-            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="GetMinmaxParameterPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="single" opcode="159"/>
         </command>
         <command>
             <proto>void <name>glGetMinmaxParameterivEXT</name></proto>
-            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="GetMinmaxParameterPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="10"/>
@@ -16107,7 +16107,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetnMinmaxARB</name></proto>
-            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -17777,14 +17777,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMinmax</name></proto>
-            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>sink</name></param>
             <glx type="render" opcode="4111"/>
         </command>
         <command>
             <proto>void <name>glMinmaxEXT</name></proto>
-            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>sink</name></param>
             <alias name="glMinmax"/>
@@ -22543,12 +22543,12 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glResetMinmax</name></proto>
-            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <glx type="render" opcode="4113"/>
         </command>
         <command>
             <proto>void <name>glResetMinmaxEXT</name></proto>
-            <param group="MinmaxTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="MinmaxTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <alias name="glResetMinmax"/>
             <glx type="render" opcode="4113"/>
         </command>
