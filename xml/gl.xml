@@ -3027,7 +3027,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x85B1" name="GL_TRANSFORM_HINT_APPLE" group="HintTarget"/>
         <enum value="0x85B2" name="GL_UNPACK_CLIENT_STORAGE_APPLE"/>
         <enum value="0x85B3" name="GL_BUFFER_OBJECT_APPLE"/>
-        <enum value="0x85B4" name="GL_STORAGE_CLIENT_APPLE" group="VertexArrayPNameAPPLE"/>
+        <enum value="0x85B4" name="GL_STORAGE_CLIENT_APPLE" group="VertexArrayParameterNameAPPLE"/>
         <enum value="0x85B5" name="GL_VERTEX_ARRAY_BINDING" group="GetPName"/>
         <enum value="0x85B5" name="GL_VERTEX_ARRAY_BINDING_APPLE"/>
         <enum value="0x85B5" name="GL_VERTEX_ARRAY_BINDING_OES"/>
@@ -3042,8 +3042,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x85BB" name="GL_UNSIGNED_SHORT_8_8_REV_MESA"/>
         <enum value="0x85BC" name="GL_TEXTURE_STORAGE_HINT_APPLE" group="HintTarget"/>
         <enum value="0x85BD" name="GL_STORAGE_PRIVATE_APPLE"/>
-        <enum value="0x85BE" name="GL_STORAGE_CACHED_APPLE" group="VertexArrayPNameAPPLE"/>
-        <enum value="0x85BF" name="GL_STORAGE_SHARED_APPLE" group="VertexArrayPNameAPPLE"/>
+        <enum value="0x85BE" name="GL_STORAGE_CACHED_APPLE" group="VertexArrayParameterNameAPPLE"/>
+        <enum value="0x85BF" name="GL_STORAGE_SHARED_APPLE" group="VertexArrayParameterNameAPPLE"/>
     </enums>
 
     <enums namespace="GL" start="0x85C0" end="0x85CF" vendor="SUN">
@@ -26900,7 +26900,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glVertexArrayParameteriAPPLE</name></proto>
-            <param group="VertexArrayPNameAPPLE"><ptype>GLenum</ptype> <name>pname</name></param>
+            <param group="VertexArrayParameterNameAPPLE"><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLint</ptype> <name>param</name></param>
         </command>
         <command>
