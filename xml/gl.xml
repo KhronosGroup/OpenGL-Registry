@@ -7016,10 +7016,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x1A221" name="GL_CLIP_FAR_HINT_PGI" group="HintTarget"/>
         <enum value="0x1A222" name="GL_WIDE_LINE_HINT_PGI" group="HintTarget"/>
         <enum value="0x1A223" name="GL_BACK_NORMALS_HINT_PGI" group="HintTarget"/>
-        <enum value="0x1A22A" name="GL_VERTEX_DATA_HINT_PGI" group="HintTarget,HintTargetPGI"/>
-        <enum value="0x1A22B" name="GL_VERTEX_CONSISTENT_HINT_PGI" group="HintTarget,HintTargetPGI"/>
-        <enum value="0x1A22C" name="GL_MATERIAL_SIDE_HINT_PGI" group="HintTarget,HintTargetPGI"/>
-        <enum value="0x1A22D" name="GL_MAX_VERTEX_HINT_PGI" group="HintTarget,HintTargetPGI"/>
+        <enum value="0x1A22A" name="GL_VERTEX_DATA_HINT_PGI" group="HintTarget"/>
+        <enum value="0x1A22B" name="GL_VERTEX_CONSISTENT_HINT_PGI" group="HintTarget"/>
+        <enum value="0x1A22C" name="GL_MATERIAL_SIDE_HINT_PGI" group="HintTarget"/>
+        <enum value="0x1A22D" name="GL_MAX_VERTEX_HINT_PGI" group="HintTarget"/>
     </enums>
 
     <enums namespace="GL" start="108000" end="108999" vendor="ES" comment="Evans and Sutherland is out of the graphics hardware business"/>
@@ -16350,7 +16350,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glHintPGI</name></proto>
-            <param group="HintTargetPGI"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HintTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="VertexHintsMaskPGI"><ptype>GLint</ptype> <name>mode</name></param>
         </command>
         <command>
