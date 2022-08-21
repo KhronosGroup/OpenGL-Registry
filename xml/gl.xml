@@ -921,14 +921,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x1403" name="GL_UNSIGNED_SHORT" group="VertexAttribIType,ScalarType,ReplacementCodeTypeSUN,ElementPointerTypeATI,MatrixIndexPointerTypeARB,WeightPointerTypeARB,ColorPointerType,DrawElementsType,ListNameType,PixelFormat,PixelType,VertexAttribType,VertexAttribPointerType"/>
         <enum value="0x1404" name="GL_INT" group="VertexAttribIType,SecondaryColorPointerTypeIBM,WeightPointerTypeARB,TangentPointerTypeEXT,BinormalPointerTypeEXT,IndexPointerType,ListNameType,NormalPointerType,PixelType,TexCoordPointerType,VertexPointerType,VertexAttribType,AttributeType,UniformType,VertexAttribPointerType"/>
         <enum value="0x1405" name="GL_UNSIGNED_INT" group="VertexAttribIType,ScalarType,ReplacementCodeTypeSUN,ElementPointerTypeATI,MatrixIndexPointerTypeARB,WeightPointerTypeARB,ColorPointerType,DrawElementsType,ListNameType,PixelFormat,PixelType,VertexAttribType,AttributeType,UniformType,VertexAttribPointerType"/>
-        <enum value="0x1406" name="GL_FLOAT" group="MapTypeNV,SecondaryColorPointerTypeIBM,WeightPointerTypeARB,VertexWeightPointerTypeEXT,TangentPointerTypeEXT,BinormalPointerTypeEXT,FogCoordinatePointerType,FogPointerTypeEXT,FogPointerTypeIBM,IndexPointerType,ListNameType,NormalPointerType,PixelType,TexCoordPointerType,VertexPointerType,VertexAttribType,AttributeType,UniformType,VertexAttribPointerType"/>
+        <enum value="0x1406" name="GL_FLOAT" group="MapTypeNV,SecondaryColorPointerTypeIBM,WeightPointerTypeARB,VertexWeightPointerTypeEXT,TangentPointerTypeEXT,BinormalPointerTypeEXT,FogCoordinatePointerType,FogPointerType,IndexPointerType,ListNameType,NormalPointerType,PixelType,TexCoordPointerType,VertexPointerType,VertexAttribType,AttributeType,UniformType,VertexAttribPointerType"/>
         <enum value="0x1407" name="GL_2_BYTES" group="ListNameType"/>
         <enum value="0x1407" name="GL_2_BYTES_NV"/>
         <enum value="0x1408" name="GL_3_BYTES" group="ListNameType"/>
         <enum value="0x1408" name="GL_3_BYTES_NV"/>
         <enum value="0x1409" name="GL_4_BYTES" group="ListNameType"/>
         <enum value="0x1409" name="GL_4_BYTES_NV"/>
-        <enum value="0x140A" name="GL_DOUBLE" group="VertexAttribLType,MapTypeNV,SecondaryColorPointerTypeIBM,WeightPointerTypeARB,TangentPointerTypeEXT,BinormalPointerTypeEXT,FogCoordinatePointerType,FogPointerTypeEXT,FogPointerTypeIBM,IndexPointerType,NormalPointerType,TexCoordPointerType,VertexPointerType,VertexAttribType,AttributeType,UniformType,VertexAttribPointerType"/>
+        <enum value="0x140A" name="GL_DOUBLE" group="VertexAttribLType,MapTypeNV,SecondaryColorPointerTypeIBM,WeightPointerTypeARB,TangentPointerTypeEXT,BinormalPointerTypeEXT,FogCoordinatePointerType,FogPointerType,IndexPointerType,NormalPointerType,TexCoordPointerType,VertexPointerType,VertexAttribType,AttributeType,UniformType,VertexAttribPointerType"/>
         <enum value="0x140A" name="GL_DOUBLE_EXT" group="BinormalPointerTypeEXT,TangentPointerTypeEXT"/>
         <enum value="0x140B" name="GL_HALF_FLOAT" group="PixelType,VertexAttribPointerType,VertexAttribType"/>
         <enum value="0x140B" name="GL_HALF_FLOAT_ARB" group="PixelType"/>
@@ -12011,20 +12011,20 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glFogCoordPointer</name></proto>
-            <param group="FogPointerTypeEXT"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="FogPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param len="COMPSIZE(type,stride)">const void *<name>pointer</name></param>
         </command>
         <command>
             <proto>void <name>glFogCoordPointerEXT</name></proto>
-            <param group="FogPointerTypeEXT"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="FogPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param len="COMPSIZE(type,stride)">const void *<name>pointer</name></param>
             <alias name="glFogCoordPointer"/>
         </command>
         <command>
             <proto>void <name>glFogCoordPointerListIBM</name></proto>
-            <param group="FogPointerTypeIBM"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="FogPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLint</ptype> <name>stride</name></param>
             <param len="COMPSIZE(type,stride)">const void **<name>pointer</name></param>
             <param><ptype>GLint</ptype> <name>ptrstride</name></param>
