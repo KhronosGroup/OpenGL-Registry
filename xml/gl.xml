@@ -1523,8 +1523,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x80BA" name="GL_POST_COLOR_MATRIX_BLUE_BIAS_SGI" group="PixelTransferParameter,GetPName"/>
         <enum value="0x80BB" name="GL_POST_COLOR_MATRIX_ALPHA_BIAS" group="PixelTransferParameter"/>
         <enum value="0x80BB" name="GL_POST_COLOR_MATRIX_ALPHA_BIAS_SGI" group="PixelTransferParameter,GetPName"/>
-        <enum value="0x80BC" name="GL_TEXTURE_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80BD" name="GL_PROXY_TEXTURE_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
+        <enum value="0x80BC" name="GL_TEXTURE_COLOR_TABLE_SGI" group="GetPName,ColorTableTarget,EnableCap"/>
+        <enum value="0x80BD" name="GL_PROXY_TEXTURE_COLOR_TABLE_SGI" group="ColorTableTarget"/>
         <enum value="0x80BE" name="GL_TEXTURE_ENV_BIAS_SGIX" group="TextureEnvMode"/>
         <enum value="0x80BF" name="GL_SHADOW_AMBIENT_SGIX" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x80BF" name="GL_TEXTURE_COMPARE_FAIL_VALUE_ARB"/>
@@ -1551,18 +1551,18 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x80D0" end="0x80DF" vendor="SGI">
-        <enum value="0x80D0" name="GL_COLOR_TABLE" group="ColorTableTarget,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D0" name="GL_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D1" name="GL_POST_CONVOLUTION_COLOR_TABLE" group="ColorTableTarget,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D1" name="GL_POST_CONVOLUTION_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D2" name="GL_POST_COLOR_MATRIX_COLOR_TABLE" group="ColorTableTarget,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D2" name="GL_POST_COLOR_MATRIX_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D3" name="GL_PROXY_COLOR_TABLE" group="ColorTableTargetSGI,ColorTableTarget"/>
-        <enum value="0x80D3" name="GL_PROXY_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
-        <enum value="0x80D4" name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE" group="ColorTableTargetSGI,ColorTableTarget"/>
-        <enum value="0x80D4" name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
-        <enum value="0x80D5" name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE" group="ColorTableTargetSGI,ColorTableTarget"/>
-        <enum value="0x80D5" name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
+        <enum value="0x80D0" name="GL_COLOR_TABLE" group="ColorTableTarget,EnableCap"/>
+        <enum value="0x80D0" name="GL_COLOR_TABLE_SGI" group="GetPName,ColorTableTarget,EnableCap"/>
+        <enum value="0x80D1" name="GL_POST_CONVOLUTION_COLOR_TABLE" group="ColorTableTarget,EnableCap"/>
+        <enum value="0x80D1" name="GL_POST_CONVOLUTION_COLOR_TABLE_SGI" group="GetPName,ColorTableTarget,EnableCap"/>
+        <enum value="0x80D2" name="GL_POST_COLOR_MATRIX_COLOR_TABLE" group="ColorTableTarget,EnableCap"/>
+        <enum value="0x80D2" name="GL_POST_COLOR_MATRIX_COLOR_TABLE_SGI" group="GetPName,ColorTableTarget,EnableCap"/>
+        <enum value="0x80D3" name="GL_PROXY_COLOR_TABLE" group="ColorTableTarget"/>
+        <enum value="0x80D3" name="GL_PROXY_COLOR_TABLE_SGI" group="ColorTableTarget"/>
+        <enum value="0x80D4" name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE" group="ColorTableTarget"/>
+        <enum value="0x80D4" name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE_SGI" group="ColorTableTarget"/>
+        <enum value="0x80D5" name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE" group="ColorTableTarget"/>
+        <enum value="0x80D5" name="GL_PROXY_POST_COLOR_MATRIX_COLOR_TABLE_SGI" group="ColorTableTarget"/>
         <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE" group="ColorTableParameterPName"/>
         <enum value="0x80D6" name="GL_COLOR_TABLE_SCALE_SGI" group="ColorTableParameterPName"/>
         <enum value="0x80D7" name="GL_COLOR_TABLE_BIAS" group="ColorTableParameterPName"/>
@@ -9077,7 +9077,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glColorTableParameterfvSGI</name></proto>
-            <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glColorTableParameterfv"/>
@@ -9092,7 +9092,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glColorTableParameterivSGI</name></proto>
-            <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param group="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glColorTableParameteriv"/>
@@ -9100,7 +9100,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glColorTableSGI</name></proto>
-            <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -9737,7 +9737,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glCopyColorTableSGI</name></proto>
-            <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param group="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
@@ -13113,7 +13113,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetColorTableParameterfvSGI</name></proto>
-            <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="4099"/>
@@ -13134,14 +13134,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetColorTableParameterivSGI</name></proto>
-            <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="4100"/>
         </command>
         <command>
             <proto>void <name>glGetColorTableSGI</name></proto>
-            <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(target,format,type)">void *<name>table</name></param>
