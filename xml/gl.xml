@@ -1212,10 +1212,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8022" name="GL_POST_CONVOLUTION_BLUE_BIAS_EXT" group="PixelTransferParameter,GetPName"/>
         <enum value="0x8023" name="GL_POST_CONVOLUTION_ALPHA_BIAS" group="PixelTransferParameter"/>
         <enum value="0x8023" name="GL_POST_CONVOLUTION_ALPHA_BIAS_EXT" group="PixelTransferParameter,GetPName"/>
-        <enum value="0x8024" name="GL_HISTOGRAM" group="HistogramTarget,HistogramTargetEXT"/>
-        <enum value="0x8024" name="GL_HISTOGRAM_EXT" group="HistogramTargetEXT,EnableCap,GetPName"/>
-        <enum value="0x8025" name="GL_PROXY_HISTOGRAM" group="HistogramTarget,HistogramTargetEXT"/>
-        <enum value="0x8025" name="GL_PROXY_HISTOGRAM_EXT" group="HistogramTargetEXT"/>
+        <enum value="0x8024" name="GL_HISTOGRAM" group="HistogramTarget"/>
+        <enum value="0x8024" name="GL_HISTOGRAM_EXT" group="HistogramTarget,EnableCap,GetPName"/>
+        <enum value="0x8025" name="GL_PROXY_HISTOGRAM" group="HistogramTarget"/>
+        <enum value="0x8025" name="GL_PROXY_HISTOGRAM_EXT" group="HistogramTarget"/>
         <enum value="0x8026" name="GL_HISTOGRAM_WIDTH" group="GetHistogramParameterPNameEXT"/>
         <enum value="0x8026" name="GL_HISTOGRAM_WIDTH_EXT" group="GetHistogramParameterPNameEXT"/>
         <enum value="0x8027" name="GL_HISTOGRAM_FORMAT" group="GetHistogramParameterPNameEXT"/>
@@ -13593,7 +13593,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetHistogram</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -13603,7 +13603,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetHistogramEXT</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -13612,35 +13612,35 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetHistogramParameterfv</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="GetHistogramParameterPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="single" opcode="155"/>
         </command>
         <command>
             <proto>void <name>glGetHistogramParameterfvEXT</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="GetHistogramParameterPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="6"/>
         </command>
         <command>
             <proto>void <name>glGetHistogramParameteriv</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="GetHistogramParameterPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="single" opcode="156"/>
         </command>
         <command>
             <proto>void <name>glGetHistogramParameterivEXT</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="GetHistogramParameterPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="vendor" opcode="7"/>
         </command>
         <command>
             <proto>void <name>glGetHistogramParameterxvOES</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="GetHistogramParameterPNameEXT"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfixed</ptype> *<name>params</name></param>
         </command>
@@ -16047,7 +16047,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetnHistogramARB</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>reset</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -16355,7 +16355,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glHistogram</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>sink</name></param>
@@ -16363,7 +16363,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glHistogramEXT</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="Boolean"><ptype>GLboolean</ptype> <name>sink</name></param>
@@ -22527,12 +22527,12 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glResetHistogram</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <glx type="render" opcode="4112"/>
         </command>
         <command>
             <proto>void <name>glResetHistogramEXT</name></proto>
-            <param group="HistogramTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="HistogramTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <alias name="glResetHistogram"/>
             <glx type="render" opcode="4112"/>
         </command>
