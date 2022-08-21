@@ -6883,15 +6883,15 @@ typedef unsigned int GLhandleARB;
         <enum value="0x96A3" name="GL_VALIDATE_SHADER_BINARY_QCOM"/>
         <enum value="0x96A4" name="GL_SHADING_RATE_QCOM" group="GetPName"/>
         <enum value="0x96A5" name="GL_SHADING_RATE_PRESERVE_ASPECT_RATIO_QCOM" group="EnableCap"/>
-        <enum value="0x96A6" name="GL_SHADING_RATE_1X1_PIXELS_QCOM" group="ShadingRateQCOM"/>
-        <enum value="0x96A7" name="GL_SHADING_RATE_1X2_PIXELS_QCOM" group="ShadingRateQCOM"/>
-        <enum value="0x96A8" name="GL_SHADING_RATE_2X1_PIXELS_QCOM" group="ShadingRateQCOM"/>
-        <enum value="0x96A9" name="GL_SHADING_RATE_2X2_PIXELS_QCOM" group="ShadingRateQCOM"/>
-        <enum value="0x96AA" name="GL_SHADING_RATE_1X4_PIXELS_QCOM" group="ShadingRateQCOM"/>
-        <enum value="0x96AB" name="GL_SHADING_RATE_4X1_PIXELS_QCOM" group="ShadingRateQCOM"/>
-        <enum value="0x96AC" name="GL_SHADING_RATE_4X2_PIXELS_QCOM" group="ShadingRateQCOM"/>
-        <enum value="0x96AD" name="GL_SHADING_RATE_2X4_PIXELS_QCOM" group="ShadingRateQCOM"/>
-        <enum value="0x96AE" name="GL_SHADING_RATE_4X4_PIXELS_QCOM" group="ShadingRateQCOM"/>
+        <enum value="0x96A6" name="GL_SHADING_RATE_1X1_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96A7" name="GL_SHADING_RATE_1X2_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96A8" name="GL_SHADING_RATE_2X1_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96A9" name="GL_SHADING_RATE_2X2_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96AA" name="GL_SHADING_RATE_1X4_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96AB" name="GL_SHADING_RATE_4X1_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96AC" name="GL_SHADING_RATE_4X2_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96AD" name="GL_SHADING_RATE_2X4_PIXELS_QCOM" group="ShadingRate"/>
+        <enum value="0x96AE" name="GL_SHADING_RATE_4X4_PIXELS_QCOM" group="ShadingRate"/>
         <enum value="0x96A6" name="GL_SHADING_RATE_1X1_PIXELS_EXT" alias="GL_SHADING_RATE_1X1_PIXELS_QCOM" group="ShadingRate"/>
         <enum value="0x96A7" name="GL_SHADING_RATE_1X2_PIXELS_EXT" alias="GL_SHADING_RATE_1X2_PIXELS_QCOM" group="ShadingRate"/>
         <enum value="0x96A8" name="GL_SHADING_RATE_2X1_PIXELS_EXT" alias="GL_SHADING_RATE_2X1_PIXELS_QCOM" group="ShadingRate"/>
@@ -23245,7 +23245,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glShadingRateQCOM</name></proto>
-            <param group="ShadingRateQCOM"><ptype>GLenum</ptype> <name>rate</name></param>
+            <param group="ShadingRate"><ptype>GLenum</ptype> <name>rate</name></param>
         </command>
         <command>
             <proto>void <name>glShadingRateImagePaletteNV</name></proto>
