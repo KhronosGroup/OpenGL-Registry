@@ -1465,20 +1465,20 @@ typedef unsigned int GLhandleARB;
         <enum value="0x80A0" name="GL_SAMPLE_COVERAGE_ARB"/>
         <enum value="0x80A0" name="GL_SAMPLE_MASK_EXT"/>
         <enum value="0x80A0" name="GL_SAMPLE_MASK_SGIS" group="GetPName,EnableCap"/>
-        <enum value="0x80A1" name="GL_1PASS_EXT" group="SamplePatternSGIS,SamplePatternEXT"/>
-        <enum value="0x80A1" name="GL_1PASS_SGIS" group="SamplePatternSGIS"/>
-        <enum value="0x80A2" name="GL_2PASS_0_EXT" group="SamplePatternSGIS,SamplePatternEXT"/>
-        <enum value="0x80A2" name="GL_2PASS_0_SGIS" group="SamplePatternSGIS"/>
-        <enum value="0x80A3" name="GL_2PASS_1_EXT" group="SamplePatternSGIS,SamplePatternEXT"/>
-        <enum value="0x80A3" name="GL_2PASS_1_SGIS" group="SamplePatternSGIS"/>
-        <enum value="0x80A4" name="GL_4PASS_0_EXT" group="SamplePatternSGIS,SamplePatternEXT"/>
-        <enum value="0x80A4" name="GL_4PASS_0_SGIS" group="SamplePatternSGIS"/>
-        <enum value="0x80A5" name="GL_4PASS_1_EXT" group="SamplePatternSGIS,SamplePatternEXT"/>
-        <enum value="0x80A5" name="GL_4PASS_1_SGIS" group="SamplePatternSGIS"/>
-        <enum value="0x80A6" name="GL_4PASS_2_EXT" group="SamplePatternSGIS,SamplePatternEXT"/>
-        <enum value="0x80A6" name="GL_4PASS_2_SGIS" group="SamplePatternSGIS"/>
-        <enum value="0x80A7" name="GL_4PASS_3_EXT" group="SamplePatternSGIS,SamplePatternEXT"/>
-        <enum value="0x80A7" name="GL_4PASS_3_SGIS" group="SamplePatternSGIS"/>
+        <enum value="0x80A1" name="GL_1PASS_EXT" group="SamplePattern"/>
+        <enum value="0x80A1" name="GL_1PASS_SGIS" group="SamplePattern"/>
+        <enum value="0x80A2" name="GL_2PASS_0_EXT" group="SamplePattern"/>
+        <enum value="0x80A2" name="GL_2PASS_0_SGIS" group="SamplePattern"/>
+        <enum value="0x80A3" name="GL_2PASS_1_EXT" group="SamplePattern"/>
+        <enum value="0x80A3" name="GL_2PASS_1_SGIS" group="SamplePattern"/>
+        <enum value="0x80A4" name="GL_4PASS_0_EXT" group="SamplePattern"/>
+        <enum value="0x80A4" name="GL_4PASS_0_SGIS" group="SamplePattern"/>
+        <enum value="0x80A5" name="GL_4PASS_1_EXT" group="SamplePattern"/>
+        <enum value="0x80A5" name="GL_4PASS_1_SGIS" group="SamplePattern"/>
+        <enum value="0x80A6" name="GL_4PASS_2_EXT" group="SamplePattern"/>
+        <enum value="0x80A6" name="GL_4PASS_2_SGIS" group="SamplePattern"/>
+        <enum value="0x80A7" name="GL_4PASS_3_EXT" group="SamplePattern"/>
+        <enum value="0x80A7" name="GL_4PASS_3_SGIS" group="SamplePattern"/>
         <enum value="0x80A8" name="GL_SAMPLE_BUFFERS" group="GetFramebufferParameter,GetPName"/>
         <enum value="0x80A8" name="GL_SAMPLE_BUFFERS_ARB"/>
         <enum value="0x80A8" name="GL_SAMPLE_BUFFERS_EXT"/>
@@ -22650,11 +22650,11 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSamplePatternEXT</name></proto>
-            <param group="SamplePatternEXT"><ptype>GLenum</ptype> <name>pattern</name></param>
+            <param group="SamplePattern"><ptype>GLenum</ptype> <name>pattern</name></param>
         </command>
         <command>
             <proto>void <name>glSamplePatternSGIS</name></proto>
-            <param group="SamplePatternSGIS"><ptype>GLenum</ptype> <name>pattern</name></param>
+            <param group="SamplePattern"><ptype>GLenum</ptype> <name>pattern</name></param>
             <alias name="glSamplePatternEXT"/>
             <glx type="render" opcode="2049"/>
         </command>
