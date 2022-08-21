@@ -1176,8 +1176,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8010" name="GL_CONVOLUTION_1D_EXT" group="GetPName,ConvolutionTarget,EnableCap"/>
         <enum value="0x8011" name="GL_CONVOLUTION_2D" group="ConvolutionTarget"/>
         <enum value="0x8011" name="GL_CONVOLUTION_2D_EXT" group="GetPName,ConvolutionTarget,EnableCap"/>
-        <enum value="0x8012" name="GL_SEPARABLE_2D" group="SeparableTarget,SeparableTargetEXT"/>
-        <enum value="0x8012" name="GL_SEPARABLE_2D_EXT" group="SeparableTargetEXT,EnableCap,GetPName"/>
+        <enum value="0x8012" name="GL_SEPARABLE_2D" group="SeparableTarget"/>
+        <enum value="0x8012" name="GL_SEPARABLE_2D_EXT" group="SeparableTarget,EnableCap,GetPName"/>
         <enum value="0x8013" name="GL_CONVOLUTION_BORDER_MODE" group="ConvolutionParameter"/>
         <enum value="0x8013" name="GL_CONVOLUTION_BORDER_MODE_EXT" group="ConvolutionParameter"/>
         <enum value="0x8014" name="GL_CONVOLUTION_FILTER_SCALE" group="ConvolutionParameter"/>
@@ -15052,7 +15052,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetSeparableFilter</name></proto>
-            <param group="SeparableTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="SeparableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(target,format,type)">void *<name>row</name></param>
@@ -15063,7 +15063,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetSeparableFilterEXT</name></proto>
-            <param group="SeparableTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="SeparableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(target,format,type)">void *<name>row</name></param>
@@ -16173,7 +16173,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetnSeparableFilterARB</name></proto>
-            <param group="SeparableTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="SeparableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>rowBufSize</name></param>
@@ -23119,7 +23119,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSeparableFilter2D</name></proto>
-            <param group="SeparableTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="SeparableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -23132,7 +23132,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSeparableFilter2DEXT</name></proto>
-            <param group="SeparableTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="SeparableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
