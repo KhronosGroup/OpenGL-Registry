@@ -1043,7 +1043,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x2402" name="GL_SPHERE_MAP" group="TextureGenMode"/>
             <unused start="0x2403" end="0x24FF" comment="Unused for TextureGenMode"/>
         <enum value="0x2500" name="GL_TEXTURE_GEN_MODE" group="TextureGenParameter"/>
-        <enum value="0x2500" name="GL_TEXTURE_GEN_MODE_OES"/>
+        <enum value="0x2500" name="GL_TEXTURE_GEN_MODE_OES" group="TextureGenParameter"/>
         <enum value="0x2501" name="GL_OBJECT_PLANE" group="TextureGenParameter"/>
         <enum value="0x2502" name="GL_EYE_PLANE" group="TextureGenParameter"/>
             <unused start="0x2503" end="0x25FF" comment="Unused for TextureGenParameter"/>
@@ -1156,9 +1156,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8007" name="GL_MIN_EXT" group="BlendEquationModeEXT"/>
         <enum value="0x8008" name="GL_MAX" group="BlendEquationModeEXT"/>
         <enum value="0x8008" name="GL_MAX_EXT" group="BlendEquationModeEXT"/>
-        <enum value="0x8009" name="GL_BLEND_EQUATION"/>
+        <enum value="0x8009" name="GL_BLEND_EQUATION" group="GetPName"/>
         <enum value="0x8009" name="GL_BLEND_EQUATION_EXT" group="GetPName"/>
-        <enum value="0x8009" name="GL_BLEND_EQUATION_OES"/>
+        <enum value="0x8009" name="GL_BLEND_EQUATION_OES" group="GetPName"/>
         <enum value="0x8009" name="GL_BLEND_EQUATION_RGB" group="GetPName"/>
         <enum value="0x8009" name="GL_BLEND_EQUATION_RGB_EXT"/>
         <enum value="0x8009" name="GL_BLEND_EQUATION_RGB_OES"/>
@@ -2784,16 +2784,16 @@ typedef unsigned int GLhandleARB;
         <enum value="0x850E" name="GL_VERTEX_WEIGHT_ARRAY_TYPE_EXT"/>
         <enum value="0x850F" name="GL_VERTEX_WEIGHT_ARRAY_STRIDE_EXT"/>
         <enum value="0x8510" name="GL_VERTEX_WEIGHT_ARRAY_POINTER_EXT"/>
-        <enum value="0x8511" name="GL_NORMAL_MAP"/>
-        <enum value="0x8511" name="GL_NORMAL_MAP_ARB"/>
-        <enum value="0x8511" name="GL_NORMAL_MAP_EXT"/>
-        <enum value="0x8511" name="GL_NORMAL_MAP_NV"/>
-        <enum value="0x8511" name="GL_NORMAL_MAP_OES"/>
-        <enum value="0x8512" name="GL_REFLECTION_MAP"/>
-        <enum value="0x8512" name="GL_REFLECTION_MAP_ARB"/>
-        <enum value="0x8512" name="GL_REFLECTION_MAP_EXT"/>
-        <enum value="0x8512" name="GL_REFLECTION_MAP_NV"/>
-        <enum value="0x8512" name="GL_REFLECTION_MAP_OES"/>
+        <enum value="0x8511" name="GL_NORMAL_MAP" group="GetTextureParameter"/>
+        <enum value="0x8511" name="GL_NORMAL_MAP_ARB" group="GetTextureParameter"/>
+        <enum value="0x8511" name="GL_NORMAL_MAP_EXT" group="GetTextureParameter"/>
+        <enum value="0x8511" name="GL_NORMAL_MAP_NV" group="GetTextureParameter"/>
+        <enum value="0x8511" name="GL_NORMAL_MAP_OES" group="GetTextureParameter"/>
+        <enum value="0x8512" name="GL_REFLECTION_MAP" group="GetTextureParameter"/>
+        <enum value="0x8512" name="GL_REFLECTION_MAP_ARB" group="GetTextureParameter"/>
+        <enum value="0x8512" name="GL_REFLECTION_MAP_EXT" group="GetTextureParameter"/>
+        <enum value="0x8512" name="GL_REFLECTION_MAP_NV" group="GetTextureParameter"/>
+        <enum value="0x8512" name="GL_REFLECTION_MAP_OES" group="GetTextureParameter"/>
         <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP" group="CopyImageSubDataTarget,TextureTarget,EnableCap"/>
         <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_ARB" group="TextureTarget,EnableCap"/>
         <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_EXT" group="TextureTarget,EnableCap"/>
@@ -2803,36 +2803,36 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP_EXT" group="GetPName"/>
         <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP_OES" group="GetPName"/>
         <enum value="0x8515" name="GL_TEXTURE_CUBE_MAP_POSITIVE_X" group="TextureTarget"/>
-        <enum value="0x8515" name="GL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB"/>
-        <enum value="0x8515" name="GL_TEXTURE_CUBE_MAP_POSITIVE_X_EXT"/>
-        <enum value="0x8515" name="GL_TEXTURE_CUBE_MAP_POSITIVE_X_OES"/>
+        <enum value="0x8515" name="GL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB" group="TextureTarget"/>
+        <enum value="0x8515" name="GL_TEXTURE_CUBE_MAP_POSITIVE_X_EXT" group="TextureTarget"/>
+        <enum value="0x8515" name="GL_TEXTURE_CUBE_MAP_POSITIVE_X_OES" group="TextureTarget"/>
         <enum value="0x8516" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_X" group="TextureTarget"/>
-        <enum value="0x8516" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB"/>
-        <enum value="0x8516" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_X_EXT"/>
-        <enum value="0x8516" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_X_OES"/>
+        <enum value="0x8516" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB" group="TextureTarget"/>
+        <enum value="0x8516" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_X_EXT" group="TextureTarget"/>
+        <enum value="0x8516" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_X_OES" group="TextureTarget"/>
         <enum value="0x8517" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Y" group="TextureTarget"/>
-        <enum value="0x8517" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB"/>
-        <enum value="0x8517" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Y_EXT"/>
-        <enum value="0x8517" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Y_OES"/>
+        <enum value="0x8517" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB" group="TextureTarget"/>
+        <enum value="0x8517" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Y_EXT" group="TextureTarget"/>
+        <enum value="0x8517" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Y_OES" group="TextureTarget"/>
         <enum value="0x8518" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Y" group="TextureTarget"/>
-        <enum value="0x8518" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB"/>
-        <enum value="0x8518" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_EXT"/>
-        <enum value="0x8518" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_OES"/>
+        <enum value="0x8518" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB" group="TextureTarget"/>
+        <enum value="0x8518" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_EXT" group="TextureTarget"/>
+        <enum value="0x8518" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_OES" group="TextureTarget"/>
         <enum value="0x8519" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Z" group="TextureTarget"/>
-        <enum value="0x8519" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB"/>
-        <enum value="0x8519" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Z_EXT"/>
-        <enum value="0x8519" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Z_OES"/>
+        <enum value="0x8519" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB" group="TextureTarget"/>
+        <enum value="0x8519" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Z_EXT" group="TextureTarget"/>
+        <enum value="0x8519" name="GL_TEXTURE_CUBE_MAP_POSITIVE_Z_OES" group="TextureTarget"/>
         <enum value="0x851A" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Z" group="TextureTarget"/>
-        <enum value="0x851A" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB"/>
-        <enum value="0x851A" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_EXT"/>
-        <enum value="0x851A" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_OES"/>
+        <enum value="0x851A" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB" group="TextureTarget"/>
+        <enum value="0x851A" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_EXT" group="TextureTarget"/>
+        <enum value="0x851A" name="GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_OES" group="TextureTarget"/>
         <enum value="0x851B" name="GL_PROXY_TEXTURE_CUBE_MAP" group="TextureTarget"/>
         <enum value="0x851B" name="GL_PROXY_TEXTURE_CUBE_MAP_ARB" group="TextureTarget"/>
         <enum value="0x851B" name="GL_PROXY_TEXTURE_CUBE_MAP_EXT" group="TextureTarget"/>
         <enum value="0x851C" name="GL_MAX_CUBE_MAP_TEXTURE_SIZE" group="GetPName"/>
-        <enum value="0x851C" name="GL_MAX_CUBE_MAP_TEXTURE_SIZE_ARB"/>
-        <enum value="0x851C" name="GL_MAX_CUBE_MAP_TEXTURE_SIZE_EXT"/>
-        <enum value="0x851C" name="GL_MAX_CUBE_MAP_TEXTURE_SIZE_OES"/>
+        <enum value="0x851C" name="GL_MAX_CUBE_MAP_TEXTURE_SIZE_ARB" group="GetPName"/>
+        <enum value="0x851C" name="GL_MAX_CUBE_MAP_TEXTURE_SIZE_EXT" group="GetPName"/>
+        <enum value="0x851C" name="GL_MAX_CUBE_MAP_TEXTURE_SIZE_OES" group="GetPName"/>
         <enum value="0x851D" name="GL_VERTEX_ARRAY_RANGE_APPLE"/>
         <enum value="0x851D" name="GL_VERTEX_ARRAY_RANGE_NV"/>
         <enum value="0x851E" name="GL_VERTEX_ARRAY_RANGE_LENGTH_APPLE"/>
@@ -5004,7 +5004,7 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8D60" end="0x8D6F" vendor="OES">
-        <enum value="0x8D60" name="GL_TEXTURE_GEN_STR_OES"/>
+        <enum value="0x8D60" name="GL_TEXTURE_GEN_STR_OES" group="EnableCap,GetPName,TextureCoordName"/>
         <enum value="0x8D61" name="GL_HALF_FLOAT_OES"/>
         <enum value="0x8D62" name="GL_RGB565_OES" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8D62" name="GL_RGB565" group="InternalFormat,SizedInternalFormat"/>
@@ -5283,7 +5283,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8E27" name="GL_FIELDS_NV"/>
         <enum value="0x8E28" name="GL_CURRENT_TIME_NV"/>
         <enum value="0x8E28" name="GL_TIMESTAMP" group="QueryCounterTarget,GetPName"/>
-        <enum value="0x8E28" name="GL_TIMESTAMP_EXT"/>
+        <enum value="0x8E28" name="GL_TIMESTAMP_EXT" group="QueryCounterTarget,GetPName"/>
         <enum value="0x8E29" name="GL_NUM_FILL_STREAMS_NV"/>
         <enum value="0x8E2A" name="GL_PRESENT_TIME_NV"/>
         <enum value="0x8E2B" name="GL_PRESENT_DURATION_NV"/>
