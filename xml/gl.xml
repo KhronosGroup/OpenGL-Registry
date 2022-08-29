@@ -16457,7 +16457,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glIndexMask</name></proto>
-            <param kind="MaskedColorIndexValueI"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="MaskedColorIndexValue"><ptype>GLuint</ptype> <name>mask</name></param>
             <glx type="render" opcode="136"/>
         </command>
         <command>
