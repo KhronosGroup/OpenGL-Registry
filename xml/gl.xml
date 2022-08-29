@@ -18158,26 +18158,26 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiTexCoord1s</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
             <vecequiv name="glMultiTexCoord1sv"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord1sARB</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
             <vecequiv name="glMultiTexCoord1sv"/>
             <alias name="glMultiTexCoord1s"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord1sv</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS" len="1">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="1">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="201"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord1svARB</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS" len="1">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="1">const <ptype>GLshort</ptype> *<name>v</name></param>
             <alias name="glMultiTexCoord1sv"/>
             <glx type="render" opcode="201"/>
         </command>
@@ -18302,28 +18302,28 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiTexCoord2s</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>t</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>t</name></param>
             <vecequiv name="glMultiTexCoord2sv"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord2sARB</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>t</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>t</name></param>
             <vecequiv name="glMultiTexCoord2sv"/>
             <alias name="glMultiTexCoord2s"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord2sv</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="205"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord2svARB</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
             <alias name="glMultiTexCoord2sv"/>
             <glx type="render" opcode="205"/>
         </command>
@@ -18457,30 +18457,30 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiTexCoord3s</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>t</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>r</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>t</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>r</name></param>
             <vecequiv name="glMultiTexCoord3sv"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord3sARB</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>t</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>r</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>t</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>r</name></param>
             <vecequiv name="glMultiTexCoord3sv"/>
             <alias name="glMultiTexCoord3s"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord3sv</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="209"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord3svARB</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
             <alias name="glMultiTexCoord3sv"/>
             <glx type="render" opcode="209"/>
         </command>
@@ -18623,32 +18623,32 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiTexCoord4s</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>t</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>r</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>q</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>t</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>r</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>q</name></param>
             <vecequiv name="glMultiTexCoord4sv"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord4sARB</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>t</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>r</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>q</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>t</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>r</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>q</name></param>
             <vecequiv name="glMultiTexCoord4sv"/>
             <alias name="glMultiTexCoord4s"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord4sv</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="213"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord4svARB</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CoordS" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
             <alias name="glMultiTexCoord4sv"/>
             <glx type="render" opcode="213"/>
         </command>
@@ -21943,13 +21943,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glRasterPos2s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
             <vecequiv name="glRasterPos2sv"/>
         </command>
         <command>
             <proto>void <name>glRasterPos2sv</name></proto>
-            <param kind="CoordS" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="36"/>
         </command>
         <command>
@@ -21999,14 +21999,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glRasterPos3s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>z</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>z</name></param>
             <vecequiv name="glRasterPos3sv"/>
         </command>
         <command>
             <proto>void <name>glRasterPos3sv</name></proto>
-            <param kind="CoordS" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="40"/>
         </command>
         <command>
@@ -22060,15 +22060,15 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glRasterPos4s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>z</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>w</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>z</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>w</name></param>
             <vecequiv name="glRasterPos4sv"/>
         </command>
         <command>
             <proto>void <name>glRasterPos4sv</name></proto>
-            <param kind="CoordS" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="44"/>
         </command>
         <command>
@@ -22214,16 +22214,16 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glRects</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x1</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y1</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x2</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y2</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x1</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y1</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x2</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y2</name></param>
             <vecequiv name="glRectsv"/>
         </command>
         <command>
             <proto>void <name>glRectsv</name></proto>
-            <param kind="CoordS" len="2">const <ptype>GLshort</ptype> *<name>v1</name></param>
-            <param kind="CoordS" len="2">const <ptype>GLshort</ptype> *<name>v2</name></param>
+            <param kind="Coord" len="2">const <ptype>GLshort</ptype> *<name>v1</name></param>
+            <param kind="Coord" len="2">const <ptype>GLshort</ptype> *<name>v2</name></param>
             <glx type="render" opcode="48"/>
         </command>
         <command>
@@ -23720,12 +23720,12 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTexCoord1s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
             <vecequiv name="glTexCoord1sv"/>
         </command>
         <command>
             <proto>void <name>glTexCoord1sv</name></proto>
-            <param kind="CoordS" len="1">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="1">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="52"/>
         </command>
         <command>
@@ -23878,13 +23878,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTexCoord2s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>t</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>t</name></param>
             <vecequiv name="glTexCoord2sv"/>
         </command>
         <command>
             <proto>void <name>glTexCoord2sv</name></proto>
-            <param kind="CoordS" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="56"/>
         </command>
         <command>
@@ -23956,14 +23956,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTexCoord3s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>t</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>r</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>t</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>r</name></param>
             <vecequiv name="glTexCoord3sv"/>
         </command>
         <command>
             <proto>void <name>glTexCoord3sv</name></proto>
-            <param kind="CoordS" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="60"/>
         </command>
         <command>
@@ -24082,15 +24082,15 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTexCoord4s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>s</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>t</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>r</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>q</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>s</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>t</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>r</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>q</name></param>
             <vecequiv name="glTexCoord4sv"/>
         </command>
         <command>
             <proto>void <name>glTexCoord4sv</name></proto>
-            <param kind="CoordS" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="64"/>
         </command>
         <command>
@@ -26616,13 +26616,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glVertex2s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
             <vecequiv name="glVertex2sv"/>
         </command>
         <command>
             <proto>void <name>glVertex2sv</name></proto>
-            <param kind="CoordS" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="68"/>
         </command>
         <command>
@@ -26693,14 +26693,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glVertex3s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>z</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>z</name></param>
             <vecequiv name="glVertex3sv"/>
         </command>
         <command>
             <proto>void <name>glVertex3sv</name></proto>
-            <param kind="CoordS" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="72"/>
         </command>
         <command>
@@ -26777,15 +26777,15 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glVertex4s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>z</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>w</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>z</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>w</name></param>
             <vecequiv name="glVertex4sv"/>
         </command>
         <command>
             <proto>void <name>glVertex4sv</name></proto>
-            <param kind="CoordS" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="76"/>
         </command>
         <command>
@@ -29184,38 +29184,38 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glWindowPos2s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
             <vecequiv name="glWindowPos2sv"/>
         </command>
         <command>
             <proto>void <name>glWindowPos2sARB</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
             <alias name="glWindowPos2s"/>
             <vecequiv name="glWindowPos2svARB"/>
         </command>
         <command>
             <proto>void <name>glWindowPos2sMESA</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
             <alias name="glWindowPos2s"/>
             <vecequiv name="glWindowPos2svMESA"/>
         </command>
         <command>
             <proto>void <name>glWindowPos2sv</name></proto>
-            <param kind="CoordS" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="230"/>
         </command>
         <command>
             <proto>void <name>glWindowPos2svARB</name></proto>
-            <param kind="CoordS" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
             <alias name="glWindowPos2sv"/>
             <glx type="render" opcode="230"/>
         </command>
         <command>
             <proto>void <name>glWindowPos2svMESA</name></proto>
-            <param kind="CoordS" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="2">const <ptype>GLshort</ptype> *<name>v</name></param>
             <alias name="glWindowPos2sv"/>
         </command>
         <command>
@@ -29337,41 +29337,41 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glWindowPos3s</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>z</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>z</name></param>
             <vecequiv name="glWindowPos3sv"/>
         </command>
         <command>
             <proto>void <name>glWindowPos3sARB</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>z</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>z</name></param>
             <alias name="glWindowPos3s"/>
             <vecequiv name="glWindowPos3svARB"/>
         </command>
         <command>
             <proto>void <name>glWindowPos3sMESA</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>z</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>z</name></param>
             <alias name="glWindowPos3s"/>
             <vecequiv name="glWindowPos3svMESA"/>
         </command>
         <command>
             <proto>void <name>glWindowPos3sv</name></proto>
-            <param kind="CoordS" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
             <glx type="render" opcode="230"/>
         </command>
         <command>
             <proto>void <name>glWindowPos3svARB</name></proto>
-            <param kind="CoordS" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
             <alias name="glWindowPos3sv"/>
             <glx type="render" opcode="230"/>
         </command>
         <command>
             <proto>void <name>glWindowPos3svMESA</name></proto>
-            <param kind="CoordS" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="3">const <ptype>GLshort</ptype> *<name>v</name></param>
             <alias name="glWindowPos3sv"/>
         </command>
         <command>
@@ -29412,15 +29412,15 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glWindowPos4sMESA</name></proto>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>x</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>y</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>z</name></param>
-            <param kind="CoordS"><ptype>GLshort</ptype> <name>w</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>x</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>y</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>z</name></param>
+            <param kind="Coord"><ptype>GLshort</ptype> <name>w</name></param>
             <vecequiv name="glWindowPos4svMESA"/>
         </command>
         <command>
             <proto>void <name>glWindowPos4svMESA</name></proto>
-            <param kind="CoordS" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
+            <param kind="Coord" len="4">const <ptype>GLshort</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glWindowRectanglesEXT</name></proto>
