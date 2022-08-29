@@ -7233,8 +7233,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glAttachObjectARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>containerObj</name></param>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>obj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>containerObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>obj</name></param>
             <alias name="glAttachShader"/>
         </command>
         <command>
@@ -7331,7 +7331,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBindAttribLocationARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>programObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>programObj</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param>const <ptype>GLcharARB</ptype> *<name>name</name></param>
             <alias name="glBindAttribLocation"/>
@@ -9178,7 +9178,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glCompileShaderARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>shaderObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>shaderObj</name></param>
             <alias name="glCompileShader"/>
         </command>
         <command>
@@ -10246,7 +10246,7 @@ typedef unsigned int GLhandleARB;
             <proto class="program"><ptype>GLuint</ptype> <name>glCreateProgram</name></proto>
         </command>
         <command>
-            <proto kind="handleARB"><ptype>GLhandleARB</ptype> <name>glCreateProgramObjectARB</name></proto>
+            <proto><ptype>GLhandleARB</ptype> <name>glCreateProgramObjectARB</name></proto>
             <alias name="glCreateProgram"/>
         </command>
         <command>
@@ -10283,7 +10283,7 @@ typedef unsigned int GLhandleARB;
             <param group="ShaderType"><ptype>GLenum</ptype> <name>type</name></param>
         </command>
         <command>
-            <proto kind="handleARB"><ptype>GLhandleARB</ptype> <name>glCreateShaderObjectARB</name></proto>
+            <proto><ptype>GLhandleARB</ptype> <name>glCreateShaderObjectARB</name></proto>
             <param group="ShaderType"><ptype>GLenum</ptype> <name>shaderType</name></param>
             <alias name="glCreateShader"/>
         </command>
@@ -10570,7 +10570,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDeleteObjectARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>obj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>obj</name></param>
         </command>
         <command>
             <proto>void <name>glDeleteOcclusionQueriesNV</name></proto>
@@ -10839,8 +10839,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDetachObjectARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>containerObj</name></param>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>attachedObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>containerObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>attachedObj</name></param>
             <alias name="glDetachShader"/>
         </command>
         <command>
@@ -12835,7 +12835,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetActiveAttribARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>programObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>programObj</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>maxLength</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
@@ -12882,7 +12882,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetActiveUniformARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>programObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>programObj</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>maxLength</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
@@ -12950,10 +12950,10 @@ typedef unsigned int GLhandleARB;
         </command>
         <command comment="Could be an alias of glGetAttachedShaders except that GLhandleARB is different on MacOS X">
             <proto>void <name>glGetAttachedObjectsARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>containerObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>containerObj</name></param>
             <param><ptype>GLsizei</ptype> <name>maxCount</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>count</name></param>
-            <param kind="handleARB" len="maxCount"><ptype>GLhandleARB</ptype> *<name>obj</name></param>
+            <param len="maxCount"><ptype>GLhandleARB</ptype> *<name>obj</name></param>
         </command>
         <command>
             <proto>void <name>glGetAttachedShaders</name></proto>
@@ -12969,7 +12969,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto><ptype>GLint</ptype> <name>glGetAttribLocationARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>programObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>programObj</name></param>
             <param>const <ptype>GLcharARB</ptype> *<name>name</name></param>
             <alias name="glGetAttribLocation"/>
         </command>
@@ -13588,7 +13588,7 @@ typedef unsigned int GLhandleARB;
             <alias name="glGetGraphicsResetStatus"/>
         </command>
         <command>
-            <proto kind="handleARB"><ptype>GLhandleARB</ptype> <name>glGetHandleARB</name></proto>
+            <proto><ptype>GLhandleARB</ptype> <name>glGetHandleARB</name></proto>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
         </command>
         <command>
@@ -13674,7 +13674,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetInfoLogARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>obj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>obj</name></param>
             <param><ptype>GLsizei</ptype> <name>maxLength</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
             <param len="maxLength"><ptype>GLcharARB</ptype> *<name>infoLog</name></param>
@@ -14303,7 +14303,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetObjectParameterfvARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>obj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>obj</name></param>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
@@ -14316,7 +14316,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetObjectParameterivARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>obj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>obj</name></param>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
@@ -15095,7 +15095,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetShaderSourceARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>obj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>obj</name></param>
             <param><ptype>GLsizei</ptype> <name>maxLength</name></param>
             <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
             <param len="maxLength"><ptype>GLcharARB</ptype> *<name>source</name></param>
@@ -15598,7 +15598,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto><ptype>GLint</ptype> <name>glGetUniformLocationARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>programObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>programObj</name></param>
             <param>const <ptype>GLcharARB</ptype> *<name>name</name></param>
             <alias name="glGetUniformLocation"/>
         </command>
@@ -15627,7 +15627,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetUniformfvARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>programObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>programObj</name></param>
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param len="COMPSIZE(programObj,location)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glGetUniformfv"/>
@@ -15652,7 +15652,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetUniformivARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>programObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>programObj</name></param>
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param len="COMPSIZE(programObj,location)"><ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glGetUniformiv"/>
@@ -17066,7 +17066,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glLinkProgramARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>programObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>programObj</name></param>
             <alias name="glLinkProgram"/>
         </command>
         <command>
@@ -23218,7 +23218,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glShaderSourceARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>shaderObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>shaderObj</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param len="count">const <ptype>GLcharARB</ptype> **<name>string</name></param>
             <param len="count">const <ptype>GLint</ptype> *<name>length</name></param>
@@ -26408,7 +26408,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glUseProgramObjectARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>programObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>programObj</name></param>
             <alias name="glUseProgram"/>
         </command>
         <command>
@@ -26495,7 +26495,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glValidateProgramARB</name></proto>
-            <param kind="handleARB"><ptype>GLhandleARB</ptype> <name>programObj</name></param>
+            <param><ptype>GLhandleARB</ptype> <name>programObj</name></param>
             <alias name="glValidateProgram"/>
         </command>
         <command>
