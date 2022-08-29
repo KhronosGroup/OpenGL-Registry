@@ -11524,7 +11524,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glEdgeFlagPointerListIBM</name></proto>
             <param><ptype>GLint</ptype> <name>stride</name></param>
-            <param kind="BooleanPointer" len="COMPSIZE(stride)">const <ptype>GLboolean</ptype> **<name>pointer</name></param>
+            <param len="COMPSIZE(stride)">const <ptype>GLboolean</ptype> **<name>pointer</name></param>
             <param><ptype>GLint</ptype> <name>ptrstride</name></param>
         </command>
         <command>
