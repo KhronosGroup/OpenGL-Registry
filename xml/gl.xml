@@ -8264,7 +8264,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glClearBufferfi</name></proto>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
-            <param kind="DrawBufferName"><ptype>GLint</ptype> <name>drawbuffer</name></param>
+            <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
             <param><ptype>GLfloat</ptype> <name>depth</name></param>
             <param><ptype>GLint</ptype> <name>stencil</name></param>
             <glx type="render" opcode="360"/>
@@ -8272,21 +8272,21 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glClearBufferfv</name></proto>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
-            <param kind="DrawBufferName"><ptype>GLint</ptype> <name>drawbuffer</name></param>
+            <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
             <param len="COMPSIZE(buffer)">const <ptype>GLfloat</ptype> *<name>value</name></param>
             <glx type="render" opcode="361"/>
         </command>
         <command>
             <proto>void <name>glClearBufferiv</name></proto>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
-            <param kind="DrawBufferName"><ptype>GLint</ptype> <name>drawbuffer</name></param>
+            <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
             <param len="COMPSIZE(buffer)">const <ptype>GLint</ptype> *<name>value</name></param>
             <glx type="render" opcode="362"/>
         </command>
         <command>
             <proto>void <name>glClearBufferuiv</name></proto>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
-            <param kind="DrawBufferName"><ptype>GLint</ptype> <name>drawbuffer</name></param>
+            <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
             <param len="COMPSIZE(buffer)">const <ptype>GLuint</ptype> *<name>value</name></param>
             <glx type="render" opcode="363"/>
         </command>
@@ -8401,7 +8401,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glClearNamedFramebufferfi</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
-            <param><ptype>GLint</ptype> <name>drawbuffer</name></param>
+            <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
             <param><ptype>GLfloat</ptype> <name>depth</name></param>
             <param><ptype>GLint</ptype> <name>stencil</name></param>
         </command>
@@ -8409,21 +8409,21 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glClearNamedFramebufferfv</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
-            <param><ptype>GLint</ptype> <name>drawbuffer</name></param>
+            <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
             <param>const <ptype>GLfloat</ptype> *<name>value</name></param>
         </command>
         <command>
             <proto>void <name>glClearNamedFramebufferiv</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
-            <param><ptype>GLint</ptype> <name>drawbuffer</name></param>
+            <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
             <param>const <ptype>GLint</ptype> *<name>value</name></param>
         </command>
         <command>
             <proto>void <name>glClearNamedFramebufferuiv</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
-            <param><ptype>GLint</ptype> <name>drawbuffer</name></param>
+            <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
             <param>const <ptype>GLuint</ptype> *<name>value</name></param>
         </command>
         <command>
