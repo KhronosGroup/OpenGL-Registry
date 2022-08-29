@@ -17044,7 +17044,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glLineStipple</name></proto>
             <param kind="CheckedInt32"><ptype>GLint</ptype> <name>factor</name></param>
-            <param kind="LineStipple"><ptype>GLushort</ptype> <name>pattern</name></param>
+            <param><ptype>GLushort</ptype> <name>pattern</name></param>
             <glx type="render" opcode="94"/>
         </command>
         <command>
