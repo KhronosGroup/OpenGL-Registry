@@ -14812,7 +14812,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetProgramStringNV</name></proto>
             <param class="program"><ptype>GLuint</ptype> <name>id</name></param>
             <param group="VertexAttribEnumNV"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="ProgramCharacterNV" len="COMPSIZE(id,pname)"><ptype>GLubyte</ptype> *<name>program</name></param>
+            <param kind="String" len="COMPSIZE(id,pname)"><ptype>GLubyte</ptype> *<name>program</name></param>
             <glx type="vendor" opcode="1299"/>
         </command>
         <command>
