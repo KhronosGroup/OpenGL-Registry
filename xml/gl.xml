@@ -8619,14 +8619,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glColor3hNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>red</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>green</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>blue</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>red</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>green</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>blue</name></param>
             <vecequiv name="glColor3hvNV"/>
         </command>
         <command>
             <proto>void <name>glColor3hvNV</name></proto>
-            <param kind="Half16NV" len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4244"/>
         </command>
         <command>
@@ -8759,15 +8759,15 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glColor4hNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>red</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>green</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>blue</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>alpha</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>red</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>green</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>blue</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>alpha</name></param>
             <vecequiv name="glColor4hvNV"/>
         </command>
         <command>
             <proto>void <name>glColor4hvNV</name></proto>
-            <param kind="Half16NV" len="4">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="4">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4245"/>
         </command>
         <command>
@@ -12075,12 +12075,12 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glFogCoordhNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>fog</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>fog</name></param>
             <vecequiv name="glFogCoordhvNV"/>
         </command>
         <command>
             <proto>void <name>glFogCoordhvNV</name></proto>
-            <param kind="Half16NV" len="1">const <ptype>GLhalfNV</ptype> *<name>fog</name></param>
+            <param len="1">const <ptype>GLhalfNV</ptype> *<name>fog</name></param>
             <glx type="render" opcode="4254"/>
         </command>
         <command>
@@ -18120,13 +18120,13 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiTexCoord1hNV</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>s</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>s</name></param>
             <vecequiv name="glMultiTexCoord1hvNV"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord1hvNV</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="Half16NV" len="1">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="1">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4250"/>
         </command>
         <command>
@@ -18261,14 +18261,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiTexCoord2hNV</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>s</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>t</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>s</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>t</name></param>
             <vecequiv name="glMultiTexCoord2hvNV"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord2hvNV</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="Half16NV" len="2">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="2">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4251"/>
         </command>
         <command>
@@ -18413,15 +18413,15 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiTexCoord3hNV</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>s</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>t</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>r</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>s</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>t</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>r</name></param>
             <vecequiv name="glMultiTexCoord3hvNV"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord3hvNV</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="Half16NV" len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4252"/>
         </command>
         <command>
@@ -18576,16 +18576,16 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glMultiTexCoord4hNV</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>s</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>t</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>r</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>q</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>s</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>t</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>r</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>q</name></param>
             <vecequiv name="glMultiTexCoord4hvNV"/>
         </command>
         <command>
             <proto>void <name>glMultiTexCoord4hvNV</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="Half16NV" len="4">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="4">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4253"/>
         </command>
         <command>
@@ -19496,14 +19496,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glNormal3hNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>nx</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>ny</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>nz</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>nx</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>ny</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>nz</name></param>
             <vecequiv name="glNormal3hvNV"/>
         </command>
         <command>
             <proto>void <name>glNormal3hvNV</name></proto>
-            <param kind="Half16NV" len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4243"/>
         </command>
         <command>
@@ -22912,14 +22912,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSecondaryColor3hNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>red</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>green</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>blue</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>red</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>green</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>blue</name></param>
             <vecequiv name="glSecondaryColor3hvNV"/>
         </command>
         <command>
             <proto>void <name>glSecondaryColor3hvNV</name></proto>
-            <param kind="Half16NV" len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4255"/>
         </command>
         <command>
@@ -23700,12 +23700,12 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTexCoord1hNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>s</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>s</name></param>
             <vecequiv name="glTexCoord1hvNV"/>
         </command>
         <command>
             <proto>void <name>glTexCoord1hvNV</name></proto>
-            <param kind="Half16NV" len="1">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="1">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4246"/>
         </command>
         <command>
@@ -23856,13 +23856,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTexCoord2hNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>s</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>t</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>s</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>t</name></param>
             <vecequiv name="glTexCoord2hvNV"/>
         </command>
         <command>
             <proto>void <name>glTexCoord2hvNV</name></proto>
-            <param kind="Half16NV" len="2">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="2">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4247"/>
         </command>
         <command>
@@ -23932,14 +23932,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTexCoord3hNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>s</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>t</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>r</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>s</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>t</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>r</name></param>
             <vecequiv name="glTexCoord3hvNV"/>
         </command>
         <command>
             <proto>void <name>glTexCoord3hvNV</name></proto>
-            <param kind="Half16NV" len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4248"/>
         </command>
         <command>
@@ -24056,15 +24056,15 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTexCoord4hNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>s</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>t</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>r</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>q</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>s</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>t</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>r</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>q</name></param>
             <vecequiv name="glTexCoord4hvNV"/>
         </command>
         <command>
             <proto>void <name>glTexCoord4hvNV</name></proto>
-            <param kind="Half16NV" len="4">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="4">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4249"/>
         </command>
         <command>
@@ -26594,13 +26594,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glVertex2hNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>x</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>y</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>x</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>y</name></param>
             <vecequiv name="glVertex2hvNV"/>
         </command>
         <command>
             <proto>void <name>glVertex2hvNV</name></proto>
-            <param kind="Half16NV" len="2">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="2">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4240"/>
         </command>
         <command>
@@ -26669,14 +26669,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glVertex3hNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>x</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>y</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>z</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>x</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>y</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>z</name></param>
             <vecequiv name="glVertex3hvNV"/>
         </command>
         <command>
             <proto>void <name>glVertex3hvNV</name></proto>
-            <param kind="Half16NV" len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4241"/>
         </command>
         <command>
@@ -26751,15 +26751,15 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glVertex4hNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>x</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>y</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>z</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>w</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>x</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>y</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>z</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>w</name></param>
             <vecequiv name="glVertex4hvNV"/>
         </command>
         <command>
             <proto>void <name>glVertex4hvNV</name></proto>
-            <param kind="Half16NV" len="4">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="4">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4242"/>
         </command>
         <command>
@@ -27114,13 +27114,13 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glVertexAttrib1hNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>x</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>x</name></param>
             <vecequiv name="glVertexAttrib1hvNV"/>
         </command>
         <command>
             <proto>void <name>glVertexAttrib1hvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param kind="Half16NV" len="1">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="1">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4257"/>
         </command>
         <command>
@@ -27252,14 +27252,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glVertexAttrib2hNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>x</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>y</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>x</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>y</name></param>
             <vecequiv name="glVertexAttrib2hvNV"/>
         </command>
         <command>
             <proto>void <name>glVertexAttrib2hvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param kind="Half16NV" len="2">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="2">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4258"/>
         </command>
         <command>
@@ -27400,15 +27400,15 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glVertexAttrib3hNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>x</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>y</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>z</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>x</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>y</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>z</name></param>
             <vecequiv name="glVertexAttrib3hvNV"/>
         </command>
         <command>
             <proto>void <name>glVertexAttrib3hvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param kind="Half16NV" len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4259"/>
         </command>
         <command>
@@ -27654,16 +27654,16 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glVertexAttrib4hNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>x</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>y</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>z</name></param>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>w</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>x</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>y</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>z</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>w</name></param>
             <vecequiv name="glVertexAttrib4hvNV"/>
         </command>
         <command>
             <proto>void <name>glVertexAttrib4hvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param kind="Half16NV" len="4">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="4">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4260"/>
         </command>
         <command>
@@ -28467,7 +28467,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribs1hvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param kind="Half16NV" len="n">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="n">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4261"/>
         </command>
         <command>
@@ -28495,7 +28495,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribs2hvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param kind="Half16NV" len="n">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="n">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4262"/>
         </command>
         <command>
@@ -28523,7 +28523,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribs3hvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param kind="Half16NV" len="n">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="n">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4263"/>
         </command>
         <command>
@@ -28551,7 +28551,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glVertexAttribs4hvNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param kind="Half16NV" len="n">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param len="n">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4264"/>
         </command>
         <command>
@@ -28856,12 +28856,12 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glVertexWeighthNV</name></proto>
-            <param kind="Half16NV"><ptype>GLhalfNV</ptype> <name>weight</name></param>
+            <param><ptype>GLhalfNV</ptype> <name>weight</name></param>
             <vecequiv name="glVertexWeighthvNV"/>
         </command>
         <command>
             <proto>void <name>glVertexWeighthvNV</name></proto>
-            <param kind="Half16NV" len="1">const <ptype>GLhalfNV</ptype> *<name>weight</name></param>
+            <param len="1">const <ptype>GLhalfNV</ptype> *<name>weight</name></param>
             <glx type="render" opcode="4256"/>
         </command>
         <command>
