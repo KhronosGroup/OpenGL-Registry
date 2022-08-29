@@ -7657,7 +7657,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>video_capture_slot</name></param>
             <param><ptype>GLuint</ptype> <name>stream</name></param>
             <param><ptype>GLenum</ptype> <name>frame_region</name></param>
-            <param kind="BufferOffsetARB"><ptype>GLintptrARB</ptype> <name>offset</name></param>
+            <param kind="BufferOffset"><ptype>GLintptrARB</ptype> <name>offset</name></param>
         </command>
         <command>
             <proto>void <name>glBindVideoCaptureStreamTextureNV</name></proto>
@@ -8164,7 +8164,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glBufferSubDataARB</name></proto>
             <param group="BufferTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="BufferOffsetARB"><ptype>GLintptrARB</ptype> <name>offset</name></param>
+            <param kind="BufferOffset"><ptype>GLintptrARB</ptype> <name>offset</name></param>
             <param kind="BufferSizeARB"><ptype>GLsizeiptrARB</ptype> <name>size</name></param>
             <param len="size">const void *<name>data</name></param>
             <alias name="glBufferSubData"/>
@@ -13048,7 +13048,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetBufferSubDataARB</name></proto>
             <param group="BufferTargetARB"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="BufferOffsetARB"><ptype>GLintptrARB</ptype> <name>offset</name></param>
+            <param kind="BufferOffset"><ptype>GLintptrARB</ptype> <name>offset</name></param>
             <param kind="BufferSizeARB"><ptype>GLsizeiptrARB</ptype> <name>size</name></param>
             <param len="size">void *<name>data</name></param>
             <alias name="glGetBufferSubData"/>
