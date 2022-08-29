@@ -47335,4 +47335,3 @@ typedef unsigned int GLhandleARB;
         <extension name="GL_EXT_texture_shadow_lod" supported="gl|glcore|gles2"/>
     </extensions>
 </registry>
-
