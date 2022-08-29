@@ -22365,7 +22365,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiColor3fVertex3fSUN</name></proto>
-            <param kind="ReplacementCodeSUN"><ptype>GLuint</ptype> <name>rc</name></param>
+            <param><ptype>GLuint</ptype> <name>rc</name></param>
             <param><ptype>GLfloat</ptype> <name>r</name></param>
             <param><ptype>GLfloat</ptype> <name>g</name></param>
             <param><ptype>GLfloat</ptype> <name>b</name></param>
@@ -22375,13 +22375,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiColor3fVertex3fvSUN</name></proto>
-            <param kind="ReplacementCodeSUN" len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
+            <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiColor4fNormal3fVertex3fSUN</name></proto>
-            <param kind="ReplacementCodeSUN"><ptype>GLuint</ptype> <name>rc</name></param>
+            <param><ptype>GLuint</ptype> <name>rc</name></param>
             <param><ptype>GLfloat</ptype> <name>r</name></param>
             <param><ptype>GLfloat</ptype> <name>g</name></param>
             <param><ptype>GLfloat</ptype> <name>b</name></param>
@@ -22395,14 +22395,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiColor4fNormal3fVertex3fvSUN</name></proto>
-            <param kind="ReplacementCodeSUN" len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
+            <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
             <param len="4">const <ptype>GLfloat</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>n</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiColor4ubVertex3fSUN</name></proto>
-            <param kind="ReplacementCodeSUN"><ptype>GLuint</ptype> <name>rc</name></param>
+            <param><ptype>GLuint</ptype> <name>rc</name></param>
             <param><ptype>GLubyte</ptype> <name>r</name></param>
             <param><ptype>GLubyte</ptype> <name>g</name></param>
             <param><ptype>GLubyte</ptype> <name>b</name></param>
@@ -22413,13 +22413,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiColor4ubVertex3fvSUN</name></proto>
-            <param kind="ReplacementCodeSUN" len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
+            <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
             <param len="4">const <ptype>GLubyte</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiNormal3fVertex3fSUN</name></proto>
-            <param kind="ReplacementCodeSUN"><ptype>GLuint</ptype> <name>rc</name></param>
+            <param><ptype>GLuint</ptype> <name>rc</name></param>
             <param><ptype>GLfloat</ptype> <name>nx</name></param>
             <param><ptype>GLfloat</ptype> <name>ny</name></param>
             <param><ptype>GLfloat</ptype> <name>nz</name></param>
@@ -22429,7 +22429,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiNormal3fVertex3fvSUN</name></proto>
-            <param kind="ReplacementCodeSUN" len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
+            <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>n</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
@@ -22439,7 +22439,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fSUN</name></proto>
-            <param kind="ReplacementCodeSUN"><ptype>GLuint</ptype> <name>rc</name></param>
+            <param><ptype>GLuint</ptype> <name>rc</name></param>
             <param><ptype>GLfloat</ptype> <name>s</name></param>
             <param><ptype>GLfloat</ptype> <name>t</name></param>
             <param><ptype>GLfloat</ptype> <name>r</name></param>
@@ -22455,7 +22455,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN</name></proto>
-            <param kind="ReplacementCodeSUN" len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
+            <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
             <param len="2">const <ptype>GLfloat</ptype> *<name>tc</name></param>
             <param len="4">const <ptype>GLfloat</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>n</name></param>
@@ -22463,7 +22463,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiTexCoord2fNormal3fVertex3fSUN</name></proto>
-            <param kind="ReplacementCodeSUN"><ptype>GLuint</ptype> <name>rc</name></param>
+            <param><ptype>GLuint</ptype> <name>rc</name></param>
             <param><ptype>GLfloat</ptype> <name>s</name></param>
             <param><ptype>GLfloat</ptype> <name>t</name></param>
             <param><ptype>GLfloat</ptype> <name>nx</name></param>
@@ -22475,14 +22475,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiTexCoord2fNormal3fVertex3fvSUN</name></proto>
-            <param kind="ReplacementCodeSUN" len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
+            <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
             <param len="2">const <ptype>GLfloat</ptype> *<name>tc</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>n</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiTexCoord2fVertex3fSUN</name></proto>
-            <param kind="ReplacementCodeSUN"><ptype>GLuint</ptype> <name>rc</name></param>
+            <param><ptype>GLuint</ptype> <name>rc</name></param>
             <param><ptype>GLfloat</ptype> <name>s</name></param>
             <param><ptype>GLfloat</ptype> <name>t</name></param>
             <param><ptype>GLfloat</ptype> <name>x</name></param>
@@ -22491,20 +22491,20 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiTexCoord2fVertex3fvSUN</name></proto>
-            <param kind="ReplacementCodeSUN" len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
+            <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
             <param len="2">const <ptype>GLfloat</ptype> *<name>tc</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiVertex3fSUN</name></proto>
-            <param kind="ReplacementCodeSUN"><ptype>GLuint</ptype> <name>rc</name></param>
+            <param><ptype>GLuint</ptype> <name>rc</name></param>
             <param><ptype>GLfloat</ptype> <name>x</name></param>
             <param><ptype>GLfloat</ptype> <name>y</name></param>
             <param><ptype>GLfloat</ptype> <name>z</name></param>
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiVertex3fvSUN</name></proto>
-            <param kind="ReplacementCodeSUN" len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
+            <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
