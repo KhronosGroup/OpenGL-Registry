@@ -8631,14 +8631,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glColor3i</name></proto>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>red</name></param>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>green</name></param>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>blue</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>red</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>green</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>blue</name></param>
             <vecequiv name="glColor3iv"/>
         </command>
         <command>
             <proto>void <name>glColor3iv</name></proto>
-            <param kind="ColorI" len="3">const <ptype>GLint</ptype> *<name>v</name></param>
+            <param kind="Color" len="3">const <ptype>GLint</ptype> *<name>v</name></param>
             <glx type="render" opcode="9"/>
         </command>
         <command>
@@ -8772,15 +8772,15 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glColor4i</name></proto>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>red</name></param>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>green</name></param>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>blue</name></param>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>alpha</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>red</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>green</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>blue</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>alpha</name></param>
             <vecequiv name="glColor4iv"/>
         </command>
         <command>
             <proto>void <name>glColor4iv</name></proto>
-            <param kind="ColorI" len="4">const <ptype>GLint</ptype> *<name>v</name></param>
+            <param kind="Color" len="4">const <ptype>GLint</ptype> *<name>v</name></param>
             <glx type="render" opcode="17"/>
         </command>
         <command>
@@ -22924,27 +22924,27 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSecondaryColor3i</name></proto>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>red</name></param>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>green</name></param>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>blue</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>red</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>green</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>blue</name></param>
             <vecequiv name="glSecondaryColor3iv"/>
         </command>
         <command>
             <proto>void <name>glSecondaryColor3iEXT</name></proto>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>red</name></param>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>green</name></param>
-            <param kind="ColorI"><ptype>GLint</ptype> <name>blue</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>red</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>green</name></param>
+            <param kind="Color"><ptype>GLint</ptype> <name>blue</name></param>
             <alias name="glSecondaryColor3i"/>
             <vecequiv name="glSecondaryColor3ivEXT"/>
         </command>
         <command>
             <proto>void <name>glSecondaryColor3iv</name></proto>
-            <param kind="ColorI" len="3">const <ptype>GLint</ptype> *<name>v</name></param>
+            <param kind="Color" len="3">const <ptype>GLint</ptype> *<name>v</name></param>
             <glx type="render" opcode="4128"/>
         </command>
         <command>
             <proto>void <name>glSecondaryColor3ivEXT</name></proto>
-            <param kind="ColorI" len="3">const <ptype>GLint</ptype> *<name>v</name></param>
+            <param kind="Color" len="3">const <ptype>GLint</ptype> *<name>v</name></param>
             <alias name="glSecondaryColor3iv"/>
             <glx type="render" opcode="4128"/>
         </command>
