@@ -10174,7 +10174,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCoverFillPathInstancedNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>numPaths</name></param>
             <param group="PathElementType"><ptype>GLenum</ptype> <name>pathNameType</name></param>
-            <param kind="PathElement" len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
+            <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
             <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
             <param group="PathCoverMode"><ptype>GLenum</ptype> <name>coverMode</name></param>
             <param group="PathTransformType"><ptype>GLenum</ptype> <name>transformType</name></param>
@@ -10189,7 +10189,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCoverStrokePathInstancedNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>numPaths</name></param>
             <param group="PathElementType"><ptype>GLenum</ptype> <name>pathNameType</name></param>
-            <param kind="PathElement" len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
+            <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
             <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
             <param group="PathCoverMode"><ptype>GLenum</ptype> <name>coverMode</name></param>
             <param group="PathTransformType"><ptype>GLenum</ptype> <name>transformType</name></param>
@@ -14393,7 +14393,7 @@ typedef unsigned int GLhandleARB;
             <param group="PathMetricMask"><ptype>GLbitfield</ptype> <name>metricQueryMask</name></param>
             <param><ptype>GLsizei</ptype> <name>numPaths</name></param>
             <param group="PathElementType"><ptype>GLenum</ptype> <name>pathNameType</name></param>
-            <param kind="PathElement" len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
+            <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
             <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
             <param len="COMPSIZE(metricQueryMask,numPaths,stride)"><ptype>GLfloat</ptype> *<name>metrics</name></param>
@@ -14415,7 +14415,7 @@ typedef unsigned int GLhandleARB;
             <param group="PathListMode"><ptype>GLenum</ptype> <name>pathListMode</name></param>
             <param><ptype>GLsizei</ptype> <name>numPaths</name></param>
             <param group="PathElementType"><ptype>GLenum</ptype> <name>pathNameType</name></param>
-            <param kind="PathElement" len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
+            <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
             <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
             <param><ptype>GLfloat</ptype> <name>advanceScale</name></param>
             <param><ptype>GLfloat</ptype> <name>kerningScale</name></param>
@@ -23355,7 +23355,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glStencilFillPathInstancedNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>numPaths</name></param>
             <param group="PathElementType"><ptype>GLenum</ptype> <name>pathNameType</name></param>
-            <param kind="PathElement" len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
+            <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
             <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
             <param group="PathFillMode"><ptype>GLenum</ptype> <name>fillMode</name></param>
             <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
@@ -23430,7 +23430,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glStencilStrokePathInstancedNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>numPaths</name></param>
             <param group="PathElementType"><ptype>GLenum</ptype> <name>pathNameType</name></param>
-            <param kind="PathElement" len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
+            <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
             <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
             <param kind="StencilValue"><ptype>GLint</ptype> <name>reference</name></param>
             <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
