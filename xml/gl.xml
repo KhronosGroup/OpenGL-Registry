@@ -26433,7 +26433,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glVDPAUGetSurfaceivNV</name></proto>
-            <param kind="vdpauSurfaceNV"><ptype>GLvdpauSurfaceNV</ptype> <name>surface</name></param>
+            <param><ptype>GLvdpauSurfaceNV</ptype> <name>surface</name></param>
             <param><ptype>GLenum</ptype> <name>pname</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param><ptype>GLsizei</ptype> *<name>length</name></param>
@@ -26446,29 +26446,29 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto><ptype>GLboolean</ptype> <name>glVDPAUIsSurfaceNV</name></proto>
-            <param kind="vdpauSurfaceNV"><ptype>GLvdpauSurfaceNV</ptype> <name>surface</name></param>
+            <param><ptype>GLvdpauSurfaceNV</ptype> <name>surface</name></param>
         </command>
         <command>
             <proto>void <name>glVDPAUMapSurfacesNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>numSurfaces</name></param>
-            <param kind="vdpauSurfaceNV" len="numSurfaces">const <ptype>GLvdpauSurfaceNV</ptype> *<name>surfaces</name></param>
+            <param len="numSurfaces">const <ptype>GLvdpauSurfaceNV</ptype> *<name>surfaces</name></param>
         </command>
         <command>
-            <proto kind="vdpauSurfaceNV"><ptype>GLvdpauSurfaceNV</ptype> <name>glVDPAURegisterOutputSurfaceNV</name></proto>
+            <proto><ptype>GLvdpauSurfaceNV</ptype> <name>glVDPAURegisterOutputSurfaceNV</name></proto>
             <param>const void *<name>vdpSurface</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>numTextureNames</name></param>
             <param len="numTextureNames">const <ptype>GLuint</ptype> *<name>textureNames</name></param>
         </command>
         <command>
-            <proto kind="vdpauSurfaceNV"><ptype>GLvdpauSurfaceNV</ptype> <name>glVDPAURegisterVideoSurfaceNV</name></proto>
+            <proto><ptype>GLvdpauSurfaceNV</ptype> <name>glVDPAURegisterVideoSurfaceNV</name></proto>
             <param>const void *<name>vdpSurface</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>numTextureNames</name></param>
             <param len="numTextureNames">const <ptype>GLuint</ptype> *<name>textureNames</name></param>
         </command>
         <command>
-            <proto kind="vdpauSurfaceNV"><ptype>GLvdpauSurfaceNV</ptype> <name>glVDPAURegisterVideoSurfaceWithPictureStructureNV</name></proto>
+            <proto><ptype>GLvdpauSurfaceNV</ptype> <name>glVDPAURegisterVideoSurfaceWithPictureStructureNV</name></proto>
             <param>const void *<name>vdpSurface</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLsizei</ptype> <name>numTextureNames</name></param>
@@ -26477,17 +26477,17 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glVDPAUSurfaceAccessNV</name></proto>
-            <param kind="vdpauSurfaceNV"><ptype>GLvdpauSurfaceNV</ptype> <name>surface</name></param>
+            <param><ptype>GLvdpauSurfaceNV</ptype> <name>surface</name></param>
             <param><ptype>GLenum</ptype> <name>access</name></param>
         </command>
         <command>
             <proto>void <name>glVDPAUUnmapSurfacesNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>numSurface</name></param>
-            <param kind="vdpauSurfaceNV" len="numSurface">const <ptype>GLvdpauSurfaceNV</ptype> *<name>surfaces</name></param>
+            <param len="numSurface">const <ptype>GLvdpauSurfaceNV</ptype> *<name>surfaces</name></param>
         </command>
         <command>
             <proto>void <name>glVDPAUUnregisterSurfaceNV</name></proto>
-            <param kind="vdpauSurfaceNV"><ptype>GLvdpauSurfaceNV</ptype> <name>surface</name></param>
+            <param><ptype>GLvdpauSurfaceNV</ptype> <name>surface</name></param>
         </command>
         <command>
             <proto>void <name>glValidateProgram</name></proto>
