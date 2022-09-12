@@ -8175,7 +8175,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glCallList</name></proto>
-            <param kind="List"><ptype>GLuint</ptype> <name>list</name></param>
+            <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <glx type="render" opcode="1"/>
         </command>
         <command>
@@ -13820,13 +13820,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetListParameterfvSGIX</name></proto>
-            <param kind="List"><ptype>GLuint</ptype> <name>list</name></param>
+            <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedFloat32" len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetListParameterivSGIX</name></proto>
-            <param kind="List"><ptype>GLuint</ptype> <name>list</name></param>
+            <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedInt32" len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
@@ -17071,7 +17071,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glListBase</name></proto>
-            <param kind="List"><ptype>GLuint</ptype> <name>base</name></param>
+            <param class="display list"><ptype>GLuint</ptype> <name>base</name></param>
             <glx type="render" opcode="3"/>
         </command>
         <command>
@@ -17086,28 +17086,28 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glListParameterfSGIX</name></proto>
-            <param kind="List"><ptype>GLuint</ptype> <name>list</name></param>
+            <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
             <glx type="render" opcode="2078"/>
         </command>
         <command>
             <proto>void <name>glListParameterfvSGIX</name></proto>
-            <param kind="List"><ptype>GLuint</ptype> <name>list</name></param>
+            <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="2079"/>
         </command>
         <command>
             <proto>void <name>glListParameteriSGIX</name></proto>
-            <param kind="List"><ptype>GLuint</ptype> <name>list</name></param>
+            <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
             <glx type="render" opcode="2080"/>
         </command>
         <command>
             <proto>void <name>glListParameterivSGIX</name></proto>
-            <param kind="List"><ptype>GLuint</ptype> <name>list</name></param>
+            <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
             <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="2081"/>
@@ -19434,7 +19434,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glNewList</name></proto>
-            <param kind="List"><ptype>GLuint</ptype> <name>list</name></param>
+            <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListMode"><ptype>GLenum</ptype> <name>mode</name></param>
             <glx type="single" opcode="101"/>
         </command>
