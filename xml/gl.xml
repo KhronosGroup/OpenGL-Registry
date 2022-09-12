@@ -66,6 +66,22 @@ typedef unsigned int GLhandleARB;
         <type>typedef void (<apientry/> *<name>GLVULKANPROCNV</name>)(void);</type>
     </types>
 
+    <kinds>
+        <kind name="Color" desc="This parameter represents part of or a complete color." />
+        <kind name="Coord" desc="This parameter represents a coordinate." />
+        <kind name="WinCoord" desc="This parameter represents a window coordinate." />
+        <kind name="Clamped01" desc="This parameter will get clamped to the 0 to 1 range." />
+        <kind name="StencilValue" desc="" />
+        <kind name="CompressedTextureARB" desc="This parameter contains compressed texture data." />
+        <kind name="BufferOffset" desc="This parameter represents an offset into a buffer." />
+        <kind name="BufferSize" desc="This parameter represents the size of a buffer." />
+        <kind name="String" desc="This parameter represents a string of characters." />
+        <!--ColorIndexValue-->
+        <!--SelectName  glLoadName-->
+        <!--FeedbackElement glPassThrough-->
+        
+    </kinds>
+
     <!-- SECTION: GL enumerant (token) definitions. -->
 
     <!-- Bitmasks each have their own namespace, although bits are
