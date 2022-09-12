@@ -10311,8 +10311,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto class="sync"><ptype>GLsync</ptype> <name>glCreateSyncFromCLeventARB</name></proto>
-            <param kind="cl_context"><ptype>struct _cl_context</ptype> *<name>context</name></param>
-            <param kind="cl_event"><ptype>struct _cl_event</ptype> *<name>event</name></param>
+            <param><ptype>struct _cl_context</ptype> *<name>context</name></param>
+            <param><ptype>struct _cl_event</ptype> *<name>event</name></param>
             <param><ptype>GLbitfield</ptype> <name>flags</name></param>
         </command>
         <command>
