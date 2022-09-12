@@ -14362,7 +14362,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetPathCommandsNV</name></proto>
             <param kind="Path"><ptype>GLuint</ptype> <name>path</name></param>
-            <param kind="PathCommand" len="COMPSIZE(path)"><ptype>GLubyte</ptype> *<name>commands</name></param>
+            <param group="PathCoordType" len="COMPSIZE(path)"><ptype>GLubyte</ptype> *<name>commands</name></param>
         </command>
         <command>
             <proto>void <name>glGetPathCoordsNV</name></proto>
@@ -19791,7 +19791,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glPathCommandsNV</name></proto>
             <param kind="Path"><ptype>GLuint</ptype> <name>path</name></param>
             <param><ptype>GLsizei</ptype> <name>numCommands</name></param>
-            <param kind="PathCommand" len="numCommands">const <ptype>GLubyte</ptype> *<name>commands</name></param>
+            <param group="PathCoordType" len="numCommands">const <ptype>GLubyte</ptype> *<name>commands</name></param>
             <param><ptype>GLsizei</ptype> <name>numCoords</name></param>
             <param group="PathCoordType"><ptype>GLenum</ptype> <name>coordType</name></param>
             <param len="COMPSIZE(numCoords,coordType)">const void *<name>coords</name></param>
@@ -19922,7 +19922,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>commandStart</name></param>
             <param><ptype>GLsizei</ptype> <name>commandsToDelete</name></param>
             <param><ptype>GLsizei</ptype> <name>numCommands</name></param>
-            <param kind="PathCommand" len="numCommands">const <ptype>GLubyte</ptype> *<name>commands</name></param>
+            <param group="PathCoordType" len="numCommands">const <ptype>GLubyte</ptype> *<name>commands</name></param>
             <param><ptype>GLsizei</ptype> <name>numCoords</name></param>
             <param group="PathCoordType"><ptype>GLenum</ptype> <name>coordType</name></param>
             <param len="COMPSIZE(numCoords,coordType)">const void *<name>coords</name></param>
