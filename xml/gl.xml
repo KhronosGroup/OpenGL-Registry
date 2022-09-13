@@ -5889,7 +5889,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x907F" name="GL_PATH_CLIENT_LENGTH_NV" group="PathParameter"/>
         <enum value="0x9080" name="GL_PATH_FILL_MODE_NV" group="PathParameter,PathFillMode"/>
         <enum value="0x9081" name="GL_PATH_FILL_MASK_NV" group="PathParameter"/>
-        <enum value="0x9082" name="GL_PATH_FILL_COVER_MODE_NV" group="PathCoverMode,PathParameter"/>
+        <enum value="0x9082" name="GL_PATH_FILL_COVER_MODE_NV" group="PathCoverMode,InstancedPathCoverMode,PathParameter"/>
         <enum value="0x9083" name="GL_PATH_STROKE_COVER_MODE_NV" group="PathParameter"/>
         <enum value="0x9084" name="GL_PATH_STROKE_MASK_NV" group="PathParameter"/>
             <!-- <enum value="0x9085" name="GL_PATH_SAMPLE_QUALITY_NV"          comment="Removed from extension"/> -->
@@ -5898,9 +5898,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9088" name="GL_COUNT_UP_NV" group="PathFillMode"/>
         <enum value="0x9089" name="GL_COUNT_DOWN_NV" group="PathFillMode"/>
         <enum value="0x908A" name="GL_PATH_OBJECT_BOUNDING_BOX_NV" group="PathGenMode,PathParameter"/>
-        <enum value="0x908B" name="GL_CONVEX_HULL_NV" group="PathCoverMode"/>
+        <enum value="0x908B" name="GL_CONVEX_HULL_NV" group="PathCoverMode,InstancedPathCoverMode"/>
             <!-- <enum value="0x908C" name="GL_MULTI_HULLS_NV"                  comment="Removed from extension"/> -->
-        <enum value="0x908D" name="GL_BOUNDING_BOX_NV" group="PathCoverMode"/>
+        <enum value="0x908D" name="GL_BOUNDING_BOX_NV" group="PathCoverMode,InstancedPathCoverMode"/>
         <enum value="0x908E" name="GL_TRANSLATE_X_NV" group="PathTransformType"/>
         <enum value="0x908F" name="GL_TRANSLATE_Y_NV" group="PathTransformType"/>
         <enum value="0x9090" name="GL_TRANSLATE_2D_NV" group="PathTransformType"/>
@@ -5915,7 +5915,7 @@ typedef unsigned int GLhandleARB;
             <!-- <enum value="0x9099" name="GL_TRANSPOSE_PROJECTIVE_3D_NV"      comment="Removed from extension"/> -->
         <enum value="0x909A" name="GL_UTF8_NV" group="PathElementType"/>
         <enum value="0x909B" name="GL_UTF16_NV" group="PathElementType"/>
-        <enum value="0x909C" name="GL_BOUNDING_BOX_OF_BOUNDING_BOXES_NV" group="PathCoverMode"/>
+        <enum value="0x909C" name="GL_BOUNDING_BOX_OF_BOUNDING_BOXES_NV" group="InstancedPathCoverMode"/>
         <enum value="0x909D" name="GL_PATH_COMMAND_COUNT_NV" group="PathParameter"/>
         <enum value="0x909E" name="GL_PATH_COORD_COUNT_NV" group="PathParameter"/>
         <enum value="0x909F" name="GL_PATH_DASH_ARRAY_COUNT_NV" group="PathParameter"/>
@@ -10197,7 +10197,7 @@ typedef unsigned int GLhandleARB;
             <param group="PathElementType"><ptype>GLenum</ptype> <name>pathNameType</name></param>
             <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
             <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
-            <param group="PathCoverMode"><ptype>GLenum</ptype> <name>coverMode</name></param>
+            <param group="InstancedPathCoverMode"><ptype>GLenum</ptype> <name>coverMode</name></param>
             <param group="PathTransformType"><ptype>GLenum</ptype> <name>transformType</name></param>
             <param len="COMPSIZE(numPaths,transformType)">const <ptype>GLfloat</ptype> *<name>transformValues</name></param>
         </command>
@@ -10212,7 +10212,7 @@ typedef unsigned int GLhandleARB;
             <param group="PathElementType"><ptype>GLenum</ptype> <name>pathNameType</name></param>
             <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
             <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
-            <param group="PathCoverMode"><ptype>GLenum</ptype> <name>coverMode</name></param>
+            <param group="InstancedPathCoverMode"><ptype>GLenum</ptype> <name>coverMode</name></param>
             <param group="PathTransformType"><ptype>GLenum</ptype> <name>transformType</name></param>
             <param len="COMPSIZE(numPaths,transformType)">const <ptype>GLfloat</ptype> *<name>transformValues</name></param>
         </command>
@@ -23467,40 +23467,40 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glStencilThenCoverFillPathInstancedNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>numPaths</name></param>
-            <param><ptype>GLenum</ptype> <name>pathNameType</name></param>
-            <param>const void *<name>paths</name></param>
-            <param><ptype>GLuint</ptype> <name>pathBase</name></param>
-            <param><ptype>GLenum</ptype> <name>fillMode</name></param>
-            <param><ptype>GLuint</ptype> <name>mask</name></param>
-            <param><ptype>GLenum</ptype> <name>coverMode</name></param>
-            <param><ptype>GLenum</ptype> <name>transformType</name></param>
-            <param>const <ptype>GLfloat</ptype> *<name>transformValues</name></param>
+            <param group="PathElementType"><ptype>GLenum</ptype> <name>pathNameType</name></param>
+            <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
+            <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
+            <param group="PathFillMode"><ptype>GLenum</ptype> <name>fillMode</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param group="InstancedPathCoverMode"><ptype>GLenum</ptype> <name>coverMode</name></param>
+            <param group="PathTransformType"><ptype>GLenum</ptype> <name>transformType</name></param>
+            <param len="COMPSIZE(numPaths,transformType)">const <ptype>GLfloat</ptype> *<name>transformValues</name></param>
         </command>
         <command>
             <proto>void <name>glStencilThenCoverFillPathNV</name></proto>
-            <param><ptype>GLuint</ptype> <name>path</name></param>
-            <param><ptype>GLenum</ptype> <name>fillMode</name></param>
-            <param><ptype>GLuint</ptype> <name>mask</name></param>
-            <param><ptype>GLenum</ptype> <name>coverMode</name></param>
+            <param kind="Path"><ptype>GLuint</ptype> <name>path</name></param>
+            <param group="PathFillMode"><ptype>GLenum</ptype> <name>fillMode</name></param>
+            <param kind="StencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param group="PathCoverMode"><ptype>GLenum</ptype> <name>coverMode</name></param>
         </command>
         <command>
             <proto>void <name>glStencilThenCoverStrokePathInstancedNV</name></proto>
             <param><ptype>GLsizei</ptype> <name>numPaths</name></param>
-            <param><ptype>GLenum</ptype> <name>pathNameType</name></param>
-            <param>const void *<name>paths</name></param>
-            <param><ptype>GLuint</ptype> <name>pathBase</name></param>
-            <param><ptype>GLint</ptype> <name>reference</name></param>
-            <param><ptype>GLuint</ptype> <name>mask</name></param>
-            <param><ptype>GLenum</ptype> <name>coverMode</name></param>
-            <param><ptype>GLenum</ptype> <name>transformType</name></param>
-            <param>const <ptype>GLfloat</ptype> *<name>transformValues</name></param>
+            <param group="PathElementType"><ptype>GLenum</ptype> <name>pathNameType</name></param>
+            <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
+            <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
+            <param kind="StencilValue"><ptype>GLint</ptype> <name>reference</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param group="InstancedPathCoverMode"><ptype>GLenum</ptype> <name>coverMode</name></param>
+            <param group="PathTransformType"><ptype>GLenum</ptype> <name>transformType</name></param>
+            <param len="COMPSIZE(numPaths,transformType)">const <ptype>GLfloat</ptype> *<name>transformValues</name></param>
         </command>
         <command>
             <proto>void <name>glStencilThenCoverStrokePathNV</name></proto>
-            <param><ptype>GLuint</ptype> <name>path</name></param>
-            <param><ptype>GLint</ptype> <name>reference</name></param>
-            <param><ptype>GLuint</ptype> <name>mask</name></param>
-            <param><ptype>GLenum</ptype> <name>coverMode</name></param>
+            <param kind="Path"><ptype>GLuint</ptype> <name>path</name></param>
+            <param kind="StencilValue"><ptype>GLint</ptype> <name>reference</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param group="PathCoverMode"><ptype>GLenum</ptype> <name>coverMode</name></param>
         </command>
         <command>
             <proto>void <name>glStopInstrumentsSGIX</name></proto>
