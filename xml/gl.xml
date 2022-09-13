@@ -8426,21 +8426,21 @@ typedef unsigned int GLhandleARB;
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
             <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
-            <param>const <ptype>GLfloat</ptype> *<name>value</name></param>
+            <param len="COMPSIZE(buffer)">const <ptype>GLfloat</ptype> *<name>value</name></param>
         </command>
         <command>
             <proto>void <name>glClearNamedFramebufferiv</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
-            <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
-            <param>const <ptype>GLint</ptype> *<name>value</name></param>
+            <param><ptype>GLint</ptype> <name>drawbuffer</name></param>
+            <param len="COMPSIZE(buffer)">const <ptype>GLint</ptype> *<name>value</name></param>
         </command>
         <command>
             <proto>void <name>glClearNamedFramebufferuiv</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
             <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
-            <param>const <ptype>GLuint</ptype> *<name>value</name></param>
+            <param len="COMPSIZE(buffer)">const <ptype>GLuint</ptype> *<name>value</name></param>
         </command>
         <command>
             <proto>void <name>glClearPixelLocalStorageuiEXT</name></proto>
@@ -13236,7 +13236,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>pixels</name></param>
+            <param len="bufSize">void *<name>pixels</name></param>
         </command>
         <command>
             <proto>void <name>glGetCompressedTextureImageEXT</name></proto>
@@ -13256,7 +13256,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>pixels</name></param>
+            <param len="bufSize">void *<name>pixels</name></param>
         </command>
         <command>
             <proto>void <name>glGetConvolutionFilter</name></proto>
@@ -13330,7 +13330,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLuint</ptype> <name>count</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="count"><ptype>GLenum</ptype> *<name>categories</name></param>
-            <param len="count" group="DebugSeverity"><ptype>GLuint</ptype> *<name>severities</name></param>
+            <param len="count" group="DebugSeverity"><ptype>GLenum</ptype> *<name>severities</name></param>
             <param len="count"><ptype>GLuint</ptype> *<name>ids</name></param>
             <param len="count"><ptype>GLsizei</ptype> *<name>lengths</name></param>
             <param len="bufSize"><ptype>GLchar</ptype> *<name>message</name></param>
@@ -15401,7 +15401,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>pixels</name></param>
+            <param len="bufSize">void *<name>pixels</name></param>
         </command>
         <command>
             <proto>void <name>glGetTextureImageEXT</name></proto>
@@ -15523,7 +15523,7 @@ typedef unsigned int GLhandleARB;
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param>void *<name>pixels</name></param>
+            <param len="bufSize">void *<name>pixels</name></param>
         </command>
         <command>
             <proto>void <name>glGetTrackMatrixivNV</name></proto>
@@ -16613,13 +16613,13 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glInvalidateNamedFramebufferData</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param><ptype>GLsizei</ptype> <name>numAttachments</name></param>
-            <param group="FramebufferAttachment">const <ptype>GLenum</ptype> *<name>attachments</name></param>
+            <param group="FramebufferAttachment" len="numAttachments">const <ptype>GLenum</ptype> *<name>attachments</name></param>
         </command>
         <command>
             <proto>void <name>glInvalidateNamedFramebufferSubData</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param><ptype>GLsizei</ptype> <name>numAttachments</name></param>
-            <param group="FramebufferAttachment">const <ptype>GLenum</ptype> *<name>attachments</name></param>
+            <param group="FramebufferAttachment" len="numAttachments">const <ptype>GLenum</ptype> *<name>attachments</name></param>
             <param><ptype>GLint</ptype> <name>x</name></param>
             <param><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -19076,7 +19076,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glNamedBufferData</name></proto>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param kind="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
-            <param>const void *<name>data</name></param>
+            <param len="size">const void *<name>data</name></param>
             <param group="VertexBufferObjectUsage"><ptype>GLenum</ptype> <name>usage</name></param>
         </command>
         <command>
@@ -19144,7 +19144,7 @@ typedef unsigned int GLhandleARB;
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param kind="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
-            <param len="COMPSIZE(size)">const void *<name>data</name></param>
+            <param len="size">const void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glNamedBufferSubDataEXT</name></proto>
@@ -19171,7 +19171,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glNamedFramebufferDrawBuffers</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
-            <param group="ColorBuffer">const <ptype>GLenum</ptype> *<name>bufs</name></param>
+            <param group="ColorBuffer" len="n">const <ptype>GLenum</ptype> *<name>bufs</name></param>
         </command>
         <command>
             <proto>void <name>glNamedFramebufferParameteri</name></proto>
@@ -23308,8 +23308,8 @@ typedef unsigned int GLhandleARB;
             <param class="shader"><ptype>GLuint</ptype> <name>shader</name></param>
             <param>const <ptype>GLchar</ptype> *<name>pEntryPoint</name></param>
             <param><ptype>GLuint</ptype> <name>numSpecializationConstants</name></param>
-            <param>const <ptype>GLuint</ptype> *<name>pConstantIndex</name></param>
-            <param>const <ptype>GLuint</ptype> *<name>pConstantValue</name></param>
+            <param len="numSpecializationConstants">const <ptype>GLuint</ptype> *<name>pConstantIndex</name></param>
+            <param len="numSpecializationConstants">const <ptype>GLuint</ptype> *<name>pConstantValue</name></param>
         </command>
         <command>
             <proto>void <name>glSpecializeShaderARB</name></proto>
@@ -25084,7 +25084,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureParameterIiv</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param>const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glTextureParameterIivEXT</name></proto>
@@ -25097,7 +25097,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureParameterIuiv</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param>const <ptype>GLuint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLuint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glTextureParameterIuivEXT</name></proto>
@@ -25124,7 +25124,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureParameterfv</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param>const <ptype>GLfloat</ptype> *<name>param</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glTextureParameterfvEXT</name></proto>
@@ -25151,7 +25151,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureParameteriv</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param>const <ptype>GLint</ptype> *<name>param</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>param</name></param>
         </command>
         <command>
             <proto>void <name>glTextureParameterivEXT</name></proto>
@@ -27034,9 +27034,9 @@ typedef unsigned int GLhandleARB;
             <param class="vertex array"><ptype>GLuint</ptype> <name>vaobj</name></param>
             <param><ptype>GLuint</ptype> <name>first</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
-            <param class="buffer">const <ptype>GLuint</ptype> *<name>buffers</name></param>
-            <param>const <ptype>GLintptr</ptype> *<name>offsets</name></param>
-            <param>const <ptype>GLsizei</ptype> *<name>strides</name></param>
+            <param class="buffer" len="count">const <ptype>GLuint</ptype> *<name>buffers</name></param>
+            <param len="count">const <ptype>GLintptr</ptype> *<name>offsets</name></param>
+            <param len="count">const <ptype>GLsizei</ptype> *<name>strides</name></param>
         </command>
         <command>
             <proto>void <name>glVertexArrayVertexOffsetEXT</name></proto>

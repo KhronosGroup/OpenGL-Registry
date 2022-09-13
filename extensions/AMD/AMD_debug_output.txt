@@ -22,8 +22,8 @@ Status
     
 Version
     
-    Last Modified Date: May 7, 2010
-    Author Revision: 9
+    Last Modified Date: July 21, 2022
+    Author Revision: 10
 
 Number
 
@@ -110,7 +110,7 @@ New Procedures and Functions
     uint GetDebugMessageLogAMD(uint count,
                                sizei bufsize,
                                enum* categories,
-                               uint* severities,
+                               enum* severities,
                                uint* ids,
                                sizei* lengths, 
                                char* message);
@@ -528,6 +528,9 @@ Issues
 
 
 Revision History
+
+    (v10 2022-07-21, jhager)
+        - Changed type of argument "severities" from uint to enum in GetDebugMessageLogAMD.
 
     (v9, 2010-05-07, jkontti)
         - Removed inconsistent language from New Tokens category for tokens
