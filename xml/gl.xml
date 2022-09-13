@@ -80,9 +80,8 @@ typedef unsigned int GLhandleARB;
 
         <!-- Applicable to legacy OpenGL functions -->
         <kind name="ColorIndexValue" desc="This parameter represents a color in the color index." />
-        <!--SelectName  glLoadName-->
-        <!--FeedbackElement glPassThrough-->
-        
+        <kind name="SelectName" desc="This parameter represents a name on the name stack used in the GL_SELECT render mode." />
+        <kind name="FeedbackElement" desc="This parameter represents a marker to be placed in the feedback buffer." />
     </kinds>
 
     <!-- SECTION: GL enumerant (token) definitions. -->
