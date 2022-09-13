@@ -7784,18 +7784,18 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBlendColor</name></proto>
-            <param kind="Color"><ptype>GLfloat</ptype> <name>red</name></param>
-            <param kind="Color"><ptype>GLfloat</ptype> <name>green</name></param>
-            <param kind="Color"><ptype>GLfloat</ptype> <name>blue</name></param>
-            <param kind="Color"><ptype>GLfloat</ptype> <name>alpha</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfloat</ptype> <name>red</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfloat</ptype> <name>green</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfloat</ptype> <name>blue</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfloat</ptype> <name>alpha</name></param>
             <glx type="render" opcode="4096"/>
         </command>
         <command>
             <proto>void <name>glBlendColorEXT</name></proto>
-            <param kind="Color"><ptype>GLfloat</ptype> <name>red</name></param>
-            <param kind="Color"><ptype>GLfloat</ptype> <name>green</name></param>
-            <param kind="Color"><ptype>GLfloat</ptype> <name>blue</name></param>
-            <param kind="Color"><ptype>GLfloat</ptype> <name>alpha</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfloat</ptype> <name>red</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfloat</ptype> <name>green</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfloat</ptype> <name>blue</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfloat</ptype> <name>alpha</name></param>
             <alias name="glBlendColor"/>
             <glx type="render" opcode="4096"/>
         </command>
