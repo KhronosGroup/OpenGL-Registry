@@ -76,7 +76,10 @@ typedef unsigned int GLhandleARB;
         <kind name="BufferOffset" desc="This parameter represents an offset into a buffer." />
         <kind name="BufferSize" desc="This parameter represents the size of a buffer." />
         <kind name="String" desc="This parameter represents a string of characters." />
-        <!--ColorIndexValue-->
+        <kind name="DrawBufferIndex" desc="This parameter represents the i in GL_DRAW_BUFFERi." />
+
+        <!-- Applicable to legacy OpenGL functions -->
+        <kind name="ColorIndexValue" desc="This parameter represents a color in the color index." />
         <!--SelectName  glLoadName-->
         <!--FeedbackElement glPassThrough-->
         
@@ -16503,52 +16506,52 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glIndexd</name></proto>
-            <param kind="ColorIndexValueD"><ptype>GLdouble</ptype> <name>c</name></param>
+            <param kind="ColorIndexValue"><ptype>GLdouble</ptype> <name>c</name></param>
             <vecequiv name="glIndexdv"/>
         </command>
         <command>
             <proto>void <name>glIndexdv</name></proto>
-            <param kind="ColorIndexValueD" len="1">const <ptype>GLdouble</ptype> *<name>c</name></param>
+            <param kind="ColorIndexValue" len="1">const <ptype>GLdouble</ptype> *<name>c</name></param>
             <glx type="render" opcode="24"/>
         </command>
         <command>
             <proto>void <name>glIndexf</name></proto>
-            <param kind="ColorIndexValueF"><ptype>GLfloat</ptype> <name>c</name></param>
+            <param kind="ColorIndexValue"><ptype>GLfloat</ptype> <name>c</name></param>
             <vecequiv name="glIndexfv"/>
         </command>
         <command>
             <proto>void <name>glIndexfv</name></proto>
-            <param kind="ColorIndexValueF" len="1">const <ptype>GLfloat</ptype> *<name>c</name></param>
+            <param kind="ColorIndexValue" len="1">const <ptype>GLfloat</ptype> *<name>c</name></param>
             <glx type="render" opcode="25"/>
         </command>
         <command>
             <proto>void <name>glIndexi</name></proto>
-            <param kind="ColorIndexValueI"><ptype>GLint</ptype> <name>c</name></param>
+            <param kind="ColorIndexValue"><ptype>GLint</ptype> <name>c</name></param>
             <vecequiv name="glIndexiv"/>
         </command>
         <command>
             <proto>void <name>glIndexiv</name></proto>
-            <param kind="ColorIndexValueI" len="1">const <ptype>GLint</ptype> *<name>c</name></param>
+            <param kind="ColorIndexValue" len="1">const <ptype>GLint</ptype> *<name>c</name></param>
             <glx type="render" opcode="26"/>
         </command>
         <command>
             <proto>void <name>glIndexs</name></proto>
-            <param kind="ColorIndexValueS"><ptype>GLshort</ptype> <name>c</name></param>
+            <param kind="ColorIndexValue"><ptype>GLshort</ptype> <name>c</name></param>
             <vecequiv name="glIndexsv"/>
         </command>
         <command>
             <proto>void <name>glIndexsv</name></proto>
-            <param kind="ColorIndexValueS" len="1">const <ptype>GLshort</ptype> *<name>c</name></param>
+            <param kind="ColorIndexValue" len="1">const <ptype>GLshort</ptype> *<name>c</name></param>
             <glx type="render" opcode="27"/>
         </command>
         <command>
             <proto>void <name>glIndexub</name></proto>
-            <param kind="ColorIndexValueUB"><ptype>GLubyte</ptype> <name>c</name></param>
+            <param kind="ColorIndexValue"><ptype>GLubyte</ptype> <name>c</name></param>
             <vecequiv name="glIndexubv"/>
         </command>
         <command>
             <proto>void <name>glIndexubv</name></proto>
-            <param kind="ColorIndexValueUB" len="1">const <ptype>GLubyte</ptype> *<name>c</name></param>
+            <param kind="ColorIndexValue" len="1">const <ptype>GLubyte</ptype> *<name>c</name></param>
             <glx type="render" opcode="194"/>
         </command>
         <command>
