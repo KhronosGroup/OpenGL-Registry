@@ -16781,7 +16781,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto><ptype>GLboolean</ptype> <name>glIsPointInFillPathNV</name></proto>
             <param kind="Path"><ptype>GLuint</ptype> <name>path</name></param>
-            <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
             <param><ptype>GLfloat</ptype> <name>x</name></param>
             <param><ptype>GLfloat</ptype> <name>y</name></param>
         </command>
@@ -19927,7 +19927,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glPathStencilFuncNV</name></proto>
             <param group="StencilFunction"><ptype>GLenum</ptype> <name>func</name></param>
             <param kind="ClampedStencilValue"><ptype>GLint</ptype> <name>ref</name></param>
-            <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
             <proto>void <name>glPathStringNV</name></proto>
@@ -23378,7 +23378,7 @@ typedef unsigned int GLhandleARB;
             <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
             <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
             <param group="PathFillMode"><ptype>GLenum</ptype> <name>fillMode</name></param>
-            <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
             <param group="PathTransformType"><ptype>GLenum</ptype> <name>transformType</name></param>
             <param len="COMPSIZE(numPaths,transformType)">const <ptype>GLfloat</ptype> *<name>transformValues</name></param>
         </command>
@@ -23386,13 +23386,13 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glStencilFillPathNV</name></proto>
             <param kind="Path"><ptype>GLuint</ptype> <name>path</name></param>
             <param group="PathFillMode"><ptype>GLenum</ptype> <name>fillMode</name></param>
-            <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
             <proto>void <name>glStencilFunc</name></proto>
             <param group="StencilFunction"><ptype>GLenum</ptype> <name>func</name></param>
             <param kind="StencilValue"><ptype>GLint</ptype> <name>ref</name></param>
-            <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
             <glx type="render" opcode="162"/>
         </command>
         <command>
@@ -23400,24 +23400,24 @@ typedef unsigned int GLhandleARB;
             <param group="StencilFaceDirection"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="StencilFunction"><ptype>GLenum</ptype> <name>func</name></param>
             <param kind="StencilValue"><ptype>GLint</ptype> <name>ref</name></param>
-            <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
             <proto>void <name>glStencilFuncSeparateATI</name></proto>
             <param group="StencilFunction"><ptype>GLenum</ptype> <name>frontfunc</name></param>
             <param group="StencilFunction"><ptype>GLenum</ptype> <name>backfunc</name></param>
             <param kind="ClampedStencilValue"><ptype>GLint</ptype> <name>ref</name></param>
-            <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
             <proto>void <name>glStencilMask</name></proto>
-            <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
             <glx type="render" opcode="133"/>
         </command>
         <command>
             <proto>void <name>glStencilMaskSeparate</name></proto>
             <param group="StencilFaceDirection"><ptype>GLenum</ptype> <name>face</name></param>
-            <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
             <proto>void <name>glStencilOp</name></proto>
@@ -23453,7 +23453,7 @@ typedef unsigned int GLhandleARB;
             <param len="COMPSIZE(numPaths,pathNameType,paths)">const void *<name>paths</name></param>
             <param kind="Path"><ptype>GLuint</ptype> <name>pathBase</name></param>
             <param kind="StencilValue"><ptype>GLint</ptype> <name>reference</name></param>
-            <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
             <param group="PathTransformType"><ptype>GLenum</ptype> <name>transformType</name></param>
             <param len="COMPSIZE(numPaths,transformType)">const <ptype>GLfloat</ptype> *<name>transformValues</name></param>
         </command>
@@ -23461,7 +23461,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glStencilStrokePathNV</name></proto>
             <param kind="Path"><ptype>GLuint</ptype> <name>path</name></param>
             <param kind="StencilValue"><ptype>GLint</ptype> <name>reference</name></param>
-            <param kind="MaskedStencilValue"><ptype>GLuint</ptype> <name>mask</name></param>
+            <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
             <proto>void <name>glStencilThenCoverFillPathInstancedNV</name></proto>
