@@ -7148,7 +7148,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glAlphaFuncxOES</name></proto>
             <param group="AlphaFunction"><ptype>GLenum</ptype> <name>func</name></param>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>ref</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>ref</name></param>
         </command>
         <command>
             <proto>void <name>glAlphaToCoverageDitherControlNV</name></proto>
@@ -7801,10 +7801,10 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBlendColorxOES</name></proto>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>red</name></param>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>green</name></param>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>blue</name></param>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>alpha</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>red</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>green</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>blue</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>alpha</name></param>
         </command>
         <command>
             <proto>void <name>glBlendEquation</name></proto>
@@ -8259,10 +8259,10 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glClearAccumxOES</name></proto>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>red</name></param>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>green</name></param>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>blue</name></param>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>alpha</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>red</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>green</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>blue</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>alpha</name></param>
         </command>
         <command>
             <proto>void <name>glClearBufferData</name></proto>
@@ -8344,10 +8344,10 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glClearColorxOES</name></proto>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>red</name></param>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>green</name></param>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>blue</name></param>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>alpha</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>red</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>green</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>blue</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>alpha</name></param>
         </command>
         <command>
             <proto>void <name>glClearDepth</name></proto>
@@ -8375,7 +8375,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glClearDepthxOES</name></proto>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>depth</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>depth</name></param>
         </command>
         <command>
             <proto>void <name>glClearIndex</name></proto>
@@ -10855,8 +10855,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDepthRangexOES</name></proto>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>n</name></param>
-            <param kind="ClampedFixed"><ptype>GLfixed</ptype> <name>f</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>n</name></param>
+            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>f</name></param>
         </command>
         <command>
             <proto>void <name>glDetachObjectARB</name></proto>
@@ -20425,7 +20425,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glPrioritizeTexturesxOES</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
             <param class="texture" len="n">const <ptype>GLuint</ptype> *<name>textures</name></param>
-            <param kind="ClampedFixed" len="n">const <ptype>GLfixed</ptype> *<name>priorities</name></param>
+            <param kind="Clamped01" len="n">const <ptype>GLfixed</ptype> *<name>priorities</name></param>
         </command>
         <command>
             <proto>void <name>glProgramBinary</name></proto>
