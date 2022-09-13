@@ -71,12 +71,14 @@ typedef unsigned int GLhandleARB;
         <kind name="Coord" desc="This parameter represents a coordinate." />
         <kind name="WinCoord" desc="This parameter represents a window coordinate." />
         <kind name="Clamped01" desc="This parameter will get clamped to the 0 to 1 range." />
-        <kind name="StencilValue" desc="" />
+        <kind name="StencilValue" desc="This parameter represents an unmasked stencil value." />
+        <kind name="StencilMask" desc="This parameter represents mask to apply to stencil values." />
         <kind name="CompressedTextureARB" desc="This parameter contains compressed texture data." />
         <kind name="BufferOffset" desc="This parameter represents an offset into a buffer." />
         <kind name="BufferSize" desc="This parameter represents the size of a buffer." />
-        <kind name="String" desc="This parameter represents a string of characters." />
-        <kind name="DrawBufferIndex" desc="This parameter represents the i in GL_DRAW_BUFFERi." />
+        <kind name="String" desc="This parameter represents a string of characters. A GLubyte parameter should be treated as GLchar." />
+        <kind name="DrawBufferIndex" desc="This parameter represents an index to a draw buffer in the range 0 to the value of GL_MAX_COLOR_ATTACHMENTS" />
+        
 
         <!-- Applicable to legacy OpenGL functions -->
         <kind name="ColorIndexValue" desc="This parameter represents a color in the color index." />
