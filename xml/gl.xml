@@ -8379,7 +8379,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glClearIndex</name></proto>
-            <param kind="ColorIndexMask"><ptype>GLfloat</ptype> <name>c</name></param>
+            <param kind="ColorIndexValue"><ptype>GLfloat</ptype> <name>c</name></param>
             <glx type="render" opcode="129"/>
         </command>
         <command>
@@ -8402,17 +8402,17 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glClearNamedBufferSubData</name></proto>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
-            <param><ptype>GLintptr</ptype> <name>offset</name></param>
+            <param kind="BufferOffset"><ptype>GLintptr</ptype> <name>offset</name></param>
             <param kind="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param>const void *<name>data</name></param>
+            <param len="COMPSIZE(format,type)">const void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glClearNamedBufferSubDataEXT</name></proto>
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
-            <param kind="BufferSize"><ptype>GLsizeiptr</ptype> <name>offset</name></param>
+            <param kind="BufferOffset"><ptype>GLsizeiptr</ptype> <name>offset</name></param>
             <param kind="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -8424,7 +8424,7 @@ typedef unsigned int GLhandleARB;
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
             <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
             <param><ptype>GLfloat</ptype> <name>depth</name></param>
-            <param><ptype>GLint</ptype> <name>stencil</name></param>
+            <param kind="StencilValue"><ptype>GLint</ptype> <name>stencil</name></param>
         </command>
         <command>
             <proto>void <name>glClearNamedFramebufferfv</name></proto>
@@ -8437,7 +8437,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glClearNamedFramebufferiv</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="Buffer"><ptype>GLenum</ptype> <name>buffer</name></param>
-            <param><ptype>GLint</ptype> <name>drawbuffer</name></param>
+            <param kind="DrawBufferIndex"><ptype>GLint</ptype> <name>drawbuffer</name></param>
             <param len="COMPSIZE(buffer)">const <ptype>GLint</ptype> *<name>value</name></param>
         </command>
         <command>
@@ -9000,17 +9000,17 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glColorP3ui</name></proto>
-            <param group="ColorPointerType"><ptype>GLenum</ptype> <name>type</name></param>
+            <param><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLuint</ptype> <name>color</name></param>
         </command>
         <command>
             <proto>void <name>glColorP3uiv</name></proto>
-            <param group="ColorPointerType"><ptype>GLenum</ptype> <name>type</name></param>
+            <param><ptype>GLenum</ptype> <name>type</name></param>
             <param len="1">const <ptype>GLuint</ptype> *<name>color</name></param>
         </command>
         <command>
             <proto>void <name>glColorP4ui</name></proto>
-            <param group="ColorPointerType"><ptype>GLenum</ptype> <name>type</name></param>
+            <param><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLuint</ptype> <name>color</name></param>
         </command>
         <command>
@@ -19927,7 +19927,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glPathStencilFuncNV</name></proto>
             <param group="StencilFunction"><ptype>GLenum</ptype> <name>func</name></param>
-            <param kind="ClampedStencilValue"><ptype>GLint</ptype> <name>ref</name></param>
+            <param kind="StencilValue"><ptype>GLint</ptype> <name>ref</name></param>
             <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
@@ -23407,7 +23407,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glStencilFuncSeparateATI</name></proto>
             <param group="StencilFunction"><ptype>GLenum</ptype> <name>frontfunc</name></param>
             <param group="StencilFunction"><ptype>GLenum</ptype> <name>backfunc</name></param>
-            <param kind="ClampedStencilValue"><ptype>GLint</ptype> <name>ref</name></param>
+            <param kind="StencilValue"><ptype>GLint</ptype> <name>ref</name></param>
             <param kind="StencilMask"><ptype>GLuint</ptype> <name>mask</name></param>
         </command>
         <command>
