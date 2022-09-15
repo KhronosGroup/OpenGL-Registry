@@ -7801,10 +7801,10 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBlendColorxOES</name></proto>
-            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>red</name></param>
-            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>green</name></param>
-            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>blue</name></param>
-            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>alpha</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfixed</ptype> <name>red</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfixed</ptype> <name>green</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfixed</ptype> <name>blue</name></param>
+            <param kind="Clamped01,Color"><ptype>GLfixed</ptype> <name>alpha</name></param>
         </command>
         <command>
             <proto>void <name>glBlendEquation</name></proto>
@@ -8251,18 +8251,18 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glClearAccum</name></proto>
-            <param><ptype>GLfloat</ptype> <name>red</name></param>
-            <param><ptype>GLfloat</ptype> <name>green</name></param>
-            <param><ptype>GLfloat</ptype> <name>blue</name></param>
-            <param><ptype>GLfloat</ptype> <name>alpha</name></param>
+            <param kind="ClampedNeg1To1,Color"><ptype>GLfloat</ptype> <name>red</name></param>
+            <param kind="ClampedNeg1To1,Color"><ptype>GLfloat</ptype> <name>green</name></param>
+            <param kind="ClampedNeg1To1,Color"><ptype>GLfloat</ptype> <name>blue</name></param>
+            <param kind="ClampedNeg1To1,Color"><ptype>GLfloat</ptype> <name>alpha</name></param>
             <glx type="render" opcode="128"/>
         </command>
         <command>
             <proto>void <name>glClearAccumxOES</name></proto>
-            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>red</name></param>
-            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>green</name></param>
-            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>blue</name></param>
-            <param kind="Clamped01"><ptype>GLfixed</ptype> <name>alpha</name></param>
+            <param kind="ClampedNeg1To1,Color"><ptype>GLfixed</ptype> <name>red</name></param>
+            <param kind="ClampedNeg1To1,Color"><ptype>GLfixed</ptype> <name>green</name></param>
+            <param kind="ClampedNeg1To1,Color"><ptype>GLfixed</ptype> <name>blue</name></param>
+            <param kind="ClampedNeg1To1,Color"><ptype>GLfixed</ptype> <name>alpha</name></param>
         </command>
         <command>
             <proto>void <name>glClearBufferData</name></proto>
@@ -9001,22 +9001,22 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glColorP3ui</name></proto>
             <param><ptype>GLenum</ptype> <name>type</name></param>
-            <param><ptype>GLuint</ptype> <name>color</name></param>
+            <param kind="Color"><ptype>GLuint</ptype> <name>color</name></param>
         </command>
         <command>
             <proto>void <name>glColorP3uiv</name></proto>
             <param><ptype>GLenum</ptype> <name>type</name></param>
-            <param len="1">const <ptype>GLuint</ptype> *<name>color</name></param>
+            <param kind="Color" len="1">const <ptype>GLuint</ptype> *<name>color</name></param>
         </command>
         <command>
             <proto>void <name>glColorP4ui</name></proto>
             <param><ptype>GLenum</ptype> <name>type</name></param>
-            <param><ptype>GLuint</ptype> <name>color</name></param>
+            <param kind="Color"><ptype>GLuint</ptype> <name>color</name></param>
         </command>
         <command>
             <proto>void <name>glColorP4uiv</name></proto>
             <param group="ColorPointerType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param len="1">const <ptype>GLuint</ptype> *<name>color</name></param>
+            <param kind="Color" len="1">const <ptype>GLuint</ptype> *<name>color</name></param>
         </command>
         <command>
             <proto>void <name>glColorPointer</name></proto>
@@ -22387,9 +22387,9 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glReplacementCodeuiColor3fVertex3fSUN</name></proto>
             <param><ptype>GLuint</ptype> <name>rc</name></param>
-            <param><ptype>GLfloat</ptype> <name>r</name></param>
-            <param><ptype>GLfloat</ptype> <name>g</name></param>
-            <param><ptype>GLfloat</ptype> <name>b</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>r</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>g</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>b</name></param>
             <param><ptype>GLfloat</ptype> <name>x</name></param>
             <param><ptype>GLfloat</ptype> <name>y</name></param>
             <param><ptype>GLfloat</ptype> <name>z</name></param>
@@ -22397,16 +22397,16 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glReplacementCodeuiColor3fVertex3fvSUN</name></proto>
             <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
-            <param len="3">const <ptype>GLfloat</ptype> *<name>c</name></param>
+            <param kind="Color" len="3">const <ptype>GLfloat</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiColor4fNormal3fVertex3fSUN</name></proto>
             <param><ptype>GLuint</ptype> <name>rc</name></param>
-            <param><ptype>GLfloat</ptype> <name>r</name></param>
-            <param><ptype>GLfloat</ptype> <name>g</name></param>
-            <param><ptype>GLfloat</ptype> <name>b</name></param>
-            <param><ptype>GLfloat</ptype> <name>a</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>r</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>g</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>b</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>a</name></param>
             <param><ptype>GLfloat</ptype> <name>nx</name></param>
             <param><ptype>GLfloat</ptype> <name>ny</name></param>
             <param><ptype>GLfloat</ptype> <name>nz</name></param>
@@ -22417,17 +22417,17 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glReplacementCodeuiColor4fNormal3fVertex3fvSUN</name></proto>
             <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
-            <param len="4">const <ptype>GLfloat</ptype> *<name>c</name></param>
+            <param kind="Color" len="4">const <ptype>GLfloat</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>n</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glReplacementCodeuiColor4ubVertex3fSUN</name></proto>
             <param><ptype>GLuint</ptype> <name>rc</name></param>
-            <param><ptype>GLubyte</ptype> <name>r</name></param>
-            <param><ptype>GLubyte</ptype> <name>g</name></param>
-            <param><ptype>GLubyte</ptype> <name>b</name></param>
-            <param><ptype>GLubyte</ptype> <name>a</name></param>
+            <param kind="Color"><ptype>GLubyte</ptype> <name>r</name></param>
+            <param kind="Color"><ptype>GLubyte</ptype> <name>g</name></param>
+            <param kind="Color"><ptype>GLubyte</ptype> <name>b</name></param>
+            <param kind="Color"><ptype>GLubyte</ptype> <name>a</name></param>
             <param><ptype>GLfloat</ptype> <name>x</name></param>
             <param><ptype>GLfloat</ptype> <name>y</name></param>
             <param><ptype>GLfloat</ptype> <name>z</name></param>
@@ -22435,7 +22435,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glReplacementCodeuiColor4ubVertex3fvSUN</name></proto>
             <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
-            <param len="4">const <ptype>GLubyte</ptype> *<name>c</name></param>
+            <param kind="Color" len="4">const <ptype>GLubyte</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
@@ -22478,7 +22478,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glReplacementCodeuiTexCoord2fColor4fNormal3fVertex3fvSUN</name></proto>
             <param len="1">const <ptype>GLuint</ptype> *<name>rc</name></param>
             <param len="2">const <ptype>GLfloat</ptype> *<name>tc</name></param>
-            <param len="4">const <ptype>GLfloat</ptype> *<name>c</name></param>
+            <param kind="Color" len="4">const <ptype>GLfloat</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>n</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
@@ -22933,14 +22933,14 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSecondaryColor3hNV</name></proto>
-            <param><ptype>GLhalfNV</ptype> <name>red</name></param>
-            <param><ptype>GLhalfNV</ptype> <name>green</name></param>
-            <param><ptype>GLhalfNV</ptype> <name>blue</name></param>
+            <param kind="Color"><ptype>GLhalfNV</ptype> <name>red</name></param>
+            <param kind="Color"><ptype>GLhalfNV</ptype> <name>green</name></param>
+            <param kind="Color"><ptype>GLhalfNV</ptype> <name>blue</name></param>
             <vecequiv name="glSecondaryColor3hvNV"/>
         </command>
         <command>
             <proto>void <name>glSecondaryColor3hvNV</name></proto>
-            <param len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
+            <param kind="Color" len="3">const <ptype>GLhalfNV</ptype> *<name>v</name></param>
             <glx type="render" opcode="4255"/>
         </command>
         <command>
@@ -23081,13 +23081,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSecondaryColorP3ui</name></proto>
-            <param group="ColorPointerType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param><ptype>GLuint</ptype> <name>color</name></param>
+            <param><ptype>GLenum</ptype> <name>type</name></param>
+            <param kind="Color"><ptype>GLuint</ptype> <name>color</name></param>
         </command>
         <command>
             <proto>void <name>glSecondaryColorP3uiv</name></proto>
-            <param group="ColorPointerType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param len="1">const <ptype>GLuint</ptype> *<name>color</name></param>
+            <param><ptype>GLenum</ptype> <name>type</name></param>
+            <param kind="Color" len="1">const <ptype>GLuint</ptype> *<name>color</name></param>
         </command>
         <command>
             <proto>void <name>glSecondaryColorPointer</name></proto>
@@ -23787,9 +23787,9 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexCoord2fColor3fVertex3fSUN</name></proto>
             <param><ptype>GLfloat</ptype> <name>s</name></param>
             <param><ptype>GLfloat</ptype> <name>t</name></param>
-            <param><ptype>GLfloat</ptype> <name>r</name></param>
-            <param><ptype>GLfloat</ptype> <name>g</name></param>
-            <param><ptype>GLfloat</ptype> <name>b</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>r</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>g</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>b</name></param>
             <param><ptype>GLfloat</ptype> <name>x</name></param>
             <param><ptype>GLfloat</ptype> <name>y</name></param>
             <param><ptype>GLfloat</ptype> <name>z</name></param>
@@ -23797,17 +23797,17 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexCoord2fColor3fVertex3fvSUN</name></proto>
             <param len="2">const <ptype>GLfloat</ptype> *<name>tc</name></param>
-            <param len="3">const <ptype>GLfloat</ptype> *<name>c</name></param>
+            <param kind="Color" len="3">const <ptype>GLfloat</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
             <proto>void <name>glTexCoord2fColor4fNormal3fVertex3fSUN</name></proto>
             <param><ptype>GLfloat</ptype> <name>s</name></param>
             <param><ptype>GLfloat</ptype> <name>t</name></param>
-            <param><ptype>GLfloat</ptype> <name>r</name></param>
-            <param><ptype>GLfloat</ptype> <name>g</name></param>
-            <param><ptype>GLfloat</ptype> <name>b</name></param>
-            <param><ptype>GLfloat</ptype> <name>a</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>r</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>g</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>b</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>a</name></param>
             <param><ptype>GLfloat</ptype> <name>nx</name></param>
             <param><ptype>GLfloat</ptype> <name>ny</name></param>
             <param><ptype>GLfloat</ptype> <name>nz</name></param>
@@ -23818,7 +23818,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexCoord2fColor4fNormal3fVertex3fvSUN</name></proto>
             <param len="2">const <ptype>GLfloat</ptype> *<name>tc</name></param>
-            <param len="4">const <ptype>GLfloat</ptype> *<name>c</name></param>
+            <param kind="Color" len="4">const <ptype>GLfloat</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>n</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
@@ -23826,10 +23826,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexCoord2fColor4ubVertex3fSUN</name></proto>
             <param><ptype>GLfloat</ptype> <name>s</name></param>
             <param><ptype>GLfloat</ptype> <name>t</name></param>
-            <param><ptype>GLubyte</ptype> <name>r</name></param>
-            <param><ptype>GLubyte</ptype> <name>g</name></param>
-            <param><ptype>GLubyte</ptype> <name>b</name></param>
-            <param><ptype>GLubyte</ptype> <name>a</name></param>
+            <param kind="Color"><ptype>GLubyte</ptype> <name>r</name></param>
+            <param kind="Color"><ptype>GLubyte</ptype> <name>g</name></param>
+            <param kind="Color"><ptype>GLubyte</ptype> <name>b</name></param>
+            <param kind="Color"><ptype>GLubyte</ptype> <name>a</name></param>
             <param><ptype>GLfloat</ptype> <name>x</name></param>
             <param><ptype>GLfloat</ptype> <name>y</name></param>
             <param><ptype>GLfloat</ptype> <name>z</name></param>
@@ -23837,7 +23837,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexCoord2fColor4ubVertex3fvSUN</name></proto>
             <param len="2">const <ptype>GLfloat</ptype> *<name>tc</name></param>
-            <param len="4">const <ptype>GLubyte</ptype> *<name>c</name></param>
+            <param kind="Color" len="4">const <ptype>GLubyte</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
         <command>
@@ -24035,10 +24035,10 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLfloat</ptype> <name>t</name></param>
             <param><ptype>GLfloat</ptype> <name>p</name></param>
             <param><ptype>GLfloat</ptype> <name>q</name></param>
-            <param><ptype>GLfloat</ptype> <name>r</name></param>
-            <param><ptype>GLfloat</ptype> <name>g</name></param>
-            <param><ptype>GLfloat</ptype> <name>b</name></param>
-            <param><ptype>GLfloat</ptype> <name>a</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>r</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>g</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>b</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>a</name></param>
             <param><ptype>GLfloat</ptype> <name>nx</name></param>
             <param><ptype>GLfloat</ptype> <name>ny</name></param>
             <param><ptype>GLfloat</ptype> <name>nz</name></param>
@@ -24050,7 +24050,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexCoord4fColor4fNormal3fVertex4fvSUN</name></proto>
             <param len="4">const <ptype>GLfloat</ptype> *<name>tc</name></param>
-            <param len="4">const <ptype>GLfloat</ptype> *<name>c</name></param>
+            <param kind="Color" len="4">const <ptype>GLfloat</ptype> *<name>c</name></param>
             <param len="3">const <ptype>GLfloat</ptype> *<name>n</name></param>
             <param len="4">const <ptype>GLfloat</ptype> *<name>v</name></param>
         </command>
