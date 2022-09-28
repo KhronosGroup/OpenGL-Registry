@@ -16475,7 +16475,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glIndexFuncEXT</name></proto>
             <param group="IndexFunctionEXT"><ptype>GLenum</ptype> <name>func</name></param>
-            <param kind="ClampedFloat32"><ptype>GLclampf</ptype> <name>ref</name></param>
+            <param kind="ColorIndexValue"><ptype>GLclampf</ptype> <name>ref</name></param>
         </command>
         <command>
             <proto>void <name>glIndexMask</name></proto>
