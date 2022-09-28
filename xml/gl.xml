@@ -10757,8 +10757,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDepthBoundsEXT</name></proto>
-            <param kind="ClampedFloat64"><ptype>GLclampd</ptype> <name>zmin</name></param>
-            <param kind="ClampedFloat64"><ptype>GLclampd</ptype> <name>zmax</name></param>
+            <param kind="Clamped[0; 1]"><ptype>GLclampd</ptype> <name>zmin</name></param>
+            <param kind="Clamped[0; 1]"><ptype>GLclampd</ptype> <name>zmax</name></param>
             <glx type="render" opcode="4229"/>
         </command>
         <command>
@@ -20418,7 +20418,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glPrioritizeTexturesEXT</name></proto>
             <param><ptype>GLsizei</ptype> <name>n</name></param>
             <param class="texture" len="n">const <ptype>GLuint</ptype> *<name>textures</name></param>
-            <param kind="ClampedFloat32" len="n">const <ptype>GLclampf</ptype> *<name>priorities</name></param>
+            <param kind="Clamped[0; 1]" len="n">const <ptype>GLclampf</ptype> *<name>priorities</name></param>
             <alias name="glPrioritizeTextures"/>
             <glx type="render" opcode="4118"/>
         </command>
@@ -22650,7 +22650,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSampleMaskEXT</name></proto>
-            <param kind="ClampedFloat32"><ptype>GLclampf</ptype> <name>value</name></param>
+            <param kind="Clamped[0; 1]"><ptype>GLclampf</ptype> <name>value</name></param>
             <param><ptype>GLboolean</ptype> <name>invert</name></param>
         </command>
         <command>
@@ -22660,7 +22660,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSampleMaskSGIS</name></proto>
-            <param kind="ClampedFloat32"><ptype>GLclampf</ptype> <name>value</name></param>
+            <param kind="Clamped[0; 1]"><ptype>GLclampf</ptype> <name>value</name></param>
             <param><ptype>GLboolean</ptype> <name>invert</name></param>
             <alias name="glSampleMaskEXT"/>
             <glx type="render" opcode="2048"/>
