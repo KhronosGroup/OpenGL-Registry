@@ -1874,6 +1874,13 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_framebuffer_blit.txt',
     },
+    'GL_EXT_framebuffer_blit_layers' : {
+        'number' : 558,
+        'esnumber' : 341,
+        'supporters' : { 'MESA' },
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_framebuffer_blit_layers.txt',
+    },
     'GL_EXT_framebuffer_multisample' : {
         'number' : 317,
         'flags' : { 'public' },
