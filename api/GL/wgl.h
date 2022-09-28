@@ -20,7 +20,7 @@ extern "C" {
 #include <windows.h>
 #endif
 
-/* Generated on date 20220530 */
+/* Generated on date 20220930 */
 
 /* Generated C header for:
  * API: wgl
@@ -67,8 +67,8 @@ extern "C" {
 #define WGL_SWAP_UNDERLAY14               0x20000000
 #define WGL_SWAP_UNDERLAY15               0x40000000
 typedef int (WINAPI * PFNCHOOSEPIXELFORMATPROC) (HDC hDc, const PIXELFORMATDESCRIPTOR *pPfd);
-typedef int (WINAPI * PFNDESCRIBEPIXELFORMATPROC) (HDC hdc, int ipfd, UINT cjpfd, const PIXELFORMATDESCRIPTOR *ppfd);
-typedef UINT (WINAPI * PFNGETENHMETAFILEPIXELFORMATPROC) (HENHMETAFILE hemf, const PIXELFORMATDESCRIPTOR *ppfd);
+typedef int (WINAPI * PFNDESCRIBEPIXELFORMATPROC) (HDC hdc, int ipfd, UINT cjpfd, PIXELFORMATDESCRIPTOR *ppfd);
+typedef UINT (WINAPI * PFNGETENHMETAFILEPIXELFORMATPROC) (HENHMETAFILE hemf, UINT cbBuffer, PIXELFORMATDESCRIPTOR *ppfd);
 typedef int (WINAPI * PFNGETPIXELFORMATPROC) (HDC hdc);
 typedef BOOL (WINAPI * PFNSETPIXELFORMATPROC) (HDC hdc, int ipfd, const PIXELFORMATDESCRIPTOR *ppfd);
 typedef BOOL (WINAPI * PFNSWAPBUFFERSPROC) (HDC hdc);
@@ -76,10 +76,10 @@ typedef BOOL (WINAPI * PFNWGLCOPYCONTEXTPROC) (HGLRC hglrcSrc, HGLRC hglrcDst, U
 typedef HGLRC (WINAPI * PFNWGLCREATECONTEXTPROC) (HDC hDc);
 typedef HGLRC (WINAPI * PFNWGLCREATELAYERCONTEXTPROC) (HDC hDc, int level);
 typedef BOOL (WINAPI * PFNWGLDELETECONTEXTPROC) (HGLRC oldContext);
-typedef BOOL (WINAPI * PFNWGLDESCRIBELAYERPLANEPROC) (HDC hDc, int pixelFormat, int layerPlane, UINT nBytes, const LAYERPLANEDESCRIPTOR *plpd);
+typedef BOOL (WINAPI * PFNWGLDESCRIBELAYERPLANEPROC) (HDC hDc, int pixelFormat, int layerPlane, UINT nBytes, LAYERPLANEDESCRIPTOR *plpd);
 typedef HGLRC (WINAPI * PFNWGLGETCURRENTCONTEXTPROC) (void);
 typedef HDC (WINAPI * PFNWGLGETCURRENTDCPROC) (void);
-typedef int (WINAPI * PFNWGLGETLAYERPALETTEENTRIESPROC) (HDC hdc, int iLayerPlane, int iStart, int cEntries, const COLORREF *pcr);
+typedef int (WINAPI * PFNWGLGETLAYERPALETTEENTRIESPROC) (HDC hdc, int iLayerPlane, int iStart, int cEntries, COLORREF *pcr);
 typedef PROC (WINAPI * PFNWGLGETPROCADDRESSPROC) (LPCSTR lpszProc);
 typedef BOOL (WINAPI * PFNWGLMAKECURRENTPROC) (HDC hDc, HGLRC newContext);
 typedef BOOL (WINAPI * PFNWGLREALIZELAYERPALETTEPROC) (HDC hdc, int iLayerPlane, BOOL bRealize);
@@ -94,8 +94,8 @@ typedef BOOL (WINAPI * PFNWGLUSEFONTOUTLINESAPROC) (HDC hDC, DWORD first, DWORD 
 typedef BOOL (WINAPI * PFNWGLUSEFONTOUTLINESWPROC) (HDC hDC, DWORD first, DWORD count, DWORD listBase, FLOAT deviation, FLOAT extrusion, int format, LPGLYPHMETRICSFLOAT lpgmf);
 #ifdef WGL_WGLEXT_PROTOTYPES
 int WINAPI ChoosePixelFormat (HDC hDc, const PIXELFORMATDESCRIPTOR *pPfd);
-int WINAPI DescribePixelFormat (HDC hdc, int ipfd, UINT cjpfd, const PIXELFORMATDESCRIPTOR *ppfd);
-UINT WINAPI GetEnhMetaFilePixelFormat (HENHMETAFILE hemf, const PIXELFORMATDESCRIPTOR *ppfd);
+int WINAPI DescribePixelFormat (HDC hdc, int ipfd, UINT cjpfd, PIXELFORMATDESCRIPTOR *ppfd);
+UINT WINAPI GetEnhMetaFilePixelFormat (HENHMETAFILE hemf, UINT cbBuffer, PIXELFORMATDESCRIPTOR *ppfd);
 int WINAPI GetPixelFormat (HDC hdc);
 BOOL WINAPI SetPixelFormat (HDC hdc, int ipfd, const PIXELFORMATDESCRIPTOR *ppfd);
 BOOL WINAPI SwapBuffers (HDC hdc);
@@ -103,10 +103,10 @@ BOOL WINAPI wglCopyContext (HGLRC hglrcSrc, HGLRC hglrcDst, UINT mask);
 HGLRC WINAPI wglCreateContext (HDC hDc);
 HGLRC WINAPI wglCreateLayerContext (HDC hDc, int level);
 BOOL WINAPI wglDeleteContext (HGLRC oldContext);
-BOOL WINAPI wglDescribeLayerPlane (HDC hDc, int pixelFormat, int layerPlane, UINT nBytes, const LAYERPLANEDESCRIPTOR *plpd);
+BOOL WINAPI wglDescribeLayerPlane (HDC hDc, int pixelFormat, int layerPlane, UINT nBytes, LAYERPLANEDESCRIPTOR *plpd);
 HGLRC WINAPI wglGetCurrentContext (void);
 HDC WINAPI wglGetCurrentDC (void);
-int WINAPI wglGetLayerPaletteEntries (HDC hdc, int iLayerPlane, int iStart, int cEntries, const COLORREF *pcr);
+int WINAPI wglGetLayerPaletteEntries (HDC hdc, int iLayerPlane, int iStart, int cEntries, COLORREF *pcr);
 PROC WINAPI wglGetProcAddress (LPCSTR lpszProc);
 BOOL WINAPI wglMakeCurrent (HDC hDc, HGLRC newContext);
 BOOL WINAPI wglRealizeLayerPalette (HDC hdc, int iLayerPlane, BOOL bRealize);
