@@ -56,9 +56,25 @@ Framebuffer)
    Delete the whole of the 4th bullet point "Depth and stencil attachments, if
    present, are the same image..."
 
+   Add a bullet point:
+   "The depth attachment is not stencil-renderable, or the implementation supports this
+   combination.
+
+    { FRAMEBUFFER_UNSUPPORTED }"
+
+   Add a bullet point:
+   "The stencil attachment is not depth-renderable, or the implementation supports this
+   combination.
+
+    { FRAMEBUFFER_UNSUPPORTED }"
+
 Issues
 
 Revision History
+    #3   (May 22, 2022) Thomas Spurden
+         - Add bullet points explicitly allowing implementations to reject framebuffers
+           where the stencil attachment is depth-renderable or the depth attachment is
+           stencil-renderable.
     #2   (March 3, 2022) Thomas Spurden
          - Changed to EXT from BRCM
     #1   (January 21, 2022) Thomas Spurden
