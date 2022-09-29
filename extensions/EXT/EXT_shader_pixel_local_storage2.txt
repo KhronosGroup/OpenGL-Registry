@@ -520,12 +520,12 @@ Additions to Chapter 4 ("Variables and Types") of the OpenGL ES Shading Language
       error to declare a user-defined output variable where the format qualifier
       does not match the variable type and the number of components.
 
-      If EXT_pixel_local_storage2 is enabled, the format of every user-defined
-      fragment output variable should be specified in order to use pixel local
-      storage blocks. Any outputs set as implementation_defined (the default)
-      behave as if consuming all available local storage, leaving no space for
-      pixel local variables, causing a compile time error if pixel local storage
-      blocks also exist in the shader.
+      If EXT_shader_pixel_local_storage2 is enabled, the format of every
+      user-defined fragment output variable should be specified in order to use
+      pixel local storage blocks. Any outputs set as implementation_defined
+      (the default) behave as if consuming all available local storage, leaving
+      no space for pixel local variables, causing a compile time error if pixel
+      local storage blocks also exist in the shader.
 
       The specified output-format-qualifier does not need to be constant
       between shader invocations, but any resolves to the final framebuffer will
