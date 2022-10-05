@@ -27,8 +27,8 @@ Status
 
 Version
 
-    Date: November 08, 2013
-    Revision: 7
+    Date: November 28, 2022
+    Revision: 8
 
 Number
 
@@ -1012,9 +1012,9 @@ Dependencies on OpenGL ES 3.0
         gl_Position
         gl_PointSize
 
-      When compiling shaders using either of the above variables, both such
-      variables must be redeclared prior to use.  ((Note:  This restriction
-      applies only to shaders using version 300 that enable the
+      When compiling shaders that redeclare either of the above variables, both
+      such variables must be redeclared prior to use.  ((Note:  This
+      restriction applies only to shaders using version 300 that enable the
       EXT_separate_shader_objects extension; shaders not enabling the
       extension do not have this requirement.))  A separable program object
       will fail to link if any attached shader uses one of the above variables
@@ -1099,5 +1099,11 @@ Revision History
                                  extension of the same name.             
 
     5     2013-03-25  Benj       Add interactions with OpenGL ES 3.0.
+
     6     2013-09-20  dkoch      Add interactions with NV_non_square_matrices.
+
     7     2013-11-08  marka      Clarify ProgramUniform*ui availability.
+
+    8     2022-11-28  Shahbaz    Remove requirement to redeclare gl_Position
+                      Youssefi   and gl_PointSize unconditionally on
+		                 GLSL ES 3.0 shaders.
