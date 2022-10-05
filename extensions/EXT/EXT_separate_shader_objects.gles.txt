@@ -27,8 +27,8 @@ Status
 
 Version
 
-    Date: November 08, 2013
-    Revision: 7
+    Date: October 05, 2022
+    Revision: 8
 
 Number
 
@@ -984,42 +984,6 @@ Dependencies on OpenGL ES 3.0
     size.  The rules for determining if variables match in qualification are
     found in the OpenGL Shading Language Specification."
     
-    Replace the last paragraph from section 2.10.PPO:
-    
-    "Built-in inputs or outputs do not affect interface matching.  Any such 
-    built-in inputs are well-defined unless they are derived from built-in 
-    outputs not written by the previous shader stage."
-    
-    with the following new language:
-    
-    "When using GLSL ES 1.00 shaders, built-in inputs or outputs do not affect 
-    interface matching. Any such built-in inputs are well-defined unless they 
-    are derived from built-in outputs not written by the previous shader stage.
-    
-    When using GLSL ES 3.00 shaders in separable programs, gl_Position and 
-    gl_PointSize built-in outputs must be redeclared according to Section 7.5 
-    of the OpenGL Shading Language Specification. Other built-in inputs or 
-    outputs do not affect interface matching. Any such built-in inputs are 
-    well-defined unless they are derived from built-in outputs not written by 
-    the previous shader stage."
-    
-    and add to GLSL ES 3.00 new section 7.5, Built-In Redeclaration and 
-    Separable Programs:
-    
-    "The following vertex shader outputs may be redeclared at global scope to
-    specify a built-in output interface, with or without special qualifiers:
-
-        gl_Position
-        gl_PointSize
-
-      When compiling shaders using either of the above variables, both such
-      variables must be redeclared prior to use.  ((Note:  This restriction
-      applies only to shaders using version 300 that enable the
-      EXT_separate_shader_objects extension; shaders not enabling the
-      extension do not have this requirement.))  A separable program object
-      will fail to link if any attached shader uses one of the above variables
-      without redeclaration."
-
 Dependencies on NV_non_square_matrices
 
     If NV_non_square_matrices is supported,
@@ -1099,5 +1063,10 @@ Revision History
                                  extension of the same name.             
 
     5     2013-03-25  Benj       Add interactions with OpenGL ES 3.0.
+
     6     2013-09-20  dkoch      Add interactions with NV_non_square_matrices.
+
     7     2013-11-08  marka      Clarify ProgramUniform*ui availability.
+
+    8     2022-10-05  Shahbaz    Remove requirement to redeclare gl_Position
+                      Youssefi   and gl_PointSize on GLSL ES 3.0 shaders.
