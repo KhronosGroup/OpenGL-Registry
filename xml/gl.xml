@@ -8252,18 +8252,18 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glClearAccum</name></proto>
-            <param kind="Clamped[-1, 1],Color"><ptype>GLfloat</ptype> <name>red</name></param>
-            <param kind="Clamped[-1, 1],Color"><ptype>GLfloat</ptype> <name>green</name></param>
-            <param kind="Clamped[-1, 1],Color"><ptype>GLfloat</ptype> <name>blue</name></param>
-            <param kind="Clamped[-1, 1],Color"><ptype>GLfloat</ptype> <name>alpha</name></param>
+            <param kind="Clamped[-1; 1],Color"><ptype>GLfloat</ptype> <name>red</name></param>
+            <param kind="Clamped[-1; 1],Color"><ptype>GLfloat</ptype> <name>green</name></param>
+            <param kind="Clamped[-1; 1],Color"><ptype>GLfloat</ptype> <name>blue</name></param>
+            <param kind="Clamped[-1; 1],Color"><ptype>GLfloat</ptype> <name>alpha</name></param>
             <glx type="render" opcode="128"/>
         </command>
         <command>
             <proto>void <name>glClearAccumxOES</name></proto>
-            <param kind="Clamped[-1, 1],Color"><ptype>GLfixed</ptype> <name>red</name></param>
-            <param kind="Clamped[-1, 1],Color"><ptype>GLfixed</ptype> <name>green</name></param>
-            <param kind="Clamped[-1, 1],Color"><ptype>GLfixed</ptype> <name>blue</name></param>
-            <param kind="Clamped[-1, 1],Color"><ptype>GLfixed</ptype> <name>alpha</name></param>
+            <param kind="Clamped[-1; 1],Color"><ptype>GLfixed</ptype> <name>red</name></param>
+            <param kind="Clamped[-1; 1],Color"><ptype>GLfixed</ptype> <name>green</name></param>
+            <param kind="Clamped[-1; 1],Color"><ptype>GLfixed</ptype> <name>blue</name></param>
+            <param kind="Clamped[-1; 1],Color"><ptype>GLfixed</ptype> <name>alpha</name></param>
         </command>
         <command>
             <proto>void <name>glClearBufferData</name></proto>
