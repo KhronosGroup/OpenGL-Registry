@@ -14,6 +14,7 @@ Contributors
     Alexander Galazin, ARM
     Tobias Hector, Imagination Technologies
     Ilya Zaytsev, ARM
+    Shahbaz Youssefi, Google
 
 Contact
 
@@ -25,8 +26,8 @@ Status
 
 Version
 
-    Revision 6
-    Last Modified Date: Mar 12, 2014
+    Revision 7
+    Last Modified Date: Sep 06, 2022
 
 Number
 
@@ -723,7 +724,8 @@ Issues
 
         It simply means that the value has no well-defined meaning to an
         application. It does _not_ mean that the value is random nor that it
-        could have been leaked from other contexts or processes.
+	could have been leaked from other contexts, processes, or memory other
+	than the framebuffer attachments.
 
      (15) Do we need a built-in function to pack unit vectors?
 
@@ -774,6 +776,10 @@ Issues
         these variables can be read or written safely in any order.
 
 Revision History
+
+    Revision 7, 06/09/2022 (Shahbaz Youssefi)
+	Clarified that undefined value does not allow leaks between draw calls
+	from memory outside of the framebuffer attachments.
 
     Revision 6, 12/03/2014 (Jan-Harald Fredriksen)
         Added Issue 16.
