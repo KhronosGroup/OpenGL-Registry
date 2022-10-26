@@ -1719,9 +1719,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8149" name="GL_SPRITE_MODE_SGIX" group="GetPName,SpriteParameterNameSGIX"/>
         <enum value="0x814A" name="GL_SPRITE_AXIS_SGIX" group="GetPName"/>
         <enum value="0x814B" name="GL_SPRITE_TRANSLATION_SGIX" group="GetPName"/>
-        <enum value="0x814C" name="GL_SPRITE_AXIAL_SGIX" group="SpriteModeSGIX"/>
-        <enum value="0x814D" name="GL_SPRITE_OBJECT_ALIGNED_SGIX" group="SpriteModeSGIX"/>
-        <enum value="0x814E" name="GL_SPRITE_EYE_ALIGNED_SGIX" group="SpriteModeSGIX"/>
+        <enum value="0x814C" name="GL_SPRITE_AXIAL_SGIX"/>
+        <enum value="0x814D" name="GL_SPRITE_OBJECT_ALIGNED_SGIX"/>
+        <enum value="0x814E" name="GL_SPRITE_EYE_ALIGNED_SGIX"/>
         <enum value="0x814F" name="GL_TEXTURE_4D_BINDING_SGIS" group="GetPName"/>
     </enums>
 
@@ -23329,25 +23329,25 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glSpriteParameterfSGIX</name></proto>
             <param group="SpriteParameterNameSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param group="SpriteModeSGIX"><ptype>GLfloat</ptype> <name>param</name></param>
+            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
             <glx type="render" opcode="2060"/>
         </command>
         <command>
             <proto>void <name>glSpriteParameterfvSGIX</name></proto>
             <param group="SpriteParameterNameSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param group="SpriteModeSGIX" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="2061"/>
         </command>
         <command>
             <proto>void <name>glSpriteParameteriSGIX</name></proto>
             <param group="SpriteParameterNameSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param group="SpriteModeSGIX"><ptype>GLint</ptype> <name>param</name></param>
+            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
             <glx type="render" opcode="2062"/>
         </command>
         <command>
             <proto>void <name>glSpriteParameterivSGIX</name></proto>
             <param group="SpriteParameterNameSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param group="SpriteModeSGIX" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="2063"/>
         </command>
         <command>
