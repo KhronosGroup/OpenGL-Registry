@@ -22464,10 +22464,10 @@ typedef unsigned int GLhandleARB;
             <param group="TriangleListSUN"><ptype>GLuint</ptype> <name>rc</name></param>
             <param><ptype>GLfloat</ptype> <name>s</name></param>
             <param><ptype>GLfloat</ptype> <name>t</name></param>
-            <param><ptype>GLfloat</ptype> <name>r</name></param>
-            <param><ptype>GLfloat</ptype> <name>g</name></param>
-            <param><ptype>GLfloat</ptype> <name>b</name></param>
-            <param><ptype>GLfloat</ptype> <name>a</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>r</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>g</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>b</name></param>
+            <param kind="Color"><ptype>GLfloat</ptype> <name>a</name></param>
             <param><ptype>GLfloat</ptype> <name>nx</name></param>
             <param><ptype>GLfloat</ptype> <name>ny</name></param>
             <param><ptype>GLfloat</ptype> <name>nz</name></param>
