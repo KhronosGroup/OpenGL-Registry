@@ -9001,17 +9001,17 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glColorP3ui</name></proto>
-            <param><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="ColorPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param kind="Color"><ptype>GLuint</ptype> <name>color</name></param>
         </command>
         <command>
             <proto>void <name>glColorP3uiv</name></proto>
-            <param><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="ColorPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param kind="Color" len="1">const <ptype>GLuint</ptype> *<name>color</name></param>
         </command>
         <command>
             <proto>void <name>glColorP4ui</name></proto>
-            <param><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="ColorPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param kind="Color"><ptype>GLuint</ptype> <name>color</name></param>
         </command>
         <command>
@@ -23082,12 +23082,12 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glSecondaryColorP3ui</name></proto>
-            <param><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="ColorPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param kind="Color"><ptype>GLuint</ptype> <name>color</name></param>
         </command>
         <command>
             <proto>void <name>glSecondaryColorP3uiv</name></proto>
-            <param><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="ColorPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param kind="Color" len="1">const <ptype>GLuint</ptype> *<name>color</name></param>
         </command>
         <command>
