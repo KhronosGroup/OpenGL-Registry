@@ -23313,7 +23313,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glSpriteParameterfvSGIX</name></proto>
             <param group="SpriteParameterNameSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param group="SpriteModeSGIX" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="2061"/>
         </command>
         <command>
