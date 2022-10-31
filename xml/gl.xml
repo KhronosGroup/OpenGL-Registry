@@ -2929,7 +2929,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8572" name="GL_COMBINE_ALPHA" group="TextureEnvParameter,TextureEnvParameter"/>
         <enum value="0x8572" name="GL_COMBINE_ALPHA_ARB" group="TextureEnvParameter"/>
         <enum value="0x8572" name="GL_COMBINE_ALPHA_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8573" name="GL_RGB_SCALE" group="TextureEnvParameter,TextureEnvParameter"
+        <enum value="0x8573" name="GL_RGB_SCALE" group="TextureEnvParameter,TextureEnvParameter"/>
         <enum value="0x8573" name="GL_RGB_SCALE_ARB" group="TextureEnvParameter"/>
         <enum value="0x8573" name="GL_RGB_SCALE_EXT" group="TextureEnvParameter"/>
         <enum value="0x8574" name="GL_ADD_SIGNED" group="TextureEnvParameter"/>
@@ -3001,7 +3001,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x859B" name="GL_OPERAND3_ALPHA_NV" group="TextureEnvParameter"/>
             <unused start="0x859C" end="0x859F" comment="Additional combiner enums only"/>
     </enums>
-§
+
     <enums namespace="GL" start="0x85A0" end="0x85AF" vendor="SGI">
         <enum value="0x85A0" name="GL_PACK_SUBSAMPLE_RATE_SGIX" group="PixelStoreParameter,GetPName"/>
         <enum value="0x85A1" name="GL_UNPACK_SUBSAMPLE_RATE_SGIX" group="PixelStoreParameter,GetPName"/>
