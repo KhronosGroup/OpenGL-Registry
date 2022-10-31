@@ -17785,16 +17785,16 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glMinSampleShading</name></proto>
-            <param kind="Color"><ptype>GLfloat</ptype> <name>value</name></param>
+            <param kind="Color,Clamped[0; 1]"><ptype>GLfloat</ptype> <name>value</name></param>
         </command>
         <command>
             <proto>void <name>glMinSampleShadingARB</name></proto>
-            <param kind="Color"><ptype>GLfloat</ptype> <name>value</name></param>
+            <param kind="Color,Clamped[0; 1]"><ptype>GLfloat</ptype> <name>value</name></param>
             <alias name="glMinSampleShading"/>
         </command>
         <command>
             <proto>void <name>glMinSampleShadingOES</name></proto>
-            <param kind="Color"><ptype>GLfloat</ptype> <name>value</name></param>
+            <param kind="Color,Clamped[0; 1]"><ptype>GLfloat</ptype> <name>value</name></param>
             <alias name="glMinSampleShading"/>
         </command>
         <command>
