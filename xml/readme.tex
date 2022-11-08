@@ -181,6 +181,10 @@ Zero or more of each of the following tags, normally in this order
       statement. Unused.
 \item \tag{types} (see section~\ref{tag:types}) - defines API types.
       Usually only one tag is used.
+\item \tag{kinds} (see section~\ref{tag:kinds}) - defines tags
+      that can be used for parameter validation and more expressive types
+       in API bindings for languages other than C. 
+       One parameter can be of multiple kinds.
 \item \tag{groups} (see section~\ref{tag:groups}) - defines named groups
       of tokens for possible parameter validation in API bindings for
       languages other than C. Usually only one tag is used.
@@ -247,6 +251,62 @@ the following declarations:
 typedef ptrdiff_t GLintptr;
 \end{verbatim}
 
+\section{Kinds (\tag{kinds} tag)}
+\label{tag:kinds}
+
+The \tag{kinds} tag contain individual \tag{kind} tags describing
+some metadata not captured by the \tag{types} tag (see section~\ref{tag:types}) 
+or \tag{enums} tag (see section~\ref{tag:groups}).
+
+\subsection{Attributes of (\tag{kinds} tag)}
+
+\begin{itemize}
+\item \attr{name} - the name of the kind.
+\item \attr{desc} - a description of what the kind indicates.
+\end{itemize}
+
+\subsection{Contents of \tag{kinds} tags}
+
+Each \tag{kinds} block contains zero or more \tag{kind} tags, in
+arbitrary order.
+
+\subsection{Example of a \tag{kinds} tag}
+
+\begin{verbatim}
+<kinds>
+    <kind name="Color" desc="This parameter represents part of or a complete color." />
+    <kind name="Clamped[0; 1]" desc="This parameter will get clamped to the 0 to 1 range." />
+</kinds>
+\end{verbatim}
+
+\section{Kind (\tag{kind} tag)}
+\label{tag:kind}
+
+Each \{kind} tag defines a single kind annotation.
+
+\subsection{Attributes of \tag{kind} tag}
+
+\begin{itemize}
+\item \attr{name} - kind name, an arbitrary string used
+      to identify this kind.
+\item \attr{desc} - kind description, a description of what it
+      means for a parameter or return value to be annotated with this kind.
+\end{itemize}
+
+\subsection{Contents of \tag{kind} tag}
+
+None.
+
+\subsection{Meaning of \tag{kind} tags}
+\label{tag:kind:meaning}
+
+If a \tag{proto} or \tag{param} tag of a \tag{command} has a
+\attr{kind} attribute defined, and that attribute matches a \tag{kind}
+name, then the return type or parameter type is considered to be
+further defined by the description provided by the \tag{kind} tag
+with the matching name. C language bindings do not attempt to
+enforce this constraint in any way, but other language bindings 
+may try to do so.
 
 \section{Enumerant Groups (\tag{groups} tag)}
 \label{tag:groups}
@@ -506,6 +566,8 @@ The \tag{proto} tag defines the return type and name of a command.
 
 \begin{itemize}
 \item \attr{group} - group name, an arbitrary string.
+\item \attr{kind} - kind list, a comma separated list of names of
+      previously defined \tag{kind} tags.
 \end{itemize}
 
 If the group name is defined, it may be interpreted as described in
