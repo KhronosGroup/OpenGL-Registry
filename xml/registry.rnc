@@ -15,6 +15,7 @@ start = element registry {
     (
         element comment { text } ? |
         Types      * |
+        Kinds      * |
         Groups     * |
         Enums      * |
         Commands   * |
@@ -49,6 +50,17 @@ Type = element type {
     text ,
     element name { TypeName } ? ,
     text
+}
+
+# <kinds> defines descriptions for kinds.
+Kinds = element kinds {
+    Kind *
+}
+
+# <kind> defines a description for a single kind.
+Kind = element kind {
+    Name ,
+    attribute desc
 }
 
 # <groups> defines a group of enum groups
@@ -141,6 +153,7 @@ Command = element command {
     Comment ? ,
     element proto {
         attribute group { text } ? ,
+        attribute kind { text } ? ,
         attribute class { text } ? ,
         text ,
         element ptype { TypeName } ? ,
@@ -150,6 +163,7 @@ Command = element command {
     } ,
     element param {
         attribute group { text } ? ,
+        attribute kind { text } ? ,
         attribute class { text } ? ,
         attribute len { text } ? ,
         text ,
