@@ -8367,7 +8367,7 @@ typedef unsigned int GLhandleARB;
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param>const void *<name>data</name></param>
+            <param len="COMPSIZE(format,type)">const void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glClearNamedBufferDataEXT</name></proto>
@@ -8385,7 +8385,7 @@ typedef unsigned int GLhandleARB;
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
-            <param>const void *<name>data</name></param>
+            <param len="COMPSIZE(format,type)">const void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glClearNamedBufferSubDataEXT</name></proto>
@@ -9495,7 +9495,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
-            <param>const void *<name>data</name></param>
+            <param len="imageSize">const void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glCompressedTextureSubImage1DEXT</name></proto>
@@ -9518,7 +9518,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
-            <param>const void *<name>data</name></param>
+            <param len="imageSize">const void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glCompressedTextureSubImage2DEXT</name></proto>
@@ -9545,7 +9545,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
-            <param>const void *<name>data</name></param>
+            <param len="imageSize">const void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glCompressedTextureSubImage3DEXT</name></proto>
@@ -14146,7 +14146,7 @@ typedef unsigned int GLhandleARB;
             <param class="buffer"><ptype>GLuint</ptype> <name>buffer</name></param>
             <param><ptype>GLintptr</ptype> <name>offset</name></param>
             <param group="BufferSize"><ptype>GLsizeiptr</ptype> <name>size</name></param>
-            <param>void *<name>data</name></param>
+            <param len="size">void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glGetNamedBufferSubDataEXT</name></proto>
