@@ -21546,7 +21546,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param><ptype>GLboolean</ptype> <name>transpose</name></param>
-            <param len="count*4">const <ptype>GLdouble</ptype> *<name>value</name></param>
+            <param kind="Matrix2x2" len="count*4">const <ptype>GLdouble</ptype> *<name>value</name></param>
         </command>
         <command>
             <proto>void <name>glProgramUniformMatrix2dvEXT</name></proto>
@@ -21554,7 +21554,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param><ptype>GLboolean</ptype> <name>transpose</name></param>
-            <param len="count*4">const <ptype>GLdouble</ptype> *<name>value</name></param>
+            <param kind="Matrix2x2" len="count*4">const <ptype>GLdouble</ptype> *<name>value</name></param>
         </command>
         <command>
             <proto>void <name>glProgramUniformMatrix2fv</name></proto>
@@ -21702,7 +21702,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param><ptype>GLboolean</ptype> <name>transpose</name></param>
-            <param len="count*6">const <ptype>GLfloat</ptype> *<name>value</name></param>
+            <param kind="Matrix3x2" len="count*6">const <ptype>GLfloat</ptype> *<name>value</name></param>
             <alias name="glProgramUniformMatrix3x2fv"/>
         </command>
         <command>
@@ -26173,7 +26173,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>location</name></param>
             <param><ptype>GLsizei</ptype> <name>count</name></param>
             <param><ptype>GLboolean</ptype> <name>transpose</name></param>
-            <param len="count*4">const <ptype>GLdouble</ptype> *<name>value</name></param>
+            <param kind="Matrix2x2" len="count*4">const <ptype>GLdouble</ptype> *<name>value</name></param>
         </command>
         <command>
             <proto>void <name>glUniformMatrix2fv</name></proto>
