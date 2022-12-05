@@ -22672,7 +22672,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glSampleMaskIndexedNV</name></proto>
             <param><ptype>GLuint</ptype> <name>index</name></param>
-            <param group="SampleMaskNV"><ptype>GLbitfield</ptype> <name>mask</name></param>
+            <param><ptype>GLbitfield</ptype> <name>mask</name></param>
         </command>
         <command>
             <proto>void <name>glSampleMaskSGIS</name></proto>
