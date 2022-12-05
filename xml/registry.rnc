@@ -60,7 +60,7 @@ Kinds = element kinds {
 # <kind> defines a description for a single kind.
 Kind = element kind {
     Name ,
-    attribute desc
+    attribute desc { text }
 }
 
 # <groups> defines a group of enum groups
