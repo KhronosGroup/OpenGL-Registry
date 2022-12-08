@@ -70,8 +70,11 @@ typedef unsigned int GLhandleARB;
         <kind name="Color" desc="This parameter represents part of or a complete color."/>
         <kind name="Coord" desc="This parameter represents a coordinate."/>
         <kind name="WinCoord" desc="This parameter represents a window coordinate."/>
+        <kind name="NDCCoord" desc="This parameter represents a normalized device coordinates (NDC)."/>
         <kind name="Clamped[0; 1]" desc="This parameter will get clamped to the 0 to 1 range."/>
         <kind name="Clamped[-1; 1]" desc="This parameter will get clamped to the -1 to 1 range."/>
+        <kind name="Range[0; x]" desc="This parameter must be greater or equal to 0. An upper bound may exist but it might vary."/>
+        <kind name="Range[1; x]" desc="This parameter must be greater or equal to 1. An upper bound may exist but it might vary."/>
         <kind name="StencilValue" desc="This parameter represents an unmasked stencil value."/>
         <kind name="StencilMask" desc="This parameter represents mask to apply to stencil values."/>
         <kind name="CompressedTextureARB" desc="This parameter contains compressed texture data."/>
@@ -79,6 +82,7 @@ typedef unsigned int GLhandleARB;
         <kind name="BufferSize" desc="This parameter represents the size of a buffer."/>
         <kind name="String" desc="This parameter represents a string of characters. A GLubyte parameter should be treated as GLchar."/>
         <kind name="DrawBufferIndex" desc="This parameter represents an index to a draw buffer in the range 0 to the value of GL_MAX_COLOR_ATTACHMENTS"/>
+        <kind name="Zero" desc="This parameter must be zero."/>
 
         <kind name="Matrix2x2" desc="This parameter represents a 2x2 matrix."/>
         <kind name="Matrix2x3" desc="This parameter represents a 2x3 matrix."/>
@@ -9293,10 +9297,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedMultiTexImage1DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
@@ -9304,11 +9308,11 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedMultiTexImage2DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
@@ -9316,12 +9320,12 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedMultiTexImage3DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
@@ -9329,8 +9333,8 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedMultiTexSubImage1DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
@@ -9340,9 +9344,9 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedMultiTexSubImage2DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -9353,10 +9357,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedMultiTexSubImage3DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -9367,10 +9371,10 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexImage1D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param kind="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <glx type="render" opcode="214"/>
@@ -9379,10 +9383,10 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexImage1DARB</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param kind="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <alias name="glCompressedTexImage1D"/>
@@ -9391,11 +9395,11 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexImage2D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param kind="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <glx type="render" opcode="215"/>
@@ -9404,11 +9408,11 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexImage2DARB</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param kind="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <alias name="glCompressedTexImage2D"/>
@@ -9417,12 +9421,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexImage3D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param kind="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <glx type="render" opcode="216"/>
@@ -9431,12 +9435,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexImage3DARB</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param kind="CompressedTextureARB" len="imageSize">const void *<name>data</name></param>
             <alias name="glCompressedTexImage3D"/>
@@ -9445,20 +9449,20 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexImage3DOES</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glCompressedTexSubImage1D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
@@ -9469,8 +9473,8 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexSubImage1DARB</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
@@ -9481,9 +9485,9 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexSubImage2D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -9495,9 +9499,9 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexSubImage2DARB</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -9509,10 +9513,10 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexSubImage3D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -9525,10 +9529,10 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexSubImage3DARB</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -9541,7 +9545,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTexSubImage3DOES</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLint</ptype> <name>zoffset</name></param>
@@ -9556,10 +9560,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedTextureImage1DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
@@ -9567,11 +9571,11 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedTextureImage2DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
@@ -9579,19 +9583,19 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedTextureImage3DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
             <param len="imageSize">const void *<name>bits</name></param>
         </command>
         <command>
             <proto>void <name>glCompressedTextureSubImage1D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -9602,8 +9606,8 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedTextureSubImage1DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param><ptype>GLsizei</ptype> <name>imageSize</name></param>
@@ -9612,7 +9616,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTextureSubImage2D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -9625,9 +9629,9 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedTextureSubImage2DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -9637,7 +9641,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCompressedTextureSubImage3D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLint</ptype> <name>zoffset</name></param>
@@ -9652,10 +9656,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCompressedTextureSubImage3DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -9768,14 +9772,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glConvolutionParameteriv</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="4106"/>
         </command>
         <command>
             <proto>void <name>glConvolutionParameterivEXT</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glConvolutionParameteriv"/>
             <glx type="render" opcode="4106"/>
         </command>
@@ -9965,31 +9969,31 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCopyMultiTexImage1DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param><ptype>GLint</ptype> <name>border</name></param>
         </command>
         <command>
             <proto>void <name>glCopyMultiTexImage2DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param><ptype>GLint</ptype> <name>border</name></param>
         </command>
         <command>
             <proto>void <name>glCopyMultiTexSubImage1DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -9998,9 +10002,9 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCopyMultiTexSubImage2DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -10010,10 +10014,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCopyMultiTexSubImage3DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -10044,56 +10048,56 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCopyTexImage1D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <glx type="render" opcode="4119"/>
         </command>
         <command>
             <proto>void <name>glCopyTexImage1DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param><ptype>GLint</ptype> <name>border</name></param>
             <alias name="glCopyTexImage1D"/>
             <glx type="render" opcode="4119"/>
         </command>
         <command>
             <proto>void <name>glCopyTexImage2D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <glx type="render" opcode="4120"/>
         </command>
         <command>
             <proto>void <name>glCopyTexImage2DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param><ptype>GLint</ptype> <name>border</name></param>
             <alias name="glCopyTexImage2D"/>
             <glx type="render" opcode="4120"/>
         </command>
         <command>
             <proto>void <name>glCopyTexSubImage1D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -10102,8 +10106,8 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCopyTexSubImage1DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -10113,9 +10117,9 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCopyTexSubImage2D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -10125,9 +10129,9 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCopyTexSubImage2DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -10138,10 +10142,10 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCopyTexSubImage3D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -10151,10 +10155,10 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCopyTexSubImage3DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -10164,8 +10168,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glCopyTexSubImage3DOES</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLint</ptype> <name>zoffset</name></param>
@@ -10178,47 +10182,47 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCopyTextureImage1DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param><ptype>GLint</ptype> <name>border</name></param>
         </command>
         <command>
             <proto>void <name>glCopyTextureImage2DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param><ptype>GLint</ptype> <name>border</name></param>
         </command>
         <command>
             <proto>void <name>glCopyTextureLevelsAPPLE</name></proto>
-            <param><ptype>GLuint</ptype> <name>destinationTexture</name></param>
-            <param><ptype>GLuint</ptype> <name>sourceTexture</name></param>
-            <param><ptype>GLint</ptype> <name>sourceBaseLevel</name></param>
-            <param><ptype>GLsizei</ptype> <name>sourceLevelCount</name></param>
+            <param class="texture"><ptype>GLuint</ptype> <name>destinationTexture</name></param>
+            <param class="texture"><ptype>GLuint</ptype> <name>sourceTexture</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>sourceBaseLevel</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>sourceLevelCount</name></param>
         </command>
         <command>
             <proto>void <name>glCopyTextureSubImage1D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param><ptype>GLint</ptype> <name>x</name></param>
-            <param><ptype>GLint</ptype> <name>y</name></param>
+            <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
+            <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
         </command>
         <command>
             <proto>void <name>glCopyTextureSubImage1DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -10226,11 +10230,11 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCopyTextureSubImage2D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param><ptype>GLint</ptype> <name>x</name></param>
-            <param><ptype>GLint</ptype> <name>y</name></param>
+            <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
+            <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
         </command>
@@ -10238,9 +10242,9 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCopyTextureSubImage2DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -10249,12 +10253,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCopyTextureSubImage3D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLint</ptype> <name>zoffset</name></param>
-            <param><ptype>GLint</ptype> <name>x</name></param>
-            <param><ptype>GLint</ptype> <name>y</name></param>
+            <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
+            <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
         </command>
@@ -10262,10 +10266,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCopyTextureSubImage3DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>x</name></param>
             <param kind="WinCoord"><ptype>GLint</ptype> <name>y</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -12487,8 +12491,8 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>textarget</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
         </command>
         <command>
             <proto>void <name>glFramebufferTexture2DMultisampleIMG</name></proto>
@@ -12496,8 +12500,8 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>textarget</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
         </command>
         <command>
             <proto>void <name>glFramebufferTexture2DOES</name></proto>
@@ -24454,10 +24458,10 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexImage1D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width)">const void *<name>pixels</name></param>
@@ -24467,11 +24471,11 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexImage2D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width,height)">const void *<name>pixels</name></param>
@@ -24481,7 +24485,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexImage2DMultisample</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24500,12 +24504,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexImage3D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width,height,depth)">const void *<name>pixels</name></param>
@@ -24515,12 +24519,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexImage3DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width,height,depth)">const void *<name>pixels</name></param>
@@ -24530,7 +24534,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexImage3DMultisample</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24551,7 +24555,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexImage3DOES</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24564,13 +24568,13 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexImage4DSGIS</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
             <param><ptype>GLsizei</ptype> <name>size4d</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width,height,depth,size4d)">const void *<name>pixels</name></param>
@@ -24578,8 +24582,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTexPageCommitmentARB</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLint</ptype> <name>zoffset</name></param>
@@ -24590,8 +24594,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glTexPageCommitmentEXT</name></proto>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLint</ptype> <name>zoffset</name></param>
@@ -24604,7 +24608,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexPageCommitmentMemNV</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLint</ptype> <name>layer</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>layer</name></param>
             <param><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
@@ -24718,14 +24722,14 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorage1D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
         </command>
         <command>
             <proto>void <name>glTexStorage1DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <alias name="glTexStorage1D"/>
@@ -24733,7 +24737,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorage2D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24741,7 +24745,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorage2DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24750,7 +24754,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorage2DMultisample</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24759,7 +24763,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorage3D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24768,7 +24772,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorage3DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24778,7 +24782,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorage3DMultisample</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24788,7 +24792,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorage3DMultisampleOES</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24799,7 +24803,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorageAttribs2DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24808,7 +24812,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorageAttribs3DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24818,7 +24822,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorageMem1DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
@@ -24827,7 +24831,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorageMem2DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24837,7 +24841,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorageMem2DMultisampleEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24848,7 +24852,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorageMem3DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24859,7 +24863,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexStorageMem3DMultisampleEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -24875,14 +24879,14 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param><ptype>GLsizei</ptype> <name>layers</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>layers</name></param>
             <param group="TextureStorageMaskAMD"><ptype>GLbitfield</ptype> <name>flags</name></param>
         </command>
         <command>
             <proto>void <name>glTexSubImage1D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -24893,8 +24897,8 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexSubImage1DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -24905,9 +24909,9 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexSubImage2D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -24919,9 +24923,9 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexSubImage2DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -24933,10 +24937,10 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexSubImage3D</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -24949,10 +24953,10 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexSubImage3DEXT</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -24965,7 +24969,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexSubImage3DOES</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLint</ptype> <name>zoffset</name></param>
@@ -24979,11 +24983,11 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTexSubImage4DSGIS</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>woffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param><ptype>GLint</ptype> <name>woffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -25059,10 +25063,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureImage1DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width)">const void *<name>pixels</name></param>
@@ -25071,11 +25075,11 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureImage2DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width,height)">const void *<name>pixels</name></param>
@@ -25105,12 +25109,12 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureImage3DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param kind="Zero"><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width,height,depth)">const void *<name>pixels</name></param>
@@ -25189,7 +25193,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="TextureParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glTextureParameterIuiv</name></proto>
@@ -25242,7 +25246,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="TextureParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
+            <param><ptype>GLint</ptype> <name>param</name></param>
             <vecequiv name="glTextureParameterivEXT"/>
         </command>
         <command>
@@ -25256,7 +25260,7 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="TextureParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glTextureRangeAPPLE</name></proto>
@@ -25273,22 +25277,22 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureStorage1D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
         </command>
         <command>
             <proto>void <name>glTextureStorage1DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
         </command>
         <command>
             <proto>void <name>glTextureStorage2D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25297,7 +25301,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorage2DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25305,7 +25309,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureStorage2DMultisample</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25315,7 +25319,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorage2DMultisampleEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25324,7 +25328,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureStorage3D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25334,7 +25338,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorage3DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25343,7 +25347,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureStorage3DMultisample</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25354,7 +25358,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureStorage3DMultisampleEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25364,7 +25368,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureStorageMem1DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLuint</ptype> <name>memory</name></param>
@@ -25373,7 +25377,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureStorageMem2DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25383,7 +25387,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureStorageMem2DMultisampleEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25394,7 +25398,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureStorageMem3DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLsizei</ptype> <name>levels</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>levels</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25405,7 +25409,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureStorageMem3DMultisampleEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLsizei</ptype> <name>samples</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>samples</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25417,7 +25421,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureStorageSparseAMD</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="SizedInternalFormat"><ptype>GLenum</ptype> <name>internalFormat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
@@ -25428,7 +25432,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureSubImage1D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -25439,8 +25443,8 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureSubImage1DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -25449,7 +25453,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureSubImage2D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
@@ -25462,9 +25466,9 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureSubImage2DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -25474,7 +25478,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glTextureSubImage3D</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLint</ptype> <name>zoffset</name></param>
@@ -25489,10 +25493,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTextureSubImage3DEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
