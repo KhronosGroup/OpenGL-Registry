@@ -12316,7 +12316,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glFrameZoomSGIX</name></proto>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>factor</name></param>
+            <param><ptype>GLint</ptype> <name>factor</name></param>
             <glx type="render" opcode="2072"/>
         </command>
         <command>
@@ -12349,11 +12349,11 @@ typedef unsigned int GLhandleARB;
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param><ptype>GLuint</ptype> <name>layer</name></param>
             <param><ptype>GLuint</ptype> <name>focalPoint</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>focalX</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>focalY</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>gainX</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>gainY</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>foveaArea</name></param>
+            <param kind="NDCCoord"><ptype>GLfloat</ptype> <name>focalX</name></param>
+            <param kind="NDCCoord"><ptype>GLfloat</ptype> <name>focalY</name></param>
+            <param><ptype>GLfloat</ptype> <name>gainX</name></param>
+            <param><ptype>GLfloat</ptype> <name>gainY</name></param>
+            <param><ptype>GLfloat</ptype> <name>foveaArea</name></param>
         </command>
         <command>
             <proto>void <name>glFramebufferParameteri</name></proto>
@@ -13923,13 +13923,13 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetListParameterfvSGIX</name></proto>
             <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetListParameterivSGIX</name></proto>
             <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetLocalConstantBooleanvEXT</name></proto>
@@ -14646,12 +14646,12 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetPixelTexGenParameterfvSGIS</name></proto>
             <param group="PixelTexGenParameterNameSGIS"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetPixelTexGenParameterivSGIS</name></proto>
             <param group="PixelTexGenParameterNameSGIS"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetPixelTransformParameterfvEXT</name></proto>
@@ -17094,14 +17094,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glLightf</name></proto>
             <param group="LightName"><ptype>GLenum</ptype> <name>light</name></param>
             <param group="LightParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
+            <param><ptype>GLfloat</ptype> <name>param</name></param>
             <glx type="render" opcode="86"/>
         </command>
         <command>
             <proto>void <name>glLightfv</name></proto>
             <param group="LightName"><ptype>GLenum</ptype> <name>light</name></param>
             <param group="LightParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="87"/>
         </command>
         <command>
@@ -17150,7 +17150,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glLineWidth</name></proto>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>width</name></param>
+            <param><ptype>GLfloat</ptype> <name>width</name></param>
             <glx type="render" opcode="95"/>
         </command>
         <command>
