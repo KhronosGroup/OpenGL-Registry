@@ -9180,7 +9180,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glCombinerParameterfvNV</name></proto>
             <param group="CombinerParameterNV"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="4137"/>
         </command>
         <command>
@@ -9199,7 +9199,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glCombinerStageParameterfvNV</name></proto>
             <param group="CombinerStageNV"><ptype>GLenum</ptype> <name>stage</name></param>
             <param group="CombinerParameterNV"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glCommandListSegmentsNV</name></proto>
@@ -9660,14 +9660,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glConvolutionParameterf</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>params</name></param>
+            <param><ptype>GLfloat</ptype> <name>params</name></param>
             <glx type="render" opcode="4103"/>
         </command>
         <command>
             <proto>void <name>glConvolutionParameterfEXT</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>params</name></param>
+            <param><ptype>GLfloat</ptype> <name>params</name></param>
             <alias name="glConvolutionParameterf"/>
             <glx type="render" opcode="4103"/>
         </command>
@@ -9675,14 +9675,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glConvolutionParameterfv</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="4104"/>
         </command>
         <command>
             <proto>void <name>glConvolutionParameterfvEXT</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glConvolutionParameterfv"/>
             <glx type="render" opcode="4104"/>
         </command>
@@ -9690,14 +9690,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glConvolutionParameteri</name></proto>
             <param group="ConvolutionTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>params</name></param>
+            <param><ptype>GLint</ptype> <name>params</name></param>
             <glx type="render" opcode="4105"/>
         </command>
         <command>
             <proto>void <name>glConvolutionParameteriEXT</name></proto>
             <param group="ConvolutionTargetEXT"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ConvolutionParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>params</name></param>
+            <param><ptype>GLint</ptype> <name>params</name></param>
             <alias name="glConvolutionParameteri"/>
             <glx type="render" opcode="4105"/>
         </command>
@@ -12130,25 +12130,25 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glFogf</name></proto>
             <param group="FogParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
+            <param><ptype>GLfloat</ptype> <name>param</name></param>
             <glx type="render" opcode="80"/>
         </command>
         <command>
             <proto>void <name>glFogfv</name></proto>
             <param group="FogParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="81"/>
         </command>
         <command>
             <proto>void <name>glFogi</name></proto>
             <param group="FogParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
+            <param><ptype>GLint</ptype> <name>param</name></param>
             <glx type="render" opcode="82"/>
         </command>
         <command>
             <proto>void <name>glFogiv</name></proto>
             <param group="FogParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="83"/>
         </command>
         <command>
@@ -12183,70 +12183,70 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glFragmentLightModelfSGIX</name></proto>
             <param group="FragmentLightModelParameterSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
+            <param><ptype>GLfloat</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentLightModelfvSGIX</name></proto>
             <param group="FragmentLightModelParameterSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentLightModeliSGIX</name></proto>
             <param group="FragmentLightModelParameterSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
+            <param><ptype>GLint</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentLightModelivSGIX</name></proto>
             <param group="FragmentLightModelParameterSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentLightfSGIX</name></proto>
             <param group="FragmentLightNameSGIX"><ptype>GLenum</ptype> <name>light</name></param>
             <param group="FragmentLightParameterSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
+            <param><ptype>GLfloat</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentLightfvSGIX</name></proto>
             <param group="FragmentLightNameSGIX"><ptype>GLenum</ptype> <name>light</name></param>
             <param group="FragmentLightParameterSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentLightiSGIX</name></proto>
             <param group="FragmentLightNameSGIX"><ptype>GLenum</ptype> <name>light</name></param>
             <param group="FragmentLightParameterSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
+            <param><ptype>GLint</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentLightivSGIX</name></proto>
             <param group="FragmentLightNameSGIX"><ptype>GLenum</ptype> <name>light</name></param>
             <param group="FragmentLightParameterSGIX"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentMaterialfSGIX</name></proto>
             <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
+            <param><ptype>GLfloat</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentMaterialfvSGIX</name></proto>
             <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentMaterialiSGIX</name></proto>
             <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
+            <param><ptype>GLint</ptype> <name>param</name></param>
         </command>
         <command>
             <proto>void <name>glFragmentMaterialivSGIX</name></proto>
             <param group="TriangleFace"><ptype>GLenum</ptype> <name>face</name></param>
             <param group="MaterialParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glFrameTerminatorGREMEDY</name></proto>
