@@ -17127,28 +17127,28 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glListParameterfSGIX</name></proto>
             <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32"><ptype>GLfloat</ptype> <name>param</name></param>
+            <param kind="Clamped[0; 1]"><ptype>GLfloat</ptype> <name>param</name></param>
             <glx type="render" opcode="2078"/>
         </command>
         <command>
             <proto>void <name>glListParameterfvSGIX</name></proto>
             <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param kind="Clamped[0; 1]" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="2079"/>
         </command>
         <command>
             <proto>void <name>glListParameteriSGIX</name></proto>
             <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
+            <param><ptype>GLint</ptype> <name>param</name></param>
             <glx type="render" opcode="2080"/>
         </command>
         <command>
             <proto>void <name>glListParameterivSGIX</name></proto>
             <param class="display list"><ptype>GLuint</ptype> <name>list</name></param>
             <param group="ListParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="2081"/>
         </command>
         <command>
