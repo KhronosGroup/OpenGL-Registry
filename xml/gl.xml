@@ -70,9 +70,10 @@ typedef unsigned int GLhandleARB;
         <kind name="Color" desc="This parameter represents part of or a complete color."/>
         <kind name="Coord" desc="This parameter represents a coordinate."/>
         <kind name="WinCoord" desc="This parameter represents a window coordinate."/>
-        <kind name="NDCCoord" desc="This parameter represents a normalized device coordinates (NDC)."/>
+        <kind name="NDCCoord" desc="This parameter represents a normalized< device coordinates (NDC)."/>
         <kind name="Clamped[0; 1]" desc="This parameter will get clamped to the 0 to 1 range."/>
         <kind name="Clamped[-1; 1]" desc="This parameter will get clamped to the -1 to 1 range."/>
+        <kind name="Clamped[0; 65536]" desc="This parameter will get clamped to the 0 to 65536 (2^16) range, effectively making it a 16-bit value."/>
         <kind name="Range[0; x]" desc="This parameter must be greater or equal to 0. An upper bound may exist but it might vary."/>
         <kind name="Range[1; x]" desc="This parameter must be greater or equal to 1. An upper bound may exist but it might vary."/>
         <kind name="StencilValue" desc="This parameter represents an unmasked stencil value."/>
@@ -10567,15 +10568,15 @@ typedef unsigned int GLhandleARB;
             <param kind="Coord"><ptype>GLdouble</ptype> <name>u1</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>ustride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>uorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>uorder</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>v1</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>v2</name></param>
             <param><ptype>GLint</ptype> <name>vstride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>vorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>vorder</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>w1</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>w2</name></param>
             <param><ptype>GLint</ptype> <name>wstride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>worder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>worder</name></param>
             <param kind="Coord" len="COMPSIZE(target,ustride,uorder,vstride,vorder,wstride,worder)">const <ptype>GLdouble</ptype> *<name>points</name></param>
             <glx type="render" opcode="2073"/>
         </command>
@@ -10585,15 +10586,15 @@ typedef unsigned int GLhandleARB;
             <param kind="Coord"><ptype>GLfloat</ptype> <name>u1</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>ustride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>uorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>uorder</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>v1</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>v2</name></param>
             <param><ptype>GLint</ptype> <name>vstride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>vorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>vorder</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>w1</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>w2</name></param>
             <param><ptype>GLint</ptype> <name>wstride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>worder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>worder</name></param>
             <param kind="Coord" len="COMPSIZE(target,ustride,uorder,vstride,vorder,wstride,worder)">const <ptype>GLfloat</ptype> *<name>points</name></param>
             <glx type="render" opcode="2074"/>
         </command>
@@ -11876,17 +11877,17 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glEvalMesh1</name></proto>
             <param group="MeshMode1"><ptype>GLenum</ptype> <name>mode</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>i1</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>i2</name></param>
+            <param><ptype>GLint</ptype> <name>i1</name></param>
+            <param><ptype>GLint</ptype> <name>i2</name></param>
             <glx type="render" opcode="155"/>
         </command>
         <command>
             <proto>void <name>glEvalMesh2</name></proto>
             <param group="MeshMode2"><ptype>GLenum</ptype> <name>mode</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>i1</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>i2</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>j1</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>j2</name></param>
+            <param><ptype>GLint</ptype> <name>i1</name></param>
+            <param><ptype>GLint</ptype> <name>i2</name></param>
+            <param><ptype>GLint</ptype> <name>j1</name></param>
+            <param><ptype>GLint</ptype> <name>j2</name></param>
             <glx type="render" opcode="157"/>
         </command>
         <command>
@@ -11896,8 +11897,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glEvalPoint2</name></proto>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>i</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>j</name></param>
+            <param><ptype>GLint</ptype> <name>i</name></param>
+            <param><ptype>GLint</ptype> <name>j</name></param>
             <glx type="render" opcode="158"/>
         </command>
         <command>
@@ -12546,7 +12547,7 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <alias name="glFramebufferTexture"/>
         </command>
         <command>
@@ -12554,7 +12555,7 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <alias name="glFramebufferTexture"/>
         </command>
         <command>
@@ -12562,7 +12563,7 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>face</name></param>
         </command>
         <command>
@@ -12570,7 +12571,7 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>face</name></param>
             <alias name="glFramebufferTextureFaceARB"/>
         </command>
@@ -12579,8 +12580,8 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>layer</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>layer</name></param>
             <glx type="render" opcode="237"/>
         </command>
         <command>
@@ -12588,8 +12589,8 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>layer</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>layer</name></param>
             <alias name="glFramebufferTextureLayer"/>
         </command>
         <command>
@@ -12597,8 +12598,8 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>layer</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>layer</name></param>
             <alias name="glFramebufferTextureLayer"/>
         </command>
         <command>
@@ -12606,8 +12607,8 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>layer</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>layer</name></param>
             <param><ptype>GLint</ptype> <name>xscale</name></param>
             <param><ptype>GLint</ptype> <name>yscale</name></param>
         </command>
@@ -12616,7 +12617,7 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLsizei</ptype> <name>samples</name></param>
             <param><ptype>GLint</ptype> <name>baseViewIndex</name></param>
             <param><ptype>GLsizei</ptype> <name>numViews</name></param>
@@ -12626,7 +12627,7 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>baseViewIndex</name></param>
             <param><ptype>GLsizei</ptype> <name>numViews</name></param>
         </command>
@@ -12635,7 +12636,7 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <alias name="glFramebufferTexture"/>
         </command>
         <command>
@@ -13301,13 +13302,13 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetCompressedMultiTexImageEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>lod</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>lod</name></param>
             <param len="COMPSIZE(target,lod)">void *<name>img</name></param>
         </command>
         <command>
             <proto>void <name>glGetCompressedTexImage</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param kind="CompressedTextureARB" len="COMPSIZE(target,level)">void *<name>img</name></param>
             <glx type="single" opcode="160"/>
             <glx type="render" opcode="335" name="glGetCompressedTexImagePBO" comment="PBO protocol"/>
@@ -13315,7 +13316,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetCompressedTexImageARB</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param kind="CompressedTextureARB" len="COMPSIZE(target,level)">void *<name>img</name></param>
             <alias name="glGetCompressedTexImage"/>
             <glx type="single" opcode="160"/>
@@ -13323,7 +13324,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetCompressedTextureImage</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
             <param len="bufSize">void *<name>pixels</name></param>
         </command>
@@ -13331,13 +13332,13 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetCompressedTextureImageEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>lod</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>lod</name></param>
             <param len="COMPSIZE(target,lod)">void *<name>img</name></param>
         </command>
         <command>
             <proto>void <name>glGetCompressedTextureSubImage</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLint</ptype> <name>zoffset</name></param>
@@ -14148,7 +14149,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetMultiTexImageEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(target,level,format,type)">void *<name>pixels</name></param>
@@ -14157,7 +14158,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetMultiTexLevelParameterfvEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
@@ -14165,7 +14166,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetMultiTexLevelParameterivEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
@@ -15366,7 +15367,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetTexImage</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(target,level,format,type)">void *<name>pixels</name></param>
@@ -15376,7 +15377,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetTexLevelParameterfv</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="single" opcode="138"/>
@@ -15384,7 +15385,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetTexLevelParameteriv</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
             <glx type="single" opcode="139"/>
@@ -15392,7 +15393,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetTexLevelParameterxvOES</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfixed</ptype> *<name>params</name></param>
         </command>
@@ -15496,7 +15497,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetTextureImageEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(target,level,format,type)">void *<name>pixels</name></param>
@@ -15512,7 +15513,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetTextureLevelParameterfvEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
@@ -15527,7 +15528,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glGetTextureLevelParameterivEXT</name></proto>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="GetTextureParameter"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="COMPSIZE(pname)"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
@@ -17112,14 +17113,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glLighti</name></proto>
             <param group="LightName"><ptype>GLenum</ptype> <name>light</name></param>
             <param group="LightParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
+            <param><ptype>GLint</ptype> <name>param</name></param>
             <glx type="render" opcode="88"/>
         </command>
         <command>
             <proto>void <name>glLightiv</name></proto>
             <param group="LightName"><ptype>GLenum</ptype> <name>light</name></param>
             <param group="LightParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="89"/>
         </command>
         <command>
@@ -17148,7 +17149,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glLineStipple</name></proto>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>factor</name></param>
+            <param kind="Clamped[0; 65536]"><ptype>GLint</ptype> <name>factor</name></param>
             <param><ptype>GLushort</ptype> <name>pattern</name></param>
             <glx type="render" opcode="94"/>
         </command>
@@ -17350,7 +17351,7 @@ typedef unsigned int GLhandleARB;
             <param kind="Coord"><ptype>GLdouble</ptype> <name>u1</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>stride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>order</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>order</name></param>
             <param kind="Coord" len="COMPSIZE(target,stride,order)">const <ptype>GLdouble</ptype> *<name>points</name></param>
             <glx type="render" opcode="143"/>
         </command>
@@ -17360,17 +17361,17 @@ typedef unsigned int GLhandleARB;
             <param kind="Coord"><ptype>GLfloat</ptype> <name>u1</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>stride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>order</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>order</name></param>
             <param kind="Coord" len="COMPSIZE(target,stride,order)">const <ptype>GLfloat</ptype> *<name>points</name></param>
             <glx type="render" opcode="144"/>
         </command>
         <command>
             <proto>void <name>glMap1xOES</name></proto>
             <param group="MapTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLfixed</ptype> <name>u1</name></param>
-            <param><ptype>GLfixed</ptype> <name>u2</name></param>
+            <param kind="Coord"><ptype>GLfixed</ptype> <name>u1</name></param>
+            <param kind="Coord"><ptype>GLfixed</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>stride</name></param>
-            <param><ptype>GLint</ptype> <name>order</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>order</name></param>
             <param><ptype>GLfixed</ptype> <name>points</name></param>
         </command>
         <command>
@@ -17379,11 +17380,11 @@ typedef unsigned int GLhandleARB;
             <param kind="Coord"><ptype>GLdouble</ptype> <name>u1</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>ustride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>uorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>uorder</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>v1</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>v2</name></param>
             <param><ptype>GLint</ptype> <name>vstride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>vorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>vorder</name></param>
             <param kind="Coord" len="COMPSIZE(target,ustride,uorder,vstride,vorder)">const <ptype>GLdouble</ptype> *<name>points</name></param>
             <glx type="render" opcode="145"/>
         </command>
@@ -17393,25 +17394,25 @@ typedef unsigned int GLhandleARB;
             <param kind="Coord"><ptype>GLfloat</ptype> <name>u1</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>ustride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>uorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>uorder</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>v1</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>v2</name></param>
             <param><ptype>GLint</ptype> <name>vstride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>vorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>vorder</name></param>
             <param kind="Coord" len="COMPSIZE(target,ustride,uorder,vstride,vorder)">const <ptype>GLfloat</ptype> *<name>points</name></param>
             <glx type="render" opcode="146"/>
         </command>
         <command>
             <proto>void <name>glMap2xOES</name></proto>
             <param group="MapTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param><ptype>GLfixed</ptype> <name>u1</name></param>
-            <param><ptype>GLfixed</ptype> <name>u2</name></param>
+            <param kind="Coord"><ptype>GLfixed</ptype> <name>u1</name></param>
+            <param kind="Coord"><ptype>GLfixed</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>ustride</name></param>
-            <param><ptype>GLint</ptype> <name>uorder</name></param>
-            <param><ptype>GLfixed</ptype> <name>v1</name></param>
-            <param><ptype>GLfixed</ptype> <name>v2</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>uorder</name></param>
+            <param kind="Coord"><ptype>GLfixed</ptype> <name>v1</name></param>
+            <param kind="Coord"><ptype>GLfixed</ptype> <name>v2</name></param>
             <param><ptype>GLint</ptype> <name>vstride</name></param>
-            <param><ptype>GLint</ptype> <name>vorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>vorder</name></param>
             <param><ptype>GLfixed</ptype> <name>points</name></param>
         </command>
         <command>
@@ -17454,8 +17455,8 @@ typedef unsigned int GLhandleARB;
             <param group="MapTypeNV"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>ustride</name></param>
             <param><ptype>GLsizei</ptype> <name>vstride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>uorder</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>vorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>uorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>vorder</name></param>
             <param><ptype>GLboolean</ptype> <name>packed</name></param>
             <param len="COMPSIZE(target,uorder,vorder)">const void *<name>points</name></param>
         </command>
@@ -17562,7 +17563,7 @@ typedef unsigned int GLhandleARB;
             <param kind="Coord"><ptype>GLdouble</ptype> <name>u1</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>stride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>order</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>order</name></param>
             <param kind="Coord" len="COMPSIZE(size,stride,order)">const <ptype>GLdouble</ptype> *<name>points</name></param>
         </command>
         <command>
@@ -17572,7 +17573,7 @@ typedef unsigned int GLhandleARB;
             <param kind="Coord"><ptype>GLfloat</ptype> <name>u1</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>stride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>order</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>order</name></param>
             <param kind="Coord" len="COMPSIZE(size,stride,order)">const <ptype>GLfloat</ptype> *<name>points</name></param>
         </command>
         <command>
@@ -17582,11 +17583,11 @@ typedef unsigned int GLhandleARB;
             <param kind="Coord"><ptype>GLdouble</ptype> <name>u1</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>ustride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>uorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>uorder</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>v1</name></param>
             <param kind="Coord"><ptype>GLdouble</ptype> <name>v2</name></param>
             <param><ptype>GLint</ptype> <name>vstride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>vorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>vorder</name></param>
             <param kind="Coord" len="COMPSIZE(size,ustride,uorder,vstride,vorder)">const <ptype>GLdouble</ptype> *<name>points</name></param>
         </command>
         <command>
@@ -17596,11 +17597,11 @@ typedef unsigned int GLhandleARB;
             <param kind="Coord"><ptype>GLfloat</ptype> <name>u1</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>u2</name></param>
             <param><ptype>GLint</ptype> <name>ustride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>uorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>uorder</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>v1</name></param>
             <param kind="Coord"><ptype>GLfloat</ptype> <name>v2</name></param>
             <param><ptype>GLint</ptype> <name>vstride</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>vorder</name></param>
+            <param kind="Range[1; x]"><ptype>GLint</ptype> <name>vorder</name></param>
             <param kind="Coord" len="COMPSIZE(size,ustride,uorder,vstride,vorder)">const <ptype>GLfloat</ptype> *<name>points</name></param>
         </command>
         <command>
@@ -18917,10 +18918,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexImage1DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width)">const void *<name>pixels</name></param>
@@ -18929,11 +18930,11 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexImage2DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width,height)">const void *<name>pixels</name></param>
@@ -18942,12 +18943,12 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexImage3DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="InternalFormat"><ptype>GLint</ptype> <name>internalformat</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>border</name></param>
+            <param><ptype>GLint</ptype> <name>border</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
             <param len="COMPSIZE(format,type,width,height,depth)">const void *<name>pixels</name></param>
@@ -18957,7 +18958,7 @@ typedef unsigned int GLhandleARB;
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="TextureParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glMultiTexParameterIuivEXT</name></proto>
@@ -19006,8 +19007,8 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexSubImage1DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
             <param group="PixelType"><ptype>GLenum</ptype> <name>type</name></param>
@@ -19017,9 +19018,9 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexSubImage2DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param group="PixelFormat"><ptype>GLenum</ptype> <name>format</name></param>
@@ -19030,10 +19031,10 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glMultiTexSubImage3DEXT</name></proto>
             <param group="TextureUnit"><ptype>GLenum</ptype> <name>texunit</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>xoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>yoffset</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>xoffset</name></param>
+            <param><ptype>GLint</ptype> <name>yoffset</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
             <param><ptype>GLsizei</ptype> <name>width</name></param>
             <param><ptype>GLsizei</ptype> <name>height</name></param>
             <param><ptype>GLsizei</ptype> <name>depth</name></param>
@@ -19316,7 +19317,7 @@ typedef unsigned int GLhandleARB;
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
         </command>
         <command>
             <proto>void <name>glNamedFramebufferSamplePositionsfvAMD</name></proto>
@@ -19331,7 +19332,7 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>textarget</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
         </command>
         <command>
             <proto>void <name>glNamedFramebufferTexture2DEXT</name></proto>
@@ -19339,7 +19340,7 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>textarget</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
         </command>
         <command>
             <proto>void <name>glNamedFramebufferTexture3DEXT</name></proto>
@@ -19347,22 +19348,22 @@ typedef unsigned int GLhandleARB;
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>textarget</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>zoffset</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>zoffset</name></param>
         </command>
         <command>
             <proto>void <name>glNamedFramebufferTextureEXT</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
         </command>
         <command>
             <proto>void <name>glNamedFramebufferTextureFaceEXT</name></proto>
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>face</name></param>
         </command>
         <command>
@@ -19378,8 +19379,8 @@ typedef unsigned int GLhandleARB;
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>layer</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>layer</name></param>
         </command>
         <command>
             <proto>void <name>glNamedFramebufferTextureMultiviewOVR</name></proto>
@@ -20076,7 +20077,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glPixelMapfv</name></proto>
             <param group="PixelMap"><ptype>GLenum</ptype> <name>map</name></param>
-            <param kind="CheckedInt32"><ptype>GLsizei</ptype> <name>mapsize</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>mapsize</name></param>
             <param len="mapsize">const <ptype>GLfloat</ptype> *<name>values</name></param>
             <glx type="render" opcode="168"/>
             <glx type="render" opcode="323" name="glPixelMapfvPBO" comment="PBO protocol"/>
@@ -20084,7 +20085,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glPixelMapuiv</name></proto>
             <param group="PixelMap"><ptype>GLenum</ptype> <name>map</name></param>
-            <param kind="CheckedInt32"><ptype>GLsizei</ptype> <name>mapsize</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>mapsize</name></param>
             <param len="mapsize">const <ptype>GLuint</ptype> *<name>values</name></param>
             <glx type="render" opcode="169"/>
             <glx type="render" opcode="324" name="glPixelMapuivPBO" comment="PBO protocol"/>
@@ -20092,7 +20093,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glPixelMapusv</name></proto>
             <param group="PixelMap"><ptype>GLenum</ptype> <name>map</name></param>
-            <param kind="CheckedInt32"><ptype>GLsizei</ptype> <name>mapsize</name></param>
+            <param kind="Range[1; x]"><ptype>GLsizei</ptype> <name>mapsize</name></param>
             <param len="mapsize">const <ptype>GLushort</ptype> *<name>values</name></param>
             <glx type="render" opcode="170"/>
             <glx type="render" opcode="325" name="glPixelMapusvPBO" comment="PBO protocol"/>
@@ -24421,7 +24422,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexGeni</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
             <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
+            <param><ptype>GLint</ptype> <name>param</name></param>
             <glx type="render" opcode="119"/>
         </command>
         <command>
@@ -24434,7 +24435,7 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexGeniv</name></proto>
             <param group="TextureCoordName"><ptype>GLenum</ptype> <name>coord</name></param>
             <param group="TextureGenParameter"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="120"/>
         </command>
         <command>
@@ -24680,14 +24681,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glTexParameteri</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="TextureParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>param</name></param>
+            <param><ptype>GLint</ptype> <name>param</name></param>
             <glx type="render" opcode="107"/>
         </command>
         <command>
             <proto>void <name>glTexParameteriv</name></proto>
             <param group="TextureTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="TextureParameterName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="108"/>
         </command>
         <command>
