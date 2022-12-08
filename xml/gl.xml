@@ -9110,14 +9110,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glColorTableParameterfv</name></proto>
             <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param kind="Color" len="4">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <glx type="render" opcode="2054"/>
         </command>
         <command>
             <proto>void <name>glColorTableParameterfvSGI</name></proto>
             <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedFloat32" len="COMPSIZE(pname)">const <ptype>GLfloat</ptype> *<name>params</name></param>
+            <param kind="Color" len="4">const <ptype>GLfloat</ptype> *<name>params</name></param>
             <alias name="glColorTableParameterfv"/>
             <glx type="render" opcode="2054"/>
         </command>
@@ -9125,14 +9125,14 @@ typedef unsigned int GLhandleARB;
             <proto>void <name>glColorTableParameteriv</name></proto>
             <param group="ColorTableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param kind="Color" len="4">const <ptype>GLint</ptype> *<name>params</name></param>
             <glx type="render" opcode="2055"/>
         </command>
         <command>
             <proto>void <name>glColorTableParameterivSGI</name></proto>
             <param group="ColorTableTargetSGI"><ptype>GLenum</ptype> <name>target</name></param>
             <param group="ColorTableParameterPName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param kind="CheckedInt32" len="COMPSIZE(pname)">const <ptype>GLint</ptype> *<name>params</name></param>
+            <param kind="Color" len="4">const <ptype>GLint</ptype> *<name>params</name></param>
             <alias name="glColorTableParameteriv"/>
             <glx type="render" opcode="2055"/>
         </command>
