@@ -184,7 +184,7 @@ Zero or more of each of the following tags, normally in this order
 \item \tag{kinds} (see section~\ref{tag:kinds}) - defines tags
       that can be used for parameter validation and more expressive types
        in API bindings for languages other than C. 
-       One parameter can be of multiple kinds.
+       One parameter can be of multiple kinds, separated by commas.
 \item \tag{groups} (see section~\ref{tag:groups}) - defines named groups
       of tokens for possible parameter validation in API bindings for
       languages other than C. Usually only one tag is used.
@@ -287,7 +287,7 @@ Each \{kind} tag defines a single kind annotation.
 \subsection{Attributes of \tag{kind} tag}
 
 \begin{itemize}
-\item \attr{name} - kind name, an arbitrary string used
+\item \attr{name} - kind name, an arbitrary string without commas (',') used
       to identify this kind.
 \item \attr{desc} - kind description, a description of what it
       means for a parameter or return value to be annotated with this kind.
@@ -301,10 +301,11 @@ None.
 \label{tag:kind:meaning}
 
 If a \tag{proto} or \tag{param} tag of a \tag{command} has a
-\attr{kind} attribute defined, and that attribute matches a \tag{kind}
-name, then the return type or parameter type is considered to be
-further defined by the description provided by the \tag{kind} tag
-with the matching name. C language bindings do not attempt to
+\attr{kind} attribute defined, and and the comma separated elemenst
+if the attribute matches a \tag{kind} name, 
+then the return type or parameter type is considered to be
+further defined by the description provided by the \tag{kind} tags
+with the matching names. C language bindings do not attempt to
 enforce this constraint in any way, but other language bindings 
 may try to do so.
 
@@ -599,6 +600,8 @@ The \tag{param} tag defines the type and name of a parameter.
 
 \begin{itemize}
 \item \attr{group} - group name, an arbitrary string.
+\item \attr{kind} - kind list, a comma separated list of names of
+      previously defined \tag{kind} tags.
 \item \attr{len} - parameter length, either an integer specifying the
       number of elements of the parameter \tag{ptype}, or a complex
       string expression with poorly defined syntax, usually representing
