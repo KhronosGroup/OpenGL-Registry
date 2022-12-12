@@ -52,7 +52,7 @@ Status
 
 Version
 
-    Last Modified Date: July 20, 2016
+    Last Modified Date: December 12, 2022
 
 Number
 
@@ -204,7 +204,9 @@ Additions to Chapter 3 of the OpenGL ES 3.0 Specification (Rasterization)
      array of compressed data consisting of multiple rows of compressed
      blocks laid out as described in Section 3.8.3. If
      internalformat is a 3D ASTC format, CompressedTexImage2D will generate
-     an INVALID_OPERATION error.  If internalformat is a 3D ASTC format,
+     an INVALID_OPERATION error. If internalformat is a 3D ASTC format and
+     target is not TEXTURE_3D, CompressedTexImage3D will generate an
+     INVALID_OPERATION error. If internalformat is a 3D ASTC format,
      and only the ASTC LDR or HDR Profile is supported, then
      CompressedTexImage3D will also generate an INVALID_OPERATION error."
 
@@ -2288,6 +2290,9 @@ Additions to Appendix E of the OpenGL ES 3.0 Specification (Version 3.0
     None
 
 Revision History
+
+    December 12 2022 - Clarified that ASTC 3D blocks can only be used with
+    3D targets, not 2D or cubemap arrays.
 
     Revision 3, July 20, 2016 - Clarified definition of 2D void-extent
     blocks.
