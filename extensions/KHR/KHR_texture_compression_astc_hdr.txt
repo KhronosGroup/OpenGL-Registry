@@ -696,7 +696,7 @@ Texture Image Formats)
     Table C.2.7 - Weight Range Encodings
 
     Each weight value is encoded using the specified number of Trits, Quints
-    and Bits. The details of this encoding can be found in Section C.3.12 -
+    and Bits. The details of this encoding can be found in Section C.2.12 -
     Integer Sequence Encoding.
 
     For 2D blocks, the Block Mode field is laid out as follows:
