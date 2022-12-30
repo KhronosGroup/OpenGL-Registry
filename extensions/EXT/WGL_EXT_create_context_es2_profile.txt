@@ -210,7 +210,7 @@ Issues
    support?
 
    RESOLVED: No. This extension has been modified since version #3 to
-   support and requested version of OpenGL-ES that is supported by
+   support any requested version of OpenGL-ES that is supported by
    the desktop OpenGL implementation. This can include more than just
    OpenGL-ES 2.0 that was originally specified.
 
