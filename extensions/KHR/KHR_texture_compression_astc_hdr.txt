@@ -666,7 +666,7 @@ Texture Image Formats)
 
     The final special case is that if bits [8:0] of the block are "111111100",
     then the block is a void-extent block, which has a separate encoding
-    described in section C.2.22.
+    described in section C.2.23.
 
     C.2.10  Block Mode
     ------------------
