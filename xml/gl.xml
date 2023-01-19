@@ -2923,13 +2923,13 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8570" name="GL_COMBINE" group="TextureEnvParameter,TextureEnvMode"/>
         <enum value="0x8570" name="GL_COMBINE_ARB" group="TextureEnvParameter"/>
         <enum value="0x8570" name="GL_COMBINE_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8571" name="GL_COMBINE_RGB" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8571" name="GL_COMBINE_RGB" group="TextureEnvParameter"/>
         <enum value="0x8571" name="GL_COMBINE_RGB_ARB" group="TextureEnvParameter"/>
         <enum value="0x8571" name="GL_COMBINE_RGB_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8572" name="GL_COMBINE_ALPHA" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8572" name="GL_COMBINE_ALPHA" group="TextureEnvParameter"/>
         <enum value="0x8572" name="GL_COMBINE_ALPHA_ARB" group="TextureEnvParameter"/>
         <enum value="0x8572" name="GL_COMBINE_ALPHA_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8573" name="GL_RGB_SCALE" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8573" name="GL_RGB_SCALE" group="TextureEnvParameter"/>
         <enum value="0x8573" name="GL_RGB_SCALE_ARB" group="TextureEnvParameter"/>
         <enum value="0x8573" name="GL_RGB_SCALE_EXT" group="TextureEnvParameter"/>
         <enum value="0x8574" name="GL_ADD_SIGNED" group="TextureEnvParameter"/>
@@ -2952,50 +2952,50 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8580" name="GL_SOURCE0_RGB" group="TextureEnvParameter"/>
         <enum value="0x8580" name="GL_SOURCE0_RGB_ARB" group="TextureEnvParameter"/>
         <enum value="0x8580" name="GL_SOURCE0_RGB_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8580" name="GL_SRC0_RGB" alias="GL_SOURCE0_RGB" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8580" name="GL_SRC0_RGB" alias="GL_SOURCE0_RGB" group="TextureEnvParameter"/>
         <enum value="0x8581" name="GL_SOURCE1_RGB" group="TextureEnvParameter"/>
         <enum value="0x8581" name="GL_SOURCE1_RGB_ARB" group="TextureEnvParameter"/>
         <enum value="0x8581" name="GL_SOURCE1_RGB_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8581" name="GL_SRC1_RGB" alias="GL_SOURCE1_RGB" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8581" name="GL_SRC1_RGB" alias="GL_SOURCE1_RGB" group="TextureEnvParameter"/>
         <enum value="0x8582" name="GL_SOURCE2_RGB" group="TextureEnvParameter"/>
         <enum value="0x8582" name="GL_SOURCE2_RGB_ARB" group="TextureEnvParameter"/>
         <enum value="0x8582" name="GL_SOURCE2_RGB_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8582" name="GL_SRC2_RGB" alias="GL_SOURCE2_RGB" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8582" name="GL_SRC2_RGB" alias="GL_SOURCE2_RGB" group="TextureEnvParameter"/>
         <enum value="0x8583" name="GL_SOURCE3_RGB_NV" group="TextureEnvParameter"/>
             <unused start="0x8584" end="0x8587" comment="Additional combiner enums only"/>
         <enum value="0x8588" name="GL_SOURCE0_ALPHA" group="TextureEnvParameter"/>
         <enum value="0x8588" name="GL_SOURCE0_ALPHA_ARB" group="TextureEnvParameter"/>
         <enum value="0x8588" name="GL_SOURCE0_ALPHA_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8588" name="GL_SRC0_ALPHA" alias="GL_SOURCE0_ALPHA" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8588" name="GL_SRC0_ALPHA" alias="GL_SOURCE0_ALPHA" group="TextureEnvParameter"/>
         <enum value="0x8589" name="GL_SOURCE1_ALPHA" group="TextureEnvParameter"/>
         <enum value="0x8589" name="GL_SOURCE1_ALPHA_ARB" group="TextureEnvParameter"/>
         <enum value="0x8589" name="GL_SOURCE1_ALPHA_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8589" name="GL_SRC1_ALPHA" alias="GL_SOURCE1_ALPHA" group="TextureEnvParameter,BlendingFactor,TextureEnvParameter"/>
+        <enum value="0x8589" name="GL_SRC1_ALPHA" alias="GL_SOURCE1_ALPHA" group="TextureEnvParameter,BlendingFactor"/>
         <enum value="0x8589" name="GL_SRC1_ALPHA_EXT" group="TextureEnvParameter"/>
         <enum value="0x858A" name="GL_SOURCE2_ALPHA" group="TextureEnvParameter"/>
         <enum value="0x858A" name="GL_SOURCE2_ALPHA_ARB" group="TextureEnvParameter"/>
         <enum value="0x858A" name="GL_SOURCE2_ALPHA_EXT" group="TextureEnvParameter"/>
-        <enum value="0x858A" name="GL_SRC2_ALPHA" alias="GL_SOURCE2_ALPHA" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x858A" name="GL_SRC2_ALPHA" alias="GL_SOURCE2_ALPHA" group="TextureEnvParameter"/>
         <enum value="0x858B" name="GL_SOURCE3_ALPHA_NV" group="TextureEnvParameter"/>
             <unused start="0x858C" end="0x858F" comment="Additional combiner enums only"/>
-        <enum value="0x8590" name="GL_OPERAND0_RGB" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8590" name="GL_OPERAND0_RGB" group="TextureEnvParameter"/>
         <enum value="0x8590" name="GL_OPERAND0_RGB_ARB" group="TextureEnvParameter"/>
         <enum value="0x8590" name="GL_OPERAND0_RGB_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8591" name="GL_OPERAND1_RGB" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8591" name="GL_OPERAND1_RGB" group="TextureEnvParameter"/>
         <enum value="0x8591" name="GL_OPERAND1_RGB_ARB" group="TextureEnvParameter"/>
         <enum value="0x8591" name="GL_OPERAND1_RGB_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8592" name="GL_OPERAND2_RGB" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8592" name="GL_OPERAND2_RGB" group="TextureEnvParameter"/>
         <enum value="0x8592" name="GL_OPERAND2_RGB_ARB" group="TextureEnvParameter"/>
         <enum value="0x8592" name="GL_OPERAND2_RGB_EXT" group="TextureEnvParameter"/>
         <enum value="0x8593" name="GL_OPERAND3_RGB_NV" group="TextureEnvParameter"/>
             <unused start="0x8594" end="0x8597" comment="Additional combiner enums only"/>
-        <enum value="0x8598" name="GL_OPERAND0_ALPHA" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8598" name="GL_OPERAND0_ALPHA" group="TextureEnvParameter"/>
         <enum value="0x8598" name="GL_OPERAND0_ALPHA_ARB" group="TextureEnvParameter"/>
         <enum value="0x8598" name="GL_OPERAND0_ALPHA_EXT" group="TextureEnvParameter"/>
-        <enum value="0x8599" name="GL_OPERAND1_ALPHA" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x8599" name="GL_OPERAND1_ALPHA" group="TextureEnvParameter"/>
         <enum value="0x8599" name="GL_OPERAND1_ALPHA_ARB" group="TextureEnvParameter"/>
         <enum value="0x8599" name="GL_OPERAND1_ALPHA_EXT" group="TextureEnvParameter"/>
-        <enum value="0x859A" name="GL_OPERAND2_ALPHA" group="TextureEnvParameter,TextureEnvParameter"/>
+        <enum value="0x859A" name="GL_OPERAND2_ALPHA" group="TextureEnvParameter"/>
         <enum value="0x859A" name="GL_OPERAND2_ALPHA_ARB" group="TextureEnvParameter"/>
         <enum value="0x859A" name="GL_OPERAND2_ALPHA_EXT" group="TextureEnvParameter"/>
         <enum value="0x859B" name="GL_OPERAND3_ALPHA_NV" group="TextureEnvParameter"/>
