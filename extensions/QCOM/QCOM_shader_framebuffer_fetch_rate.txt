@@ -49,7 +49,7 @@ Overview
     will return a per-fragment value.  This avoids the significant performance
     penalty that would otherwise be incurred with sample-rate shading.
 
-    The following built-ins are affected when the this extension is enabled:
+    The following built-ins are affected when this extension is enabled:
 
         gl_LastFragData      (from EXT_shader_framebuffer_fetch)
         gl_LastFragDepthARM  (from ARM_shader_framebuffer_fetch_depth_stencil)
