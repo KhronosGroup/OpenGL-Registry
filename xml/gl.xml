@@ -8053,6 +8053,34 @@ typedef unsigned int GLhandleARB;
             <glx type="render" opcode="4330"/>
         </command>
         <command>
+            <proto>void <name>glBlitFramebufferLayerEXT</name></proto>
+            <param><ptype>GLint</ptype> <name>srcX0</name></param>
+            <param><ptype>GLint</ptype> <name>srcY0</name></param>
+            <param><ptype>GLint</ptype> <name>srcX1</name></param>
+            <param><ptype>GLint</ptype> <name>srcY1</name></param>
+            <param><ptype>GLint</ptype> <name>srcLayer</name></param>
+            <param><ptype>GLint</ptype> <name>dstX0</name></param>
+            <param><ptype>GLint</ptype> <name>dstY0</name></param>
+            <param><ptype>GLint</ptype> <name>dstX1</name></param>
+            <param><ptype>GLint</ptype> <name>dstY1</name></param>
+            <param><ptype>GLint</ptype> <name>dstLayer</name></param>
+            <param group="ClearBufferMask"><ptype>GLbitfield</ptype> <name>mask</name></param>
+            <param group="BlitFramebufferFilter"><ptype>GLenum</ptype> <name>filter</name></param>
+        </command>
+        <command>
+            <proto>void <name>glBlitFramebufferLayersEXT</name></proto>
+            <param><ptype>GLint</ptype> <name>srcX0</name></param>
+            <param><ptype>GLint</ptype> <name>srcY0</name></param>
+            <param><ptype>GLint</ptype> <name>srcX1</name></param>
+            <param><ptype>GLint</ptype> <name>srcY1</name></param>
+            <param><ptype>GLint</ptype> <name>dstX0</name></param>
+            <param><ptype>GLint</ptype> <name>dstY0</name></param>
+            <param><ptype>GLint</ptype> <name>dstX1</name></param>
+            <param><ptype>GLint</ptype> <name>dstY1</name></param>
+            <param group="ClearBufferMask"><ptype>GLbitfield</ptype> <name>mask</name></param>
+            <param group="BlitFramebufferFilter"><ptype>GLenum</ptype> <name>filter</name></param>
+        </command>
+        <command>
             <proto>void <name>glBlitFramebufferNV</name></proto>
             <param><ptype>GLint</ptype> <name>srcX0</name></param>
             <param><ptype>GLint</ptype> <name>srcY0</name></param>
@@ -40822,6 +40850,12 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_DRAW_FRAMEBUFFER_BINDING_EXT"/>
                 <enum name="GL_READ_FRAMEBUFFER_BINDING_EXT"/>
                 <command name="glBlitFramebufferEXT"/>
+            </require>
+        </extension>
+        <extension name="GL_EXT_framebuffer_blit_layers" supported="gl|gles2">
+            <require>
+                <command name="glBlitFramebufferLayersEXT"/>
+                <command name="glBlitFramebufferLayerEXT"/>
             </require>
         </extension>
         <extension name="GL_EXT_framebuffer_multisample" supported="gl">
