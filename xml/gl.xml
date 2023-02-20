@@ -795,8 +795,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0D00" name="GL_PACK_SWAP_BYTES" group="PixelStoreParameter,GetPName"/>
         <enum value="0x0D01" name="GL_PACK_LSB_FIRST" group="PixelStoreParameter,GetPName"/>
         <enum value="0x0D02" name="GL_PACK_ROW_LENGTH" group="PixelStoreParameter,GetPName"/>
+        <enum value="0x0D02" name="GL_PACK_ROW_LENGTH_NV" group="PixelStoreParameter,GetPName"/>
         <enum value="0x0D03" name="GL_PACK_SKIP_ROWS" group="PixelStoreParameter,GetPName"/>
+        <enum value="0x0D03" name="GL_PACK_SKIP_ROWS_NV" group="PixelStoreParameter,GetPName"/>
         <enum value="0x0D04" name="GL_PACK_SKIP_PIXELS" group="PixelStoreParameter,GetPName"/>
+        <enum value="0x0D04" name="GL_PACK_SKIP_PIXELS_NV" group="PixelStoreParameter,GetPName"/>
         <enum value="0x0D05" name="GL_PACK_ALIGNMENT" group="PixelStoreParameter,GetPName"/>
 
         <enum value="0x0D10" name="GL_MAP_COLOR" group="PixelTransferParameter,GetPName"/>
@@ -45546,6 +45549,13 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_VIEWPORT_SWIZZLE_Z_NV"/>
                 <enum name="GL_VIEWPORT_SWIZZLE_W_NV"/>
                 <command name="glViewportSwizzleNV"/>
+            </require>
+        </extension>
+        <extension name="GL_NV_pack_subimage" supported="gles2">
+            <require>
+                <enum name="GL_PACK_ROW_LENGTH_NV"/>
+                <enum name="GL_PACK_SKIP_ROWS_NV"/>
+                <enum name="GL_PACK_SKIP_PIXELS_NV"/>
             </require>
         </extension>
         <extension name="GL_OES_EGL_image" supported="gles1|gles2">
