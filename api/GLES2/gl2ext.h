@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20220530 */
+/* Generated on date 20230220 */
 
 /* Generated C header for:
  * API: gles2
@@ -1459,6 +1459,16 @@ GL_APICALL void GL_APIENTRY glFramebufferShadingRateEXT (GLenum target, GLenum a
 #endif
 #endif /* GL_EXT_fragment_shading_rate */
 
+#ifndef GL_EXT_framebuffer_blit_layers
+#define GL_EXT_framebuffer_blit_layers 1
+typedef void (GL_APIENTRYP PFNGLBLITFRAMEBUFFERLAYERSEXTPROC) (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
+typedef void (GL_APIENTRYP PFNGLBLITFRAMEBUFFERLAYEREXTPROC) (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint srcLayer, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLint dstLayer, GLbitfield mask, GLenum filter);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glBlitFramebufferLayersEXT (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter);
+GL_APICALL void GL_APIENTRY glBlitFramebufferLayerEXT (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint srcLayer, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLint dstLayer, GLbitfield mask, GLenum filter);
+#endif
+#endif /* GL_EXT_framebuffer_blit_layers */
+
 #ifndef GL_EXT_geometry_point_size
 #define GL_EXT_geometry_point_size 1
 #endif /* GL_EXT_geometry_point_size */
@@ -1856,7 +1866,7 @@ GL_APICALL void GL_APIENTRY glImportSemaphoreWin32NameEXT (GLuint semaphore, GLe
 #define GL_PROGRAM_PIPELINE_BINDING_EXT   0x825A
 typedef void (GL_APIENTRYP PFNGLACTIVESHADERPROGRAMEXTPROC) (GLuint pipeline, GLuint program);
 typedef void (GL_APIENTRYP PFNGLBINDPROGRAMPIPELINEEXTPROC) (GLuint pipeline);
-typedef GLuint (GL_APIENTRYP PFNGLCREATESHADERPROGRAMVEXTPROC) (GLenum type, GLsizei count, const GLchar **strings);
+typedef GLuint (GL_APIENTRYP PFNGLCREATESHADERPROGRAMVEXTPROC) (GLenum type, GLsizei count, const GLchar *const*strings);
 typedef void (GL_APIENTRYP PFNGLDELETEPROGRAMPIPELINESEXTPROC) (GLsizei n, const GLuint *pipelines);
 typedef void (GL_APIENTRYP PFNGLGENPROGRAMPIPELINESEXTPROC) (GLsizei n, GLuint *pipelines);
 typedef void (GL_APIENTRYP PFNGLGETPROGRAMPIPELINEINFOLOGEXTPROC) (GLuint pipeline, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
@@ -1901,7 +1911,7 @@ typedef void (GL_APIENTRYP PFNGLPROGRAMUNIFORMMATRIX4X3FVEXTPROC) (GLuint progra
 #ifdef GL_GLEXT_PROTOTYPES
 GL_APICALL void GL_APIENTRY glActiveShaderProgramEXT (GLuint pipeline, GLuint program);
 GL_APICALL void GL_APIENTRY glBindProgramPipelineEXT (GLuint pipeline);
-GL_APICALL GLuint GL_APIENTRY glCreateShaderProgramvEXT (GLenum type, GLsizei count, const GLchar **strings);
+GL_APICALL GLuint GL_APIENTRY glCreateShaderProgramvEXT (GLenum type, GLsizei count, const GLchar *const*strings);
 GL_APICALL void GL_APIENTRY glDeleteProgramPipelinesEXT (GLsizei n, const GLuint *pipelines);
 GL_APICALL void GL_APIENTRY glGenProgramPipelinesEXT (GLsizei n, GLuint *pipelines);
 GL_APICALL void GL_APIENTRY glGetProgramPipelineInfoLogEXT (GLuint pipeline, GLsizei bufSize, GLsizei *length, GLchar *infoLog);
@@ -3185,6 +3195,13 @@ GL_APICALL void GL_APIENTRY glUniformMatrix3x4fvNV (GLint location, GLsizei coun
 GL_APICALL void GL_APIENTRY glUniformMatrix4x3fvNV (GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 #endif
 #endif /* GL_NV_non_square_matrices */
+
+#ifndef GL_NV_pack_subimage
+#define GL_NV_pack_subimage 1
+#define GL_PACK_ROW_LENGTH_NV             0x0D02
+#define GL_PACK_SKIP_ROWS_NV              0x0D03
+#define GL_PACK_SKIP_PIXELS_NV            0x0D04
+#endif /* GL_NV_pack_subimage */
 
 #ifndef GL_NV_path_rendering
 #define GL_NV_path_rendering 1
