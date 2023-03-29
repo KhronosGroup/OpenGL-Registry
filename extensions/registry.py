@@ -2890,6 +2890,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/IMG/IMG_tile_region_protection.txt',
     },
+    'GL_IMG_pvric_end_to_end_signature' : {
+        'scnumber' : 2,
+        'flags' : { 'public' },
+        'url' : 'extensions/IMG/IMG_pvric_end_to_end_signature.txt',
+    },
     'GL_INGR_color_clamp' : {
         'number' : 174,
         'flags' : { 'public' },
