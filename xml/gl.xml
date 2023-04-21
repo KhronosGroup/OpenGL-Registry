@@ -6258,7 +6258,12 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9242" name="GL_CONTEXT_LOST_WEBGL"/>
         <enum value="0x9243" name="GL_UNPACK_COLORSPACE_CONVERSION_WEBGL"/>
         <enum value="0x9244" name="GL_BROWSER_DEFAULT_WEBGL"/>
-            <unused start="0x9245" end="0x924F" vendor="WEBGL"/>
+        <enum value="0x9245" name="GL_UNMASKED_VENDOR_WEBGL" comment="From the WEBGL_debug_renderer_info extension"/>
+        <enum value="0x9246" name="GL_UNMASKED_RENDERER_WEBGL" comment="From the WEBGL_debug_renderer_info extension"/>
+        <enum value="0x9247" name="GL_MAX_CLIENT_WAIT_TIMEOUT_WEBGL"/>
+        <enum value="0x9248" name="GL_TEXTURE_VIDEO_IMAGE_WEBGL" comment="From the WEBGL_video_texture extension"/>
+        <enum value="0x9249" name="GL_SAMPLER_VIDEO_IMAGE_WEBGL" comment="From the WEBGL_video_texture extension"/>
+            <unused start="0x924A" end="0x924F" vendor="WEBGL"/>
     </enums>
 
     <enums namespace="GL" start="0x9250" end="0x925F" vendor="DMP" comment="For Eisaku Ohbuchi via email">
