@@ -2511,9 +2511,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x83F6" name="GL_NORMAL_ARRAY_PARALLEL_POINTERS_INTEL"/>
         <enum value="0x83F7" name="GL_COLOR_ARRAY_PARALLEL_POINTERS_INTEL"/>
         <enum value="0x83F8" name="GL_TEXTURE_COORD_ARRAY_PARALLEL_POINTERS_INTEL"/>
-        <enum value="0x83F9" name="GL_PERFQUERY_DONOT_FLUSH_INTEL"/>
-        <enum value="0x83FA" name="GL_PERFQUERY_FLUSH_INTEL"/>
-        <enum value="0x83FB" name="GL_PERFQUERY_WAIT_INTEL"/>
+        <enum value="0x83F9" name="GL_PERFQUERY_DONOT_FLUSH_INTEL" group="PerfQueryDataFlags"/>
+        <enum value="0x83FA" name="GL_PERFQUERY_FLUSH_INTEL" group="PerfQueryDataFlags"/>
+        <enum value="0x83FB" name="GL_PERFQUERY_WAIT_INTEL" group="PerfQueryDataFlags"/>
         <enum value="0x83FC" name="GL_BLACKHOLE_RENDER_INTEL"/>
             <unused start="0x83FD" vendor="INTEL"/>
         <enum value="0x83FE" name="GL_CONSERVATIVE_RASTERIZATION_INTEL"/>
@@ -7327,7 +7327,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glBeginPerfQueryINTEL</name></proto>
-            <param><ptype>GLuint</ptype> <name>queryHandle</name></param>
+            <param class="perf query handle"><ptype>GLuint</ptype> <name>queryHandle</name></param>
         </command>
         <command>
             <proto>void <name>glBeginQuery</name></proto>
@@ -10318,8 +10318,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glCreatePerfQueryINTEL</name></proto>
-            <param><ptype>GLuint</ptype> <name>queryId</name></param>
-            <param><ptype>GLuint</ptype> *<name>queryHandle</name></param>
+            <param class="perf query id"><ptype>GLuint</ptype> <name>queryId</name></param>
+            <param class="perf query handle"><ptype>GLuint</ptype> *<name>queryHandle</name></param>
         </command>
         <command>
             <proto class="program"><ptype>GLuint</ptype> <name>glCreateProgram</name></proto>
@@ -10668,7 +10668,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDeletePerfQueryINTEL</name></proto>
-            <param><ptype>GLuint</ptype> <name>queryHandle</name></param>
+            <param class="perf query handle"><ptype>GLuint</ptype> <name>queryHandle</name></param>
         </command>
         <command>
             <proto>void <name>glDeleteProgram</name></proto>
@@ -11739,7 +11739,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glEndPerfQueryINTEL</name></proto>
-            <param><ptype>GLuint</ptype> <name>queryHandle</name></param>
+            <param class="perf query handle"><ptype>GLuint</ptype> <name>queryHandle</name></param>
         </command>
         <command>
             <proto>void <name>glEndQuery</name></proto>
@@ -13494,7 +13494,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetFirstPerfQueryIdINTEL</name></proto>
-            <param><ptype>GLuint</ptype> *<name>queryId</name></param>
+            <param class="perf query id"><ptype>GLuint</ptype> *<name>queryId</name></param>
         </command>
         <command>
             <proto>void <name>glGetFixedv</name></proto>
@@ -14340,8 +14340,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetNextPerfQueryIdINTEL</name></proto>
-            <param><ptype>GLuint</ptype> <name>queryId</name></param>
-            <param><ptype>GLuint</ptype> *<name>nextQueryId</name></param>
+            <param class="perf query id"><ptype>GLuint</ptype> <name>queryId</name></param>
+            <param class="perf query id"><ptype>GLuint</ptype> *<name>nextQueryId</name></param>
         </command>
         <command>
             <proto>void <name>glGetObjectBufferfvATI</name></proto>
@@ -14515,7 +14515,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetPerfCounterInfoINTEL</name></proto>
-            <param><ptype>GLuint</ptype> <name>queryId</name></param>
+            <param class="perf query id"><ptype>GLuint</ptype> <name>queryId</name></param>
             <param><ptype>GLuint</ptype> <name>counterId</name></param>
             <param><ptype>GLuint</ptype> <name>counterNameLength</name></param>
             <param len="counterNameLength"><ptype>GLchar</ptype> *<name>counterName</name></param>
@@ -14573,8 +14573,8 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetPerfQueryDataINTEL</name></proto>
-            <param><ptype>GLuint</ptype> <name>queryHandle</name></param>
-            <param><ptype>GLuint</ptype> <name>flags</name></param>
+            <param class="perf query handle"><ptype>GLuint</ptype> <name>queryHandle</name></param>
+            <param group="PerfQueryDataFlags"><ptype>GLuint</ptype> <name>flags</name></param>
             <param><ptype>GLsizei</ptype> <name>dataSize</name></param>
             <param>void *<name>data</name></param>
             <param><ptype>GLuint</ptype> *<name>bytesWritten</name></param>
@@ -14582,11 +14582,11 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetPerfQueryIdByNameINTEL</name></proto>
             <param><ptype>GLchar</ptype> *<name>queryName</name></param>
-            <param><ptype>GLuint</ptype> *<name>queryId</name></param>
+            <param class="perf query id"><ptype>GLuint</ptype> *<name>queryId</name></param>
         </command>
         <command>
             <proto>void <name>glGetPerfQueryInfoINTEL</name></proto>
-            <param><ptype>GLuint</ptype> <name>queryId</name></param>
+            <param class="perf query id"><ptype>GLuint</ptype> <name>queryId</name></param>
             <param><ptype>GLuint</ptype> <name>queryNameLength</name></param>
             <param len="queryNameLength"><ptype>GLchar</ptype> *<name>queryName</name></param>
             <param><ptype>GLuint</ptype> *<name>dataSize</name></param>
