@@ -315,9 +315,12 @@ typedef unsigned int GLhandleARB;
         <enum value="0xFFFF" name="GL_TRACE_ALL_BITS_MESA" group="TraceMaskMESA"/>
     </enums>
 
-    <enums namespace="GL" group="PathRenderingMaskNV" type="bitmask">
+    <enums namespace="GL" group="PathFontStyle" type="bitmask">
         <enum value="0x01" name="GL_BOLD_BIT_NV" group="PathFontStyle"/>
         <enum value="0x02" name="GL_ITALIC_BIT_NV" group="PathFontStyle"/>
+    </enums>
+
+    <enums namespace="GL" group="PathMetricMask" type="bitmask">
         <enum value="0x01" name="GL_GLYPH_WIDTH_BIT_NV" group="PathMetricMask"/>
         <enum value="0x02" name="GL_GLYPH_HEIGHT_BIT_NV" group="PathMetricMask"/>
         <enum value="0x04" name="GL_GLYPH_HORIZONTAL_BEARING_X_BIT_NV" group="PathMetricMask"/>
