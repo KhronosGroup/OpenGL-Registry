@@ -942,9 +942,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x1101" name="GL_FASTEST" group="HintMode"/>
         <enum value="0x1102" name="GL_NICEST" group="HintMode"/>
             <unused start="0x1103" end="0x11FF" comment="Unused for HintMode"/>
-        <enum value="0x1200" name="GL_AMBIENT" group="MaterialParameter,FragmentLightParameterSGIX,ColorMaterialParameter"/>
-        <enum value="0x1201" name="GL_DIFFUSE" group="MaterialParameter,FragmentLightParameterSGIX,ColorMaterialParameter"/>
-        <enum value="0x1202" name="GL_SPECULAR" group="MaterialParameter,FragmentLightParameterSGIX,ColorMaterialParameter"/>
+        <enum value="0x1200" name="GL_AMBIENT" group="LightParameter,MaterialParameter,FragmentLightParameterSGIX,ColorMaterialParameter"/>
+        <enum value="0x1201" name="GL_DIFFUSE" group="LightParameter,MaterialParameter,FragmentLightParameterSGIX,ColorMaterialParameter"/>
+        <enum value="0x1202" name="GL_SPECULAR" group="LightParameter,MaterialParameter,FragmentLightParameterSGIX,ColorMaterialParameter"/>
         <enum value="0x1203" name="GL_POSITION" group="LightParameter,FragmentLightParameterSGIX"/>
         <enum value="0x1204" name="GL_SPOT_DIRECTION" group="LightParameter,FragmentLightParameterSGIX"/>
         <enum value="0x1205" name="GL_SPOT_EXPONENT" group="LightParameter,FragmentLightParameterSGIX"/>
