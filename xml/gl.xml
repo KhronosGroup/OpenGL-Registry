@@ -45252,6 +45252,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glDrawTransformFeedbackNV"/>
             </require>
         </extension>
+        <extension name="GL_NV_uniform_buffer_std430_layout" supported="gl|glcore"/>
         <extension name="GL_NV_uniform_buffer_unified_memory" supported="gl|glcore">
             <require>
                 <enum name="GL_UNIFORM_BUFFER_UNIFIED_NV"/>
