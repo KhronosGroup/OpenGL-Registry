@@ -5838,6 +5838,10 @@ GLAPI void APIENTRY glTextureBarrierNV (void);
 #define GL_NV_texture_rectangle_compressed 1
 #endif /* GL_NV_texture_rectangle_compressed */
 
+#ifndef GL_NV_uniform_buffer_std430_layout
+#define GL_NV_uniform_buffer_std430_layout 1
+#endif /* GL_NV_uniform_buffer_std430_layout */
+
 #ifndef GL_NV_uniform_buffer_unified_memory
 #define GL_NV_uniform_buffer_unified_memory 1
 #define GL_UNIFORM_BUFFER_UNIFIED_NV      0x936E

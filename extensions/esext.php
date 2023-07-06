@@ -711,4 +711,6 @@
 
     <br> <a href="extensions/EXT/EXT_fragment_shading_rate.txt">GL_EXT_fragment_shading_rate_primitive</a>
 </li>
+<li value=341><a href="extensions/EXT/EXT_framebuffer_blit_layers.txt">GL_EXT_framebuffer_blit_layers</a>
+</li>
 </ol>
