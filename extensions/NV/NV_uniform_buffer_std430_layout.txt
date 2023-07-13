@@ -23,8 +23,8 @@ Status
 
 Version
     
-    Last Modified Date: April 27, 2022
-    Revision: #1
+    Last Modified Date: July 12, 2023
+    Revision: #2
 
 Number
 
@@ -203,7 +203,7 @@ Issues
 
           static float2 aggressivePackArray[32] = (float2[32])array;  
 
-    5)  How can this extension so minimal in its specification language?
+    5)  How can this extension be so minimal in its specification language?
 
         RESOLVED:  The OpenGL Shading Language 4.30 specification provides
         all the syntax for specifying the std430 layout qualifier for
@@ -216,4 +216,5 @@ Issues
 Revision History
 
     #01    04/27/2022    Mark Kilgard           First draft.
+    #02    07/12/2023    Mark Kilgard           Grammar fixes
 
