@@ -2890,6 +2890,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/IMG/IMG_tile_region_protection.txt',
     },
+    'GL_IMG_pvric_end_to_end_signature' : {
+        'scnumber' : 2,
+        'flags' : { 'public' },
+        'url' : 'extensions/IMG/IMG_pvric_end_to_end_signature.txt',
+    },
     'GL_INGR_color_clamp' : {
         'number' : 174,
         'flags' : { 'public' },
@@ -4020,6 +4025,11 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_timeline_semaphore.txt',
+    },
+    'GL_NV_uniform_buffer_std430_layout' : {
+        'number' : 559,
+        'flags' : { 'public' },
+        'url' : 'extensions/NV/NV_uniform_buffer_std430_layout.txt',
     },
     'GL_NV_uniform_buffer_unified_memory' : {
         'number' : 459,
