@@ -4026,6 +4026,11 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_timeline_semaphore.txt',
     },
+    'GL_NV_uniform_buffer_std430_layout' : {
+        'number' : 559,
+        'flags' : { 'public' },
+        'url' : 'extensions/NV/NV_uniform_buffer_std430_layout.txt',
+    },
     'GL_NV_uniform_buffer_unified_memory' : {
         'number' : 459,
         'flags' : { 'public' },
