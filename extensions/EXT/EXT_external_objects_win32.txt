@@ -24,8 +24,8 @@ Status
 
 Version
 
-    Last Modified Date: June 2, 2017
-    Revision: 8
+    Last Modified Date: August 29, 2023
+    Revision: 10
 
 Number
 
@@ -257,8 +257,7 @@ Additions to Chapter 6 of the OpenGL 4.5 Specification (Memory Objects)
             HANDLE_TYPE_D3D11_IMAGE_EXT
             HANDLE_TYPE_D3D11_KMT_IMAGE_EXT
 
-        <size> is ignored[fn1] and the implementation must query the actual
-        size of the memory object from the OS.
+        <size> is ignored[fn1].
 
         [fn1] Some implementations incorrectly require <size> be set to '0'
         when importing such handles, so applications should set <size> to
@@ -293,6 +292,10 @@ Issues
        prototype and define its type through spec language.
 
 Revision History
+
+    Revision 10, 2023-08-29 (James Jones)
+        - Clarify that the <size> parameter is ignored in the
+          ImportMemoryWin32* calls for some handle types.
 
     Revision 9, 2022-07-15 (James Jones)
         - Added commands to the list of commands not permitted in display
