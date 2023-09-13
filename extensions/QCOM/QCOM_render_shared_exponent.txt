@@ -101,7 +101,10 @@ Additions to Chapter 20 of the OpenGL ES 3.2 Specification
 
 Errors
 
-    No new errors.
+    Relaxation of INVALID_OPERATION errors
+    --------------------------------------
+
+    CopyTex[Sub]Image* now accepts RGB9_E5 for <internalformat>
 
 Issues
 
