@@ -79,7 +79,7 @@ typedef unsigned int GLhandleARB;
         <kind name="BufferSize" desc="This parameter represents the size of a buffer."/>
         <kind name="String" desc="This parameter represents a string of characters. A GLubyte parameter should be treated as GLchar."/>
         <kind name="DrawBufferIndex" desc="This parameter represents an index to a draw buffer in the range 0 to the value of GL_MAX_COLOR_ATTACHMENTS"/>
-        
+
         <kind name="Matrix2x2" desc="This parameter represents a 2x2 matrix."/>
         <kind name="Matrix2x3" desc="This parameter represents a 2x3 matrix."/>
         <kind name="Matrix2x4" desc="This parameter represents a 2x4 matrix."/>
@@ -96,7 +96,7 @@ typedef unsigned int GLhandleARB;
         <kind name="Vector2" desc="This parameter represents a vector with 2 components"/>
         <kind name="Vector3" desc="This parameter represents a vector with 3 components"/>
         <kind name="Vector4" desc="This parameter represents a vector with 4 components"/>
-        
+
         <!-- Applicable to legacy OpenGL functions -->
         <kind name="ColorIndexValue" desc="This parameter represents a color in the color index."/>
         <kind name="ColorIndexMask" desc="This parameter represents a color index mask. A color index value will be masked using this parameter."/>
@@ -4814,7 +4814,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C91" name="GL_MOTION_ESTIMATION_SEARCH_BLOCK_Y_QCOM" group="GetPName"/>
         <enum value="0x8C92" name="GL_ATC_RGB_AMD"/>
         <enum value="0x8C93" name="GL_ATC_RGBA_EXPLICIT_ALPHA_AMD"/>
-            <unused start="0x8C94" end="0x8C9F" vendor="QCOM"/>
+            <unused start="0x8C94" end="0x8C95" vendor="QCOM"/>
+        <enum value="0x8C96" name="GL_TEXTURE_LOD_BIAS_QCOM"/>
+            <unused start="0x8C97" end="0x8C9F" vendor="QCOM"/>
     </enums>
     <enums namespace="GL" start="0x8CA0" end="0x8CAF" vendor="ARB">
         <enum value="0x8CA0" name="GL_POINT_SPRITE_COORD_ORIGIN"/>
@@ -42331,6 +42333,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_SKIP_DECODE_EXT"/>
             </require>
         </extension>
+        <extension name="GL_EXT_texture_shadow_lod" supported="gl|glcore|gles2"/>
         <extension name="GL_EXT_texture_shared_exponent" supported="gl">
             <require>
                 <enum name="GL_RGB9_E5_EXT"/>
@@ -46669,8 +46672,8 @@ typedef unsigned int GLhandleARB;
                 <command name="glExtrapolateTex2DQCOM"/>
             </require>
         </extension>
-        <extension name="GL_QCOM_render_shared_exponent" supported="gles2">
-        </extension>
+        <extension name="GL_QCOM_render_shared_exponent" supported="gles2"/>
+        <extension name="GL_QCOM_render_sRGB_R8_RG8" supported="gles2"/>
         <extension name="GL_QCOM_texture_foveated" supported="gles2">
             <require>
                 <enum name="GL_FOVEATION_ENABLE_BIT_QCOM"/>
@@ -46694,6 +46697,11 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_MAX_SHADER_SUBSAMPLED_IMAGE_UNITS_QCOM"/>
             </require>
         </extension>
+        <extension name="GL_QCOM_texture_lod_bias" supported="gles2">
+            <require>
+                <enum name="GL_TEXTURE_LOD_BIAS_QCOM"/>
+            </require>
+        </extension>
         <extension name="GL_QCOM_perfmon_global_mode" supported="gles1|gles2">
             <require>
                 <enum name="GL_PERFMON_GLOBAL_MODE_QCOM"/>
@@ -46705,8 +46713,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glFramebufferFetchBarrierQCOM"/>
             </require>
         </extension>
-        <extension name="GL_QCOM_shader_framebuffer_fetch_rate" supported="gles2">
-        </extension>
+        <extension name="GL_QCOM_shader_framebuffer_fetch_rate" supported="gles2"/>
         <extension name="GL_QCOM_shading_rate" supported="gles2">
             <require>
                 <enum name="GL_SHADING_RATE_QCOM"/>
@@ -46763,8 +46770,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_WRITEONLY_RENDERING_QCOM"/>
             </require>
         </extension>
-        <extension name="GL_QCOM_YUV_texture_gather" supported="gles2">
-        </extension>
+        <extension name="GL_QCOM_YUV_texture_gather" supported="gles2"/>
         <extension name="GL_REND_screen_coordinates" supported="gl">
             <require>
                 <enum name="GL_SCREEN_COORDINATES_REND"/>
@@ -47439,6 +47445,5 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_FOG_SPECULAR_TEXTURE_WIN"/>
             </require>
         </extension>
-        <extension name="GL_EXT_texture_shadow_lod" supported="gl|glcore|gles2"/>
     </extensions>
 </registry>

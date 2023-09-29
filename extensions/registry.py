@@ -4607,6 +4607,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_render_shared_exponent.txt',
     },
+    'GL_QCOM_render_sRGB_R8_RG8' : {
+        'esnumber' : 343,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_render_sRGB_R8_RG8.txt',
+    },
     'GL_QCOM_performance_monitor_global_mode' : {
         'esnumber' : 56,
         'flags' : { 'public' },
@@ -4646,6 +4651,12 @@ registry = {
         'esnumber' : 306,
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_texture_foveated_subsampled_layout.txt',
+    },
+    'GL_QCOM_texture_lod_bias' : {
+        'esnumber' : 342,
+        'flags' : { 'public' },
+        'supporters' : { 'QCOM' },
+        'url' : 'extensions/QCOM/QCOM_texture_lod_bias.txt',
     },
     'GL_QCOM_tiled_rendering' : {
         'esnumber' : 70,

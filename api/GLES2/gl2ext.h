@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20230705 */
+/* Generated on date 20230929 */
 
 /* Generated C header for:
  * API: gles2
@@ -3934,6 +3934,10 @@ GL_APICALL void GL_APIENTRY glTexEstimateMotionRegionsQCOM (GLuint ref, GLuint t
 #define GL_PERFMON_GLOBAL_MODE_QCOM       0x8FA0
 #endif /* GL_QCOM_perfmon_global_mode */
 
+#ifndef GL_QCOM_render_sRGB_R8_RG8
+#define GL_QCOM_render_sRGB_R8_RG8 1
+#endif /* GL_QCOM_render_sRGB_R8_RG8 */
+
 #ifndef GL_QCOM_render_shared_exponent
 #define GL_QCOM_render_shared_exponent 1
 #endif /* GL_QCOM_render_shared_exponent */
@@ -3990,6 +3994,11 @@ GL_APICALL void GL_APIENTRY glTextureFoveationParametersQCOM (GLuint texture, GL
 #define GL_FOVEATION_SUBSAMPLED_LAYOUT_METHOD_BIT_QCOM 0x00000004
 #define GL_MAX_SHADER_SUBSAMPLED_IMAGE_UNITS_QCOM 0x8FA1
 #endif /* GL_QCOM_texture_foveated_subsampled_layout */
+
+#ifndef GL_QCOM_texture_lod_bias
+#define GL_QCOM_texture_lod_bias 1
+#define GL_TEXTURE_LOD_BIAS_QCOM          0x8C96
+#endif /* GL_QCOM_texture_lod_bias */
 
 #ifndef GL_QCOM_tiled_rendering
 #define GL_QCOM_tiled_rendering 1

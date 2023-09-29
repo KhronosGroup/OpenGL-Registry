@@ -713,4 +713,8 @@
 </li>
 <li value=341><a href="extensions/EXT/EXT_framebuffer_blit_layers.txt">GL_EXT_framebuffer_blit_layers</a>
 </li>
+<li value=342><a href="extensions/QCOM/QCOM_texture_lod_bias.txt">GL_QCOM_texture_lod_bias</a>
+</li>
+<li value=343><a href="extensions/QCOM/QCOM_render_sRGB_R8_RG8.txt">GL_QCOM_render_sRGB_R8_RG8</a>
+</li>
 </ol>
