@@ -936,7 +936,7 @@ Registry at https://github.com/KhronosGroup/OpenGL-Registry
             <param>int <name>iPixelFormat</name></param>
             <param>int <name>iLayerPlane</name></param>
             <param><ptype>UINT</ptype> <name>nAttributes</name></param>
-            <param len="nAttributes">const int *<name>piAttributes</name></param>
+            <param group="PixelFormatAttribute" len="nAttributes">const int *<name>piAttributes</name></param>
             <param len="nAttributes"><ptype>FLOAT</ptype> *<name>pfValues</name></param>
         </command>
         <command>
@@ -945,7 +945,7 @@ Registry at https://github.com/KhronosGroup/OpenGL-Registry
             <param>int <name>iPixelFormat</name></param>
             <param>int <name>iLayerPlane</name></param>
             <param><ptype>UINT</ptype> <name>nAttributes</name></param>
-            <param len="nAttributes">int *<name>piAttributes</name></param>
+            <param group="PixelFormatAttribute" len="nAttributes">int *<name>piAttributes</name></param>
             <param len="nAttributes"><ptype>FLOAT</ptype> *<name>pfValues</name></param>
         </command>
         <command>
@@ -954,7 +954,7 @@ Registry at https://github.com/KhronosGroup/OpenGL-Registry
             <param>int <name>iPixelFormat</name></param>
             <param>int <name>iLayerPlane</name></param>
             <param><ptype>UINT</ptype> <name>nAttributes</name></param>
-            <param len="nAttributes">const int *<name>piAttributes</name></param>
+            <param group="PixelFormatAttribute" len="nAttributes">const int *<name>piAttributes</name></param>
             <param len="nAttributes">int *<name>piValues</name></param>
         </command>
         <command>
@@ -963,7 +963,7 @@ Registry at https://github.com/KhronosGroup/OpenGL-Registry
             <param>int <name>iPixelFormat</name></param>
             <param>int <name>iLayerPlane</name></param>
             <param><ptype>UINT</ptype> <name>nAttributes</name></param>
-            <param len="nAttributes">int *<name>piAttributes</name></param>
+            <param group="PixelFormatAttribute" len="nAttributes">int *<name>piAttributes</name></param>
             <param len="nAttributes">int *<name>piValues</name></param>
         </command>
         <command>
