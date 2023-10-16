@@ -734,7 +734,7 @@ Registry at https://github.com/KhronosGroup/OpenGL-Registry
             <param><ptype>HANDLE</ptype> <name>hDevice</name></param>
             <param len="1">void *<name>dxObject</name></param>
             <param><ptype>GLuint</ptype> <name>name</name></param>
-            <param group="gl::WGLObjectTypeDX"><ptype>GLenum</ptype> <name>type</name></param>
+            <param group="ObjectTypeDX"><ptype>GLenum</ptype> <name>type</name></param>
             <param group="DXInteropMaskNV"><ptype>GLenum</ptype> <name>access</name></param>
         </command>
         <command>
