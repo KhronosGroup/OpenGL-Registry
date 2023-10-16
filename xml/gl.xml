@@ -1097,7 +1097,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x2700" name="GL_NEAREST_MIPMAP_NEAREST" group="TextureMinFilter"/>
         <enum value="0x2701" name="GL_LINEAR_MIPMAP_NEAREST" group="TextureMinFilter"/>
         <enum value="0x2702" name="GL_NEAREST_MIPMAP_LINEAR" group="TextureMinFilter"/>
-        <enum value="0x2703" name="GL_LINEAR_MIPMAP_LINEAR" group="TextureWrapMode,TextureMinFilter"/>
+        <enum value="0x2703" name="GL_LINEAR_MIPMAP_LINEAR" group="TextureMinFilter"/>
             <unused start="0x2704" end="0x27FF" comment="Unused for TextureMinFilter"/>
         <enum value="0x2800" name="GL_TEXTURE_MAG_FILTER" group="SamplerParameterI,GetTextureParameter,TextureParameterName"/>
         <enum value="0x2801" name="GL_TEXTURE_MIN_FILTER" group="SamplerParameterI,GetTextureParameter,TextureParameterName"/>
