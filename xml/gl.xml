@@ -10941,7 +10941,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDisable</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>cap</name></param>
+            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
             <glx type="render" opcode="138"/>
         </command>
         <command>
@@ -11628,7 +11628,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glEnable</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>cap</name></param>
+            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
             <glx type="render" opcode="139"/>
         </command>
         <command>
@@ -16742,7 +16742,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto><ptype>GLboolean</ptype> <name>glIsEnabled</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>cap</name></param>
+            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
             <glx type="single" opcode="140"/>
         </command>
         <command>
