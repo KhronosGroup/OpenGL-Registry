@@ -665,20 +665,20 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0B08" name="GL_CURRENT_RASTER_POSITION_VALID" group="GetPName"/>
         <enum value="0x0B09" name="GL_CURRENT_RASTER_DISTANCE" group="GetPName"/>
 
-        <enum value="0x0B10" name="GL_POINT_SMOOTH" group="GetPName,EnableCap"/>
+        <enum value="0x0B10" name="GL_POINT_SMOOTH" group="GetPName,EnableTarget"/>
         <enum value="0x0B11" name="GL_POINT_SIZE" group="GetPName"/>
         <enum value="0x0B12" name="GL_POINT_SIZE_RANGE" group="GetPName"/>
         <enum value="0x0B12" name="GL_SMOOTH_POINT_SIZE_RANGE" alias="GL_POINT_SIZE_RANGE" group="GetPName"/>
         <enum value="0x0B13" name="GL_POINT_SIZE_GRANULARITY" group="GetPName"/>
         <enum value="0x0B13" name="GL_SMOOTH_POINT_SIZE_GRANULARITY" alias="GL_POINT_SIZE_GRANULARITY" group="GetPName"/>
 
-        <enum value="0x0B20" name="GL_LINE_SMOOTH" group="GetPName,EnableCap"/>
+        <enum value="0x0B20" name="GL_LINE_SMOOTH" group="GetPName,EnableTarget"/>
         <enum value="0x0B21" name="GL_LINE_WIDTH" group="GetPName"/>
         <enum value="0x0B22" name="GL_LINE_WIDTH_RANGE" group="GetPName"/>
         <enum value="0x0B22" name="GL_SMOOTH_LINE_WIDTH_RANGE" alias="GL_LINE_WIDTH_RANGE" group="GetPName"/>
         <enum value="0x0B23" name="GL_LINE_WIDTH_GRANULARITY" group="GetPName"/>
         <enum value="0x0B23" name="GL_SMOOTH_LINE_WIDTH_GRANULARITY" alias="GL_LINE_WIDTH_GRANULARITY" group="GetPName"/>
-        <enum value="0x0B24" name="GL_LINE_STIPPLE" group="GetPName,EnableCap"/>
+        <enum value="0x0B24" name="GL_LINE_STIPPLE" group="GetPName,EnableTarget"/>
         <enum value="0x0B25" name="GL_LINE_STIPPLE_PATTERN" group="GetPName"/>
         <enum value="0x0B26" name="GL_LINE_STIPPLE_REPEAT" group="GetPName"/>
 
@@ -689,23 +689,23 @@ typedef unsigned int GLhandleARB;
 
         <enum value="0x0B40" name="GL_POLYGON_MODE" group="GetPName"/>
         <enum value="0x0B40" name="GL_POLYGON_MODE_NV"/>
-        <enum value="0x0B41" name="GL_POLYGON_SMOOTH" group="GetPName,EnableCap"/>
-        <enum value="0x0B42" name="GL_POLYGON_STIPPLE" group="GetPName,EnableCap"/>
+        <enum value="0x0B41" name="GL_POLYGON_SMOOTH" group="GetPName,EnableTarget"/>
+        <enum value="0x0B42" name="GL_POLYGON_STIPPLE" group="GetPName,EnableTarget"/>
         <enum value="0x0B43" name="GL_EDGE_FLAG" group="GetPName"/>
-        <enum value="0x0B44" name="GL_CULL_FACE" group="GetPName,EnableCap"/>
+        <enum value="0x0B44" name="GL_CULL_FACE" group="GetPName,EnableTarget"/>
         <enum value="0x0B45" name="GL_CULL_FACE_MODE" group="GetPName"/>
         <enum value="0x0B46" name="GL_FRONT_FACE" group="GetPName"/>
 
-        <enum value="0x0B50" name="GL_LIGHTING" group="GetPName,EnableCap"/>
+        <enum value="0x0B50" name="GL_LIGHTING" group="GetPName,EnableTarget"/>
         <enum value="0x0B51" name="GL_LIGHT_MODEL_LOCAL_VIEWER" group="LightModelParameter,GetPName"/>
         <enum value="0x0B52" name="GL_LIGHT_MODEL_TWO_SIDE" group="LightModelParameter,GetPName"/>
         <enum value="0x0B53" name="GL_LIGHT_MODEL_AMBIENT" group="LightModelParameter,GetPName"/>
         <enum value="0x0B54" name="GL_SHADE_MODEL" group="GetPName"/>
         <enum value="0x0B55" name="GL_COLOR_MATERIAL_FACE" group="GetPName"/>
         <enum value="0x0B56" name="GL_COLOR_MATERIAL_PARAMETER" group="GetPName"/>
-        <enum value="0x0B57" name="GL_COLOR_MATERIAL" group="GetPName,EnableCap"/>
+        <enum value="0x0B57" name="GL_COLOR_MATERIAL" group="GetPName,EnableTarget"/>
 
-        <enum value="0x0B60" name="GL_FOG" group="GetPName,EnableCap"/>
+        <enum value="0x0B60" name="GL_FOG" group="GetPName,EnableTarget"/>
         <enum value="0x0B61" name="GL_FOG_INDEX" group="FogPName,FogParameter,GetPName"/>
         <enum value="0x0B62" name="GL_FOG_DENSITY" group="FogPName,FogParameter,GetPName"/>
         <enum value="0x0B63" name="GL_FOG_START" group="FogPName,FogParameter,GetPName"/>
@@ -714,14 +714,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0B66" name="GL_FOG_COLOR" group="GetPName,FogParameter"/>
 
         <enum value="0x0B70" name="GL_DEPTH_RANGE" group="GetPName"/>
-        <enum value="0x0B71" name="GL_DEPTH_TEST" group="GetPName,EnableCap"/>
+        <enum value="0x0B71" name="GL_DEPTH_TEST" group="GetPName,EnableTarget"/>
         <enum value="0x0B72" name="GL_DEPTH_WRITEMASK" group="GetPName"/>
         <enum value="0x0B73" name="GL_DEPTH_CLEAR_VALUE" group="GetPName"/>
         <enum value="0x0B74" name="GL_DEPTH_FUNC" group="GetPName"/>
 
         <enum value="0x0B80" name="GL_ACCUM_CLEAR_VALUE" group="GetPName"/>
 
-        <enum value="0x0B90" name="GL_STENCIL_TEST" group="GetPName,EnableCap"/>
+        <enum value="0x0B90" name="GL_STENCIL_TEST" group="GetPName,EnableTarget"/>
         <enum value="0x0B91" name="GL_STENCIL_CLEAR_VALUE" group="GetPName"/>
         <enum value="0x0B92" name="GL_STENCIL_FUNC" group="GetPName"/>
         <enum value="0x0B93" name="GL_STENCIL_VALUE_MASK" group="GetPName"/>
@@ -732,7 +732,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0B98" name="GL_STENCIL_WRITEMASK" group="GetPName"/>
 
         <enum value="0x0BA0" name="GL_MATRIX_MODE" group="GetPName"/>
-        <enum value="0x0BA1" name="GL_NORMALIZE" group="GetPName,EnableCap"/>
+        <enum value="0x0BA1" name="GL_NORMALIZE" group="GetPName,EnableTarget"/>
         <enum value="0x0BA2" name="GL_VIEWPORT" group="GetPName"/>
         <enum value="0x0BA3" name="GL_MODELVIEW_STACK_DEPTH" group="GetPName"/>
         <enum value="0x0BA3" name="GL_MODELVIEW0_STACK_DEPTH_EXT" group="GetPName"/>
@@ -750,23 +750,23 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0BB0" name="GL_ATTRIB_STACK_DEPTH" group="GetPName"/>
         <enum value="0x0BB1" name="GL_CLIENT_ATTRIB_STACK_DEPTH" group="GetPName"/>
 
-        <enum value="0x0BC0" name="GL_ALPHA_TEST" group="GetPName,EnableCap"/>
+        <enum value="0x0BC0" name="GL_ALPHA_TEST" group="GetPName,EnableTarget"/>
         <enum value="0x0BC0" name="GL_ALPHA_TEST_QCOM" group="GetPName"/>
         <enum value="0x0BC1" name="GL_ALPHA_TEST_FUNC" group="GetPName"/>
         <enum value="0x0BC1" name="GL_ALPHA_TEST_FUNC_QCOM" group="GetPName"/>
         <enum value="0x0BC2" name="GL_ALPHA_TEST_REF" group="GetPName"/>
         <enum value="0x0BC2" name="GL_ALPHA_TEST_REF_QCOM" group="GetPName"/>
 
-        <enum value="0x0BD0" name="GL_DITHER" group="GetPName,EnableCap"/>
+        <enum value="0x0BD0" name="GL_DITHER" group="GetPName,EnableTarget"/>
 
         <enum value="0x0BE0" name="GL_BLEND_DST" group="GetPName"/>
         <enum value="0x0BE1" name="GL_BLEND_SRC" group="GetPName"/>
-        <enum value="0x0BE2" name="GL_BLEND" group="TextureEnvMode,EnableCap,GetPName"/>
+        <enum value="0x0BE2" name="GL_BLEND" group="TextureEnvMode,EnableTarget,GetPName"/>
 
         <enum value="0x0BF0" name="GL_LOGIC_OP_MODE" group="GetPName"/>
-        <enum value="0x0BF1" name="GL_INDEX_LOGIC_OP" group="GetPName,EnableCap"/>
+        <enum value="0x0BF1" name="GL_INDEX_LOGIC_OP" group="GetPName,EnableTarget"/>
         <enum value="0x0BF1" name="GL_LOGIC_OP" group="GetPName"/>
-        <enum value="0x0BF2" name="GL_COLOR_LOGIC_OP" group="GetPName,EnableCap"/>
+        <enum value="0x0BF2" name="GL_COLOR_LOGIC_OP" group="GetPName,EnableTarget"/>
 
         <enum value="0x0C00" name="GL_AUX_BUFFERS" group="GetPName"/>
         <enum value="0x0C01" name="GL_DRAW_BUFFER" group="GetPName"/>
@@ -776,7 +776,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0C02" name="GL_READ_BUFFER_NV" group="GetPName"/>
 
         <enum value="0x0C10" name="GL_SCISSOR_BOX" group="GetPName"/>
-        <enum value="0x0C11" name="GL_SCISSOR_TEST" group="GetPName,EnableCap"/>
+        <enum value="0x0C11" name="GL_SCISSOR_TEST" group="GetPName,EnableTarget"/>
 
         <enum value="0x0C20" name="GL_INDEX_CLEAR_VALUE" group="GetPName"/>
         <enum value="0x0C21" name="GL_INDEX_WRITEMASK" group="GetPName"/>
@@ -796,10 +796,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x0C53" name="GL_POLYGON_SMOOTH_HINT" group="HintTarget,GetPName"/>
         <enum value="0x0C54" name="GL_FOG_HINT" group="HintTarget,GetPName"/>
 
-        <enum value="0x0C60" name="GL_TEXTURE_GEN_S" group="GetPName,EnableCap"/>
-        <enum value="0x0C61" name="GL_TEXTURE_GEN_T" group="GetPName,EnableCap"/>
-        <enum value="0x0C62" name="GL_TEXTURE_GEN_R" group="GetPName,EnableCap"/>
-        <enum value="0x0C63" name="GL_TEXTURE_GEN_Q" group="GetPName,EnableCap"/>
+        <enum value="0x0C60" name="GL_TEXTURE_GEN_S" group="GetPName,EnableTarget"/>
+        <enum value="0x0C61" name="GL_TEXTURE_GEN_T" group="GetPName,EnableTarget"/>
+        <enum value="0x0C62" name="GL_TEXTURE_GEN_R" group="GetPName,EnableTarget"/>
+        <enum value="0x0C63" name="GL_TEXTURE_GEN_Q" group="GetPName,EnableTarget"/>
 
         <enum value="0x0C70" name="GL_PIXEL_MAP_I_TO_I" group="PixelMap"/>
         <enum value="0x0C71" name="GL_PIXEL_MAP_S_TO_S" group="PixelMap"/>
@@ -894,35 +894,35 @@ typedef unsigned int GLhandleARB;
 
         <enum value="0x0D70" name="GL_NAME_STACK_DEPTH" group="GetPName"/>
 
-        <enum value="0x0D80" name="GL_AUTO_NORMAL" group="GetPName,EnableCap"/>
+        <enum value="0x0D80" name="GL_AUTO_NORMAL" group="GetPName,EnableTarget"/>
 
-        <enum value="0x0D90" name="GL_MAP1_COLOR_4" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0D91" name="GL_MAP1_INDEX" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0D92" name="GL_MAP1_NORMAL" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0D93" name="GL_MAP1_TEXTURE_COORD_1" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0D94" name="GL_MAP1_TEXTURE_COORD_2" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0D95" name="GL_MAP1_TEXTURE_COORD_3" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0D96" name="GL_MAP1_TEXTURE_COORD_4" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0D97" name="GL_MAP1_VERTEX_3" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0D98" name="GL_MAP1_VERTEX_4" group="MapTarget,EnableCap,GetPName"/>
+        <enum value="0x0D90" name="GL_MAP1_COLOR_4" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0D91" name="GL_MAP1_INDEX" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0D92" name="GL_MAP1_NORMAL" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0D93" name="GL_MAP1_TEXTURE_COORD_1" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0D94" name="GL_MAP1_TEXTURE_COORD_2" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0D95" name="GL_MAP1_TEXTURE_COORD_3" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0D96" name="GL_MAP1_TEXTURE_COORD_4" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0D97" name="GL_MAP1_VERTEX_3" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0D98" name="GL_MAP1_VERTEX_4" group="MapTarget,EnableTarget,GetPName"/>
 
-        <enum value="0x0DB0" name="GL_MAP2_COLOR_4" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0DB1" name="GL_MAP2_INDEX" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0DB2" name="GL_MAP2_NORMAL" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0DB3" name="GL_MAP2_TEXTURE_COORD_1" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0DB4" name="GL_MAP2_TEXTURE_COORD_2" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0DB5" name="GL_MAP2_TEXTURE_COORD_3" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0DB6" name="GL_MAP2_TEXTURE_COORD_4" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0DB7" name="GL_MAP2_VERTEX_3" group="MapTarget,EnableCap,GetPName"/>
-        <enum value="0x0DB8" name="GL_MAP2_VERTEX_4" group="MapTarget,EnableCap,GetPName"/>
+        <enum value="0x0DB0" name="GL_MAP2_COLOR_4" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0DB1" name="GL_MAP2_INDEX" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0DB2" name="GL_MAP2_NORMAL" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0DB3" name="GL_MAP2_TEXTURE_COORD_1" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0DB4" name="GL_MAP2_TEXTURE_COORD_2" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0DB5" name="GL_MAP2_TEXTURE_COORD_3" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0DB6" name="GL_MAP2_TEXTURE_COORD_4" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0DB7" name="GL_MAP2_VERTEX_3" group="MapTarget,EnableTarget,GetPName"/>
+        <enum value="0x0DB8" name="GL_MAP2_VERTEX_4" group="MapTarget,EnableTarget,GetPName"/>
 
         <enum value="0x0DD0" name="GL_MAP1_GRID_DOMAIN" group="GetPName"/>
         <enum value="0x0DD1" name="GL_MAP1_GRID_SEGMENTS" group="GetPName"/>
         <enum value="0x0DD2" name="GL_MAP2_GRID_DOMAIN" group="GetPName"/>
         <enum value="0x0DD3" name="GL_MAP2_GRID_SEGMENTS" group="GetPName"/>
 
-        <enum value="0x0DE0" name="GL_TEXTURE_1D" group="CopyImageSubDataTarget,EnableCap,GetPName,TextureTarget"/>
-        <enum value="0x0DE1" name="GL_TEXTURE_2D" group="CopyImageSubDataTarget,EnableCap,GetPName,TextureTarget"/>
+        <enum value="0x0DE0" name="GL_TEXTURE_1D" group="CopyImageSubDataTarget,EnableTarget,GetPName,TextureTarget"/>
+        <enum value="0x0DE1" name="GL_TEXTURE_2D" group="CopyImageSubDataTarget,EnableTarget,GetPName,TextureTarget"/>
 
         <enum value="0x0DF0" name="GL_FEEDBACK_BUFFER_POINTER" group="GetPointervPName"/>
         <enum value="0x0DF1" name="GL_FEEDBACK_BUFFER_SIZE" group="GetPName"/>
@@ -1108,9 +1108,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x2901" name="GL_REPEAT" group="TextureWrapMode"/>
             <unused start="0x2902" end="0x29FF" comment="Unused for TextureWrapMode"/>
         <enum value="0x2A00" name="GL_POLYGON_OFFSET_UNITS" group="GetPName"/>
-        <enum value="0x2A01" name="GL_POLYGON_OFFSET_POINT" group="GetPName,EnableCap"/>
+        <enum value="0x2A01" name="GL_POLYGON_OFFSET_POINT" group="GetPName,EnableTarget"/>
         <enum value="0x2A01" name="GL_POLYGON_OFFSET_POINT_NV"/>
-        <enum value="0x2A02" name="GL_POLYGON_OFFSET_LINE" group="GetPName,EnableCap"/>
+        <enum value="0x2A02" name="GL_POLYGON_OFFSET_LINE" group="GetPName,EnableTarget"/>
         <enum value="0x2A02" name="GL_POLYGON_OFFSET_LINE_NV"/>
             <unused start="0x2A03" end="0x2A09" comment="Unused for PolygonOffset"/>
         <enum value="0x2A10" name="GL_R3_G3_B2" group="InternalFormat,SizedInternalFormat"/>
@@ -1130,51 +1130,51 @@ typedef unsigned int GLhandleARB;
         <enum value="0x2A2C" name="GL_T2F_C4F_N3F_V3F" group="InterleavedArrayFormat"/>
         <enum value="0x2A2D" name="GL_T4F_C4F_N3F_V4F" group="InterleavedArrayFormat"/>
             <unused start="0x2A2E" end="0x2FFF" comment="Unused for InterleavedArrayFormat"/>
-        <enum value="0x3000" name="GL_CLIP_PLANE0" group="GetPName,ClipPlaneName,EnableCap"/>
+        <enum value="0x3000" name="GL_CLIP_PLANE0" group="GetPName,ClipPlaneName,EnableTarget"/>
         <enum value="0x3000" name="GL_CLIP_PLANE0_IMG"/>
-        <enum value="0x3000" name="GL_CLIP_DISTANCE0" alias="GL_CLIP_PLANE0" group="EnableCap,ClipPlaneName"/>
+        <enum value="0x3000" name="GL_CLIP_DISTANCE0" alias="GL_CLIP_PLANE0" group="EnableTarget,ClipPlaneName"/>
         <enum value="0x3000" name="GL_CLIP_DISTANCE0_EXT" alias="GL_CLIP_PLANE0"/>
         <enum value="0x3000" name="GL_CLIP_DISTANCE0_APPLE"/>
-        <enum value="0x3001" name="GL_CLIP_PLANE1" group="GetPName,ClipPlaneName,EnableCap"/>
+        <enum value="0x3001" name="GL_CLIP_PLANE1" group="GetPName,ClipPlaneName,EnableTarget"/>
         <enum value="0x3001" name="GL_CLIP_PLANE1_IMG"/>
-        <enum value="0x3001" name="GL_CLIP_DISTANCE1" alias="GL_CLIP_PLANE1" group="EnableCap,ClipPlaneName"/>
+        <enum value="0x3001" name="GL_CLIP_DISTANCE1" alias="GL_CLIP_PLANE1" group="EnableTarget,ClipPlaneName"/>
         <enum value="0x3001" name="GL_CLIP_DISTANCE1_EXT" alias="GL_CLIP_PLANE1"/>
         <enum value="0x3001" name="GL_CLIP_DISTANCE1_APPLE"/>
-        <enum value="0x3002" name="GL_CLIP_PLANE2" group="GetPName,ClipPlaneName,EnableCap"/>
+        <enum value="0x3002" name="GL_CLIP_PLANE2" group="GetPName,ClipPlaneName,EnableTarget"/>
         <enum value="0x3002" name="GL_CLIP_PLANE2_IMG"/>
-        <enum value="0x3002" name="GL_CLIP_DISTANCE2" alias="GL_CLIP_PLANE2" group="EnableCap,ClipPlaneName"/>
+        <enum value="0x3002" name="GL_CLIP_DISTANCE2" alias="GL_CLIP_PLANE2" group="EnableTarget,ClipPlaneName"/>
         <enum value="0x3002" name="GL_CLIP_DISTANCE2_EXT" alias="GL_CLIP_PLANE2"/>
         <enum value="0x3002" name="GL_CLIP_DISTANCE2_APPLE"/>
-        <enum value="0x3003" name="GL_CLIP_PLANE3" group="GetPName,ClipPlaneName,EnableCap"/>
+        <enum value="0x3003" name="GL_CLIP_PLANE3" group="GetPName,ClipPlaneName,EnableTarget"/>
         <enum value="0x3003" name="GL_CLIP_PLANE3_IMG"/>
-        <enum value="0x3003" name="GL_CLIP_DISTANCE3" alias="GL_CLIP_PLANE3" group="EnableCap,ClipPlaneName"/>
+        <enum value="0x3003" name="GL_CLIP_DISTANCE3" alias="GL_CLIP_PLANE3" group="EnableTarget,ClipPlaneName"/>
         <enum value="0x3003" name="GL_CLIP_DISTANCE3_EXT" alias="GL_CLIP_PLANE3"/>
         <enum value="0x3003" name="GL_CLIP_DISTANCE3_APPLE"/>
-        <enum value="0x3004" name="GL_CLIP_PLANE4" group="GetPName,ClipPlaneName,EnableCap"/>
+        <enum value="0x3004" name="GL_CLIP_PLANE4" group="GetPName,ClipPlaneName,EnableTarget"/>
         <enum value="0x3004" name="GL_CLIP_PLANE4_IMG"/>
-        <enum value="0x3004" name="GL_CLIP_DISTANCE4" alias="GL_CLIP_PLANE4" group="EnableCap,ClipPlaneName"/>
+        <enum value="0x3004" name="GL_CLIP_DISTANCE4" alias="GL_CLIP_PLANE4" group="EnableTarget,ClipPlaneName"/>
         <enum value="0x3004" name="GL_CLIP_DISTANCE4_EXT" alias="GL_CLIP_PLANE4"/>
         <enum value="0x3004" name="GL_CLIP_DISTANCE4_APPLE"/>
-        <enum value="0x3005" name="GL_CLIP_PLANE5" group="GetPName,ClipPlaneName,EnableCap"/>
+        <enum value="0x3005" name="GL_CLIP_PLANE5" group="GetPName,ClipPlaneName,EnableTarget"/>
         <enum value="0x3005" name="GL_CLIP_PLANE5_IMG"/>
-        <enum value="0x3005" name="GL_CLIP_DISTANCE5" alias="GL_CLIP_PLANE5" group="EnableCap,ClipPlaneName"/>
+        <enum value="0x3005" name="GL_CLIP_DISTANCE5" alias="GL_CLIP_PLANE5" group="EnableTarget,ClipPlaneName"/>
         <enum value="0x3005" name="GL_CLIP_DISTANCE5_EXT" alias="GL_CLIP_PLANE5"/>
         <enum value="0x3005" name="GL_CLIP_DISTANCE5_APPLE"/>
-        <enum value="0x3006" name="GL_CLIP_DISTANCE6" group="EnableCap,ClipPlaneName"/>
+        <enum value="0x3006" name="GL_CLIP_DISTANCE6" group="EnableTarget,ClipPlaneName"/>
         <enum value="0x3006" name="GL_CLIP_DISTANCE6_EXT" alias="GL_CLIP_DISTANCE6"/>
         <enum value="0x3006" name="GL_CLIP_DISTANCE6_APPLE"/>
-        <enum value="0x3007" name="GL_CLIP_DISTANCE7" group="EnableCap,ClipPlaneName"/>
+        <enum value="0x3007" name="GL_CLIP_DISTANCE7" group="EnableTarget,ClipPlaneName"/>
         <enum value="0x3007" name="GL_CLIP_DISTANCE7_EXT" alias="GL_CLIP_DISTANCE7"/>
         <enum value="0x3007" name="GL_CLIP_DISTANCE7_APPLE"/>
             <unused start="0x3008" end="0x3FFF" comment="Unused for ClipPlaneName"/>
-        <enum value="0x4000" name="GL_LIGHT0" group="LightName,EnableCap,GetPName"/>
-        <enum value="0x4001" name="GL_LIGHT1" group="LightName,EnableCap,GetPName"/>
-        <enum value="0x4002" name="GL_LIGHT2" group="LightName,EnableCap,GetPName"/>
-        <enum value="0x4003" name="GL_LIGHT3" group="LightName,EnableCap,GetPName"/>
-        <enum value="0x4004" name="GL_LIGHT4" group="LightName,EnableCap,GetPName"/>
-        <enum value="0x4005" name="GL_LIGHT5" group="LightName,EnableCap,GetPName"/>
-        <enum value="0x4006" name="GL_LIGHT6" group="LightName,EnableCap,GetPName"/>
-        <enum value="0x4007" name="GL_LIGHT7" group="LightName,EnableCap,GetPName"/>
+        <enum value="0x4000" name="GL_LIGHT0" group="LightName,EnableTarget,GetPName"/>
+        <enum value="0x4001" name="GL_LIGHT1" group="LightName,EnableTarget,GetPName"/>
+        <enum value="0x4002" name="GL_LIGHT2" group="LightName,EnableTarget,GetPName"/>
+        <enum value="0x4003" name="GL_LIGHT3" group="LightName,EnableTarget,GetPName"/>
+        <enum value="0x4004" name="GL_LIGHT4" group="LightName,EnableTarget,GetPName"/>
+        <enum value="0x4005" name="GL_LIGHT5" group="LightName,EnableTarget,GetPName"/>
+        <enum value="0x4006" name="GL_LIGHT6" group="LightName,EnableTarget,GetPName"/>
+        <enum value="0x4007" name="GL_LIGHT7" group="LightName,EnableTarget,GetPName"/>
             <unused start="0x4008" end="0x4FFF" comment="Unused for LightName"/>
             <unused start="0x5000" end="0x5FFF" comment="Unused. Do not use."/>
             <unused start="0x6000" end="0x6FFF" comment="Experimental (internal/test only) range. DO NOT SHIP VALUES IN THIS RANGE."/>
@@ -1217,11 +1217,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x800E" name="GL_PACK_CMYK_HINT_EXT" group="HintTarget,GetPName"/>
         <enum value="0x800F" name="GL_UNPACK_CMYK_HINT_EXT" group="HintTarget,GetPName"/>
         <enum value="0x8010" name="GL_CONVOLUTION_1D" group="ConvolutionTarget,ConvolutionTargetEXT"/>
-        <enum value="0x8010" name="GL_CONVOLUTION_1D_EXT" group="GetPName,ConvolutionTargetEXT,EnableCap"/>
+        <enum value="0x8010" name="GL_CONVOLUTION_1D_EXT" group="GetPName,ConvolutionTargetEXT,EnableTarget"/>
         <enum value="0x8011" name="GL_CONVOLUTION_2D" group="ConvolutionTarget,ConvolutionTargetEXT"/>
-        <enum value="0x8011" name="GL_CONVOLUTION_2D_EXT" group="GetPName,ConvolutionTargetEXT,EnableCap"/>
+        <enum value="0x8011" name="GL_CONVOLUTION_2D_EXT" group="GetPName,ConvolutionTargetEXT,EnableTarget"/>
         <enum value="0x8012" name="GL_SEPARABLE_2D" group="SeparableTarget,SeparableTargetEXT"/>
-        <enum value="0x8012" name="GL_SEPARABLE_2D_EXT" group="SeparableTargetEXT,EnableCap,GetPName"/>
+        <enum value="0x8012" name="GL_SEPARABLE_2D_EXT" group="SeparableTargetEXT,EnableTarget,GetPName"/>
         <enum value="0x8013" name="GL_CONVOLUTION_BORDER_MODE" group="ConvolutionParameter"/>
         <enum value="0x8013" name="GL_CONVOLUTION_BORDER_MODE_EXT" group="ConvolutionParameter"/>
         <enum value="0x8014" name="GL_CONVOLUTION_FILTER_SCALE" group="ConvolutionParameter"/>
@@ -1257,7 +1257,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8023" name="GL_POST_CONVOLUTION_ALPHA_BIAS" group="PixelTransferParameter"/>
         <enum value="0x8023" name="GL_POST_CONVOLUTION_ALPHA_BIAS_EXT" group="PixelTransferParameter,GetPName"/>
         <enum value="0x8024" name="GL_HISTOGRAM" group="HistogramTarget,HistogramTargetEXT"/>
-        <enum value="0x8024" name="GL_HISTOGRAM_EXT" group="HistogramTargetEXT,EnableCap,GetPName"/>
+        <enum value="0x8024" name="GL_HISTOGRAM_EXT" group="HistogramTargetEXT,EnableTarget,GetPName"/>
         <enum value="0x8025" name="GL_PROXY_HISTOGRAM" group="HistogramTarget,HistogramTargetEXT"/>
         <enum value="0x8025" name="GL_PROXY_HISTOGRAM_EXT" group="HistogramTargetEXT"/>
         <enum value="0x8026" name="GL_HISTOGRAM_WIDTH" group="GetHistogramParameterPNameEXT"/>
@@ -1277,7 +1277,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x802D" name="GL_HISTOGRAM_SINK" group="GetHistogramParameterPNameEXT"/>
         <enum value="0x802D" name="GL_HISTOGRAM_SINK_EXT" group="GetHistogramParameterPNameEXT"/>
         <enum value="0x802E" name="GL_MINMAX" group="MinmaxTarget,MinmaxTargetEXT"/>
-        <enum value="0x802E" name="GL_MINMAX_EXT" group="MinmaxTargetEXT,EnableCap,GetPName"/>
+        <enum value="0x802E" name="GL_MINMAX_EXT" group="MinmaxTargetEXT,EnableTarget,GetPName"/>
         <enum value="0x802F" name="GL_MINMAX_FORMAT" group="GetMinmaxParameterPNameEXT"/>
         <enum value="0x802F" name="GL_MINMAX_FORMAT_EXT" group="GetMinmaxParameterPNameEXT"/>
         <enum value="0x8030" name="GL_MINMAX_SINK" group="GetMinmaxParameterPNameEXT"/>
@@ -1295,12 +1295,12 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8036" name="GL_UNSIGNED_INT_10_10_10_2" group="PixelType"/>
         <enum value="0x8036" name="GL_UNSIGNED_INT_10_10_10_2_EXT" group="PixelType"/>
         <enum value="0x8037" name="GL_POLYGON_OFFSET_EXT"/>
-        <enum value="0x8037" name="GL_POLYGON_OFFSET_FILL" group="GetPName,EnableCap"/>
+        <enum value="0x8037" name="GL_POLYGON_OFFSET_FILL" group="GetPName,EnableTarget"/>
         <enum value="0x8038" name="GL_POLYGON_OFFSET_FACTOR" group="GetPName"/>
         <enum value="0x8038" name="GL_POLYGON_OFFSET_FACTOR_EXT"/>
         <enum value="0x8039" name="GL_POLYGON_OFFSET_BIAS_EXT" group="GetPName"/>
         <enum value="0x803A" name="GL_RESCALE_NORMAL"/>
-        <enum value="0x803A" name="GL_RESCALE_NORMAL_EXT" group="GetPName,EnableCap"/>
+        <enum value="0x803A" name="GL_RESCALE_NORMAL_EXT" group="GetPName,EnableTarget"/>
         <enum value="0x803B" name="GL_ALPHA4" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x803B" name="GL_ALPHA4_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x803C" name="GL_ALPHA8" group="InternalFormat,SizedInternalFormat"/>
@@ -1413,7 +1413,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x806E" name="GL_UNPACK_IMAGE_HEIGHT" group="PixelStoreParameter,GetPName"/>
         <enum value="0x806E" name="GL_UNPACK_IMAGE_HEIGHT_EXT" group="PixelStoreParameter,GetPName"/>
         <enum value="0x806F" name="GL_TEXTURE_3D" group="CopyImageSubDataTarget,TextureTarget"/>
-        <enum value="0x806F" name="GL_TEXTURE_3D_EXT" group="TextureTarget,EnableCap,GetPName"/>
+        <enum value="0x806F" name="GL_TEXTURE_3D_EXT" group="TextureTarget,EnableTarget,GetPName"/>
         <enum value="0x806F" name="GL_TEXTURE_3D_OES" group="TextureTarget"/>
         <enum value="0x8070" name="GL_PROXY_TEXTURE_3D" group="TextureTarget"/>
         <enum value="0x8070" name="GL_PROXY_TEXTURE_3D_EXT" group="TextureTarget"/>
@@ -1425,18 +1425,18 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8073" name="GL_MAX_3D_TEXTURE_SIZE" group="GetPName"/>
         <enum value="0x8073" name="GL_MAX_3D_TEXTURE_SIZE_EXT" group="GetPName"/>
         <enum value="0x8073" name="GL_MAX_3D_TEXTURE_SIZE_OES"/>
-        <enum value="0x8074" name="GL_VERTEX_ARRAY" group="ObjectIdentifier,EnableCap,GetPName"/>
+        <enum value="0x8074" name="GL_VERTEX_ARRAY" group="ObjectIdentifier,EnableTarget,GetPName"/>
         <enum value="0x8074" name="GL_VERTEX_ARRAY_EXT"/>
         <enum value="0x8074" name="GL_VERTEX_ARRAY_KHR"/>
-        <enum value="0x8075" name="GL_NORMAL_ARRAY" group="GetPName,EnableCap"/>
+        <enum value="0x8075" name="GL_NORMAL_ARRAY" group="GetPName,EnableTarget"/>
         <enum value="0x8075" name="GL_NORMAL_ARRAY_EXT"/>
-        <enum value="0x8076" name="GL_COLOR_ARRAY" group="GetPName,EnableCap"/>
+        <enum value="0x8076" name="GL_COLOR_ARRAY" group="GetPName,EnableTarget"/>
         <enum value="0x8076" name="GL_COLOR_ARRAY_EXT"/>
-        <enum value="0x8077" name="GL_INDEX_ARRAY" group="GetPName,EnableCap"/>
+        <enum value="0x8077" name="GL_INDEX_ARRAY" group="GetPName,EnableTarget"/>
         <enum value="0x8077" name="GL_INDEX_ARRAY_EXT"/>
-        <enum value="0x8078" name="GL_TEXTURE_COORD_ARRAY" group="GetPName,EnableCap"/>
+        <enum value="0x8078" name="GL_TEXTURE_COORD_ARRAY" group="GetPName,EnableTarget"/>
         <enum value="0x8078" name="GL_TEXTURE_COORD_ARRAY_EXT"/>
-        <enum value="0x8079" name="GL_EDGE_FLAG_ARRAY" group="GetPName,EnableCap"/>
+        <enum value="0x8079" name="GL_EDGE_FLAG_ARRAY" group="GetPName,EnableTarget"/>
         <enum value="0x8079" name="GL_EDGE_FLAG_ARRAY_EXT"/>
         <enum value="0x807A" name="GL_VERTEX_ARRAY_SIZE" group="GetPName"/>
         <enum value="0x807A" name="GL_VERTEX_ARRAY_SIZE_EXT"/>
@@ -1484,7 +1484,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8092" name="GL_TEXTURE_COORD_ARRAY_POINTER_EXT" group="GetPointervPName"/>
         <enum value="0x8093" name="GL_EDGE_FLAG_ARRAY_POINTER" group="GetPointervPName"/>
         <enum value="0x8093" name="GL_EDGE_FLAG_ARRAY_POINTER_EXT" group="GetPointervPName"/>
-        <enum value="0x8094" name="GL_INTERLACE_SGIX" group="GetPName,EnableCap"/>
+        <enum value="0x8094" name="GL_INTERLACE_SGIX" group="GetPName,EnableTarget"/>
         <enum value="0x8095" name="GL_DETAIL_TEXTURE_2D_SGIS" group="TextureTarget"/>
         <enum value="0x8096" name="GL_DETAIL_TEXTURE_2D_BINDING_SGIS" group="GetPName"/>
         <enum value="0x8097" name="GL_LINEAR_DETAIL_SGIS" group="TextureMagFilter"/>
@@ -1493,22 +1493,22 @@ typedef unsigned int GLhandleARB;
         <enum value="0x809A" name="GL_DETAIL_TEXTURE_LEVEL_SGIS" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x809B" name="GL_DETAIL_TEXTURE_MODE_SGIS" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x809C" name="GL_DETAIL_TEXTURE_FUNC_POINTS_SGIS" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x809D" name="GL_MULTISAMPLE" group="EnableCap"/>
+        <enum value="0x809D" name="GL_MULTISAMPLE" group="EnableTarget"/>
         <enum value="0x809D" name="GL_MULTISAMPLE_ARB"/>
         <enum value="0x809D" name="GL_MULTISAMPLE_EXT"/>
-        <enum value="0x809D" name="GL_MULTISAMPLE_SGIS" group="GetPName,EnableCap"/>
-        <enum value="0x809E" name="GL_SAMPLE_ALPHA_TO_COVERAGE" group="EnableCap"/>
+        <enum value="0x809D" name="GL_MULTISAMPLE_SGIS" group="GetPName,EnableTarget"/>
+        <enum value="0x809E" name="GL_SAMPLE_ALPHA_TO_COVERAGE" group="EnableTarget"/>
         <enum value="0x809E" name="GL_SAMPLE_ALPHA_TO_COVERAGE_ARB"/>
         <enum value="0x809E" name="GL_SAMPLE_ALPHA_TO_MASK_EXT"/>
-        <enum value="0x809E" name="GL_SAMPLE_ALPHA_TO_MASK_SGIS" group="GetPName,EnableCap"/>
-        <enum value="0x809F" name="GL_SAMPLE_ALPHA_TO_ONE" group="EnableCap"/>
+        <enum value="0x809E" name="GL_SAMPLE_ALPHA_TO_MASK_SGIS" group="GetPName,EnableTarget"/>
+        <enum value="0x809F" name="GL_SAMPLE_ALPHA_TO_ONE" group="EnableTarget"/>
         <enum value="0x809F" name="GL_SAMPLE_ALPHA_TO_ONE_ARB"/>
         <enum value="0x809F" name="GL_SAMPLE_ALPHA_TO_ONE_EXT"/>
-        <enum value="0x809F" name="GL_SAMPLE_ALPHA_TO_ONE_SGIS" group="GetPName,EnableCap"/>
-        <enum value="0x80A0" name="GL_SAMPLE_COVERAGE" group="EnableCap"/>
+        <enum value="0x809F" name="GL_SAMPLE_ALPHA_TO_ONE_SGIS" group="GetPName,EnableTarget"/>
+        <enum value="0x80A0" name="GL_SAMPLE_COVERAGE" group="EnableTarget"/>
         <enum value="0x80A0" name="GL_SAMPLE_COVERAGE_ARB"/>
         <enum value="0x80A0" name="GL_SAMPLE_MASK_EXT"/>
-        <enum value="0x80A0" name="GL_SAMPLE_MASK_SGIS" group="GetPName,EnableCap"/>
+        <enum value="0x80A0" name="GL_SAMPLE_MASK_SGIS" group="GetPName,EnableTarget"/>
         <enum value="0x80A1" name="GL_1PASS_EXT" group="SamplePatternSGIS,SamplePatternEXT"/>
         <enum value="0x80A1" name="GL_1PASS_SGIS" group="SamplePatternSGIS"/>
         <enum value="0x80A2" name="GL_2PASS_0_EXT" group="SamplePatternSGIS,SamplePatternEXT"/>
@@ -1567,7 +1567,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x80BA" name="GL_POST_COLOR_MATRIX_BLUE_BIAS_SGI" group="PixelTransferParameter,GetPName"/>
         <enum value="0x80BB" name="GL_POST_COLOR_MATRIX_ALPHA_BIAS" group="PixelTransferParameter"/>
         <enum value="0x80BB" name="GL_POST_COLOR_MATRIX_ALPHA_BIAS_SGI" group="PixelTransferParameter,GetPName"/>
-        <enum value="0x80BC" name="GL_TEXTURE_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableCap"/>
+        <enum value="0x80BC" name="GL_TEXTURE_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableTarget"/>
         <enum value="0x80BD" name="GL_PROXY_TEXTURE_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
         <enum value="0x80BE" name="GL_TEXTURE_ENV_BIAS_SGIX" group="TextureEnvMode"/>
         <enum value="0x80BF" name="GL_SHADOW_AMBIENT_SGIX" group="TextureParameterName,GetTextureParameter"/>
@@ -1595,12 +1595,12 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x80D0" end="0x80DF" vendor="SGI">
-        <enum value="0x80D0" name="GL_COLOR_TABLE" group="ColorTableTarget,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D0" name="GL_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D1" name="GL_POST_CONVOLUTION_COLOR_TABLE" group="ColorTableTarget,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D1" name="GL_POST_CONVOLUTION_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D2" name="GL_POST_COLOR_MATRIX_COLOR_TABLE" group="ColorTableTarget,ColorTableTargetSGI,EnableCap"/>
-        <enum value="0x80D2" name="GL_POST_COLOR_MATRIX_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableCap"/>
+        <enum value="0x80D0" name="GL_COLOR_TABLE" group="ColorTableTarget,ColorTableTargetSGI,EnableTarget"/>
+        <enum value="0x80D0" name="GL_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableTarget"/>
+        <enum value="0x80D1" name="GL_POST_CONVOLUTION_COLOR_TABLE" group="ColorTableTarget,ColorTableTargetSGI,EnableTarget"/>
+        <enum value="0x80D1" name="GL_POST_CONVOLUTION_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableTarget"/>
+        <enum value="0x80D2" name="GL_POST_COLOR_MATRIX_COLOR_TABLE" group="ColorTableTarget,ColorTableTargetSGI,EnableTarget"/>
+        <enum value="0x80D2" name="GL_POST_COLOR_MATRIX_COLOR_TABLE_SGI" group="GetPName,ColorTableTargetSGI,EnableTarget"/>
         <enum value="0x80D3" name="GL_PROXY_COLOR_TABLE" group="ColorTableTargetSGI,ColorTableTarget"/>
         <enum value="0x80D3" name="GL_PROXY_COLOR_TABLE_SGI" group="ColorTableTargetSGI"/>
         <enum value="0x80D4" name="GL_PROXY_POST_CONVOLUTION_COLOR_TABLE" group="ColorTableTargetSGI,ColorTableTarget"/>
@@ -1712,12 +1712,12 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8131" name="GL_PACK_IMAGE_DEPTH_SGIS" group="PixelStoreParameter,GetPName"/>
         <enum value="0x8132" name="GL_UNPACK_SKIP_VOLUMES_SGIS" group="PixelStoreParameter,GetPName"/>
         <enum value="0x8133" name="GL_UNPACK_IMAGE_DEPTH_SGIS" group="PixelStoreParameter,GetPName"/>
-        <enum value="0x8134" name="GL_TEXTURE_4D_SGIS" group="TextureTarget,EnableCap,GetPName"/>
+        <enum value="0x8134" name="GL_TEXTURE_4D_SGIS" group="TextureTarget,EnableTarget,GetPName"/>
         <enum value="0x8135" name="GL_PROXY_TEXTURE_4D_SGIS" group="TextureTarget"/>
         <enum value="0x8136" name="GL_TEXTURE_4DSIZE_SGIS" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8137" name="GL_TEXTURE_WRAP_Q_SGIS" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x8138" name="GL_MAX_4D_TEXTURE_SIZE_SGIS" group="GetPName"/>
-        <enum value="0x8139" name="GL_PIXEL_TEX_GEN_SGIX" group="GetPName,EnableCap"/>
+        <enum value="0x8139" name="GL_PIXEL_TEX_GEN_SGIX" group="GetPName,EnableTarget"/>
         <enum value="0x813A" name="GL_TEXTURE_MIN_LOD" group="SamplerParameterF,TextureParameterName"/>
         <enum value="0x813A" name="GL_TEXTURE_MIN_LOD_SGIS" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x813B" name="GL_TEXTURE_MAX_LOD" group="SamplerParameterF,TextureParameterName"/>
@@ -1737,7 +1737,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8145" name="GL_PIXEL_TILE_CACHE_SIZE_SGIX" group="PixelStoreParameter,GetPName"/>
         <enum value="0x8146" name="GL_FILTER4_SGIS" group="TextureFilterSGIS,TextureMinFilter,TextureMagFilter"/>
         <enum value="0x8147" name="GL_TEXTURE_FILTER4_SIZE_SGIS" group="TextureParameterName,GetTextureParameter"/>
-        <enum value="0x8148" name="GL_SPRITE_SGIX" group="GetPName,EnableCap"/>
+        <enum value="0x8148" name="GL_SPRITE_SGIX" group="GetPName,EnableTarget"/>
         <enum value="0x8149" name="GL_SPRITE_MODE_SGIX" group="GetPName,SpriteParameterNameSGIX"/>
         <enum value="0x814A" name="GL_SPRITE_AXIS_SGIX" group="GetPName"/>
         <enum value="0x814B" name="GL_SPRITE_TRANSLATION_SGIX" group="GetPName"/>
@@ -1794,20 +1794,20 @@ typedef unsigned int GLhandleARB;
         <enum value="0x817A" name="GL_POST_TEXTURE_FILTER_SCALE_SGIX" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x817B" name="GL_POST_TEXTURE_FILTER_BIAS_RANGE_SGIX" group="GetPName"/>
         <enum value="0x817C" name="GL_POST_TEXTURE_FILTER_SCALE_RANGE_SGIX" group="GetPName"/>
-        <enum value="0x817D" name="GL_REFERENCE_PLANE_SGIX" group="GetPName,EnableCap"/>
+        <enum value="0x817D" name="GL_REFERENCE_PLANE_SGIX" group="GetPName,EnableTarget"/>
         <enum value="0x817E" name="GL_REFERENCE_PLANE_EQUATION_SGIX" group="GetPName"/>
-        <enum value="0x817F" name="GL_IR_INSTRUMENT1_SGIX" group="GetPName,EnableCap"/>
+        <enum value="0x817F" name="GL_IR_INSTRUMENT1_SGIX" group="GetPName,EnableTarget"/>
         <enum value="0x8180" name="GL_INSTRUMENT_BUFFER_POINTER_SGIX" group="GetPointervPName"/>
         <enum value="0x8181" name="GL_INSTRUMENT_MEASUREMENTS_SGIX" group="GetPName"/>
         <enum value="0x8182" name="GL_LIST_PRIORITY_SGIX" group="ListParameterName"/>
-        <enum value="0x8183" name="GL_CALLIGRAPHIC_FRAGMENT_SGIX" group="GetPName,EnableCap"/>
+        <enum value="0x8183" name="GL_CALLIGRAPHIC_FRAGMENT_SGIX" group="GetPName,EnableTarget"/>
         <enum value="0x8184" name="GL_PIXEL_TEX_GEN_Q_CEILING_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
         <enum value="0x8185" name="GL_PIXEL_TEX_GEN_Q_ROUND_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
         <enum value="0x8186" name="GL_PIXEL_TEX_GEN_Q_FLOOR_SGIX" group="TextureMinFilter,PixelTexGenModeSGIX,TextureMagFilter"/>
             <unused start="0x8187" end="0x8188" comment="Reserved but unused for PixelTexGenModeSGIX"/>
         <enum value="0x8189" name="GL_PIXEL_TEX_GEN_ALPHA_LS_SGIX" group="PixelTexGenModeSGIX"/>
         <enum value="0x818A" name="GL_PIXEL_TEX_GEN_ALPHA_MS_SGIX" group="PixelTexGenModeSGIX"/>
-        <enum value="0x818B" name="GL_FRAMEZOOM_SGIX" group="GetPName,EnableCap"/>
+        <enum value="0x818B" name="GL_FRAMEZOOM_SGIX" group="GetPName,EnableTarget"/>
         <enum value="0x818C" name="GL_FRAMEZOOM_FACTOR_SGIX" group="GetPName"/>
         <enum value="0x818D" name="GL_MAX_FRAMEZOOM_FACTOR_SGIX" group="GetPName"/>
         <enum value="0x818E" name="GL_TEXTURE_LOD_BIAS_S_SGIX" group="TextureParameterName,GetTextureParameter"/>
@@ -1823,7 +1823,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8195" name="GL_TEXTURE_DEFORMATION_SGIX" group="MapTarget,FfdTargetSGIX"/>
         <enum value="0x8196" name="GL_DEFORMATIONS_MASK_SGIX" group="GetPName"/>
         <enum value="0x8197" name="GL_MAX_DEFORMATION_ORDER_SGIX"/>
-        <enum value="0x8198" name="GL_FOG_OFFSET_SGIX" group="GetPName,EnableCap"/>
+        <enum value="0x8198" name="GL_FOG_OFFSET_SGIX" group="GetPName,EnableTarget"/>
         <enum value="0x8199" name="GL_FOG_OFFSET_VALUE_SGIX" group="GetPName,FogParameter"/>
         <enum value="0x819A" name="GL_TEXTURE_COMPARE_SGIX" group="TextureParameterName,GetTextureParameter"/>
         <enum value="0x819B" name="GL_TEXTURE_COMPARE_OPERATOR_SGIX" group="TextureParameterName,GetTextureParameter"/>
@@ -1941,7 +1941,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x81F9" name="GL_SINGLE_COLOR_EXT" group="LightModelColorControl"/>
         <enum value="0x81FA" name="GL_SEPARATE_SPECULAR_COLOR" group="LightModelColorControl"/>
         <enum value="0x81FA" name="GL_SEPARATE_SPECULAR_COLOR_EXT" group="LightModelColorControl"/>
-        <enum value="0x81FB" name="GL_SHARED_TEXTURE_PALETTE_EXT" group="GetPName,EnableCap"/>
+        <enum value="0x81FB" name="GL_SHARED_TEXTURE_PALETTE_EXT" group="GetPName,EnableTarget"/>
             <unused start="0x81FC" end="0x81FD" comment="Incomplete extension SGIX_fog_scale"/>
             <!-- <enum value="0x81FC" name="GL_FOG_SCALE_SGIX"/> -->
             <!-- <enum value="0x81FD" name="GL_FOG_SCALE_VALUE_SGIX"/> -->
@@ -2022,7 +2022,7 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" start="0x8240" end="0x82AF" vendor="ARB" comment="Range released by MS on 2002/9/16">
         <enum value="0x8240" name="GL_SYNC_CL_EVENT_ARB"/>
         <enum value="0x8241" name="GL_SYNC_CL_EVENT_COMPLETE_ARB"/>
-        <enum value="0x8242" name="GL_DEBUG_OUTPUT_SYNCHRONOUS" group="EnableCap"/>
+        <enum value="0x8242" name="GL_DEBUG_OUTPUT_SYNCHRONOUS" group="EnableTarget"/>
         <enum value="0x8242" name="GL_DEBUG_OUTPUT_SYNCHRONOUS_ARB"/>
         <enum value="0x8242" name="GL_DEBUG_OUTPUT_SYNCHRONOUS_KHR"/>
         <enum value="0x8243" name="GL_DEBUG_NEXT_LOGGED_MESSAGE_LENGTH"/>
@@ -2356,7 +2356,7 @@ typedef unsigned int GLhandleARB;
             <unused start="0x832A" comment="Incomplete extension SGIX_texture_phase"/>
             <!-- <enum value="0x832A" name="GL_PHASE_SGIX"/> -->
         <enum value="0x832B" name="GL_PIXEL_TEX_GEN_MODE_SGIX" group="GetPName"/>
-        <enum value="0x832C" name="GL_ASYNC_HISTOGRAM_SGIX" group="GetPName,EnableCap"/>
+        <enum value="0x832C" name="GL_ASYNC_HISTOGRAM_SGIX" group="GetPName,EnableTarget"/>
         <enum value="0x832D" name="GL_MAX_ASYNC_HISTOGRAM_SGIX" group="GetPName"/>
             <unused start="0x832E" end="0x832F" comment="Incomplete extension SGIX_texture_mipmap_anisotropic"/>
             <!-- <enum value="0x832E" name="GL_TEXTURE_MIPMAP_ANISOTROPY_SGIX"/> -->
@@ -2399,7 +2399,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8350" name="GL_TEXTURE_LIGHT_EXT"/>
         <enum value="0x8351" name="GL_TEXTURE_MATERIAL_FACE_EXT"/>
         <enum value="0x8352" name="GL_TEXTURE_MATERIAL_PARAMETER_EXT"/>
-        <enum value="0x8353" name="GL_PIXEL_TEXTURE_SGIS" group="GetPName,EnableCap"/>
+        <enum value="0x8353" name="GL_PIXEL_TEXTURE_SGIS" group="GetPName,EnableTarget"/>
         <enum value="0x8354" name="GL_PIXEL_FRAGMENT_RGB_SOURCE_SGIS" group="PixelTexGenParameterNameSGIS"/>
         <enum value="0x8355" name="GL_PIXEL_FRAGMENT_ALPHA_SOURCE_SGIS" group="PixelTexGenParameterNameSGIS"/>
         <enum value="0x8356" name="GL_PIXEL_GROUP_COLOR_SGIS"/>
@@ -2410,9 +2410,9 @@ typedef unsigned int GLhandleARB;
             <unused start="0x835A" comment="Incomplete extension SGIX_pixel_texture_lod"/>
             <!-- <enum value="0x835A" name="GL_PIXEL_TEX_GEN_LAMBDA_SOURCE_SGIX"/> -->
         <enum value="0x835B" name="GL_LINE_QUALITY_HINT_SGIX" group="HintTarget"/>
-        <enum value="0x835C" name="GL_ASYNC_TEX_IMAGE_SGIX" group="GetPName,EnableCap"/>
-        <enum value="0x835D" name="GL_ASYNC_DRAW_PIXELS_SGIX" group="GetPName,EnableCap"/>
-        <enum value="0x835E" name="GL_ASYNC_READ_PIXELS_SGIX" group="GetPName,EnableCap"/>
+        <enum value="0x835C" name="GL_ASYNC_TEX_IMAGE_SGIX" group="GetPName,EnableTarget"/>
+        <enum value="0x835D" name="GL_ASYNC_DRAW_PIXELS_SGIX" group="GetPName,EnableTarget"/>
+        <enum value="0x835E" name="GL_ASYNC_READ_PIXELS_SGIX" group="GetPName,EnableTarget"/>
         <enum value="0x835F" name="GL_MAX_ASYNC_TEX_IMAGE_SGIX" group="GetPName"/>
         <enum value="0x8360" name="GL_MAX_ASYNC_DRAW_PIXELS_SGIX" group="GetPName"/>
         <enum value="0x8361" name="GL_MAX_ASYNC_READ_PIXELS_SGIX" group="GetPName"/>
@@ -2524,8 +2524,8 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8400" end="0x846F" vendor="SGI">
-        <enum value="0x8400" name="GL_FRAGMENT_LIGHTING_SGIX" group="GetPName,EnableCap"/>
-        <enum value="0x8401" name="GL_FRAGMENT_COLOR_MATERIAL_SGIX" group="GetPName,EnableCap"/>
+        <enum value="0x8400" name="GL_FRAGMENT_LIGHTING_SGIX" group="GetPName,EnableTarget"/>
+        <enum value="0x8401" name="GL_FRAGMENT_COLOR_MATERIAL_SGIX" group="GetPName,EnableTarget"/>
         <enum value="0x8402" name="GL_FRAGMENT_COLOR_MATERIAL_FACE_SGIX" group="GetPName"/>
         <enum value="0x8403" name="GL_FRAGMENT_COLOR_MATERIAL_PARAMETER_SGIX" group="GetPName"/>
         <enum value="0x8404" name="GL_MAX_FRAGMENT_LIGHTS_SGIX" group="GetPName"/>
@@ -2536,14 +2536,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8409" name="GL_FRAGMENT_LIGHT_MODEL_TWO_SIDE_SGIX" group="GetPName,FragmentLightModelParameterSGIX"/>
         <enum value="0x840A" name="GL_FRAGMENT_LIGHT_MODEL_AMBIENT_SGIX" group="GetPName,FragmentLightModelParameterSGIX"/>
         <enum value="0x840B" name="GL_FRAGMENT_LIGHT_MODEL_NORMAL_INTERPOLATION_SGIX" group="GetPName,FragmentLightModelParameterSGIX"/>
-        <enum value="0x840C" name="GL_FRAGMENT_LIGHT0_SGIX" group="LightName,FragmentLightNameSGIX,EnableCap,GetPName"/>
-        <enum value="0x840D" name="GL_FRAGMENT_LIGHT1_SGIX" group="LightName,FragmentLightNameSGIX,EnableCap"/>
-        <enum value="0x840E" name="GL_FRAGMENT_LIGHT2_SGIX" group="LightName,FragmentLightNameSGIX,EnableCap"/>
-        <enum value="0x840F" name="GL_FRAGMENT_LIGHT3_SGIX" group="LightName,FragmentLightNameSGIX,EnableCap"/>
-        <enum value="0x8410" name="GL_FRAGMENT_LIGHT4_SGIX" group="LightName,FragmentLightNameSGIX,EnableCap"/>
-        <enum value="0x8411" name="GL_FRAGMENT_LIGHT5_SGIX" group="LightName,FragmentLightNameSGIX,EnableCap"/>
-        <enum value="0x8412" name="GL_FRAGMENT_LIGHT6_SGIX" group="LightName,FragmentLightNameSGIX,EnableCap"/>
-        <enum value="0x8413" name="GL_FRAGMENT_LIGHT7_SGIX" group="LightName,FragmentLightNameSGIX,EnableCap"/>
+        <enum value="0x840C" name="GL_FRAGMENT_LIGHT0_SGIX" group="LightName,FragmentLightNameSGIX,EnableTarget,GetPName"/>
+        <enum value="0x840D" name="GL_FRAGMENT_LIGHT1_SGIX" group="LightName,FragmentLightNameSGIX,EnableTarget"/>
+        <enum value="0x840E" name="GL_FRAGMENT_LIGHT2_SGIX" group="LightName,FragmentLightNameSGIX,EnableTarget"/>
+        <enum value="0x840F" name="GL_FRAGMENT_LIGHT3_SGIX" group="LightName,FragmentLightNameSGIX,EnableTarget"/>
+        <enum value="0x8410" name="GL_FRAGMENT_LIGHT4_SGIX" group="LightName,FragmentLightNameSGIX,EnableTarget"/>
+        <enum value="0x8411" name="GL_FRAGMENT_LIGHT5_SGIX" group="LightName,FragmentLightNameSGIX,EnableTarget"/>
+        <enum value="0x8412" name="GL_FRAGMENT_LIGHT6_SGIX" group="LightName,FragmentLightNameSGIX,EnableTarget"/>
+        <enum value="0x8413" name="GL_FRAGMENT_LIGHT7_SGIX" group="LightName,FragmentLightNameSGIX,EnableTarget"/>
             <unused start="0x8414" end="0x842D" vendor="SGI"/>
         <enum value="0x842E" name="GL_PACK_RESAMPLE_SGIX" comment="Formerly 0x842C in SGI specfile" group="PixelStoreParameter,GetPName"/>
         <enum value="0x842F" name="GL_UNPACK_RESAMPLE_SGIX" comment="Formerly 0x842D in SGI specfile" group="PixelStoreParameter,GetPName"/>
@@ -2777,9 +2777,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x84F2" name="GL_ALL_COMPLETED_NV" group="FenceConditionNV"/>
         <enum value="0x84F3" name="GL_FENCE_STATUS_NV" group="FenceParameterNameNV"/>
         <enum value="0x84F4" name="GL_FENCE_CONDITION_NV" group="FenceParameterNameNV"/>
-        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE" group="CopyImageSubDataTarget,TextureTarget,EnableCap"/>
-        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE_ARB" group="TextureTarget,EnableCap"/>
-        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE_NV" group="TextureTarget,EnableCap"/>
+        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE" group="CopyImageSubDataTarget,TextureTarget,EnableTarget"/>
+        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE_ARB" group="TextureTarget,EnableTarget"/>
+        <enum value="0x84F5" name="GL_TEXTURE_RECTANGLE_NV" group="TextureTarget,EnableTarget"/>
         <enum value="0x84F6" name="GL_TEXTURE_BINDING_RECTANGLE" group="GetPName"/>
         <enum value="0x84F6" name="GL_TEXTURE_BINDING_RECTANGLE_ARB" group="GetPName"/>
         <enum value="0x84F6" name="GL_TEXTURE_BINDING_RECTANGLE_NV" group="GetPName"/>
@@ -2838,10 +2838,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8512" name="GL_REFLECTION_MAP_EXT" group="GetTextureParameter"/>
         <enum value="0x8512" name="GL_REFLECTION_MAP_NV" group="GetTextureParameter"/>
         <enum value="0x8512" name="GL_REFLECTION_MAP_OES" group="GetTextureParameter"/>
-        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP" group="CopyImageSubDataTarget,TextureTarget,EnableCap"/>
-        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_ARB" group="TextureTarget,EnableCap"/>
-        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_EXT" group="TextureTarget,EnableCap"/>
-        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_OES" group="TextureTarget,EnableCap"/>
+        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP" group="CopyImageSubDataTarget,TextureTarget,EnableTarget"/>
+        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_ARB" group="TextureTarget,EnableTarget"/>
+        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_EXT" group="TextureTarget,EnableTarget"/>
+        <enum value="0x8513" name="GL_TEXTURE_CUBE_MAP_OES" group="TextureTarget,EnableTarget"/>
         <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP" group="GetPName"/>
         <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP_ARB" group="GetPName"/>
         <enum value="0x8514" name="GL_TEXTURE_BINDING_CUBE_MAP_EXT" group="GetPName"/>
@@ -3209,7 +3209,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8642" name="GL_VERTEX_PROGRAM_POINT_SIZE"/>
         <enum value="0x8642" name="GL_VERTEX_PROGRAM_POINT_SIZE_ARB"/>
         <enum value="0x8642" name="GL_VERTEX_PROGRAM_POINT_SIZE_NV"/>
-        <enum value="0x8642" name="GL_PROGRAM_POINT_SIZE" alias="GL_VERTEX_PROGRAM_POINT_SIZE" group="GetPName,EnableCap"/>
+        <enum value="0x8642" name="GL_PROGRAM_POINT_SIZE" alias="GL_VERTEX_PROGRAM_POINT_SIZE" group="GetPName,EnableTarget"/>
         <enum value="0x8642" name="GL_PROGRAM_POINT_SIZE_ARB"/>
         <enum value="0x8642" name="GL_PROGRAM_POINT_SIZE_EXT"/>
         <enum value="0x8643" name="GL_VERTEX_PROGRAM_TWO_SIDE"/>
@@ -3229,7 +3229,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x864C" name="GL_OFFSET_TEXTURE_RECTANGLE_NV"/>
         <enum value="0x864D" name="GL_OFFSET_TEXTURE_RECTANGLE_SCALE_NV"/>
         <enum value="0x864E" name="GL_DOT_PRODUCT_TEXTURE_RECTANGLE_NV"/>
-        <enum value="0x864F" name="GL_DEPTH_CLAMP" group="EnableCap"/>
+        <enum value="0x864F" name="GL_DEPTH_CLAMP" group="EnableTarget"/>
         <enum value="0x864F" name="GL_DEPTH_CLAMP_NV"/>
         <enum value="0x864F" name="GL_DEPTH_CLAMP_EXT"/>
         <enum value="0x8650" name="GL_VERTEX_ATTRIB_ARRAY0_NV"/>
@@ -3880,7 +3880,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x884E" name="GL_COMPARE_REF_DEPTH_TO_TEXTURE_EXT"/>
         <enum value="0x884E" name="GL_COMPARE_REF_TO_TEXTURE" alias="GL_COMPARE_R_TO_TEXTURE" group="TextureCompareMode"/>
         <enum value="0x884E" name="GL_COMPARE_REF_TO_TEXTURE_EXT"/>
-        <enum value="0x884F" name="GL_TEXTURE_CUBE_MAP_SEAMLESS" group="EnableCap"/>
+        <enum value="0x884F" name="GL_TEXTURE_CUBE_MAP_SEAMLESS" group="EnableTarget"/>
     </enums>
 
     <enums namespace="GL" start="0x8850" end="0x891F" vendor="NV">
@@ -4685,7 +4685,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C2F" name="GL_ANY_SAMPLES_PASSED" group="QueryTarget"/>
         <enum value="0x8C2F" name="GL_ANY_SAMPLES_PASSED_EXT"/>
             <unused start="0x8C30" end="0x8C35" vendor="NV"/>
-        <enum value="0x8C36" name="GL_SAMPLE_SHADING" group="EnableCap"/>
+        <enum value="0x8C36" name="GL_SAMPLE_SHADING" group="EnableTarget"/>
         <enum value="0x8C36" name="GL_SAMPLE_SHADING_ARB"/>
         <enum value="0x8C36" name="GL_SAMPLE_SHADING_OES"/>
         <enum value="0x8C37" name="GL_MIN_SAMPLE_SHADING_VALUE"/>
@@ -4786,7 +4786,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C88" name="GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN" group="QueryTarget"/>
         <enum value="0x8C88" name="GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN_EXT"/>
         <enum value="0x8C88" name="GL_TRANSFORM_FEEDBACK_PRIMITIVES_WRITTEN_NV"/>
-        <enum value="0x8C89" name="GL_RASTERIZER_DISCARD" group="EnableCap"/>
+        <enum value="0x8C89" name="GL_RASTERIZER_DISCARD" group="EnableTarget"/>
         <enum value="0x8C89" name="GL_RASTERIZER_DISCARD_EXT"/>
         <enum value="0x8C89" name="GL_RASTERIZER_DISCARD_NV"/>
         <enum value="0x8C8A" name="GL_MAX_TRANSFORM_FEEDBACK_INTERLEAVED_COMPONENTS"/>
@@ -5050,7 +5050,7 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8D60" end="0x8D6F" vendor="OES">
-        <enum value="0x8D60" name="GL_TEXTURE_GEN_STR_OES" group="EnableCap,GetPName,TextureCoordName"/>
+        <enum value="0x8D60" name="GL_TEXTURE_GEN_STR_OES" group="EnableTarget,GetPName,TextureCoordName"/>
         <enum value="0x8D61" name="GL_HALF_FLOAT_OES"/>
         <enum value="0x8D62" name="GL_RGB565_OES" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8D62" name="GL_RGB565" group="InternalFormat,SizedInternalFormat"/>
@@ -5060,7 +5060,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8D66" name="GL_SAMPLER_EXTERNAL_OES"/>
         <enum value="0x8D67" name="GL_TEXTURE_BINDING_EXTERNAL_OES"/>
         <enum value="0x8D68" name="GL_REQUIRED_TEXTURE_IMAGE_UNITS_OES"/>
-        <enum value="0x8D69" name="GL_PRIMITIVE_RESTART_FIXED_INDEX" group="EnableCap"/>
+        <enum value="0x8D69" name="GL_PRIMITIVE_RESTART_FIXED_INDEX" group="EnableTarget"/>
         <enum value="0x8D6A" name="GL_ANY_SAMPLES_PASSED_CONSERVATIVE" group="QueryTarget"/>
         <enum value="0x8D6A" name="GL_ANY_SAMPLES_PASSED_CONSERVATIVE_EXT"/>
         <enum value="0x8D6B" name="GL_MAX_ELEMENT_INDEX" group="GetPName"/>
@@ -5163,7 +5163,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8DAE" name="GL_SHADER_INCLUDE_ARB"/>
         <enum value="0x8DAF" name="GL_DEPTH_BUFFER_FLOAT_MODE_NV"/>
             <unused start="0x8DB0" end="0x8DB8" vendor="NV"/>
-        <enum value="0x8DB9" name="GL_FRAMEBUFFER_SRGB" group="EnableCap"/>
+        <enum value="0x8DB9" name="GL_FRAMEBUFFER_SRGB" group="EnableTarget"/>
         <enum value="0x8DB9" name="GL_FRAMEBUFFER_SRGB_EXT"/>
         <enum value="0x8DBA" name="GL_FRAMEBUFFER_SRGB_CAPABLE_EXT"/>
         <enum value="0x8DBB" name="GL_COMPRESSED_RED_RGTC1" group="InternalFormat,SizedInternalFormat"/>
@@ -5367,7 +5367,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8E50" name="GL_SAMPLE_POSITION_NV"/>
         <enum value="0x8E50" name="GL_SAMPLE_LOCATION_ARB" alias="GL_SAMPLE_POSITION" group="GetMultisamplePNameNV"/>
         <enum value="0x8E50" name="GL_SAMPLE_LOCATION_NV" alias="GL_SAMPLE_POSITION_NV"/>
-        <enum value="0x8E51" name="GL_SAMPLE_MASK" group="EnableCap"/>
+        <enum value="0x8E51" name="GL_SAMPLE_MASK" group="EnableTarget"/>
         <enum value="0x8E51" name="GL_SAMPLE_MASK_NV"/>
         <enum value="0x8E52" name="GL_SAMPLE_MASK_VALUE"/>
         <enum value="0x8E52" name="GL_SAMPLE_MASK_VALUE_NV"/>
@@ -5625,7 +5625,7 @@ typedef unsigned int GLhandleARB;
             <unused start="0x8F62" vendor="ARM"/>
         <enum value="0x8F63" name="GL_MAX_SHADER_PIXEL_LOCAL_STORAGE_FAST_SIZE_EXT"/>
         <enum value="0x8F64" name="GL_SHADER_PIXEL_LOCAL_STORAGE_EXT"/>
-        <enum value="0x8F65" name="GL_FETCH_PER_SAMPLE_ARM" group="EnableCap,GetPName"/>
+        <enum value="0x8F65" name="GL_FETCH_PER_SAMPLE_ARM" group="EnableTarget,GetPName"/>
         <enum value="0x8F66" name="GL_FRAGMENT_SHADER_FRAMEBUFFER_FETCH_MRT_ARM" group="GetPName"/>
         <enum value="0x8F67" name="GL_MAX_SHADER_PIXEL_LOCAL_STORAGE_SIZE_EXT"/>
             <unused start="0x8F68" vendor="ARM"/>
@@ -5662,7 +5662,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8F9B" name="GL_RGBA16_SNORM" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8F9B" name="GL_RGBA16_SNORM_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8F9C" name="GL_SIGNED_NORMALIZED"/>
-        <enum value="0x8F9D" name="GL_PRIMITIVE_RESTART" group="EnableCap"/>
+        <enum value="0x8F9D" name="GL_PRIMITIVE_RESTART" group="EnableTarget"/>
         <enum value="0x8F9E" name="GL_PRIMITIVE_RESTART_INDEX" group="GetPName"/>
         <enum value="0x8F9F" name="GL_MAX_PROGRAM_TEXTURE_GATHER_COMPONENTS_ARB"/>
     </enums>
@@ -6445,7 +6445,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x92DD" name="GL_FRAGMENT_COVERAGE_TO_COLOR_NV"/>
         <enum value="0x92DE" name="GL_FRAGMENT_COVERAGE_COLOR_NV"/>
         <enum value="0x92DF" name="GL_MESH_OUTPUT_PER_VERTEX_GRANULARITY_NV"/>
-        <enum value="0x92E0" name="GL_DEBUG_OUTPUT" group="EnableCap"/>
+        <enum value="0x92E0" name="GL_DEBUG_OUTPUT" group="EnableTarget"/>
         <enum value="0x92E0" name="GL_DEBUG_OUTPUT_KHR"/>
         <enum value="0x92E1" name="GL_UNIFORM" group="ProgramResourceProperty,ProgramInterface"/>
         <enum value="0x92E2" name="GL_UNIFORM_BLOCK" group="ProgramInterface"/>
@@ -6894,7 +6894,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x95AE" name="GL_SHADING_RATE_SAMPLE_ORDER_DEFAULT_NV"/>
         <enum value="0x95AF" name="GL_SHADING_RATE_SAMPLE_ORDER_PIXEL_MAJOR_NV"/>
         <enum value="0x95B0" name="GL_SHADING_RATE_SAMPLE_ORDER_SAMPLE_MAJOR_NV"/>
-        <enum value="0x95B1" name="GL_SHADING_RATE_IMAGE_PER_PRIMITIVE_NV" group="EnableCap,GetPName"/>
+        <enum value="0x95B1" name="GL_SHADING_RATE_IMAGE_PER_PRIMITIVE_NV" group="EnableTarget,GetPName"/>
         <enum value="0x95B2" name="GL_SHADING_RATE_IMAGE_PALETTE_COUNT_NV" group="GetPName"/>
         <enum value="0x95B3" name="GL_SEMAPHORE_TYPE_NV" group="SemaphoreParameterName"/>
         <enum value="0x95B4" name="GL_SEMAPHORE_TYPE_BINARY_NV" group="SemaphoreParameterName"/>
@@ -6931,10 +6931,10 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" start="0x96A0" end="0x96AF" vendor="Qualcomm" comment="contact Jeff Leger">
         <enum value="0x96A0" name="GL_TEXTURE_FOVEATED_CUTOFF_DENSITY_QCOM" group="TextureParameterName"/>
             <unused start="0x96A1" end="0x96A1" vendor="Qualcomm"/>
-        <enum value="0x96A2" name="GL_FRAMEBUFFER_FETCH_NONCOHERENT_QCOM" group="GetPName,EnableCap"/>
+        <enum value="0x96A2" name="GL_FRAMEBUFFER_FETCH_NONCOHERENT_QCOM" group="GetPName,EnableTarget"/>
         <enum value="0x96A3" name="GL_VALIDATE_SHADER_BINARY_QCOM"/>
         <enum value="0x96A4" name="GL_SHADING_RATE_QCOM" group="GetPName"/>
-        <enum value="0x96A5" name="GL_SHADING_RATE_PRESERVE_ASPECT_RATIO_QCOM" group="EnableCap"/>
+        <enum value="0x96A5" name="GL_SHADING_RATE_PRESERVE_ASPECT_RATIO_QCOM" group="EnableTarget"/>
         <enum value="0x96A6" name="GL_SHADING_RATE_1X1_PIXELS_QCOM" group="ShadingRateQCOM"/>
         <enum value="0x96A7" name="GL_SHADING_RATE_1X2_PIXELS_QCOM" group="ShadingRateQCOM"/>
         <enum value="0x96A8" name="GL_SHADING_RATE_2X1_PIXELS_QCOM" group="ShadingRateQCOM"/>
@@ -7234,7 +7234,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glArrayObjectATI</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>array</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>array</name></param>
             <param><ptype>GLint</ptype> <name>size</name></param>
             <param group="ScalarType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
@@ -10941,21 +10941,21 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDisable</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <glx type="render" opcode="138"/>
         </command>
         <command>
             <proto>void <name>glDisableClientState</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>array</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>array</name></param>
         </command>
         <command>
             <proto>void <name>glDisableClientStateIndexedEXT</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>array</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>array</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
         </command>
         <command>
             <proto>void <name>glDisableClientStateiEXT</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>array</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>array</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
         </command>
         <command>
@@ -10964,7 +10964,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDisableIndexedEXT</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glDisablei"/>
             <glx type="render" opcode="354"/>
@@ -10986,7 +10986,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glDisableVertexArrayEXT</name></proto>
             <param class="vertex array"><ptype>GLuint</ptype> <name>vaobj</name></param>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>array</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>array</name></param>
         </command>
         <command>
             <proto>void <name>glDisableVertexAttribAPPLE</name></proto>
@@ -11004,24 +11004,24 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glDisablei</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
         </command>
         <command>
             <proto>void <name>glDisableiEXT</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glDisablei"/>
         </command>
         <command>
             <proto>void <name>glDisableiNV</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glDisablei"/>
         </command>
         <command>
             <proto>void <name>glDisableiOES</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glDisablei"/>
         </command>
@@ -11628,21 +11628,21 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glEnable</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <glx type="render" opcode="139"/>
         </command>
         <command>
             <proto>void <name>glEnableClientState</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>array</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>array</name></param>
         </command>
         <command>
             <proto>void <name>glEnableClientStateIndexedEXT</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>array</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>array</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
         </command>
         <command>
             <proto>void <name>glEnableClientStateiEXT</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>array</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>array</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
         </command>
         <command>
@@ -11651,7 +11651,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glEnableIndexedEXT</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glEnablei"/>
             <glx type="render" opcode="353"/>
@@ -11673,7 +11673,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glEnableVertexArrayEXT</name></proto>
             <param class="vertex array"><ptype>GLuint</ptype> <name>vaobj</name></param>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>array</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>array</name></param>
         </command>
         <command>
             <proto>void <name>glEnableVertexAttribAPPLE</name></proto>
@@ -11691,24 +11691,24 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glEnablei</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
         </command>
         <command>
             <proto>void <name>glEnableiEXT</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glEnablei"/>
         </command>
         <command>
             <proto>void <name>glEnableiNV</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glEnablei"/>
         </command>
         <command>
             <proto>void <name>glEnableiOES</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glEnablei"/>
         </command>
@@ -13022,13 +13022,13 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glGetArrayObjectfvATI</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>array</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>array</name></param>
             <param group="ArrayObjectPNameATI"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLfloat</ptype> *<name>params</name></param>
         </command>
         <command>
             <proto>void <name>glGetArrayObjectivATI</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>array</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>array</name></param>
             <param group="ArrayObjectPNameATI"><ptype>GLenum</ptype> <name>pname</name></param>
             <param len="1"><ptype>GLint</ptype> *<name>params</name></param>
         </command>
@@ -16742,36 +16742,36 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto><ptype>GLboolean</ptype> <name>glIsEnabled</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <glx type="single" opcode="140"/>
         </command>
         <command>
             <proto><ptype>GLboolean</ptype> <name>glIsEnabledIndexedEXT</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glIsEnabledi"/>
             <glx type="single" opcode="212"/>
         </command>
         <command>
             <proto><ptype>GLboolean</ptype> <name>glIsEnabledi</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
         </command>
         <command>
             <proto><ptype>GLboolean</ptype> <name>glIsEnablediEXT</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glIsEnabledi"/>
         </command>
         <command>
             <proto><ptype>GLboolean</ptype> <name>glIsEnablediNV</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glIsEnabledi"/>
         </command>
         <command>
             <proto><ptype>GLboolean</ptype> <name>glIsEnablediOES</name></proto>
-            <param group="EnableCap"><ptype>GLenum</ptype> <name>target</name></param>
+            <param group="EnableTarget"><ptype>GLenum</ptype> <name>target</name></param>
             <param><ptype>GLuint</ptype> <name>index</name></param>
             <alias name="glIsEnabledi"/>
         </command>
