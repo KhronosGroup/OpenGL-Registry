@@ -55,6 +55,28 @@ typedef unsigned int GLhandleARB;
         <type>typedef struct __GLsync *<name>GLsync</name>;</type>
         <type comment="compatible with OpenCL cl_context"><name>struct _cl_context</name>;</type>
         <type comment="compatible with OpenCL cl_event"><name>struct _cl_event</name>;</type>
+
+        <type>typedef struct {
+    uint  count;
+    uint  instanceCount;
+    uint  first;
+    uint  baseInstance;
+} <name>DrawArraysIndirectCommand</name>;</type>
+
+        <type>typedef struct {
+    uint  count;
+    uint  instanceCount;
+    uint  firstIndex;
+    int   baseVertex;
+    uint  baseInstance;
+} <name>DrawElementsIndirectCommand</name>;</type>
+
+        <type>typedef struct {
+    uint  num_groups_x;
+    uint  num_groups_y;
+    uint  num_groups_z;
+} <name>DispatchIndirectCommand</name>;</type>
+
         <type>typedef void (<apientry/> *<name>GLDEBUGPROC</name>)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,const void *userParam);</type>
         <type>typedef void (<apientry/> *<name>GLDEBUGPROCARB</name>)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,const void *userParam);</type>
         <type>typedef void (<apientry/> *<name>GLDEBUGPROCKHR</name>)(GLenum source,GLenum type,GLuint id,GLenum severity,GLsizei length,const GLchar *message,const void *userParam);</type>
