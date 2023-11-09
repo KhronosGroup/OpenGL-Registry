@@ -43420,6 +43420,21 @@ typedef unsigned int GLhandleARB;
                 <command name="glResizeBuffersMESA"/>
             </require>
         </extension>
+        <extension name="GL_MESA_sampler_objects" supported="gles2">
+            <require comment="Reuse (the GLES3 part of) ARB_sampler_objects">
+                <enum name="GL_SAMPLER_BINDING"/>
+                <command name="glGenSamplers"/>
+                <command name="glDeleteSamplers"/>
+                <command name="glIsSampler"/>
+                <command name="glBindSampler"/>
+                <command name="glSamplerParameteri"/>
+                <command name="glSamplerParameteriv"/>
+                <command name="glSamplerParameterf"/>
+                <command name="glSamplerParameterfv"/>
+                <command name="glGetSamplerParameteriv"/>
+                <command name="glGetSamplerParameterfv"/>
+            </require>
+        </extension>
         <extension name="GL_MESA_shader_integer_functions" supported="gl|gles2"/>
         <extension name="GL_MESA_tile_raster_order" supported="gl">
             <require>

@@ -3114,6 +3114,12 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/MESA_resize_buffers.txt',
     },
+    'GL_MESA_sampler_objects' : {
+        'esnumber' : 344,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_sampler_objects.txt',
+    },
     'GLX_MESA_set_3dfx_mode' : {
         'number' : 218,
         'flags' : { 'public' },
