@@ -28200,7 +28200,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>size</name></param>
             <param group="VertexAttribIType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
         </command>
         <command>
             <proto>void <name>glVertexAttribIPointerEXT</name></proto>
@@ -28433,7 +28433,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>size</name></param>
             <param group="VertexAttribLType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="size">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
         </command>
         <command>
             <proto>void <name>glVertexAttribLPointerEXT</name></proto>
@@ -28513,7 +28513,7 @@ typedef unsigned int GLhandleARB;
             <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLboolean</ptype> <name>normalized</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
         </command>
         <command>
             <proto>void <name>glVertexAttribPointerARB</name></proto>
@@ -43418,6 +43418,21 @@ typedef unsigned int GLhandleARB;
         <extension name="GL_MESA_resize_buffers" supported="gl">
             <require>
                 <command name="glResizeBuffersMESA"/>
+            </require>
+        </extension>
+        <extension name="GL_MESA_sampler_objects" supported="gles2">
+            <require comment="Reuse (the GLES3 part of) ARB_sampler_objects">
+                <enum name="GL_SAMPLER_BINDING"/>
+                <command name="glGenSamplers"/>
+                <command name="glDeleteSamplers"/>
+                <command name="glIsSampler"/>
+                <command name="glBindSampler"/>
+                <command name="glSamplerParameteri"/>
+                <command name="glSamplerParameteriv"/>
+                <command name="glSamplerParameterf"/>
+                <command name="glSamplerParameterfv"/>
+                <command name="glGetSamplerParameteriv"/>
+                <command name="glGetSamplerParameterfv"/>
             </require>
         </extension>
         <extension name="GL_MESA_shader_integer_functions" supported="gl|gles2"/>
