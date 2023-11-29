@@ -7003,7 +7003,14 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x96F0" end="0x96FF" vendor="ARM" comment="Contact Jan-Harald Fredriksen">
-            <unused start="0x96F0" end="0x96FF" vendor="ARM"/>
+        <enum value="0x96F0" name="GL_SHADER_CORE_COUNT_ARM" group="GetPName"/>
+        <enum value="0x96F1" name="GL_SHADER_CORE_ACTIVE_COUNT_ARM" group="GetPName"/>
+        <enum value="0x96F2" name="GL_SHADER_CORE_PRESENT_MASK_ARM" group="GetPName"/>
+        <enum value="0x96F3" name="GL_SHADER_CORE_MAX_WARP_COUNT_ARM" group="GetPName"/>
+        <enum value="0x96F4" name="GL_SHADER_CORE_PIXEL_RATE_ARM" group="GetPName"/>
+        <enum value="0x96F5" name="GL_SHADER_CORE_TEXEL_RATE_ARM" group="GetPName"/>
+        <enum value="0x96F6" name="GL_SHADER_CORE_FMA_RATE_ARM" group="GetPName"/>
+            <unused start="0x96F7" end="0x96FF" vendor="ARM"/>
     </enums>
 
 <!-- Enums reservable for future use. To reserve a new range, allocate one
@@ -17816,6 +17823,10 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLfloat</ptype> <name>x</name></param>
             <param><ptype>GLfloat</ptype> <name>y</name></param>
             <param><ptype>GLfloat</ptype> <name>z</name></param>
+        </command>
+        <command>
+            <proto>void <name>glMaxActiveShaderCoresARM</name></proto>
+            <param><ptype>GLuint</ptype> <name>count</name></param>
         </command>
         <command>
             <proto>void <name>glMaxShaderCompilerThreadsKHR</name></proto>
@@ -39625,6 +39636,18 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_ARM_rgba8" supported="gles1|gles2"/>
+        <extension name="GL_ARM_shader_core_properties" supported="gles2">
+            <require>
+                <enum name="GL_SHADER_CORE_COUNT_ARM"/>
+                <enum name="GL_SHADER_CORE_ACTIVE_COUNT_ARM"/>
+                <enum name="GL_SHADER_CORE_PRESENT_MASK_ARM"/>
+                <enum name="GL_SHADER_CORE_MAX_WARP_COUNT_ARM"/>
+                <enum name="GL_SHADER_CORE_PIXEL_RATE_ARM"/>
+                <enum name="GL_SHADER_CORE_TEXEL_RATE_ARM"/>
+                <enum name="GL_SHADER_CORE_FMA_RATE_ARM"/>
+                <command name="glMaxActiveShaderCoresARM"/>
+            </require>
+        </extension>
         <extension name="GL_ARM_shader_framebuffer_fetch" supported="gles2">
             <require>
                 <enum name="GL_FETCH_PER_SAMPLE_ARM"/>

@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-/* Generated on date 20231018 */
+/* Generated on date 20231129 */
 
 /* Generated C header for:
  * API: gles2
@@ -1051,6 +1051,21 @@ GL_APICALL void GL_APIENTRY glGetSyncivAPPLE (GLsync sync, GLenum pname, GLsizei
 #ifndef GL_ARM_rgba8
 #define GL_ARM_rgba8 1
 #endif /* GL_ARM_rgba8 */
+
+#ifndef GL_ARM_shader_core_properties
+#define GL_ARM_shader_core_properties 1
+#define GL_SHADER_CORE_COUNT_ARM          0x96F0
+#define GL_SHADER_CORE_ACTIVE_COUNT_ARM   0x96F1
+#define GL_SHADER_CORE_PRESENT_MASK_ARM   0x96F2
+#define GL_SHADER_CORE_MAX_WARP_COUNT_ARM 0x96F3
+#define GL_SHADER_CORE_PIXEL_RATE_ARM     0x96F4
+#define GL_SHADER_CORE_TEXEL_RATE_ARM     0x96F5
+#define GL_SHADER_CORE_FMA_RATE_ARM       0x96F6
+typedef void (GL_APIENTRYP PFNGLMAXACTIVESHADERCORESARMPROC) (GLuint count);
+#ifdef GL_GLEXT_PROTOTYPES
+GL_APICALL void GL_APIENTRY glMaxActiveShaderCoresARM (GLuint count);
+#endif
+#endif /* GL_ARM_shader_core_properties */
 
 #ifndef GL_ARM_shader_framebuffer_fetch
 #define GL_ARM_shader_framebuffer_fetch 1

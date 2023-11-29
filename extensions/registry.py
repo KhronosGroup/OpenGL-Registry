@@ -1407,6 +1407,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/ARM/ARM_rgba8.txt',
     },
+    'GL_ARM_shader_core_properties' : {
+        'esnumber' : 345,
+        'flags' : { 'public' },
+        'url' : 'extensions/ARM/ARM_shader_core_properties.txt',
+    },
     'GL_ARM_shader_framebuffer_fetch' : {
         'esnumber' : 165,
         'flags' : { 'public' },

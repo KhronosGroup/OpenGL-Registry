@@ -719,4 +719,6 @@
 </li>
 <li value=344><a href="extensions/MESA/MESA_sampler_objects.txt">GL_MESA_sampler_objects</a>
 </li>
+<li value=345><a href="extensions/ARM/ARM_shader_core_properties.txt">GL_ARM_shader_core_properties</a>
+</li>
 </ol>
