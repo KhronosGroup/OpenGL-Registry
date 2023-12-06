@@ -28219,7 +28219,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>size</name></param>
             <param group="VertexAttribIType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
             <alias name="glVertexAttribIPointer"/>
         </command>
         <command>
@@ -28452,7 +28452,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>size</name></param>
             <param group="VertexAttribLType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="size">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
             <alias name="glVertexAttribLPointer"/>
         </command>
         <command>
@@ -28533,7 +28533,7 @@ typedef unsigned int GLhandleARB;
             <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLboolean</ptype> <name>normalized</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
             <alias name="glVertexAttribPointer"/>
         </command>
         <command>
