@@ -642,6 +642,7 @@
                                                                                                   multi-pixel fragments
     FRAGMENT_SHADING_RATE_ATTACHMENT_WITH_-                     B    GetBooleanv  -               support for attachment shading      13.X.3
     DEFAULT_FRAMEBUFFER_SUPPORTED_EXT                                                             rates on the default framebuffer
+[[If GL_EXT_fragment_shading_rate_primitive or GL_EXT_fragment_shading_rate_attachment is supported]]
     FRAGMENT_SHADING_RATE_NON_TRIVIAL_COMBINERS_SUPPORTED_EXT   B    GetBooleanv  -               support for non-trivial combiners   13.X.4
 
 
