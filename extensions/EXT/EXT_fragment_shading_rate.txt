@@ -633,16 +633,16 @@
                                                                                                   each texel in a fragment shading
                                                                                                   rate attachment
     MAX_FRAGMENT_SHADING_RATE_ATTACHMENT_LAYERS_EXT             Z+    GetIntegerv  1              maximum number of layers in a
-                                                                                                  fragment shading rate attachment    13.X.3     
+                                                                                                  fragment shading rate attachment    13.X.3
+    FRAGMENT_SHADING_RATE_ATTACHMENT_WITH_-                     B    GetBooleanv  -               support for attachment shading      13.X.3
+    DEFAULT_FRAMEBUFFER_SUPPORTED_EXT                                                             rates on the default framebuffer
+[[If GL_EXT_fragment_shading_rate is supported]]
     FRAGMENT_SHADING_RATE_WITH_SHADER_DEPTH_STENCIL_WRITES_SUPPORTED_EXT
                                                                 B     GetBooleanv  -              support for writing FragDepth from  13.X.4
                                                                                                   a fragment shader for multi-pixel
                                                                                                   fragments                                                                                           
     FRAGMENT_SHADING_RATE_WITH_SAMPLE_MASK_SUPPORTED_EXT        B     GetBooleanv  -              support for sample masks with       13.X.4
                                                                                                   multi-pixel fragments
-    FRAGMENT_SHADING_RATE_ATTACHMENT_WITH_-                     B    GetBooleanv  -               support for attachment shading      13.X.3
-    DEFAULT_FRAMEBUFFER_SUPPORTED_EXT                                                             rates on the default framebuffer
-[[If GL_EXT_fragment_shading_rate_primitive or GL_EXT_fragment_shading_rate_attachment is supported]]
     FRAGMENT_SHADING_RATE_NON_TRIVIAL_COMBINERS_SUPPORTED_EXT   B    GetBooleanv  -               support for non-trivial combiners   13.X.4
 
 
