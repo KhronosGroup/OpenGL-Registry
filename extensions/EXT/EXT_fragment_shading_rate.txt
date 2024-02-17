@@ -606,11 +606,11 @@
     SHADING_RATE_EXT                        E     GetIntegerv  SHADING_RATE_1X1_PIXELS_EXT       draw call shading rate   13.X.1
 
 
-[[If GL_EXT_fragment_shading_rate_attachment is supported]]
     Add to table 21.40, Implementation Dependent Values
 
     Get Value                                                   Type  Get Command  Minimum Value  Description                         Sec
     -------------------------------------                       ----  -----------  -------------  --------------                      ------
+[[If GL_EXT_fragment_shading_rate_attachment is supported]]
     MIN_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_WIDTH_EXT        Z+    GetIntegerv  32 (**)        minimum supported width of the      13.X.3
                                                                                                   portion of the framebuffer
                                                                                                   corresponding to each texel in
