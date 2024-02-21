@@ -139,7 +139,7 @@ Interactions with the OpenGL ES 2.0 specification
     | Sized           | Renderable       | R    | G    | B    | A    | D    | S    |
     | Internal Format | Type             | bits | bits | bits | bits | bits | bits |
     |-----------------|------------------|------|------|------|------|------|------|
-    | GL_BGRA_EXT     | color-renderable | 8    | 8    | 8    | 8    |      |      |
+    | BGRA_EXT        | color-renderable | 8    | 8    | 8    | 8    |      |      |
     |-----------------|------------------|------|------|------|------|------|------|
 
 Revision History
