@@ -135,12 +135,10 @@ Interactions with the OpenGL ES 2.0 specification
     and the number of bits each format contains for color (R, G, B, A),
     depth (D), and stencil (S) components:
     
-    |-----------------|------------------|------|------|------|------|------|------|
-    | Sized           | Renderable       | R    | G    | B    | A    | D    | S    |
-    | Internal Format | Type             | bits | bits | bits | bits | bits | bits |
-    |-----------------|------------------|------|------|------|------|------|------|
-    | BGRA_EXT        | color-renderable | 8    | 8    | 8    | 8    |      |      |
-    |-----------------|------------------|------|------|------|------|------|------|
+    Sized           Renderable        R    G    B    A    D    S
+    Internal Format Type              bits bits bits bits bits bits
+    --------------- ----------        ---- ---- ---- ---- ---- ----
+    BGRA_EXT        color-renderable  8    8    8    8
 
 Revision History
 
