@@ -65,7 +65,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
      <a href="specs/es/3.2/es_spec_3.2.pdf"> without changes marked </a>
      and
      <a href="specs/es/3.2/es_spec_3.2.withchanges.pdf"> with changes marked </a>. </li>
-<li> OpenGL ES Shading Language 3.20 Specification (July 10, 2019)
+<li> OpenGL ES Shading Language 3.20 Specification (August 14, 2023)
      <a href="specs/es/3.2/GLSL_ES_Specification_3.20.html"> (HTML) </a>
      <a href="specs/es/3.2/GLSL_ES_Specification_3.20.pdf"> (PDF) </a>
 <li> <a href="http://www.khronos.org/registry/OpenGL-Refpages/es3/">

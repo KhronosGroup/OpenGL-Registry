@@ -38,8 +38,8 @@ Status
 
 Version
 
-    Last Modified Date:         2016/04/19
-    Author Revision:            5
+    Last Modified Date:         2023/09/13
+    Author Revision:            6
 
 Number
 
@@ -457,10 +457,10 @@ Additions to Chapter 7 of the OpenGL ES Shading Language Specification
     value of gl_ViewportIndex in the fragment shader will be undefined. If the
     geometry stage makes no static assignment to gl_ViewportIndex, the value
     in the fragment stage is undefined. Otherwise, the fragment stage will read
-    the same value written by the geometry stage, even if that value is out of
-    range. If a fragment shader contains a static access to gl_ViewportIndex,
-    it will count against the implementation defined limit for the maximum
-    number of inputs to the fragment stage.
+    the same value written by the geometry stage, unless it is out of range,
+    in which case it is undefined. If a fragment shader contains a static
+    access to gl_ViewportIndex, it will count against the implementation
+    defined limit for the maximum number of inputs to the fragment stage.
 
     Add the following built-in to section 7.2 "Built-In Constants":
 
@@ -570,3 +570,5 @@ Revision History
                                 Allowed dependency on OES_geometry_shader as well as EXT_geometry_shader
      5    19/04/2016  dkoch     Typographical fixes.
                                 Sync some additional language with GL 4.5 and GLSL 4.50.
+     6    13/09/2023  zmike     opengl/api/196: Clarify gl_ViewportIndex and gl_Layer
+                                out of range values in fragment shader

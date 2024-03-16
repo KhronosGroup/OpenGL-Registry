@@ -36,8 +36,8 @@ Status
 
 Version
 
-    Last Modified Date: February 12, 2019
-    Revision: 2
+    Last Modified Date: September 13, 2023
+    Revision: 3
 
 Number
 
@@ -194,10 +194,10 @@ Modifications to the OpenGL Shading Language Specification, Version 4.50
     gl_Layer, the value of gl_Layer in the fragment stage will be undefined.
     If the final VTG stage makes no static assignment to gl_Layer, the input
     gl_Value in the fragment stage will be zero. Otherwise, the fragment stage
-    will read the same value written by the final VTG stage, even if that value
-    is out of range. If a fragment shader contains a static access to gl_Layer,
-    it will count against the implementation defined limit for the maximum
-    number of inputs to the fragment stage.
+    will read the same value written by the final VTG stage, unless it is out of
+    range, in which case it is undefined. If a fragment shader contains a
+    static access to gl_Layer, it will count against the implementation defined
+    limit for the maximum number of inputs to the fragment stage.
 
     Modify the language introducing "gl_ViewportIndex" on p.128 as follows:
 
@@ -304,3 +304,5 @@ Revision History
                                 and AMD_vertex_shader_layer
      2    02/12/2019  dkoch     opengl/api/44: clarify that builtins should be
                                 part of the "out gl_PerVertex" block.
+     3    09/13/2023  zmike     opengl/api/196: Clarify gl_ViewportIndex and gl_Layer
+                                out of range values in fragment shader

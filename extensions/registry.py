@@ -1407,6 +1407,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/ARM/ARM_rgba8.txt',
     },
+    'GL_ARM_shader_core_properties' : {
+        'esnumber' : 345,
+        'flags' : { 'public' },
+        'url' : 'extensions/ARM/ARM_shader_core_properties.txt',
+    },
     'GL_ARM_shader_framebuffer_fetch' : {
         'esnumber' : 165,
         'flags' : { 'public' },
@@ -3114,6 +3119,12 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/MESA_resize_buffers.txt',
     },
+    'GL_MESA_sampler_objects' : {
+        'esnumber' : 344,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_sampler_objects.txt',
+    },
     'GLX_MESA_set_3dfx_mode' : {
         'number' : 218,
         'flags' : { 'public' },
@@ -4607,6 +4618,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_render_shared_exponent.txt',
     },
+    'GL_QCOM_render_sRGB_R8_RG8' : {
+        'esnumber' : 343,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_render_sRGB_R8_RG8.txt',
+    },
     'GL_QCOM_performance_monitor_global_mode' : {
         'esnumber' : 56,
         'flags' : { 'public' },
@@ -4646,6 +4662,12 @@ registry = {
         'esnumber' : 306,
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_texture_foveated_subsampled_layout.txt',
+    },
+    'GL_QCOM_texture_lod_bias' : {
+        'esnumber' : 342,
+        'flags' : { 'public' },
+        'supporters' : { 'QCOM' },
+        'url' : 'extensions/QCOM/QCOM_texture_lod_bias.txt',
     },
     'GL_QCOM_tiled_rendering' : {
         'esnumber' : 70,
