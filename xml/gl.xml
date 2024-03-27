@@ -19372,6 +19372,15 @@ typedef unsigned int GLhandleARB;
             <param kind="CheckedInt32"><ptype>GLint</ptype> <name>layer</name></param>
         </command>
         <command>
+            <proto>void <name>glNamedFramebufferTextureMultiviewOVR</name></proto>
+            <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
+            <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
+            <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
+            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>baseViewIndex</name></param>
+            <param><ptype>GLsizei</ptype> <name>numViews</name></param>
+        </command>
+        <command>
             <proto>void <name>glNamedProgramLocalParameter4dEXT</name></proto>
             <param class="program"><ptype>GLuint</ptype> <name>program</name></param>
             <param group="ProgramTarget"><ptype>GLenum</ptype> <name>target</name></param>
@@ -46578,6 +46587,9 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_MAX_VIEWS_OVR"/>
                 <enum name="GL_FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR"/>
                 <command name="glFramebufferTextureMultiviewOVR"/>
+            </require>
+            <require comment="Supported only if ARB_direct_state_access or OpenGL 4.5 is supported">
+                <command name="glNamedFramebufferTextureMultiviewOVR"/>
             </require>
         </extension>
         <extension name="GL_OVR_multiview2" supported="gl|glcore|gles2"/>
