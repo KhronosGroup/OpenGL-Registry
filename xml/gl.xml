@@ -7017,6 +7017,12 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9700" end="0x970F" vendor="Samsung"/>
     </enums>
 
+    <enums namespace="GL" start="0x9710" end="0x971F" vendor="Qualcomm" comment="Reserved for Ashish Mathur">
+        <enum value="0x9710" name="GL_TEXTURE_Y_DEGAMMA_QCOM" group="TexParameterI,GetTexParameter"/>
+        <enum value="0x9711" name="GL_TEXTURE_CBCR_DEGAMMA_QCOM" group="TexParameterI,GetTexParameter"/>
+            <unused start="0x9712" end="0x971F" vendor="Qualcomm"/>
+    </enums>
+
 <!-- Enums reservable for future use. To reserve a new range, allocate one
      or more multiples of 16 starting at the lowest available point in this
      block and note it in a new <enums> block immediately above.
