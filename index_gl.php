@@ -242,7 +242,7 @@ include_once("../../assets/static_pages/khr_page_top.php");
     OpenGL Application Binary Interface for Linux </h2>
 
 <p> The <a href="ABI/">OpenGL Application Binary Interface for Linux</a> is
-    also available. <b>NOTE:<b> this document is extremely old and of no
+    also available. <b>NOTE:</b> this document is extremely old and of no
     relevance to modern Linux systems, where the ABI is de-facto defined by
     the <a href="https://docs.mesa3d.org/precompiled.html">Mesa
     libraries</a> as shipped by distribution vendors. </p>
