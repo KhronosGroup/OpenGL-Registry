@@ -140,6 +140,30 @@ Interactions with the OpenGL ES 2.0 specification
     --------------- ----------        ---- ---- ---- ---- ---- ----
     BGRA_EXT        color-renderable  8    8    8    8
 
+Interactions with the OpenGL ES 3.0 specification
+
+    Add the following entries to Table 3.2: Valid combinations of format,
+    type, and sized internalformat:
+
+    Format    Type           External Bytes per Pixel Internal Format
+    ------    ----           ------------------------ ---------------
+    BGRA_EXT  UNSIGNED_BYTE  4                        BGRA_EXT, BGRA8_EXT
+
+
+    Modify Section 3.8.3 (Texture Image Specification), p 128
+
+    (add the following required Texture and renderbuffer color formats, p 128)
+
+    - BGRA_EXT
+
+    (add the following to Table 3.13: "Correspondence of sized internal color
+    formats to base internal formats...", beginning on p 130)
+
+    Sized           Base            R    G    B    A    Shared Color-     Texture-
+    Internal Format Internal Format bits bits bits bits bits   renderable filterable
+    --------------- --------------- ---- ---- ---- ---- ------ ---------- ----------
+    BGRA_EXT        BGRA_EXT        8    8    8    8           x          x
+
 Revision History
 
     0.1,  26/04/2005  sks:  Initial revision.
