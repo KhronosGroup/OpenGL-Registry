@@ -90,7 +90,7 @@ New Tokens
         GL_BGRA_EXT                                     0x80E1
 
     Accepted by the <internalformat> parameter of TexImage2D, unless using
-    OpenGL ES versions prior to 3.0:
+    OpenGL ES versions prior to 2.0:
 
         GL_BGRA8_EXT                                    0x93A1
 
@@ -145,6 +145,7 @@ Interactions with the OpenGL ES 2.0 specification
     Internal Format Type              bits bits bits bits bits bits
     --------------- ----------        ---- ---- ---- ---- ---- ----
     BGRA_EXT        color-renderable  8    8    8    8
+    BGRA8_EXT       color-renderable  8    8    8    8
 
 Interactions with the OpenGL ES 3.0 specification
 
@@ -180,4 +181,4 @@ Revision History
     1.2,  26/10/2009  Benj Lipchak: add EXT suffix to BGRA token.
     1.3,  12/09/2016  Tobias Hector: Added interaction with ES 2.0 (made it renderable).
                       Also made revision dates use the same (dd/mm/yyyy) format.
-    1.4,  14/02/2024  Erik Faye-Lund: Add GL_BGRA8_EXT for ES 3.0.
+    1.4,  23/06/2024  Erik Faye-Lund: Add GL_BGRA8_EXT for ES 2.0 and later.
