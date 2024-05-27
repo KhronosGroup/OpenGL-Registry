@@ -4663,6 +4663,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_texture_foveated_subsampled_layout.txt',
     },
+    'GL_QCOM_ycbcr_degamma' : {
+        'esnumber' : 346,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_ycbcr_degamma.txt',
+    },
     'GL_QCOM_texture_lod_bias' : {
         'esnumber' : 342,
         'flags' : { 'public' },

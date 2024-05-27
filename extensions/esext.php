@@ -721,4 +721,6 @@
 </li>
 <li value=345><a href="extensions/ARM/ARM_shader_core_properties.txt">GL_ARM_shader_core_properties</a>
 </li>
+<li value=346><a href="extensions/QCOM/QCOM_ycbcr_degamma.txt">GL_QCOM_ycbcr_degamma</a>
+</li>
 </ol>

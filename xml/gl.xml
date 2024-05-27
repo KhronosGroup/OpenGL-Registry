@@ -7018,8 +7018,8 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x9710" end="0x971F" vendor="QCOM" comment="Reserved for Ashish Mathur">
-        <enum value="0x9710" name="GL_TEXTURE_Y_DEGAMMA_QCOM" group="TextureParameter,GetTextureParameter"/>
-        <enum value="0x9711" name="GL_TEXTURE_CBCR_DEGAMMA_QCOM" group="TextureParameter,GetTextureParameter"/>
+        <enum value="0x9710" name="GL_TEXTURE_Y_DEGAMMA_QCOM" group="TextureParameterName,GetTextureParameter"/>
+        <enum value="0x9711" name="GL_TEXTURE_CBCR_DEGAMMA_QCOM" group="TextureParameterName,GetTextureParameter"/>
             <unused start="0x9712" end="0x971F" vendor="QCOM"/>
     </enums>
 
@@ -7032,8 +7032,8 @@ typedef unsigned int GLhandleARB;
      file) File requests in the Khronos Bugzilla, OpenGL project, Registry
      component. -->
 
-    <enums namespace="GL" start="0x9710" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
-        <unused start="0x9710" end="99999" comment="RESERVED"/>
+    <enums namespace="GL" start="0x9720" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
+        <unused start="0x9720" end="99999" comment="RESERVED"/>
     </enums>
 
 <!-- Historical large block allocations, all unused except (in older days) by IBM -->
@@ -46755,6 +46755,12 @@ typedef unsigned int GLhandleARB;
             <require>
                 <enum name="GL_FOVEATION_SUBSAMPLED_LAYOUT_METHOD_BIT_QCOM"/>
                 <enum name="GL_MAX_SHADER_SUBSAMPLED_IMAGE_UNITS_QCOM"/>
+            </require>
+        </extension>
+        <extension name="GL_QCOM_ycbcr_degamma" supported="gles2">
+            <require>
+                <enum name="GL_TEXTURE_Y_DEGAMMA_QCOM"/>
+                <enum name="GL_TEXTURE_CBCR_DEGAMMA_QCOM"/>
             </require>
         </extension>
         <extension name="GL_QCOM_texture_lod_bias" supported="gles2">
