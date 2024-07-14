@@ -5414,8 +5414,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8E6D" name="GL_MAX_TASK_ATOMIC_COUNTERS_NV"/>
         <enum value="0x8E6E" name="GL_MAX_TASK_SHADER_STORAGE_BLOCKS_NV"/>
         <enum value="0x8E6F" name="GL_MAX_COMBINED_TASK_UNIFORM_COMPONENTS_NV"/>
-        <enum value="0x8E70" name="GL_MAX_TRANSFORM_FEEDBACK_BUFFERS"/>
-        <enum value="0x8E71" name="GL_MAX_VERTEX_STREAMS"/>
+        <enum value="0x8E70" name="GL_MAX_TRANSFORM_FEEDBACK_BUFFERS" group="GetPName"/>
+        <enum value="0x8E71" name="GL_MAX_VERTEX_STREAMS" group="GetPName"/>
         <enum value="0x8E72" name="GL_PATCH_VERTICES" group="PatchParameterName"/>
         <enum value="0x8E72" name="GL_PATCH_VERTICES_EXT"/>
         <enum value="0x8E72" name="GL_PATCH_VERTICES_OES"/>
