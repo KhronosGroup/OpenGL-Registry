@@ -1651,7 +1651,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x80ED" name="GL_TEXTURE_INDEX_SIZE_EXT"/>
         <enum value="0x80EE" name="GL_PARAMETER_BUFFER" group="BufferTargetARB"/>
         <enum value="0x80EE" name="GL_PARAMETER_BUFFER_ARB" alias="GL_PARAMETER_BUFFER"/>
-        <enum value="0x80EF" name="GL_PARAMETER_BUFFER_BINDING"/>
+        <enum value="0x80EF" name="GL_PARAMETER_BUFFER_BINDING" group= "GetPName"/>
         <enum value="0x80EF" name="GL_PARAMETER_BUFFER_BINDING_ARB" alias="GL_PARAMETER_BUFFER_BINDING"/>
         <enum value="0x80F0" name="GL_CLIP_VOLUME_CLIPPING_HINT_EXT" group="HintTarget"/>
             <unused start="0x80F1" end="0x810F" vendor="MS"/>
@@ -4665,7 +4665,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C2A" name="GL_TEXTURE_BUFFER_ARB"/>
         <enum value="0x8C2A" name="GL_TEXTURE_BUFFER_EXT"/>
         <enum value="0x8C2A" name="GL_TEXTURE_BUFFER_OES"/>
-        <enum value="0x8C2A" name="GL_TEXTURE_BUFFER_BINDING" comment="Equivalent to GL_TEXTURE_BUFFER_ARB query, but named more consistently"/>
+        <enum value="0x8C2A" name="GL_TEXTURE_BUFFER_BINDING" comment="Equivalent to GL_TEXTURE_BUFFER_ARB query, but named more consistently" group="GetPName"/>
         <enum value="0x8C2A" name="GL_TEXTURE_BUFFER_BINDING_EXT"/>
         <enum value="0x8C2A" name="GL_TEXTURE_BUFFER_BINDING_OES"/>
         <enum value="0x8C2B" name="GL_MAX_TEXTURE_BUFFER_SIZE" group="GetPName"/>
@@ -5568,10 +5568,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8F35" name="GL_MAX_SHADER_BUFFER_ADDRESS_NV"/>
         <enum value="0x8F36" name="GL_COPY_READ_BUFFER" group="CopyBufferSubDataTarget,BufferTargetARB,BufferStorageTarget"/>
         <enum value="0x8F36" name="GL_COPY_READ_BUFFER_NV"/>
-        <enum value="0x8F36" name="GL_COPY_READ_BUFFER_BINDING" alias="GL_COPY_READ_BUFFER"/>
+        <enum value="0x8F36" name="GL_COPY_READ_BUFFER_BINDING" alias="GL_COPY_READ_BUFFER" group="GetPName"/>
         <enum value="0x8F37" name="GL_COPY_WRITE_BUFFER" group="CopyBufferSubDataTarget,BufferTargetARB,BufferStorageTarget"/>
         <enum value="0x8F37" name="GL_COPY_WRITE_BUFFER_NV"/>
-        <enum value="0x8F37" name="GL_COPY_WRITE_BUFFER_BINDING" alias="GL_COPY_WRITE_BUFFER"/>
+        <enum value="0x8F37" name="GL_COPY_WRITE_BUFFER_BINDING" alias="GL_COPY_WRITE_BUFFER" group="GetPName"/>
         <enum value="0x8F38" name="GL_MAX_IMAGE_UNITS"/>
         <enum value="0x8F38" name="GL_MAX_IMAGE_UNITS_EXT"/>
         <enum value="0x8F39" name="GL_MAX_COMBINED_IMAGE_UNITS_AND_FRAGMENT_OUTPUTS"/>
@@ -5591,7 +5591,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8F40" name="GL_DRAW_INDIRECT_UNIFIED_NV"/>
         <enum value="0x8F41" name="GL_DRAW_INDIRECT_ADDRESS_NV"/>
         <enum value="0x8F42" name="GL_DRAW_INDIRECT_LENGTH_NV"/>
-        <enum value="0x8F43" name="GL_DRAW_INDIRECT_BUFFER_BINDING"/>
+        <enum value="0x8F43" name="GL_DRAW_INDIRECT_BUFFER_BINDING", group="GetPName"/>
         <enum value="0x8F44" name="GL_MAX_PROGRAM_SUBROUTINE_PARAMETERS_NV"/>
         <enum value="0x8F45" name="GL_MAX_PROGRAM_SUBROUTINE_NUM_NV"/>
         <enum value="0x8F46" name="GL_DOUBLE_MAT2" group="AttributeType,UniformType"/>
@@ -6175,7 +6175,7 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9161" vendor="AMD"/>
         <enum value="0x9192" name="GL_QUERY_BUFFER" group="CopyBufferSubDataTarget,BufferTargetARB,BufferStorageTarget"/>
         <enum value="0x9192" name="GL_QUERY_BUFFER_AMD"/>
-        <enum value="0x9193" name="GL_QUERY_BUFFER_BINDING"/>
+        <enum value="0x9193" name="GL_QUERY_BUFFER_BINDING", group="GetPName"/>
         <enum value="0x9193" name="GL_QUERY_BUFFER_BINDING_AMD"/>
         <enum value="0x9194" name="GL_QUERY_RESULT_NO_WAIT" group="QueryObjectParameterName"/>
         <enum value="0x9194" name="GL_QUERY_RESULT_NO_WAIT_AMD"/>
@@ -6402,7 +6402,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x92BE" name="GL_PRIMITIVE_BOUNDING_BOX_OES"/>
         <enum value="0x92BF" name="GL_ALPHA_TO_COVERAGE_DITHER_MODE_NV"/>
         <enum value="0x92C0" name="GL_ATOMIC_COUNTER_BUFFER" group="CopyBufferSubDataTarget,BufferTargetARB,BufferStorageTarget"/>
-        <enum value="0x92C1" name="GL_ATOMIC_COUNTER_BUFFER_BINDING" group="AtomicCounterBufferPName"/>
+        <enum value="0x92C1" name="GL_ATOMIC_COUNTER_BUFFER_BINDING" group="AtomicCounterBufferPName,GetPName"/>
         <enum value="0x92C2" name="GL_ATOMIC_COUNTER_BUFFER_START"/>
         <enum value="0x92C3" name="GL_ATOMIC_COUNTER_BUFFER_SIZE"/>
         <enum value="0x92C4" name="GL_ATOMIC_COUNTER_BUFFER_DATA_SIZE" group="AtomicCounterBufferPName"/>
