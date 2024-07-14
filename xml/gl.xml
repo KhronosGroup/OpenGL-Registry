@@ -1097,7 +1097,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x2700" name="GL_NEAREST_MIPMAP_NEAREST" group="TextureMinFilter"/>
         <enum value="0x2701" name="GL_LINEAR_MIPMAP_NEAREST" group="TextureMinFilter"/>
         <enum value="0x2702" name="GL_NEAREST_MIPMAP_LINEAR" group="TextureMinFilter"/>
-        <enum value="0x2703" name="GL_LINEAR_MIPMAP_LINEAR" group="TextureWrapMode,TextureMinFilter"/>
+        <enum value="0x2703" name="GL_LINEAR_MIPMAP_LINEAR" group="TextureMinFilter"/>
             <unused start="0x2704" end="0x27FF" comment="Unused for TextureMinFilter"/>
         <enum value="0x2800" name="GL_TEXTURE_MAG_FILTER" group="SamplerParameterI,GetTextureParameter,TextureParameterName"/>
         <enum value="0x2801" name="GL_TEXTURE_MIN_FILTER" group="SamplerParameterI,GetTextureParameter,TextureParameterName"/>
@@ -1701,10 +1701,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x812C" name="GL_MAX_FOG_FUNC_POINTS_SGIS" group="GetPName"/>
         <enum value="0x812D" name="GL_CLAMP_TO_BORDER" group="TextureWrapMode"/>
         <enum value="0x812D" name="GL_CLAMP_TO_BORDER_ARB" group="TextureWrapMode"/>
-        <enum value="0x812D" name="GL_CLAMP_TO_BORDER_EXT"/>
+        <enum value="0x812D" name="GL_CLAMP_TO_BORDER_EXT" group="TextureWrapMode"/>
         <enum value="0x812D" name="GL_CLAMP_TO_BORDER_NV" group="TextureWrapMode"/>
         <enum value="0x812D" name="GL_CLAMP_TO_BORDER_SGIS" group="TextureWrapMode"/>
-        <enum value="0x812D" name="GL_CLAMP_TO_BORDER_OES"/>
+        <enum value="0x812D" name="GL_CLAMP_TO_BORDER_OES" group="TextureWrapMode"/>
         <enum value="0x812E" name="GL_TEXTURE_MULTI_BUFFER_HINT_SGIX" group="HintTarget"/>
         <enum value="0x812F" name="GL_CLAMP_TO_EDGE" group="TextureWrapMode"/>
         <enum value="0x812F" name="GL_CLAMP_TO_EDGE_SGIS" group="TextureWrapMode"/>
@@ -2451,9 +2451,9 @@ typedef unsigned int GLhandleARB;
                  this range. Lesson: assigned ranges belong to vendors,
                  not engineers! -->
         <enum value="0x8370" name="GL_MIRRORED_REPEAT" group="TextureWrapMode"/>
-        <enum value="0x8370" name="GL_MIRRORED_REPEAT_ARB"/>
-        <enum value="0x8370" name="GL_MIRRORED_REPEAT_IBM"/>
-        <enum value="0x8370" name="GL_MIRRORED_REPEAT_OES"/>
+        <enum value="0x8370" name="GL_MIRRORED_REPEAT_ARB" group="TextureWrapMode"/>
+        <enum value="0x8370" name="GL_MIRRORED_REPEAT_IBM" group="TextureWrapMode"/>
+        <enum value="0x8370" name="GL_MIRRORED_REPEAT_OES" group="TextureWrapMode"/>
             <unused start="0x8371" end="0x837F" vendor="HP"/>
     </enums>
 
@@ -6928,9 +6928,9 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9690" end="0x969F" vendor="ANGLE"/>
     </enums>
 
-    <enums namespace="GL" start="0x96A0" end="0x96AF" vendor="Qualcomm" comment="contact Jeff Leger">
+    <enums namespace="GL" start="0x96A0" end="0x96AF" vendor="QCOM" comment="contact Jeff Leger">
         <enum value="0x96A0" name="GL_TEXTURE_FOVEATED_CUTOFF_DENSITY_QCOM" group="TextureParameterName"/>
-            <unused start="0x96A1" end="0x96A1" vendor="Qualcomm"/>
+            <unused start="0x96A1" end="0x96A1" vendor="QCOM"/>
         <enum value="0x96A2" name="GL_FRAMEBUFFER_FETCH_NONCOHERENT_QCOM" group="GetPName,EnableCap"/>
         <enum value="0x96A3" name="GL_VALIDATE_SHADER_BINARY_QCOM"/>
         <enum value="0x96A4" name="GL_SHADING_RATE_QCOM" group="GetPName"/>
@@ -6953,7 +6953,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x96AC" name="GL_SHADING_RATE_4X2_PIXELS_EXT" alias="GL_SHADING_RATE_4X2_PIXELS_QCOM" group="ShadingRate"/>
         <enum value="0x96AD" name="GL_SHADING_RATE_2X4_PIXELS_EXT" alias="GL_SHADING_RATE_2X4_PIXELS_QCOM" group="ShadingRate"/>
         <enum value="0x96AE" name="GL_SHADING_RATE_4X4_PIXELS_EXT" alias="GL_SHADING_RATE_4X4_PIXELS_QCOM" group="ShadingRate"/>
-            <unused start="0x96AF" end="0x96AF" vendor="Qualcomm"/>
+            <unused start="0x96AF" end="0x96AF" vendor="QCOM"/>
     </enums>
 
     <enums namespace="GL" start="0x96B0" end="0x96BF" vendor="ANGLE" comment="github pull request">
@@ -7003,7 +7003,24 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x96F0" end="0x96FF" vendor="ARM" comment="Contact Jan-Harald Fredriksen">
-            <unused start="0x96F0" end="0x96FF" vendor="ARM"/>
+        <enum value="0x96F0" name="GL_SHADER_CORE_COUNT_ARM" group="GetPName"/>
+        <enum value="0x96F1" name="GL_SHADER_CORE_ACTIVE_COUNT_ARM" group="GetPName"/>
+        <enum value="0x96F2" name="GL_SHADER_CORE_PRESENT_MASK_ARM" group="GetPName"/>
+        <enum value="0x96F3" name="GL_SHADER_CORE_MAX_WARP_COUNT_ARM" group="GetPName"/>
+        <enum value="0x96F4" name="GL_SHADER_CORE_PIXEL_RATE_ARM" group="GetPName"/>
+        <enum value="0x96F5" name="GL_SHADER_CORE_TEXEL_RATE_ARM" group="GetPName"/>
+        <enum value="0x96F6" name="GL_SHADER_CORE_FMA_RATE_ARM" group="GetPName"/>
+            <unused start="0x96F7" end="0x96FF" vendor="ARM"/>
+    </enums>
+
+    <enums namespace="GL" start="0x9700" end="0x970F" vendor="Samsung" comment="Reserved for Jeff Vigil">
+            <unused start="0x9700" end="0x970F" vendor="Samsung"/>
+    </enums>
+
+    <enums namespace="GL" start="0x9710" end="0x971F" vendor="QCOM" comment="Reserved for Ashish Mathur">
+        <enum value="0x9710" name="GL_TEXTURE_Y_DEGAMMA_QCOM" group="TextureParameterName,GetTextureParameter"/>
+        <enum value="0x9711" name="GL_TEXTURE_CBCR_DEGAMMA_QCOM" group="TextureParameterName,GetTextureParameter"/>
+            <unused start="0x9712" end="0x971F" vendor="QCOM"/>
     </enums>
 
 <!-- Enums reservable for future use. To reserve a new range, allocate one
@@ -7015,8 +7032,8 @@ typedef unsigned int GLhandleARB;
      file) File requests in the Khronos Bugzilla, OpenGL project, Registry
      component. -->
 
-    <enums namespace="GL" start="0x9700" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
-        <unused start="0x9700" end="99999" comment="RESERVED"/>
+    <enums namespace="GL" start="0x9720" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
+        <unused start="0x9720" end="99999" comment="RESERVED"/>
     </enums>
 
 <!-- Historical large block allocations, all unused except (in older days) by IBM -->
@@ -17818,6 +17835,10 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLfloat</ptype> <name>z</name></param>
         </command>
         <command>
+            <proto>void <name>glMaxActiveShaderCoresARM</name></proto>
+            <param><ptype>GLuint</ptype> <name>count</name></param>
+        </command>
+        <command>
             <proto>void <name>glMaxShaderCompilerThreadsKHR</name></proto>
             <param><ptype>GLuint</ptype> <name>count</name></param>
         </command>
@@ -19355,6 +19376,15 @@ typedef unsigned int GLhandleARB;
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
             <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
             <param kind="CheckedInt32"><ptype>GLint</ptype> <name>layer</name></param>
+        </command>
+        <command>
+            <proto>void <name>glNamedFramebufferTextureMultiviewOVR</name></proto>
+            <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
+            <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
+            <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
+            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param><ptype>GLint</ptype> <name>baseViewIndex</name></param>
+            <param><ptype>GLsizei</ptype> <name>numViews</name></param>
         </command>
         <command>
             <proto>void <name>glNamedProgramLocalParameter4dEXT</name></proto>
@@ -28200,7 +28230,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>size</name></param>
             <param group="VertexAttribIType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
         </command>
         <command>
             <proto>void <name>glVertexAttribIPointerEXT</name></proto>
@@ -28208,7 +28238,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>size</name></param>
             <param group="VertexAttribIType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
             <alias name="glVertexAttribIPointer"/>
         </command>
         <command>
@@ -28433,7 +28463,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>size</name></param>
             <param group="VertexAttribLType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="size">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
         </command>
         <command>
             <proto>void <name>glVertexAttribLPointerEXT</name></proto>
@@ -28441,7 +28471,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLint</ptype> <name>size</name></param>
             <param group="VertexAttribLType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="size">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
             <alias name="glVertexAttribLPointer"/>
         </command>
         <command>
@@ -28513,7 +28543,7 @@ typedef unsigned int GLhandleARB;
             <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLboolean</ptype> <name>normalized</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
         </command>
         <command>
             <proto>void <name>glVertexAttribPointerARB</name></proto>
@@ -28522,7 +28552,7 @@ typedef unsigned int GLhandleARB;
             <param group="VertexAttribPointerType"><ptype>GLenum</ptype> <name>type</name></param>
             <param><ptype>GLboolean</ptype> <name>normalized</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
-            <param len="COMPSIZE(size,type,stride)">const void *<name>pointer</name></param>
+            <param>const void *<name>pointer</name></param>
             <alias name="glVertexAttribPointer"/>
         </command>
         <command>
@@ -39625,6 +39655,18 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_ARM_rgba8" supported="gles1|gles2"/>
+        <extension name="GL_ARM_shader_core_properties" supported="gles2">
+            <require>
+                <enum name="GL_SHADER_CORE_COUNT_ARM"/>
+                <enum name="GL_SHADER_CORE_ACTIVE_COUNT_ARM"/>
+                <enum name="GL_SHADER_CORE_PRESENT_MASK_ARM"/>
+                <enum name="GL_SHADER_CORE_MAX_WARP_COUNT_ARM"/>
+                <enum name="GL_SHADER_CORE_PIXEL_RATE_ARM"/>
+                <enum name="GL_SHADER_CORE_TEXEL_RATE_ARM"/>
+                <enum name="GL_SHADER_CORE_FMA_RATE_ARM"/>
+                <command name="glMaxActiveShaderCoresARM"/>
+            </require>
+        </extension>
         <extension name="GL_ARM_shader_framebuffer_fetch" supported="gles2">
             <require>
                 <enum name="GL_FETCH_PER_SAMPLE_ARM"/>
@@ -43420,6 +43462,21 @@ typedef unsigned int GLhandleARB;
                 <command name="glResizeBuffersMESA"/>
             </require>
         </extension>
+        <extension name="GL_MESA_sampler_objects" supported="gles2">
+            <require comment="Reuse (the GLES3 part of) ARB_sampler_objects">
+                <enum name="GL_SAMPLER_BINDING"/>
+                <command name="glGenSamplers"/>
+                <command name="glDeleteSamplers"/>
+                <command name="glIsSampler"/>
+                <command name="glBindSampler"/>
+                <command name="glSamplerParameteri"/>
+                <command name="glSamplerParameteriv"/>
+                <command name="glSamplerParameterf"/>
+                <command name="glSamplerParameterfv"/>
+                <command name="glGetSamplerParameteriv"/>
+                <command name="glGetSamplerParameterfv"/>
+            </require>
+        </extension>
         <extension name="GL_MESA_shader_integer_functions" supported="gl|gles2"/>
         <extension name="GL_MESA_tile_raster_order" supported="gl">
             <require>
@@ -46537,6 +46594,9 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_FRAMEBUFFER_INCOMPLETE_VIEW_TARGETS_OVR"/>
                 <command name="glFramebufferTextureMultiviewOVR"/>
             </require>
+            <require comment="Supported only if ARB_direct_state_access or OpenGL 4.5 is supported">
+                <command name="glNamedFramebufferTextureMultiviewOVR"/>
+            </require>
         </extension>
         <extension name="GL_OVR_multiview2" supported="gl|glcore|gles2"/>
         <extension name="GL_OVR_multiview_multisampled_render_to_texture" supported="gles2">
@@ -46695,6 +46755,12 @@ typedef unsigned int GLhandleARB;
             <require>
                 <enum name="GL_FOVEATION_SUBSAMPLED_LAYOUT_METHOD_BIT_QCOM"/>
                 <enum name="GL_MAX_SHADER_SUBSAMPLED_IMAGE_UNITS_QCOM"/>
+            </require>
+        </extension>
+        <extension name="GL_QCOM_ycbcr_degamma" supported="gles2">
+            <require>
+                <enum name="GL_TEXTURE_Y_DEGAMMA_QCOM"/>
+                <enum name="GL_TEXTURE_CBCR_DEGAMMA_QCOM"/>
             </require>
         </extension>
         <extension name="GL_QCOM_texture_lod_bias" supported="gles2">

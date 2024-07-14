@@ -22,8 +22,8 @@ Status
 
 Version
 
-     Last Modified Date:  2014-10-24
-     Revision:            4
+     Last Modified Date:  2023-11-22
+     Revision:            5
 
 Number
 
@@ -31,7 +31,7 @@ Number
 
 Dependencies
 
-     OpenGL ES 3.1 is required.
+     OpenGL ES 3.0 is required.
 
      This extension is written against the OpenGL ES 3.1 (June 4, 2014)
      specification.
@@ -40,7 +40,7 @@ Dependencies
 
 Overview
 
-     OpenGL ES 3.1 supports a variety of signed normalized texture and
+     OpenGL ES 3.0 supports a variety of signed normalized texture and
      renderbuffer formats which are not color-renderable.
 
      This extension enables signed normalized texture and renderbuffer
@@ -54,15 +54,15 @@ New Tokens
 
     Accepted by the <type> parameter of ReadPixels
 
-    BYTE                            0x1400  // core OpenGL ES 3.1
-    SHORT                           0x1402  // core OpenGL ES 3.1
+    BYTE                            0x1400  // core OpenGL ES 3.0
+    SHORT                           0x1402  // core OpenGL ES 3.0
 
     Accepted by the <internalFormat> parameter of RenderbufferStorage
     and RenderbufferStorageMultisample:
 
-    R8_SNORM                        0x8F94  // core OpenGL ES 3.1
-    RG8_SNORM                       0x8F95  // core OpenGL ES 3.1
-    RGBA8_SNORM                     0x8F97  // core OpenGL ES 3.1
+    R8_SNORM                        0x8F94  // core OpenGL ES 3.0
+    RG8_SNORM                       0x8F95  // core OpenGL ES 3.0
+    RGBA8_SNORM                     0x8F97  // core OpenGL ES 3.0
     R16_SNORM_EXT                   0x8F98  // EXT_texture_norm16
     RG16_SNORM_EXT                  0x8F99  // EXT_texture_norm16
     RGBA16_SNORM_EXT                0x8F9B  // EXT_texture_norm16
@@ -270,3 +270,5 @@ Revision History:
         clarify CopyTexImage2D behavior
    Revision: 4 2014-10-24 (dkoch)
         mark complete, publishing cleanup
+   Revision: 5 2023-11-22
+        allowed use with OpenGL ES 3.0 contexts

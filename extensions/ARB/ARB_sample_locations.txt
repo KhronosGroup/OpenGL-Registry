@@ -38,8 +38,8 @@ Status
 
 Version
 
-    Last Modified Date:         June 11, 2015
-    Revision:                   4
+    Last Modified Date:         March 16, 2024
+    Revision:                   5
 
 Number
 
@@ -290,6 +290,12 @@ Additions to Chapter 14 of the OpenGL 4.5 (Compatibility Profile) Specification
     samples were generated.  If the current framebuffer has no depth buffer,
     EvaluateDepthValuesARB will have no effect.
 
+    Modify Section 15.2.2, Shader Inputs, p. 568
+
+    (insert after the paragraph describing gl_SamplePosition, p. 570)
+
+    If FRAMEBUFFER_PROGRAMMABLE_SAMPLE_LOCATIONS_ARB is enabled, the value of
+    gl_SamplePosition is undefined.
 
 New Implementation Dependent State
 
@@ -435,3 +441,6 @@ Revision History
 
     Revision 4  pdaniell 6/11
     - Add issue (5) to cover question in bug 14100.
+
+    Revision 5  alyssa 3/16
+    - Clarify interaction with gl_SamplePosition.

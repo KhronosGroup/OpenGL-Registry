@@ -20,7 +20,7 @@ Contacts
 
 Notice
 
-    Copyright (c) 2014-2015 The Khronos Group Inc. Copyright terms at
+    Copyright (c) 2014-2024 The Khronos Group Inc. Copyright terms at
         http://www.khronos.org/registry/speccopyright.html
 
 Specification Update Policy
@@ -41,7 +41,7 @@ Status
 
 Version
 
-    January 29, 2016 (version 10)
+    January 3, 2024 (version 11)
 
 Number
 
@@ -304,30 +304,20 @@ Issues
         RESOLVED: The texture is incomplete if the sampler object state is
                   not compatible with the sampler state.
 
-        The OES_EGL_image_external specifies that the only supported min filter
-        modes for external textures is LINEAR or NEAREST and that the only
-        valid s and t wrap mode is CLAMP_TO_EDGE. TexParameter* will generate
-        errors if these are called while an external texture is bound. In ES3.x
-        it is possible to attach a sampler object that has any wrap mode and
-        min filter. In this case, the external texture will be treated as
-        incomplete if the sampler object state is incompatible with such
-        textures.
+        The general rule for separate sampler objects is that if state is
+        present in a sampler object bound to a texture unit that would have been
+        rejected by a call to TexParameter* for the texture bound to that unit,
+        the behavior of the implementation is as if the texture was incomplete.
 
-        Sampler state that affects completeness of external textures:
-         - TEXTURE_MIN_FILTER
-         - TEXTURE_WRAP_S
-         - TEXTURE_WRAP_T
-
-        Sampler state that has no additional constraints for external textures:
-         - TEXTURE_MAG_FILTER
-
-        Sampler state that does not affect external textures, and thus have
-        no impact on completeness or behavior:
-         - TEXTURE_WRAP_R       (3D or 2Darray for external textures)
-         - TEXTURE_COMPARE_MODE (no shadow sampler for external textures)
-         - TEXTURE_COMPARE_FUNC (no shadow sampler for external textures)
-         - TEXTURE_MIN_LOD      (no mipmapping for external textures)
-         - TEXTURE_MAX_LOD      (no mipmapping for external textures)
+        This rule also applies to external textures. A specific constraint is
+        that the OES_EGL_image_external extension specifies that the only
+        supported min filter modes for external textures is LINEAR or NEAREST
+        and that the only valid s and t wrap mode is CLAMP_TO_EDGE.
+        TexParameter* will generate errors if these are called while an external
+        texture is bound. In ES3.x it is possible to attach a sampler object
+        that has any wrap mode and min filter. In this case, the external
+        texture will be treated as incomplete if the sampler object state is
+        incompatible with such textures.
 
     8.  What is the interaction with the texture base level?
 
@@ -369,10 +359,11 @@ Issues
 
 Revision History
 
+    #11 - (Jan 3, 2024)  Clarified wording of issue 7.
     #10 - (Jan 29, 2016) Fixed typo in issue 10. 
     #9 - (Apr 10, 2015) Clarified issue 10. Specified default precision for
                         samplerExternalOES as lowp for all shader stages.
-    #8 - (Feb 6, 2015) Fixed typo in return value of textureSize (vec2->ivec2)
+    #8 - (Feb 6, 2015)  Fixed typo in return value of textureSize (vec2->ivec2)
     #7 - (Oct 15, 2014) Resolved issue 10. Added interaction with EXT_gpu_shader5.
     #6 - (Oct 10, 2014) Added issue 10 and its tentative resolution.
     #5 - (Sep 25, 2014) Updated resolution of issue 7.
