@@ -5591,7 +5591,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8F40" name="GL_DRAW_INDIRECT_UNIFIED_NV"/>
         <enum value="0x8F41" name="GL_DRAW_INDIRECT_ADDRESS_NV"/>
         <enum value="0x8F42" name="GL_DRAW_INDIRECT_LENGTH_NV"/>
-        <enum value="0x8F43" name="GL_DRAW_INDIRECT_BUFFER_BINDING", group="GetPName"/>
+        <enum value="0x8F43" name="GL_DRAW_INDIRECT_BUFFER_BINDING" group="GetPName"/>
         <enum value="0x8F44" name="GL_MAX_PROGRAM_SUBROUTINE_PARAMETERS_NV"/>
         <enum value="0x8F45" name="GL_MAX_PROGRAM_SUBROUTINE_NUM_NV"/>
         <enum value="0x8F46" name="GL_DOUBLE_MAT2" group="AttributeType,UniformType"/>
@@ -6175,7 +6175,7 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9161" vendor="AMD"/>
         <enum value="0x9192" name="GL_QUERY_BUFFER" group="CopyBufferSubDataTarget,BufferTargetARB,BufferStorageTarget"/>
         <enum value="0x9192" name="GL_QUERY_BUFFER_AMD"/>
-        <enum value="0x9193" name="GL_QUERY_BUFFER_BINDING", group="GetPName"/>
+        <enum value="0x9193" name="GL_QUERY_BUFFER_BINDING" group="GetPName"/>
         <enum value="0x9193" name="GL_QUERY_BUFFER_BINDING_AMD"/>
         <enum value="0x9194" name="GL_QUERY_RESULT_NO_WAIT" group="QueryObjectParameterName"/>
         <enum value="0x9194" name="GL_QUERY_RESULT_NO_WAIT_AMD"/>
