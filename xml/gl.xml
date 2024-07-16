@@ -19387,7 +19387,7 @@ typedef unsigned int GLhandleARB;
             <param class="framebuffer"><ptype>GLuint</ptype> <name>framebuffer</name></param>
             <param group="FramebufferAttachment"><ptype>GLenum</ptype> <name>attachment</name></param>
             <param class="texture"><ptype>GLuint</ptype> <name>texture</name></param>
-            <param kind="CheckedInt32"><ptype>GLint</ptype> <name>level</name></param>
+            <param kind="Range[0; x]"><ptype>GLint</ptype> <name>level</name></param>
             <param><ptype>GLint</ptype> <name>baseViewIndex</name></param>
             <param><ptype>GLsizei</ptype> <name>numViews</name></param>
         </command>
