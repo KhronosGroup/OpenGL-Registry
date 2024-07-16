@@ -70,7 +70,7 @@ typedef unsigned int GLhandleARB;
         <kind name="Color" desc="This parameter represents part of or a complete color."/>
         <kind name="Coord" desc="This parameter represents a coordinate."/>
         <kind name="WinCoord" desc="This parameter represents a window coordinate."/>
-        <kind name="NDCCoord" desc="This parameter represents a normalized< device coordinates (NDC)."/>
+        <kind name="NDCCoord" desc="This parameter represents a normalized device coordinates (NDC)."/>
         <kind name="Clamped[0; 1]" desc="This parameter will get clamped to the 0 to 1 range."/>
         <kind name="Clamped[-1; 1]" desc="This parameter will get clamped to the -1 to 1 range."/>
         <kind name="Clamped[0; 65536]" desc="This parameter will get clamped to the 0 to 65536 (2^16) range, effectively making it a 16-bit value."/>
