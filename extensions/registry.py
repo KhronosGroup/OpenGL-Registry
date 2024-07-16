@@ -1407,6 +1407,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/ARM/ARM_rgba8.txt',
     },
+    'GL_ARM_shader_core_properties' : {
+        'esnumber' : 345,
+        'flags' : { 'public' },
+        'url' : 'extensions/ARM/ARM_shader_core_properties.txt',
+    },
     'GL_ARM_shader_framebuffer_fetch' : {
         'esnumber' : 165,
         'flags' : { 'public' },
@@ -1873,6 +1878,13 @@ registry = {
         'number' : 316,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_framebuffer_blit.txt',
+    },
+    'GL_EXT_framebuffer_blit_layers' : {
+        'number' : 558,
+        'esnumber' : 341,
+        'supporters' : { 'MESA' },
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_framebuffer_blit_layers.txt',
     },
     'GL_EXT_framebuffer_multisample' : {
         'number' : 317,
@@ -2883,6 +2895,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/IMG/IMG_tile_region_protection.txt',
     },
+    'GL_IMG_pvric_end_to_end_signature' : {
+        'scnumber' : 2,
+        'flags' : { 'public' },
+        'url' : 'extensions/IMG/IMG_pvric_end_to_end_signature.txt',
+    },
     'GL_INGR_color_clamp' : {
         'number' : 174,
         'flags' : { 'public' },
@@ -3101,6 +3118,12 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/MESA_resize_buffers.txt',
+    },
+    'GL_MESA_sampler_objects' : {
+        'esnumber' : 344,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_sampler_objects.txt',
     },
     'GLX_MESA_set_3dfx_mode' : {
         'number' : 218,
@@ -4014,6 +4037,11 @@ registry = {
         'supporters' : { 'NVIDIA' },
         'url' : 'extensions/NV/NV_timeline_semaphore.txt',
     },
+    'GL_NV_uniform_buffer_std430_layout' : {
+        'number' : 559,
+        'flags' : { 'public' },
+        'url' : 'extensions/NV/NV_uniform_buffer_std430_layout.txt',
+    },
     'GL_NV_uniform_buffer_unified_memory' : {
         'number' : 459,
         'flags' : { 'public' },
@@ -4590,6 +4618,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_render_shared_exponent.txt',
     },
+    'GL_QCOM_render_sRGB_R8_RG8' : {
+        'esnumber' : 343,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_render_sRGB_R8_RG8.txt',
+    },
     'GL_QCOM_performance_monitor_global_mode' : {
         'esnumber' : 56,
         'flags' : { 'public' },
@@ -4629,6 +4662,17 @@ registry = {
         'esnumber' : 306,
         'flags' : { 'public' },
         'url' : 'extensions/QCOM/QCOM_texture_foveated_subsampled_layout.txt',
+    },
+    'GL_QCOM_ycbcr_degamma' : {
+        'esnumber' : 346,
+        'flags' : { 'public' },
+        'url' : 'extensions/QCOM/QCOM_ycbcr_degamma.txt',
+    },
+    'GL_QCOM_texture_lod_bias' : {
+        'esnumber' : 342,
+        'flags' : { 'public' },
+        'supporters' : { 'QCOM' },
+        'url' : 'extensions/QCOM/QCOM_texture_lod_bias.txt',
     },
     'GL_QCOM_tiled_rendering' : {
         'esnumber' : 70,

@@ -31,6 +31,8 @@ NEC             Seiji Uchida        uchida 'at' hpc.bs1.fc.nec.co.jp
 NVIDIA          James Jones         jajones 'at' nvidia.com
 S3              Yanjun Zhang        YanjunZhang 'at' s3graphics.com
 Vivante         Frido Garritsen     TBD
+Samsung         Jeff Vigil          j.vigil 'at' samsung.com
+Qualcomm        Ashish Mathur       asmathur@qti.qualcomm.com
 
 Out of business / acquired / unknown:
 

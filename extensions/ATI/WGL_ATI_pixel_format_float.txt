@@ -41,7 +41,7 @@ Overview
     defining the size of fixed-point components.  32 bit floating-
     point components are in the standard IEEE float format.  16 bit
     floating-point components have 1 sign bit, 5 exponent bits,
-    and 10 mantissa bits. 
+    and 10 mantissa bits.
 
     In standard OpenGL RGBA color components are normally clamped to
     the range [0,1].  The color components of a float buffer are
@@ -162,7 +162,7 @@ Operations and the Frame Buffer)
     Section 4.2.3, (p. 170), change the third paragraph to:
 
           void ClearColor(float r, float g, float b, float a);
- 
+
       sets the clear value for the color buffers in RGBA mode.  When
       clearing a fixed-point color buffer each of the specified
       components is clamped to [0; 1] and converted to fixed-point
@@ -191,7 +191,7 @@ Operations and the Frame Buffer)
       is applied to the component.
 
 
-Additions to Chapter 5 of the OpenGL 1.3 Specification (Special 
+Additions to Chapter 5 of the OpenGL 1.3 Specification (Special
 Functions)
 
     None
@@ -218,7 +218,7 @@ Additions to the WGL Specification
 
         WGL_PIXEL_TYPE_ARB
         The type of pixel data. This can be set to WGL_TYPE_RGBA_ARB,
-        WGL_TYPE_RGBA_FLAOT_ARB, or WGL_TYPE_COLORINDEX_ARB.
+        WGL_TYPE_RGBA_FLOAT_ARB, or WGL_TYPE_COLORINDEX_ARB.
 
 
 Dependencies on WGL_ARB_pixel_format
@@ -235,7 +235,7 @@ Dependencies on WGL_ARB_extensions_string
 
 
 Errors
-  
+
     None
 
 

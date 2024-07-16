@@ -722,7 +722,7 @@ Issues
         primitives recorded in the last transform feedback operation on an
         object?  If so, how?
 
-        RESOLVED:  No, not in the this spec.  The existing TRANSFORM_FEEDBACK_
+        RESOLVED:  No, not in this spec.  The existing TRANSFORM_FEEDBACK_
         PRIMITIVES_WRITTEN_EXT queries can be used to obtain this information.
 
    14.  Can a buffer object be attached to more than one transform feedback

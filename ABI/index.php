@@ -10,9 +10,14 @@ include_once("../../../assets/static_pages/khr_page_top.php");
 
 
 <h1 style="text-align:center">
-    OpenGL&reg; Application Binary Interface for Linux <br/>
+    OpenGL&reg; Application Binary Interface for Linux (OBSOLETE) <br/>
     <span style="font-size:12px"> (formerly Linux/OpenGL Base) </span>
 </h1>
+
+<p> <b>NOTE:</b> this document is extremely old and of no relevance to modern
+    Linux systems, where the ABI is de-facto defined by the
+    <a href="https://docs.mesa3d.org/precompiled.html">Mesa libraries</a> as
+    shipped by distribution vendors. </p>
 
 <p style="text-align:center">Version 1.0<br/>
    Approved June 20, 2000<br/>
@@ -55,7 +60,7 @@ include_once("../../../assets/static_pages/khr_page_top.php");
     includes header file locations, conventions for use of extensions,
     etc. </p>
 
-<p> It has similar goals to the <a href="http://www.linuxbase.org">Linux
+<p> It has similar goals to the <a href="https://www.linuxbase.org">Linux
     Standard Base</a>, but focused much
     more narrowly: on the OpenGL API. Representatives from LSB are
     involved and ultimately this effort should be part of LSB. </p>
@@ -253,7 +258,7 @@ include_once("../../../assets/static_pages/khr_page_top.php");
         <tt>void (*glXGetProcAddressARB(const GLubyte *))();</tt>
     </blockquote>
 
-<p> The <a href="http://www.opengl.org/registry/specs/ARB/get_proc_address.txt">full specification</a>
+<p> The <a href="https://registry.khronos.org/OpenGL/extensions/ARB/GLX_ARB_get_proc_address.txt">full specification</a>
     of this function is available separately. It takes the string name
     of a GL or GLX entry point and returns a pointer to a function
     implementing that entry point. It is functionally identical to the
@@ -360,31 +365,30 @@ include_once("../../../assets/static_pages/khr_page_top.php");
     </p>
 
 <p> Instead, we require a single header file defining <b>all</b> OpenGL
-    extensions be supplied from a central point and updated on a
-    continuing basis as new extensions are added to the OpenGL <a
-    href="http://www.opengl.org/registry/">extension registry</a> (which
-    is similarly centrally maintained). The central point is in the
-    registry at <a href="http://www.opengl.org/registry/">
-    http://www.opengl.org/registry/</a>. </p>
+    extensions be supplied from a central point and updated on a continuing
+    basis as new extensions are added to the OpenGL
+    <a href="https://registry.khronos.org/OpenGL/index_gl.php">extension
+    registry</a> (which is similarly centrally maintained). The central
+    point is in the registry. </p>
 
-<p> The <a href="../api/GL/glext.h">latest version of
-    <tt>glext.h</tt></a> is available in the registry. It is
-    automatically generated from the master OpenGL function and
-    enumerant registries, and is updated as new extensions are
-    registered. The header is intended to be useful on other platforms
-    than Linux, particularly Windows; please let us know (via feedback
-    to OpenGL.org forums) if it needs enhancement for use on another
-    platform. The generator scripts and &quot;.spec&quot; files used in
-    generating glext.h are also available. </p>
+<p> The <a href="https://registry.khronos.org/OpenGL/api/GL/glext.h">latest
+    version of <tt>glext.h</tt></a> is available in the registry. It is
+    automatically generated from the master OpenGL function and enumerant
+    registries, and is updated as new extensions are registered. The header
+    is intended to be useful on other platforms, particularly Windows. The
+    generator scripts and XML files used in generating <tt>glext.h</tt> are
+    also available. </p>
 
 <p> Likewise for GLX, a single header defining
-    all GLX extensions, <a href="../api/GL/glxext.h"><tt>glxext.h</tt></a>,
+    all GLX extensions,
+    <a href="https://registry.khronos.org/OpenGL/api/GL/glxext.h"><tt>glxext.h</tt></a>,
     is required and is maintained centrally. </p>
 
 <p> The registry also contains a header defining WGL
-    extensions, <a href="../api/GL/wglext.h"><tt>wglext.h</tt></a>, but this is
-    only for use on Windows; <tt>wglext.h</tt> is <b>not</b> required by
-    or useful for the Linux ABI. </p>
+    extensions,
+    <a href="https://registry.khronos.org/OpenGL/api/GL/wglext.h"><tt>wglext.h</tt></a>,
+    but this is only for use on Windows; <tt>wglext.h</tt> is <b>not</b>
+    required by or useful for the Linux ABI. </p>
 
 <p> <a href="#issue5.1">Issues</a> </p>
 
@@ -401,7 +405,7 @@ include_once("../../../assets/static_pages/khr_page_top.php");
     <tt>
     #include &lt;GL/glext.h&gt;<br>
     #if GL_GLEXT_VERSION &lt; 42<br>
-    #error "I need a newer &lt;GL/glext.h&gt;. Please download it from http://www.opengl.org/registry/ABI/"<br>
+    #error "I need a newer &lt;GL/glext.h&gt;. Please download it from https://registry.khronos.org/OpenGL/index_gl.php"<br>
     #endif
     </tt>
 </blockquote>
@@ -455,10 +459,10 @@ include_once("../../../assets/static_pages/khr_page_top.php");
 
 <p> <b>All</b> OpenGL and GLX extensions that are shipping should have a
     full extension specification in the master
-    <a href="http://www.opengl.org/registry">
-    extension registry</a> on www.opengl.org. Vendors failing to document
-    and specify their on extensions will not be allowed to incorporate
-    the resulting inadequate interfaces into the ABI. </p>
+    <a href="https://registry.khronos.org/OpenGL/index_gl.php"> extension
+    registry</a>. Vendors failing to document and specify their on
+    extensions will not be allowed to incorporate the resulting inadequate
+    interfaces into the ABI. </p>
 
 <p> <a href="#issue5.3">Issues</a> </p>
 
@@ -482,8 +486,8 @@ include_once("../../../assets/static_pages/khr_page_top.php");
 <p> Since the ABI has been finalized, we are no longer maintaining the
     oglbase-discuss mailing list used during its development. List
     archives may still be available from
-    <a href="http://www.mail-archive.com/oglbase-discuss@corp.sgi.com/">
-    http://www.mail-archive.com/oglbase-discuss@corp.sgi.com/</a> </p>
+    <a href="https://www.mail-archive.com/oglbase-discuss@corp.sgi.com/">
+    https://www.mail-archive.com/oglbase-discuss@corp.sgi.com/</a> </p>
 
 <hr/>
 
@@ -632,6 +636,8 @@ include_once("../../../assets/static_pages/khr_page_top.php");
 <h6>7. Change Log</h6>
 
 <ul>
+<li> 2/10/2024 - added an introductory paragraph to try and make clear that
+     this document is of historical interest only. Update old links.
 <li> 10/9/2006 - updated registry links to the new location on
      opengl.org and cleaned up other dangling wording due to the move
      from oss.sgi.com.

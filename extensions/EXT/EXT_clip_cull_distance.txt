@@ -24,8 +24,8 @@ Status
 
 Version
 
-    Last Modified Date: March 9, 2016
-    Revision: 3
+    Last Modified Date: February 27, 2024
+    Revision: 4
 
 Number
 
@@ -49,6 +49,8 @@ Dependencies
 
     This extension interacts with OES_geometry_shader and
     EXT_geometry_shader.
+
+    This extension interacts with OES_shader_io_blocks.
 
 Overview
 
@@ -273,6 +275,7 @@ Additions to Chapter 7 of the OpenGL ES Shading Language 3.20 Specification
         highp float gl_CullDistance[];
 
     };
+    If I/O blocks are not in use, these variables are not in gl_PerVertex.
 
     Similar changes in Geometry, Tessellation Control, Tessellation Evaluation
     language "in gl_PerVertex" and "out gl_PerVertex" structures.
@@ -434,6 +437,8 @@ Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  ------  ---------------------------------
+     4    02/27/24  zmike   Add GL_OES_shader_io_blocks interaction.
+
      3    03/09/16  mribble Clean up QTI names and emails.
 
      2    03/08/16  dkoch   Language consistency and cleanup pass.
