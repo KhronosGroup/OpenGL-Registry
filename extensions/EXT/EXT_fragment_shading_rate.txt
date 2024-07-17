@@ -26,7 +26,7 @@
 
     Version
 
-        Last Modified Date: July 7, 2022
+        Last Modified Date: July 3, 2024
         Revision: #2
 
     Number
@@ -606,11 +606,18 @@
     SHADING_RATE_EXT                        E     GetIntegerv  SHADING_RATE_1X1_PIXELS_EXT       draw call shading rate   13.X.1
 
 
-[[If GL_EXT_fragment_shading_rate_attachment is supported]]
     Add to table 21.40, Implementation Dependent Values
 
     Get Value                                                   Type  Get Command  Minimum Value  Description                         Sec
     -------------------------------------                       ----  -----------  -------------  --------------                      ------
+    FRAGMENT_SHADING_RATE_WITH_SHADER_DEPTH_STENCIL_-           B     GetBooleanv  -              support for writing FragDepth from  13.X.4
+    WRITES_SUPPORTED_EXT                                                                          a fragment shader for multi-pixel
+                                                                                                  fragments
+    FRAGMENT_SHADING_RATE_WITH_SAMPLE_MASK_SUPPORTED_EXT        B     GetBooleanv  -              support for sample masks with       13.X.4
+                                                                                                  multi-pixel fragments
+    FRAGMENT_SHADING_RATE_NON_TRIVIAL_COMBINERS_SUPPORTED_EXT   B    GetBooleanv  -               support for non-trivial combiners   13.X.4
+
+[[If GL_EXT_fragment_shading_rate_attachment is supported]]
     MIN_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_WIDTH_EXT        Z+    GetIntegerv  32 (**)        minimum supported width of the      13.X.3
                                                                                                   portion of the framebuffer
                                                                                                   corresponding to each texel in
@@ -634,15 +641,9 @@
                                                                                                   rate attachment
     MAX_FRAGMENT_SHADING_RATE_ATTACHMENT_LAYERS_EXT             Z+    GetIntegerv  1              maximum number of layers in a
                                                                                                   fragment shading rate attachment    13.X.3     
-    FRAGMENT_SHADING_RATE_WITH_SHADER_DEPTH_STENCIL_WRITES_SUPPORTED_EXT
-                                                                B     GetBooleanv  -              support for writing FragDepth from  13.X.4
-                                                                                                  a fragment shader for multi-pixel
-                                                                                                  fragments                                                                                           
-    FRAGMENT_SHADING_RATE_WITH_SAMPLE_MASK_SUPPORTED_EXT        B     GetBooleanv  -              support for sample masks with       13.X.4
-                                                                                                  multi-pixel fragments
     FRAGMENT_SHADING_RATE_ATTACHMENT_WITH_-                     B    GetBooleanv  -               support for attachment shading      13.X.3
     DEFAULT_FRAMEBUFFER_SUPPORTED_EXT                                                             rates on the default framebuffer
-    FRAGMENT_SHADING_RATE_NON_TRIVIAL_COMBINERS_SUPPORTED_EXT   B    GetBooleanv  -               support for non-trivial combiners   13.X.4
+
 
 
     (**) The value of MIN_FRAGMENT_SHADING_RATE_ATTACHMENT_TEXEL_WIDTH_EXT is the maximum allowed, not the minimum
@@ -867,3 +868,5 @@
         ----  --------   --------  ----------------------------------------------
          1    2022-05-30 jhf       Initial EXT draft
          2    2022-07-07 jhf       Fixed typos in the spec text
+         3    2024-07-03 jhf       Clarify Implementation Dependent Values table
+
