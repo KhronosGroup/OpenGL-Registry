@@ -22,8 +22,8 @@ Status
 
 Version
 
-     Last Modified Date:  2014-10-24
-     Revision:            5
+     Last Modified Date:  2024-07-17
+     Revision:            6
 
 Number
 
@@ -31,7 +31,7 @@ Number
 
 Dependencies
 
-     OpenGL ES 3.1 is required.
+     OpenGL ES 3.0 is required.
 
      This extension is written against the OpenGL ES 3.1 (June 4, 2014)
      specification.
@@ -54,7 +54,7 @@ Dependencies
 
 Overview
 
-     OpenGL ES 3.1 supports 8-bit (signed) normalized textures.
+     OpenGL ES 3.0 supports 8-bit (signed) normalized textures.
 
      This extension provides a set of new 16 bit signed normalized and
      unsigned normalized fixed point texture, renderbuffer and
@@ -186,7 +186,8 @@ Additions to Chapter 15 of the OpenGL ES 3.1 Specification
         Add to the second paragraph of Section 16.1.2 "ReadPixels":
 
         "For 16bit unsigned normalized fixed-point rendering surfaces,
-         the combination format RGBA and type UNSIGNED_SHORT is accepted."
+         the combination format RGBA and type UNSIGNED_SHORT is accepted
+         in addition to the combination format RGBA and type UNSIGNED_BYTE."
 
 Errors
 
@@ -250,3 +251,5 @@ Revision History:
         texture format extensions
    Revision: 5 2014-10-24 (dkoch)
         mark complete, publishing cleanup
+   Revision: 6 2024-07-17
+        require RGBA/UNSIGNED_BYTE readback support, allow on OpenGL ES 3.0
