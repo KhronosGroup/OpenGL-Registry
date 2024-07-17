@@ -868,4 +868,5 @@
         ----  --------   --------  ----------------------------------------------
          1    2022-05-30 jhf       Initial EXT draft
          2    2022-07-07 jhf       Fixed typos in the spec text
-         3    2022-07-03 jhf       Clarify Implementation Dependent Values table
+         3    2024-07-03 jhf       Clarify Implementation Dependent Values table
+
