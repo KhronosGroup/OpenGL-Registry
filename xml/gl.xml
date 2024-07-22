@@ -6956,7 +6956,7 @@ typedef unsigned int GLhandleARB;
             <unused start="0x96AF" end="0x96AF" vendor="QCOM"/>
     </enums>
 
-    <enums namespace="GL" start="0x96B0" end="0x96BF" vendor="ANGLE" comment="github pull request">
+    <enums namespace="GL" start="0x96B0" end="0x96BF" vendor="ANGLE" comment="github pull request 311">
             <unused start="0x96B0" end="0x96BF" vendor="ANGLE"/>
     </enums>
 
@@ -6998,7 +6998,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x96DF" name="GL_FRAGMENT_SHADING_RATE_ATTACHMENT_WITH_DEFAULT_FRAMEBUFFER_SUPPORTED_EXT" group="GetPName"/>
     </enums>
 
-    <enums namespace="GL" start="0x96E0" end="0x96EF" vendor="ANGLE" comment="Reserved for Ken Russell - ANGLE (via github pull request)">
+    <enums namespace="GL" start="0x96E0" end="0x96EF" vendor="ANGLE" comment="Reserved for Ken Russell - ANGLE (github pull request 493)">
             <unused start="0x96E0" end="0x96EF" vendor="ANGLE"/>
     </enums>
 
@@ -7023,7 +7023,7 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9712" end="0x971F" vendor="QCOM"/>
     </enums>
 
-    <enums namespace="GL" start="0x9720" end="0x973F" vendor="ANGLE" comment="github pull request">
+    <enums namespace="GL" start="0x9720" end="0x973F" vendor="ANGLE" comment="github pull request 626">
             <unused start="0x9720" end="0x973F" vendor="ANGLE"/>
     </enums>
 
