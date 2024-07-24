@@ -3989,7 +3989,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8894" name="GL_ARRAY_BUFFER_BINDING_ARB"/>
         <enum value="0x8895" name="GL_ELEMENT_ARRAY_BUFFER_BINDING" group="GetPName"/>
         <enum value="0x8895" name="GL_ELEMENT_ARRAY_BUFFER_BINDING_ARB"/>
-        <enum value="0x8896" name="GL_VERTEX_ARRAY_BUFFER_BINDING"/>
+        <enum value="0x8896" name="GL_VERTEX_ARRAY_BUFFER_BINDING" group="GetPName"/>
         <enum value="0x8896" name="GL_VERTEX_ARRAY_BUFFER_BINDING_ARB"/>
         <enum value="0x8897" name="GL_NORMAL_ARRAY_BUFFER_BINDING"/>
         <enum value="0x8897" name="GL_NORMAL_ARRAY_BUFFER_BINDING_ARB"/>
