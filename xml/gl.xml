@@ -1129,7 +1129,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x2A2B" name="GL_T2F_N3F_V3F" group="InterleavedArrayFormat"/>
         <enum value="0x2A2C" name="GL_T2F_C4F_N3F_V3F" group="InterleavedArrayFormat"/>
         <enum value="0x2A2D" name="GL_T4F_C4F_N3F_V4F" group="InterleavedArrayFormat"/>
-            <unused start="0x2A2E" end="0x2FFF" comment="Unused for InterleavedArrayFormat"/>
+        <enum value="0x2A2E" name="GL_T4F_C4F_N4F_V4F" group="InterleavedArrayFormat"/>
+        <enum value="0x2A2F" name="GL_T4F_C4UB_N3F_V4F" group="InterleavedArrayFormat"/>
+            <unused start="0x2A30" end="0x2FFF" comment="Unused for InterleavedArrayFormat"/>
         <enum value="0x3000" name="GL_CLIP_PLANE0" group="GetPName,ClipPlaneName,EnableCap"/>
         <enum value="0x3000" name="GL_CLIP_PLANE0_IMG"/>
         <enum value="0x3000" name="GL_CLIP_DISTANCE0" alias="GL_CLIP_PLANE0" group="EnableCap,ClipPlaneName"/>
@@ -30444,6 +30446,8 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_T2F_N3F_V3F"/>
             <enum name="GL_T2F_C4F_N3F_V3F"/>
             <enum name="GL_T4F_C4F_N3F_V4F"/>
+            <enum name="GL_T4F_C4F_N4F_V4F"/>
+            <enum name="GL_T4F_C4UB_N3F_V4F"/>
             <command name="glDrawArrays"/>
             <command name="glDrawElements"/>
             <command name="glGetPointerv"/>
@@ -32170,6 +32174,8 @@ typedef unsigned int GLhandleARB;
             <enum name="GL_T2F_N3F_V3F"/>
             <enum name="GL_T2F_C4F_N3F_V3F"/>
             <enum name="GL_T4F_C4F_N3F_V4F"/>
+            <enum name="GL_T4F_C4F_N4F_V4F"/>
+            <enum name="GL_T4F_C4UB_N3F_V4F"/>
             <enum name="GL_CLIP_PLANE0"/>
             <enum name="GL_CLIP_PLANE1"/>
             <enum name="GL_CLIP_PLANE2"/>
