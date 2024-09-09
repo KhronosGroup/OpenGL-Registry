@@ -24,7 +24,7 @@ Notice
 
 Status
 
-    INTERNAL DRAFT, DO NOT DISTRIBUTE.
+    Complete
 
 Version
 
