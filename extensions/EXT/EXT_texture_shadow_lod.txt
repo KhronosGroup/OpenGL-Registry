@@ -25,8 +25,8 @@ Status
 
 Version
 
-    Last Modified Date: June 3, 2019
-    Revision:   2
+    Last Modified Date: September 26, 2024
+    Revision:   3
 
 Number
 
@@ -134,13 +134,9 @@ Issues
          family of missing functions is deserving of its own extension.
 
          textureGrad() is missing support for samplerCubeArrayShadow in both
-         the GLSL and ESSL specifications, and is also missing support for
-         gsampler2DArray variants only in the ESSL specification.  The
-         samplerCubeArrayShadow variant is not included in this extension
-         because not all vendors can easily support the additional parameter
-         beyond the gradients.  The missing gsampler2DArray variants in ESSL
-         are not added because they are unrelated to shadow types and thus
-         outside the scope of this extension.
+         the GLSL and ESSL specifications.  This variant is not included in this
+         extension because not all vendors can easily support the additional
+         parameter beyond the gradients.
 
     (2)  The GLSL specification already contains a definition for
          textureOffset() with sampler2DArrayShadow; does this mean only the optional
@@ -150,7 +146,18 @@ Issues
          not have either the non-bias or bias variants of this function so both
          variants should be defined according to this extension.
 
+    (3) To which stages are bias variants added?
+
+         RESOLVED: The bias variants are added consistently with the core texture
+         functions. This means that the bias variants are supported only in fragment
+         shaders unless another extension, such as GL_NV_compute_shader_derivatives,
+         expands support for these variants to other stages.
+
 Revision History
+
+    Revision 3
+    - Update issue text that referred to a bug which has been fixed.
+    - Add an issue clarifying the supported stages for bias-variant functions.
 
     Revision 2
     - Minor correction on contributor name.
