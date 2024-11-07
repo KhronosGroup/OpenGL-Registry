@@ -41,8 +41,8 @@ Status
 
 Version
 
-    Last Modified Date: May 28, 2014
-    Revision: 7
+    Last Modified Date: Nov 7, 2024
+    Revision: 9
 
 Number
 
@@ -109,8 +109,7 @@ Modifications to The OpenGL Shading Language Specification, Version 4.40.08
   
     Description:
 
-        Returns the number of samples of the texture or textures bound to
-        <sampler>. 
+        Returns the number of samples of the texture bound to <sampler>.
     
 Add to table in section 8.12 "Image Functions"
 
@@ -121,7 +120,7 @@ Add to table in section 8.12 "Image Functions"
  
     Description:
 
-        Returns the number of samples of the image or images bound to <image>. 
+        Returns the number of samples of the image bound to <image>.
      
 Dependencies on ARB_shader_image_load_store and GLSL 4.20.
 
@@ -280,6 +279,9 @@ Issues
         queries.
         
 Revision History
+    Revision 9, 2024/11/07 (rlocatti)
+      - Remove plural bindings for textureSamples and imageSamples.
+
     Revision 8, 2015/09/08 (idr)
       - Add interactions with various GLSL versions and extensions so
         that this extension can be used with any GLSL version.
