@@ -14406,7 +14406,7 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLenum</ptype> <name>identifier</name></param>
             <param><ptype>GLuint</ptype> <name>name</name></param>
             <param><ptype>GLsizei</ptype> <name>bufSize</name></param>
-            <param><ptype>GLsizei</ptype> *<name>length</name></param>
+            <param len="1"><ptype>GLsizei</ptype> *<name>length</name></param>
             <param len="bufSize"><ptype>GLchar</ptype> *<name>label</name></param>
             <alias name="glGetObjectLabel"/>
         </command>
