@@ -104,49 +104,49 @@ New Tokens
         MAX_MESH_SHADER_STORAGE_BLOCKS_EXT                  0x8E66
         MAX_COMBINED_MESH_UNIFORM_COMPONENTS_EXT            0x8E67
 
-        MAX_TASK_WORK_GROUP_TOTAL_COUNT_EXT                 0xF000
-        MAX_MESH_WORK_GROUP_TOTAL_COUNT_EXT                 0xF001
+        MAX_TASK_WORK_GROUP_TOTAL_COUNT_EXT                 0x9740
+        MAX_MESH_WORK_GROUP_TOTAL_COUNT_EXT                 0x9741
 
         MAX_MESH_WORK_GROUP_INVOCATIONS_EXT                 0x95A2
         MAX_TASK_WORK_GROUP_INVOCATIONS_EXT                 0x95A3
 
-        MAX_TASK_PAYLOAD_SIZE_EXT                           0xF002
+        MAX_TASK_PAYLOAD_SIZE_EXT                           0x9742
 
-        MAX_TASK_SHARED_MEMORY_SIZE_EXT                     0xF003
-        MAX_MESH_SHARED_MEMORY_SIZE_EXT                     0xF004
+        MAX_TASK_SHARED_MEMORY_SIZE_EXT                     0x9743
+        MAX_MESH_SHARED_MEMORY_SIZE_EXT                     0x9744
 
-        MAX_TASK_PAYLOAD_AND_SHARED_MEMORY_SIZE_EXT         0xF005
-        MAX_MESH_PAYLOAD_AND_SHARED_MEMORY_SIZE_EXT         0xF006
+        MAX_TASK_PAYLOAD_AND_SHARED_MEMORY_SIZE_EXT         0x9745
+        MAX_MESH_PAYLOAD_AND_SHARED_MEMORY_SIZE_EXT         0x9746
 
-        MAX_MESH_OUTPUT_MEMORY_SIZE_EXT                     0xF007
+        MAX_MESH_OUTPUT_MEMORY_SIZE_EXT                     0x9747
 
-        MAX_MESH_PAYLOAD_AND_OUTPUT_MEMORY_SIZE_EXT         0xF008
+        MAX_MESH_PAYLOAD_AND_OUTPUT_MEMORY_SIZE_EXT         0x9748
 
         MAX_MESH_OUTPUT_VERTICES_EXT                        0x9538
         MAX_MESH_OUTPUT_PRIMITIVES_EXT                      0x9539
-        MAX_MESH_OUTPUT_COMPONENTS_EXT                      0xF009
-        MAX_MESH_OUTPUT_LAYERS_EXT                          0xF00A
+        MAX_MESH_OUTPUT_COMPONENTS_EXT                      0x9749
+        MAX_MESH_OUTPUT_LAYERS_EXT                          0x974A
 
         MAX_MESH_MULTIVIEW_VIEW_COUNT_EXT                   0x9557
 
         MESH_OUTPUT_PER_VERTEX_GRANULARITY_EXT              0x92DF
         MESH_OUTPUT_PER_PRIMITIVE_GRANULARITY_EXT           0x9543
 
-        MAX_PREFERRED_TASK_WORK_GROUP_INVOCATIONS_EXT       0xF00B
-        MAX_PREFERRED_MESH_WORK_GROUP_INVOCATIONS_EXT       0xF00C
+        MAX_PREFERRED_TASK_WORK_GROUP_INVOCATIONS_EXT       0x974B
+        MAX_PREFERRED_MESH_WORK_GROUP_INVOCATIONS_EXT       0x974C
 
     Accepted by the <pname> parameter of GetBooleanv:
 
-        MESH_PREFERS_LOCAL_INVOCATION_VERTEX_OUTPUT_EXT     0xF00D
-        MESH_PREFERS_LOCAL_INVOCATION_PRIMITIVE_OUTPUT_EXT  0xF00E
+        MESH_PREFERS_LOCAL_INVOCATION_VERTEX_OUTPUT_EXT     0x974D
+        MESH_PREFERS_LOCAL_INVOCATION_PRIMITIVE_OUTPUT_EXT  0x974E
 
-        MESH_PREFERS_COMPACT_VERTEX_OUTPUT_EXT              0xF00F
-        MESH_PREFERS_COMPACT_PRIMITIVE_OUTPUT_EXT           0xF010
+        MESH_PREFERS_COMPACT_VERTEX_OUTPUT_EXT              0x974F
+        MESH_PREFERS_COMPACT_PRIMITIVE_OUTPUT_EXT           0x9750
 
     Accepted by the <pname> parameter of GetIntegeri_v:
 
-        MAX_TASK_WORK_GROUP_COUNT_EXT                       0xF011
-        MAX_MESH_WORK_GROUP_COUNT_EXT                       0xF012
+        MAX_TASK_WORK_GROUP_COUNT_EXT                       0x9751
+        MAX_MESH_WORK_GROUP_COUNT_EXT                       0x9752
 
         MAX_TASK_WORK_GROUP_SIZE_EXT                        0x953C
         MAX_MESH_WORK_GROUP_SIZE_EXT                        0x953B
@@ -188,10 +188,10 @@ New Tokens
     Accepted by the <target> parameter of BeginQuery, EndQuery, GetQueryiv,
     BeginQueryIndexed, EndQueryIndexed and GetQueryIndexediv:
 
-        TASK_SHADER_INVOCATIONS_EXT                         0xF013
-        MESH_SHADER_INVOCATIONS_EXT                         0xF014
+        TASK_SHADER_INVOCATIONS_EXT                         0x9753
+        MESH_SHADER_INVOCATIONS_EXT                         0x9754
 
-        MESH_PRIMITIVES_GENERATED_EXT                       0xF015
+        MESH_PRIMITIVES_GENERATED_EXT                       0x9755
 
     Accepted by the <stages> parameter of UseProgramStages:
 
