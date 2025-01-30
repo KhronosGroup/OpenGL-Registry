@@ -45102,7 +45102,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_REFLECTION_MAP_NV"/>
             </require>
         </extension>
-        <extension name="GL_NV_texture_barrier" supported="gl|glcore">
+        <extension name="GL_NV_texture_barrier" supported="gl|glcore|gles2">
             <require>
                 <command name="glTextureBarrierNV"/>
             </require>
