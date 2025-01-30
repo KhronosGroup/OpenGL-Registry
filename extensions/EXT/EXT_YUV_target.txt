@@ -33,7 +33,7 @@ Status
 
 Version
 
-    April 6, 2018 (version 17)
+    January 15, 2025 (version 18)
 
 Number
 
@@ -305,7 +305,7 @@ specification
     - Add to the list of keywords:
 
         __samplerExternal2DY2YEXT
-        yuvCscStandardExt 
+        yuvCscStandardEXT 
         itu_601 
         itu_601_full_range 
         itu_709
@@ -315,7 +315,7 @@ specification
 Changes to section 4.1 ("Basic Types") of the OpenGL ES Shading Language
 specification
     - Add to the list of Transparent types:
-        "yuvCscStandardExt    a value type to specify color space standard formula for 
+        "yuvCscStandardEXT    a value type to specify color space standard formula for 
         transformation between yuv and rgb, taking values of itu_601, itu_601_full_range, 
         itu_709"
 
@@ -326,13 +326,13 @@ specification
 
     - Add a paragraph at the end of the section:
 
-        "The __samplerExternal2DY2YEXT and yuvCscStandardExt types are optional and must 
+        "The __samplerExternal2DY2YEXT and yuvCscStandardEXT types are optional and must 
         be enabled by
 
          #extension GL_EXT_YUV_target : enable
          
-         No type constructor or type conversion is allowed on yuvCscStandardExt. A value
-         of itu_601, itu_601_full_range, itu_709, or a variable typed as yuvCscStandardExt 
+         No type constructor or type conversion is allowed on yuvCscStandardEXT. A value
+         of itu_601, itu_601_full_range, itu_709, or a variable typed as yuvCscStandardEXT 
          can be used as an argument to user-defined functions and the built-in functions yuv_2_rgb and 
          rgb_2_yuv. Other than the assignment operator, any other operations on this type 
          of values or variables will be treated as a compilation error."
@@ -532,11 +532,13 @@ Dependencies on OES_EGL_image_external
     It can coexist with the OES_EGL_image_external extension.
 
 Revision History
+    #18 (January 15, 2025, Mike Blumenkrantz)
+        - Fix casing on yuvCscStandardEXT.
     #17 (April 6, 2018, H1Gdev)
         - Fix typo.
     #16 (June 8, 2016, Jeff Leger)
-        - Add yuvCscStandardExt itu_* to the list of keywords
-        - Add yuvCscStandardExt as a basic type and clarify that this type
+        - Add yuvCscStandardEXT itu_* to the list of keywords
+        - Add yuvCscStandardEXT as a basic type and clarify that this type
           can only be used in assignments or as a function argument.
         - Add rgb_2_yuv and yuv_2_rgb as built-in functions
           (Bug 15704).
