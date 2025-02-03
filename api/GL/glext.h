@@ -32,7 +32,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20250129
+#define GL_GLEXT_VERSION 20250203
 
 #include <KHR/khrplatform.h>
 
@@ -9403,6 +9403,11 @@ GLAPI void APIENTRY glResizeBuffersMESA (void);
 #ifndef GL_MESA_shader_integer_functions
 #define GL_MESA_shader_integer_functions 1
 #endif /* GL_MESA_shader_integer_functions */
+
+#ifndef GL_MESA_texture_const_bandwidth
+#define GL_MESA_texture_const_bandwidth 1
+#define GL_CONST_BW_TILING_MESA           0x8BBE
+#endif /* GL_MESA_texture_const_bandwidth */
 
 #ifndef GL_MESA_tile_raster_order
 #define GL_MESA_tile_raster_order 1

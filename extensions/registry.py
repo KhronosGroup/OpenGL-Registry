@@ -3143,6 +3143,13 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/GLX_MESA_swap_control.txt',
     },
+    'GL_MESA_texture_const_bandwidth' : {
+        'number' : 560,
+        'esnumber' : 347,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_texture_const_bandwidth.txt',
+    },
     'GL_MESA_tile_raster_order' : {
         'number' : 515,
         'esnumber' : 292,

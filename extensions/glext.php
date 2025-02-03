@@ -1057,4 +1057,6 @@
 </li>
 <li value=559><a href="extensions/NV/NV_uniform_buffer_std430_layout.txt">GL_NV_uniform_buffer_std430_layout</a>
 </li>
+<li value=560><a href="extensions/MESA/MESA_texture_const_bandwidth.txt">GL_MESA_texture_const_bandwidth</a>
+</li>
 </ol>
