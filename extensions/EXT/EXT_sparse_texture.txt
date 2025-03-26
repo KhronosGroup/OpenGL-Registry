@@ -30,8 +30,8 @@ Status
 
 Version
 
-    Last Modified Date:         27/03/2015
-    Revision:                   3
+    Last Modified Date:         26/03/2025
+    Revision:                   4
 
 Number
 
@@ -57,9 +57,6 @@ Dependencies
     This extension interacts with EXT_texture_view.
 
     This extension interacts with EXT_texture_norm16.
-
-    The definition of this extension is affected by the presence of
-    EXT_direct_state_access.
 
 Overview
 
@@ -91,18 +88,6 @@ New Procedures and Functions
                                   sizei height,
                                   sizei depth,
                                   boolean commit);
-
-    [[ The following is only added if EXT_direct_state_access is supported. ]]
-
-        void TexturePageCommitmentEXT(uint texture,
-                                      int level,
-                                      int xoffset,
-                                      int yoffset,
-                                      int zoffset,
-                                      sizei width,
-                                      sizei height,
-                                      sizei depth,
-                                      boolean commit);
 
 New Tokens
 
@@ -497,35 +482,6 @@ Samplers)
       TEXTURE_IMMUTABLE_FORMAT or TEXTURE_SPARSE_EXT for the texture bound to
       <target> is FALSE.
 
-    [[ The following is only added if EXT_direct_state_access is supported. ]]
-
-    The command
-
-        void TexturePageCommitmentEXT(uint texture,
-                                      int level,
-                                      int xoffset,
-                                      int yoffset,
-                                      int zoffset,
-                                      sizei width,
-                                      sizei height,
-                                      sizei depth,
-                                      boolean commit);
-
-    may also be used to control the residency of sparse textures.  This
-    command behaves identically to TexPageCommitmentEXT, except that the
-    texture is identified by the name <texture> instead of via <target>.
-
-    Errors
-
-      An INVALID_OPERATION error is generated if <texture> is not the name of
-      an existing texture.
-
-      All other errors listed for TexPageCommitmentEXT also apply to
-      TexturePageCommitmentEXT, except that references to "the texture bound
-      to <target>" should be replaced with "the texture <texture>", and all
-      other references to "<target>" should be replaced with "the target of
-      texture <texture>".
-
 Additions to Chapter 19 of the OpenGL ES 3.1 Specification (Context State
 Queries)
 
@@ -663,11 +619,6 @@ Dependencies on EXT_texture_norm16
     R16_EXT, R16_SNORM_EXT, RG16_EXT, RG16_SNORM_EXT, RGB16_EXT,
     RGB16_SNORM_EXT, RGBA16_EXT, and RGBA16_SNORM_EXT.
 
-Dependencies on GL_EXT_direct_state_access
-
-    If the GL_EXT_direct_state_access extension is not supported, remove all
-    references to TexturePageCommitmentEXT.
-
 Issues
 
     Note: Issues 1-9 are the same as those in the OpenGL extension
@@ -794,6 +745,7 @@ Revision History
 
     Rev.    Date      Author    Changes
     ----  ----------  --------  -----------------------------------------
+     4    03/26/2025  zmike     Delete references to GL_EXT_direct_state_access.
      3    03/27/2015  dkoch     update status and contributors
      2    02/25/2015  xiche     Additional interaction with GetInternalformativ
      1    11/13/2014  dkoch     Initial version based on ARB_sparse_texture v11
