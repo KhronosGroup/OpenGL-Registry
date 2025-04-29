@@ -45738,6 +45738,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_TEXTURE_EXTERNAL_OES"/>
                 <enum name="GL_TEXTURE_BINDING_EXTERNAL_OES"/>
                 <enum name="GL_REQUIRED_TEXTURE_IMAGE_UNITS_OES"/>
+                <command name="glEGLImageTargetTexture2DOES"/>
             </require>
             <require api="gles2">
                 <enum name="GL_SAMPLER_EXTERNAL_OES"/>
