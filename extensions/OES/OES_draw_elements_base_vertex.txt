@@ -40,8 +40,8 @@ Status
 
 Version
 
-    Last Modified Date:  September 30, 2014
-    Version:             2
+    Last Modified Date:  May 7, 2025
+    Version:             3
 
 Number
 
@@ -368,10 +368,17 @@ Issues
      - DrawElements: indices[i]
      - DrawElementsBaseVertex: indices[i] + basevertex
 
+    (6) Is EXT the actual suffix of MultiDrawElementsBaseVertexEXT?
+
+    RESOLVED: Yes. This was a mismatch between specification language
+    (which used EXT) and the XML (which used OES), and it was resolved that
+    the XML should be changed to match the specification language.
+
 Revision History
 
     Rev.    Date    Author     Changes
     ----  -------- ---------  ----------------------------------------
+     3    05/07/25  zmike     Add Issue 6.
      2    09/30/14  dkoch     Resolve issues 1, 2 as proposed.
                               Add Issue 5.
 
