@@ -46,8 +46,8 @@ Status
 
 Version
 
-    Last Modified Date:         September 17, 2019
-    Author Revision:            51
+    Last Modified Date:         May 08, 2025
+    Author Revision:            52
 
 Number
 
@@ -3290,7 +3290,7 @@ Interactions with OpenGL 3.3 or ARB_instanced_arrays
 
 Interactions with OpenGL 3.3 or ARB_sampler_objects
 
-    If neither OpenGL 4.1 nor ARB_separate_shader_objects are supported,
+    If neither OpenGL 3.3 nor ARB_sampler_objects are supported,
     ignore the support for CreateSamplers.
 
 Interactions with OpenGL 4.0 or ARB_transform_feedback2
@@ -3317,7 +3317,7 @@ Interactions with OpenGL 4.2 or ARB_texture_storage
 
 Interactions with OpenGL 4.3 or ARB_texture_storage_multisample
 
-    If neither OpenGL 4.2 nor ARB_texture_storage are supported,
+    If neither OpenGL 4.3 nor ARB_texture_storage_multisample are supported,
     ignore the support for TextureStorage2DMultisample and
     TextureStorage3DMultisample.
 
@@ -4177,6 +4177,10 @@ Revision History
 
     Rev.    Date        Author    Changes
     ----  -----------   --------- ---------------------------------------------
+    52    08 May 2025   daporkchop Fix incorrect depeneency in interactions 
+                                  with ARB_sampler_objects and
+                                  ARB_texture_storage_multisample.
+
     51    17 Sep 2019   Jon Leech Modify DSA commands to generate
                                   INVALID_OPERATION errors instead of
                                   INVALID_ENUM for "effective texture
