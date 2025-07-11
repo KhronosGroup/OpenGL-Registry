@@ -6803,12 +6803,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9537" name="GL_MAX_TASK_TOTAL_MEMORY_SIZE_NV"/>
         <enum value="0x9538" name="GL_MAX_MESH_OUTPUT_VERTICES_EXT"/>
         <enum value="0x9538" name="GL_MAX_MESH_OUTPUT_VERTICES_NV"/>
-        <enum value="0x9539" name="GL_MAX_MESH_OUTPUT_PRIMITIVES_EXT"/>
         <enum value="0x9539" name="GL_MAX_MESH_OUTPUT_PRIMITIVES_NV"/>
         <enum value="0x953A" name="GL_MAX_TASK_OUTPUT_COUNT_NV"/>
-        <enum value="0x953B" name="GL_MAX_MESH_WORK_GROUP_SIZE_EXT"/>
         <enum value="0x953B" name="GL_MAX_MESH_WORK_GROUP_SIZE_NV"/>
-        <enum value="0x953C" name="GL_MAX_TASK_WORK_GROUP_SIZE_EXT"/>
         <enum value="0x953C" name="GL_MAX_TASK_WORK_GROUP_SIZE_NV"/>
         <enum value="0x953D" name="GL_MAX_DRAW_MESH_TASKS_COUNT_NV"/>
         <enum value="0x953E" name="GL_MESH_WORK_GROUP_SIZE_EXT"/>
@@ -6922,9 +6919,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x95A0" name="GL_REFERENCED_BY_MESH_SHADER_NV"/>
         <enum value="0x95A1" name="GL_REFERENCED_BY_TASK_SHADER_EXT"/>
         <enum value="0x95A1" name="GL_REFERENCED_BY_TASK_SHADER_NV"/>
-        <enum value="0x95A2" name="GL_MAX_MESH_WORK_GROUP_INVOCATIONS_EXT"/>
         <enum value="0x95A2" name="GL_MAX_MESH_WORK_GROUP_INVOCATIONS_NV"/>
-        <enum value="0x95A3" name="GL_MAX_TASK_WORK_GROUP_INVOCATIONS_EXT"/>
         <enum value="0x95A3" name="GL_MAX_TASK_WORK_GROUP_INVOCATIONS_NV"/>
         <enum value="0x95A4" name="GL_ATTACHED_MEMORY_OBJECT_NV"/>
         <enum value="0x95A5" name="GL_ATTACHED_MEMORY_OFFSET_NV"/>
@@ -7095,7 +7090,12 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9753" name="GL_TASK_SHADER_INVOCATIONS_EXT" group="QueryTarget"/>
         <enum value="0x9754" name="GL_MESH_SHADER_INVOCATIONS_EXT" group="QueryTarget"/>
         <enum value="0x9755" name="GL_MESH_PRIMITIVES_GENERATED_EXT" group="QueryTarget"/>
-            <unused start="0x9756" end="0x975F" vendor="MESA"/>
+	<enum value="0x9756" name="GL_MAX_MESH_OUTPUT_PRIMITIVES_EXT" group="GetPName"/>
+	<enum value="0x9757" name="GL_MAX_MESH_WORK_GROUP_INVOCATIONS_EXT" group="GetPName"/>
+	<enum value="0x9758" name="GL_MAX_MESH_WORK_GROUP_SIZE_EXT" group="GetPName"/>
+	<enum value="0x9759" name="GL_MAX_TASK_WORK_GROUP_INVOCATIONS_EXT" group="GetPName"/>
+	<enum value="0x975A" name="GL_MAX_TASK_WORK_GROUP_SIZE_EXT" group="GetPName"/>
+            <unused start="0x975B" end="0x975F" vendor="MESA"/>
     </enums>
 
     <enums namespace="GL" start="0x9760" end="0x976F" vendor="QCOM" comment="Reserved for Ashish Mathur">

@@ -107,8 +107,8 @@ New Tokens
         MAX_TASK_WORK_GROUP_TOTAL_COUNT_EXT                 0x9740
         MAX_MESH_WORK_GROUP_TOTAL_COUNT_EXT                 0x9741
 
-        MAX_MESH_WORK_GROUP_INVOCATIONS_EXT                 0x95A2
-        MAX_TASK_WORK_GROUP_INVOCATIONS_EXT                 0x95A3
+        MAX_MESH_WORK_GROUP_INVOCATIONS_EXT                 0x9757
+        MAX_TASK_WORK_GROUP_INVOCATIONS_EXT                 0x9759
 
         MAX_TASK_PAYLOAD_SIZE_EXT                           0x9742
 
@@ -123,7 +123,7 @@ New Tokens
         MAX_MESH_PAYLOAD_AND_OUTPUT_MEMORY_SIZE_EXT         0x9748
 
         MAX_MESH_OUTPUT_VERTICES_EXT                        0x9538
-        MAX_MESH_OUTPUT_PRIMITIVES_EXT                      0x9539
+        MAX_MESH_OUTPUT_PRIMITIVES_EXT                      0x9756
         MAX_MESH_OUTPUT_COMPONENTS_EXT                      0x9749
         MAX_MESH_OUTPUT_LAYERS_EXT                          0x974A
 
@@ -148,8 +148,8 @@ New Tokens
         MAX_TASK_WORK_GROUP_COUNT_EXT                       0x9751
         MAX_MESH_WORK_GROUP_COUNT_EXT                       0x9752
 
-        MAX_TASK_WORK_GROUP_SIZE_EXT                        0x953C
-        MAX_MESH_WORK_GROUP_SIZE_EXT                        0x953B
+        MAX_TASK_WORK_GROUP_SIZE_EXT                        0x975A
+        MAX_MESH_WORK_GROUP_SIZE_EXT                        0x9758
 
     Accepted by the <pname> parameter of GetProgramiv:
 
