@@ -2794,6 +2794,16 @@ registry = {
         'supporters' : { 'HP' },
         'url' : 'extensions/HP/HP_texture_lighting.txt',
     },
+    'GL_HUAWEI_program_binary' : {
+        'esnumber' : 349,
+        'flags' : { 'public' },
+        'url' : 'extensions/HUAWEI/HUAWEI_program_binary.txt',
+    },
+    'GL_HUAWEI_shader_binary' : {
+        'esnumber' : 350,
+        'flags' : { 'public' },
+        'url' : 'extensions/HUAWEI/HUAWEI_shader_binary.txt',
+    },
     'GL_IBM_cull_vertex' : {
         'number' : 199,
         'flags' : { 'public' },

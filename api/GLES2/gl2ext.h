@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 /*
-** Copyright 2013-2020 The Khronos Group Inc.
+** Copyright 2013-2025 The Khronos Group Inc.
 ** SPDX-License-Identifier: MIT
 **
 ** This header is generated from the Khronos OpenGL / OpenGL ES XML
@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-#define GL_GLEXT_VERSION 20250203
+#define GL_GLEXT_VERSION 20250824
 
 /* Generated C header for:
  * API: gles2
@@ -2399,6 +2399,16 @@ GL_APICALL void GL_APIENTRY glWindowRectanglesEXT (GLenum mode, GLsizei count, c
 #define GL_FJ_shader_binary_GCCSO 1
 #define GL_GCCSO_SHADER_BINARY_FJ         0x9260
 #endif /* GL_FJ_shader_binary_GCCSO */
+
+#ifndef GL_HUAWEI_program_binary
+#define GL_HUAWEI_program_binary 1
+#define GL_HUAWEI_PROGRAM_BINARY          0x9771
+#endif /* GL_HUAWEI_program_binary */
+
+#ifndef GL_HUAWEI_shader_binary
+#define GL_HUAWEI_shader_binary 1
+#define GL_HUAWEI_SHADER_BINARY           0x9770
+#endif /* GL_HUAWEI_shader_binary */
 
 #ifndef GL_IMG_bindless_texture
 #define GL_IMG_bindless_texture 1
