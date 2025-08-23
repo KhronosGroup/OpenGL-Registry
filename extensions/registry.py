@@ -2248,6 +2248,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_separate_specular_color.txt',
     },
+    'GL_EXT_shader_clock' : {
+        'esnumber' : 348,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_shader_clock.txt',
+    },
     'GL_EXT_shader_framebuffer_fetch' : {
         'number' : 520,
         'esnumber' : 122,
