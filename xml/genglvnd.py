@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Copyright 2013-2020 The Khronos Group Inc.
+# Copyright 2013-2025 The Khronos Group Inc.
 # SPDX-License-Identifier: Apache-2.0
 
 import sys, time, pdb, string, cProfile
@@ -132,7 +132,7 @@ glx13andLaterPat  = '1\.[3-9]'
 # Copyright text prefixing all headers (list of strings).
 prefixStrings = [
     '/*',
-    '** Copyright 2013-2020 The Khronos Group Inc.',
+    '** Copyright 2013-2025 The Khronos Group Inc.',
     '** SPDX-' + 'License-Identifier: MIT',
     '**',
     '** This header is generated from the Khronos OpenGL / OpenGL ES XML',

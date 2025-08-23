@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <registry>
     <comment>
-Copyright 2013-2020 The Khronos Group Inc.
+Copyright 2013-2025 The Khronos Group Inc.
 SPDX-License-Identifier: Apache-2.0
 
 This file, gl.xml, is the OpenGL and OpenGL API Registry. The canonical
@@ -43495,10 +43495,10 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_MESA_shader_integer_functions" supported="gl|gles2"/>
-	<extension name="GL_MESA_texture_const_bandwidth" supported="gl|gles2">
+        <extension name="GL_MESA_texture_const_bandwidth" supported="gl|gles2">
             <require>
                 <enum name="GL_CONST_BW_TILING_MESA"/>
-	    </require>
+            </require>
         </extension>
         <extension name="GL_MESA_tile_raster_order" supported="gl">
             <require>
