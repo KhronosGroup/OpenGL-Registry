@@ -194,11 +194,11 @@ def regSortFeatures(featureList):
 #   apiname - string matching <api> 'apiname' attribute, e.g. 'gl'.
 #   profile - string specifying API profile , e.g. 'core', or None.
 #   versions - regex matching API versions to process interfaces for.
-#     Normally '.*' or '[0-9]\.[0-9]' to match all defined versions.
+#     Normally '.*' or r'[0-9]\.[0-9]' to match all defined versions.
 #   emitversions - regex matching API versions to actually emit
 #    interfaces for (though all requested versions are considered
 #    when deciding which interfaces to generate). For GL 4.3 glext.h,
-#     this might be '1\.[2-5]|[2-4]\.[0-9]'.
+#     this might be r'1\.[2-5]|[2-4]\.[0-9]'.
 #   defaultExtensions - If not None, a string which must in its
 #     entirety match the pattern in the "supported" attribute of
 #     the <extension>. Defaults to None. Usually the same as apiname.

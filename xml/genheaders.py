@@ -56,15 +56,15 @@ es1CoreList = [
 
 allVersions       = allExtensions = '.*'
 noVersions        = noExtensions = None
-gl12andLaterPat   = '1\.[2-9]|[234]\.[0-9]'
-gles2onlyPat      = '2\.[0-9]'
-gles2through30Pat = '2\.[0-9]|3\.0'
-gles2through31Pat = '2\.[0-9]|3\.[01]'
-gles2through32Pat = '2\.[0-9]|3\.[012]'
+gl12andLaterPat   = r'1\.[2-9]|[234]\.[0-9]'
+gles2onlyPat      = r'2\.[0-9]'
+gles2through30Pat = r'2\.[0-9]|3\.0'
+gles2through31Pat = r'2\.[0-9]|3\.[01]'
+gles2through32Pat = r'2\.[0-9]|3\.[012]'
 es1CorePat        = makeREstring(es1CoreList)
 # Extensions in old glcorearb.h but not yet tagged accordingly in gl.xml
 glCoreARBPat      = None
-glx13andLaterPat  = '1\.[3-9]'
+glx13andLaterPat  = r'1\.[3-9]'
 
 # Copyright text prefixing all headers (list of strings).
 prefixStrings = [
