@@ -42522,8 +42522,8 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_RG8_EXT"/>
             </require>
         </extension>
-        <extension name="GL_EXT_texture_sRGB" supported="gl">
-            <require>
+        <extension name="GL_EXT_texture_sRGB" supported="gl|glcore">
+            <require api="gl" comment="LUMINANCE formats are not supported in glcore">
                 <enum name="GL_SRGB_EXT"/>
                 <enum name="GL_SRGB8_EXT"/>
                 <enum name="GL_SRGB_ALPHA_EXT"/>
@@ -42536,6 +42536,18 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_COMPRESSED_SRGB_ALPHA_EXT"/>
                 <enum name="GL_COMPRESSED_SLUMINANCE_EXT"/>
                 <enum name="GL_COMPRESSED_SLUMINANCE_ALPHA_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_S3TC_DXT1_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT"/>
+            </require>
+            <require api="glcore" comment="LUMINANCE formats are not supported in glcore">
+                <enum name="GL_SRGB_EXT"/>
+                <enum name="GL_SRGB8_EXT"/>
+                <enum name="GL_SRGB_ALPHA_EXT"/>
+                <enum name="GL_SRGB8_ALPHA8_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_ALPHA_EXT"/>
                 <enum name="GL_COMPRESSED_SRGB_S3TC_DXT1_EXT"/>
                 <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT"/>
                 <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT"/>
