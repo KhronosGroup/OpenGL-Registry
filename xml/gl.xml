@@ -7108,6 +7108,10 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9772" end="0x977F" vendor="HUAWEI"/>
     </enums>
 
+    <enums namespace="GL" start="0x9780" end="0x9780" vendor="AMD" comment="github pull request ">
+        <enum value="0x9780" name="GL_FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT" group="GetPName"/>
+    </enums>
+
 <!-- Enums reservable for future use. To reserve a new range, allocate one
      or more multiples of 16 starting at the lowest available point in this
      block and note it in a new <enums> block immediately above.
@@ -41008,7 +41012,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glFogCoordPointerEXT"/>
             </require>
         </extension>
-        <extension name="GL_EXT_fragment_shading_rate" supported="gles2">
+        <extension name="GL_EXT_fragment_shading_rate" supported="gl|gles2">
             <require>
                 <enum name="GL_SHADING_RATE_1X1_PIXELS_EXT"/>
                 <enum name="GL_SHADING_RATE_1X2_PIXELS_EXT"/>
@@ -41036,6 +41040,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_FRAGMENT_SHADING_RATE_WITH_SAMPLE_MASK_SUPPORTED_EXT"/>
                 <enum name="GL_FRAGMENT_SHADING_RATE_ATTACHMENT_WITH_DEFAULT_FRAMEBUFFER_SUPPORTED_EXT"/>
                 <enum name="GL_FRAGMENT_SHADING_RATE_NON_TRIVIAL_COMBINERS_SUPPORTED_EXT"/>
+                <enum name="GL_FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT"/>
                 <command name="glGetFragmentShadingRatesEXT"/>
                 <command name="glShadingRateEXT"/>
                 <command name="glShadingRateCombinerOpsEXT"/>
