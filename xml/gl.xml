@@ -7108,7 +7108,7 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9772" end="0x977F" vendor="HUAWEI"/>
     </enums>
 
-    <enums namespace="GL" start="0x9780" end="0x9780" vendor="AMD" comment="github pull request ">
+    <enums namespace="GL" start="0x9780" end="0x9780" vendor="AMD" comment="github pull request 663">
         <enum value="0x9780" name="GL_FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT" group="GetPName"/>
     </enums>
 

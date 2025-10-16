@@ -24,7 +24,7 @@ Contact
 
 Status
 
-    Shipping
+    Complete
 
 Version
 
@@ -218,7 +218,7 @@ Modifications to the OpenGL 4.6 Specification (Core Profile)
     When multisample rasterization is enabled, the samples of the fragment
     will consist of the samples for each of the pixels in the group. The
     fragment center will be the center of this group of pixels. Each fragment
-    will include a coverage value with (W x H x SAMPLES) bits. For example, if
+    will include a coverage value with (W * H * SAMPLES) bits. For example, if
     SHADING_RATE_EXT is 2x2 and the currently bound framebuffer object has
     SAMPLES equal to 4 (4xMSAA), then the fragment will consist of 4 pixels
     and 16 samples. Similarly, each fragment will have (W * H * SAMPLES) depth
@@ -639,7 +639,9 @@ Add new section 14.X before Section 14.4, Points, p. 468
 
 Interactions with OpenGL ES 3.2
 
-    If implemented in OpenGL ES, remove all references to multiple viewports.
+    If implemented in OpenGL ES, references to multiple viewports and
+    FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT
+    should be removed.
 
 Interactions with OVR_multiview
 
