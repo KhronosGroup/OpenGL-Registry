@@ -2308,6 +2308,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_shader_pixel_local_storage2.txt',
     },
+    'GL_EXT_shader_realtime_clock' : {
+        'esnumber' : 351,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_shader_realtime_clock.txt',
+    },
     'GL_EXT_shader_samples_identical' : {
         'number' : 557,
         'esnumber' : 339,
