@@ -733,4 +733,6 @@
 </li>
 <li value=351><a href="extensions/EXT/EXT_shader_realtime_clock.txt">GL_EXT_shader_realtime_clock</a>
 </li>
+<li value=352><a href="extensions/EXT/EXT_shader_texture_samples.txt">GL_EXT_shader_texture_samples</a>
+</li>
 </ol>
