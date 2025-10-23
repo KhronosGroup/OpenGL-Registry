@@ -15,10 +15,11 @@ Contributors
     Tobias Hector
     Jan-Harald Fredriksen
     Nigel Williams
+    Ashish Mathur
 
 Contact
 
-    Jeff Leger (jleger 'at' qti.qualcomm.com)
+    Ashish Mathur (asmathur 'at' qti.qualcomm.com)
 
 Status
 
@@ -26,8 +27,8 @@ Status
 
 Version
 
-    Last Modified Date: February 27, 2017
-    Revision: 3
+    Last Modified Date: October 22, 2025
+    Revision: 4
 
 Number
 
@@ -77,9 +78,9 @@ Additions to Section 4.4.3 of the OpenGL ES 2.0 Specification
     "After such a resolve, the contents of the multisample buffer become undefined.",
     add the following sentence:
 
-        "If texture is a depth or stencil texture, the contents of the multisample
-        buffer is discarded rather than resolved - equivalent to the application
-        calling InvalidateFramebuffer for this attachment."
+        "If the multisampled buffer is a depth or stencil texture, then it is discarded -
+        equivalent to the application calling InvalidateFramebuffer for this attachment.
+        If the multisample buffer is a depth/stencil renderbuffer then it is not discarded."
 
 Errors
 
@@ -97,7 +98,11 @@ Issues
     to preserve the contents of those attachments.  A depth/stencil resolve is
     equivalent to InvalidateFramebuffer for those attachments.
 
-    Revision History
+    2. Should a multisample renderbuffer depth/stencil attachment be discarded too?
+
+    Resolved: No. Only a multisample texture depth/stencil attachment is discarded.
+
+Revision History
 
     Revision 1, 2016/9/15
       - First draft of extension
@@ -107,3 +112,5 @@ Issues
     Revision 3, 2017/02/27
       - Final version. A depth/stencil resolve is equivalent
         to InvalidateFramebuffer
+    Revision 4, 2025/10/22
+      - Clarify multisample renderbuffer depth/stencil discard behavior
