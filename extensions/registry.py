@@ -2308,6 +2308,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_shader_pixel_local_storage2.txt',
     },
+    'GL_EXT_shader_realtime_clock' : {
+        'esnumber' : 351,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_shader_realtime_clock.txt',
+    },
     'GL_EXT_shader_samples_identical' : {
         'number' : 557,
         'esnumber' : 339,
@@ -2318,6 +2323,11 @@ registry = {
         'esnumber' : 77,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_shader_texture_lod.txt',
+    },
+    'GL_EXT_shader_texture_samples' : {
+        'esnumber' : 352,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_shader_texture_samples.txt',
     },
     'GL_EXT_shadow_funcs' : {
         'number' : 267,

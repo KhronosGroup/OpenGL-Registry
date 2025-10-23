@@ -731,4 +731,8 @@
 </li>
 <li value=350><a href="extensions/HUAWEI/HUAWEI_shader_binary.txt">GL_HUAWEI_shader_binary</a>
 </li>
+<li value=351><a href="extensions/EXT/EXT_shader_realtime_clock.txt">GL_EXT_shader_realtime_clock</a>
+</li>
+<li value=352><a href="extensions/EXT/EXT_shader_texture_samples.txt">GL_EXT_shader_texture_samples</a>
+</li>
 </ol>
