@@ -7108,8 +7108,9 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9772" end="0x977F" vendor="HUAWEI"/>
     </enums>
 
-    <enums namespace="GL" start="0x9780" end="0x9780" vendor="AMD" comment="github pull request 663">
+    <enums namespace="GL" start="0x9780" end="0x978F" vendor="AMD" comment="Reserved for Jingwen Wang">
         <enum value="0x9780" name="GL_FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT" group="GetPName"/>
+            <unused start="0x9781" end="0x978F" vendor="AMD"/>
     </enums>
 
 <!-- Enums reservable for future use. To reserve a new range, allocate one
@@ -7121,8 +7122,8 @@ typedef unsigned int GLhandleARB;
      file) File requests in the Khronos Bugzilla, OpenGL project, Registry
      component. -->
 
-    <enums namespace="GL" start="0x9780" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
-        <unused start="0x9780" end="99999" comment="RESERVED"/>
+    <enums namespace="GL" start="0x9790" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
+        <unused start="0x9790" end="99999" comment="RESERVED"/>
     </enums>
 
 <!-- Historical large block allocations, all unused except (in older days) by IBM -->
@@ -41040,11 +41041,13 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_FRAGMENT_SHADING_RATE_WITH_SAMPLE_MASK_SUPPORTED_EXT"/>
                 <enum name="GL_FRAGMENT_SHADING_RATE_ATTACHMENT_WITH_DEFAULT_FRAMEBUFFER_SUPPORTED_EXT"/>
                 <enum name="GL_FRAGMENT_SHADING_RATE_NON_TRIVIAL_COMBINERS_SUPPORTED_EXT"/>
-                <enum name="GL_FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT"/>
                 <command name="glGetFragmentShadingRatesEXT"/>
                 <command name="glShadingRateEXT"/>
                 <command name="glShadingRateCombinerOpsEXT"/>
                 <command name="glFramebufferShadingRateEXT"/>
+            </require>
+            <require api="gl">
+                <enum name="GL_FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT"/>
             </require>
         </extension>
         <extension name="GL_EXT_framebuffer_blit" supported="gl">
