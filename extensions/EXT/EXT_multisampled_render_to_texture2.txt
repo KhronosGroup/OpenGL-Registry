@@ -78,7 +78,7 @@ Additions to Section 4.4.3 of the OpenGL ES 2.0 Specification
     "After such a resolve, the contents of the multisample buffer become undefined.",
     add the following sentence:
 
-        "If the multisampled buffer is a depth or stencil texture, then it's discarded -
+        "If the multisampled buffer is a depth or stencil texture, then it is discarded -
         equivalent to the application calling InvalidateFramebuffer for this attachment.
         If the multisample buffer is a depth/stencil renderbuffer then it is not discarded."
 
