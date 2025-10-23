@@ -41012,7 +41012,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glFogCoordPointerEXT"/>
             </require>
         </extension>
-        <extension name="GL_EXT_fragment_shading_rate" supported="gl|gles2">
+        <extension name="GL_EXT_fragment_shading_rate" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_SHADING_RATE_1X1_PIXELS_EXT"/>
                 <enum name="GL_SHADING_RATE_1X2_PIXELS_EXT"/>
