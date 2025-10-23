@@ -7108,6 +7108,11 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9772" end="0x977F" vendor="HUAWEI"/>
     </enums>
 
+    <enums namespace="GL" start="0x9780" end="0x978F" vendor="AMD" comment="Reserved for Jingwen Wang">
+        <enum value="0x9780" name="GL_FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT" group="GetPName"/>
+            <unused start="0x9781" end="0x978F" vendor="AMD"/>
+    </enums>
+
 <!-- Enums reservable for future use. To reserve a new range, allocate one
      or more multiples of 16 starting at the lowest available point in this
      block and note it in a new <enums> block immediately above.
@@ -7117,8 +7122,8 @@ typedef unsigned int GLhandleARB;
      file) File requests in the Khronos Bugzilla, OpenGL project, Registry
      component. -->
 
-    <enums namespace="GL" start="0x9780" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
-        <unused start="0x9780" end="99999" comment="RESERVED"/>
+    <enums namespace="GL" start="0x9790" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
+        <unused start="0x9790" end="99999" comment="RESERVED"/>
     </enums>
 
 <!-- Historical large block allocations, all unused except (in older days) by IBM -->
@@ -41008,7 +41013,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glFogCoordPointerEXT"/>
             </require>
         </extension>
-        <extension name="GL_EXT_fragment_shading_rate" supported="gles2">
+        <extension name="GL_EXT_fragment_shading_rate" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_SHADING_RATE_1X1_PIXELS_EXT"/>
                 <enum name="GL_SHADING_RATE_1X2_PIXELS_EXT"/>
@@ -41040,6 +41045,9 @@ typedef unsigned int GLhandleARB;
                 <command name="glShadingRateEXT"/>
                 <command name="glShadingRateCombinerOpsEXT"/>
                 <command name="glFramebufferShadingRateEXT"/>
+            </require>
+            <require api="gl">
+                <enum name="GL_FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT"/>
             </require>
         </extension>
         <extension name="GL_EXT_framebuffer_blit" supported="gl">
