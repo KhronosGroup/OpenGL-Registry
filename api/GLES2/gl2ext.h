@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-#define GL_GLEXT_VERSION 20251022
+#define GL_GLEXT_VERSION 20251023
 
 /* Generated C header for:
  * API: gles2
@@ -2113,6 +2113,10 @@ GL_APICALL void GL_APIENTRY glClearPixelLocalStorageuiEXT (GLsizei offset, GLsiz
 #ifndef GL_EXT_shader_texture_lod
 #define GL_EXT_shader_texture_lod 1
 #endif /* GL_EXT_shader_texture_lod */
+
+#ifndef GL_EXT_shader_texture_samples
+#define GL_EXT_shader_texture_samples 1
+#endif /* GL_EXT_shader_texture_samples */
 
 #ifndef GL_EXT_shadow_samplers
 #define GL_EXT_shadow_samplers 1
