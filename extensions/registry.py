@@ -2324,6 +2324,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_shader_texture_lod.txt',
     },
+    'GL_EXT_shader_texture_samples' : {
+        'esnumber' : 352,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_shader_texture_samples.txt',
+    },
     'GL_EXT_shadow_funcs' : {
         'number' : 267,
         'flags' : { 'public' },

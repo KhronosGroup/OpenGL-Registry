@@ -42033,6 +42033,7 @@ typedef unsigned int GLhandleARB;
         </extension>
         <extension name="GL_EXT_shader_samples_identical" supported="gl|gles2"/>
         <extension name="GL_EXT_shader_texture_lod" supported="gles2"/>
+        <extension name="GL_EXT_shader_texture_samples" supported="gles2"/>
         <extension name="GL_EXT_shadow_funcs" supported="gl"/>
         <extension name="GL_EXT_shadow_samplers" supported="gles2">
             <require>
