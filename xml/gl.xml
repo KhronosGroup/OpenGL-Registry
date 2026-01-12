@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <registry>
     <comment>
-Copyright 2013-2020 The Khronos Group Inc.
+Copyright 2013-2025 The Khronos Group Inc.
 SPDX-License-Identifier: Apache-2.0
 
 This file, gl.xml, is the OpenGL and OpenGL API Registry. The canonical
@@ -259,7 +259,9 @@ typedef unsigned int GLhandleARB;
         <enum value="0x00000010" name="GL_TESS_EVALUATION_SHADER_BIT_OES" group="UseProgramStageMask"/>
         <enum value="0x00000020" name="GL_COMPUTE_SHADER_BIT" group="UseProgramStageMask"/>
         <enum value="0x00000040" name="GL_MESH_SHADER_BIT_NV" group="UseProgramStageMask"/>
+        <enum value="0x00000040" name="GL_MESH_SHADER_BIT_EXT" group="UseProgramStageMask"/>
         <enum value="0x00000080" name="GL_TASK_SHADER_BIT_NV" group="UseProgramStageMask"/>
+        <enum value="0x00000080" name="GL_TASK_SHADER_BIT_EXT" group="UseProgramStageMask"/>
         <enum value="0xFFFFFFFF" name="GL_ALL_SHADER_BITS" group="UseProgramStageMask"/>
         <enum value="0xFFFFFFFF" name="GL_ALL_SHADER_BITS_EXT" group="UseProgramStageMask"/>
     </enums>
@@ -5399,21 +5401,37 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8E5F" name="GL_MAX_PROGRAM_TEXTURE_GATHER_OFFSET"/>
         <enum value="0x8E5F" name="GL_MAX_PROGRAM_TEXTURE_GATHER_OFFSET_ARB"/>
         <enum value="0x8E5F" name="GL_MAX_PROGRAM_TEXTURE_GATHER_OFFSET_NV"/>
+        <enum value="0x8E60" name="GL_MAX_MESH_UNIFORM_BLOCKS_EXT"/>
         <enum value="0x8E60" name="GL_MAX_MESH_UNIFORM_BLOCKS_NV"/>
+        <enum value="0x8E61" name="GL_MAX_MESH_TEXTURE_IMAGE_UNITS_EXT"/>
         <enum value="0x8E61" name="GL_MAX_MESH_TEXTURE_IMAGE_UNITS_NV"/>
+        <enum value="0x8E62" name="GL_MAX_MESH_IMAGE_UNIFORMS_EXT"/>
         <enum value="0x8E62" name="GL_MAX_MESH_IMAGE_UNIFORMS_NV"/>
+        <enum value="0x8E63" name="GL_MAX_MESH_UNIFORM_COMPONENTS_EXT"/>
         <enum value="0x8E63" name="GL_MAX_MESH_UNIFORM_COMPONENTS_NV"/>
+        <enum value="0x8E64" name="GL_MAX_MESH_ATOMIC_COUNTER_BUFFERS_EXT"/>
         <enum value="0x8E64" name="GL_MAX_MESH_ATOMIC_COUNTER_BUFFERS_NV"/>
+        <enum value="0x8E65" name="GL_MAX_MESH_ATOMIC_COUNTERS_EXT"/>
         <enum value="0x8E65" name="GL_MAX_MESH_ATOMIC_COUNTERS_NV"/>
+        <enum value="0x8E66" name="GL_MAX_MESH_SHADER_STORAGE_BLOCKS_EXT"/>
         <enum value="0x8E66" name="GL_MAX_MESH_SHADER_STORAGE_BLOCKS_NV"/>
+        <enum value="0x8E67" name="GL_MAX_COMBINED_MESH_UNIFORM_COMPONENTS_EXT"/>
         <enum value="0x8E67" name="GL_MAX_COMBINED_MESH_UNIFORM_COMPONENTS_NV"/>
+        <enum value="0x8E68" name="GL_MAX_TASK_UNIFORM_BLOCKS_EXT"/>
         <enum value="0x8E68" name="GL_MAX_TASK_UNIFORM_BLOCKS_NV"/>
+        <enum value="0x8E69" name="GL_MAX_TASK_TEXTURE_IMAGE_UNITS_EXT"/>
         <enum value="0x8E69" name="GL_MAX_TASK_TEXTURE_IMAGE_UNITS_NV"/>
+        <enum value="0x8E6A" name="GL_MAX_TASK_IMAGE_UNIFORMS_EXT"/>
         <enum value="0x8E6A" name="GL_MAX_TASK_IMAGE_UNIFORMS_NV"/>
+        <enum value="0x8E6B" name="GL_MAX_TASK_UNIFORM_COMPONENTS_EXT"/>
         <enum value="0x8E6B" name="GL_MAX_TASK_UNIFORM_COMPONENTS_NV"/>
+        <enum value="0x8E6C" name="GL_MAX_TASK_ATOMIC_COUNTER_BUFFERS_EXT"/>
         <enum value="0x8E6C" name="GL_MAX_TASK_ATOMIC_COUNTER_BUFFERS_NV"/>
+        <enum value="0x8E6D" name="GL_MAX_TASK_ATOMIC_COUNTERS_EXT"/>
         <enum value="0x8E6D" name="GL_MAX_TASK_ATOMIC_COUNTERS_NV"/>
+        <enum value="0x8E6E" name="GL_MAX_TASK_SHADER_STORAGE_BLOCKS_EXT"/>
         <enum value="0x8E6E" name="GL_MAX_TASK_SHADER_STORAGE_BLOCKS_NV"/>
+        <enum value="0x8E6F" name="GL_MAX_COMBINED_TASK_UNIFORM_COMPONENTS_EXT"/>
         <enum value="0x8E6F" name="GL_MAX_COMBINED_TASK_UNIFORM_COMPONENTS_NV"/>
         <enum value="0x8E70" name="GL_MAX_TRANSFORM_FEEDBACK_BUFFERS"/>
         <enum value="0x8E71" name="GL_MAX_VERTEX_STREAMS"/>
@@ -6445,6 +6463,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x92DC" name="GL_MAX_ATOMIC_COUNTER_BUFFER_BINDINGS"/>
         <enum value="0x92DD" name="GL_FRAGMENT_COVERAGE_TO_COLOR_NV"/>
         <enum value="0x92DE" name="GL_FRAGMENT_COVERAGE_COLOR_NV"/>
+        <enum value="0x92DF" name="GL_MESH_OUTPUT_PER_VERTEX_GRANULARITY_EXT"/>
         <enum value="0x92DF" name="GL_MESH_OUTPUT_PER_VERTEX_GRANULARITY_NV"/>
         <enum value="0x92E0" name="GL_DEBUG_OUTPUT" group="EnableCap"/>
         <enum value="0x92E0" name="GL_DEBUG_OUTPUT_KHR"/>
@@ -6782,17 +6801,21 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9535" name="GL_SUBGROUP_QUAD_ALL_STAGES_KHR"/>
         <enum value="0x9536" name="GL_MAX_MESH_TOTAL_MEMORY_SIZE_NV"/>
         <enum value="0x9537" name="GL_MAX_TASK_TOTAL_MEMORY_SIZE_NV"/>
+        <enum value="0x9538" name="GL_MAX_MESH_OUTPUT_VERTICES_EXT"/>
         <enum value="0x9538" name="GL_MAX_MESH_OUTPUT_VERTICES_NV"/>
         <enum value="0x9539" name="GL_MAX_MESH_OUTPUT_PRIMITIVES_NV"/>
         <enum value="0x953A" name="GL_MAX_TASK_OUTPUT_COUNT_NV"/>
         <enum value="0x953B" name="GL_MAX_MESH_WORK_GROUP_SIZE_NV"/>
         <enum value="0x953C" name="GL_MAX_TASK_WORK_GROUP_SIZE_NV"/>
         <enum value="0x953D" name="GL_MAX_DRAW_MESH_TASKS_COUNT_NV"/>
+        <enum value="0x953E" name="GL_MESH_WORK_GROUP_SIZE_EXT"/>
         <enum value="0x953E" name="GL_MESH_WORK_GROUP_SIZE_NV"/>
+        <enum value="0x953F" name="GL_TASK_WORK_GROUP_SIZE_EXT"/>
         <enum value="0x953F" name="GL_TASK_WORK_GROUP_SIZE_NV"/>
         <enum value="0x9540" name="GL_QUERY_RESOURCE_TYPE_VIDMEM_ALLOC_NV"/>
             <unused start="0x9541" vendor="NV"/>
         <enum value="0x9542" name="GL_QUERY_RESOURCE_MEMTYPE_VIDMEM_NV"/>
+        <enum value="0x9543" name="GL_MESH_OUTPUT_PER_PRIMITIVE_GRANULARITY_EXT"/>
         <enum value="0x9543" name="GL_MESH_OUTPUT_PER_PRIMITIVE_GRANULARITY_NV"/>
         <enum value="0x9544" name="GL_QUERY_RESOURCE_SYS_RESERVED_NV"/>
         <enum value="0x9545" name="GL_QUERY_RESOURCE_TEXTURE_NV"/>
@@ -6814,9 +6837,12 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9554" name="GL_NUM_SPIR_V_EXTENSIONS"/>
         <enum value="0x9555" name="GL_SCISSOR_TEST_EXCLUSIVE_NV"/>
         <enum value="0x9556" name="GL_SCISSOR_BOX_EXCLUSIVE_NV"/>
+        <enum value="0x9557" name="GL_MAX_MESH_MULTIVIEW_VIEW_COUNT_EXT"/>
         <enum value="0x9557" name="GL_MAX_MESH_VIEWS_NV"/>
         <enum value="0x9558" name="GL_RENDER_GPU_MASK_NV"/>
+        <enum value="0x9559" name="GL_MESH_SHADER_EXT"/>
         <enum value="0x9559" name="GL_MESH_SHADER_NV"/>
+        <enum value="0x955A" name="GL_TASK_SHADER_EXT"/>
         <enum value="0x955A" name="GL_TASK_SHADER_NV"/>
         <enum value="0x955B" name="GL_SHADING_RATE_IMAGE_BINDING_NV"/>
         <enum value="0x955C" name="GL_SHADING_RATE_IMAGE_TEXEL_WIDTH_NV"/>
@@ -6838,12 +6864,19 @@ typedef unsigned int GLhandleARB;
         <enum value="0x956E" name="GL_SHADING_RATE_8_INVOCATIONS_PER_PIXEL_NV"/>
         <enum value="0x956F" name="GL_SHADING_RATE_16_INVOCATIONS_PER_PIXEL_NV"/>
             <unused start="0x9570" end="0x9578" vendor="NV"/>
+        <enum value="0x9579" name="GL_MESH_VERTICES_OUT_EXT"/>
         <enum value="0x9579" name="GL_MESH_VERTICES_OUT_NV"/>
+        <enum value="0x957A" name="GL_MESH_PRIMITIVES_OUT_EXT"/>
         <enum value="0x957A" name="GL_MESH_PRIMITIVES_OUT_NV"/>
+        <enum value="0x957B" name="GL_MESH_OUTPUT_TYPE_EXT"/>
         <enum value="0x957B" name="GL_MESH_OUTPUT_TYPE_NV"/>
+        <enum value="0x957C" name="GL_MESH_SUBROUTINE_EXT"/>
         <enum value="0x957C" name="GL_MESH_SUBROUTINE_NV"/>
+        <enum value="0x957D" name="GL_TASK_SUBROUTINE_EXT"/>
         <enum value="0x957D" name="GL_TASK_SUBROUTINE_NV"/>
+        <enum value="0x957E" name="GL_MESH_SUBROUTINE_UNIFORM_EXT"/>
         <enum value="0x957E" name="GL_MESH_SUBROUTINE_UNIFORM_NV"/>
+        <enum value="0x957F" name="GL_TASK_SUBROUTINE_UNIFORM_EXT"/>
         <enum value="0x957F" name="GL_TASK_SUBROUTINE_UNIFORM_NV"/>
         <enum value="0x9580" name="GL_TEXTURE_TILING_EXT" group="TextureParameterName"/>
         <enum value="0x9581" name="GL_DEDICATED_MEMORY_OBJECT_EXT" group="MemoryObjectParameterName"/>
@@ -6874,11 +6907,17 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9599" name="GL_DEVICE_LUID_EXT" group="GetPName"/>
         <enum value="0x959A" name="GL_DEVICE_NODE_MASK_EXT" group="GetPName"/>
         <enum value="0x959B" name="GL_PROTECTED_MEMORY_OBJECT_EXT" group="MemoryObjectParameterName"/>
+        <enum value="0x959C" name="GL_UNIFORM_BLOCK_REFERENCED_BY_MESH_SHADER_EXT"/>
         <enum value="0x959C" name="GL_UNIFORM_BLOCK_REFERENCED_BY_MESH_SHADER_NV"/>
+        <enum value="0x959D" name="GL_UNIFORM_BLOCK_REFERENCED_BY_TASK_SHADER_EXT"/>
         <enum value="0x959D" name="GL_UNIFORM_BLOCK_REFERENCED_BY_TASK_SHADER_NV"/>
+        <enum value="0x959E" name="GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_MESH_SHADER_EXT"/>
         <enum value="0x959E" name="GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_MESH_SHADER_NV"/>
+        <enum value="0x959F" name="GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_TASK_SHADER_EXT"/>
         <enum value="0x959F" name="GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_TASK_SHADER_NV"/>
+        <enum value="0x95A0" name="GL_REFERENCED_BY_MESH_SHADER_EXT"/>
         <enum value="0x95A0" name="GL_REFERENCED_BY_MESH_SHADER_NV"/>
+        <enum value="0x95A1" name="GL_REFERENCED_BY_TASK_SHADER_EXT"/>
         <enum value="0x95A1" name="GL_REFERENCED_BY_TASK_SHADER_NV"/>
         <enum value="0x95A2" name="GL_MAX_MESH_WORK_GROUP_INVOCATIONS_NV"/>
         <enum value="0x95A3" name="GL_MAX_TASK_WORK_GROUP_INVOCATIONS_NV"/>
@@ -7028,8 +7067,35 @@ typedef unsigned int GLhandleARB;
             <unused start="0x9720" end="0x973F" vendor="ANGLE"/>
     </enums>
 
-    <enums namespace="GL" start="0x9740" end="0x975F" vendor="MESA" comment="Reserved for VK_EXT_mesh_shader (github pull request 640)">
-            <unused start="0x9740" end="0x975F" vendor="MESA"/>
+    <enums namespace="GL" start="0x9740" end="0x975F" vendor="MESA" comment="Reserved for GL_EXT_mesh_shader (github pull request 640)">
+        <enum value="0x9740" name="GL_MAX_TASK_WORK_GROUP_TOTAL_COUNT_EXT" group="GetPName"/>
+        <enum value="0x9741" name="GL_MAX_MESH_WORK_GROUP_TOTAL_COUNT_EXT" group="GetPName"/>
+        <enum value="0x9742" name="GL_MAX_TASK_PAYLOAD_SIZE_EXT" group="GetPName"/>
+        <enum value="0x9743" name="GL_MAX_TASK_SHARED_MEMORY_SIZE_EXT" group="GetPName"/>
+        <enum value="0x9744" name="GL_MAX_MESH_SHARED_MEMORY_SIZE_EXT" group="GetPName"/>
+        <enum value="0x9745" name="GL_MAX_TASK_PAYLOAD_AND_SHARED_MEMORY_SIZE_EXT" group="GetPName"/>
+        <enum value="0x9746" name="GL_MAX_MESH_PAYLOAD_AND_SHARED_MEMORY_SIZE_EXT" group="GetPName"/>
+        <enum value="0x9747" name="GL_MAX_MESH_OUTPUT_MEMORY_SIZE_EXT" group="GetPName"/>
+        <enum value="0x9748" name="GL_MAX_MESH_PAYLOAD_AND_OUTPUT_MEMORY_SIZE_EXT" group="GetPName"/>
+        <enum value="0x9749" name="GL_MAX_MESH_OUTPUT_COMPONENTS_EXT" group="GetPName"/>
+        <enum value="0x974A" name="GL_MAX_MESH_OUTPUT_LAYERS_EXT" group="GetPName"/>
+        <enum value="0x974B" name="GL_MAX_PREFERRED_TASK_WORK_GROUP_INVOCATIONS_EXT" group="GetPName"/>
+        <enum value="0x974C" name="GL_MAX_PREFERRED_MESH_WORK_GROUP_INVOCATIONS_EXT" group="GetPName"/>
+        <enum value="0x974D" name="GL_MESH_PREFERS_LOCAL_INVOCATION_VERTEX_OUTPUT_EXT" group="GetPName"/>
+        <enum value="0x974E" name="GL_MESH_PREFERS_LOCAL_INVOCATION_PRIMITIVE_OUTPUT_EXT" group="GetPName"/>
+        <enum value="0x974F" name="GL_MESH_PREFERS_COMPACT_VERTEX_OUTPUT_EXT" group="GetPName"/>
+        <enum value="0x9750" name="GL_MESH_PREFERS_COMPACT_PRIMITIVE_OUTPUT_EXT" group="GetPName"/>
+        <enum value="0x9751" name="GL_MAX_TASK_WORK_GROUP_COUNT_EXT" group="GetPName"/>
+        <enum value="0x9752" name="GL_MAX_MESH_WORK_GROUP_COUNT_EXT" group="GetPName"/>
+        <enum value="0x9753" name="GL_TASK_SHADER_INVOCATIONS_EXT" group="QueryTarget"/>
+        <enum value="0x9754" name="GL_MESH_SHADER_INVOCATIONS_EXT" group="QueryTarget"/>
+        <enum value="0x9755" name="GL_MESH_PRIMITIVES_GENERATED_EXT" group="QueryTarget"/>
+	<enum value="0x9756" name="GL_MAX_MESH_OUTPUT_PRIMITIVES_EXT" group="GetPName"/>
+	<enum value="0x9757" name="GL_MAX_MESH_WORK_GROUP_INVOCATIONS_EXT" group="GetPName"/>
+	<enum value="0x9758" name="GL_MAX_MESH_WORK_GROUP_SIZE_EXT" group="GetPName"/>
+	<enum value="0x9759" name="GL_MAX_TASK_WORK_GROUP_INVOCATIONS_EXT" group="GetPName"/>
+	<enum value="0x975A" name="GL_MAX_TASK_WORK_GROUP_SIZE_EXT" group="GetPName"/>
+            <unused start="0x975B" end="0x975F" vendor="MESA"/>
     </enums>
 
     <enums namespace="GL" start="0x9760" end="0x976F" vendor="QCOM" comment="Reserved for Ashish Mathur">
@@ -7037,7 +7103,14 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x9770" end="0x977F" vendor="HUAWEI" comment="Reserved for Pan Gao">
-            <unused start="0x9770" end="0x977F" vendor="HUAWEI"/>
+        <enum value="0x9770" name="GL_HUAWEI_SHADER_BINARY" group="ShaderBinaryFormat"/>
+        <enum value="0x9771" name="GL_HUAWEI_PROGRAM_BINARY"/>
+            <unused start="0x9772" end="0x977F" vendor="HUAWEI"/>
+    </enums>
+
+    <enums namespace="GL" start="0x9780" end="0x978F" vendor="AMD" comment="Reserved for Jingwen Wang">
+        <enum value="0x9780" name="GL_FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT" group="GetPName"/>
+            <unused start="0x9781" end="0x978F" vendor="AMD"/>
     </enums>
 
 <!-- Enums reservable for future use. To reserve a new range, allocate one
@@ -7049,8 +7122,8 @@ typedef unsigned int GLhandleARB;
      file) File requests in the Khronos Bugzilla, OpenGL project, Registry
      component. -->
 
-    <enums namespace="GL" start="0x9780" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
-        <unused start="0x9780" end="99999" comment="RESERVED"/>
+    <enums namespace="GL" start="0x9790" end="99999" vendor="ARB" comment="RESERVED FOR FUTURE ALLOCATIONS BY KHRONOS">
+        <unused start="0x9790" end="99999" comment="RESERVED"/>
     </enums>
 
 <!-- Historical large block allocations, all unused except (in older days) by IBM -->
@@ -11404,9 +11477,19 @@ typedef unsigned int GLhandleARB;
             <param><ptype>GLsizei</ptype> <name>width</name></param>
         </command>
         <command>
+            <proto>void <name>glDrawMeshTasksEXT</name></proto>
+            <param><ptype>GLuint</ptype> <name>num_groups_x</name></param>
+            <param><ptype>GLuint</ptype> <name>num_groups_y</name></param>
+            <param><ptype>GLuint</ptype> <name>num_groups_z</name></param>
+        </command>
+        <command>
             <proto>void <name>glDrawMeshTasksNV</name></proto>
             <param><ptype>GLuint</ptype> <name>first</name></param>
             <param><ptype>GLuint</ptype> <name>count</name></param>
+        </command>
+        <command>
+            <proto>void <name>glDrawMeshTasksIndirectEXT</name></proto>
+            <param><ptype>GLintptr</ptype> <name>indirect</name></param>
         </command>
         <command>
             <proto>void <name>glDrawMeshTasksIndirectNV</name></proto>
@@ -18132,9 +18215,22 @@ typedef unsigned int GLhandleARB;
             <alias name="glMultiDrawElementsIndirect"/>
         </command>
         <command>
+            <proto>void <name>glMultiDrawMeshTasksIndirectEXT</name></proto>
+            <param><ptype>GLintptr</ptype> <name>indirect</name></param>
+            <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
+            <param><ptype>GLsizei</ptype> <name>stride</name></param>
+        </command>
+        <command>
             <proto>void <name>glMultiDrawMeshTasksIndirectNV</name></proto>
             <param><ptype>GLintptr</ptype> <name>indirect</name></param>
             <param><ptype>GLsizei</ptype> <name>drawcount</name></param>
+            <param><ptype>GLsizei</ptype> <name>stride</name></param>
+        </command>
+        <command>
+            <proto>void <name>glMultiDrawMeshTasksIndirectCountEXT</name></proto>
+            <param><ptype>GLintptr</ptype> <name>indirect</name></param>
+            <param><ptype>GLintptr</ptype> <name>drawcount</name></param>
+            <param><ptype>GLsizei</ptype> <name>maxdrawcount</name></param>
             <param><ptype>GLsizei</ptype> <name>stride</name></param>
         </command>
         <command>
@@ -40917,7 +41013,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glFogCoordPointerEXT"/>
             </require>
         </extension>
-        <extension name="GL_EXT_fragment_shading_rate" supported="gles2">
+        <extension name="GL_EXT_fragment_shading_rate" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_SHADING_RATE_1X1_PIXELS_EXT"/>
                 <enum name="GL_SHADING_RATE_1X2_PIXELS_EXT"/>
@@ -40949,6 +41045,9 @@ typedef unsigned int GLhandleARB;
                 <command name="glShadingRateEXT"/>
                 <command name="glShadingRateCombinerOpsEXT"/>
                 <command name="glFramebufferShadingRateEXT"/>
+            </require>
+            <require api="gl">
+                <enum name="GL_FRAGMENT_SHADING_RATE_PRIMITIVE_RATE_WITH_MULTI_VIEWPORT_SUPPORTED_EXT"/>
             </require>
         </extension>
         <extension name="GL_EXT_framebuffer_blit" supported="gl">
@@ -41350,6 +41449,82 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_HANDLE_TYPE_D3D11_IMAGE_KMT_EXT"/>
                 <command name="glImportMemoryWin32HandleEXT"/>
                 <command name="glImportMemoryWin32NameEXT"/>
+            </require>
+        </extension>
+	<extension name="GL_EXT_mesh_shader" supported="gl|glcore|gles2">
+            <require>
+                <enum name="GL_MESH_SHADER_EXT"/>
+                <enum name="GL_TASK_SHADER_EXT"/>
+                <enum name="GL_MAX_MESH_UNIFORM_BLOCKS_EXT"/>
+                <enum name="GL_MAX_MESH_TEXTURE_IMAGE_UNITS_EXT"/>
+                <enum name="GL_MAX_MESH_IMAGE_UNIFORMS_EXT"/>
+                <enum name="GL_MAX_MESH_UNIFORM_COMPONENTS_EXT"/>
+                <enum name="GL_MAX_MESH_ATOMIC_COUNTER_BUFFERS_EXT"/>
+                <enum name="GL_MAX_MESH_ATOMIC_COUNTERS_EXT"/>
+                <enum name="GL_MAX_MESH_SHADER_STORAGE_BLOCKS_EXT"/>
+                <enum name="GL_MAX_COMBINED_MESH_UNIFORM_COMPONENTS_EXT"/>
+                <enum name="GL_MAX_TASK_UNIFORM_BLOCKS_EXT"/>
+                <enum name="GL_MAX_TASK_TEXTURE_IMAGE_UNITS_EXT"/>
+                <enum name="GL_MAX_TASK_IMAGE_UNIFORMS_EXT"/>
+                <enum name="GL_MAX_TASK_UNIFORM_COMPONENTS_EXT"/>
+                <enum name="GL_MAX_TASK_ATOMIC_COUNTER_BUFFERS_EXT"/>
+                <enum name="GL_MAX_TASK_ATOMIC_COUNTERS_EXT"/>
+                <enum name="GL_MAX_TASK_SHADER_STORAGE_BLOCKS_EXT"/>
+                <enum name="GL_MAX_COMBINED_TASK_UNIFORM_COMPONENTS_EXT"/>
+                <enum name="GL_MAX_TASK_WORK_GROUP_TOTAL_COUNT_EXT"/>
+                <enum name="GL_MAX_MESH_WORK_GROUP_TOTAL_COUNT_EXT"/>
+                <enum name="GL_MAX_MESH_WORK_GROUP_INVOCATIONS_EXT"/>
+                <enum name="GL_MAX_TASK_WORK_GROUP_INVOCATIONS_EXT"/>
+                <enum name="GL_MAX_TASK_PAYLOAD_SIZE_EXT"/>
+                <enum name="GL_MAX_TASK_SHARED_MEMORY_SIZE_EXT"/>
+                <enum name="GL_MAX_MESH_SHARED_MEMORY_SIZE_EXT"/>
+                <enum name="GL_MAX_TASK_PAYLOAD_AND_SHARED_MEMORY_SIZE_EXT"/>
+                <enum name="GL_MAX_MESH_PAYLOAD_AND_SHARED_MEMORY_SIZE_EXT"/>
+                <enum name="GL_MAX_MESH_OUTPUT_MEMORY_SIZE_EXT"/>
+                <enum name="GL_MAX_MESH_PAYLOAD_AND_OUTPUT_MEMORY_SIZE_EXT"/>
+                <enum name="GL_MAX_MESH_OUTPUT_VERTICES_EXT"/>
+                <enum name="GL_MAX_MESH_OUTPUT_PRIMITIVES_EXT"/>
+                <enum name="GL_MAX_MESH_OUTPUT_COMPONENTS_EXT"/>
+                <enum name="GL_MAX_MESH_OUTPUT_LAYERS_EXT"/>
+		<enum name="GL_MAX_MESH_MULTIVIEW_VIEW_COUNT_EXT"/>
+                <enum name="GL_MESH_OUTPUT_PER_VERTEX_GRANULARITY_EXT"/>
+                <enum name="GL_MESH_OUTPUT_PER_PRIMITIVE_GRANULARITY_EXT"/>
+                <enum name="GL_MAX_PREFERRED_TASK_WORK_GROUP_INVOCATIONS_EXT"/>
+                <enum name="GL_MAX_PREFERRED_MESH_WORK_GROUP_INVOCATIONS_EXT"/>
+                <enum name="GL_MESH_PREFERS_LOCAL_INVOCATION_VERTEX_OUTPUT_EXT"/>
+                <enum name="GL_MESH_PREFERS_LOCAL_INVOCATION_PRIMITIVE_OUTPUT_EXT"/>
+                <enum name="GL_MESH_PREFERS_COMPACT_VERTEX_OUTPUT_EXT"/>
+                <enum name="GL_MESH_PREFERS_COMPACT_PRIMITIVE_OUTPUT_EXT"/>
+                <enum name="GL_MAX_TASK_WORK_GROUP_COUNT_EXT"/>
+                <enum name="GL_MAX_MESH_WORK_GROUP_COUNT_EXT"/>
+                <enum name="GL_MAX_MESH_WORK_GROUP_SIZE_EXT"/>
+                <enum name="GL_MAX_TASK_WORK_GROUP_SIZE_EXT"/>
+                <enum name="GL_MESH_WORK_GROUP_SIZE_EXT"/>
+                <enum name="GL_TASK_WORK_GROUP_SIZE_EXT"/>
+                <enum name="GL_MESH_VERTICES_OUT_EXT"/>
+                <enum name="GL_MESH_PRIMITIVES_OUT_EXT"/>
+                <enum name="GL_MESH_OUTPUT_TYPE_EXT"/>
+                <enum name="GL_UNIFORM_BLOCK_REFERENCED_BY_MESH_SHADER_EXT"/>
+                <enum name="GL_UNIFORM_BLOCK_REFERENCED_BY_TASK_SHADER_EXT"/>
+                <enum name="GL_REFERENCED_BY_MESH_SHADER_EXT"/>
+                <enum name="GL_REFERENCED_BY_TASK_SHADER_EXT"/>
+                <enum name="GL_TASK_SHADER_INVOCATIONS_EXT"/>
+                <enum name="GL_MESH_SHADER_INVOCATIONS_EXT"/>
+                <enum name="GL_MESH_PRIMITIVES_GENERATED_EXT"/>
+                <enum name="GL_MESH_SHADER_BIT_EXT"/>
+                <enum name="GL_TASK_SHADER_BIT_EXT"/>
+                <command name="glDrawMeshTasksEXT"/>
+                <command name="glDrawMeshTasksIndirectEXT"/>
+                <command name="glMultiDrawMeshTasksIndirectEXT"/>
+            </require>
+            <require comment="Supported only in OpenGL">
+                <enum name="GL_MESH_SUBROUTINE_EXT"/>
+                <enum name="GL_TASK_SUBROUTINE_EXT"/>
+                <enum name="GL_MESH_SUBROUTINE_UNIFORM_EXT"/>
+                <enum name="GL_TASK_SUBROUTINE_UNIFORM_EXT"/>
+                <enum name="GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_MESH_SHADER_EXT"/>
+                <enum name="GL_ATOMIC_COUNTER_BUFFER_REFERENCED_BY_TASK_SHADER_EXT"/>
+                <command name="glMultiDrawMeshTasksIndirectCountEXT"/>
             </require>
         </extension>
         <extension name="GL_EXT_misc_attribute" supported="gl"/>
@@ -41866,6 +42041,7 @@ typedef unsigned int GLhandleARB;
         </extension>
         <extension name="GL_EXT_shader_samples_identical" supported="gl|gles2"/>
         <extension name="GL_EXT_shader_texture_lod" supported="gles2"/>
+        <extension name="GL_EXT_shader_texture_samples" supported="gles2"/>
         <extension name="GL_EXT_shadow_funcs" supported="gl"/>
         <extension name="GL_EXT_shadow_samplers" supported="gles2">
             <require>
@@ -42355,8 +42531,8 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_RG8_EXT"/>
             </require>
         </extension>
-        <extension name="GL_EXT_texture_sRGB" supported="gl">
-            <require>
+        <extension name="GL_EXT_texture_sRGB" supported="gl|glcore">
+            <require api="gl" comment="LUMINANCE formats are not supported in glcore">
                 <enum name="GL_SRGB_EXT"/>
                 <enum name="GL_SRGB8_EXT"/>
                 <enum name="GL_SRGB_ALPHA_EXT"/>
@@ -42369,6 +42545,18 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_COMPRESSED_SRGB_ALPHA_EXT"/>
                 <enum name="GL_COMPRESSED_SLUMINANCE_EXT"/>
                 <enum name="GL_COMPRESSED_SLUMINANCE_ALPHA_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_S3TC_DXT1_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT"/>
+            </require>
+            <require api="glcore" comment="LUMINANCE formats are not supported in glcore">
+                <enum name="GL_SRGB_EXT"/>
+                <enum name="GL_SRGB8_EXT"/>
+                <enum name="GL_SRGB_ALPHA_EXT"/>
+                <enum name="GL_SRGB8_ALPHA8_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_EXT"/>
+                <enum name="GL_COMPRESSED_SRGB_ALPHA_EXT"/>
                 <enum name="GL_COMPRESSED_SRGB_S3TC_DXT1_EXT"/>
                 <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT"/>
                 <enum name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT"/>
@@ -42897,6 +43085,16 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_TEXTURE_LIGHTING_MODE_HP"/>
                 <enum name="GL_TEXTURE_POST_SPECULAR_HP"/>
                 <enum name="GL_TEXTURE_PRE_SPECULAR_HP"/>
+            </require>
+        </extension>
+        <extension name="GL_HUAWEI_program_binary" supported="gles2">
+            <require>
+                <enum name="GL_HUAWEI_PROGRAM_BINARY"/>
+            </require>
+        </extension>
+        <extension name="GL_HUAWEI_shader_binary" supported="gles2">
+            <require>
+                <enum name="GL_HUAWEI_SHADER_BINARY"/>
             </require>
         </extension>
         <extension name="GL_IBM_cull_vertex" supported="gl">
@@ -43495,10 +43693,10 @@ typedef unsigned int GLhandleARB;
             </require>
         </extension>
         <extension name="GL_MESA_shader_integer_functions" supported="gl|gles2"/>
-	<extension name="GL_MESA_texture_const_bandwidth" supported="gl|gles2">
+        <extension name="GL_MESA_texture_const_bandwidth" supported="gl|gles2">
             <require>
                 <enum name="GL_CONST_BW_TILING_MESA"/>
-	    </require>
+            </require>
         </extension>
         <extension name="GL_MESA_tile_raster_order" supported="gl">
             <require>

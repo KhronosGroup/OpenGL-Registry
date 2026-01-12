@@ -1826,6 +1826,7 @@ registry = {
         'url' : 'extensions/EXT/EXT_EGL_sync.txt',
     },
     'GL_EXT_fragment_shading_rate' : {
+        'number' : 561,
         'esnumber' : 340,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_fragment_shading_rate.txt',
@@ -2248,6 +2249,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_separate_specular_color.txt',
     },
+    'GL_EXT_shader_clock' : {
+        'esnumber' : 348,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_shader_clock.txt',
+    },
     'GL_EXT_shader_framebuffer_fetch' : {
         'number' : 520,
         'esnumber' : 122,
@@ -2303,6 +2309,11 @@ registry = {
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_shader_pixel_local_storage2.txt',
     },
+    'GL_EXT_shader_realtime_clock' : {
+        'esnumber' : 351,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_shader_realtime_clock.txt',
+    },
     'GL_EXT_shader_samples_identical' : {
         'number' : 557,
         'esnumber' : 339,
@@ -2313,6 +2324,11 @@ registry = {
         'esnumber' : 77,
         'flags' : { 'public' },
         'url' : 'extensions/EXT/EXT_shader_texture_lod.txt',
+    },
+    'GL_EXT_shader_texture_samples' : {
+        'esnumber' : 352,
+        'flags' : { 'public' },
+        'url' : 'extensions/EXT/EXT_shader_texture_samples.txt',
     },
     'GL_EXT_shadow_funcs' : {
         'number' : 267,
@@ -2788,6 +2804,16 @@ registry = {
         'flags' : { 'public' },
         'supporters' : { 'HP' },
         'url' : 'extensions/HP/HP_texture_lighting.txt',
+    },
+    'GL_HUAWEI_program_binary' : {
+        'esnumber' : 349,
+        'flags' : { 'public' },
+        'url' : 'extensions/HUAWEI/HUAWEI_program_binary.txt',
+    },
+    'GL_HUAWEI_shader_binary' : {
+        'esnumber' : 350,
+        'flags' : { 'public' },
+        'url' : 'extensions/HUAWEI/HUAWEI_shader_binary.txt',
     },
     'GL_IBM_cull_vertex' : {
         'number' : 199,
