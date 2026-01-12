@@ -2486,12 +2486,12 @@ GL_APICALL void GL_APIENTRY glWindowRectanglesEXT (GLenum mode, GLsizei count, c
 
 #ifndef GL_HUAWEI_program_binary
 #define GL_HUAWEI_program_binary 1
-#define GL_HUAWEI_PROGRAM_BINARY          0x9771
+#define GL_PROGRAM_BINARY_HUAWEI          0x9771
 #endif /* GL_HUAWEI_program_binary */
 
 #ifndef GL_HUAWEI_shader_binary
 #define GL_HUAWEI_shader_binary 1
-#define GL_HUAWEI_SHADER_BINARY           0x9770
+#define GL_SHADER_BINARY_HUAWEI           0x9770
 #endif /* GL_HUAWEI_shader_binary */
 
 #ifndef GL_IMG_bindless_texture

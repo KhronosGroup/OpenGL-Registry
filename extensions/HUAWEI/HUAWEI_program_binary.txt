@@ -16,8 +16,8 @@ Contact
 
 Version
 
-    Last Modified Date: Aug 21, 2025
-    Revision: 1
+    Last Modified Date: Jan 12, 2026
+    Revision: 2
 
 Number
 
@@ -83,4 +83,5 @@ New Implementation Dependent State
 
 Revision History
 
+    #2  Jan 12, 2026  Pan Gao           Fix enum defination to align with naming conversion rules
     #1  Aug 21, 2025  Peng Li           First draft
