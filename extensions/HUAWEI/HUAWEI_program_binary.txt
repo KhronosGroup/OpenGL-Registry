@@ -54,17 +54,17 @@ New Tokens
 
     Accepted by the <binaryFormat> parameter of ProgramBinaryOES:
 
-        HUAWEI_PROGRAM_BINARY              0x9771
+        PROGRAM_BINARY_HUAWEI              0x9771
 
 Additions to Chapter 2 of the OpenGL ES 2.0 Specification (OpenGL ES Operation)
 
     At the end of the section 2.15.4, Program Binaries from OES_get_program_binary:
 
-    "When querying PROGRAM_BINARY_FORMATS_OES, the format HUAWEI_PROGRAM_BINARY will be
+    "When querying PROGRAM_BINARY_FORMATS_OES, the format PROGRAM_BINARY_HUAWEI will be
     present in the list of returned program binary formats and the format could be used as
     <binaryFormat> in GetProgramBinaryOES or ProgramBinaryOES.
 
-    An implementation may reject a HUAWEI_PROGRAM_BINARY binary if it determines
+    An implementation may reject a PROGRAM_BINARY_HUAWEI binary if it determines
     the program binary was produced by an incompatible or outdated version of the compiler.
     In this case the application should fall back to providing the original OpenGL Shading
     Language source shaders, and perhaps again retrieve the program binary for future use."
