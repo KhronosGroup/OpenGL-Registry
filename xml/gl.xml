@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <registry>
     <comment>
-Copyright 2013-2025 The Khronos Group Inc.
+Copyright 2013-2026 The Khronos Group Inc.
 SPDX-License-Identifier: Apache-2.0
 
 This file, gl.xml, is the OpenGL and OpenGL API Registry. The canonical
@@ -7090,11 +7090,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9753" name="GL_TASK_SHADER_INVOCATIONS_EXT" group="QueryTarget"/>
         <enum value="0x9754" name="GL_MESH_SHADER_INVOCATIONS_EXT" group="QueryTarget"/>
         <enum value="0x9755" name="GL_MESH_PRIMITIVES_GENERATED_EXT" group="QueryTarget"/>
-	<enum value="0x9756" name="GL_MAX_MESH_OUTPUT_PRIMITIVES_EXT" group="GetPName"/>
-	<enum value="0x9757" name="GL_MAX_MESH_WORK_GROUP_INVOCATIONS_EXT" group="GetPName"/>
-	<enum value="0x9758" name="GL_MAX_MESH_WORK_GROUP_SIZE_EXT" group="GetPName"/>
-	<enum value="0x9759" name="GL_MAX_TASK_WORK_GROUP_INVOCATIONS_EXT" group="GetPName"/>
-	<enum value="0x975A" name="GL_MAX_TASK_WORK_GROUP_SIZE_EXT" group="GetPName"/>
+        <enum value="0x9756" name="GL_MAX_MESH_OUTPUT_PRIMITIVES_EXT" group="GetPName"/>
+        <enum value="0x9757" name="GL_MAX_MESH_WORK_GROUP_INVOCATIONS_EXT" group="GetPName"/>
+        <enum value="0x9758" name="GL_MAX_MESH_WORK_GROUP_SIZE_EXT" group="GetPName"/>
+        <enum value="0x9759" name="GL_MAX_TASK_WORK_GROUP_INVOCATIONS_EXT" group="GetPName"/>
+        <enum value="0x975A" name="GL_MAX_TASK_WORK_GROUP_SIZE_EXT" group="GetPName"/>
             <unused start="0x975B" end="0x975F" vendor="MESA"/>
     </enums>
 
@@ -41451,7 +41451,7 @@ typedef unsigned int GLhandleARB;
                 <command name="glImportMemoryWin32NameEXT"/>
             </require>
         </extension>
-	<extension name="GL_EXT_mesh_shader" supported="gl|glcore|gles2">
+        <extension name="GL_EXT_mesh_shader" supported="gl|glcore|gles2">
             <require>
                 <enum name="GL_MESH_SHADER_EXT"/>
                 <enum name="GL_TASK_SHADER_EXT"/>
@@ -41486,7 +41486,7 @@ typedef unsigned int GLhandleARB;
                 <enum name="GL_MAX_MESH_OUTPUT_PRIMITIVES_EXT"/>
                 <enum name="GL_MAX_MESH_OUTPUT_COMPONENTS_EXT"/>
                 <enum name="GL_MAX_MESH_OUTPUT_LAYERS_EXT"/>
-		<enum name="GL_MAX_MESH_MULTIVIEW_VIEW_COUNT_EXT"/>
+                <enum name="GL_MAX_MESH_MULTIVIEW_VIEW_COUNT_EXT"/>
                 <enum name="GL_MESH_OUTPUT_PER_VERTEX_GRANULARITY_EXT"/>
                 <enum name="GL_MESH_OUTPUT_PER_PRIMITIVE_GRANULARITY_EXT"/>
                 <enum name="GL_MAX_PREFERRED_TASK_WORK_GROUP_INVOCATIONS_EXT"/>
