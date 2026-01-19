@@ -83,5 +83,5 @@ New Implementation Dependent State
 
 Revision History
 
-    #2  Jan 12, 2026  Pan Gao           Fix enum defination to align with naming conversion rules
+    #2  Jan 12, 2026  Pan Gao           Fix enum definition to align with naming conventions
     #1  Aug 21, 2025  Peng Li           First draft
