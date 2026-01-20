@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 /*
-** Copyright 2013-2025 The Khronos Group Inc.
+** Copyright 2013-2026 The Khronos Group Inc.
 ** SPDX-License-Identifier: MIT
 **
 ** This header is generated from the Khronos OpenGL / OpenGL ES XML
@@ -20,7 +20,7 @@ extern "C" {
 #include <windows.h>
 #endif
 
-/* Generated on date 20251009 */
+/* Generated on date 20260119 */
 
 /* Generated C header for:
  * API: wgl

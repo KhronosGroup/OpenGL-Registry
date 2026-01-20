@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 /*
-** Copyright 2013-2025 The Khronos Group Inc.
+** Copyright 2013-2026 The Khronos Group Inc.
 ** SPDX-License-Identifier: MIT
 **
 ** This header is generated from the Khronos OpenGL / OpenGL ES XML
@@ -19,7 +19,7 @@ extern "C" {
 #define GL_APIENTRYP GL_APIENTRY*
 #endif
 
-#define GL_GLEXT_VERSION 20251023
+#define GL_GLEXT_VERSION 20260119
 
 /* Generated C header for:
  * API: gles2

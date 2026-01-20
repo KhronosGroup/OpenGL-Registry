@@ -1,4 +1,4 @@
-# Copyright 2013-2025 The Khronos Group Inc.
+# Copyright 2013-2026 The Khronos Group Inc.
 # SPDX-License-Identifier: Apache-2.0
 
 # Generator scripts and options
@@ -26,6 +26,8 @@ GLHEADERS  = $(API)/GL/glext.h \
 	     $(API)/GLES2/gl2.h \
 	     $(API)/GLES2/gl2ext.h \
 	     $(API)/GLES3/gl3.h \
+	     $(API)/GLES3/gl31.h \
+	     $(API)/GLES3/gl32.h \
 	     $(API)/GLSC2/glsc2.h \
 	     $(API)/GLSC2/glsc2ext.h
 

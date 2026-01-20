@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <registry>
     <comment>
-Copyright 2013-2025 The Khronos Group Inc.
+Copyright 2013-2026 The Khronos Group Inc.
 SPDX-License-Identifier: Apache-2.0
 
 This file, glx.xml, is the GLX API Registry. The canonical version of the
