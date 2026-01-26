@@ -7103,8 +7103,8 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x9770" end="0x977F" vendor="HUAWEI" comment="Reserved for Pan Gao">
-        <enum value="0x9770" name="GL_HUAWEI_SHADER_BINARY" group="ShaderBinaryFormat"/>
-        <enum value="0x9771" name="GL_HUAWEI_PROGRAM_BINARY"/>
+        <enum value="0x9770" name="GL_SHADER_BINARY_HUAWEI" group="ShaderBinaryFormat"/>
+        <enum value="0x9771" name="GL_PROGRAM_BINARY_HUAWEI"/>
             <unused start="0x9772" end="0x977F" vendor="HUAWEI"/>
     </enums>
 
@@ -43089,12 +43089,12 @@ typedef unsigned int GLhandleARB;
         </extension>
         <extension name="GL_HUAWEI_program_binary" supported="gles2">
             <require>
-                <enum name="GL_HUAWEI_PROGRAM_BINARY"/>
+                <enum name="GL_PROGRAM_BINARY_HUAWEI"/>
             </require>
         </extension>
         <extension name="GL_HUAWEI_shader_binary" supported="gles2">
             <require>
-                <enum name="GL_HUAWEI_SHADER_BINARY"/>
+                <enum name="GL_SHADER_BINARY_HUAWEI"/>
             </require>
         </extension>
         <extension name="GL_IBM_cull_vertex" supported="gl">

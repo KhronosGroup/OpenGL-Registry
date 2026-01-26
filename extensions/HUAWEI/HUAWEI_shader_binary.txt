@@ -16,8 +16,8 @@ Contact
 
 Version
 
-    Last Modified Date: Aug 21, 2025
-    Revision: 1
+    Last Modified Date: Jan 12, 2026
+    Revision: 2
 
 Number
 
@@ -50,13 +50,13 @@ New Tokens
 
     Accepted by the <binaryFormat> parameter of ShaderBinary:
 
-        HUAWEI_SHADER_BINARY              0x9770
+        SHADER_BINARY_HUAWEI              0x9770
 
 Additions to Chapter 2 of the OpenGL ES 2.0 Specification (OpenGL ES Operation)
 
     At the end of section 2.10.2 (Loading Shader Binaries), add:
 
-    "Using a <binaryFormat> of HUAWEI_SHADER_BINARY will result in implementation attempting
+    "Using a <binaryFormat> of SHADER_BINARY_HUAWEI will result in implementation attempting
     to load shader binaries in <binary> according to the format developed by HUAWEI."
 
 Errors
@@ -75,4 +75,5 @@ New Implementation Dependent State
 
 Revision History
 
+    #2  Jan 12, 2026  Pan Gao           Fix enum definition to align with naming conventions
     #1  Aug 21, 2025  Peng Li           First draft
