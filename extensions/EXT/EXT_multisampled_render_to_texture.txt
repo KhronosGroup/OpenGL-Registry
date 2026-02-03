@@ -21,8 +21,8 @@ Status
 
 Version
 
-    Last Modified Date: June 28, 2016
-    Revision: 7
+    Last Modified Date: Feb 3, 2026
+    Revision: 8
 
 Number
 
@@ -260,8 +260,9 @@ Dependencies on GL and ES profiles, versions, and other extensions
         associated multisample data specified by the mechanisms described in
         this extension, i.e., the above operations are allowed even when
         SAMPLE_BUFFERS is non-zero for renderbuffers created via Renderbuffer-
-        StorageMultisampleEXT or textures attached via FramebufferTexture2D-
-        MultisampleEXT.
+        StorageMultisampleEXT and RenderbufferStorageMultisample or textures 
+        attached via FramebufferTexture2DMultisampleEXT or multisample textures
+        attached via FramebufferTexture2D and FramebufferTexture.
 		
         Also, FBOs cannot combine attachments that have associated multisample
         data specified by the mechanisms described in this extension with
@@ -529,6 +530,9 @@ Issues
 
 
 Revision History
+    Revision 8, 2026/02/03
+     - Extend the relaxation on readPixels to the multisample attachments created
+       by core functions of ES 3.0 and later.
 
     Revision 8, 2018/04/11
      - Clarified wording around implicit resolves, and added Issue 7.
