@@ -13621,7 +13621,7 @@ typedef unsigned int GLhandleARB;
         <command>
             <proto>void <name>glGetFixedv</name></proto>
             <param group="GetPName"><ptype>GLenum</ptype> <name>pname</name></param>
-            <param><ptype>GLfixed</ptype> *<name>params</name></param>
+            <param><ptype>GLfixed</ptype> *<name>data</name></param>
         </command>
         <command>
             <proto>void <name>glGetFixedvOES</name></proto>
