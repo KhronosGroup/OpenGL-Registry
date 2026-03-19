@@ -3322,8 +3322,8 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x86B0" end="0x86BF" vendor="3DFX">
-        <enum value="0x86B0" name="GL_COMPRESSED_RGB_FXT1_3DFX"/>
-        <enum value="0x86B1" name="GL_COMPRESSED_RGBA_FXT1_3DFX"/>
+        <enum value="0x86B0" name="GL_COMPRESSED_RGB_FXT1_3DFX" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x86B1" name="GL_COMPRESSED_RGBA_FXT1_3DFX" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x86B2" name="GL_MULTISAMPLE_3DFX"/>
         <enum value="0x86B3" name="GL_SAMPLE_BUFFERS_3DFX"/>
         <enum value="0x86B4" name="GL_SAMPLES_3DFX"/>
@@ -3472,11 +3472,11 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8741" name="GL_DOT3_RGBA_EXT"/>
         <enum value="0x8741" name="GL_PROGRAM_BINARY_LENGTH_OES" comment="NOT an alias. Accidental reuse of GL_DOT3_RGBA_EXT"/>
         <enum value="0x8741" name="GL_PROGRAM_BINARY_LENGTH" group="ProgramPropertyARB"/>
-        <enum value="0x8742" name="GL_MIRROR_CLAMP_ATI"/>
-        <enum value="0x8742" name="GL_MIRROR_CLAMP_EXT"/>
-        <enum value="0x8743" name="GL_MIRROR_CLAMP_TO_EDGE"/>
-        <enum value="0x8743" name="GL_MIRROR_CLAMP_TO_EDGE_ATI"/>
-        <enum value="0x8743" name="GL_MIRROR_CLAMP_TO_EDGE_EXT"/>
+        <enum value="0x8742" name="GL_MIRROR_CLAMP_ATI" group="TextureWrapMode"/>
+        <enum value="0x8742" name="GL_MIRROR_CLAMP_EXT" group="TextureWrapMode"/>
+        <enum value="0x8743" name="GL_MIRROR_CLAMP_TO_EDGE" group="TextureWrapMode"/>
+        <enum value="0x8743" name="GL_MIRROR_CLAMP_TO_EDGE_ATI" group="TextureWrapMode"/>
+        <enum value="0x8743" name="GL_MIRROR_CLAMP_TO_EDGE_EXT" group="TextureWrapMode"/>
         <enum value="0x8744" name="GL_MODULATE_ADD_ATI"/>
         <enum value="0x8745" name="GL_MODULATE_SIGNED_ADD_ATI"/>
         <enum value="0x8746" name="GL_MODULATE_SUBTRACT_ATI"/>
@@ -3656,7 +3656,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x87EB" name="GL_INVARIANT_DATATYPE_EXT"/>
         <enum value="0x87EC" name="GL_LOCAL_CONSTANT_VALUE_EXT"/>
         <enum value="0x87ED" name="GL_LOCAL_CONSTANT_DATATYPE_EXT"/>
-        <enum value="0x87EE" name="GL_ATC_RGBA_INTERPOLATED_ALPHA_AMD"/>
+        <enum value="0x87EE" name="GL_ATC_RGBA_INTERPOLATED_ALPHA_AMD" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x87F0" name="GL_PN_TRIANGLES_ATI"/>
         <enum value="0x87F1" name="GL_MAX_PN_TRIANGLES_TESSELATION_LEVEL_ATI"/>
         <enum value="0x87F2" name="GL_PN_TRIANGLES_POINT_MODE_ATI" group="PNTrianglesPNameATI"/>
@@ -3666,8 +3666,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x87F6" name="GL_PN_TRIANGLES_POINT_MODE_CUBIC_ATI"/>
         <enum value="0x87F7" name="GL_PN_TRIANGLES_NORMAL_MODE_LINEAR_ATI"/>
         <enum value="0x87F8" name="GL_PN_TRIANGLES_NORMAL_MODE_QUADRATIC_ATI"/>
-        <enum value="0x87F9" name="GL_3DC_X_AMD"/>
-        <enum value="0x87FA" name="GL_3DC_XY_AMD"/>
+        <enum value="0x87F9" name="GL_3DC_X_AMD" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x87FA" name="GL_3DC_XY_AMD" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x87FB" name="GL_VBO_FREE_MEMORY_ATI"/>
         <enum value="0x87FC" name="GL_TEXTURE_FREE_MEMORY_ATI"/>
         <enum value="0x87FD" name="GL_RENDERBUFFER_FREE_MEMORY_ATI"/>
@@ -4120,7 +4120,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x88ED" name="GL_PIXEL_PACK_BUFFER_BINDING_ARB"/>
         <enum value="0x88ED" name="GL_PIXEL_PACK_BUFFER_BINDING_EXT"/>
         <enum value="0x88ED" name="GL_PIXEL_PACK_BUFFER_BINDING_NV"/>
-        <enum value="0x88EE" name="GL_ETC1_SRGB8_NV"/>
+        <enum value="0x88EE" name="GL_ETC1_SRGB8_NV" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x88EF" name="GL_PIXEL_UNPACK_BUFFER_BINDING" group="GetPName"/>
         <enum value="0x88EF" name="GL_PIXEL_UNPACK_BUFFER_BINDING_ARB"/>
         <enum value="0x88EF" name="GL_PIXEL_UNPACK_BUFFER_BINDING_EXT"/>
@@ -4167,7 +4167,7 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8909" name="GL_MAX_PROGRAM_RESULT_COMPONENTS_NV"/>
         <enum value="0x8910" name="GL_STENCIL_TEST_TWO_SIDE_EXT"/>
         <enum value="0x8911" name="GL_ACTIVE_STENCIL_FACE_EXT"/>
-        <enum value="0x8912" name="GL_MIRROR_CLAMP_TO_BORDER_EXT"/>
+        <enum value="0x8912" name="GL_MIRROR_CLAMP_TO_BORDER_EXT" group="TextureWrapMode"/>
             <unused start="0x8913" vendor="NV"/>
         <enum value="0x8914" name="GL_SAMPLES_PASSED" group="QueryTarget"/>
         <enum value="0x8914" name="GL_SAMPLES_PASSED_ARB"/>
@@ -4395,10 +4395,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8A51" name="GL_RGB_RAW_422_APPLE"/>
         <enum value="0x8A52" name="GL_FRAGMENT_SHADER_DISCARDS_SAMPLES_EXT"/>
         <enum value="0x8A53" name="GL_SYNC_OBJECT_APPLE"/>
-        <enum value="0x8A54" name="GL_COMPRESSED_SRGB_PVRTC_2BPPV1_EXT"/>
-        <enum value="0x8A55" name="GL_COMPRESSED_SRGB_PVRTC_4BPPV1_EXT"/>
-        <enum value="0x8A56" name="GL_COMPRESSED_SRGB_ALPHA_PVRTC_2BPPV1_EXT"/>
-        <enum value="0x8A57" name="GL_COMPRESSED_SRGB_ALPHA_PVRTC_4BPPV1_EXT"/>
+        <enum value="0x8A54" name="GL_COMPRESSED_SRGB_PVRTC_2BPPV1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8A55" name="GL_COMPRESSED_SRGB_PVRTC_4BPPV1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8A56" name="GL_COMPRESSED_SRGB_ALPHA_PVRTC_2BPPV1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8A57" name="GL_COMPRESSED_SRGB_ALPHA_PVRTC_4BPPV1_EXT" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x8A58" end="0x8A7F" vendor="APPLE"/>
     </enums>
 
@@ -4612,10 +4612,10 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x8C00" end="0x8C0F" vendor="IMG">
-        <enum value="0x8C00" name="GL_COMPRESSED_RGB_PVRTC_4BPPV1_IMG"/>
-        <enum value="0x8C01" name="GL_COMPRESSED_RGB_PVRTC_2BPPV1_IMG"/>
-        <enum value="0x8C02" name="GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG"/>
-        <enum value="0x8C03" name="GL_COMPRESSED_RGBA_PVRTC_2BPPV1_IMG"/>
+        <enum value="0x8C00" name="GL_COMPRESSED_RGB_PVRTC_4BPPV1_IMG" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C01" name="GL_COMPRESSED_RGB_PVRTC_2BPPV1_IMG" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C02" name="GL_COMPRESSED_RGBA_PVRTC_4BPPV1_IMG" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C03" name="GL_COMPRESSED_RGBA_PVRTC_2BPPV1_IMG" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8C04" name="GL_MODULATE_COLOR_IMG"/>
         <enum value="0x8C05" name="GL_RECIP_ADD_SIGNED_ALPHA_IMG"/>
         <enum value="0x8C06" name="GL_TEXTURE_ALPHA_MODULATE_IMG"/>
@@ -4748,10 +4748,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x8C4F" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8C4F" name="GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_NV" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x8C50" end="0x8C6F" vendor="NV"/>
-        <enum value="0x8C70" name="GL_COMPRESSED_LUMINANCE_LATC1_EXT"/>
-        <enum value="0x8C71" name="GL_COMPRESSED_SIGNED_LUMINANCE_LATC1_EXT"/>
-        <enum value="0x8C72" name="GL_COMPRESSED_LUMINANCE_ALPHA_LATC2_EXT"/>
-        <enum value="0x8C73" name="GL_COMPRESSED_SIGNED_LUMINANCE_ALPHA_LATC2_EXT"/>
+        <enum value="0x8C70" name="GL_COMPRESSED_LUMINANCE_LATC1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C71" name="GL_COMPRESSED_SIGNED_LUMINANCE_LATC1_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C72" name="GL_COMPRESSED_LUMINANCE_ALPHA_LATC2_EXT" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C73" name="GL_COMPRESSED_SIGNED_LUMINANCE_ALPHA_LATC2_EXT" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x8C74" name="GL_TESS_CONTROL_PROGRAM_PARAMETER_BUFFER_NV"/>
         <enum value="0x8C75" name="GL_TESS_EVALUATION_PROGRAM_PARAMETER_BUFFER_NV"/>
         <enum value="0x8C76" name="GL_TRANSFORM_FEEDBACK_VARYING_MAX_LENGTH" group="ProgramPropertyARB"/>
@@ -4815,8 +4815,8 @@ typedef unsigned int GLhandleARB;
     <enums namespace="GL" start="0x8C90" end="0x8C9F" vendor="QCOM" comment="For Affie Munshi. Reassigned from AMD to QCOM (bug 5874)">
         <enum value="0x8C90" name="GL_MOTION_ESTIMATION_SEARCH_BLOCK_X_QCOM" group="GetPName"/>
         <enum value="0x8C91" name="GL_MOTION_ESTIMATION_SEARCH_BLOCK_Y_QCOM" group="GetPName"/>
-        <enum value="0x8C92" name="GL_ATC_RGB_AMD"/>
-        <enum value="0x8C93" name="GL_ATC_RGBA_EXPLICIT_ALPHA_AMD"/>
+        <enum value="0x8C92" name="GL_ATC_RGB_AMD" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x8C93" name="GL_ATC_RGBA_EXPLICIT_ALPHA_AMD" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x8C94" end="0x8C95" vendor="QCOM"/>
         <enum value="0x8C96" name="GL_TEXTURE_LOD_BIAS_QCOM"/>
             <unused start="0x8C97" end="0x8C9F" vendor="QCOM"/>
@@ -6136,8 +6136,8 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9134" name="GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_IMG"/>
         <enum value="0x9135" name="GL_MAX_SAMPLES_IMG"/>
         <enum value="0x9136" name="GL_TEXTURE_SAMPLES_IMG"/>
-        <enum value="0x9137" name="GL_COMPRESSED_RGBA_PVRTC_2BPPV2_IMG"/>
-        <enum value="0x9138" name="GL_COMPRESSED_RGBA_PVRTC_4BPPV2_IMG"/>
+        <enum value="0x9137" name="GL_COMPRESSED_RGBA_PVRTC_2BPPV2_IMG" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x9138" name="GL_COMPRESSED_RGBA_PVRTC_4BPPV2_IMG" group="InternalFormat,SizedInternalFormat"/>
         <enum value="0x9139" name="GL_CUBIC_IMG"/>
         <enum value="0x913A" name="GL_CUBIC_MIPMAP_NEAREST_IMG"/>
         <enum value="0x913B" name="GL_CUBIC_MIPMAP_LINEAR_IMG"/>
@@ -6763,8 +6763,8 @@ typedef unsigned int GLhandleARB;
     </enums>
 
     <enums namespace="GL" start="0x93F0" end="0x94EF" vendor="APPLE" comment="Khronos bug 10233">
-        <enum value="0x93F0" name="GL_COMPRESSED_SRGB_ALPHA_PVRTC_2BPPV2_IMG"/>
-        <enum value="0x93F1" name="GL_COMPRESSED_SRGB_ALPHA_PVRTC_4BPPV2_IMG"/>
+        <enum value="0x93F0" name="GL_COMPRESSED_SRGB_ALPHA_PVRTC_2BPPV2_IMG" group="InternalFormat,SizedInternalFormat"/>
+        <enum value="0x93F1" name="GL_COMPRESSED_SRGB_ALPHA_PVRTC_4BPPV2_IMG" group="InternalFormat,SizedInternalFormat"/>
             <unused start="0x93F2" end="0x94EF" vendor="APPLE"/>
     </enums>
 
