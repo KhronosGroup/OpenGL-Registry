@@ -9503,6 +9503,18 @@ GLAPI void APIENTRY glGetFramebufferParameterivMESA (GLenum target, GLenum pname
 #define GL_FRAMEBUFFER_SWAP_XY_MESA       0x8BBD
 #endif /* GL_MESA_framebuffer_swap_xy */
 
+#ifndef GL_MESA_map_buffer_client_pointer
+#define GL_MESA_map_buffer_client_pointer
+#define GL_BUFFER_CLIENT_POINTER_SIZE_MESA      0x9790
+#define GL_MAP_CLIENT_POINTER_BIT_MESA          0x4000
+typedef void (APIENTRYP PFNGLADDCLIENTPOINTERRANGEMESAPROC) (void *addr, GLsizeiptr size);
+typedef void *(APIENTRYP PFNGLRELEASECLIENTPOINTERRANGEMESAPROC) (GLsizeiptr *size);
+#ifdef GL_GLEXT_PROTOTYPES
+GLAPI void APIENTRY glAddClientPointerRangeMESA(void *addr, GLsizeiptr size);
+GLAPI void *APIENTRY glReleaseClientPointerRangeMESA(GLsizeiptr *size);
+#endif
+#endif /* GL_MESA_map_buffer_client_memory */
+
 #ifndef GL_MESA_pack_invert
 #define GL_MESA_pack_invert 1
 #define GL_PACK_INVERT_MESA               0x8758

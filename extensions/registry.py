@@ -3109,6 +3109,12 @@ registry = {
         'supporters' : { 'MESA' },
         'url' : 'extensions/MESA/MESA_framebuffer_swap_xy.txt',
     },
+    'GL_MESA_map_buffer_client_pointer' : {
+        'number' : 562,
+        'flags' : { 'public' },
+        'supporters' : { 'MESA' },
+        'url' : 'extensions/MESA/MESA_map_buffer_client_pointer.txt',
+    },
     'GL_MESA_pack_invert' : {
         'number' : 300,
         'flags' : { 'public' },
