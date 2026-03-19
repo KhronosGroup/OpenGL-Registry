@@ -32,7 +32,7 @@ extern "C" {
 #define GLAPI extern
 #endif
 
-#define GL_GLEXT_VERSION 20260126
+#define GL_GLEXT_VERSION 20260319
 
 #include <KHR/khrplatform.h>
 
@@ -8698,18 +8698,18 @@ GLAPI void APIENTRY glTextureNormalEXT (GLenum mode);
 #define GL_SRGB8_EXT                      0x8C41
 #define GL_SRGB_ALPHA_EXT                 0x8C42
 #define GL_SRGB8_ALPHA8_EXT               0x8C43
-#define GL_SLUMINANCE_ALPHA_EXT           0x8C44
-#define GL_SLUMINANCE8_ALPHA8_EXT         0x8C45
-#define GL_SLUMINANCE_EXT                 0x8C46
-#define GL_SLUMINANCE8_EXT                0x8C47
 #define GL_COMPRESSED_SRGB_EXT            0x8C48
 #define GL_COMPRESSED_SRGB_ALPHA_EXT      0x8C49
-#define GL_COMPRESSED_SLUMINANCE_EXT      0x8C4A
-#define GL_COMPRESSED_SLUMINANCE_ALPHA_EXT 0x8C4B
 #define GL_COMPRESSED_SRGB_S3TC_DXT1_EXT  0x8C4C
 #define GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT 0x8C4D
 #define GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT 0x8C4E
 #define GL_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT 0x8C4F
+#define GL_SLUMINANCE_ALPHA_EXT           0x8C44
+#define GL_SLUMINANCE8_ALPHA8_EXT         0x8C45
+#define GL_SLUMINANCE_EXT                 0x8C46
+#define GL_SLUMINANCE8_EXT                0x8C47
+#define GL_COMPRESSED_SLUMINANCE_EXT      0x8C4A
+#define GL_COMPRESSED_SLUMINANCE_ALPHA_EXT 0x8C4B
 #endif /* GL_EXT_texture_sRGB */
 
 #ifndef GL_EXT_texture_sRGB_R8
@@ -9504,16 +9504,16 @@ GLAPI void APIENTRY glGetFramebufferParameterivMESA (GLenum target, GLenum pname
 #endif /* GL_MESA_framebuffer_swap_xy */
 
 #ifndef GL_MESA_map_buffer_client_pointer
-#define GL_MESA_map_buffer_client_pointer
-#define GL_BUFFER_CLIENT_POINTER_SIZE_MESA      0x9790
-#define GL_MAP_CLIENT_POINTER_BIT_MESA          0x4000
-typedef void (APIENTRYP PFNGLADDCLIENTPOINTERRANGEMESAPROC) (void *addr, GLsizeiptr size);
-typedef void *(APIENTRYP PFNGLRELEASECLIENTPOINTERRANGEMESAPROC) (GLsizeiptr *size);
+#define GL_MESA_map_buffer_client_pointer 1
+#define GL_MAP_CLIENT_POINTER_BIT_MESA    0x4000
+#define GL_BUFFER_CLIENT_POINTER_SIZE_MESA 0x9790
+typedef void (APIENTRYP PFNGLADDCLIENTPOINTERRANGEMESAPROC) (GLvoid *addr, GLsizeiptr size);
+typedef void* (APIENTRYP PFNGLRELEASECLIENTPOINTERRANGEMESAPROC) (GLsizeiptr *size);
 #ifdef GL_GLEXT_PROTOTYPES
-GLAPI void APIENTRY glAddClientPointerRangeMESA(void *addr, GLsizeiptr size);
-GLAPI void *APIENTRY glReleaseClientPointerRangeMESA(GLsizeiptr *size);
+GLAPI void APIENTRY glAddClientPointerRangeMESA (GLvoid *addr, GLsizeiptr size);
+GLAPI void* APIENTRY glReleaseClientPointerRangeMESA (GLsizeiptr *size);
 #endif
-#endif /* GL_MESA_map_buffer_client_memory */
+#endif /* GL_MESA_map_buffer_client_pointer */
 
 #ifndef GL_MESA_pack_invert
 #define GL_MESA_pack_invert 1
