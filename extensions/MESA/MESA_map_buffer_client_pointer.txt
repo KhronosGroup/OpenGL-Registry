@@ -54,7 +54,8 @@ New Procedures and Functions
 
     void AddClientPointerRangeMESA( void *addr, sizeiptr size );
 
-    void *ReleaseClientPointerRangeMESA( sizeiptr *size );
+    void *ReleaseClientPointerRangeMESA( bitfield flags,
+                                         sizeiptr *size );
 
 
 New Types
@@ -70,6 +71,10 @@ New Tokens
     Accepted by the <pname> parameter of GetBufferParameter{i|i64}v:
 
         BUFFER_CLIENT_POINTER_SIZE_MESA            0x9790
+
+    Accepted by the <flags> parameter of ReleaseClientPointerRangeMESA:
+
+        CLIENT_POINTER_RELEASE_ALL_MESA            0x0001
 
 
 Additions to Chapter 6 of the OpenGL Core Profile Specification, Version 4.6,
@@ -99,13 +104,17 @@ Additions to Chapter 6 of the OpenGL Core Profile Specification, Version 4.6,
         reacquire the pages, first unmap any buffers in the range, call Flush,
         and thence
 
-            void *ReleaseClientPointerRangeMESA( sizeiptr *size );
+            void *ReleaseClientPointerRangeMESA( bitfield flags,
+                                                 sizeiptr *size );
 
         will return the range back to the application, with <size> relaying
-        back the size of the returned range. While the pages sit in the driver,
-        memory access in any manner other than as defined by
-        Map(Named)BufferRange is not permitted, and results in undefined
-        behavior.
+        back the size of the returned range. If CLIENT_POINTER_RELEASE_ALL_MESA
+        is set in <flags>, the driver must release all client pointer ranges
+        that don't contain a currently mapped buffer pointer. Otherwise, the
+        driver may hold onto unused mappings which can be reused. While the
+        pages sit in the driver, memory access in any manner other than as
+        defined by Map(Named)BufferRange is not permitted, and results in
+        undefined behavior.
 
 
 Errors
