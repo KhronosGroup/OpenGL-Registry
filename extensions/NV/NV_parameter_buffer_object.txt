@@ -17,8 +17,8 @@ Status
 
 Version
 
-    Last Modified Date:         03/09/2011
-    NVIDIA Revision:            9
+    Last Modified Date:         05/14/2026
+    NVIDIA Revision:            10
 
 Number
 
@@ -295,13 +295,13 @@ New Implementation Dependent State
 Examples
 
     !!NVfp4.0
-    # Legal
+    TEMP t;
     BUFFER bones[] = { program.buffer[0] };
-    ALIAS funBone = bones[69];
+    # Legal
     MOV t, bones[1];
-    # Illegal
-    ALIAS numLights = program.buffer[5][6];
-    MOV t, program.buffer[3][x];
+    # Illegal -- "program.buffer[...]" cannot appear as an instruction
+    # operand; it is only valid as a BUFFER/BUFFER4 initializer.
+    MOV t, program.buffer[3][6];
     END
 
 Issues
@@ -404,6 +404,9 @@ Revision History
 
     Rev.    Date    Author    Changes
     ----  --------  --------  -----------------------------------------
+    10    05/14/26  prdubey   Fix Examples: remove misleading ALIAS
+                              usage; clean up illegal example.
+
      9    03/09/11  mjk       Fix glGetIntegerIndexedvEXT prototype
                               Note about glGetIntegeri_v
                               Rename buffer and index parameters and
