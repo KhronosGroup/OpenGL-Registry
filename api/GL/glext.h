@@ -9507,11 +9507,12 @@ GLAPI void APIENTRY glGetFramebufferParameterivMESA (GLenum target, GLenum pname
 #define GL_MESA_map_buffer_client_pointer 1
 #define GL_MAP_CLIENT_POINTER_BIT_MESA    0x4000
 #define GL_BUFFER_CLIENT_POINTER_SIZE_MESA 0x9790
+#define GL_CLIENT_POINTER_RELEASE_ALL_MESA      0x0001
 typedef void (APIENTRYP PFNGLADDCLIENTPOINTERRANGEMESAPROC) (GLvoid *addr, GLsizeiptr size);
-typedef void* (APIENTRYP PFNGLRELEASECLIENTPOINTERRANGEMESAPROC) (GLsizeiptr *size);
+typedef void* (APIENTRYP PFNGLRELEASECLIENTPOINTERRANGEMESAPROC) (GLbitfield flags, GLsizeiptr *size);
 #ifdef GL_GLEXT_PROTOTYPES
 GLAPI void APIENTRY glAddClientPointerRangeMESA (GLvoid *addr, GLsizeiptr size);
-GLAPI void* APIENTRY glReleaseClientPointerRangeMESA (GLsizeiptr *size);
+GLAPI void* APIENTRY glReleaseClientPointerRangeMESA (Glbitfield flags, GLsizeiptr *size);
 #endif
 #endif /* GL_MESA_map_buffer_client_pointer */
 

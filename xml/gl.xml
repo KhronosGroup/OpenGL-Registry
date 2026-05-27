@@ -421,6 +421,10 @@ typedef unsigned int GLhandleARB;
         <enum value="0x00000002" name="GL_GEOMETRY_DEFORMATION_BIT_SGIX" group="FfdMaskSGIX"/>
     </enums>
 
+    <enums namespace="GL" group="ClientPointerFlagsMESA" type="bitmask">
+        <enum value="0x00000001" name="GL_CLIENT_POINTER_RELEASE_ALL_MESA" group="ClientPointerFlagsMESA"/>
+    </enums>
+
 
     <!-- Non-bitmask enums with their own namespace. Generally small numbers
          used for indexed access. -->
@@ -22482,6 +22486,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void* <name>glReleaseClientPointerRangeMESA</name></proto>
+            <param group="ClientPointerFlagsMESA"><ptype>GLbitfield</ptype> <name>flags</name></param>
             <param><ptype>GLsizeiptr</ptype> *<name>size</name></param>
         </command>
         <command>
@@ -43670,6 +43675,7 @@ typedef unsigned int GLhandleARB;
             <require>
                 <enum name="GL_MAP_CLIENT_POINTER_BIT_MESA"/>
                 <enum name="GL_BUFFER_CLIENT_POINTER_SIZE_MESA"/>
+                <enum name="GL_CLIENT_POINTER_RELEASE_ALL_MESA"/>
                 <command name="glAddClientPointerRangeMESA"/>
                 <command name="glReleaseClientPointerRangeMESA"/>
             </require>
