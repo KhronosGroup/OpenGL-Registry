@@ -7242,7 +7242,7 @@ typedef unsigned int GLhandleARB;
         </command>
         <command>
             <proto>void <name>glAddClientPointerRangeMESA</name></proto>
-            <param><ptype>GLvoid</ptype> *<name>addr</name></param>
+            <param>void *<name>addr</name></param>
             <param><ptype>GLsizeiptr</ptype> <name>size</name></param>
         </command>
         <command>
