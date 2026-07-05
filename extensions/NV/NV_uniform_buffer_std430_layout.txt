@@ -74,7 +74,7 @@ Additions to Chapter 4 of the OpenGL Shading Language, Version 4.60.5:
     Qualifiers), page 83, discussing std430 support to read:
 
     "The std430 qualifier is supported for shader storage blocks.
-    The std430 qualified is supported for uniform blocks only when the
+    The std430 qualifier is supported for uniform blocks only when the
     NV_uniform_buffer_std430_layout extension is enabled or required;
     otherwise a shader using the std430 qualifier on a uniform block
     will fail to compile."
