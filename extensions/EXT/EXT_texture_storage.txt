@@ -31,8 +31,8 @@ Status
 
 Version
 
-    Last Modified Date: 22 September, 2021
-    Author Revision: 29
+    Last Modified Date: 23 April, 2025
+    Author Revision: 30
 
 Number
 
@@ -997,7 +997,19 @@ Issues
     parameter, the implementation has no information on which to base a
     decision.
 
+    28. Should GetProcAddress return null pointers for functions not present
+    in a given version of the API?
+
+    RESOLVED. Yes, certain functions which are present in the API header may
+    return null pointers from the corresponding GetProcAddress calls. For example,
+    the gl2ext.h header contains TexStorage1DEXT and TextureStorage* references,
+    but these functionalities are not supported in OpenGL ES and will return
+    null pointers.
+
 Revision History
+
+    Revision 30, 2025/04/23 (Mike Blumenkrantz)
+      - Added note about null function pointer returns in ES.
 
     Revision 29, 2021/09/22 (Adam Jackson)
       - Assign OpenGL extension number
