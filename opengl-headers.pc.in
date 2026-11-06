@@ -1,0 +1,6 @@
+prefix="@CMAKE_INSTALL_PREFIX@"
+includedir="${prefix}/include"
+
+Name: opengl-headers
+Description: OpenGL header files
+Cflags: -I${includedir}
