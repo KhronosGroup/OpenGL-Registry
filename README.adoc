@@ -123,3 +123,13 @@ extension, due to the repository download time, the *primary* purpose of
 this repository is to be the backing store for the web registry on
 khronos.org. Fortunately git is very efficient, so once you've done the
 initial repository clone, updates will be small and quick.
+
+=== Header installation
+
+Header files and a pkg-config file can be installed via CMake.
+
+[source]
+----
+cmake -B build
+cmake --install build
+----
