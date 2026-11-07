@@ -6122,14 +6122,14 @@ typedef unsigned int GLhandleARB;
         <enum value="0x9124" name="GL_MAX_GEOMETRY_OUTPUT_COMPONENTS_OES"/>
         <enum value="0x9125" name="GL_MAX_FRAGMENT_INPUT_COMPONENTS" group="GetPName"/>
         <enum value="0x9126" name="GL_CONTEXT_PROFILE_MASK" group="GetPName"/>
-        <enum value="0x9127" name="GL_UNPACK_COMPRESSED_BLOCK_WIDTH"/>
-        <enum value="0x9128" name="GL_UNPACK_COMPRESSED_BLOCK_HEIGHT"/>
-        <enum value="0x9129" name="GL_UNPACK_COMPRESSED_BLOCK_DEPTH"/>
-        <enum value="0x912A" name="GL_UNPACK_COMPRESSED_BLOCK_SIZE"/>
-        <enum value="0x912B" name="GL_PACK_COMPRESSED_BLOCK_WIDTH"/>
-        <enum value="0x912C" name="GL_PACK_COMPRESSED_BLOCK_HEIGHT"/>
-        <enum value="0x912D" name="GL_PACK_COMPRESSED_BLOCK_DEPTH"/>
-        <enum value="0x912E" name="GL_PACK_COMPRESSED_BLOCK_SIZE"/>
+        <enum value="0x9127" name="GL_UNPACK_COMPRESSED_BLOCK_WIDTH" group="PixelStoreParameter,GetPName"/>
+        <enum value="0x9128" name="GL_UNPACK_COMPRESSED_BLOCK_HEIGHT" group="PixelStoreParameter,GetPName"/>
+        <enum value="0x9129" name="GL_UNPACK_COMPRESSED_BLOCK_DEPTH" group="PixelStoreParameter,GetPName"/>
+        <enum value="0x912A" name="GL_UNPACK_COMPRESSED_BLOCK_SIZE" group="PixelStoreParameter,GetPName"/>
+        <enum value="0x912B" name="GL_PACK_COMPRESSED_BLOCK_WIDTH" group="PixelStoreParameter,GetPName"/>
+        <enum value="0x912C" name="GL_PACK_COMPRESSED_BLOCK_HEIGHT" group="PixelStoreParameter,GetPName"/>
+        <enum value="0x912D" name="GL_PACK_COMPRESSED_BLOCK_DEPTH" group="PixelStoreParameter,GetPName"/>
+        <enum value="0x912E" name="GL_PACK_COMPRESSED_BLOCK_SIZE" group="PixelStoreParameter,GetPName"/>
         <enum value="0x912F" name="GL_TEXTURE_IMMUTABLE_FORMAT"/>
         <enum value="0x912F" name="GL_TEXTURE_IMMUTABLE_FORMAT_EXT"/>
     </enums>
